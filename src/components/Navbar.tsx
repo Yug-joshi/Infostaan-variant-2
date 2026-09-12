@@ -36,15 +36,18 @@ export const Navbar: React.FC<NavbarProps> = ({
           </button>
 
           <button
+            type="button"
+            id="navbar-logo-btn"
             onClick={() => onNavigate('home')}
-            className="flex items-center gap-2.5 sm:gap-3 transition-opacity hover:opacity-90 text-left focus:outline-none"
+            className="flex items-center gap-2.5 sm:gap-3 transition-opacity hover:opacity-90 text-left focus:outline-none cursor-pointer group"
+            aria-label="Go to Infostaan Mumbai homepage"
           >
             <img
               src="https://lh3.googleusercontent.com/aida/AEtjO1UJRnyY75dMTB5Z-cXZjZ3AHt6T7uaIV9eXqLfvbCpkoh6H3vtLzT72f2ELzFgBSVdzT8-paZEQSLjKKpma2NUop1U8fTGtcs4-J6mfIodKtH8dUycdls-_KKlOvC0EEraSGgAvoQBgmghFNBZIjxbUkkg16C7SI5mPgsPhNQ6cmxNXigYJ5ay7rfelrmM6GEV11vg1k6aY8fZf3RlkYWK_b54tzMXQ0BasRUUKiOCXCrWQbInnY2XgtVU"
               alt="Infostaan Mumbai Logo"
-              className="h-7 sm:h-8 w-auto object-contain"
+              className="h-7 sm:h-8 w-auto object-contain pointer-events-none transition-transform duration-200 group-hover:scale-105"
             />
-            <span className="text-sm sm:text-base font-bold tracking-tight uppercase text-gray-900 dark:text-[#F4F7FB]">
+            <span className="text-sm sm:text-base font-bold tracking-tight uppercase text-gray-900 dark:text-[#F4F7FB] pointer-events-none">
               Infostaan <span className="text-[#007DCC] font-normal hidden sm:inline text-xs sm:text-sm tracking-normal">Mumbai</span>
             </span>
           </button>

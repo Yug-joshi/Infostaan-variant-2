@@ -142,13 +142,19 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
       >
         {/* Header */}
         <div className="p-4 sm:p-5 border-b border-slate-200 dark:border-[#D3B5E8]/15 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <button
+            type="button"
+            id="mobile-sidebar-logo-btn"
+            onClick={() => navigateAndClose('home')}
+            className="flex items-center gap-3 text-left hover:opacity-85 transition-opacity cursor-pointer focus:outline-none group"
+            aria-label="Go to Infostaan Mumbai homepage"
+          >
             <img
               src="https://lh3.googleusercontent.com/aida/AEtjO1UJRnyY75dMTB5Z-cXZjZ3AHt6T7uaIV9eXqLfvbCpkoh6H3vtLzT72f2ELzFgBSVdzT8-paZEQSLjKKpma2NUop1U8fTGtcs4-J6mfIodKtH8dUycdls-_KKlOvC0EEraSGgAvoQBgmghFNBZIjxbUkkg16C7SI5mPgsPhNQ6cmxNXigYJ5ay7rfelrmM6GEV11vg1k6aY8fZf3RlkYWK_b54tzMXQ0BasRUUKiOCXCrWQbInnY2XgtVU"
               alt="Infostaan Mumbai Logo"
-              className="h-7 w-auto object-contain"
+              className="h-7 w-auto object-contain pointer-events-none transition-transform duration-200 group-hover:scale-105"
             />
-            <div className="text-left">
+            <div className="text-left pointer-events-none">
               <span className="text-sm font-bold tracking-tight uppercase block leading-tight text-slate-900 dark:text-[#F4F7FB]">
                 Infostaan
               </span>
@@ -156,7 +162,7 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                 Mumbai Student Guide
               </span>
             </div>
-          </div>
+          </button>
 
           <button
             type="button"
