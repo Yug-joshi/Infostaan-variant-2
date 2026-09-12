@@ -51,7 +51,7 @@ export interface ShortlistItem {
   category: 'college' | 'internship';
   title: string;
   regionBadge: string;
-  badgeType: 'Western Suburbs' | 'South Mumbai' | 'Finance & Markets';
+  badgeType: string;
   locationInfo: string;
   timeSavedText: string;
   lineText?: string;
@@ -71,4 +71,62 @@ export interface ComparisonProfile {
   caArticleshipFriendly: string;
   topRecruiters: string[];
   autonomous: boolean;
+}
+
+export interface RoadmapRecommendedCollege {
+  id: string;
+  name: string;
+  location: string;
+  commuteTip: string;
+  highlight: string;
+}
+
+export interface RoadmapDegreeItem {
+  code: string;
+  name: string;
+  duration: string;
+  whyFit: string;
+  recommendedColleges: RoadmapRecommendedCollege[];
+}
+
+export interface RoadmapCertificationItem {
+  name: string;
+  provider: string;
+  duration: string;
+  relevance: string;
+  whenToTake: string;
+}
+
+export interface RoadmapInternshipItem {
+  title: string;
+  company: string;
+  location: string;
+  stipend: string;
+  timing: string;
+  skillsGained: string;
+  applicationWindow: string;
+}
+
+export interface RoadmapStep {
+  stepNumber: number;
+  stageTitle: string;
+  badge: string;
+  timeline: string;
+  summary: string;
+  degreesOrCourses?: RoadmapDegreeItem[];
+  certifications?: RoadmapCertificationItem[];
+  internships?: RoadmapInternshipItem[];
+  proTips: string[];
+}
+
+export interface CareerGoal {
+  id: string;
+  title: string;
+  tagline: string;
+  category: 'finance' | 'consulting' | 'tech' | 'law' | 'media';
+  streamFit: string[];
+  targetSalaryRange: string;
+  keyIndustries: string[];
+  workLocations: string[];
+  steps: RoadmapStep[];
 }

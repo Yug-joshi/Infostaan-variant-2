@@ -10,7 +10,8 @@ import { ShortlistScreen } from './components/ShortlistScreen';
 import { GuidanceScreen } from './components/GuidanceScreen';
 import { CompareModal } from './components/CompareModal';
 import { SignInModal } from './components/SignInModal';
-import { Check, Compass, Search, School, Bookmark, HelpCircle } from 'lucide-react';
+import { MobileSidebar } from './components/MobileSidebar';
+import { Check } from 'lucide-react';
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState<ScreenType>('home');
@@ -24,6 +25,7 @@ export default function App() {
     col2: 'hr-college',
   });
   const [isSignInOpen, setIsSignInOpen] = useState<boolean>(false);
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState<boolean>(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const showToast = (message: string) => {
@@ -55,19 +57,48 @@ export default function App() {
       setSavedItems(savedItems.filter((item) => item.collegeId !== id));
       showToast('Removed college from shortlist');
     } else {
-      const isHr = id === 'hr-college';
+      let collegeTitle = 'Mithibai College of Arts & Commerce';
+      let region = 'Western Suburbs';
+      let info = 'Vile Parle West, Mumbai • B.Com, BMS, BAF • Approx. ₹45,000/yr';
+      let line = 'Western Line';
+
+      if (id === 'hr-college') {
+        collegeTitle = 'H.R. College of Commerce & Economics';
+        region = 'South Mumbai';
+        info = 'Churchgate, Mumbai • B.Com, BAF, BFM • Approx. ₹38,000/yr';
+        line = 'South Mumbai';
+      } else if (id === 'hinduja') {
+        collegeTitle = 'K.P.B. Hinduja College of Commerce';
+        region = 'South Mumbai';
+        info = 'Charni Road, Mumbai • B.Com, BAF, BFM, BMS • Approx. ₹32,000/yr';
+        line = 'Western Line (South)';
+      } else if (id === 'podar') {
+        collegeTitle = 'R.A. Podar College of Commerce & Economics';
+        region = 'Central Mumbai';
+        info = 'Matunga, Mumbai • B.Com, BMS, BAF • Approx. ₹28,000/yr';
+        line = 'Central Line';
+      } else if (id === 'jai-hind') {
+        collegeTitle = 'Jai Hind College (Autonomous)';
+        region = 'South Mumbai';
+        info = 'Churchgate, Mumbai • BMS, BAF, Data Science • Approx. ₹48,000/yr';
+        line = 'Western Line (Marine Drive)';
+      } else if (id === 'nm-college') {
+        collegeTitle = 'Narsee Monjee College of Commerce & Economics';
+        region = 'Western Suburbs';
+        info = 'Vile Parle West, Mumbai • B.Com, BAF, BMS • Approx. ₹42,000/yr';
+        line = 'Western Line';
+      }
+
       const newItem: ShortlistItem = {
         id: `item-${Date.now()}`,
         category: 'college',
-        title: isHr ? 'H.R. College of Commerce & Economics' : 'Mithibai College of Arts & Commerce',
-        regionBadge: isHr ? 'South Mumbai' : 'Western Suburbs',
-        badgeType: isHr ? 'South Mumbai' : 'Western Suburbs',
-        locationInfo: isHr
-          ? 'Churchgate, Mumbai • B.Com, BAF, BFM • Approx. ₹38,000/yr'
-          : 'Vile Parle West, Mumbai • B.Com, BMS, BAF • Approx. ₹45,000/yr',
+        title: collegeTitle,
+        regionBadge: region,
+        badgeType: region,
+        locationInfo: info,
         timeSavedText: 'Saved just now',
-        lineText: isHr ? 'South Mumbai' : 'Western Line',
-        iconType: isHr ? 'account_balance' : 'school',
+        lineText: line,
+        iconType: 'school',
         canCompare: true,
         collegeId: id,
       };
@@ -92,11 +123,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070D18] text-[#F4F7FB] flex flex-col font-sans selection:bg-[#007DCC]/30 selection:text-[#F4F7FB]">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#070D18] text-slate-900 dark:text-[#F4F7FB] flex flex-col font-sans transition-colors duration-200 selection:bg-[#007DCC]/30 selection:text-[#007DCC]">
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-[#1a202b] border border-[#007DCC]/40 text-sm text-[#F4F7FB] shadow-xl flex items-center gap-2 animate-in fade-in slide-in-from-bottom-2 duration-200">
-          <Check className="w-4 h-4 text-[#51dcbc]" />
+        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-[#1a202b] border border-slate-700 dark:border-[#007DCC]/40 text-sm text-white dark:text-[#F4F7FB] shadow-xl flex items-center gap-2 animate-in fade-in slide-in-from-bottom-2 duration-200">
+          <Check className="w-4 h-4 text-emerald-400 dark:text-[#51dcbc]" />
           <span>{toastMessage}</span>
         </div>
       )}
@@ -110,6 +141,7 @@ export default function App() {
         }}
         savedCount={savedItems.length}
         onOpenSignIn={() => setIsSignInOpen(true)}
+        onOpenMobileSidebar={() => setIsMobileSidebarOpen(true)}
       />
 
       {/* Screen Views */}
@@ -176,92 +208,20 @@ export default function App() {
         )}
       </div>
 
-      {/* Quick Screen Switcher Bar (Bottom docked floating selector for immediate inspection of all 5 screens) */}
-      <aside aria-label="Screen Switcher" className="fixed bottom-4 right-4 z-40 bg-[#161c27]/95 border border-[#D3B5E8]/25 rounded-2xl p-1.5 shadow-2xl backdrop-blur-md hidden sm:flex items-center gap-1 text-xs">
-        <span className="px-2.5 text-[#8a919c] font-medium hidden md:inline">
-          Screens:
-        </span>
-        <button
-          onClick={() => {
-            setCurrentScreen('home');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className={`px-3 py-1.5 rounded-xl font-medium transition-all flex items-center gap-1.5 ${
-            currentScreen === 'home'
-              ? 'bg-[#007DCC] text-white shadow-sm'
-              : 'text-[#A9B8CA] hover:text-[#F4F7FB] hover:bg-[#242a36]'
-          }`}
-          title="Screen 1: Search Home"
-        >
-          <Compass className="w-3.5 h-3.5" />
-          <span>Home</span>
-        </button>
-
-        <button
-          onClick={() => {
-            setCurrentScreen('search');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className={`px-3 py-1.5 rounded-xl font-medium transition-all flex items-center gap-1.5 ${
-            currentScreen === 'search'
-              ? 'bg-[#007DCC] text-white shadow-sm'
-              : 'text-[#A9B8CA] hover:text-[#F4F7FB] hover:bg-[#242a36]'
-          }`}
-          title="Screen 2: Search Results"
-        >
-          <Search className="w-3.5 h-3.5" />
-          <span>Results</span>
-        </button>
-
-        <button
-          onClick={() => {
-            setSelectedCollegeId('mithibai');
-            setCurrentScreen('college-detail');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className={`px-3 py-1.5 rounded-xl font-medium transition-all flex items-center gap-1.5 ${
-            currentScreen === 'college-detail'
-              ? 'bg-[#007DCC] text-white shadow-sm'
-              : 'text-[#A9B8CA] hover:text-[#F4F7FB] hover:bg-[#242a36]'
-          }`}
-          title="Screen 3: College Detail (Mithibai)"
-        >
-          <School className="w-3.5 h-3.5" />
-          <span>College</span>
-        </button>
-
-        <button
-          onClick={() => {
-            setCurrentScreen('saved');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className={`px-3 py-1.5 rounded-xl font-medium transition-all flex items-center gap-1.5 ${
-            currentScreen === 'saved'
-              ? 'bg-[#007DCC] text-white shadow-sm'
-              : 'text-[#A9B8CA] hover:text-[#F4F7FB] hover:bg-[#242a36]'
-          }`}
-          title="Screen 4: Shortlist"
-        >
-          <Bookmark className="w-3.5 h-3.5" />
-          <span>Shortlist ({savedItems.length})</span>
-        </button>
-
-        <button
-          onClick={() => {
-            setCurrentScreen('guidance');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className={`px-3 py-1.5 rounded-xl font-medium transition-all flex items-center gap-1.5 ${
-            currentScreen === 'guidance'
-              ? 'bg-[#007DCC] text-white shadow-sm'
-              : 'text-[#A9B8CA] hover:text-[#F4F7FB] hover:bg-[#242a36]'
-          }`}
-          title="Screen 5: Guidance Wizard"
-        >
-          <HelpCircle className="w-3.5 h-3.5" />
-          <span>Guidance</span>
-        </button>
-      </aside>
+      {/* Mobile Navigation Drawer / Side Bar */}
+      <MobileSidebar
+        isOpen={isMobileSidebarOpen}
+        onClose={() => setIsMobileSidebarOpen(false)}
+        currentScreen={currentScreen}
+        onNavigate={(screen) => {
+          setCurrentScreen(screen);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+        savedCount={savedItems.length}
+        onSearch={handleSearch}
+        onOpenSignIn={() => setIsSignInOpen(true)}
+        onSelectCollege={handleSelectCollege}
+      />
 
       {/* Side-by-Side Comparison Modal */}
       <CompareModal
