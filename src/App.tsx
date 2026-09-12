@@ -8,6 +8,7 @@ import { SearchResultsScreen } from './components/SearchResultsScreen';
 import { CollegeDetailScreen } from './components/CollegeDetailScreen';
 import { ShortlistScreen } from './components/ShortlistScreen';
 import { GuidanceScreen } from './components/GuidanceScreen';
+import { ConnectScreen } from './components/ConnectScreen';
 import { CompareModal } from './components/CompareModal';
 import { SignInModal } from './components/SignInModal';
 import { MobileSidebar } from './components/MobileSidebar';
@@ -203,6 +204,15 @@ export default function App() {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onSelectCollege={handleSelectCollege}
+          />
+        )}
+
+        {currentScreen === 'connect' && (
+          <ConnectScreen
+            onNavigate={(screen) => {
+              setCurrentScreen(screen);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
           />
         )}
       </div>

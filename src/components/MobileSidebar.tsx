@@ -14,6 +14,7 @@ import {
   GraduationCap,
   Briefcase,
   Layers,
+  TrendingUp,
 } from 'lucide-react';
 import { ScreenType } from '../types';
 import { useTheme } from '../context/ThemeContext';
@@ -154,14 +155,6 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
               alt="Infostaan Mumbai Logo"
               className="h-7 w-auto object-contain pointer-events-none transition-transform duration-200 group-hover:scale-105"
             />
-            <div className="text-left pointer-events-none">
-              <span className="text-sm font-bold tracking-tight uppercase block leading-tight text-slate-900 dark:text-[#F4F7FB]">
-                Infostaan
-              </span>
-              <span className="text-[10px] text-slate-500 dark:text-[#A9B8CA] tracking-wider uppercase">
-                Mumbai Student Guide
-              </span>
-            </div>
           </button>
 
           <button
@@ -214,6 +207,22 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                 <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300">
                   New
                 </span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => navigateAndClose('connect')}
+                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${
+                  currentScreen === 'connect'
+                    ? 'bg-[#007DCC] text-white shadow-xs'
+                    : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <TrendingUp className="w-4 h-4 shrink-0" />
+                  <span>Infostaan Connect</span>
+                </div>
+                <ArrowRight className="w-4 h-4 opacity-50" />
               </button>
 
               <button

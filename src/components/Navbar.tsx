@@ -47,9 +47,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               alt="Infostaan Mumbai Logo"
               className="h-7 sm:h-8 w-auto object-contain pointer-events-none transition-transform duration-200 group-hover:scale-105"
             />
-            <span className="text-sm sm:text-base font-bold tracking-tight uppercase text-gray-900 dark:text-[#F4F7FB] pointer-events-none">
-              Infostaan <span className="text-[#007DCC] font-normal hidden sm:inline text-xs sm:text-sm tracking-normal">Mumbai</span>
-            </span>
           </button>
         </div>
 
@@ -74,6 +71,16 @@ export const Navbar: React.FC<NavbarProps> = ({
             }`}
           >
             <span>Guidance & Roadmaps</span>
+          </button>
+          <button
+            onClick={() => onNavigate('connect')}
+            className={`px-3.5 py-1.5 rounded-lg transition-all flex items-center gap-1.5 ${
+              currentScreen === 'connect'
+                ? 'bg-gray-100 dark:bg-[#1a202b] text-gray-900 dark:text-[#F4F7FB] font-semibold'
+                : 'hover:text-gray-900 dark:hover:text-[#F4F7FB]'
+            }`}
+          >
+            <span>Infostaan Connect</span>
           </button>
           <button
             onClick={() => onNavigate('saved')}

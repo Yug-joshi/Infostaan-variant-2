@@ -1,4 +1,4 @@
-export type ScreenType = 'home' | 'search' | 'college-detail' | 'saved' | 'guidance';
+export type ScreenType = 'home' | 'search' | 'college-detail' | 'saved' | 'guidance' | 'connect';
 
 export type CategoryType = 'all' | 'colleges' | 'courses' | 'careers' | 'internships';
 
