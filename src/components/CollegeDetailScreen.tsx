@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import {
   MapPin,
   Bookmark,
@@ -12,25 +13,27 @@ import {
   GraduationCap,
   Sparkles,
 } from 'lucide-react';
-import { CollegeDetail, ScreenType } from '../types';
+import { CollegeDetail, ScreenType, ShortlistItem } from '../types';
 import { getCollegeDetails } from '../data/mockData';
 import gsap from 'gsap';
 
 interface CollegeDetailScreenProps {
-  collegeId: string;
-  isSaved: boolean;
+  savedItems: ShortlistItem[];
   onToggleSave: (collegeId: string) => void;
   onOpenCompare: (primaryCollegeId: string) => void;
-  onNavigate: (screen: ScreenType) => void;
+  onNavigate: (path: string) => void;
 }
 
 export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
-  collegeId,
-  isSaved,
+  savedItems,
   onToggleSave,
   onOpenCompare,
   onNavigate,
 }) => {
+  const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
+  const collegeId = slug || 'mithibai'; // Fallback
+  const isSaved = savedItems.some((item) => item.collegeId === collegeId);
   const college: CollegeDetail = getCollegeDetails(collegeId);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -61,6 +64,15 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
         {/* Editorial Header / Left-aligned free layout */}
         <header className="detail-fade-anim pb-8 text-left flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-2 max-w-3xl">
+            {/* Breadcrumb */}
+            <nav className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-500 dark:text-[#A9B8CA] mb-6 pt-2">
+              <button onClick={() => navigate('/')} className="hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors">Home</button>
+              <span>/</span>
+              <button onClick={() => navigate('/search?category=colleges')} className="hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors">Colleges</button>
+              <span>/</span>
+              <span className="text-slate-900 dark:text-[#F4F7FB]">{college.name}</span>
+            </nav>
+
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-[#D3B5E8]/20 rounded-full text-[#007DCC] dark:text-[#86cfff] text-xs font-bold shadow-2xs">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-[#51dcbc] animate-pulse" />
@@ -76,7 +88,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
             <p className="text-sm sm:text-base text-slate-600 dark:text-[#A9B8CA] font-medium tracking-normal">
               {college.subName}
             </p>
-
+            
             {/* Location & Transit */}
             <div className="flex items-center gap-1.5 text-slate-500 dark:text-[#8a919c] text-xs sm:text-sm flex-wrap pt-1">
               <MapPin className="w-4 h-4 text-[#007DCC] dark:text-[#86cfff] shrink-0" />

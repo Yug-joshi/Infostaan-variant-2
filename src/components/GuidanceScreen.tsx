@@ -27,7 +27,7 @@ import { CareerRoadmap } from './CareerRoadmap';
 import gsap from 'gsap';
 
 interface GuidanceScreenProps {
-  onNavigate: (screen: ScreenType) => void;
+  onNavigate: (path: string) => void;
   onSelectCollege: (collegeId: string) => void;
 }
 

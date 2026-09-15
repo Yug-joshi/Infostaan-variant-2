@@ -19,7 +19,7 @@ interface ShortlistScreenProps {
   onRemoveItem: (id: string) => void;
   onOpenCompare: (primaryId?: string) => void;
   onSelectCollege: (collegeId: string) => void;
-  onNavigate: (screen: ScreenType) => void;
+  onNavigate: (path: string) => void;
 }
 
 export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
@@ -172,7 +172,7 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
                 </p>
                 <button
                   type="button"
-                  onClick={() => onNavigate('search')}
+                  onClick={() => onNavigate('/search')}
                   className="px-5 py-2.5 rounded-lg bg-[#007DCC] text-white text-sm font-medium hover:bg-[#006cb0] transition-colors inline-flex items-center gap-2"
                 >
                   <span>Explore Mumbai Opportunities</span>

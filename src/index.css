@@ -35,3 +35,9 @@
     transition-duration: 150ms;
   }
 }
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

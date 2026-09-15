@@ -6,14 +6,18 @@ import {
   TrendingUp,
   Layers,
   ArrowRight,
-  Compass
+  Compass,
+  BookOpen,
+  Laptop,
+  PenTool,
+  FileText
 } from 'lucide-react';
 import { ScreenType } from '../types';
 import gsap from 'gsap';
 
 interface HomeScreenProps {
   onSearch: (query: string, category?: string) => void;
-  onNavigate: (screen: ScreenType) => void;
+  onNavigate: (path: string) => void;
   onSelectCollege: (collegeId: string) => void;
 }
 
@@ -25,6 +29,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   const [query, setQuery] = useState('');
   const containerRef = useRef<HTMLDivElement>(null);
   const quickLinksRef = useRef<HTMLDivElement>(null);
+  const decorationsRef = useRef<HTMLDivElement>(null);
 
   // Subtle GSAP entrance animation for the focused search layout
   useEffect(() => {
@@ -57,6 +62,26 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           }
         );
       }
+      
+      // Floating decorations animation (only runs on desktop)
+      if (decorationsRef.current) {
+        const mm = gsap.matchMedia();
+        mm.add("(min-width: 1024px) and (prefers-reduced-motion: no-preference)", () => {
+          gsap.to(decorationsRef.current.children, {
+            y: "random(-15, 15)",
+            x: "random(-15, 15)",
+            rotation: "random(-5, 5)",
+            duration: "random(4, 8)",
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: -1,
+            stagger: {
+              amount: 2,
+              from: "random"
+            }
+          });
+        });
+      }
     });
 
     return () => ctx.revert();
@@ -72,15 +97,40 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   };
 
   return (
-    <main className="w-full flex-1 flex flex-col items-center pt-24 sm:pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200">
-      <div ref={containerRef} className="w-full max-w-3xl flex flex-col items-center text-center">
+    <main className="relative w-full flex-1 flex flex-col items-center pt-24 sm:pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200 overflow-hidden">
+      
+      {/* Desktop-only floating decorations */}
+      <div 
+        ref={decorationsRef} 
+        className="pointer-events-none absolute inset-0 z-0 hidden lg:block"
+        aria-hidden="true"
+      >
+        <GraduationCap className="absolute top-[15%] left-[10%] w-16 h-16 text-[#007DCC]/10 dark:text-[#9ccaff]/10 -rotate-12" />
+        <BookOpen className="absolute top-[25%] right-[12%] w-20 h-20 text-[#19A7E8]/10 dark:text-[#19A7E8]/15 rotate-6" />
+        <Laptop className="absolute bottom-[20%] left-[15%] w-24 h-24 text-[#091540]/5 dark:text-[#D3B5E8]/10 -rotate-6" />
+        <PenTool className="absolute bottom-[30%] right-[15%] w-12 h-12 text-[#19B89A]/10 dark:text-[#19B89A]/15 rotate-12" />
+        <FileText className="absolute top-[50%] left-[5%] w-14 h-14 text-slate-400/10 dark:text-slate-400/10 rotate-3" />
+        <Compass className="absolute top-[45%] right-[8%] w-16 h-16 text-[#007DCC]/10 dark:text-[#9ccaff]/10 -rotate-6" />
+      </div>
+
+      {/* Mobile-only floating decorations (Restrained design) */}
+      <div 
+        className="pointer-events-none absolute inset-0 z-0 block lg:hidden"
+        aria-hidden="true"
+      >
+        <PenTool className="absolute top-[5%] left-[3%] w-7 h-7 text-[#19B89A]/20 dark:text-[#19B89A]/25 rotate-[15deg] opacity-60" />
+        <GraduationCap className="absolute top-[12%] right-[2%] w-9 h-9 text-[#007DCC]/15 dark:text-[#9ccaff]/25 -rotate-[10deg] opacity-60" />
+        <BookOpen className="absolute bottom-[8%] left-[4%] w-8 h-8 text-[#19A7E8]/15 dark:text-[#19A7E8]/25 rotate-6 opacity-60" />
+      </div>
+
+      <div ref={containerRef} className="relative z-10 w-full max-w-3xl flex flex-col items-center text-center mt-6 lg:mt-12">
         {/* Minimal Header */}
-        <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB] mb-8">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB] mb-10 leading-tight">
           What are you looking for?
         </h1>
 
         {/* Highlighted Search Input Box */}
-        <form onSubmit={handleSubmit} className="w-full group mb-6">
+        <form onSubmit={handleSubmit} className="relative w-full group mb-6">
           <div className="flex items-center bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-[#D3B5E8]/20 rounded-full shadow-md hover:shadow-lg transition-all duration-300 focus-within:border-[#007DCC] focus-within:ring-4 focus-within:ring-[#007DCC]/10 px-5 sm:px-6 py-2">
             <Search className="text-[#007DCC] dark:text-[#9ccaff] w-6 h-6 shrink-0" />
             <input
@@ -100,6 +150,30 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               <span>Search</span>
             </button>
           </div>
+          
+          {/* Search Suggestions Dropdown */}
+          {query.trim().length > 0 && (
+            <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#1a202b] border border-slate-200 dark:border-[#D3B5E8]/20 rounded-2xl shadow-xl overflow-hidden z-50 text-left">
+              <div className="p-2">
+                <button
+                  type="button"
+                  onClick={() => onSelectCollege('mithibai')}
+                  className="w-full text-left px-4 py-3 hover:bg-slate-50 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3"
+                >
+                  <Building2 className="w-4 h-4 text-slate-400" />
+                  <span className="text-slate-700 dark:text-[#A9B8CA]">{query} <span className="text-slate-400">in Colleges</span></span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onSearch(query, 'courses')}
+                  className="w-full text-left px-4 py-3 hover:bg-slate-50 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3"
+                >
+                  <GraduationCap className="w-4 h-4 text-slate-400" />
+                  <span className="text-slate-700 dark:text-[#A9B8CA]">{query} <span className="text-slate-400">in Courses</span></span>
+                </button>
+              </div>
+            </div>
+          )}
         </form>
 
         {/* Popular Tags */}
@@ -137,8 +211,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       </div>
 
       {/* Clean Quick Explore Grid */}
-      <div className="w-full max-w-5xl mt-20 sm:mt-28">
-        <h2 className="text-xl font-bold mb-6 text-slate-900 dark:text-[#F4F7FB]">Explore by Pathway</h2>
+      <div className="relative z-10 w-full max-w-5xl mt-24 sm:mt-32">
+        <h2 className="text-2xl font-bold mb-8 text-slate-900 dark:text-[#F4F7FB] text-center">Explore by Pathway</h2>
         <div ref={quickLinksRef} className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {/* Pathway 1 */}
           <div 

@@ -16,7 +16,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       const saved = localStorage.getItem('infostaan_theme');
       if (saved === 'light' || saved === 'dark') return saved;
     }
-    return 'dark'; // default to Mumbai midnight transit theme
+    return 'light'; // default to light theme
   });
 
   useEffect(() => {

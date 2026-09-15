@@ -3,7 +3,7 @@ import { Briefcase, Clock, IndianRupee, ArrowRight, ShieldCheck, GraduationCap }
 import gsap from 'gsap';
 
 interface ConnectScreenProps {
-  onNavigate: (screen: 'home' | 'search' | 'college-detail' | 'saved' | 'guidance' | 'connect') => void;
+  onNavigate: (path: string) => void;
 }
 
 export const ConnectScreen: React.FC<ConnectScreenProps> = ({ onNavigate }) => {
@@ -141,6 +141,7 @@ export const ConnectScreen: React.FC<ConnectScreenProps> = ({ onNavigate }) => {
                 
                 <button
                   type="button"
+                  onClick={() => onNavigate('/search?category=internships')}
                   className="w-full py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold transition-transform active:scale-95 flex items-center justify-center gap-2"
                 >
                   <span>Book Session</span>

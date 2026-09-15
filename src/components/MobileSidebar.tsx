@@ -18,13 +18,13 @@ import {
 } from 'lucide-react';
 import { ScreenType } from '../types';
 import { useTheme } from '../context/ThemeContext';
+import { useNavigate, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
+import logoImg from '../assets/logo.png';
 
 interface MobileSidebarProps {
   isOpen: boolean;
   onClose: () => void;
-  currentScreen: ScreenType;
-  onNavigate: (screen: ScreenType) => void;
   savedCount: number;
   onSearch: (query: string, category?: string) => void;
   onOpenSignIn: () => void;
@@ -34,8 +34,6 @@ interface MobileSidebarProps {
 export const MobileSidebar: React.FC<MobileSidebarProps> = ({
   isOpen,
   onClose,
-  currentScreen,
-  onNavigate,
   savedCount,
   onSearch,
   onOpenSignIn,
@@ -45,6 +43,9 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
   const backdropRef = useRef<HTMLDivElement>(null);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const navItemsRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   // Normal subtle GSAP animation on open/close
   useEffect(() => {
@@ -109,8 +110,8 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
     }
   };
 
-  const navigateAndClose = (screen: ScreenType) => {
-    onNavigate(screen);
+  const navigateAndClose = (path: string) => {
+    navigate(path);
     handleClose();
   };
 
@@ -146,12 +147,12 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
           <button
             type="button"
             id="mobile-sidebar-logo-btn"
-            onClick={() => navigateAndClose('home')}
+            onClick={() => navigateAndClose('/')}
             className="flex items-center gap-3 text-left hover:opacity-85 transition-opacity cursor-pointer focus:outline-none group"
             aria-label="Go to Infostaan Mumbai homepage"
           >
             <img
-              src="https://lh3.googleusercontent.com/aida/AEtjO1UJRnyY75dMTB5Z-cXZjZ3AHt6T7uaIV9eXqLfvbCpkoh6H3vtLzT72f2ELzFgBSVdzT8-paZEQSLjKKpma2NUop1U8fTGtcs4-J6mfIodKtH8dUycdls-_KKlOvC0EEraSGgAvoQBgmghFNBZIjxbUkkg16C7SI5mPgsPhNQ6cmxNXigYJ5ay7rfelrmM6GEV11vg1k6aY8fZf3RlkYWK_b54tzMXQ0BasRUUKiOCXCrWQbInnY2XgtVU"
+              src={logoImg}
               alt="Infostaan Mumbai Logo"
               className="h-7 w-auto object-contain pointer-events-none transition-transform duration-200 group-hover:scale-105"
             />
@@ -177,12 +178,11 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
             <div className="space-y-1">
               <button
                 type="button"
-                onClick={() => navigateAndClose('home')}
-                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${
-                  currentScreen === 'home'
-                    ? 'bg-[#007DCC] text-white shadow-xs'
-                    : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
-                }`}
+                onClick={() => navigateAndClose('/')}
+                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/'
+                  ? 'bg-[#007DCC] text-white shadow-xs'
+                  : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
+                  }`}
               >
                 <div className="flex items-center gap-3">
                   <Compass className="w-4 h-4 shrink-0" />
@@ -193,12 +193,11 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
 
               <button
                 type="button"
-                onClick={() => navigateAndClose('guidance')}
-                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${
-                  currentScreen === 'guidance'
-                    ? 'bg-[#007DCC] text-white shadow-xs'
-                    : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
-                }`}
+                onClick={() => navigateAndClose('/help-me-decide')}
+                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/help-me-decide'
+                  ? 'bg-[#007DCC] text-white shadow-xs'
+                  : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
+                  }`}
               >
                 <div className="flex items-center gap-3">
                   <Sparkles className="w-4 h-4 shrink-0 text-amber-500 dark:text-amber-400" />
@@ -211,12 +210,11 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
 
               <button
                 type="button"
-                onClick={() => navigateAndClose('connect')}
-                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${
-                  currentScreen === 'connect'
-                    ? 'bg-[#007DCC] text-white shadow-xs'
-                    : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
-                }`}
+                onClick={() => navigateAndClose('/dashboard')}
+                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/dashboard'
+                  ? 'bg-[#007DCC] text-white shadow-xs'
+                  : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
+                  }`}
               >
                 <div className="flex items-center gap-3">
                   <TrendingUp className="w-4 h-4 shrink-0" />
@@ -227,12 +225,11 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
 
               <button
                 type="button"
-                onClick={() => navigateAndClose('saved')}
-                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${
-                  currentScreen === 'saved'
-                    ? 'bg-[#007DCC] text-white shadow-xs'
-                    : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
-                }`}
+                onClick={() => navigateAndClose('/saved')}
+                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/saved'
+                  ? 'bg-[#007DCC] text-white shadow-xs'
+                  : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
+                  }`}
               >
                 <div className="flex items-center gap-3">
                   <Bookmark className="w-4 h-4 shrink-0" />
@@ -247,12 +244,11 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
 
               <button
                 type="button"
-                onClick={() => navigateAndClose('search')}
-                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${
-                  currentScreen === 'search'
-                    ? 'bg-[#007DCC] text-white shadow-xs'
-                    : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
-                }`}
+                onClick={() => navigateAndClose('/search')}
+                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/search'
+                  ? 'bg-[#007DCC] text-white shadow-xs'
+                  : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
+                  }`}
               >
                 <div className="flex items-center gap-3">
                   <Search className="w-4 h-4 shrink-0" />
