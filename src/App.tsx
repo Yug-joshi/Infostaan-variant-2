@@ -12,7 +12,9 @@ import { GuidanceScreen } from './components/GuidanceScreen';
 import { ConnectScreen } from './components/ConnectScreen';
 import { CompareModal } from './components/CompareModal';
 import { SignInModal } from './components/SignInModal';
+import { CutoffModal } from './components/CutoffModal';
 import { MobileSidebar } from './components/MobileSidebar';
+import { PencilLoader } from './components/PencilLoader';
 import { Check } from 'lucide-react';
 import logoImg from './assets/logo.png';
 import gsap from 'gsap';
@@ -28,6 +30,7 @@ export default function App() {
     col2: 'hr-college',
   });
   const [isSignInOpen, setIsSignInOpen] = useState<boolean>(false);
+  const [isCutoffOpen, setIsCutoffOpen] = useState<boolean>(false);
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState<boolean>(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isBooting, setIsBooting] = useState<boolean>(true);
@@ -153,31 +156,8 @@ export default function App() {
 
   if (isBooting) {
     return (
-      <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-50 dark:bg-[#070D18]">
-        <img
-          ref={logoRef}
-          src={logoImg}
-          alt="Infostaan Logo"
-          className="w-16 h-16 sm:w-20 sm:h-20 object-contain mb-4"
-        />
-        <h1 className="text-xl font-bold tracking-wider uppercase text-slate-900 dark:text-[#F4F7FB] mb-2">
-          Infostaan
-        </h1>
-        <div className="flex flex-col items-center gap-2">
-          <p className="text-sm text-slate-500 dark:text-[#A9B8CA]">Finding your way...</p>
-          <div className="w-32 h-0.5 bg-slate-200 dark:bg-[#1a202b] rounded-full overflow-hidden relative">
-            <div className="absolute top-0 left-0 h-full bg-[#007DCC] dark:bg-[#9ccaff] w-full animate-progress-bar origin-left"></div>
-          </div>
-        </div>
-        <style>{`
-          @keyframes progressBar {
-            0% { transform: scaleX(0); }
-            100% { transform: scaleX(1); }
-          }
-          .animate-progress-bar {
-            animation: progressBar 0.7s ease-out forwards;
-          }
-        `}</style>
+    <div className={`min-h-screen flex flex-col font-sans transition-colors duration-200 bg-slate-100 dark:bg-[#070D18]`}>
+        <PencilLoader size="large" variant="draw" message="INFOSTAAN" subMessage="Finding your way..." />
       </div>
     );
   }
@@ -207,6 +187,7 @@ export default function App() {
               onSearch={handleSearch}
               onNavigate={(path) => navigate(path)}
               onSelectCollege={handleSelectCollege}
+              onOpenCutoff={() => setIsCutoffOpen(true)}
             />
           } />
           
@@ -287,6 +268,13 @@ export default function App() {
         onSave={(name, loc, stream) => {
           showToast(`Preferences updated for ${name} (${loc})`);
         }}
+      />
+
+      {/* Cutoff Modal */}
+      <CutoffModal
+        isOpen={isCutoffOpen}
+        onClose={() => setIsCutoffOpen(false)}
+        onSelectCollege={handleSelectCollege}
       />
 
       {/* Universal Calm Footer */}

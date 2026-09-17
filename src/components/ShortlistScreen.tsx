@@ -61,7 +61,7 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
   };
 
   return (
-    <main className="w-full pt-16 sm:pt-20 bg-slate-50 dark:bg-[#070D18] min-h-screen text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200">
+    <main className="w-full pt-16 sm:pt-20 bg-slate-100 dark:bg-[#070D18] min-h-screen text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200">
       <div className="relative w-full max-w-[1320px] mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 overflow-hidden">
         {/* Subtle Ambient Top Halos */}
         <div className="absolute -top-24 right-1/4 w-96 h-96 bg-[#007DCC]/5 dark:bg-[#007DCC]/10 rounded-full blur-[120px] pointer-events-none" />
@@ -77,9 +77,6 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
             <h1 className="text-3xl sm:text-5xl font-bold text-slate-900 dark:text-[#F4F7FB] tracking-tight">
               Your Shortlist
             </h1>
-            <p className="text-sm sm:text-base text-slate-600 dark:text-[#A9B8CA] mt-1">
-              {savedItems.length} {savedItems.length === 1 ? 'item' : 'items'} saved to help you decide your next step.
-            </p>
           </div>
 
           {/* Live Decision Progress Mini-Widget */}
@@ -166,10 +163,7 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
           <div ref={listContainerRef} className="flex flex-col gap-4">
             {filteredItems.length === 0 ? (
               <div className="p-12 text-center bg-white dark:bg-[#161c27] rounded-xl border border-slate-200 dark:border-[#D3B5E8]/10 text-slate-500 dark:text-[#A9B8CA]">
-                <p className="text-lg font-semibold text-slate-900 dark:text-[#F4F7FB] mb-2">No items saved in this view</p>
-                <p className="text-sm max-w-sm mx-auto mb-6">
-                  Save institutions like Hinduja College, Podar, Mithibai, or H.R. College to compare them side-by-side.
-                </p>
+                <p className="text-lg font-semibold text-slate-900 dark:text-[#F4F7FB] mb-6">No items saved in this view</p>
                 <button
                   type="button"
                   onClick={() => onNavigate('/search')}
@@ -293,16 +287,9 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
             >
               <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
                 <div className="flex flex-col gap-1 max-w-2xl">
-                  <div className="flex items-center gap-2 text-blue-200 text-xs font-semibold tracking-wider uppercase">
-                    <Columns2 className="w-4 h-4" />
-                    <span>Next Strategic Move</span>
-                  </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                    Ready to decide between your saved colleges?
+                    Compare Saved Colleges
                   </h3>
-                  <p className="text-xs sm:text-sm text-blue-100/90 leading-relaxed mt-1">
-                    Compare Hinduja, Podar, Mithibai, and H.R. College side-by-side on commute duration, annual fees, cutoffs, and CA articleship suitability.
-                  </p>
                 </div>
 
                 <div className="flex items-center gap-3 w-full sm:w-auto">

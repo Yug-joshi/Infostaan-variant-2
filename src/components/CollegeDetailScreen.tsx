@@ -12,9 +12,11 @@ import {
   Briefcase,
   GraduationCap,
   Sparkles,
+  FileText,
 } from 'lucide-react';
 import { CollegeDetail, ScreenType, ShortlistItem } from '../types';
 import { getCollegeDetails } from '../data/mockData';
+import { CUTOFFS } from '../data/cutoffs';
 import gsap from 'gsap';
 
 interface CollegeDetailScreenProps {
@@ -35,6 +37,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
   const collegeId = slug || 'mithibai'; // Fallback
   const isSaved = savedItems.some((item) => item.collegeId === collegeId);
   const college: CollegeDetail = getCollegeDetails(collegeId);
+  const collegeCutoffs = CUTOFFS.filter(c => c.collegeId === collegeId);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Subtle GSAP entrance animation
@@ -58,7 +61,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
   return (
     <main
       ref={containerRef}
-      className="w-full pt-20 sm:pt-24 pb-20 bg-slate-50 dark:bg-[#070D18] min-h-screen text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200"
+      className="w-full pt-20 sm:pt-24 pb-20 bg-slate-100 dark:bg-[#070D18] min-h-screen text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200"
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Editorial Header / Left-aligned free layout */}
@@ -74,7 +77,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
             </nav>
 
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-[#D3B5E8]/20 rounded-full text-[#007DCC] dark:text-[#86cfff] text-xs font-bold shadow-2xs">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-full text-[#007DCC] dark:text-[#86cfff] text-xs font-bold shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-[#51dcbc] animate-pulse" />
               <span>{college.badge}</span>
             </div>
@@ -126,7 +129,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
             <button
               type="button"
               onClick={() => onOpenCompare(college.id)}
-              className="h-11 px-5 bg-white dark:bg-[#0D1828] hover:bg-slate-100 dark:hover:bg-[#161c27] text-slate-800 dark:text-[#F4F7FB] font-bold text-xs sm:text-sm rounded-xl transition-all duration-200 flex items-center gap-2 border border-slate-200 dark:border-[#D3B5E8]/15 shadow-2xs"
+              className="h-11 px-5 bg-white dark:bg-[#0D1828] hover:bg-slate-100 dark:hover:bg-[#161c27] text-slate-800 dark:text-[#F4F7FB] font-bold text-xs sm:text-sm rounded-xl transition-all duration-200 flex items-center gap-2 border border-slate-300 dark:border-[#D3B5E8]/15 shadow-sm"
             >
               <Scale className="w-4 h-4 text-slate-500 dark:text-[#A9B8CA]" />
               <span>Compare College</span>
@@ -135,7 +138,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
         </header>
 
         {/* Campus Context Vignette */}
-        <div className="detail-fade-anim relative w-full rounded-2xl overflow-hidden mb-10 shadow-sm bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-[#D3B5E8]/15">
+        <div className="detail-fade-anim relative w-full rounded-2xl overflow-hidden mb-10 shadow-sm bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-[#D3B5E8]/15">
           <div className="grid grid-cols-1 md:grid-cols-12 min-h-[260px] md:min-h-[290px]">
             {/* Campus Photo */}
             <div className="md:col-span-7 relative min-h-[220px] md:min-h-full">
@@ -184,7 +187,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
                 </h2>
               </div>
 
-              <div className="bg-white dark:bg-[#0D1828] rounded-2xl p-6 sm:p-7 shadow-2xs space-y-5 border border-slate-200 dark:border-[#D3B5E8]/10">
+              <div className="bg-white dark:bg-[#0D1828] rounded-2xl p-6 sm:p-7 shadow-sm space-y-5 border border-slate-300 dark:border-[#D3B5E8]/10">
                 {college.whyFit.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4">
                     <div className="w-9 h-9 rounded-xl bg-blue-50 dark:bg-[#161c27] flex items-center justify-center shrink-0 mt-0.5">
@@ -222,7 +225,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
 
               <div className="space-y-4">
                 {/* Strong Fit Panel */}
-                <div className="bg-emerald-50/60 dark:bg-[#0D1828] p-6 sm:p-7 rounded-2xl shadow-2xs border border-emerald-200 dark:border-emerald-800/30">
+                <div className="bg-emerald-50/60 dark:bg-[#0D1828] p-6 sm:p-7 rounded-2xl shadow-sm border border-emerald-200 dark:border-emerald-800/30">
                   <div className="flex items-center gap-2 mb-2 text-emerald-700 dark:text-[#51dcbc]">
                     <CheckCircle2 className="w-5 h-5" />
                     <span className="text-xs font-bold uppercase tracking-wider">Strong Fit If</span>
@@ -264,7 +267,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
                 {college.keyFacts.map((fact, idx) => (
                   <div
                     key={idx}
-                    className="bg-white dark:bg-[#0D1828] p-5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-[#D3B5E8]/10 hover:border-[#007DCC]/40 transition-all shadow-2xs"
+                    className="bg-white dark:bg-[#0D1828] p-5 rounded-2xl flex flex-col justify-between border border-slate-300 dark:border-[#D3B5E8]/10 hover:border-[#007DCC]/40 transition-all shadow-sm"
                   >
                     <div className="space-y-0.5">
                       <span className="text-[11px] font-bold text-slate-500 dark:text-[#A9B8CA] uppercase tracking-wider">
@@ -283,13 +286,10 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
             </section>
 
             {/* Quick Action Box */}
-            <div className="detail-fade-anim p-6 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-[#D3B5E8]/15 shadow-2xs space-y-3">
+            <div className="detail-fade-anim p-6 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-[#D3B5E8]/15 shadow-sm space-y-3">
               <h3 className="font-bold text-base text-slate-900 dark:text-[#F4F7FB]">
                 Plan Your Degree Career Path
               </h3>
-              <p className="text-xs text-slate-600 dark:text-[#A9B8CA]">
-                See how attending {college.name} connects to B.Com, BAF, BMS, CA articleship, and Big 4 corporate internships in Mumbai.
-              </p>
               <button
                 type="button"
                 onClick={() => onNavigate('guidance')}
@@ -302,16 +302,59 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
           </div>
         </div>
 
+        {/* Section: Admissions & Cutoffs */}
+        {collegeCutoffs.length > 0 && (
+          <section className="detail-fade-anim mb-10 text-left">
+            <div className="p-8 sm:p-10 rounded-2xl bg-white dark:bg-[#0D1828] shadow-sm border border-slate-300 dark:border-[#D3B5E8]/15">
+              <div className="space-y-1 mb-6">
+                <span className="text-[11px] text-[#007DCC] dark:text-[#86cfff] font-bold uppercase tracking-widest">
+                  Admissions
+                </span>
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] tracking-tight">
+                  Cutoffs & Merit Lists
+                </h2>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {collegeCutoffs.map(cutoff => (
+                  <div key={cutoff.id} className="p-5 rounded-xl border border-slate-300 dark:border-[#D3B5E8]/10 bg-slate-50 dark:bg-[#161c27] flex flex-col justify-between">
+                    <div className="mb-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#007DCC]/10 text-[#007DCC] dark:text-[#86cfff] uppercase">
+                          {cutoff.academicYear}
+                        </span>
+                        <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-500/10 text-purple-600 dark:text-[#D3B5E8] uppercase">
+                          {cutoff.stream}
+                        </span>
+                      </div>
+                      <h4 className="font-semibold text-slate-900 dark:text-[#F4F7FB] text-sm mb-1">{cutoff.documentTitle}</h4>
+                      <p className="text-xs text-slate-500 dark:text-[#A9B8CA]">{cutoff.description}</p>
+                    </div>
+                    
+                    <a 
+                      href={cutoff.sourceFile}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-[#007DCC] dark:text-[#19A7E8] hover:text-[#005a9c] dark:hover:text-[#5bc1ff] text-xs font-bold uppercase tracking-wide transition-colors"
+                      aria-label={`View cutoff PDF for ${cutoff.documentTitle}`}
+                    >
+                      <FileText className="w-4 h-4" />
+                      View Cutoff PDF <ArrowRight className="w-3 h-3" />
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Section 4: Compare Next Step */}
         <section className="detail-fade-anim pt-2" id="compare">
-          <div className="p-8 sm:p-10 rounded-2xl bg-white dark:bg-[#0D1828] text-left flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-sm border border-slate-200 dark:border-[#D3B5E8]/15">
+          <div className="p-8 sm:p-10 rounded-2xl bg-white dark:bg-[#0D1828] text-left flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-sm border border-slate-300 dark:border-[#D3B5E8]/15">
             <div className="space-y-1">
               <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] tracking-tight">
-                Want to compare {college.name} against {college.compareTargetName}?
+                Compare with {college.compareTargetName}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-[#A9B8CA] max-w-2xl leading-relaxed">
-                Review side-by-side cutoff trends, commute duration, and attendance flexibility without bias or marketing noise.
-              </p>
             </div>
             <div className="flex flex-wrap gap-3 shrink-0">
               <button

@@ -60,9 +60,6 @@ export const CompareModal: React.FC<CompareModalProps> = ({
               <h2 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-[#F4F7FB]">
                 Side-by-Side College Comparison
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-[#A9B8CA]">
-                Compare real Mumbai factors: commute duration, CA flexibility, fees, and cutoffs.
-              </p>
             </div>
           </div>
           <button

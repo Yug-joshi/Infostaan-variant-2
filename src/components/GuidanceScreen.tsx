@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import { ScreenType } from '../types';
 import { CareerRoadmap } from './CareerRoadmap';
+import { PencilLoader } from './PencilLoader';
 import gsap from 'gsap';
 
 interface GuidanceScreenProps {
@@ -55,6 +56,8 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
   // Step 4: Priorities
   const [priority, setPriority] = useState<string>('ca-flexibility');
 
+  const [isCalculating, setIsCalculating] = useState(false);
+
   const stepContainerRef = useRef<HTMLDivElement>(null);
 
   // Subtle GSAP animation when changing wizard steps or tabs
@@ -85,8 +88,13 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
       setCurrentStep(currentStep + 1);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      setCurrentStep(5);
+      setIsCalculating(true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Simulate real recommendation generation
+      setTimeout(() => {
+        setIsCalculating(false);
+        setCurrentStep(5);
+      }, 1200);
     }
   };
 
@@ -169,7 +177,7 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
   const matchedColleges = getMatchedColleges();
 
   return (
-    <main className="w-full pt-20 sm:pt-24 pb-20 bg-slate-50 dark:bg-[#070D18] min-h-screen text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200">
+    <main className="w-full pt-20 sm:pt-24 pb-20 bg-slate-100 dark:bg-[#070D18] min-h-screen text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200">
       {/* Top Switcher Strip */}
       <div className="w-full border-b border-slate-200 dark:border-white/10 bg-white dark:bg-[#0D1828] sticky top-16 z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
@@ -227,11 +235,8 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
             <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-5 text-left shadow-2xs">
               <div className="space-y-1">
                 <h4 className="font-bold text-slate-900 dark:text-white text-base sm:text-lg">
-                  Unsure which Mumbai college fits your schedule?
+                  Help Me Decide
                 </h4>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-[#A9B8CA] max-w-2xl">
-                  Take our 4-question "Help Me Decide" quiz to match colleges based on your railway line and CA articleship requirements.
-                </p>
               </div>
               <button
                 type="button"
@@ -282,12 +287,9 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
             {/* STEP 1: Academic Stage */}
             {currentStep === 1 && (
               <div className="w-full mb-8">
-                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-2">
+                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
                   What is your current academic stage?
                 </h1>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-[#A9B8CA] max-w-2xl mb-8">
-                  We calibrate course prerequisites, entrance deadlines, and degree tracks for Mumbai institutions.
-                </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                   {[
                     {
@@ -334,12 +336,9 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
             {/* STEP 2: Interests */}
             {currentStep === 2 && (
               <div className="w-full mb-8">
-                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-2">
+                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
                   What subjects or areas excite you most?
                 </h1>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-[#A9B8CA] max-w-2xl mb-8">
-                  Pick up to two. We'll narrow down Mumbai colleges, degree courses, and career possibilities accordingly.
-                </p>
 
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                   {/* Option 1: Commerce & Corporate Finance */}
@@ -475,30 +474,16 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
                   </div>
                 </div>
 
-                {/* Contextual Insight Box */}
-                <div className="w-full bg-white dark:bg-[#161c27] border border-slate-200 dark:border-[#D3B5E8]/15 rounded-2xl p-5 sm:p-6 mb-8 flex items-start gap-4 shadow-2xs">
-                  <div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-[#242a36] flex items-center justify-center text-[#007DCC] dark:text-[#9ccaff] shrink-0 mt-0.5">
-                    <Lightbulb className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-900 dark:text-[#F4F7FB] mb-1">Why we ask:</h4>
-                    <p className="text-xs sm:text-sm text-slate-600 dark:text-[#A9B8CA] leading-relaxed">
-                      Mumbai colleges have distinct regional strengths. For example, South Mumbai colleges (Hinduja, H.R., Jai Hind) excel in finance and corporate law, while the Western suburbs (Mithibai, NM College) dominate in management, media, and tech innovation hubs.
-                    </p>
-                  </div>
-                </div>
+
               </div>
             )}
 
             {/* STEP 3: Commute Line */}
             {currentStep === 3 && (
               <div className="w-full mb-8">
-                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-2">
+                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
                   Where in Mumbai do you live or commute from?
                 </h1>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-[#A9B8CA] max-w-2xl mb-8">
-                  Suburban rail lines determine daily commute stress. We prioritize colleges with zero changeovers.
-                </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                   {[
                     {
@@ -546,12 +531,9 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
             {/* STEP 4: Key Priorities */}
             {currentStep === 4 && (
               <div className="w-full mb-8">
-                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-2">
+                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
                   What matters most to you in a college?
                 </h1>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-[#A9B8CA] max-w-2xl mb-8">
-                  Select your top non-negotiable preference to fine-tune recommendations.
-                </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                   {[
                     {
@@ -593,19 +575,23 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
               </div>
             )}
 
+            {/* Calculating State */}
+            {isCalculating && (
+              <div className="w-full py-20 flex flex-col items-center justify-center">
+                <PencilLoader size="medium" variant="write" message="Putting your options together..." />
+              </div>
+            )}
+
             {/* STEP 5: Outcome Recommendations */}
-            {currentStep === 5 && (
+            {currentStep === 5 && !isCalculating && (
               <div className="w-full py-4 text-left">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-[#007DCC]/20 text-[#007DCC] dark:text-[#9ccaff] text-xs font-bold uppercase tracking-wider mb-3">
                   <Sparkles className="w-4 h-4" />
                   <span>Recommendation Results</span>
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-[#F4F7FB] mb-2">
-                  Your Tailored Mumbai College Matches
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-[#F4F7FB] mb-8">
+                  Your Recommendations
                 </h2>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-[#A9B8CA] max-w-2xl mb-8">
-                  Calibrated for your preferences in <strong>Commerce, Finance, and Commute</strong>:
-                </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left mb-8">
                   {matchedColleges.map((col) => (
