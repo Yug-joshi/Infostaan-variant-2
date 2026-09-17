@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import { ScreenType, ShortlistItem } from './types';
 import { INITIAL_SAVED_ITEMS } from './data/mockData';
 import { Navbar } from './components/Navbar';
@@ -16,13 +15,12 @@ import { CutoffModal } from './components/CutoffModal';
 import { MobileSidebar } from './components/MobileSidebar';
 import { PencilLoader } from './components/PencilLoader';
 import { Check } from 'lucide-react';
-import logoImg from './assets/logo.png';
-import gsap from 'gsap';
 
 export default function App() {
-  const navigate = useNavigate();
-  const location = useLocation();
+  const [currentScreen, setCurrentScreen] = useState<ScreenType>('home');
   const [selectedCollegeId, setSelectedCollegeId] = useState<string>('mithibai');
+  const [searchQuery, setSearchQuery] = useState<string>('finance');
+  const [searchCategory, setSearchCategory] = useState<string>('all');
   const [savedItems, setSavedItems] = useState<ShortlistItem[]>(INITIAL_SAVED_ITEMS);
   const [isCompareOpen, setIsCompareOpen] = useState<boolean>(false);
   const [compareColleges, setCompareColleges] = useState<{ col1: string; col2: string }>({
@@ -33,29 +31,6 @@ export default function App() {
   const [isCutoffOpen, setIsCutoffOpen] = useState<boolean>(false);
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState<boolean>(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-  const [isBooting, setIsBooting] = useState<boolean>(true);
-  const logoRef = useRef<HTMLImageElement>(null);
-  
-  useEffect(() => {
-    // Very short branded boot loader (300-800ms)
-    const ctx = gsap.context(() => {
-      if (logoRef.current) {
-        gsap.fromTo(logoRef.current, 
-          { opacity: 0, scale: 0.9 }, 
-          { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out' }
-        );
-      }
-    });
-
-    const timer = setTimeout(() => {
-      setIsBooting(false);
-    }, 700);
-
-    return () => {
-      clearTimeout(timer);
-      ctx.revert();
-    };
-  }, []);
 
   const showToast = (message: string) => {
     setToastMessage(message);
@@ -64,20 +39,17 @@ export default function App() {
     }, 2800);
   };
 
-  // Scroll to top on route change
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [location.pathname, location.search]);
-
   const handleSearch = (query: string, category: string = 'all') => {
-    const params = new URLSearchParams();
-    if (query) params.set('query', query);
-    if (category && category !== 'all') params.set('category', category);
-    navigate(`/search?${params.toString()}`);
+    setSearchQuery(query || 'finance');
+    setSearchCategory(category);
+    setCurrentScreen('search');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleSelectCollege = (collegeSlug: string) => {
-    navigate(`/college/${collegeSlug}`);
+  const handleSelectCollege = (collegeId: string) => {
+    setSelectedCollegeId(collegeId);
+    setCurrentScreen('college-detail');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const isCollegeSaved = (id: string) => {
@@ -163,7 +135,10 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#070D18] text-slate-900 dark:text-[#F4F7FB] flex flex-col font-sans transition-colors duration-200 selection:bg-[#007DCC]/30 selection:text-[#007DCC]">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#070D18] text-slate-900 dark:text-[#F4F7FB] flex flex-col font-sans transition-colors duration-200 selection:bg-[#007DCC]/30 selection:text-[#007DCC] relative">
+      <InitialLoader />
+      <DesktopDecorations />
+      
       {/* Toast Notification */}
       {toastMessage && (
         <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-[#1a202b] border border-slate-700 dark:border-[#007DCC]/40 text-sm text-white dark:text-[#F4F7FB] shadow-xl flex items-center gap-2 animate-in fade-in slide-in-from-bottom-2 duration-200">
@@ -174,6 +149,11 @@ export default function App() {
 
       {/* Primary Navigation Bar */}
       <Navbar
+        currentScreen={currentScreen}
+        onNavigate={(screen) => {
+          setCurrentScreen(screen);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
         savedCount={savedItems.length}
         onOpenSignIn={() => setIsSignInOpen(true)}
         onOpenMobileSidebar={() => setIsMobileSidebarOpen(true)}
@@ -199,54 +179,74 @@ export default function App() {
             />
           } />
 
-          <Route path="/explore" element={<Navigate to="/search" replace />} />
-          <Route path="/colleges" element={<Navigate to="/search?category=colleges" replace />} />
-          <Route path="/courses" element={<Navigate to="/search?category=courses" replace />} />
-          <Route path="/careers" element={<Navigate to="/search?category=careers" replace />} />
-          <Route path="/internships" element={<Navigate to="/search?category=internships" replace />} />
-          
-          <Route path="/college/:slug" element={
-            <CollegeDetailScreen
-              savedItems={savedItems}
-              onToggleSave={handleToggleSaveCollege}
-              onOpenCompare={handleOpenCompare}
-              onNavigate={(path) => navigate(path)}
-            />
-          } />
+        {currentScreen === 'search' && (
+          <SearchResultsScreen
+            initialQuery={searchQuery}
+            initialCategory={searchCategory}
+            onNavigate={(screen) => {
+              setCurrentScreen(screen);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onSelectCollege={handleSelectCollege}
+            savedItemIds={savedItems.map((i) => i.id)}
+          />
+        )}
 
-          <Route path="/saved" element={
-            <ShortlistScreen
-              savedItems={savedItems}
-              onRemoveItem={handleRemoveSavedItem}
-              onOpenCompare={handleOpenCompare}
-              onSelectCollege={handleSelectCollege}
-              onNavigate={(path) => navigate(path)}
-            />
-          } />
+        {currentScreen === 'college-detail' && (
+          <CollegeDetailScreen
+            collegeId={selectedCollegeId}
+            isSaved={isCollegeSaved(selectedCollegeId)}
+            onToggleSave={handleToggleSaveCollege}
+            onOpenCompare={handleOpenCompare}
+            onNavigate={(screen) => {
+              setCurrentScreen(screen);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        )}
 
-          <Route path="/help-me-decide" element={
-            <GuidanceScreen
-              onNavigate={(path) => navigate(path)}
-              onSelectCollege={handleSelectCollege}
-            />
-          } />
+        {currentScreen === 'saved' && (
+          <ShortlistScreen
+            savedItems={savedItems}
+            onRemoveItem={handleRemoveSavedItem}
+            onOpenCompare={handleOpenCompare}
+            onSelectCollege={handleSelectCollege}
+            onNavigate={(screen) => {
+              setCurrentScreen(screen);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        )}
 
-          <Route path="/dashboard" element={
-            <ConnectScreen
-              onNavigate={(path) => navigate(path)}
-            />
-          } />
+        {currentScreen === 'guidance' && (
+          <GuidanceScreen
+            onNavigate={(screen) => {
+              setCurrentScreen(screen);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onSelectCollege={handleSelectCollege}
+          />
+        )}
 
-          {/* Legacy route fallbacks */}
-          <Route path="/guidance" element={<Navigate to="/help-me-decide" replace />} />
-          <Route path="/connect" element={<Navigate to="/dashboard" replace />} />
-        </Routes>
-      </div>
+        {currentScreen === 'connect' && (
+          <ConnectScreen
+            onNavigate={(screen) => {
+              setCurrentScreen(screen);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        )}
+      </PageTransition>
 
       {/* Mobile Navigation Drawer / Side Bar */}
       <MobileSidebar
         isOpen={isMobileSidebarOpen}
         onClose={() => setIsMobileSidebarOpen(false)}
+        currentScreen={currentScreen}
+        onNavigate={(screen) => {
+          setCurrentScreen(screen);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
         savedCount={savedItems.length}
         onSearch={handleSearch}
         onOpenSignIn={() => setIsSignInOpen(true)}
@@ -278,7 +278,13 @@ export default function App() {
       />
 
       {/* Universal Calm Footer */}
-      <Footer />
+      <Footer
+        onSelectCategory={(cat) => handleSearch('', cat)}
+        onNavigate={(screen) => {
+          setCurrentScreen(screen);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+      />
     </div>
   );
 }

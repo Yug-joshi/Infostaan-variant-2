@@ -9,13 +9,17 @@ import { InternshipModal } from './InternshipModal';
 import gsap from 'gsap';
 
 interface SearchResultsScreenProps {
-  onNavigate: (path: string) => void;
+  initialQuery: string;
+  initialCategory?: string;
+  onNavigate: (screen: ScreenType) => void;
   onSelectCollege: (collegeId: string) => void;
   onSaveItem?: (item: SearchResultItem) => void;
   savedItemIds?: string[];
 }
 
 export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
+  initialQuery,
+  initialCategory = 'all',
   onNavigate,
   onSelectCollege,
   onSaveItem,
@@ -109,15 +113,18 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
       setSearchPhase('done');
     }, 3000);
 
-    return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-    };
+  // Simulate fast search latency when query or category changes
+  useEffect(() => {
+    setIsSearching(true);
+    const timer = setTimeout(() => {
+      setIsSearching(false);
+    }, 1500); // Fast but visible loading duration
+    return () => clearTimeout(timer);
   }, [query, activeCategory]);
 
-  // Subtle GSAP animations when results change (only when done)
+  // Subtle GSAP animations when results change
   useEffect(() => {
-    if (searchPhase === 'done' && resultsContainerRef.current) {
+    if (!isSearching && resultsContainerRef.current) {
       const cards = resultsContainerRef.current.querySelectorAll('.result-card-anim');
       gsap.fromTo(
         cards,
@@ -131,7 +138,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
         }
       );
     }
-  }, [filteredResults, searchPhase]);
+  }, [filteredResults, activeCategory]);
 
   const handleActionClick = (item: SearchResultItem) => {
     if (item.category === 'colleges') {
@@ -142,7 +149,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
       setSelectedInternship(item);
       setIsInternshipOpen(true);
     } else {
-      onNavigate('/help-me-decide');
+      onNavigate('guidance');
     }
   };
 
@@ -153,7 +160,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Search Header & Filter Bar (Left-aligned, free-flow layout) */}
-        <div className="flex flex-col gap-6 mb-8 text-left relative z-[60]">
+        <div className="flex flex-col gap-6 mb-8 text-left">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-[#007DCC] dark:text-[#86cfff] text-xs font-bold uppercase tracking-wider mb-2">
@@ -181,15 +188,15 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
             <input
               aria-label="Search opportunities, courses, and institutions in Mumbai"
               type="text"
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
               placeholder="Search colleges (Hinduja, Podar, Mithibai, HR), courses, careers, internships..."
               className="w-full bg-transparent font-medium text-sm sm:text-base text-slate-900 dark:text-[#F4F7FB] placeholder:text-slate-400 dark:placeholder:text-[#A9B8CA]/60 focus:outline-none"
             />
-            {inputValue && (
+            {query && (
               <button
                 type="button"
-                onClick={() => setInputValue('')}
+                onClick={() => setQuery('')}
                 title="Clear search"
                 className="flex items-center justify-center p-1 text-slate-400 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-[#F4F7FB] rounded-full transition-colors mr-2"
               >
@@ -262,7 +269,9 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
             </div>
 
             <p className="text-xs text-slate-500 dark:text-[#A9B8CA] tracking-wide">
-              Showing {filteredResults.length} matching {activeCategory} options
+              {isSearching 
+                ? 'Retrieving results...' 
+                : `Showing ${filteredResults.length} matching ${activeCategory} options`}
             </p>
           </div>
         </div>
@@ -376,8 +385,40 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                 ))
               )}
             </div>
+          </>
+        ) : (
+          <div ref={resultsContainerRef} className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+            {filteredResults.length === 0 ? (
+            <div className="md:col-span-2 p-10 text-center rounded-2xl bg-white dark:bg-[#0D1828] text-slate-600 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 shadow-xs">
+              <p className="text-base font-semibold text-slate-900 dark:text-[#F4F7FB] mb-1">
+                No matching results found for "{query}"
+              </p>
+              <p className="text-xs sm:text-sm">
+                Try searching for Hinduja, Podar, Mithibai, HR College, Chartered Accountant, or BKC.
+              </p>
+              <button
+                onClick={() => {
+                  setQuery('Hinduja');
+                  setActiveCategory('all');
+                }}
+                className="mt-4 px-4 py-2 rounded-xl bg-[#007DCC] text-white text-xs sm:text-sm font-semibold hover:bg-[#006cb0] transition-colors"
+              >
+                Search K.P.B. Hinduja College
+              </button>
+            </div>
+          ) : (
+            filteredResults.map((item) => (
+              <ResultCard
+                key={item.id}
+                item={item}
+                onActionClick={handleActionClick}
+                isSaved={savedItemIds.includes(item.id)}
+                onToggleSave={onSaveItem}
+              />
+            ))
           )}
-        </div>
+          </div>
+        )}
 
         {/* Free-layout Banner at Bottom */}
         <div className="mt-10 p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-[#D3B5E8]/15 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-5 text-left">
