@@ -339,7 +339,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
         {/* Help Me Decide Button (Removed surrounding card as per request) */}
         <div className="relative z-50 mb-16 -mt-10">
           <button
-            onClick={() => onNavigate('/help-me-decide')}
+            onClick={() => onNavigate('guidance')}
             className="px-8 py-3.5 rounded-full bg-[#007DCC]/90 hover:bg-[#007DCC] text-white font-semibold transition-all shadow-md hover:shadow-lg flex items-center gap-2 group backdrop-blur-sm border border-white/10"
           >
             <span>Help Me Decide</span>
