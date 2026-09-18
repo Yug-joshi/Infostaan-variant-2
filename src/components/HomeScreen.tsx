@@ -25,7 +25,7 @@ import { ScrollStorySection } from './ScrollStorySection';
 
 interface HomeScreenProps {
   onSearch: (query: string, category?: string) => void;
-  onNavigate: (screen: ScreenType) => void;
+  onNavigate: (path: string) => void;
   onSelectCollege: (collegeId: string) => void;
   onOpenCutoff: () => void;
 }
