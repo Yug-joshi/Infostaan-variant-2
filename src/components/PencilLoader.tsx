@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 export type LoaderSize = 'small' | 'medium' | 'large';
-export type LoaderVariant = 'spin' | 'draw' | 'write';
+export type LoaderVariant = 'spin' | 'draw' | 'write'; // Kept for backwards compatibility
 
 interface PencilLoaderProps {
   size?: LoaderSize;
@@ -13,7 +13,7 @@ interface PencilLoaderProps {
 
 export const PencilLoader: React.FC<PencilLoaderProps> = ({
   size = 'medium',
-  variant = 'draw',
+  variant = 'draw', // Unused now but kept for backwards compatibility
   message,
   subMessage,
   className = '',
@@ -35,22 +35,28 @@ export const PencilLoader: React.FC<PencilLoaderProps> = ({
       svg: 'w-4 h-4',
       textSize: 'text-xs',
       gap: 'gap-2',
+      translate: '-translate-y-[75%]',
+      strokeWidth: '4',
     },
     medium: {
       container: 'w-14 h-14',
       svg: 'w-8 h-8',
       textSize: 'text-sm sm:text-base',
       gap: 'gap-4',
+      translate: '-translate-y-[90%]',
+      strokeWidth: '3',
     },
     large: {
       container: 'w-24 h-24',
       svg: 'w-14 h-14',
       textSize: 'text-base sm:text-lg',
       gap: 'gap-6',
+      translate: '-translate-y-[85%]',
+      strokeWidth: '2.5',
     },
   };
 
-  const { container, svg, textSize, gap } = sizeMap[size];
+  const { container, svg, textSize, gap, translate, strokeWidth } = sizeMap[size];
 
   // Minimal SVG for the Pencil
   const PencilSVG = () => (
@@ -104,42 +110,47 @@ export const PencilLoader: React.FC<PencilLoaderProps> = ({
       aria-live="polite"
     >
       <div className={`relative flex items-center justify-center ${container} ${size === 'small' ? '' : gap}`}>
-        <div className={`
-          flex items-center justify-center relative z-10 origin-center
-          ${!prefersReducedMotion && variant === 'spin' ? 'animate-[spin_1.5s_linear_infinite]' : ''}
-          ${!prefersReducedMotion && variant === 'draw' ? 'animate-[pencil-draw_1.5s_linear_infinite]' : ''}
-          ${!prefersReducedMotion && variant === 'write' ? 'animate-[pencil-write_1s_ease-in-out_infinite]' : ''}
-          ${prefersReducedMotion ? 'opacity-90' : ''}
-        `}>
-          <PencilSVG />
-        </div>
         
-        {/* Draw Path Effect */}
-        {!prefersReducedMotion && variant === 'draw' && (
-           <div className="absolute inset-0 w-full h-full -z-0 opacity-40">
-             <svg viewBox="0 0 100 100" className="w-full h-full">
-               <circle 
-                 cx="50" cy="50" r="40" 
-                 fill="none" 
-                 stroke="#007DCC" 
-                 strokeWidth="3" 
-                 strokeLinecap="round"
-                 className="animate-[path-draw_1.5s_linear_infinite]" 
-               />
-             </svg>
-           </div>
-        )}
+        {/* Orbital Track (Static faint ring) */}
+        <div className="absolute inset-0 w-full h-full rounded-full border border-slate-200/50 dark:border-white/10" />
 
-        {/* Write Line Effect */}
-        {!prefersReducedMotion && variant === 'write' && (
-           <div className="absolute bottom-1 w-[120%] left-[-10%] h-1 -z-0 flex items-center justify-start overflow-hidden opacity-50">
-             <div className="h-[2px] bg-[#007DCC] animate-[line-write_1s_ease-in-out_infinite] w-full origin-left" />
-           </div>
-        )}
+        {/* Orbital Loading Ring (Spinning) */}
+        <svg 
+          viewBox="0 0 100 100" 
+          className="absolute inset-0 w-full h-full animate-spin opacity-80 z-0"
+          style={{ animationDuration: '2s' }}
+        >
+          <defs>
+            <linearGradient id={`loaderRing-${size}`} x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#007DCC" />
+              <stop offset="50%" stopColor="#007DCC" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#007DCC" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <circle 
+            cx="50" cy="50" r="48" 
+            fill="none" 
+            stroke={`url(#loaderRing-${size})`} 
+            strokeWidth={strokeWidth} 
+            strokeLinecap="round" 
+            strokeDasharray="150 300"
+          />
+        </svg>
+
+        {/* Orbiting Pencil */}
+        <div 
+          className="absolute inset-0 w-full h-full flex items-center justify-center z-10 animate-spin"
+          style={{ animationDuration: '0.8s' }}
+        >
+          <div className={`transform ${translate} rotate-[45deg]`}>
+             <PencilSVG />
+          </div>
+        </div>
+
       </div>
 
       {(message || subMessage) && (
-        <div className={`text-center ${size === 'small' ? 'flex flex-row items-center gap-1.5 ml-2' : 'mt-4 flex flex-col items-center'}`}>
+        <div className={`text-center ${size === 'small' ? 'flex flex-row items-center gap-1.5 ml-3' : 'mt-4 flex flex-col items-center'}`}>
           {message && (
             <p className={`${textSize} font-semibold text-slate-900 dark:text-[#F4F7FB]`}>
               {message}
@@ -155,24 +166,15 @@ export const PencilLoader: React.FC<PencilLoaderProps> = ({
 
       {/* Global styles for pencil animations */}
       <style>{`
-        @keyframes pencil-draw {
-          0% { transform: rotate(0deg) translateY(-40%) rotate(45deg); }
-          100% { transform: rotate(360deg) translateY(-40%) rotate(45deg); }
+        @keyframes orbit-spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
         }
-        @keyframes path-draw {
-          0% { stroke-dasharray: 0 251.2; stroke-dashoffset: 0; }
-          50% { stroke-dasharray: 251.2 251.2; stroke-dashoffset: 0; }
-          100% { stroke-dasharray: 251.2 251.2; stroke-dashoffset: -251.2; }
+        .animate-orbit-fast {
+          animation: orbit-spin 0.8s linear infinite;
         }
-        @keyframes pencil-write {
-          0% { transform: translateX(-40%) rotate(15deg); }
-          50% { transform: translateX(40%) rotate(-5deg); }
-          100% { transform: translateX(-40%) rotate(15deg); }
-        }
-        @keyframes line-write {
-          0% { transform: scaleX(0); opacity: 0; }
-          50% { transform: scaleX(1); opacity: 1; }
-          100% { transform: scaleX(1) translateX(100%); opacity: 0; }
+        .animate-orbit-ring {
+          animation: orbit-spin 2s linear infinite;
         }
       `}</style>
     </div>

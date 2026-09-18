@@ -156,8 +156,12 @@ export default function App() {
 
   if (isBooting) {
     return (
-    <div className={`min-h-screen flex flex-col font-sans transition-colors duration-200 bg-slate-100 dark:bg-[#070D18]`}>
-        <PencilLoader size="large" variant="draw" message="INFOSTAAN" subMessage="Finding your way..." />
+      <div className={`min-h-screen flex items-center justify-center font-sans transition-colors duration-200 bg-slate-100 dark:bg-[#070D18]`}>
+        <div className="text-center animate-pulse">
+           <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB]">
+             Infostaan<span className="text-[#007DCC]">.</span>
+           </h1>
+        </div>
       </div>
     );
   }

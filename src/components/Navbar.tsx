@@ -24,7 +24,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header className="fixed top-0 left-0 right-0 w-full z-[100] bg-white/60 dark:bg-[#070D18]/60 backdrop-blur-xl border-b border-slate-200/50 dark:border-white/5 transition-colors duration-200">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
         {/* Left: Brand Identity & Mobile Hamburger Button */}
-        <div className="flex items-center gap-3">
+        <div className="flex-1 flex items-center justify-start gap-3">
           {/* Mobile Sidebar Hamburger Trigger */}
           <button
             type="button"
@@ -104,25 +104,9 @@ export const Navbar: React.FC<NavbarProps> = ({
           </Link>
         </nav>
 
-        {/* Right Actions: Search, For Parents, Sign In */}
-        <div className="flex items-center gap-3 sm:gap-5">
-          {/* Mobile Search Icon */}
-          <Link
-            to="/search"
-            className="p-2 md:hidden text-slate-700 dark:text-[#A9B8CA] hover:text-[#007DCC] transition-colors"
-            aria-label="Search"
-          >
-            <Search className="w-5 h-5" />
-          </Link>
+        {/* Right Actions: Sign In */}
+        <div className="flex-1 flex items-center justify-end gap-3 sm:gap-5">
 
-          {/* Desktop Search Icon */}
-          <Link
-            to="/search"
-            className="hidden md:flex p-2 text-slate-600 dark:text-[#A9B8CA] hover:text-[#007DCC] dark:hover:text-[#19A7E8] transition-colors"
-            aria-label="Search"
-          >
-            <Search className="w-5 h-5" />
-          </Link>
 
           {/* Theme Toggle Button */}
           <button
@@ -137,13 +121,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             )}
           </button>
 
-          <button
-            onClick={onOpenSignIn}
-            className="hidden lg:flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors"
-          >
-            <Users className="w-4 h-4" />
-            <span>For Parents</span>
-          </button>
+
 
           <button
             onClick={onOpenSignIn}
