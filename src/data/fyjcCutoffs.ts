@@ -16,7 +16,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.XAVIER'S COLLEGE FORT",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 89.8,
     "choiceCode": "MU6724AGE"
   },
@@ -26,7 +26,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Golden Nest Junior College Of Science, Commerce And Arts",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 88.6,
     "choiceCode": "MU6354AFE"
   },
@@ -36,7 +36,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MITHIBAI COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 84.6,
     "choiceCode": "MU7133AGE"
   },
@@ -46,7 +46,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.ANNES HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 84.0,
     "choiceCode": "MU11607AFE"
   },
@@ -56,7 +56,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAI HIND COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 82.8,
     "choiceCode": "MU6727AGE"
   },
@@ -66,7 +66,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. J. SOMAIYA JR. COLLEGE OF ART & COMMERCE VIDYAVIHAR, MUMBAI-77",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 82.2,
     "choiceCode": "MU6917AGE"
   },
@@ -76,7 +76,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GNYANODAYA MULTIPURPOSE HIGH SCHOOL & JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 80.8,
     "choiceCode": "MU11562AFE"
   },
@@ -86,7 +86,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ALDEL EDUCATION TRUSTS,ST.JOHN JUNIOR COLLEGE PALGHAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.8,
     "choiceCode": "MU11490AFE"
   },
@@ -96,7 +96,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KISHINCHAND CHELLARAM COLLEGE (K. C. COLLEGE)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 75.6,
     "choiceCode": "MU6718AGE"
   },
@@ -106,7 +106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R, N, VIDYALAY",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.2,
     "choiceCode": "MU6562AFE"
   },
@@ -116,7 +116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MYMM Jr.College of Arts, Comm & Science, Khodala-Jogalwadi",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.2,
     "choiceCode": "MU11464AFM"
   },
@@ -126,7 +126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H.O.C. INTERNATIONAL SCH.& Jr. COLLEGE RASAYANI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.0,
     "choiceCode": "MU7358ANE"
   },
@@ -136,7 +136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ROYAL COLLEGE OF ARTS MIRA ROAD PENKAR PADA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 69.0,
     "choiceCode": "MU6344AGE"
   },
@@ -146,7 +146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. K. SOMAIYA VINAY MANDIR HIGH SCHOOL JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 68.8,
     "choiceCode": "MU6891AGE"
   },
@@ -156,7 +156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUNANAK KHALSA COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 68.4,
     "choiceCode": "MU6837AGE"
   },
@@ -166,7 +166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.K.Birla College of Arts, Science and Commerce",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.4,
     "choiceCode": "MU6248AGE"
   },
@@ -176,7 +176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MATOSHREE VELABAI DEVJI HARIYA JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.6,
     "choiceCode": "MU6258ANE"
   },
@@ -186,7 +186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AGARI SHIKSHAN SANSTHA'S HIGHER SECONDARY SCHOOL, KHANDA COLONY",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.2,
     "choiceCode": "MU7488AFM"
   },
@@ -196,7 +196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MODEL JUNIOR COLLEGE ADJADE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.0,
     "choiceCode": "MU6213AGE"
   },
@@ -206,7 +206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST ANDREW'S COLLEGE OF ARTS SCI & COM",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.8,
     "choiceCode": "MU7170AGE"
   },
@@ -216,7 +216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RUBY ENGLISH HIGH SCHOOL & JR. COLLEGE GOVANDI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.6,
     "choiceCode": "MU6860AFE"
   },
@@ -226,7 +226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RANA PRATAP MADHYAMIK VIDYALAY",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.6,
     "choiceCode": "MU11564AFE"
   },
@@ -236,7 +236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY CROSS CONVENT HIGH SCHOOL AND JUNIOR COLLEGE, THANE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.6,
     "choiceCode": "MU11745AFE"
   },
@@ -246,7 +246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND HIGH SCHOOL & JR COLLEGE, CHEMBUR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.2,
     "choiceCode": "MU6868AGE"
   },
@@ -256,7 +256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NOOR-UL ISLAM URDU HIGH SCHOOL & JR. COLLEGE GOVANDI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.0,
     "choiceCode": "MU6854AGU"
   },
@@ -266,7 +266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE B.S.G.D'S JR COLLEGE OF COM,ARTS & SCIENCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.8,
     "choiceCode": "MU7206AGE"
   },
@@ -276,7 +276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST MATHEWS ENG HIGH SCHOOL MALVANI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.2,
     "choiceCode": "MU7186ANE"
   },
@@ -286,7 +286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A V JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.0,
     "choiceCode": "MU11609AGE"
   },
@@ -296,7 +296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE GAJANAND SINGH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.0,
     "choiceCode": "MU11747AFE"
   },
@@ -306,7 +306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Prathana Junior College of Arts, Science &Commerce",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.0,
     "choiceCode": "MU12315AFE"
   },
@@ -316,7 +316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.S.Dhanajibhai Bhiku Modi higher secondary school,Vile.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.4,
     "choiceCode": "MU7398AGM"
   },
@@ -326,7 +326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B. M. RUIA GIRLS' COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.0,
     "choiceCode": "MU6751AGH"
   },
@@ -336,7 +336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. E. S. SHRI VITHALDAS H. SANGHVI JUNIOR COLLEGE OF ARTS & COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.0,
     "choiceCode": "MU7283AFE"
   },
@@ -346,7 +346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAMBHAJIRAO DESHMUKH PUBLIC SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.8,
     "choiceCode": "MU6200AFM"
   },
@@ -356,7 +356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH C. D. BARRFIWALA HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.8,
     "choiceCode": "MU7098AGE"
   },
@@ -366,7 +366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DIVINE PROVIDENT HIGH SCHOOL & JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.0,
     "choiceCode": "MU7188AFE"
   },
@@ -376,7 +376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABDULLAH PATEL HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.4,
     "choiceCode": "MU6536AGE"
   },
@@ -386,7 +386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "WILSON COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.8,
     "choiceCode": "MU6743AGE"
   },
@@ -396,7 +396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NIYAZ NATIONAL SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.6,
     "choiceCode": "MU6161AFE"
   },
@@ -406,7 +406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.2,
     "choiceCode": "MU6832AGE"
   },
@@ -416,7 +416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.2,
     "choiceCode": "MU7289AFE"
   },
@@ -426,7 +426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HUME HIGH SCHOOL & JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6776AGE"
   },
@@ -436,7 +436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI DAYANAND BALIKA VIDYALAYA & JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6809AGH"
   },
@@ -446,7 +446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAUSTUBH VIDYALAY AND JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU11569AFE"
   },
@@ -456,7 +456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE B.S.G.D'S JR COLLEGE OF COM,ARTS & SCIENCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.2,
     "choiceCode": "MU7206AFE"
   },
@@ -466,7 +466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KUMARI VIDYA MANDIR HIGH SCHOOL NALLASOPARA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.0,
     "choiceCode": "MU12148AFE"
   },
@@ -476,7 +476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. D NATIONAL COLLEGE & W.A. SCIENCE COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.6,
     "choiceCode": "MU7171AGE"
   },
@@ -486,7 +486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Fajandar Junior College, Vahoor Tal.Mahad, Dist.Raigad",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.2,
     "choiceCode": "MU7373AGU"
   },
@@ -496,7 +496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Anjuman Islam Janjira Agri. High School & Jr. College of Science & Arts Murud Janjira.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.2,
     "choiceCode": "MU7409AGU"
   },
@@ -506,7 +506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT TRUPTI G. NEMADE JR COLLEGE OF ARTS COMMERCE AND SCIENCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.0,
     "choiceCode": "MU6529AFE"
   },
@@ -516,7 +516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. M. E. S. HIGH SCHOOL, PADGHA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.2,
     "choiceCode": "MU6145AFU"
   },
@@ -526,7 +526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CUMMOO JAFFER SULEMAN GIRL'S HIGH SCHOOL & JR. COLLEGE OF ARTS & COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.0,
     "choiceCode": "MU6730ANE"
   },
@@ -536,7 +536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Aarya Convent High School & Junior College, Malang Gad Road, Kalyan East",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.8,
     "choiceCode": "MU12553AFE"
   },
@@ -546,7 +546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AWAMI GIRLS HIGHSCHOOL,GOVANDI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.4,
     "choiceCode": "MU6849ANE"
   },
@@ -556,7 +556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Yakub Baig High School & Junior College,Panvel",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.4,
     "choiceCode": "MU7489AGU"
   },
@@ -566,7 +566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMNIRANJAN JHUNJHUNWALA COLLEGE GHATKOPAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.2,
     "choiceCode": "MU6914AGE"
   },
@@ -576,7 +576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANNES JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.2,
     "choiceCode": "MU11679AFE"
   },
@@ -586,7 +586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M B MORE FOUNDATION ARTS COMMERCE & SCIENCE JR.COLLEGE DHATAV",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.6,
     "choiceCode": "MU7512AFM"
   },
@@ -596,7 +596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ULAI HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.0,
     "choiceCode": "MU6665ANH"
   },
@@ -606,7 +606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA ACD & SPO.MARATHI SCHOOL KHANDA COLONY",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.0,
     "choiceCode": "MU7480AGE"
   },
@@ -616,7 +616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. V. HIGH SCHOOL, JAWHAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.0,
     "choiceCode": "MU11458AGM"
   },
@@ -626,7 +626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUKUL VIDYAMANDIR HIGH SCHOOL (ENG SEC)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.8,
     "choiceCode": "MU11622AFE"
   },
@@ -636,7 +636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.S HIGH SCHOOL, SEC. ENG, NERUL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.6,
     "choiceCode": "MU6440AFE"
   },
@@ -646,7 +646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRAYESH MARATHI & ENGLISH JR. COLLEGE, SECTOR 9 KALAMBOLI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.6,
     "choiceCode": "MU11923AFE"
   },
@@ -656,7 +656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MILLAT JUNIOR COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.4,
     "choiceCode": "MU7112AFE"
   },
@@ -666,7 +666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RABIYA GIRLS HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.8,
     "choiceCode": "MU6178APU"
   },
@@ -676,7 +676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIKRAMGAD HIGHSCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.8,
     "choiceCode": "MU11661AGM"
   },
@@ -686,7 +686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AMACH GHAR SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.6,
     "choiceCode": "MU6314AFE"
   },
@@ -696,7 +696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.B.SAWANT VID. SHIRGAON",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.4,
     "choiceCode": "MU7381AFM"
   },
@@ -706,7 +706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KHARDI VIBHAG EDUCATION SOCIETY'S HIGHSCHOOL & JUNIOR COLLEGE KHARDI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.2,
     "choiceCode": "MU6478AGM"
   },
@@ -716,7 +716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE MAHALSA NARAYANI SCHOOL AND COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.2,
     "choiceCode": "MU11678AFE"
   },
@@ -726,7 +726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SOUTH INDIAN SECONDARY AND HIGHER SEC. SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.8,
     "choiceCode": "MU6298AGE"
   },
@@ -736,7 +736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ANTHONY'S HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.8,
     "choiceCode": "MU11616AFE"
   },
@@ -746,7 +746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.M.E. SOCIETY'S ENGLISH MEDIUM HIGH SCHOOL AND JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.6,
     "choiceCode": "MU6176AFE"
   },
@@ -756,7 +756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Dolphin English Secondary School and Junior College Vangani East",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.4,
     "choiceCode": "MU6590AFE"
   },
@@ -766,7 +766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "REENA MEHTA HIGH SCH & COLLEGE BHA WEST",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.0,
     "choiceCode": "MU6317AFE"
   },
@@ -776,7 +776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYANPEETH JUNIOR COLLEGE ART, COMMARCE & SCIENCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.0,
     "choiceCode": "MU6659AFM"
   },
@@ -786,7 +786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ACHARYA BHISE HIGHSCHOOL KASA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.8,
     "choiceCode": "MU11439AGM"
   },
@@ -796,7 +796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.PETER'S JUNIOR COLLEGE OF SCI & COMM",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.8,
     "choiceCode": "MU11611AFE"
   },
@@ -806,7 +806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIR ELLY KADOORIE HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.6,
     "choiceCode": "MU6778AGE"
   },
@@ -816,7 +816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY FAMILY DAY SCHOOL & JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU6340AFE"
   },
@@ -826,7 +826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL URDU SECONDARY",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU6265AFE"
   },
@@ -836,7 +836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ROYAL PUBLIC ACADEMY & JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU6855AFE"
   },
@@ -846,7 +846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LATE SAU VIDYA VINOD ADHIKARI VIDYALAYA, LALONDE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU11477APM"
   },
@@ -856,7 +856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. D. GANDHE JUNIOR COLLEGE ARTS,COMMERCE & SCIENCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU11663AFM"
   },
@@ -866,7 +866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S.V.K.HIGHSCHOOL & JR COLLEGE , PANVEL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.8,
     "choiceCode": "MU7484AGM"
   },
@@ -876,7 +876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AANAD DIGHE VIDYALAYA SHAHAPUR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.6,
     "choiceCode": "MU6499AFM"
   },
@@ -886,7 +886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NERAL VIDYAMANDIR NERAL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.6,
     "choiceCode": "MU7341APM"
   },
@@ -896,7 +896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVJEEVAN VIDYAMANDIR AND D G TATKARE JR COLLEGE , TALASHET",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.6,
     "choiceCode": "MU7396AGM"
   },
@@ -906,7 +906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYANDEEP KANISHTH MAHAVIDYALAY,WALIV",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.6,
     "choiceCode": "MU11583AFM"
   },
@@ -916,7 +916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SALAHUDDIN AYYUBI MEMORIAL URDU HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.4,
     "choiceCode": "MU6190APU"
   },
@@ -926,7 +926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL RAVDHAL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.4,
     "choiceCode": "MU7382AGM"
   },
@@ -936,7 +936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAMADIYA HIGH SCH.& J.COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.0,
     "choiceCode": "MU6179AGU"
   },
@@ -946,7 +946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.D.M. ENGLISH HIGH SCHOOL & JR. COLLGE, SHIRGAON, BADLAPUR (E) THANE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.6,
     "choiceCode": "MU11890AFE"
   },
@@ -956,7 +956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. M. SHETTY HIGH SCHOOL, POWAI.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.4,
     "choiceCode": "MU6957AFE"
   },
@@ -966,7 +966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "L.S. RAHEJA COLLEGE OF ARTS & COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.4,
     "choiceCode": "MU7064AGE"
   },
@@ -976,7 +976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K B PATIL VIDYALAY",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.4,
     "choiceCode": "MU11559AGM"
   },
@@ -986,7 +986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUNANAK KHALSA COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU6837AFE"
   },
@@ -996,7 +996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GULSHAN-E-ISLAM URDU HIGH SCHOOL, SAKINAKA.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU6942ANU"
   },
@@ -1006,7 +1006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M S P M'S JUNIOR COLLEGE OF ARTS & COM. KHARGHAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU7436AFM"
   },
@@ -1016,7 +1016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH N.K.T.T. JR. COLLEGE OF COMMERCE OF AND SHETH J.T.T. JR COLLEGE OF ARTS AND SCIENCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU6524AGE"
   },
@@ -1026,7 +1026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHIWANDI NIZAMPUR NAGARPALIKA MAHAVIDHYALAY BHIWANDI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.8,
     "choiceCode": "MU6166ANM"
   },
@@ -1036,7 +1036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HUDA ENGLISH HIGH & JU.COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU6169ANE"
   },
@@ -1046,7 +1046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.B.&SC JR COLLEGE OF ARTS,COMMERCE AND SCIENCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU6686AFE"
   },
@@ -1056,7 +1056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN E ISLAM JANJIRA H SCHOOL & Jr. Colg",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU7530AGU"
   },
@@ -1066,7 +1066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA GANDHI VIDYALAYA AND LATE. R N THAKUR KALA UCCHA MADHYAMIK VIDYALAY ,DIGHODE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU7537AFM"
   },
@@ -1076,7 +1076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Dardmand Kalsekar High School and Junior College Arts Commerce Science Kamble Trafe Mahad",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU7379AFU"
   },
@@ -1086,7 +1086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A I J HIGHSCHOOL GONDGHAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU7399APU"
   },
@@ -1096,7 +1096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J.M.T. HIGHSCHOOL VANGAON",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU11425APM"
   },
@@ -1106,7 +1106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LATE SAU VIDYA VINOD ADHIKARI VIDYALAYA, LALONDE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU11477AFM"
   },
@@ -1116,7 +1116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAI PANDURANG RAGHUNATH PATIL UTKARSHA MADHYAMIK VIDYALAYA AND JR COLLEGE VIRAR WEST",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.0,
     "choiceCode": "MU11592ANE"
   },
@@ -1126,7 +1126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N.R.BHAGAT SCHOOL ENG SEC&HSEC",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.6,
     "choiceCode": "MU6442ANE"
   },
@@ -1136,7 +1136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AQSA GIRLS JUNIR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.4,
     "choiceCode": "MU6165AFU"
   },
@@ -1146,7 +1146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TERANA VID MAR SEC &HSEC ARTS",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.4,
     "choiceCode": "MU6452ANM"
   },
@@ -1156,7 +1156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H.M. PANDIT VIDYALAYA SAFALE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.2,
     "choiceCode": "MU11491APM"
   },
@@ -1166,7 +1166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KARMAVEER BHAURAO PATIL JR. COLLEGE, VASHI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.0,
     "choiceCode": "MU6427AGE"
   },
@@ -1176,7 +1176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIVEK VIDYALAYA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.0,
     "choiceCode": "MU7105AGE"
   },
@@ -1186,7 +1186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AL-ITTEHAD JR COLLEGE OF ARTS SCI & COM",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.0,
     "choiceCode": "MU7135AFE"
   },
@@ -1196,7 +1196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHATRAPATI SHIVAJI VIDYANIKETAN JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.0,
     "choiceCode": "MU11460AFM"
   },
@@ -1206,7 +1206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHAVEER VID. SEC. HINDI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.8,
     "choiceCode": "MU6208ANH"
   },
@@ -1216,7 +1216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SACRED HEART SEC",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.8,
     "choiceCode": "MU6428AFE"
   },
@@ -1226,7 +1226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETKARI SHIKSHAN SEC & HSEC",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU6395AGM"
   },
@@ -1236,7 +1236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. BABASAHEB AMBEDKAR HIGH SCHOOL & JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU6875ANE"
   },
@@ -1246,7 +1246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A. M. ENGLISH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU7217AFE"
   },
@@ -1256,7 +1256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SYMBIOSIS CONVENT HIGH SCHOOL & JUNIOR COLLEGE OF SCIENCE COMMERCE & ARTS",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU6555AFE"
   },
@@ -1266,7 +1266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THAKUR RAMNARAYAN COLLEGE OF ARTS & COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU7301AFE"
   },
@@ -1276,7 +1276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. V. HIGH SCHOOL, JAWHAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU11458ANM"
   },
@@ -1286,7 +1286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "L.B.S. HIGHSCHOOL MANOR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU11481AGM"
   },
@@ -1296,7 +1296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RIZVI COLLEGE OF ARTS SCI & COM",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU7061AGE"
   },
@@ -1306,7 +1306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. T. S. BAFNA JR COLLEGE OF ARTS & COM.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU7210AGH"
   },
@@ -1316,7 +1316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KIRAN PATIL JR COLL.OF ARTS,COMM,SCI.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU11565AFE"
   },
@@ -1326,7 +1326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "(SES) S.H.M JUNIOR COLLEGE OF ARTS COMMERCE AND SCIENCE ULJASNAGAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU6618AFE"
   },
@@ -1336,7 +1336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE LITTLE FLOWER HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU7077AFE"
   },
@@ -1346,7 +1346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "COM S.P.S.F SCHOOL & JR COLLEGE ASHAGAD",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU11426AFM"
   },
@@ -1356,7 +1356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHIWANDI NIZAMPUR NAGARPALIKA MAHAVIDHYALAY BHIWANDI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU6166AGE"
   },
@@ -1366,7 +1366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAI KISAN HIGH SCHOOL VADKHAL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU7501AGM"
   },
@@ -1376,7 +1376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA VARDHI JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU11625ANH"
   },
@@ -1386,7 +1386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.L. PONDA SEC. SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.6,
     "choiceCode": "MU11442AGM"
   },
@@ -1396,7 +1396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MRS BHAVANADEVI BHAGWAN SAMBARE JUNIOR COLLEGE ZADPOLI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.6,
     "choiceCode": "MU11657AFE"
   },
@@ -1406,7 +1406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAU. SHANTABAI N. LAHOTI VIDYALAYA, ANGAON",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU6127AFM"
   },
@@ -1416,7 +1416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.M.BHATT HIGH SCHOOL AND JUNIOR COLLEGE PAREL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU6784AGE"
   },
@@ -1426,7 +1426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADIVASI.P.MANDAL'S MADHYAMIK VIDYALAYA,UDHAWA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU11531APM"
   },
@@ -1436,7 +1436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND VIDYAMANDIR AND JR COLLEGE WADA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU11677AGM"
   },
@@ -1446,7 +1446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.0,
     "choiceCode": "MU7125AGE"
   },
@@ -1456,7 +1456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B. M. RUIA GIRLS' COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU6751AGE"
   },
@@ -1466,7 +1466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE MAVLI MANDAL HIGH SCHOOL AND JUNIOR COLLEGE THANE WEST",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU11740AFE"
   },
@@ -1476,7 +1476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANATA VIDYA. DHASAI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.6,
     "choiceCode": "MU6364AGM"
   },
@@ -1486,7 +1486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. N.N.PATIL HIGH SCH. AND JR COLLEGE , POYNAD",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.6,
     "choiceCode": "MU7322AGM"
   },
@@ -1496,7 +1496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAJI AAMDAR DATTUSHETH PATIL JUNIOR COLLEGE, SEC-9,PLOT NO- 23,KAMOTHE,NAVI MUMBAI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.6,
     "choiceCode": "MU7468AFM"
   },
@@ -1506,7 +1506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANT SAVLARAM HIGHSCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.4,
     "choiceCode": "MU6588ANM"
   },
@@ -1516,7 +1516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. XAVIERS ENG. SEC. SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.4,
     "choiceCode": "MU6655AFE"
   },
@@ -1526,7 +1526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIES COLLEGE OF ARTS, SCIENCE & COMM.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.4,
     "choiceCode": "MU6831AGE"
   },
@@ -1536,7 +1536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HASAN KHAN DESHMUKH & PASHA MIYA KHATIB HIGH SCHOOL & JUNIOR COLLEGE OF ARTS,SCIENCE & COMMERCE ,Lower Tudil",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.4,
     "choiceCode": "MU7383AGU"
   },
@@ -1546,7 +1546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE KISHOR MANGALMURTI JUNIOR COLLAGE OF ARTS SCIENCE AND COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.4,
     "choiceCode": "MU11580AFH"
   },
@@ -1556,7 +1556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VEDANT JUNIOR COLLEGE OF SCIENCE COMMERCE AND ARTS",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.4,
     "choiceCode": "MU11956AFE"
   },
@@ -1566,7 +1566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT S. T. MEHTA WOMEN'S JR. COLLEGE GHATKOPAR (W)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU6918AGG"
   },
@@ -1576,7 +1576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DON BOSCO HIGH SCHOOL & JUNIOR COLLEGE, BORIVALI (WEST)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU7268AFE"
   },
@@ -1586,7 +1586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE ELITE PUBLIC SECONDARY SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU7473AFE"
   },
@@ -1596,7 +1596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAKADPADA VIBHAG",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU6204APM"
   },
@@ -1606,7 +1606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST WILFREDS Highschool",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU7446AFE"
   },
@@ -1616,7 +1616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J.M.T. HIGHSCHOOL VANGAON",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU11425AFM"
   },
@@ -1626,7 +1626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. JOSEPH'S HIGH SCHOOL & JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU11546AGE"
   },
@@ -1636,7 +1636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIKRAMGAD HIGHSCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU11661APM"
   },
@@ -1646,7 +1646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAFARI ENGLISH HIGH SCHOOL & JR COLLEGE GOVANDI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU6853AFE"
   },
@@ -1656,7 +1656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SEVA VIDYA.GANGANG. SEC.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.6,
     "choiceCode": "MU11427APM"
   },
@@ -1666,7 +1666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ORCHID GLOBAL SCHOOL OF ACADEMIC'S AND SPORTS",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU7340AFE"
   },
@@ -1676,7 +1676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A V JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU11609AFE"
   },
@@ -1686,7 +1686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADIVASI PRAGATI MANDAL SANCHALIT ARTS, COMMERCE & SCIENCE JUNIOR COLLEGE, TALASARI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU11536APM"
   },
@@ -1696,7 +1696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.E.SOCIETY 'THAKKARBAPPA VID.& JU.COLEGE TALASARI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU11537AGM"
   },
@@ -1706,7 +1706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KURZE VIBHAG JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU11653AGM"
   },
@@ -1716,7 +1716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BABA HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU6181AFE"
   },
@@ -1726,7 +1726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI VRAJLAL DURLABHDAS VALIA JR COLLEGE OF COMMRECE AND SHRI VINUBHAI V VALIA JUNIOR COLLEGE OF ARTS",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU7284AFE"
   },
@@ -1736,7 +1736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI.DHONDU NAU THAKARE JR.COLLEGE,RAJNOLI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.8,
     "choiceCode": "MU6151ANM"
   },
@@ -1746,7 +1746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST MARY'S CONVENT HIGH SCHOOL & jr.college",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.8,
     "choiceCode": "MU6538AFE"
   },
@@ -1756,7 +1756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHADEV UPADHYAYA MADHYAMIK VIDYALAY & JR. COLLEGE, VIKHROLI (E).",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.8,
     "choiceCode": "MU6963ANH"
   },
@@ -1766,7 +1766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A.K.I URDU HIGH SCHOOL GOREGAO",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.8,
     "choiceCode": "MU7389AGU"
   },
@@ -1776,7 +1776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S. BANTHIYA MADY. PANVEL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.8,
     "choiceCode": "MU7478AGM"
   },
@@ -1786,7 +1786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VAMANRAO SABALE SECONDARY SCHOOL AND JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6141AFE"
   },
@@ -1796,7 +1796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.JOSEF.S.H.S.,UTTAN",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6313AGM"
   },
@@ -1806,7 +1806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SOPHIA COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6750AGE"
   },
@@ -1816,7 +1816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "EVERGREEN ENGLISH SCHOOL AND JR. COLLEGE, SHIVAJI NAGAR, GOVANDI, MUMBAI 400 043.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6926AFE"
   },
@@ -1826,7 +1826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SUDARSHAN ENG. HIGH SCHOOL & JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU7078ANE"
   },
@@ -1836,7 +1836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MADHYAMIC SCHOOL DADAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU7494APM"
   },
@@ -1846,7 +1846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND VIDYAMANDIR AND JR COLLEGE WADA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU11677AFM"
   },
@@ -1856,7 +1856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SALAHUDDIN AYYUBI M.ENG.HIGH SCH.& JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU6191ANE"
   },
@@ -1866,7 +1866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANKET VIDYA. SEC",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU6656AGM"
   },
@@ -1876,7 +1876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANSKAR URDU HIGH SCHOOL & JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU7057AFE"
   },
@@ -1886,7 +1886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. T. S. BAFNA JR COLLEGE OF ARTS & COM.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU7210AGE"
   },
@@ -1896,7 +1896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ACHARYA BHISE HIGHSCHOOL KASA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU11439ANM"
   },
@@ -1906,7 +1906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST JOSEPH JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU11555AFE"
   },
@@ -1916,7 +1916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.I.C.E.S. HIGH SCHOOL & JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU6599AGE"
   },
@@ -1926,7 +1926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ENFANT INDIA ENGLISH HIGH SCHOOL & BURLINGTON JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU6857AFE"
   },
@@ -1936,7 +1936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAMLADEVI JAIN HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU7118AFE"
   },
@@ -1946,7 +1946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAI. NATHU OZARE ARTS,COMMARCE & SCIENCE JUNIOR COLLEGE ,VADWALI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU11525AFM"
   },
@@ -1956,7 +1956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANSKRUTI JUNIOR COLLEGE LALONDE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU11479AFE"
   },
@@ -1966,7 +1966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANTA VIDYALAYA AND JUNIOR COLLEGE, KARAV GADAB TAL PEN DIST. RAIGAD",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU11932AFM"
   },
@@ -1976,7 +1976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRAMJIVI VIDYAMANDIR, POSHIR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU7344ANM"
   },
@@ -1986,7 +1986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SUSHMA PATIL SECONDARY MARATHI HIGHSCHOOL KAMOTHE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU7464AFM"
   },
@@ -1996,7 +1996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARVAJANIK VIDYAMANDIR PEN",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU7496AGM"
   },
@@ -2006,7 +2006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R S DUBE JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU11577ANH"
   },
@@ -2016,7 +2016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHATRAPATI VIDYALAY SAKHARE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU11658APM"
   },
@@ -2026,7 +2026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANSKAR ENGLISH MEDIUM SCHOOL, ANJUR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU11987AFE"
   },
@@ -2036,7 +2036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MESCO EDUCATION SOCITEY'S CRESCENT ENGLISH HIGH SCHOOL & JR. COLLAGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU6554AFE"
   },
@@ -2046,7 +2046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "APOSTOLIC CARMEL HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU7049AFE"
   },
@@ -2056,7 +2056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HUTATMA HIRAJI PATIL JUNIOR COLLEGE KADAV",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU7338AFM"
   },
@@ -2066,7 +2066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. STANISLAUS HIGH SCHOOL AND JUNIOR COLLEGE NALLASOPARA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU11992ANE"
   },
@@ -2076,7 +2076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ASMITA COLLEGE OF ARTS& COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU6347AFE"
   },
@@ -2086,7 +2086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AWAMI JR COLLEGE OF ARTS & COM",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU7062AFE"
   },
@@ -2096,7 +2096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABHAY JUNIOR COLLEGE OF ARTS, COMMERCE AND SCIENCE, VIKHROLI EAST",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU7309AFE"
   },
@@ -2106,7 +2106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GITA D TATKARE MADHY VIDY WARASGAON",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU7510APM"
   },
@@ -2116,7 +2116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJALI ENGLISH SCHOOL & JUNIOR COLLEGE CHANDIVALI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.0,
     "choiceCode": "MU6953AFE"
   },
@@ -2126,7 +2126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "YASHAVANTRAO DESHAMUKH KANISHTH MAHAVIDYALAY , CHAUK",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.0,
     "choiceCode": "MU7353AGM"
   },
@@ -2136,7 +2136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KA BHA PA VIDYALAYA PIRKON",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.0,
     "choiceCode": "MU7542AGM"
   },
@@ -2146,7 +2146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA VIKAS VANGANI 1",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU6589APM"
   },
@@ -2156,7 +2156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE B. J. P. C. INSTITUTION & JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU6737AFE"
   },
@@ -2166,7 +2166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JITEN MODY JUNIOR COLLEGE OF ARTS, COMMERCE AND SCIENCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU7293AFE"
   },
@@ -2176,7 +2176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Shree G. M. Vedak vidyamandir and Arts Comm. And Sci. Jr. College Tala",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU7532AGM"
   },
@@ -2186,7 +2186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MONTFORT JR.COLLEGE OF ARTS AND COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU6771AFE"
   },
@@ -2196,7 +2196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADARSH HINDI HIGH SCHOOL & JR. COLLEGE OF ARTS & COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU6820ANH"
   },
@@ -2206,7 +2206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.F.NAIK VIDYALYA SEC & HSEC MARATHI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU6404AGM"
   },
@@ -2216,7 +2216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N. ENGLISH SCHOOL DOLKHAMB",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU6480AGM"
   },
@@ -2226,7 +2226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M J SCHOOL & JR COLLEGE OF ARTS ,COMMERCE &SCIENCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU6580AFE"
   },
@@ -2236,7 +2236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN HIMAYATUL ISLAM BHAYEEMIYA ISANE URDU HIGH SCHOOL & DR.A.A. DESHMUKH JR. COLLEGE, MAHAD",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU7385APU"
   },
@@ -2246,7 +2246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAYDEEP JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU11589AFH"
   },
@@ -2256,7 +2256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAI PANDURANG RAGHUNATH PATIL UTKARSHA MADHYAMIK VIDYALAYA AND JR COLLEGE VIRAR WEST",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU11592AGE"
   },
@@ -2266,7 +2266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAYTE VIBHAG HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU6198AGM"
   },
@@ -2276,7 +2276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AAN-E-ISLAM URDU SEC",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU6545AFE"
   },
@@ -2286,7 +2286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BAL VIDYA MANDIR MAR.SEC.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU6675AGM"
   },
@@ -2296,7 +2296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A.I.J HIGH SCHOOL MHASALA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU7401ANE"
   },
@@ -2306,7 +2306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAU SITABAI RAMKRUSHANA KARANDIKAR SENIOR COLLEGE OF COMMERCE AND LATE M. B. IRANI COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU11444AFM"
   },
@@ -2316,7 +2316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GLOBAL INTERNATIONAL HIGH SCHOOL & JR.COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6187AFE"
   },
@@ -2326,7 +2326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.K.HINDI SEC.SCH. BETURKARPAD",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6260APH"
   },
@@ -2336,7 +2336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "YASH JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6297APM"
   },
@@ -2346,7 +2346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.R.MADHAVI ENG.SEC. SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6307AFM"
   },
@@ -2356,7 +2356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BURHANI COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6780AGE"
   },
@@ -2366,7 +2366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AISHA ENGLISH HIGH SCHOOL & JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6851AFE"
   },
@@ -2376,7 +2376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST ANDREWS INTERNATIONAL SCHOOL AND JR COLLEGE , AKURLI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU7441AFE"
   },
@@ -2386,7 +2386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BAHUUDESHIY DYAN SADHANA MANDAL SANCHALIT ARTS,COM.&SCINCE JUNIOR COLLEGE,TALASARI VIKASPADA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU11538AFM"
   },
@@ -2396,7 +2396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHATRAPATI KANISTH MAHAVIDYALAYA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU11652AFM"
   },
@@ -2406,7 +2406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH N.K.T.T. JR. COLLEGE OF COMMERCE OF AND SHETH J.T.T. JR COLLEGE OF ARTS AND SCIENCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU6524AGM"
   },
@@ -2416,7 +2416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "St. Paul Convent School and Junior College, Ulhasnagar",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU6609AFE"
   },
@@ -2426,7 +2426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANIBEN NANAVATI WOMEN'S COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU7132AGE"
   },
@@ -2436,7 +2436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANJAY GANDHIR SMRAK VIDYALAY PALE BU KOLIWADI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU7414APM"
   },
@@ -2446,7 +2446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K V PENDHARKAR JUNIOR COLLEGE DOMBIVALI(EAST)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6218AGM"
   },
@@ -2456,7 +2456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAMLADEVI JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6283AFM"
   },
@@ -2466,7 +2466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ANTHONY HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6345AFE"
   },
@@ -2476,7 +2476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARALGAON VIBHAG HIGH. S.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6380AGM"
   },
@@ -2486,7 +2486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ENG HIGHSCHOOL MAJIWADA MAR / HIND",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6508AGM"
   },
@@ -2496,7 +2496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMCHANDRA MHATRE VIDYALAYA & JR COLLEGE OF ART'S , SCIENCE AND COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU7533ANM"
   },
@@ -2506,7 +2506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THOMAS BAPTISTA HIGHSCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU11598AGE"
   },
@@ -2516,7 +2516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BANEGAR ENGLISH SCHOOL & HAFIZA JR COLLEGE OF ARTS SCI &COM",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU6356ANE"
   },
@@ -2526,7 +2526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KISAN HIGHSCHOOL NADGAON",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU6484APM"
   },
@@ -2536,7 +2536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D. E. SOCIET'S KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU6767AGE"
   },
@@ -2546,7 +2546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL HIGH SCHOOL & JR. COLLEGE, BHANDUP (W)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU6989AGE"
   },
@@ -2556,7 +2556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KOLAD HIGH SCH AND JR.COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU7509AGM"
   },
@@ -2566,7 +2566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.B.P. HIGHSCHOOL AND JR. COLLEGE MOKHADA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU11467AGM"
   },
@@ -2576,7 +2576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE SIDDHIVINAYAK ENG SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU11550AFE"
   },
@@ -2586,7 +2586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RENUKA VIDYALAYA, ZIDAKE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU6157AGM"
   },
@@ -2596,7 +2596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HINDI HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU6272AGH"
   },
@@ -2606,7 +2606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA VIDYA. DHASAI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU6365AGM"
   },
@@ -2616,7 +2616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LILAWATI ARTS COM AND SCI JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU6559ANM"
   },
@@ -2626,7 +2626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GLOBAL INTERNATIONAL SCHOOL AND JR COLLEGE OF ART'S COMMERCE AND SCIENCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU7440AFE"
   },
@@ -2636,7 +2636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHANUBEN PRAVIN SHAH MADHYAMIK & JUNIOR COLLGE TARA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU7457ANM"
   },
@@ -2646,7 +2646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S.Late S.P.Jain Jr.Collge Nagothane Tal :Roha Dist:Raigad",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU7513AGM"
   },
@@ -2656,7 +2656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. JOSEPH'S HIGH SCHOOL & JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU11546AGM"
   },
@@ -2666,7 +2666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT INDIRA GANDHI VIDYALAY AVM JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU11581AFE"
   },
@@ -2676,7 +2676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAN GAN MAN VIDYAMANDIR JR COLL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6296AFE"
   },
@@ -2686,7 +2686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MUMBRA COLLEGE OF SCI.,ART & COM.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6533AFE"
   },
@@ -2696,7 +2696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6616ANM"
   },
@@ -2706,7 +2706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.H. MARATHI HIGHSCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6687AGM"
   },
@@ -2716,7 +2716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN-I-ISLAM'S SAIF TYABJI GIRLS' HIGH SCHOOL AND JUNIOR COLLEGE OF ARTS AND SCIENCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6774AGE"
   },
@@ -2726,7 +2726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6832AGM"
   },
@@ -2736,7 +2736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GAULWADI MADHYAMIK VIDYALAYA ,GAULWADI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU7337AFM"
   },
@@ -2746,7 +2746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CH.SHIVAJI VIDYALAY GAVHAN KOPAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU7451AGM"
   },
@@ -2756,7 +2756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BALVIKAS VIDYAMANDIR VADHAV (SEC)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU7499AFM"
   },
@@ -2766,7 +2766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAVINDRA N RAUT MADY. VDY. SHRIVARDHAN",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU7531AGM"
   },
@@ -2776,7 +2776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ATHAGAON VIDYAMANDIR & JR. COLLEGE, KON",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU6148AGM"
   },
@@ -2786,7 +2786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. H. A. RAIS HIGH SCHOOL AND JUNIOR COLLEGE, BHIWANDI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU6177AGU"
   },
@@ -2796,7 +2796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GUARDIAN HIGH SCHOOL & JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU6231AFE"
   },
@@ -2806,7 +2806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANJUNATH JUNIOR COLLEGE ( COMMERCE )",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU6289ANE"
   },
@@ -2816,7 +2816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HON.BHAUSAHEB RAUT VIDYALAYA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU7335ANM"
   },
@@ -2826,7 +2826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI BHAIRAVDEV VIDYALAY V LOKNETE RAMSHETH THAKUR UCHH MADHYAMIK VIDYALAY RITGHAR.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU7418AFM"
   },
@@ -2836,7 +2836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P S ENGLISH SCHOOL PANVEL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU7493AFE"
   },
@@ -2846,7 +2846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.R. HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6172AFM"
   },
@@ -2856,7 +2856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.K.Birla College of Arts, Science and Commerce",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6248AFE"
   },
@@ -2866,7 +2866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYANDEEP SEC &HSEC SCH",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6470ANM"
   },
@@ -2876,7 +2876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHENAVE VIBHAG H.S. SHENAVE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6501AGM"
   },
@@ -2886,7 +2886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "C. E. S MARCELINE JUNIOR COLLEGE, KURLA (W)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6933ANE"
   },
@@ -2896,7 +2896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI. VARDAYINI MADHYAMIC VIDYALAYA KAPADE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU7503AFM"
   },
@@ -2906,7 +2906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J.V.S.S. SHRI S.T. KADAM VIDYALAY & JR. COLLEGE, PALGHAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU11487APM"
   },
@@ -2916,7 +2916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAHYADRI SHIKSHAN SEVA MANDALS ENGLISH HIGH SCHOOL & JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU11561AFM"
   },
@@ -2926,7 +2926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ASPEE HIGHSCHOOL UCHAT",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU11666AGM"
   },
@@ -2936,7 +2936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL, VAJRESWARI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6133AGM"
   },
@@ -2946,7 +2946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KENT VALLEY INTERNATIONAL SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6195AFE"
   },
@@ -2956,7 +2956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.K.S.ART,COMM & SCI JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6206AFM"
   },
@@ -2966,7 +2966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MATOSHREE VELABAI DEVJI HARIYA JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6258AFM"
   },
@@ -2976,7 +2976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI. M. P. SHAH JUNIOR COLLEGE OF ARTS & COMMERCE FOR WOMEN",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6835AGM"
   },
@@ -2986,7 +2986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU7167AGE"
   },
@@ -2996,7 +2996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G D AMBEKAR HIGH SCHOOL BIRWADI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU7371AGM"
   },
@@ -3006,7 +3006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIR S.A. HIGH SCHOOL AND JR COLLEGE , MURUD",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU7410AGM"
   },
@@ -3016,7 +3016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.J. MHATRE VIDYA NAVADE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU7460AGM"
   },
@@ -3026,7 +3026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H.B.P. SHRI. D. G. GOWARI VIDYALAYA & JUNIOR COLLEGE, KAMOTHE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU7467AFM"
   },
@@ -3036,7 +3036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREEMATI BANARASIDEVI N AGRAWAL VIDYALAYA, DURVESH, TAL- PALGHAR DIST- PALGHAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU11474AFM"
   },
@@ -3046,7 +3046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RISHI VALMIKI JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU11557APM"
   },
@@ -3056,7 +3056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAGINI PRAMOD JR COLLEGE OF ARTS SCIENCE AND COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU11610AFE"
   },
@@ -3066,7 +3066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHHA. SHIVAJI MAHARAJ MADH.VID, DAMANGAON",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6128AFM"
   },
@@ -3076,7 +3076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D.N.C MULTIPURPOSE SECONARY SCHOOL DATTANAGAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6311AGM"
   },
@@ -3086,7 +3086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW EINGLISH SCHOOL MURBAD",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6374AGM"
   },
@@ -3096,7 +3096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVHIND JR.COLLEGE OF COMM.& ARTS",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6799AFM"
   },
@@ -3106,7 +3106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "L.J.N.J. MAHILA MAHAVIDYALAYA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU7144AGM"
   },
@@ -3116,7 +3116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU7156AGE"
   },
@@ -3126,7 +3126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. T. S. BAFNA JR COLLEGE OF ARTS & COM.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU7210AGM"
   },
@@ -3136,7 +3136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NUTAN VIDYALAY SEC MAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU11615ANM"
   },
@@ -3146,7 +3146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.B.HARRIS JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU11638AFE"
   },
@@ -3156,7 +3156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHARADA VIDYALAY AND JR COLLEGE TOKAVADE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU6377APM"
   },
@@ -3166,7 +3166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ELPHINSTONE COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU6726AOE"
   },
@@ -3176,7 +3176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMZANALI ENGLISH HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU7194AFE"
   },
@@ -3186,7 +3186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAHYADRI VIDYALAY SHILPATA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU7360AGM"
   },
@@ -3196,7 +3196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.V.S.P.M MAD PRASHA PALI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU7524APM"
   },
@@ -3206,7 +3206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.H.SAVE ARTS,C.J.BHANUSHALI COM.S.B.A DANDEKAR JR.COLLEGE PALGHAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU11520ANE"
   },
@@ -3216,7 +3216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K V PENDHARKAR JUNIOR COLLEGE DOMBIVALI(EAST)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6218AGE"
   },
@@ -3226,7 +3226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SETH HIRACHAND MUTHA COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6238APM"
   },
@@ -3236,7 +3236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GANESH SEC. VIDYA, TITWALA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6251AGM"
   },
@@ -3246,7 +3246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. XAVIER'S HIGH SCHOOL & JR. COLLEGE, NERUL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6445AFE"
   },
@@ -3256,7 +3256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.N.BARORA SEC. VIDYA. SHAHAPUR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6498APM"
   },
@@ -3266,7 +3266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.N.D.T.COLLEGE OF ARTS & SCB COLLEGE OF COMM. & SCI. FOR WOMEN",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6721AGM"
   },
@@ -3276,7 +3276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6768AGE"
   },
@@ -3286,7 +3286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ASMITA GIRLS JR COLLEGE VIKAROLI (E)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6978AGM"
   },
@@ -3296,7 +3296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KALA VIDYALAYA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU7191AFE"
   },
@@ -3306,7 +3306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ATAMONNATI VIDYAMANDIR JAMBHULPADA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU7521ANM"
   },
@@ -3316,7 +3316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHATRAPATI SHIVAJI VIDYALAYA JASAI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU7539AGM"
   },
@@ -3326,7 +3326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.H.SAVE ARTS,C.J.BHANUSHALI COM.S.B.A DANDEKAR JR.COLLEGE PALGHAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU11520AGM"
   },
@@ -3336,7 +3336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GOPINATH PATIL Jr. COLLEGE, KHANIVALI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6140AFM"
   },
@@ -3346,7 +3346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY FAITH JUNIOR COLLEGE OF ARTS SCIENCE AND COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6288AFH"
   },
@@ -3356,7 +3356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KANIST MAHAVIDYALAY MAL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6370APM"
   },
@@ -3366,7 +3366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ENG HIGHSCHOOL MAJIWADA MAR / HIND",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6508AGE"
   },
@@ -3376,7 +3376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JOYMAX ENGLISH HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6858AFE"
   },
@@ -3386,7 +3386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DON BOSCO HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6966AFE"
   },
@@ -3396,7 +3396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DURGADEVI SARAF JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU7205AFE"
   },
@@ -3406,7 +3406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. S.R.T. HIGH SCHOOL & V. M. PILANKAR Jr.COLLEGE REVDANDA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU7328AGM"
   },
@@ -3416,7 +3416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANTA MADHYAMIK VA UCCHA MADHYAMIK VIDYALAYA AJIVALI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU7444AGM"
   },
@@ -3426,7 +3426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOHANLAL SONE VIDYA BORLI PANC",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU7527AGM"
   },
@@ -3436,7 +3436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAI PANDURANG RAGHUNATH PATIL UTKARSHA MADHYAMIK VIDYALAYA AND JR COLLEGE VIRAR WEST",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU11592AGM"
   },
@@ -3446,7 +3446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAKHARAM SHETH VIDYALAY",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6229ANM"
   },
@@ -3456,7 +3456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.K.Birla College of Arts, Science and Commerce",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6248AGM"
   },
@@ -3466,7 +3466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAKET JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6285ANM"
   },
@@ -3476,7 +3476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHANKAR NARAYAN JUNIOR COLLEGE BHAYANDAR EAST",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6323ANE"
   },
@@ -3486,7 +3486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABDULLAH PATEL ENGLISH HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6553AFE"
   },
@@ -3496,7 +3496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHAUSAHEB PARANJPE SEC. SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6594AGM"
   },
@@ -3506,7 +3506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHANTIGRAM SEC. S. ULH. 3",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6624AGM"
   },
@@ -3516,7 +3516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHARASHTRA COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6781AGE"
   },
@@ -3526,7 +3526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA PHULE A.S.C. COLLEGE PANVEL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU7490AGM"
   },
@@ -3536,7 +3536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOHANLAL SONE VIDYA BORLI PANC",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU7527APM"
   },
@@ -3546,7 +3546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A V JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU11609AGM"
   },
@@ -3556,7 +3556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIVEKANANDA JR. COLLEGE, KHARIVALI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU6131APM"
   },
@@ -3566,7 +3566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHARADA VIDYALAYA, SHELAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU6134APM"
   },
@@ -3576,7 +3576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LAXMAN DEVRAM SONAWANE COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU6264APM"
   },
@@ -3586,7 +3586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT S S DESHMUKH V PIVALI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU6486ANM"
   },
@@ -3596,7 +3596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANKET VIDYA. SEC",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU6656APH"
   },
@@ -3606,7 +3606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHEMBUR KARNATAKA JUNIOR COLLEGE & ARTS, SCIENCE & COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU6877AFE"
   },
@@ -3616,7 +3616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "YASHWANT CHANDJI SAWANT VIDYAMANDIR & JR. COLLEGE, BHANDUP",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU6997AGM"
   },
@@ -3626,7 +3626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.B.G.S.V.ALONDE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU11660AGM"
   },
@@ -3636,7 +3636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MADYAMIK VIDYALAY & JR.COLLEGE TEMGHAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU6170AGM"
   },
@@ -3646,7 +3646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.G.JOSHI COLL ARTS & N.G.BEDEKAR COLL COMMERC",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU6527AGE"
   },
@@ -3656,7 +3656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADARSH VIDYAMANDIR MARATHI SEC.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU6587AGM"
   },
@@ -3666,7 +3666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHASTRI HINDI VIDYALAYA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU6603AFE"
   },
@@ -3676,7 +3676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURU NANAK HIGHER SECONDARY SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU6819AGE"
   },
@@ -3686,7 +3686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAJARAM SETH VIDYALAYA, BHANDUP (W)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU7003AFE"
   },
@@ -3696,7 +3696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ART'S COMMERCE AND KAI.SOU. S R DATAR SCIENCE JR COLLEGE , CHONDHI KIHIM",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU7323AGM"
   },
@@ -3706,7 +3706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.K.PATIL JR COLLEGE CIDCO COLONY T.PACHNAND MARATHI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU7471AFM"
   },
@@ -3716,7 +3716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S. BANTHIYA MADY. PANVEL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU7478APM"
   },
@@ -3726,7 +3726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. K.V. PANVEL MADHY. MARA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU7481AGM"
   },
@@ -3736,7 +3736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL JOHE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU7495AGM"
   },
@@ -3746,7 +3746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWATANTRYAVIR SAWARKAR MAD. VIDYALAY AND KANISHTH MAHAVIDYALAY , NAVIN SHEVE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU7541AFM"
   },
@@ -3756,7 +3756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J. H. BHAGAT VIDYALAYA, DUNGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6153APM"
   },
@@ -3766,7 +3766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AL-HAMD URDU HIGH SCHOOL & JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6182ANU"
   },
@@ -3776,7 +3776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ASOLE VIBHAG HIGHSCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6359APM"
   },
@@ -3786,7 +3786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HINDMATA JR. COLLEGE, DIGHA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6381APM"
   },
@@ -3796,7 +3796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHAHA C. HIGHSCHOOL KINHAVALI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6482APM"
   },
@@ -3806,7 +3806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.S. JONDHLE HIGH MAR. SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6532ANE"
   },
@@ -3816,7 +3816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SATISH PRADHAN DNYANASADHANA JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6681AGE"
   },
@@ -3826,7 +3826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.N.D.T.COLLEGE OF ARTS & SCB COLLEGE OF COMM. & SCI. FOR WOMEN",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6721AGE"
   },
@@ -3836,7 +3836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU7241AGE"
   },
@@ -3846,7 +3846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR BABASAHEB AMBEDKAR COLLEGE MAHAD",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU7376AGM"
   },
@@ -3856,7 +3856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL MHASALA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU7400AGM"
   },
@@ -3866,7 +3866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S SECONDARY MARATHI HIGH SCHOOL KALAMBOLI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU7474AGM"
   },
@@ -3876,7 +3876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. N.P.SHAH HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU11540AFE"
   },
@@ -3886,7 +3886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE MAHADEV BABURAO CHAUGHULE JR COLLEGE RAHANAL, BHIWANDI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6152ANM"
   },
@@ -3896,7 +3896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "YASHWANTRAO CHAVAN JR. COLLEGE OF ARTS, SCIENCE & COMMERCE, KOPARKHAIRANE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6407ANM"
   },
@@ -3906,7 +3906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ICLES'S MOTILAL JHUNJHUNWALA COLLEGE, VASHI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6423AGE"
   },
@@ -3916,7 +3916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. CHANDIBHAI HIMATHMAL MANSUKHANI COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6635AGE"
   },
@@ -3926,7 +3926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU7233AGM"
   },
@@ -3936,7 +3936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.N.HIGH SCH. & JR. COL. AAWAS",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU7321AGM"
   },
@@ -3946,7 +3946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYAMANDIR POLADPUR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU7502AGM"
   },
@@ -3956,7 +3956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Shree G. M. Vedak vidyamandir and Arts Comm. And Sci. Jr. College Tala",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU7532APM"
   },
@@ -3966,7 +3966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AADIVASI UNNATI JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU11428AFM"
   },
@@ -3976,7 +3976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAI PANDURANG RAGHUNATH PATIL UTKARSHA MADHYAMIK VIDYALAYA AND JR COLLEGE VIRAR WEST",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU11592APM"
   },
@@ -3986,7 +3986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHATRAPATI VIDYALAY SAKHARE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU11658AFM"
   },
@@ -3996,7 +3996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MADHAMIK SCHOOL TUSE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU11669ANM"
   },
@@ -4006,7 +4006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K M AGARWAL COLLEGE OF ARTS, SCI & COM",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6241APM"
   },
@@ -4016,7 +4016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHASKAR HINDI SEC.SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6256AFH"
   },
@@ -4026,7 +4026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRAGATI COLLEGE ( ARTS AND COMMERCE )",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6312AGM"
   },
@@ -4036,7 +4036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIDHAGAD VIDYA DONGARNHAVE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6366ANM"
   },
@@ -4046,7 +4046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KHARDI VIBHAG EDUCATION SOCIETY'S HIGHSCHOOL & JUNIOR COLLEGE KHARDI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6478APM"
   },
@@ -4056,7 +4056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARASWATI VIDYALAYA VASIND",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6505APM"
   },
@@ -4066,7 +4066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA PRASARAK SANSTHAS JR COLLEGE OF ARTS, COM AND SCIENCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6509AFM"
   },
@@ -4076,7 +4076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.H.IDEAL HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6513AGE"
   },
@@ -4086,7 +4086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MS PUBLIC UPPER PRIMARY SECONDARY SCHOOL AND JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6551AFE"
   },
@@ -4096,7 +4096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HASHA RAMA PATIL MAR. SEC.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6556APM"
   },
@@ -4106,7 +4106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA JYOTIBA FULE MADHYAMIK V UCHH MADHYAMIK VIDLYALAY",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6566AFM"
   },
@@ -4116,7 +4116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SOCIAL SERVICE LEAGUE HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6785AGE"
   },
@@ -4126,7 +4126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.D. COLLEGE OF ARTS,SCIENCE & COMM.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6798AGE"
   },
@@ -4136,7 +4136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6999APE"
   },
@@ -4146,7 +4146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. S. & L. S. PATKAR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU7129AGE"
   },
@@ -4156,7 +4156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. S.R.T. HIGH SCHOOL & V. M. PILANKAR Jr.COLLEGE REVDANDA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU7328APM"
   },
@@ -4166,7 +4166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HON BHAUSAHEB RAUT MADHYAMIK V UCCHA MADHYAMIK VIDYAMANDIR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU7339APM"
   },
@@ -4176,7 +4176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHANGU KANA THAKUR SECONDARY & HIGHER SECONDARY VIDYALAYA , NEW PANVEL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU7486AGM"
   },
@@ -4186,7 +4186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.P. KHARPATIL JR COLLEGE , CHIRNER",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU7535AGM"
   },
@@ -4196,7 +4196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SEVA ASHRAM VIDYA. MURABE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU11485AGM"
   },
@@ -4206,7 +4206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "V.K.LAKHANI HIGH SCHOOL , BORIGAON",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU11532ANM"
   },
@@ -4216,7 +4216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S K CHAUDHARI HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU11549AFM"
   },
@@ -4226,7 +4226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.E.I.S SUBHEDARWADA SEC.SCH",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6266AGM"
   },
@@ -4236,7 +4236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.V.NERUKAR SEC.SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6310AGM"
   },
@@ -4246,7 +4246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARASWATI VIDYALAYA VASIND",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6505AGM"
   },
@@ -4256,7 +4256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW KALWA HIGH SCHOOL & JR COLLEGE KALWA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6523AGM"
   },
@@ -4266,7 +4266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADARSH VIDYAMANDIR MARATHI SEC.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6587ANM"
   },
@@ -4276,7 +4276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SST COLLEGE OF ARTS & COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6630AFM"
   },
@@ -4286,7 +4286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Anand Vishwa Gurukul and Jr. college",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6679AFE"
   },
@@ -4296,7 +4296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW GIRL'S HIGHSCHOOL MAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6685AGM"
   },
@@ -4306,7 +4306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL KANNAD EDU. STY.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6815AFE"
   },
@@ -4316,7 +4316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IDEAL HIGH SCHOOL & JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6847AGU"
   },
@@ -4326,7 +4326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND VIDYALAYA, KURLA (E)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6930AGH"
   },
@@ -4336,7 +4336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6964AGM"
   },
@@ -4346,7 +4346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DAYANAND VEDIK VIDYALAYA HINDI HIGH SCHOOL, MULUND W",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6996AGE"
   },
@@ -4356,7 +4356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "V G VAZE COLLEGE ARTS,SCI & COMM.MULUND (E) MUMBAI-81",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU7024AGE"
   },
@@ -4366,7 +4366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. Mehendale HIGH SCHOOL & JR COLLEGE Roha TAL.ROHA , RAIGAD",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU7518AGM"
   },
@@ -4376,7 +4376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AMBISTE HIGHSCHOOL & KANISHATHA MAHAVIDYALAYA AMBISTE (KH)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU11673AGM"
   },
@@ -4386,7 +4386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MADYAMIK VIDYALAY & JR.COLLEGE TEMGHAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6170APM"
   },
@@ -4396,7 +4396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ART COMM & SCI JUNIOR COLLEGE GOVELI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6196AFM"
   },
@@ -4406,7 +4406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.E.I.S'S NEW HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6273AGM"
   },
@@ -4416,7 +4416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TILAKNAGAR VIDYAMANDIR ( SEC )",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6308AGM"
   },
@@ -4426,7 +4426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.S.P. MANDAL'S DR. S.V. SAMANT JR. COLLEGE, TURBHE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6430AFM"
   },
@@ -4436,7 +4436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PEOPLES EDU SOC HIGH SEC MAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6458AGM"
   },
@@ -4446,7 +4446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.V. KHADE VIDYALAYA SHAHAPUR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6497APM"
   },
@@ -4456,7 +4456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AADARSHA VIDYA. MAR.HIGHSCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6641ANM"
   },
@@ -4466,7 +4466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVNEET JUNIOR COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6753ANE"
   },
@@ -4476,7 +4476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAVITRIBAI PHULE GIRL'S HIGH SCHOOL, SAKINAKA.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6941AGM"
   },
@@ -4486,7 +4486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI NIWAS BAGARKA JR COLLEGE OF ARTS COM & SCI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU7151AGE"
   },
@@ -4496,7 +4496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JSM JR. COLLEGE ALIBAG",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU7333AGM"
   },
@@ -4506,7 +4506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NERAL VIDYAMANDIR NERAL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU7341AGM"
   },
@@ -4516,7 +4516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S.V.K.HIGHSCHOOL & JR COLLEGE , PANVEL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU7484APM"
   },
@@ -4526,7 +4526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S.Late S.P.Jain Jr.Collge Nagothane Tal :Roha Dist:Raigad",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU7513APM"
   },
@@ -4536,7 +4536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANUTKARSHA PRABHODINI JR. COLLEGE, KALAMDIVI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU11430APM"
   },
@@ -4546,7 +4546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "L.J.N.VIDYALAYA, AGARWADI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU11472AGM"
   },
@@ -4556,7 +4556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B B JADHAV S VIDYAMANDIR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU11572ANM"
   },
@@ -4566,7 +4566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AMBIKABAI D. JADHAV KANYA VIDYA. VAJRESHWARI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6132AGM"
   },
@@ -4576,7 +4576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHARDA VIDYALAYA, PADAGHE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6146ANM"
   },
@@ -4586,7 +4586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BADALAPUR HIGHSCHOOL BL.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6572ANM"
   },
@@ -4596,7 +4596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R J THAKUR JR COLLEGE OF ARTS COMMERCE AND SCIENCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6667ANM"
   },
@@ -4606,7 +4606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6723AGE"
   },
@@ -4616,7 +4616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI. M. P. SHAH JUNIOR COLLEGE OF ARTS & COMMERCE FOR WOMEN",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6835AGE"
   },
@@ -4626,7 +4626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VINOD SHUKLA HIGH SCHOOL & JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6876AGH"
   },
@@ -4636,7 +4636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PNP EDU SOC JR CLG VESHVI GONDHALPADA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU7329APM"
   },
@@ -4646,7 +4646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Shri Chhatrapati vidyalaya and junior College Vavoshi Tal khalapur dist Raigad",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU7355AGM"
   },
@@ -4656,7 +4656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G D AMBEKAR HIGH SCHOOL BIRWADI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU7371APM"
   },
@@ -4666,7 +4666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANT NAMDEO MADHYAMIK VIDYALAY NANDGAON",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU7520ANM"
   },
@@ -4676,7 +4676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.B.VADER SCHOOL . PALI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU7523AGM"
   },
@@ -4686,7 +4686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VINAYAKRAO B. PATIL JR. ARTS COLLEGE,DAPCHARI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU11437ANM"
   },
@@ -4696,7 +4696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "WAKADPADA HIGH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU11471AFM"
   },
@@ -4706,7 +4706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.J.HIGHSCHOOL WADA",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU11676AGM"
   },
@@ -4716,7 +4716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PATIL BALMANDIR (MAR SEC), MOHANE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6255APM"
   },
@@ -4726,7 +4726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VISHWAS VIDYALAYA SEC AND JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6281ANM"
   },
@@ -4736,7 +4736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA.M.H.S.J.C. SHIVALE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6371AGM"
   },
@@ -4746,7 +4746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ART,SCIENCE,COMMER JR.COLL.,KHARDI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6479AFM"
   },
@@ -4756,7 +4756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMCHAND KIMATRAM TALREJA COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6638AGE"
   },
@@ -4766,7 +4766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SATISH PRADHAN DNYANASADHANA JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6681AGM"
   },
@@ -4776,7 +4776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6745AGE"
   },
@@ -4786,7 +4786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT S. T. MEHTA WOMEN'S JR. COLLEGE GHATKOPAR (W)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6918AGE"
   },
@@ -4796,7 +4796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE SAMARTH VIDYALAYA & JUNIOR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU7080AGE"
   },
@@ -4806,7 +4806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.D. SECONDARY SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU11436AGM"
   },
@@ -4816,7 +4816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU11601AGM"
   },
@@ -4826,7 +4826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAVINDRA VIDYALAY (ENG SEC)",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU6250AFE"
   },
@@ -4836,7 +4836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A.V.M.S.M.S.,BHAYANDAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU6327AGE"
   },
@@ -4846,7 +4846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.V. KHADE VIDYALAYA SHAHAPUR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU6497AGM"
   },
@@ -4856,7 +4856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU6907ANM"
   },
@@ -4866,7 +4866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU7154AOE"
   },
@@ -4876,7 +4876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.M.C.COLLEGE KHOPOLI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU7363AGM"
   },
@@ -4886,7 +4886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAJABHAU MONE HIGHER SECONDARY SCHOOL , GOREGAON",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU7388AGM"
   },
@@ -4896,7 +4896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANGAON JUNIOR COLLEGE , MANGAON",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU7397AGM"
   },
@@ -4906,7 +4906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "T.H. WAJEKAR HIGH SCH. FUNDE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU7538AGM"
   },
@@ -4916,7 +4916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Anant Janardan Mhatre madhyamik vidyalay and kanishtha mahavidyalay Narpad",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU11435AFM"
   },
@@ -4926,7 +4926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Pdamshri anutai wagh Secondary School v Higher Secondary School Kosbad",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU11440AFM"
   },
@@ -4936,7 +4936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "L.B.S. HIGHSCHOOL MANOR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU11481ANM"
   },
@@ -4946,7 +4946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H.V.P. HIGHSCHOOL CHINCHGHAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU11670AGM"
   },
@@ -4956,7 +4956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.A.J.V.& COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU6184AGM"
   },
@@ -4966,7 +4966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA PRASARAK SEC & HIGHER SEC JR COLLEGE, BELAPUR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU6463AGM"
   },
@@ -4976,7 +4976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHAHA C. HIGHSCHOOL KINHAVALI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU6482AGM"
   },
@@ -4986,7 +4986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BABAJI SAKHARAM MAR. SEC.",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU6531APM"
   },
@@ -4996,7 +4996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SST COLLEGE OF ARTS & COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU6630ANM"
   },
@@ -5006,7 +5006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMCHAND KIMATRAM TALREJA COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU6638AGM"
   },
@@ -5016,7 +5016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI. BHAUSAHEB VARTAK ARTS COM & SCI. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU7281AGE"
   },
@@ -5026,7 +5026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABHINAV JNYAN MANDIR PRASHALA AND Jr. COLLEGE KARJAT,RAIGAD",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU7349AGM"
   },
@@ -5036,7 +5036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CH.SHIVAJI VIDYALAY AND BALARAM PARSHURAM PATIL JR COLLEGE ROHINJAN",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU7411APM"
   },
@@ -5046,7 +5046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PEN PRIVATE HIGH. SCHOOL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU7497AGM"
   },
@@ -5056,7 +5056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.H.SAVE ARTS,C.J.BHANUSHALI COM.S.B.A DANDEKAR JR.COLLEGE PALGHAR",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU11520ANM"
   },
@@ -5066,7 +5066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.D.TAVRE VIDYALAYA, KALHER",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6136APM"
   },
@@ -5076,7 +5076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHIWANDI NIZAMPUR NAGARPALIKA MAHAVIDHYALAY BHIWANDI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6166AGM"
   },
@@ -5086,7 +5086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ART COMM & SCI JUNIOR COLLEGE GOVELI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6196APM"
   },
@@ -5096,7 +5096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND ENGLISH HIGH SCHOOL & JR COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6400AFE"
   },
@@ -5106,7 +5106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW BOMBAY CITY JR. COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6408AFE"
   },
@@ -5116,7 +5116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ALL SAINT'S INTERNATIONAL JR.COLL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6676AFE"
   },
@@ -5126,7 +5126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6880AGE"
   },
@@ -5136,7 +5136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. M. S. P. MANDL'S S.I.H. BHATIA HIGH SCHOOL & JR. COLLEGE, KURLA (W).",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6934AGM"
   },
@@ -5146,7 +5146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6964AGE"
   },
@@ -5156,7 +5156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6969AGE"
   },
@@ -5166,7 +5166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAP KHAN HIGH SCHOOL & JR. COLLEGE OF ARTS & COMMERCE, MAROL",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU7070AGE"
   },
@@ -5176,7 +5176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA GANDHI VIDYALAYA HASHI",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU7325AGM"
   },
@@ -5186,7 +5186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Anant Pandurang Bhoir Vidyalay va Raghunath sheth Jitekar Junior College, Dapoli Pargaon",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU7447AGM"
   },
@@ -5196,7 +5196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S P MARATHE VIDYALAYA AND JR.COLLEGE",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU11483AFM"
   },
@@ -5206,7 +5206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BALAK MANDIR SANSTHA KALYAN,GIRGAON MADHYAMIK VIDYALAYA GIRGAON",
     "stream": "Arts",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU11524AFM"
   },
@@ -5216,7 +5216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY ANGELS JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 93.8,
     "choiceCode": "MU6217CNE"
   },
@@ -5226,7 +5226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H. R. COLLEGE OF COMMERCE & ECONOMICS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 92.4,
     "choiceCode": "MU6719CGE"
   },
@@ -5236,7 +5236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KISHINCHAND CHELLARAM COLLEGE (K. C. COLLEGE)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 91.0,
     "choiceCode": "MU6718CGE"
   },
@@ -5246,7 +5246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAI HIND COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 90.8,
     "choiceCode": "MU6727CGE"
   },
@@ -5256,7 +5256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NARSEE MONJEE COLLEGE OF COMMERCE & ECONOMICS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 90.4,
     "choiceCode": "MU7123CGE"
   },
@@ -5266,7 +5266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "QUEEN MARY`S HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 90.2,
     "choiceCode": "MU6543CNE"
   },
@@ -5276,7 +5276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MITHIBAI COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 90.2,
     "choiceCode": "MU7133CGE"
   },
@@ -5286,7 +5286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIES JUNIOR COLLEGE OF COMMERCE, NERUL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 89.6,
     "choiceCode": "MU6448CNE"
   },
@@ -5296,7 +5296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KISHINCHAND CHELLARAM COLLEGE (K. C. COLLEGE)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 89.6,
     "choiceCode": "MU6718CNE"
   },
@@ -5306,7 +5306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H. R. COLLEGE OF COMMERCE & ECONOMICS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 88.8,
     "choiceCode": "MU6719CFE"
   },
@@ -5316,7 +5316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.XAVIER'S COLLEGE FORT",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 88.4,
     "choiceCode": "MU6724CFE"
   },
@@ -5326,7 +5326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST MATHEWS ENG HIGH SCHOOL MALVANI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 87.2,
     "choiceCode": "MU7186CNE"
   },
@@ -5336,7 +5336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. J. SOMAIYA JR. COLLEGE OF ART & COMMERCE VIDYAVIHAR, MUMBAI-77",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 86.4,
     "choiceCode": "MU6917CGE"
   },
@@ -5346,7 +5346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. J. SOMAIYA JR. COLLEGE OF ART & COMMERCE VIDYAVIHAR, MUMBAI-77",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 86.2,
     "choiceCode": "MU6917CFE"
   },
@@ -5356,7 +5356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "V G VAZE COLLEGE ARTS,SCI & COMM.MULUND (E) MUMBAI-",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 86.0,
     "choiceCode": "MU7024CGE"
   },
@@ -5366,7 +5366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. GOKALIBAI P P HIGH SCHOOL AND ACHARYA A V PATEL JR COLLEGE VILE PARLE WEST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 85.8,
     "choiceCode": "MU7094CNE"
   },
@@ -5376,7 +5376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ORION INTERNATIONAL SCHOOL & JR. COLLEGE, NALLASOPARA EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 85.2,
     "choiceCode": "MU12234CFE"
   },
@@ -5386,7 +5386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. E. S. SHRI VITHALDAS H. SANGHVI JUNIOR COLLEGE OF ARTS & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 84.6,
     "choiceCode": "MU7283CGE"
   },
@@ -5396,7 +5396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. J. SOMAIYA COLLEGE OF SCIENCE & COMM. VIDYAVIHAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 84.4,
     "choiceCode": "MU6916CGE"
   },
@@ -5406,7 +5406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A V JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 84.0,
     "choiceCode": "MU11609CGE"
   },
@@ -5416,7 +5416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUNANAK KHALSA COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.6,
     "choiceCode": "MU6837CGE"
   },
@@ -5426,7 +5426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "WILSON COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.4,
     "choiceCode": "MU6743CFE"
   },
@@ -5436,7 +5436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. K. SOMAIYA VINAY MANDIR HIGH SCHOOL JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.4,
     "choiceCode": "MU6891CGE"
   },
@@ -5446,7 +5446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.2,
     "choiceCode": "MU7027CGE"
   },
@@ -5456,7 +5456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. JOSEPH'S HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.0,
     "choiceCode": "MU11546CNE"
   },
@@ -5466,7 +5466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE B.S.G.D'S JR COLLEGE OF COM,ARTS & SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 82.8,
     "choiceCode": "MU7206CGE"
   },
@@ -5476,7 +5476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 82.6,
     "choiceCode": "MU6768CGE"
   },
@@ -5486,7 +5486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A V JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 82.6,
     "choiceCode": "MU11609CFE"
   },
@@ -5496,7 +5496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMNIRANJAN JHUNJHUNWALA COLLEGE GHATKOPAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 82.2,
     "choiceCode": "MU6914CGE"
   },
@@ -5506,7 +5506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA ACD & SPO.MARATHI SCHOOL KHANDA COLONY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 82.2,
     "choiceCode": "MU7480CGE"
   },
@@ -5516,7 +5516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE B.S.G.D'S JR COLLEGE OF COM,ARTS & SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 82.0,
     "choiceCode": "MU7206CFE"
   },
@@ -5526,7 +5526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SOUTH INDIAN SECONDARY AND HIGHER SEC. SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 81.8,
     "choiceCode": "MU6298CGE"
   },
@@ -5536,7 +5536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. CHANDIBHAI HIMATHMAL MANSUKHANI COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 81.6,
     "choiceCode": "MU6635CGE"
   },
@@ -5546,7 +5546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 81.6,
     "choiceCode": "MU6833CGE"
   },
@@ -5556,7 +5556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "FATHER AGNEL ENG SEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 81.4,
     "choiceCode": "MU6422CFE"
   },
@@ -5566,7 +5566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ROYAL COLLEGE OF ARTS MIRA ROAD PENKAR PADA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 81.0,
     "choiceCode": "MU6344CGE"
   },
@@ -5576,7 +5576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. S. & L. S. PATKAR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 81.0,
     "choiceCode": "MU7129CGE"
   },
@@ -5586,7 +5586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIES COLLEGE OF COMMERCE & ECONOMICS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 80.0,
     "choiceCode": "MU6830CGE"
   },
@@ -5596,7 +5596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 80.0,
     "choiceCode": "MU7125CGE"
   },
@@ -5606,7 +5606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.G.JOSHI COLL ARTS & N.G.BEDEKAR COLL COMMERC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 79.6,
     "choiceCode": "MU6527CNE"
   },
@@ -5616,7 +5616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.G.JOSHI COLL ARTS & N.G.BEDEKAR COLL COMMERC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 79.6,
     "choiceCode": "MU6527CGE"
   },
@@ -5626,7 +5626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND HIGH SCHOOL & JR COLLEGE, CHEMBUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 79.2,
     "choiceCode": "MU6868CGE"
   },
@@ -5636,7 +5636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMNIRANJAN JHUNJHUNWALA COLLEGE GHATKOPAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 79.0,
     "choiceCode": "MU6914CFE"
   },
@@ -5646,7 +5646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST ANDREW'S COLLEGE OF ARTS SCI & COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 79.0,
     "choiceCode": "MU7170CGE"
   },
@@ -5656,7 +5656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MODEL JUNIOR COLLEGE ADJADE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.8,
     "choiceCode": "MU6213CGE"
   },
@@ -5666,7 +5666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. P. B. HINDUJA COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.6,
     "choiceCode": "MU6746CFE"
   },
@@ -5676,7 +5676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUNANAK KHALSA COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.6,
     "choiceCode": "MU6837CFE"
   },
@@ -5686,7 +5686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABHINAV JNYAN MANDIR PRASHALA AND Jr. COLLEGE KARJAT,RAIGAD",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.4,
     "choiceCode": "MU7349CGE"
   },
@@ -5696,7 +5696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MODEL JUNIOR COLLEGE ADJADE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.0,
     "choiceCode": "MU6213CNE"
   },
@@ -5706,7 +5706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. CHANDIBHAI HIMATHMAL MANSUKHANI COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.8,
     "choiceCode": "MU6635CFE"
   },
@@ -5716,7 +5716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.K.Birla College of Arts, Science and Commerce",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.6,
     "choiceCode": "MU6248CGE"
   },
@@ -5726,7 +5726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "L.S. RAHEJA COLLEGE OF ARTS & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.6,
     "choiceCode": "MU7064CGE"
   },
@@ -5736,7 +5736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH C. D. BARRFIWALA HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.6,
     "choiceCode": "MU7098CGE"
   },
@@ -5746,7 +5746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MODEL JUNIOR COLLEGE ADJADE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.4,
     "choiceCode": "MU6213CFE"
   },
@@ -5756,7 +5756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.4,
     "choiceCode": "MU7152CGE"
   },
@@ -5766,7 +5766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. P. B. HINDUJA COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.2,
     "choiceCode": "MU6746CGE"
   },
@@ -5776,7 +5776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.0,
     "choiceCode": "MU7156CGE"
   },
@@ -5786,7 +5786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. D NATIONAL COLLEGE & W.A. SCIENCE COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.0,
     "choiceCode": "MU7171CGE"
   },
@@ -5796,7 +5796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THOMAS BAPTISTA HIGHSCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.6,
     "choiceCode": "MU11598CGE"
   },
@@ -5806,7 +5806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.4,
     "choiceCode": "MU6725COE"
   },
@@ -5816,7 +5816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABDULLAH PATEL HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.2,
     "choiceCode": "MU6536CGE"
   },
@@ -5826,7 +5826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 75.8,
     "choiceCode": "MU7241CGE"
   },
@@ -5836,7 +5836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHANGU KANA THAKUR SECONDARY & HIGHER SECONDARY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 75.8,
     "choiceCode": "MU7486CGE"
   },
@@ -5846,7 +5846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND VIDYALAYA, KURLA (E)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 75.6,
     "choiceCode": "MU6930CGE"
   },
@@ -5856,7 +5856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. E. S. SHRI VITHALDAS H. SANGHVI JUNIOR COLLEGE OF ARTS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 74.4,
     "choiceCode": "MU7283CFE"
   },
@@ -5866,7 +5866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.K.Birla College of Arts, Science and Commerce",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 74.2,
     "choiceCode": "MU6248CFE"
   },
@@ -5876,7 +5876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH C. D. BARRFIWALA HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.6,
     "choiceCode": "MU7098CNE"
   },
@@ -5886,7 +5886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE SANATAN DHARAM VIDYALAYA & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.4,
     "choiceCode": "MU6869CGE"
   },
@@ -5896,7 +5896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DURGADEVI SARAF JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.2,
     "choiceCode": "MU7205CGE"
   },
@@ -5906,7 +5906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THAKUR COLLEGE OF SCIENCE AND COMMERCE, KANDIVALI EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.2,
     "choiceCode": "MU7249CFE"
   },
@@ -5916,7 +5916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TOLANI COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.0,
     "choiceCode": "MU7146CGE"
   },
@@ -5926,7 +5926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "St. Anne's High School and Junior College Nallasopara",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.0,
     "choiceCode": "MU12221CFE"
   },
@@ -5936,7 +5936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LALA LAJPAT RAI COLLEGE OF COMMERCE & ECONOMICS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.4,
     "choiceCode": "MU6744CFE"
   },
@@ -5946,7 +5946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THAKUR RAMNARAYAN COLLEGE OF ARTS & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.2,
     "choiceCode": "MU7301CFE"
   },
@@ -5956,7 +5956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Dardmand Kalsekar High School and Junior College Arts Commerce Science Kamble Trafe Mahad",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.2,
     "choiceCode": "MU7379CFE"
   },
@@ -5966,7 +5966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH N.K.T.T. JR. COLLEGE OF COMMERCE OF AND SHETH J.T.T. JR COLLEGE OF ARTS AND SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.0,
     "choiceCode": "MU6524CGE"
   },
@@ -5976,7 +5976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TOLANI COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.0,
     "choiceCode": "MU7146CFE"
   },
@@ -5986,7 +5986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI KANJIBHAI VITHALDAS PAREKH ANAND FR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.0,
     "choiceCode": "MU11630CFE"
   },
@@ -5996,7 +5996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.8,
     "choiceCode": "MU7125CFE"
   },
@@ -6006,7 +6006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.T.P. HINDI SEC SCH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.4,
     "choiceCode": "MU6211CPE"
   },
@@ -6016,7 +6016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHANDUP EDUCATIONAL SOCIETY'S P. A. MENON JUNIOR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.4,
     "choiceCode": "MU6976CGE"
   },
@@ -6026,7 +6026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LORDS GRACE ENGLISH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.4,
     "choiceCode": "MU7303CFE"
   },
@@ -6036,7 +6036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.G.T. INTERNATIONAL SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.2,
     "choiceCode": "MU7549CFE"
   },
@@ -6046,7 +6046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHRIST ACADEMY (SEC.), KOPAR KHIRANE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.0,
     "choiceCode": "MU6414CFE"
   },
@@ -6056,7 +6056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE ANDHRA EDUCATION SOCIETY'S HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.0,
     "choiceCode": "MU6817CGE"
   },
@@ -6066,7 +6066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMANAND ARYA D. A. V. COLLEGE BHANDUP (E) MUMBAI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.0,
     "choiceCode": "MU6981CGE"
   },
@@ -6076,7 +6076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA VIKASINI JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.0,
     "choiceCode": "MU11575CFE"
   },
@@ -6086,7 +6086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R K MEMORIAL SEC AND JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.8,
     "choiceCode": "MU6352CFE"
   },
@@ -6096,7 +6096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. XAVIER INTERNATIONAL SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.6,
     "choiceCode": "MU6243CFE"
   },
@@ -6106,7 +6106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "V P M KANNADA HIGH SCHOOL & JR. COLLEGE, MULUND (E)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.6,
     "choiceCode": "MU7019CGE"
   },
@@ -6116,7 +6116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LALA LAJPAT RAI COLLEGE OF COMMERCE & ECONOMICS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.4,
     "choiceCode": "MU6744CGE"
   },
@@ -6126,7 +6126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.F.NAIK VIDYALYA SEC & HSEC MARATHI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.2,
     "choiceCode": "MU6404CGE"
   },
@@ -6136,7 +6136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ELPHINSTONE COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.2,
     "choiceCode": "MU6726COE"
   },
@@ -6146,7 +6146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NOOR-UL ISLAM URDU HIGH SCHOOL & JR. COLLEGE GOVANDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.2,
     "choiceCode": "MU6854CGU"
   },
@@ -6156,7 +6156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DON BOSCO HIGH SCHOOL & JUNIOR COLLEGE, BORIVALI (WEST)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.0,
     "choiceCode": "MU7268CFE"
   },
@@ -6166,7 +6166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SUDARSHAN ENG HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 69.4,
     "choiceCode": "MU11563CFE"
   },
@@ -6176,7 +6176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N.G.V ENG HIGHSCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 69.4,
     "choiceCode": "MU11594CFE"
   },
@@ -6186,7 +6186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R C MARUTI HIGH SCHOOL AND JUNIOR COLLEGE JUCHANDRA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 69.4,
     "choiceCode": "MU11780CFE"
   },
@@ -6196,7 +6196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL SARVODAYA JR COLLEGE OF COMMERCE AND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 69.2,
     "choiceCode": "MU6873CGE"
   },
@@ -6206,7 +6206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "FATIMA SEC. SCHOOL AMB.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 68.8,
     "choiceCode": "MU6597CFE"
   },
@@ -6216,7 +6216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABHINAV JNYAN MANDIR PRASHALA AND Jr. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 68.6,
     "choiceCode": "MU7349CNE"
   },
@@ -6226,7 +6226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. A R UNDRE ENG. HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 68.6,
     "choiceCode": "MU7526CNE"
   },
@@ -6236,7 +6236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMANAND ARYA D. A. V. COLLEGE BHANDUP (E) MUMBAI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 68.4,
     "choiceCode": "MU6981CNE"
   },
@@ -6246,7 +6246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIR J. P. HIGH SCHOOL AND JUNIOR COLLEGE, MALAD (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 68.2,
     "choiceCode": "MU7198CFE"
   },
@@ -6256,7 +6256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW EINGLISH SCHOOL MURBAD",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.6,
     "choiceCode": "MU6374CGE"
   },
@@ -6266,7 +6266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.4,
     "choiceCode": "MU6745CGE"
   },
@@ -6276,7 +6276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.XAVIERS HIGH SCHOOL & JR COLLEGE BHANDUP (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.4,
     "choiceCode": "MU6979CGE"
   },
@@ -6286,7 +6286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRAHLADRAI DALMIA LIONS COLLEGE OF COM & ECONOMICS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.4,
     "choiceCode": "MU7203CFE"
   },
@@ -6296,7 +6296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN HIMAYATUL ISLAM BHAYEEMIYA ISANE URDU HIGH SCHOOL & DR.A.A. DESHMUKH JR. COLLEGE, MAHAD",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.4,
     "choiceCode": "MU7385CPE"
   },
@@ -6306,7 +6306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D. E. SOCIET'S KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.2,
     "choiceCode": "MU6767CGE"
   },
@@ -6316,7 +6316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIVEK VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.2,
     "choiceCode": "MU7105CGE"
   },
@@ -6326,7 +6326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. JOHN BAPTIST ENG. HIGH S.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.0,
     "choiceCode": "MU6517CGE"
   },
@@ -6336,7 +6336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KENT VALLEY INTERNATIONAL SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.8,
     "choiceCode": "MU6195CFE"
   },
@@ -6346,7 +6346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HANSRAJ MORARJI HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.8,
     "choiceCode": "MU7099CNE"
   },
@@ -6356,7 +6356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANATA VIDYALAYA Jr. COLLEGE KHOPOLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.8,
     "choiceCode": "MU7359CGE"
   },
@@ -6366,7 +6366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURU NANAK HIGHER SECONDARY SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.6,
     "choiceCode": "MU6819CGE"
   },
@@ -6376,7 +6376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.V.G'S VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.6,
     "choiceCode": "MU6892CFE"
   },
@@ -6386,7 +6386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. D NATIONAL COLLEGE & W.A. SCIENCE COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.6,
     "choiceCode": "MU7171CFE"
   },
@@ -6396,7 +6396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.T.P. HINDI SEC SCH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.4,
     "choiceCode": "MU6211CFE"
   },
@@ -6406,7 +6406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BURHANI COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.4,
     "choiceCode": "MU6780CGE"
   },
@@ -6416,7 +6416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.D. COLLEGE OF ARTS,SCIENCE & COMM.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.4,
     "choiceCode": "MU6798CGE"
   },
@@ -6426,7 +6426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A.I.J HIGH SCHOOL MHASALA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.4,
     "choiceCode": "MU7401CNE"
   },
@@ -6436,7 +6436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MESCO EDUCATION SOCIETYS RADIANT ENGLISH HIHGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.2,
     "choiceCode": "MU6510CFE"
   },
@@ -6446,7 +6446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIVEK VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.2,
     "choiceCode": "MU7105CFE"
   },
@@ -6456,7 +6456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N.K.T. ENGLISH SEC SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.0,
     "choiceCode": "MU6525CFE"
   },
@@ -6466,7 +6466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.V. KHADE VIDYALAYA SHAHAPUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.6,
     "choiceCode": "MU6497CGE"
   },
@@ -6476,7 +6476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRAHLADRAI DALMIA LIONS COLLEGE OF COM & ECONOMICS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.6,
     "choiceCode": "MU7203CGE"
   },
@@ -6486,7 +6486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANT LEELA SHAH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.6,
     "choiceCode": "MU11579CNE"
   },
@@ -6496,7 +6496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT MITHIBAI MOTIRAM KUNDNANI COLLEGE OF COMMERCE AND ECOMONICS BANDRA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.4,
     "choiceCode": "MU7169CGE"
   },
@@ -6506,7 +6506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. FRANCIS D'ASSISI HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.4,
     "choiceCode": "MU7272CGE"
   },
@@ -6516,7 +6516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Reliance foundation school (marathi medium)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.4,
     "choiceCode": "MU7350CFE"
   },
@@ -6526,7 +6526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.H.SAVE ARTS,C.J.BHANUSHALI COM.S.B.A DANDEKAR JR.COLLEGE PALGHAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.4,
     "choiceCode": "MU11520CGE"
   },
@@ -6536,7 +6536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SREE NARAYANA GURU COLLEGE OF COMMERCE CHEMBUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.2,
     "choiceCode": "MU6861CGE"
   },
@@ -6546,7 +6546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VANI VIDYALAYA & JR. COLLEGE, MULUND (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.0,
     "choiceCode": "MU7011CFE"
   },
@@ -6556,7 +6556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BALBHARATI HIGH SCHOOL AND JUNIOR COLLEGE, KANDIVALI WEST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.0,
     "choiceCode": "MU7255CNE"
   },
@@ -6566,7 +6566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S.V.K.HIGHSCHOOL & JR COLLEGE , PANVEL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.0,
     "choiceCode": "MU7484CGE"
   },
@@ -6576,7 +6576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "STERLING JR. COLLEGE OF ARTS & COMMERCE, NERUL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.6,
     "choiceCode": "MU6457CFE"
   },
@@ -6586,7 +6586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "FIRSTEP GLOBAL SCHOOL AND JUNIOR COLLEGE OF ARTS, COMMERCE AND SCIENCE MIRA ROAD THANE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.6,
     "choiceCode": "MU11912CFE"
   },
@@ -6596,7 +6596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D. E. SOCIET'S KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.4,
     "choiceCode": "MU6767CNE"
   },
@@ -6606,7 +6606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K V PENDHARKAR JUNIOR COLLEGE DOMBIVALI(EAST)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.2,
     "choiceCode": "MU6218CGE"
   },
@@ -6616,7 +6616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ASMITA COLLEGE OF ARTS& COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.2,
     "choiceCode": "MU6347CFE"
   },
@@ -6626,7 +6626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AFAC ENGLISH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.2,
     "choiceCode": "MU6871CGE"
   },
@@ -6636,7 +6636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANNES JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.0,
     "choiceCode": "MU11679CFE"
   },
@@ -6646,7 +6646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A.V.M.S.M.S.,BHAYANDAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.8,
     "choiceCode": "MU6327CGE"
   },
@@ -6656,7 +6656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GOENKA GLOBAL SCHOOL AND JUNIOR COLLEGE, WAGLE ESTATE THANE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.8,
     "choiceCode": "MU11742CFE"
   },
@@ -6666,7 +6666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURU NANAK ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.6,
     "choiceCode": "MU6268CGE"
   },
@@ -6676,7 +6676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. M. SHETTY HIGH SCHOOL, POWAI.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.6,
     "choiceCode": "MU6957CFE"
   },
@@ -6686,7 +6686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NERAL VIDYAMANDIR NERAL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.6,
     "choiceCode": "MU7341CGE"
   },
@@ -6696,7 +6696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H S INTERNATIONAL ENGLISH SCHOOL JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.4,
     "choiceCode": "MU6253CFE"
   },
@@ -6706,7 +6706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TRIMURTI ENG SEC SHCOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.4,
     "choiceCode": "MU6645CFE"
   },
@@ -6716,7 +6716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H.M. PANDIT VIDYALAYA SAFALE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.4,
     "choiceCode": "MU11491CPE"
   },
@@ -6726,7 +6726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MUMBRA COLLEGE OF SCI.,ART & COM.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.2,
     "choiceCode": "MU6533CFE"
   },
@@ -6736,7 +6736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P S ENGLISH SCHOOL PANVEL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.0,
     "choiceCode": "MU7493CFE"
   },
@@ -6746,7 +6746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K V PENDHARKAR JUNIOR COLLEGE DOMBIVALI(EAST)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.8,
     "choiceCode": "MU6218CNE"
   },
@@ -6756,7 +6756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S.HIGH SCHOOL & JR COLLEGE P.P.THANE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.8,
     "choiceCode": "MU6682CGE"
   },
@@ -6766,7 +6766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.I.W.S. N.R. SWAMI COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.8,
     "choiceCode": "MU6836CGE"
   },
@@ -6776,7 +6776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARATI VIDYAPEETH SEC MARATHI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.6,
     "choiceCode": "MU6459CGE"
   },
@@ -6786,7 +6786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.H. MARATHI HIGHSCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.6,
     "choiceCode": "MU6687CFE"
   },
@@ -6796,7 +6796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARVAJANIK VIDYAMANDIR PEN",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.6,
     "choiceCode": "MU7496CFE"
   },
@@ -6806,7 +6806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRAGATI COLLEGE ( ARTS AND COMMERCE )",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.4,
     "choiceCode": "MU6312CGE"
   },
@@ -6816,7 +6816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. S. & L. S. PATKAR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.4,
     "choiceCode": "MU7129CFE"
   },
@@ -6826,7 +6826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAI BHAVANI VIDYALAYA & JR. COLLEGE, KANDIVALI (WEST)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.4,
     "choiceCode": "MU7296CFE"
   },
@@ -6836,7 +6836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GLOBAL JUNIOR COLLEGE FOR ARTS COMMERCE AND SCIENCE SAKINAKA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.4,
     "choiceCode": "MU12447CFE"
   },
@@ -6846,7 +6846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LAXMI VIDYAMANDIR & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.2,
     "choiceCode": "MU6528CNE"
   },
@@ -6856,7 +6856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE PRESIDENT ENG HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.2,
     "choiceCode": "MU6537CFE"
   },
@@ -6866,7 +6866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "The BMS'S Brio e-Tech Junior College of Science Commerce and Arts",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.2,
     "choiceCode": "MU7288CFE"
   },
@@ -6876,7 +6876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHARASHTRA COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.0,
     "choiceCode": "MU6781CGE"
   },
@@ -6886,7 +6886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANJUNATH JUNIOR COLLEGE ( COMMERCE )",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.8,
     "choiceCode": "MU6289CNE"
   },
@@ -6896,7 +6896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL HIGH SCHOOL & JR. COLLEGE, BHANDUP (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.8,
     "choiceCode": "MU6989CGE"
   },
@@ -6906,7 +6906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Gyansagar Vidya Mandir High School and Junior College Wakanpoada Nallasopara",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.8,
     "choiceCode": "MU12219CFE"
   },
@@ -6916,7 +6916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JHULELAL TRUST JUNIOR COLLEGE.ULH.2",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.4,
     "choiceCode": "MU6628CFE"
   },
@@ -6926,7 +6926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DURGADEVI SARAF JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.4,
     "choiceCode": "MU7205CFE"
   },
@@ -6936,7 +6936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.J. MHATRE VIDYA NAVADE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.4,
     "choiceCode": "MU7460CGM"
   },
@@ -6946,7 +6946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR.ANTONIO DA SILVA HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.2,
     "choiceCode": "MU6698CGE"
   },
@@ -6956,7 +6956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH KARAMSHI KANJI ENGLISH SCHOOL AND JR. COLLEGE, MULUND (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.2,
     "choiceCode": "MU7002CNE"
   },
@@ -6966,7 +6966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.T.MARY'S COVENT SCHOOL CHENDHARE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.2,
     "choiceCode": "MU7324CFE"
   },
@@ -6976,7 +6976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HUTATMA HIRAJI PATIL JUNIOR COLLEGE KADAV",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.2,
     "choiceCode": "MU7338CFE"
   },
@@ -6986,7 +6986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMCHAND KIMATRAM TALREJA COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.0,
     "choiceCode": "MU6638CGE"
   },
@@ -6996,7 +6996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SETH D. G. T. JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.0,
     "choiceCode": "MU6747CGE"
   },
@@ -7006,7 +7006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. BABASAHEB AMBEDKAR HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.0,
     "choiceCode": "MU6875CGE"
   },
@@ -7016,7 +7016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHANDRABHAN SHARMA JR COLLEGE POWAI, MUMBAI-76.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.0,
     "choiceCode": "MU6980CFE"
   },
@@ -7026,7 +7026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VANI VIDYALAYA & JR. COLLEGE, MULUND (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.0,
     "choiceCode": "MU7011CGE"
   },
@@ -7036,7 +7036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DSS ENGLISH MEDIUM SCHOOL ATGAON",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.8,
     "choiceCode": "MU6488CFE"
   },
@@ -7046,7 +7046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GYANODAYA SEC. HINDI SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.6,
     "choiceCode": "MU6666CGE"
   },
@@ -7056,7 +7056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IDUBS HINDI HIGH SCHOOL & JR. COLLEGE, BHANDUP (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.6,
     "choiceCode": "MU6994CGE"
   },
@@ -7066,7 +7066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MULJEEBHAI MADHWANI MEMO.GIRLS SCL & MA MANEKBAI MORARJI JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.6,
     "choiceCode": "MU7091CNE"
   },
@@ -7076,7 +7076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAI PANDURANG RAGHUNATH PATIL UTKARSHA MADHYAMIK VIDYALAYA AND JR COLLEGE VIRAR WEST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.6,
     "choiceCode": "MU11592CGE"
   },
@@ -7086,7 +7086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "U S Ostwal English Academy",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.6,
     "choiceCode": "MU11617CFE"
   },
@@ -7096,7 +7096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE B. J. P. C. INSTITUTION & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.4,
     "choiceCode": "MU6737CNE"
   },
@@ -7106,7 +7106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RIZVI COLLEGE OF ARTS SCI & COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.4,
     "choiceCode": "MU7061CGE"
   },
@@ -7116,7 +7116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND JUNIOR COLLEGE NALLASOPARA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.4,
     "choiceCode": "MU11775CFE"
   },
@@ -7126,7 +7126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "COMMERCE AND SCIENCE JR.COLLEGE MHASA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.2,
     "choiceCode": "MU6373CFE"
   },
@@ -7136,7 +7136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE ANDHRA EDUCATION SOCIETY'S HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.2,
     "choiceCode": "MU6817CNE"
   },
@@ -7146,7 +7146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.JOSEF.S.H.S.,UTTAN",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6313CGE"
   },
@@ -7156,7 +7156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KARMAVEER BHAURAO PATIL JR. COLLEGE, VASHI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6427CGE"
   },
@@ -7166,7 +7166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AANAD DIGHE VIDYALAYA SHAHAPUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6499CFE"
   },
@@ -7176,7 +7176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAMARAJAR MEMORIAL ENGLISH HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6813CFE"
   },
@@ -7186,7 +7186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6900CGE"
   },
@@ -7196,7 +7196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURU NANAK HIGH SCHOOL & JR. COLLEGE, BHANDUP (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6990CGE"
   },
@@ -7206,7 +7206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAUSTUBH VIDYALAY AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU11569CFE"
   },
@@ -7216,7 +7216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THAKUR VIDYA MANDIR HIGH ENG",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU11618CFE"
   },
@@ -7226,7 +7226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI RAGHUBIR JUNIOR COLLEGE OF SCIENCE AND COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.6,
     "choiceCode": "MU11496CFE"
   },
@@ -7236,7 +7236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PADMASHALI ENG.M.HIGH SCH.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.2,
     "choiceCode": "MU6174CFE"
   },
@@ -7246,7 +7246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.N.BARORA SEC. VIDYA. SHAHAPUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.2,
     "choiceCode": "MU6498CPM"
   },
@@ -7256,7 +7256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Yakub Baig High School & Junior College,Panvel",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.2,
     "choiceCode": "MU7489CGU"
   },
@@ -7266,7 +7266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE RAJ EDUCATION CENTER GHOTAWADE SUDHAGAD",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.2,
     "choiceCode": "MU11822CFE"
   },
@@ -7276,7 +7276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SATISH PRADHAN DNYANASADHANA JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.0,
     "choiceCode": "MU6681CGE"
   },
@@ -7286,7 +7286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SNEHALATA RANE HIGH SCHOOL AND JR. COLLEGE, DADAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.0,
     "choiceCode": "MU6707CNE"
   },
@@ -7296,7 +7296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MATRUCHAYA HIGH SCHOOL & JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.0,
     "choiceCode": "MU7242CNE"
   },
@@ -7306,7 +7306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Priyadarshi International School Kherne",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.0,
     "choiceCode": "MU7416CFE"
   },
@@ -7316,7 +7316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI BANSIDHAR AGGARWAL MODEL SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.8,
     "choiceCode": "MU6814CGE"
   },
@@ -7326,7 +7326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CH.SHIVAJI VIDYALAY GAVHAN KOPAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.8,
     "choiceCode": "MU7451CGM"
   },
@@ -7336,7 +7336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H.F. SEC. HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.8,
     "choiceCode": "MU11602CFE"
   },
@@ -7346,7 +7346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL URDU SECONDARY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.6,
     "choiceCode": "MU6265CPU"
   },
@@ -7356,7 +7356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S. BANTHIYA MADY. PANVEL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.6,
     "choiceCode": "MU7478CFE"
   },
@@ -7366,7 +7366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHISHUVIKAS MADHYAMIK VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.4,
     "choiceCode": "MU6259CFE"
   },
@@ -7376,7 +7376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE KISHOR MANGALMURTI JUNIOR COLLAGE OF ARTS SCIENCE AND COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.4,
     "choiceCode": "MU11580CFE"
   },
@@ -7386,7 +7386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KARMAVEER BHAURAO PATIL JR. COLLEGE, VASHI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.2,
     "choiceCode": "MU6427CNE"
   },
@@ -7396,7 +7396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY FAMILY HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.2,
     "choiceCode": "MU7076CFE"
   },
@@ -7406,7 +7406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Naj Academy High school & jr College of science Commerce and Arts Mazgaon",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.2,
     "choiceCode": "MU7407CFE"
   },
@@ -7416,7 +7416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. A R UNDRE ENG. HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.2,
     "choiceCode": "MU7526CFE"
   },
@@ -7426,7 +7426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JASLOK HIGH SCHOOL & NAVJEEVAN JR COLLEGE OF COMMERCE, ULHASNAGAR-3",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.0,
     "choiceCode": "MU6614CFE"
   },
@@ -7436,7 +7436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAVINDRA N RAUT MADY. VDY. SHRIVARDHAN",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.0,
     "choiceCode": "MU7531CGM"
   },
@@ -7446,7 +7446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Gurukrupa secondary & higher Secondary High school kalyan (w)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.0,
     "choiceCode": "MU12129CFE"
   },
@@ -7456,7 +7456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AQSA GIRLS JUNIR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.8,
     "choiceCode": "MU6165CFU"
   },
@@ -7466,7 +7466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CITIZENS EDUCATION SOCIETY'S JR COLLEGE OF ART'S COMMERCE AND SCIENCE , URAN",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.8,
     "choiceCode": "MU7545CNE"
   },
@@ -7476,7 +7476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. MITRABAI ANANDRAO CHANDAVARKAR JR. COLLEGE BOISAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.8,
     "choiceCode": "MU11495CFE"
   },
@@ -7486,7 +7486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "OYSTER INTERNATIONAL SCHOOL, KOPARKHAIRANE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.8,
     "choiceCode": "MU12482CFE"
   },
@@ -7496,7 +7496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PODAR INTERNATIONAL HIGHER SECONDARY SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.6,
     "choiceCode": "MU7039CFE"
   },
@@ -7506,7 +7506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH GOPALJI HEMRAJ HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.6,
     "choiceCode": "MU7237CGE"
   },
@@ -7516,7 +7516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MATRUCHAYA HIGH SCHOOL & JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.6,
     "choiceCode": "MU7242CGE"
   },
@@ -7526,7 +7526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "T S PUBLIC SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.4,
     "choiceCode": "MU6246CFE"
   },
@@ -7536,7 +7536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.R.PATIL JUNIOR COLLEGE, MANDA (E)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.4,
     "choiceCode": "MU6252CFE"
   },
@@ -7546,7 +7546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.I.C.E.S. HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.4,
     "choiceCode": "MU6599CGE"
   },
@@ -7556,7 +7556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL AND JR COLLEGE , DEVICHAPADA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.2,
     "choiceCode": "MU7417CFM"
   },
@@ -7566,7 +7566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PEN PRIVATE HIGH. SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.2,
     "choiceCode": "MU7497CGE"
   },
@@ -7576,7 +7576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYAMANDIR POLADPUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.2,
     "choiceCode": "MU7502CGM"
   },
@@ -7586,7 +7586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHIWANDI NIZAMPUR NAGARPALIKA MAHAVIDHYALAY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.0,
     "choiceCode": "MU6166CGE"
   },
@@ -7596,7 +7596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AADITYA ACADEMY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.0,
     "choiceCode": "MU7084CFE"
   },
@@ -7606,7 +7606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYANVIKAS VID.SEC & HSEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.8,
     "choiceCode": "MU6410CGE"
   },
@@ -7616,7 +7616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.N.HIGH SCH. & JR. COL. AAWAS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.8,
     "choiceCode": "MU7321CGM"
   },
@@ -7626,7 +7626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MESCO EDUCATION SOCITEY'S CRESCENT ENGLISH HIGH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.6,
     "choiceCode": "MU6554CFE"
   },
@@ -7636,7 +7636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GYANODAYA SEC. HINDI SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.6,
     "choiceCode": "MU6666CFE"
   },
@@ -7646,7 +7646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHARWIL GLOBAL ENGLISH SCHOOL AND JUNIOR COLLEGE, KALAMB.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.6,
     "choiceCode": "MU12500CFE"
   },
@@ -7656,7 +7656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAKET CONVET ENGLISH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.4,
     "choiceCode": "MU6491CNE"
   },
@@ -7666,7 +7666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. S.R.T. HIGH SCHOOL & V. M. PILANKAR Jr.COLLEGE REVDANDA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.4,
     "choiceCode": "MU7328CGM"
   },
@@ -7676,7 +7676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.B.VADER SCHOOL . PALI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.4,
     "choiceCode": "MU7523CGM"
   },
@@ -7686,7 +7686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL HIGH SCH HINDI SEC BHAY EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.2,
     "choiceCode": "MU6355CNE"
   },
@@ -7696,7 +7696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETKARI SHIKSHAN SEC & HSEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.2,
     "choiceCode": "MU6395CGE"
   },
@@ -7706,7 +7706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT S. T. MEHTA WOMEN'S JR. COLLEGE GHATKOPAR (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.2,
     "choiceCode": "MU6918CGE"
   },
@@ -7716,7 +7716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ELIA SARWAT JUNIOR COLLEGE OF SCIENCE & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.2,
     "choiceCode": "MU7190CNE"
   },
@@ -7726,7 +7726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA PHULE A.S.C. COLLEGE PANVEL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.2,
     "choiceCode": "MU7490CGE"
   },
@@ -7736,7 +7736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K B PATIL VIDYALAY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.2,
     "choiceCode": "MU11559CGE"
   },
@@ -7746,7 +7746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.H.IDEAL HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.0,
     "choiceCode": "MU6513CGE"
   },
@@ -7756,7 +7756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY SPIRIT ENG.HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.0,
     "choiceCode": "MU11489CFE"
   },
@@ -7766,7 +7766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.S. DESHMUKH S. SHAHAPUR SEC.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.8,
     "choiceCode": "MU6496CNE"
   },
@@ -7776,7 +7776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SITARAM PRAKASH HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.8,
     "choiceCode": "MU6816CGE"
   },
@@ -7786,7 +7786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAJABHAU MONE HIGHER SECONDARY SCHOOL , GOREGAON",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.8,
     "choiceCode": "MU7388CGM"
   },
@@ -7796,7 +7796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. N.P.SHAH HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.8,
     "choiceCode": "MU11540CFE"
   },
@@ -7806,7 +7806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW GURUKUL ENGLISH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.8,
     "choiceCode": "MU11885CFE"
   },
@@ -7816,7 +7816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUKUL GRAND UNION SECONDARY SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.6,
     "choiceCode": "MU6606CFE"
   },
@@ -7826,7 +7826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. A. V, HIGH-SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.6,
     "choiceCode": "MU6893CGE"
   },
@@ -7836,7 +7836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER SMILE JR. COLLEGE OF COMMERCE AND SCIENCE, KANDIVALI (EAST)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.6,
     "choiceCode": "MU7306CFE"
   },
@@ -7846,7 +7846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AGARI SHIKSHAN SANSTHA'S HIGHER SECONDARY SCHOOL, KHANDA COLONY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.6,
     "choiceCode": "MU7488CFM"
   },
@@ -7856,7 +7856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G. R. PATIL ENGLISH MEDIUM SECONDARY AMBERNATH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.4,
     "choiceCode": "MU6604CFE"
   },
@@ -7866,7 +7866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. Smt. J.R.H. Kanyashala and Junior College, Alibag",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.4,
     "choiceCode": "MU7331CGM"
   },
@@ -7876,7 +7876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LOKMANYA GURUKUL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.2,
     "choiceCode": "MU6214CFE"
   },
@@ -7886,7 +7886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAINATH HINDI SCH SEC&HSEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.2,
     "choiceCode": "MU6421CGE"
   },
@@ -7896,7 +7896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Fajandar Junior College, Vahoor Tal.Mahad, Dist.Raigad",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.2,
     "choiceCode": "MU7373CGE"
   },
@@ -7906,7 +7906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND ENG HIGH SCHOOL & JR COLLEGE BHIWANDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.0,
     "choiceCode": "MU6188CFE"
   },
@@ -7916,7 +7916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HILL SPRING INTERNATIONAL JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.0,
     "choiceCode": "MU6240CFE"
   },
@@ -7926,7 +7926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ARNOLD'S SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.0,
     "choiceCode": "MU7086CFE"
   },
@@ -7936,7 +7936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI. BHAUSAHEB VARTAK ARTS COM & SCI. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.8,
     "choiceCode": "MU7281CGE"
   },
@@ -7946,7 +7946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NERAL VIDYAMANDIR NERAL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.8,
     "choiceCode": "MU7341CNE"
   },
@@ -7956,7 +7956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARSWATI VID ENG SEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.6,
     "choiceCode": "MU6394CFE"
   },
@@ -7966,7 +7966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL KANNAD EDU. STY.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.4,
     "choiceCode": "MU6815CFE"
   },
@@ -7976,7 +7976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABHAY JUNIOR COLLEGE OF ARTS, COMMERCE AND SCIENCE,",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.4,
     "choiceCode": "MU7309CFE"
   },
@@ -7986,7 +7986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST THOMAS HIGH SCHOOL AND JR COLLEGE DEVTALAV SANDOR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.4,
     "choiceCode": "MU11573CFE"
   },
@@ -7996,7 +7996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ART COMM & SCI JUNIOR COLLEGE GOVELI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.2,
     "choiceCode": "MU6196CPE"
   },
@@ -8006,7 +8006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "COSMOS ENGLISH HIGH SCHOOL, BHANDUP (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.2,
     "choiceCode": "MU6961CFE"
   },
@@ -8016,7 +8016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DAYANAND VEDIK VIDYALAYA HINDI HIGH SCHOOL, MULUND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.0,
     "choiceCode": "MU6996CGE"
   },
@@ -8026,7 +8026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN ISLAM DR. M. I. J. HIGH SCHOOL & JR COLLEGE OF SCI & COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.0,
     "choiceCode": "MU7054CGE"
   },
@@ -8036,7 +8036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIR ELLY KADOORIE HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.8,
     "choiceCode": "MU6778CGE"
   },
@@ -8046,7 +8046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.L.E Society's Science & Commerce Jr. College , Kalamboli",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.8,
     "choiceCode": "MU7477CFE"
   },
@@ -8056,7 +8056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ICLES'S MOTILAL JHUNJHUNWALA COLLEGE, VASHI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.6,
     "choiceCode": "MU6423CGE"
   },
@@ -8066,7 +8066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL RAVDHAL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.6,
     "choiceCode": "MU7382CNM"
   },
@@ -8076,7 +8076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BANEGAR ENGLISH SCHOOL & HAFIZA JR COLLEGE OF ARTS SCI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.4,
     "choiceCode": "MU6356CNE"
   },
@@ -8086,7 +8086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST ALOYSIUS HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.4,
     "choiceCode": "MU11629CFE"
   },
@@ -8096,7 +8096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANNAPURNA PUBLIC SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.4,
     "choiceCode": "MU12133CFE"
   },
@@ -8106,7 +8106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.K. BOSE JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.2,
     "choiceCode": "MU6235CFE"
   },
@@ -8116,7 +8116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TILAK JR. COLLEGE OF SCIENCE & COMMERCE, NERUL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.2,
     "choiceCode": "MU6450CFE"
   },
@@ -8126,7 +8126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JIJAMATA VIDYAMANDIR, BHANDUP (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.2,
     "choiceCode": "MU6959CNE"
   },
@@ -8136,7 +8136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SOU. NALINI YASHWANTRAO DODE VIDYALAYA, MULUND (E)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.2,
     "choiceCode": "MU6998CFE"
   },
@@ -8146,7 +8146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BALBHARATI HIGH SCHOOL AND JUNIOR COLLEGE, KANDIVALI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.2,
     "choiceCode": "MU7255CGE"
   },
@@ -8156,7 +8156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GOKHALE EDU.SO.COMM. & SCIENCE JR. COLLEGE ARATHI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.2,
     "choiceCode": "MU7529CNE"
   },
@@ -8166,7 +8166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DIVINE CHILD HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.0,
     "choiceCode": "MU7072CFE"
   },
@@ -8176,7 +8176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NITIN GODIWALA JR COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.0,
     "choiceCode": "MU7145CNE"
   },
@@ -8186,7 +8186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S.V.K.HIGHSCHOOL & JR COLLEGE , PANVEL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.0,
     "choiceCode": "MU7484CPE"
   },
@@ -8196,7 +8196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.P.H. HIGH SCHOOL & P.G. JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.0,
     "choiceCode": "MU11433CNE"
   },
@@ -8206,7 +8206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. K.L.TIWARI JUNIOR COLLEGE OF COMMERCE AND SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.0,
     "choiceCode": "MU11554CFE"
   },
@@ -8216,7 +8216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENG. HIGHSCHOOL MARATHI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.8,
     "choiceCode": "MU6684CFE"
   },
@@ -8226,7 +8226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.8,
     "choiceCode": "MU6880CGE"
   },
@@ -8236,7 +8236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.K.N. BHATIA HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.8,
     "choiceCode": "MU7263CFE"
   },
@@ -8246,7 +8246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMSHETH THAKUR HIGHER SECONDARY VIDYALAYA,",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.8,
     "choiceCode": "MU7413CFE"
   },
@@ -8256,7 +8256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.JOSEF.S.H.S.,UTTAN",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.6,
     "choiceCode": "MU6313CNE"
   },
@@ -8266,7 +8266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE B. J. P. C. INSTITUTION & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.6,
     "choiceCode": "MU6737CFE"
   },
@@ -8276,7 +8276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VINOD SHUKLA HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.6,
     "choiceCode": "MU6876CGH"
   },
@@ -8286,7 +8286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAILEE DEGREE COLLEGE (SCIENCE & COMMERCE )AND M.J.JR. COLLEGE OF SCIENCE , GORAI ROAD",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.6,
     "choiceCode": "MU7266CFE"
   },
@@ -8296,7 +8296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYANDEEP KANISHTH MAHAVIDYALAY,WALIV",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.6,
     "choiceCode": "MU11583CFE"
   },
@@ -8306,7 +8306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAI PANDURANG RAGHUNATH PATIL UTKARSHA MADHYAMIK",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.6,
     "choiceCode": "MU11592CNE"
   },
@@ -8316,7 +8316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.R.PATIL ENG.MED.HIGH SCHOOL & J.R.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.4,
     "choiceCode": "MU6586CFE"
   },
@@ -8326,7 +8326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PET OXFORD SEC . SCHOOL ULH.3",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.4,
     "choiceCode": "MU6629CFE"
   },
@@ -8336,7 +8336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BOMBAY PUBLIC HIGH SCHOOL, POWAI.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.4,
     "choiceCode": "MU6954CFE"
   },
@@ -8346,7 +8346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW KALWA HIGH SCHOOL & JR COLLEGE KALWA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.2,
     "choiceCode": "MU6523CGE"
   },
@@ -8356,7 +8356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.2,
     "choiceCode": "MU7167CGE"
   },
@@ -8366,7 +8366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHANGU KANA THAKUR SECONDARY & HIGHER SECONDARY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.2,
     "choiceCode": "MU7486CFE"
   },
@@ -8376,7 +8376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LATE SAU VIDYA VINOD ADHIKARI VIDYALAYA, LALONDE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.2,
     "choiceCode": "MU11477CPE"
   },
@@ -8386,7 +8386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHURA BAL VIKAS JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.2,
     "choiceCode": "MU11578CFE"
   },
@@ -8396,7 +8396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.M.E. SOCIETY'S ENGLISH MEDIUM HIGH SCHOOL AND JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.0,
     "choiceCode": "MU6176CFE"
   },
@@ -8406,7 +8406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CENTRAL PUBLIC SCHOOL ENG HIGH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.0,
     "choiceCode": "MU6535CFE"
   },
@@ -8416,7 +8416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST ANTHONY'S CONVENT SCHOOL SECONDARY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.0,
     "choiceCode": "MU6575CFE"
   },
@@ -8426,7 +8426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH ANANDILAL PODAR JR. COLLEGE , SANTACRUZ",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.0,
     "choiceCode": "MU7056CGE"
   },
@@ -8436,7 +8436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SREE NARAYANA GURU COLLEGE OF COMMERCE CHEMBUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.8,
     "choiceCode": "MU6861CNE"
   },
@@ -8446,7 +8446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PODAR INTERNATIONAL SCHOOL, POWAI.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.8,
     "choiceCode": "MU6983CFE"
   },
@@ -8456,7 +8456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANAVSEVA HIGH SCH MAHAPE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.6,
     "choiceCode": "MU6396CNE"
   },
@@ -8466,7 +8466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "FATHER AGNELS JUNIOR COLLEGE,VIRAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.6,
     "choiceCode": "MU11595CFE"
   },
@@ -8476,7 +8476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW GURUKUL CONVENT SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.6,
     "choiceCode": "MU11785CNE"
   },
@@ -8486,7 +8486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHILA SAMITI ENG.SEC.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU6290CFE"
   },
@@ -8496,7 +8496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU7090CGE"
   },
@@ -8506,7 +8506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P. D. TURAKHIA JR COLLEGE OF COM & SCI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU7209CGE"
   },
@@ -8516,7 +8516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUDIKSHA ENGLISH SCHOOL PIMPARI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU6237CFE"
   },
@@ -8526,7 +8526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CINDRELLA ENGLISH MEDIUM SECONDARY AND HIGHER SECONDARY SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU6569CFE"
   },
@@ -8536,7 +8536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI GAURIDUTT MITTAL VIDYALAYA AND JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU6822CGE"
   },
@@ -8546,7 +8546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HASAN KHAN DESHMUKH & PASHA MIYA KHATIB HIGH SCHOOL & JUNIOR COLLEGE OF ARTS,SCIENCE & COMMERCE ,Lower",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU7383CPE"
   },
@@ -8556,7 +8556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA ACD & SPO.MARATHI SCHOOL KHANDA COLONY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU7480CFE"
   },
@@ -8566,7 +8566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUKUL VIDYAMANDIR HIGH SCHOOL (ENG SEC)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU11622CFE"
   },
@@ -8576,7 +8576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Aarya Convent High School & Junior College, Malang Gad Road,",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU12553CFE"
   },
@@ -8586,7 +8586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VISHWAS VIDYALAYA SEC AND JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.0,
     "choiceCode": "MU6281CNE"
   },
@@ -8596,7 +8596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LILAWATI ARTS COM AND SCI JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.0,
     "choiceCode": "MU6559CNE"
   },
@@ -8606,7 +8606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANKET VIDYA. SEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.8,
     "choiceCode": "MU6656CGE"
   },
@@ -8616,7 +8616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABHINAV JNYAN MANDIR PRASHALA AND Jr. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.8,
     "choiceCode": "MU7349CNM"
   },
@@ -8626,7 +8626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.L. PONDA SEC. SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.8,
     "choiceCode": "MU11442CGM"
   },
@@ -8636,7 +8636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.WILLIBRORD'S ENG HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.8,
     "choiceCode": "MU11639CFE"
   },
@@ -8646,7 +8646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.D.M. ENGLISH HIGH SCHOOL & JR. COLLGE, SHIRGAON,",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.8,
     "choiceCode": "MU11890CFE"
   },
@@ -8656,7 +8656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. MARY'S SCH ENG SEC&HSEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.6,
     "choiceCode": "MU6424CNE"
   },
@@ -8666,7 +8666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ROSARY CONVENT HIGH SCHOOL &JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.6,
     "choiceCode": "MU6534CFE"
   },
@@ -8676,7 +8676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LITTLE ANGELS ENG SEC SHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.6,
     "choiceCode": "MU6642CFE"
   },
@@ -8686,7 +8686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J B S HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.6,
     "choiceCode": "MU11647CFE"
   },
@@ -8696,7 +8696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURU GOVIND SIGH T. HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.4,
     "choiceCode": "MU6788CFE"
   },
@@ -8706,7 +8706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AWAMI GIRLS HIGHSCHOOL,GOVANDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.4,
     "choiceCode": "MU6849CNE"
   },
@@ -8716,7 +8716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JOYMAX ENGLISH HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.4,
     "choiceCode": "MU6858CFE"
   },
@@ -8726,7 +8726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HUTATMA HIRAJI PATIL JUNIOR COLLEGE KADAV",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.4,
     "choiceCode": "MU7338CFM"
   },
@@ -8736,7 +8736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KIRAN PATIL JR COLL.OF ARTS,COMM,SCI.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.4,
     "choiceCode": "MU11565CFE"
   },
@@ -8746,7 +8746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER MERRY'S HIGHSCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.4,
     "choiceCode": "MU11632CFE"
   },
@@ -8756,7 +8756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SETH HIRACHAND MUTHA COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.2,
     "choiceCode": "MU6238CPE"
   },
@@ -8766,7 +8766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAA DURGA HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.2,
     "choiceCode": "MU6280CFE"
   },
@@ -8776,7 +8776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOUR LADY OF VELANKANI SEC SCH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.2,
     "choiceCode": "MU6322CFE"
   },
@@ -8786,7 +8786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SNM High School & Jr. College",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.2,
     "choiceCode": "MU6557CFE"
   },
@@ -8796,7 +8796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THAKUR SHYAMNARAYAN HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.2,
     "choiceCode": "MU7302CFE"
   },
@@ -8806,7 +8806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI BAPUSAHEB D D VISPUTE PRIMARY SCHOOL DEVAD ENG",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.2,
     "choiceCode": "MU7442CFE"
   },
@@ -8816,7 +8816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI L P RAVAL JR. COLLEGE OF SCIENCE AND COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.0,
     "choiceCode": "MU6334CNE"
   },
@@ -8826,7 +8826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL ENG. SEC. SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.0,
     "choiceCode": "MU6540CFE"
   },
@@ -8836,7 +8836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KCA ST. FRANCIS OF ASSISI INTERNATIONAL SCHOOL CHEMBUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.0,
     "choiceCode": "MU6927CFE"
   },
@@ -8846,7 +8846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.0,
     "choiceCode": "MU7154COE"
   },
@@ -8856,7 +8856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A.K.I URDU HIGH SCHOOL GOREGAO",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.0,
     "choiceCode": "MU7389CGU"
   },
@@ -8866,7 +8866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MS PUBLIC UPPER PRIMARY SECONDARY SCHOOL AND JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.6,
     "choiceCode": "MU6551CFE"
   },
@@ -8876,7 +8876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "(SES) S.H.M JUNIOR COLLEGE OF ARTS COMMERCE AND SCIENCE ULJASNAGAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.6,
     "choiceCode": "MU6618CFE"
   },
@@ -8886,7 +8886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST ANDREWS INTERNATIONAL SCHOOL AND JR COLLEGE , AKURLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.6,
     "choiceCode": "MU7441CFE"
   },
@@ -8896,7 +8896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SALAHUDDIN AYYUBI M.ENG.HIGH SCH.& JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.4,
     "choiceCode": "MU6191CNE"
   },
@@ -8906,7 +8906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PATUCK TECHNICAL HIGH SCHOOL &JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.4,
     "choiceCode": "MU7045CNE"
   },
@@ -8916,7 +8916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. MARY'S CONVENT HIGH SCHOOL URAN",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.4,
     "choiceCode": "MU7546CFE"
   },
@@ -8926,7 +8926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LOKMANYA HINDI HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.4,
     "choiceCode": "MU11642CNE"
   },
@@ -8936,7 +8936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SUNRISE GLOBAL SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.4,
     "choiceCode": "MU11784CFE"
   },
@@ -8946,7 +8946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PEOPLES EDU SOC HIGH SEC MAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU6458CNE"
   },
@@ -8956,7 +8956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRESIDENCY JR. COLLEGE OF SCIENCE & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU6622CFE"
   },
@@ -8966,7 +8966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "EDEN HIGH SCHOOL AND JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU6935CFE"
   },
@@ -8976,7 +8976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ROCK HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU7074CFE"
   },
@@ -8986,7 +8986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SUDARSHAN ENG. HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU7078CFE"
   },
@@ -8996,7 +8996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Hirwal Education Trust's Junior College of Art's, Commerce and",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU7378CFE"
   },
@@ -9006,7 +9006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU11601CGE"
   },
@@ -9016,7 +9016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GRESIYAS SEC HIGHSCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU6338CFE"
   },
@@ -9026,7 +9026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH KARAMSHI KANJI ENGLISH SCHOOL AND JR. COLLEGE, MULUND (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU7002CFE"
   },
@@ -9036,7 +9036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANIBEN NANAVATI WOMEN'S COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU7132CNE"
   },
@@ -9046,7 +9046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU7289CFE"
   },
@@ -9056,7 +9056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAJI AAMDAR DATTUSHETH PATIL JUNIOR COLLEGE, SEC-",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU7468CFE"
   },
@@ -9066,7 +9066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KOLAD HIGH SCH AND JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU7509CPM"
   },
@@ -9076,7 +9076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GAUTAM ENG SEC SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.8,
     "choiceCode": "MU6688CFE"
   },
@@ -9086,7 +9086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Laxmi public School",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.8,
     "choiceCode": "MU7491CFE"
   },
@@ -9096,7 +9096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHARDA VIDYALAYA, PADAGHE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU6146CNM"
   },
@@ -9106,7 +9106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Golden Nest Junior College Of Science, Commerce And Arts",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU6354CFE"
   },
@@ -9116,7 +9116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA.M.H.S.J.C. SHIVALE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU6371CGE"
   },
@@ -9126,7 +9126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "FATIMA JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU6515CFE"
   },
@@ -9136,7 +9136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABDULLAH PATEL ENGLISH HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU6553CFE"
   },
@@ -9146,7 +9146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NERAL VIDYAMANDIR NERAL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU7341CPE"
   },
@@ -9156,7 +9156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI BHAIRAVDEV VIDYALAY V LOKNETE RAMSHETH THAKUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU7418CFM"
   },
@@ -9166,7 +9166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GNYANODAYA MULTIPURPOSE HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU11562CFE"
   },
@@ -9176,7 +9176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IRIS INTERNATIONAL SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU11566CFE"
   },
@@ -9186,7 +9186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NOBEL GURUKUL CONVENT SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU6139CFE"
   },
@@ -9196,7 +9196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVNEET JUNIOR COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU6753CNE"
   },
@@ -9206,7 +9206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARATRATNA DR.BABASAHEB AMBEDKAR VIDYALAYA &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU6826CFE"
   },
@@ -9216,7 +9216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GULSHAN-E-ISLAM URDU HIGH SCHOOL, SAKINAKA.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU6942CNU"
   },
@@ -9226,7 +9226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANGAON JUNIOR COLLEGE , MANGAON",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU7397CPM"
   },
@@ -9236,7 +9236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MRS BHAVANADEVI BHAGWAN SAMBARE JUNIOR COLLEGE ZADPOLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU11657CFE"
   },
@@ -9246,7 +9246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ROYAL ENGLISH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.2,
     "choiceCode": "MU6319CFE"
   },
@@ -9256,7 +9256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN-I-ISLAM ALLANA ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE OF SCI. AND COMMERCE, CST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.2,
     "choiceCode": "MU6713CFE"
   },
@@ -9266,7 +9266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST JOSEPH JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.2,
     "choiceCode": "MU11555CFE"
   },
@@ -9276,7 +9276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE MAHALSA NARAYANI SCHOOL AND COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.2,
     "choiceCode": "MU11678CFE"
   },
@@ -9286,7 +9286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MONTFORT JR.COLLEGE OF ARTS AND COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.0,
     "choiceCode": "MU6771CFE"
   },
@@ -9296,7 +9296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMLINGAM EDUCATION FOUNDATION & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.0,
     "choiceCode": "MU6856CFE"
   },
@@ -9306,7 +9306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND VIDYALAYA, KURLA (E)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.0,
     "choiceCode": "MU6930CFE"
   },
@@ -9316,7 +9316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA ACD & SPO.MARATHI SCHOOL KHANDA COLONY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.0,
     "choiceCode": "MU7480CNE"
   },
@@ -9326,7 +9326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOHANLAL SONE VIDYA BORLI PANC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.0,
     "choiceCode": "MU7527CGM"
   },
@@ -9336,7 +9336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. LUKES JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.0,
     "choiceCode": "MU11648CFE"
   },
@@ -9346,7 +9346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HINDI HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.8,
     "choiceCode": "MU6272CGE"
   },
@@ -9356,7 +9356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "QUEEN MARY`S HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.8,
     "choiceCode": "MU6543CFE"
   },
@@ -9366,7 +9366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R, N, VIDYALAY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.8,
     "choiceCode": "MU6562CFE"
   },
@@ -9376,7 +9376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RUSTOMJEE INTERNATIONAL SCHOOL & JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.8,
     "choiceCode": "MU7273CFE"
   },
@@ -9386,7 +9386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MUMBAI INTERNATIONAL SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.8,
     "choiceCode": "MU11438CFE"
   },
@@ -9396,7 +9396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAMADIYA HIGH SCH.& J.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.6,
     "choiceCode": "MU6179CPU"
   },
@@ -9406,7 +9406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SACRED HEART SEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.6,
     "choiceCode": "MU6428CFE"
   },
@@ -9416,7 +9416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHUBHAMRAJE JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.6,
     "choiceCode": "MU6653CNE"
   },
@@ -9426,7 +9426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT S. T. MEHTA WOMEN'S JR. COLLEGE GHATKOPAR (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.6,
     "choiceCode": "MU6918CGG"
   },
@@ -9436,7 +9436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT RAMKALIDEVI SANMAN SINGH VIDYA MANDIR & JR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.6,
     "choiceCode": "MU7028CNE"
   },
@@ -9446,7 +9446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VEDANT JUNIOR COLLEGE OF SCIENCE COMMERCE AND ARTS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.6,
     "choiceCode": "MU11956CFE"
   },
@@ -9456,7 +9456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Prathana Junior College of Arts, Science &Commerce",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.6,
     "choiceCode": "MU12315CFE"
   },
@@ -9466,7 +9466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARAT EDUCATION SOCIETY'S SANT GADGE MAHARAJ",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.4,
     "choiceCode": "MU6749CFE"
   },
@@ -9476,7 +9476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER TERESA ENG.SEC.SCHOOL & JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.4,
     "choiceCode": "MU7260CNE"
   },
@@ -9486,7 +9486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J P MHATRE ENGLISH PRIMARY SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.2,
     "choiceCode": "MU6175CFE"
   },
@@ -9496,7 +9496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BABA HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.2,
     "choiceCode": "MU6181CFE"
   },
@@ -9506,7 +9506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BUNTS SANGHAS ARATHI SSHASHI KIRAN SHETTY JR. COLLEGE, KURLA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.2,
     "choiceCode": "MU6948CFE"
   },
@@ -9516,7 +9516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BADALAPUR HIGHSCHOOL BL.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.0,
     "choiceCode": "MU6572CNE"
   },
@@ -9526,7 +9526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANAS JR COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.0,
     "choiceCode": "MU7247CFE"
   },
@@ -9536,7 +9536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "L.J.N.VIDYALAYA, AGARWADI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.0,
     "choiceCode": "MU11472CGE"
   },
@@ -9546,7 +9546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ALDEL EDUCATION TRUSTS,ST.JOHN JUNIOR COLLEGE PALGHAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.0,
     "choiceCode": "MU11490CFE"
   },
@@ -9556,7 +9556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. H. A. RAIS HIGH SCHOOL AND JUNIOR COLLEGE, BHIWANDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.8,
     "choiceCode": "MU6177CGU"
   },
@@ -9566,7 +9566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI DAYANAND BALAK VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.8,
     "choiceCode": "MU6810CGE"
   },
@@ -9576,7 +9576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AMARNATH HIGH SCHOOL AND JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.8,
     "choiceCode": "MU6843CNE"
   },
@@ -9586,7 +9586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHESHWARY VIDYALAYA AND JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.8,
     "choiceCode": "MU6896CNE"
   },
@@ -9596,7 +9596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI.DHONDU NAU THAKARE JR.COLLEGE,RAJNOLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU6151CNE"
   },
@@ -9606,7 +9606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHAHA C. HIGHSCHOOL KINHAVALI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU6482CFM"
   },
@@ -9616,7 +9616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.. P. GAGANGIRI MAHARAJ INTERNATIONAL SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU7362CFE"
   },
@@ -9626,7 +9626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. JOSEPH'S HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU11546CGE"
   },
@@ -9636,7 +9636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAGINI PRAMOD JR COLLEGE OF ARTS SCIENCE AND COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU11610CFE"
   },
@@ -9646,7 +9646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Atharv academy english high school & jr College",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU12313CFE"
   },
@@ -9656,7 +9656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MATOSHREE VELABAI DEVJI HARIYA JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU6258CNE"
   },
@@ -9666,7 +9666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYASAGAR INTERNATIONAL SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU6326CFE"
   },
@@ -9676,7 +9676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "FR. AGNEL MULTIPURPOSE SECONDARY SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU6595CFE"
   },
@@ -9686,7 +9686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AL-ITTEHAD JR COLLEGE OF ARTS SCI & COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU7135CFE"
   },
@@ -9696,7 +9696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "YASHWANTRAO CHAVAN JR. COLLEGE, NEAR MEGHWADI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU7160CFE"
   },
@@ -9706,7 +9706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "YASHAVANTRAO DESHAMUKH KANISHTH MAHAVIDYALAY ,",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU7353CGM"
   },
@@ -9716,7 +9716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAVINDRA N RAUT MADY. VDY. SHRIVARDHAN",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU7531CNM"
   },
@@ -9726,7 +9726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GANESH SEC. VIDYA, TITWALA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU6251CNE"
   },
@@ -9736,7 +9736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.V. KHADE VIDYALAYA SHAHAPUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU6497CPE"
   },
@@ -9746,7 +9746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VEDANTA JUNIOR COLLEGE. ULH.3",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU6623CFE"
   },
@@ -9756,7 +9756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN ISLAM DR. M. I. J. HIGH SCHOOL & JR COLLEGE OF SCI & COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU7054CPE"
   },
@@ -9766,7 +9766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYANIKETAN JR COLLEGE OF COM & SCI BORIVALI WEST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU7278CFE"
   },
@@ -9776,7 +9776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST AGRASEN HIGH SCHOOL AND JR COLLEGE, KAMOTHE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU7465CFE"
   },
@@ -9786,7 +9786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M G M ACADEMY'S HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU11543CFE"
   },
@@ -9796,7 +9796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HUZAIFA URDU HIGHSCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU11599CNE"
   },
@@ -9806,7 +9806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND VIDYAMANDIR AND JR COLLEGE WADA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU11677CPM"
   },
@@ -9816,7 +9816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NESWAT JR. COLLEGE, CHEETA CAMP, TORMBAY.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU6864CFE"
   },
@@ -9826,7 +9826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "INDIAN MODEL JUNIOR COLLEGE ULWE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU7449CFE"
   },
@@ -9836,7 +9836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TUNGARESHWAR ENG HIGH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU11570CFE"
   },
@@ -9846,7 +9846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S V M JR COLLEGE OF SCI & COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU11604CFE"
   },
@@ -9856,7 +9856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N.M ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU12146CFE"
   },
@@ -9866,7 +9866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MUMBRA P ENG HIGH SCH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU6547CFE"
   },
@@ -9876,7 +9876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B. M. RUIA GIRLS' COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU6751CNE"
   },
@@ -9886,7 +9886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARASWATI VIDYAMANDIR & JR. COLLEGE, MALAD EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU7181CFE"
   },
@@ -9896,7 +9896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MARY IMMACULATE GIRLS HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU7251CFE"
   },
@@ -9906,7 +9906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D. G. TATKARE JUNIOR COLLEGE MANGAON",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU7392CFE"
   },
@@ -9916,7 +9916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIKRAMGAD HIGHSCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU11661CGM"
   },
@@ -9926,7 +9926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAFA HIGH SCHOOL AND JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.6,
     "choiceCode": "MU6733CFE"
   },
@@ -9936,7 +9936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI VELJI LAKHAMSHI NAPOO HIGH SCHOOL AND JUNIOR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.6,
     "choiceCode": "MU6791CGE"
   },
@@ -9946,7 +9946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.6,
     "choiceCode": "MU7022CFE"
   },
@@ -9956,7 +9956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GYAN KENDRA SEC. HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.6,
     "choiceCode": "MU7097CNE"
   },
@@ -9966,7 +9966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRAGATI VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.6,
     "choiceCode": "MU7264CGE"
   },
@@ -9976,7 +9976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GAULWADI MADHYAMIK VIDYALAYA ,GAULWADI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.6,
     "choiceCode": "MU7337CFM"
   },
@@ -9986,7 +9986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ANTHONY'S HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.6,
     "choiceCode": "MU11616CFE"
   },
@@ -9996,7 +9996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.D.TAVRE VIDYALAYA, KALHER",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU6136CFE"
   },
@@ -10006,7 +10006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAMADIYA HIGH SCH.& J.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU6179CGU"
   },
@@ -10016,7 +10016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SUMAIYA ENGLISH HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU6542CFE"
   },
@@ -10026,7 +10026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN SHANE ISLAM URDU HIGH SCHOOL, SAKINAKA.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU6943CFE"
   },
@@ -10036,7 +10036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHADEV UPADHYAYA MADHYAMIK VIDYALAY & JR. COLLEGE, VIKHROLI (E).",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU6963CNE"
   },
@@ -10046,7 +10046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GHANSHYAMDAS JALAN JR COLLEGE OF SCI & COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU7213CFE"
   },
@@ -10056,7 +10056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. SAVITA NILKANTH SAWANT JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU7390CFM"
   },
@@ -10066,7 +10066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CH.SHIVAJI VIDYALAY AND BALARAM PARSHURAM PATIL JR COLLEGE ROHINJAN",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU7411CPM"
   },
@@ -10076,7 +10076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI. VARDAYINI MADHYAMIC VIDYALAYA KAPADE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU7503CFM"
   },
@@ -10086,7 +10086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOHANLAL SONE VIDYA BORLI PANC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU7527CPM"
   },
@@ -10096,7 +10096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW SHRI GURU GOVINDSINGH ENGLISH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU12424CFE"
   },
@@ -10106,7 +10106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA VIKAS VANGANI 1",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU6589CPE"
   },
@@ -10116,7 +10116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ASMITA GIRLS JR COLLEGE VIKAROLI (E)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU6978CFE"
   },
@@ -10126,7 +10126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NOBAL ANGEL ENGLISH HIGH SCHOOL & JR COLLEGE BHANDUP ( w )",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU7004CFE"
   },
@@ -10136,7 +10136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. GREGORIOUS PUBLIC SCHOOL AND JUNIOR COLLEGE MULUND (WEST)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU7017CFE"
   },
@@ -10146,7 +10146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ANNE'S HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU7195CGE"
   },
@@ -10156,7 +10156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A. M. ENGLISH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU7217CFE"
   },
@@ -10166,7 +10166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G D AMBEKAR HIGH SCHOOL BIRWADI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU7371CGM"
   },
@@ -10176,7 +10176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.P.C. JUNIOR COLLEGE OF SCIENCE & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU7431CFE"
   },
@@ -10186,7 +10186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MYMM Jr.College of Arts, Comm & Science, Khodala-Jogalwadi",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU11464CFM"
   },
@@ -10196,7 +10196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.K.PATIL SEC.SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.0,
     "choiceCode": "MU6306CFE"
   },
@@ -10206,7 +10206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANOHAR JOSHI JR. COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.0,
     "choiceCode": "MU6827CNE"
   },
@@ -10216,7 +10216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL URDU SECONDARY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU6265CFE"
   },
@@ -10226,7 +10226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANATA VIDYA. DHASAI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU6364CNM"
   },
@@ -10236,7 +10236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KHARDI VIBHAG EDUCATION SOCIETY'S HIGHSCHOOL & JUNIOR COLLEGE KHARDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU6478CGM"
   },
@@ -10246,7 +10246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARASWATI VIDYALAYA VASIND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU6505CFM"
   },
@@ -10256,7 +10256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU6522CNE"
   },
@@ -10266,7 +10266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M J SCHOOL & JR COLLEGE OF ARTS ,COMMERCE &SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU6580CFE"
   },
@@ -10276,7 +10276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.M.M.ROTARY SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU6605CFE"
   },
@@ -10286,7 +10286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "T. E. S.'S LAXMANRAO SHIVDAVKAR HIGH SCHOOL & JR.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU7239CNE"
   },
@@ -10296,7 +10296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IDEAL ENGLISH HIGH SCHOOL AND JR. COLLEGE ARTS AND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU7402CFE"
   },
@@ -10306,7 +10306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANSKAR ENGLISH MEDIUM SCHOOL, ANJUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU11987CFE"
   },
@@ -10316,7 +10316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN ISLAM ALLANA GIRLS HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.6,
     "choiceCode": "MU6931CNE"
   },
@@ -10326,7 +10326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI JAMNADAS ADUKIA ENGLISH HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.6,
     "choiceCode": "MU7274CFE"
   },
@@ -10336,7 +10336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. N.N.PATIL HIGH SCH. AND JR COLLEGE , POYNAD",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.6,
     "choiceCode": "MU7322CPM"
   },
@@ -10346,7 +10346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NERE HIGH SCHOOL NERE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.6,
     "choiceCode": "MU7420CFM"
   },
@@ -10356,7 +10356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT K K SHAH JUNIOR COLLEGE OF COMMERCE VASAI W",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.6,
     "choiceCode": "MU11614CFE"
   },
@@ -10366,7 +10366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JNAN VIKAS MANDAL JR. COLLEGE, AIROLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.4,
     "choiceCode": "MU6384CFE"
   },
@@ -10376,7 +10376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANJIVANI JUNIOR COLLEGE KHARGHAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.4,
     "choiceCode": "MU7437CFE"
   },
@@ -10386,7 +10386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H.B.P. SHRI. D. G. GOWARI VIDYALAYA & JUNIOR COLLEGE, KAMOTHE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.4,
     "choiceCode": "MU7467CFM"
   },
@@ -10396,7 +10396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AL-HAMD URDU HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU6182CPU"
   },
@@ -10406,7 +10406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Dolphin English Secondary School and Junior College Vangani",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU6590CFE"
   },
@@ -10416,7 +10416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JNANA SARITA JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU6598CGE"
   },
@@ -10426,7 +10426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TAKSHSHILA VIDYALA SEC SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU6615CNE"
   },
@@ -10436,7 +10436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JEEVAN JYOTI ENG SEC SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU6692CFE"
   },
@@ -10446,7 +10446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE SCHOLARS HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU7116CFE"
   },
@@ -10456,7 +10456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ROHA EDUCATIONAL & WELFARE ASSOCIATION ENGLISH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU7519CFE"
   },
@@ -10466,7 +10466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE GAJANAND SINGH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU11747CFE"
   },
@@ -10476,7 +10476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A.V.M.S.M.S.,BHAYANDAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU6327CPE"
   },
@@ -10486,7 +10486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYABEN D.GARDI HIGH SCHOOL & JR.COLLEGE MULUND (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU7014CFE"
   },
@@ -10496,7 +10496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G D AMBEKAR HIGH SCHOOL BIRWADI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU7371CPM"
   },
@@ -10506,7 +10506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARVAJANIK VIDYAMANDIR PEN",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU7496CGM"
   },
@@ -10516,7 +10516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GIRIJA MHATRE ENGLISH HIGH SCHOOL AND JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU11560CFE"
   },
@@ -10526,7 +10526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S R THAKUR VIDYAMANDIR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU11584CFE"
   },
@@ -10536,7 +10536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUKUL VIDYAPEETH ENGLISH HIGHSCHOOL AND JUNIOR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU11914CFE"
   },
@@ -10546,7 +10546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HASHA LAKHMA PATIL HIGH SCHOOL AND JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU12200CFE"
   },
@@ -10556,7 +10556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN-I-ISLAM'S MUSTAFA FAKIH URDU HIGH SCHOOL & JR. COLLEGE, TURBHE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU6439CNE"
   },
@@ -10566,7 +10566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ARCHANA TRUST ENGLISH MEDIUM SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU6500CFE"
   },
@@ -10576,7 +10576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HON.BHAUSAHEB RAUT VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU7335CNM"
   },
@@ -10586,7 +10586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HON BHAUSAHEB RAUT MADHYAMIK V UCCHA MADHYAMIK",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU7339CPM"
   },
@@ -10596,7 +10596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST WILFREDS Highschool",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU7446CFE"
   },
@@ -10606,7 +10606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW VISION JR COLLEGE OF ART'S COMMERCE AND SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU7498CFE"
   },
@@ -10616,7 +10616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R S DUBE JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU11577CNE"
   },
@@ -10626,7 +10626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHEMBUR KARNATAKA JUNIOR COLLEGE & ARTS, SCIENCE & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.6,
     "choiceCode": "MU6877CFE"
   },
@@ -10636,7 +10636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIR S.A. HIGH SCHOOL AND JR COLLEGE , MURUD",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.6,
     "choiceCode": "MU7410CGM"
   },
@@ -10646,7 +10646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MORESHWAR VIDYALAY & P P PATIL JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.6,
     "choiceCode": "MU11619CFE"
   },
@@ -10656,7 +10656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL ENG SCHOOL KUDUS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.6,
     "choiceCode": "MU11671CFE"
   },
@@ -10666,7 +10666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH GOPALJI HEMRAJ HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU7237CNE"
   },
@@ -10676,7 +10676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAJENDRA PARSHURAM KHARPATIL ARTS COMMERCE AND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU7536CFE"
   },
@@ -10686,7 +10686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.L. PONDA SEC. SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU11442CGE"
   },
@@ -10696,7 +10696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CARDIFF JUNIOR COLLEGE VIRAR (E)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU11588CFE"
   },
@@ -10706,7 +10706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAUNT CARMEL JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU11606CFE"
   },
@@ -10716,7 +10716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHANTILAL T SHAH HIGH SCHOOL AND JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU11644CFE"
   },
@@ -10726,7 +10726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHACHA NEHRU HINDI HIGH SCHOOL.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU6159CGH"
   },
@@ -10736,7 +10736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURU NANAK HIGHER SECONDARY SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU6790CGE"
   },
@@ -10746,7 +10746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "YASHWANT CHANDJI SAWANT VIDYAMANDIR & JR. COLLEGE, BHANDUP",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU6997CGE"
   },
@@ -10756,7 +10756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P. D. TURAKHIA JR COLLEGE OF COM & SCI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU7209CNE"
   },
@@ -10766,7 +10766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANATA VIDYALAY ENG. MED SCHOO",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU7356CFE"
   },
@@ -10776,7 +10776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H.O.C. INTERNATIONAL SCH.& Jr. COLLEGE RASAYANI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU7358CNE"
   },
@@ -10786,7 +10786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Rahul Shikshan Prasarak Mandal' Latur's Satyagraha junior",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU7435CNE"
   },
@@ -10796,7 +10796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY CROSS CONVENT SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU6269CFE"
   },
@@ -10806,7 +10806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER MARYS JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU6324CNE"
   },
@@ -10816,7 +10816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SADHANA HINDI HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU6672CPE"
   },
@@ -10826,7 +10826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN I ISLAM'S BEGUM JAMIL HAJI ABDUL HAQ COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU7127CNE"
   },
@@ -10836,7 +10836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NERAL VIDYAMANDIR NERAL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU7341CFE"
   },
@@ -10846,7 +10846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D G TATKARE JR COLLEGE , KALAMBOLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU7476CFE"
   },
@@ -10856,7 +10856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RISHI VALMIKI JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU11557CPE"
   },
@@ -10866,7 +10866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RANA PRATAP MADHYAMIK VIDYALAY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU11564CFE"
   },
@@ -10876,7 +10876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B N MEMORIAL ENG HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU11626CFE"
   },
@@ -10886,7 +10886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAMBHAJIRAO DESHMUKH PUBLIC SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.8,
     "choiceCode": "MU6200CFE"
   },
@@ -10896,7 +10896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE SANATAN DHARAM VIDYALAYA & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.8,
     "choiceCode": "MU6869CNE"
   },
@@ -10906,7 +10906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURU GOBIND ENGLISH HIGH SCHOOL, VIKHROLI (E)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.8,
     "choiceCode": "MU6967CFE"
   },
@@ -10916,7 +10916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. BABASAHEB AMBEDKAR VIDYALAYA, VIKHROLI (E)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.8,
     "choiceCode": "MU6970CFE"
   },
@@ -10926,7 +10926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUKUL ENGLISH HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.8,
     "choiceCode": "MU7199CFE"
   },
@@ -10936,7 +10936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S.Late S.P.Jain Jr.Collge Nagothane Tal :Roha Dist:Raigad",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.8,
     "choiceCode": "MU7513CPM"
   },
@@ -10946,7 +10946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. V. HIGH SCHOOL, JAWHAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.8,
     "choiceCode": "MU11458CGM"
   },
@@ -10956,7 +10956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ATHAGAON VIDYAMANDIR & JR. COLLEGE, KON",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6148CPM"
   },
@@ -10966,7 +10966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SALAHUDDIN AYYUBI MEMORIAL URDU HIGH SCHOOL AND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6190CPU"
   },
@@ -10976,7 +10976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ANTHONY HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6345CFE"
   },
@@ -10986,7 +10986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW EINGLISH SCHOOL MURBAD",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6374CFE"
   },
@@ -10996,7 +10996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARDA NEW HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6717CNE"
   },
@@ -11006,7 +11006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CUMMOO JAFFER SULEMAN GIRL'S HIGH SCHOOL & JR.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6730CNE"
   },
@@ -11016,7 +11016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6907CGE"
   },
@@ -11026,7 +11026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M. T. S. KHALSA HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU7106CFE"
   },
@@ -11036,7 +11036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. S.R.T. HIGH SCHOOL & V. M. PILANKAR Jr.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU7328CPM"
   },
@@ -11046,7 +11046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S H K GANDHARPALE ENG SEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU7374CFE"
   },
@@ -11056,7 +11056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. JOSEPH SECONDARY HIGH SCHOOL KALAMBOLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU7475CNE"
   },
@@ -11066,7 +11066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KOLAD HIGH SCH AND JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU7509CGM"
   },
@@ -11076,7 +11076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. H. A. RAIS HIGH SCHOOL AND JUNIOR COLLEGE, BHIWANDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU6177CFU"
   },
@@ -11086,7 +11086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARDAR VALLABHBHAI PATEL COLLEGE OF COMMERECE AND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU6350CFE"
   },
@@ -11096,7 +11096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. LAWRENCE ENG.SEC.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU6678CFE"
   },
@@ -11106,7 +11106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.V.K GHATKOPAR SARVJANIK SCHOOL & JR COLLEGE OF",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU6898CFE"
   },
@@ -11116,7 +11116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURU HARKRISHAN HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU7051CFE"
   },
@@ -11126,7 +11126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANGAON JUNIOR COLLEGE , MANGAON",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU7397CGM"
   },
@@ -11136,7 +11136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.V.S.P.M MAD PRASHA PALI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU7524CPM"
   },
@@ -11146,7 +11146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.H.SAVE ARTS,C.J.BHANUSHALI COM.S.B.A DANDEKAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU11520CGM"
   },
@@ -11156,7 +11156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.ANNES HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU11607CFE"
   },
@@ -11166,7 +11166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER MARY SRIPRASTHA ENG HIGH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU11633CFE"
   },
@@ -11176,7 +11176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA PRASARAK SANSTHAS JR COLLEGE OF ARTS, COM AND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU6509CNE"
   },
@@ -11186,7 +11186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PODDAR BRIO INTERNATIONAL SCHOOL AND JUNIOR COLLEGE BADLAPUR EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU6610CFE"
   },
@@ -11196,7 +11196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHIVAI VIDYALAY ENGLISH MEDIUM SCHOOL AND JUNIOR COLLEGE,THANE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU6661CFE"
   },
@@ -11206,7 +11206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MUMBAI JUNIOR COLLEGE OF ARTS, COM. & SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU6839CNE"
   },
@@ -11216,7 +11216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. XAVIER HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU7093CNE"
   },
@@ -11226,7 +11226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRATHAM COLLEGE OF COM. & SCI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU7248CFE"
   },
@@ -11236,7 +11236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ORCHID GLOBAL SCHOOL OF ACADEMIC'S AND SPORTS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU7340CFE"
   },
@@ -11246,7 +11246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GNYANODAYA ENGLISH HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU11608CFE"
   },
@@ -11256,7 +11256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.M.SADHUBELLA GIRLS JR.COLLEGE,UNR-1",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU6627CGE"
   },
@@ -11266,7 +11266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE ENGLISH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU6673CFE"
   },
@@ -11276,7 +11276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MILLAT JUNIOR COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU7112CFE"
   },
@@ -11286,7 +11286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "FAIZ ENGLISH SCHOOL DAMAT",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU7336CFE"
   },
@@ -11296,7 +11296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HAJI LIYAKAT ENGLISH HIGHSCHOOL NERAL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU7348CFE"
   },
@@ -11306,7 +11306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PROGRESSIVE EDUCATION SOCIETY'S JR COLLEGE OF COMMERCE AND SCIENCE , KHOPOLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU7366CFE"
   },
@@ -11316,7 +11316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LOKNETE RAMSHETH THAKUR ENGLISH MEDIUM SCHOOL AND JR COLLEGE , KAMOTHE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU7469CFE"
   },
@@ -11326,7 +11326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.K.PATIL JR COLLEGE CIDCO COLONY T.PACHNAND MARATHI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU7471CFM"
   },
@@ -11336,7 +11336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Anant Janardan Mhatre madhyamik vidyalay and kanishtha mahavidyalay Narpad",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU11435CFM"
   },
@@ -11346,7 +11346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU11601CNE"
   },
@@ -11356,7 +11356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.PETER'S JUNIOR COLLEGE OF SCI & COMM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU11611CFE"
   },
@@ -11366,7 +11366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYAN GANGA SECONDARY ENGLISH SCHOOL & JUNIOR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU12010CFE"
   },
@@ -11376,7 +11376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IMPERIAL JUNIOR COLLEGE, GHOTSAI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU12568CFE"
   },
@@ -11386,7 +11386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW MODERN ENGLISH HIGH SCHOOL AND KAMLADEVI JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU6282CNE"
   },
@@ -11396,7 +11396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRIRANG VIDYALAYA ENG MED. & JR COLLEGE OF SCIENCE &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU6516CFE"
   },
@@ -11406,7 +11406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADARSH VIDYAMANDIR MARATHI SEC.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU6587CGE"
   },
@@ -11416,7 +11416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G. S. P. MANDAL'S MARATHI VIDYALAYA & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU6901CGE"
   },
@@ -11426,7 +11426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Allen Manav Vikas Jr College of Science and Commerce",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU6952CFE"
   },
@@ -11436,7 +11436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL GIRLS HIGH SCHOOL &JR COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU7043CGE"
   },
@@ -11446,7 +11446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ESPLANADE JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU7285CFE"
   },
@@ -11456,7 +11456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BALVIKAS VIDYAMANDIR VADHAV (SEC)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU7499CFM"
   },
@@ -11466,7 +11466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHAVEER VID. SEC. HINDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU6208CFE"
   },
@@ -11476,7 +11476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TILAKNAGAR VIDYAMANDIR ( SEC )",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU6308CGE"
   },
@@ -11486,7 +11486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.F.NAIK VIDYALYA SEC & HSEC MARATHI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU6404CNE"
   },
@@ -11496,7 +11496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.S.P. MANDAL'S DR. S.V. SAMANT JR. COLLEGE, TURBHE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU6430CFE"
   },
@@ -11506,7 +11506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.S HIGH SCHOOL, SEC. ENG, NERUL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU6440CFE"
   },
@@ -11516,7 +11516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUNANAK ENG. SEC. S.ULH.4",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU6631CFE"
   },
@@ -11526,7 +11526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SUN GRACE JUNIOR COLLEGE OF COMMERCE MANKHURD (W) MUMBAI-43",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU6867CNE"
   },
@@ -11536,7 +11536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "YUVA JUNIOR COLLEGE OF COMMERCE AND SCIENCE, TILAK",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU6883CFE"
   },
@@ -11546,7 +11546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUNANAK ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU6904CFE"
   },
@@ -11556,7 +11556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AWAMI JR COLLEGE OF ARTS & COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU7062CFE"
   },
@@ -11566,7 +11566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. R. JR COLLEGE OF COM. & SCI.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU7286CNE"
   },
@@ -11576,7 +11576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. Adv.Nanda Deshmukh English Medium Junior College, Alibag.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU7330CFE"
   },
@@ -11586,7 +11586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAHUL INTERNATIONAL JR.COLLEGE OF COMMERCE AND SCIENCE BOISAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU11499CFE"
   },
@@ -11596,7 +11596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOUNT MARY ENG HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU11585CNE"
   },
@@ -11606,7 +11606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND VIDYAMANDIR AND JR COLLEGE WADA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU11677CGM"
   },
@@ -11616,7 +11616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANIRUDDHA HIGH SCHOOL AND JUNIOR COLLEGE, BENDSHIL, BADLAPUR EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU11746CFE"
   },
@@ -11626,7 +11626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "YASH JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU6297CNE"
   },
@@ -11636,7 +11636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRIMATI SAVITRI DEVI BASAPPA HEBBALLI VIDYALAY & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU6301CNE"
   },
@@ -11646,7 +11646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.V.NERUKAR SEC.SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU6310CFE"
   },
@@ -11656,7 +11656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT ASHARPHIDEVI HINDI HIGH SCHOOL AND SCI, COM, JR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU6671CGE"
   },
@@ -11666,7 +11666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADHARSH VIDYALAYA & JR. COLLEGE, BHANDUP (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU7005CFE"
   },
@@ -11676,7 +11676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DYANSADHANA EDU. SOC.'S MADHYAMIK VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU7192CFE"
   },
@@ -11686,7 +11686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. GEN. ARUNKUMAR HIGH SCH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU7332CPM"
   },
@@ -11696,7 +11696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VASANT DESHMUKH MEMO. SCH & JR COLLEGE OF SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU7361CFE"
   },
@@ -11706,7 +11706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARASWATI VIDYALAYA VASIND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU6505CNM"
   },
@@ -11716,7 +11716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ASADULLAH KHAN ENGLISH HIGH SCHOOL AND JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU6548CFE"
   },
@@ -11726,7 +11726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAJARAM SETH VIDYALAYA, BHANDUP (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU7003CFE"
   },
@@ -11736,7 +11736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU7018CFE"
   },
@@ -11746,7 +11746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AIRPORT HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU7069CGE"
   },
@@ -11756,7 +11756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PNP EDU SOC JR CLG VESHVI GONDHALPADA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU7329CPM"
   },
@@ -11766,7 +11766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DON BOSCO HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU11558CFE"
   },
@@ -11776,7 +11776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.B.HARRIS JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU11638CFE"
   },
@@ -11786,7 +11786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "REENA MEHTA HIGH SCH & COLLEGE BHA WEST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.0,
     "choiceCode": "MU6317CFE"
   },
@@ -11796,7 +11796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ARIHANT SCHOOL AND JUNIOR COLLEGE OF COMMERCE AND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.0,
     "choiceCode": "MU6336CFE"
   },
@@ -11806,7 +11806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PREMIER JR.COLLEGE OF COM & ARTS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.0,
     "choiceCode": "MU6769CFE"
   },
@@ -11816,7 +11816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KUMARI KASTURI VIDYALAYA & JR. COLLEGE, BHANDUP (W).",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.0,
     "choiceCode": "MU6988CFE"
   },
@@ -11826,7 +11826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A I J HIGHSCHOOL GONDGHAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.0,
     "choiceCode": "MU7399CPU"
   },
@@ -11836,7 +11836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE ELITE PUBLIC SECONDARY SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.0,
     "choiceCode": "MU7473CFE"
   },
@@ -11846,7 +11846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S SECONDARY MARATHI HIGH SCHOOL KALAMBOLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.0,
     "choiceCode": "MU7474CNM"
   },
@@ -11856,7 +11856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J.M.T. HIGHSCHOOL VANGAON",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.0,
     "choiceCode": "MU11425CPE"
   },
@@ -11866,7 +11866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.K.S. HIGHSCHOOL MANICKPUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.0,
     "choiceCode": "MU11605CFE"
   },
@@ -11876,7 +11876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JIJAMATA CONVENT SCH SEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU6397CFE"
   },
@@ -11886,7 +11886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRITI ACADEMY SEC ENG SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU6611CNE"
   },
@@ -11896,7 +11896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G. E. I. C. L. BOYS AND GIRLS HIGH SCOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU6699CGE"
   },
@@ -11906,7 +11906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HUME HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU6776CGE"
   },
@@ -11916,7 +11916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H.K. GIDWANI HIGH SCHOOL & JR. COLLEGE. MULUND (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU7006CGE"
   },
@@ -11926,7 +11926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KALA VIDYAMANDIR JR COLLEGE, ANDHERI EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU7071CGE"
   },
@@ -11936,7 +11936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAYDEEP JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU11589CFE"
   },
@@ -11946,7 +11946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "EXPERTS INTERNATIONAL HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU11590CFE"
   },
@@ -11956,7 +11956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DIVINE ENGLISH SCHOOL JR COLLEG , KALHER",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU6138CFE"
   },
@@ -11966,7 +11966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J D JR. COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU6309CFE"
   },
@@ -11976,7 +11976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K S MEHTA COLLEGE SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU6316CFE"
   },
@@ -11986,7 +11986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SADHU VASWANI INTERNATIONAL SCHOOL & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU6435CFE"
   },
@@ -11996,7 +11996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SETH P.P.NEW ERA SEC.S. ULH.3",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU6636CGE"
   },
@@ -12006,7 +12006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.C.H. SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU6735CGE"
   },
@@ -12016,7 +12016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYADHIRAJA HIGH SCHOOL & JR. COLLEGE, KANJURMARG (E)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU6971CFE"
   },
@@ -12026,7 +12026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BANDRA URDU HIGH SCHOOL & JR COLLEGE OF SCI, COMM &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU7053CGE"
   },
@@ -12036,7 +12036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NALANDA JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU7279CFE"
   },
@@ -12046,7 +12046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S P MARATHE VIDYALAYA AND JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU11483CFE"
   },
@@ -12056,7 +12056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PATIL BALMANDIR (MAR SEC), MOHANE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU6255CNE"
   },
@@ -12066,7 +12066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAA BHARTI V MANDIR SEC SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU6332CFE"
   },
@@ -12076,7 +12076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA BHAWAN HIGH SCHOOL & JR. COLLEGE, NERUL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU6454CFE"
   },
@@ -12086,7 +12086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA PRASARAK SEC & HIGHER SEC JR COLLEGE, BELAPUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU6463CGM"
   },
@@ -12096,7 +12096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HASHA RAMA PATIL MAR. SEC.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU6556CPM"
   },
@@ -12106,7 +12106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABHYUDAYA EDUCATION SOCIETY'S HIGH SCHOOL (MARATHI) & JUNIOR COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU6792CGE"
   },
@@ -12116,7 +12116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PARAG ENGLISH SCHOOL & JR. COLLEGE, BHANDUP (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU7001CFE"
   },
@@ -12126,7 +12126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHILDREN WELFARE CENTRE HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU7096CFE"
   },
@@ -12136,7 +12136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU7233CNE"
   },
@@ -12146,7 +12146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D.R.VYAS JUNIOR COLLEGE OF ARTS COMMERCE AND SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU7256CFE"
   },
@@ -12156,7 +12156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR BABASAHEB AMBEDKAR COLLEGE MAHAD",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU7376CGM"
   },
@@ -12166,7 +12166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KA BHA PA VIDYALAYA PIRKON",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU7542CNM"
   },
@@ -12176,7 +12176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE HALARI VISA OSWAL VIDYALAYA & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU6194CFE"
   },
@@ -12186,7 +12186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE KESHAV RAMBHAU KOTKAR SECODNARY &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU6234CNE"
   },
@@ -12196,7 +12196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHASKAR HINDI SEC.SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU6256CFE"
   },
@@ -12206,7 +12206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AISHA ENGLISH HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU6851CFE"
   },
@@ -12216,7 +12216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ORIENTAL JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU7101CNE"
   },
@@ -12226,7 +12226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMZANALI ENGLISH HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU7194CFE"
   },
@@ -12236,7 +12236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARATI ACADAMY ENGLISH JUNIOR COLLEGE,VEVAJI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU11528CFE"
   },
@@ -12246,7 +12246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "EBENZER ENGLISH SCHOOL AND JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU11587CFE"
   },
@@ -12256,7 +12256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIKRAMGAD HIGHSCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU11661CPM"
   },
@@ -12266,7 +12266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.S.JUNIOR COLLEGE OF GIRLS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6550CFE"
   },
@@ -12276,7 +12276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ERA ACADEMY HIGH SCHOOL AND JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6571CFE"
   },
@@ -12286,7 +12286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BAL VIDYA MANDIR MAR.SEC.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6675CNE"
   },
@@ -12296,7 +12296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADARSH HINDI HIGH SCHOOL & JR. COLLEGE OF ARTS & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6820CPE"
   },
@@ -12306,7 +12306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHESHWARY VIDYALAYA AND JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6896CFE"
   },
@@ -12316,7 +12316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KANYA VIDYAMANDIR JUNIOR COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU7055CGE"
   },
@@ -12326,7 +12326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THAKUR VIDYA MANDIR HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU7232CFE"
   },
@@ -12336,7 +12336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL MHASALA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU7400CGM"
   },
@@ -12346,7 +12346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANJAY GANDHIR SMRAK VIDYALAY PALE BU KOLIWADI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU7414CPM"
   },
@@ -12356,7 +12356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GLOBAL INTERNATIONAL SCHOOL AND JR COLLEGE OF ART'S",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU7440CFE"
   },
@@ -12366,7 +12366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.D. SECONDARY SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU11436CNE"
   },
@@ -12376,7 +12376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SEVA ASHRAM VIDYA. MURABE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU11485CGM"
   },
@@ -12386,7 +12386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TARAPUR V.&J.COLLEGE MIDC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU11492CFE"
   },
@@ -12396,7 +12396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GNYANDEEP MULTIPURPOSE SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU11624CFE"
   },
@@ -12406,7 +12406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVJEEVAN VIDYAMANDIR HIGH SCHOOL & JUNIOR COLLEGE, NALLSOPARA EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU11764CFE"
   },
@@ -12416,7 +12416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MO.NAZIR URDU JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU6168CFU"
   },
@@ -12426,7 +12426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GLOBAL INTERNATIONAL HIGH SCHOOL & JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU6187CFE"
   },
@@ -12436,7 +12436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.K.HINDI SEC.SCH. BETURKARPAD",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU6260CPH"
   },
@@ -12446,7 +12446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GLOBAL COLLEGE OF ARTS AND COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU6304CFE"
   },
@@ -12456,7 +12456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.THIRANI MAR. HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU6668CNE"
   },
@@ -12466,7 +12466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.B.&SC JR COLLEGE OF ARTS,COMMERCE AND SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU6686CFE"
   },
@@ -12476,7 +12476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LILAVATI LALJI DAYAL HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU6736CNE"
   },
@@ -12486,7 +12486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. MARY'S HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU7042CGE"
   },
@@ -12496,7 +12496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SUSHMA PATIL SECONDARY MARATHI HIGHSCHOOL KAMOTHE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU7464CFE"
   },
@@ -12506,7 +12506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M B MORE FOUNDATION ARTS COMMERCE & SCIENCE JR.COLLEGE DHATAV",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU7512CFM"
   },
@@ -12516,7 +12516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AARAV MUCHHALA COLLEGE OF ARTS ,COMMERCE AND SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU12433CFE"
   },
@@ -12526,7 +12526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE SCHOLAR ENG.HIGH SCHOOL & JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6183CFE"
   },
@@ -12536,7 +12536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE KESHAV RAMBHAU KOTKAR SECODNARY &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6234CGE"
   },
@@ -12546,7 +12546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOHINDARSINGH KABAL SINGH HIGH SCHOOL & JUNIOR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6261CFE"
   },
@@ -12556,7 +12556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BLOSSOMMS HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6329CFE"
   },
@@ -12566,7 +12566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TILAK JUNIOR COLLEGE OF SCIENCE & COMMERCE, VASHI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6420CFE"
   },
@@ -12576,7 +12576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BAVIKA VIDYA. MARATHI SEC.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6511CFE"
   },
@@ -12586,7 +12586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRIKRISHNA KHAMKAR VIDYALAYA & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6578CNE"
   },
@@ -12596,7 +12596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARAT EDUCATION SOCIETY'S SANT GADGE MAHARAJ",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6749CGE"
   },
@@ -12606,7 +12606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BTM'S BRIGHT HIGH SCHOOL & JR. COLLEGE, BHANDUP (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6993CNE"
   },
@@ -12616,7 +12616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BANDRA URDU HIGH SCHOOL & JR COLLEGE OF SCI, COMM & VOCATIONAL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU7053CFE"
   },
@@ -12626,7 +12626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KHAR EDUCATION SOC JR COLLEGE OF COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU7063CFE"
   },
@@ -12636,7 +12636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J.V.S.S. SHRI S.T. KADAM VIDYALAY & JR. COLLEGE, PALGHAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU11487CNE"
   },
@@ -12646,7 +12646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "V.K.LAKHANI HIGH SCHOOL , BORIGAON",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU11532CNE"
   },
@@ -12656,7 +12656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADARSH JUNIOR COLLEGE OF ARTS AND COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU11631CFE"
   },
@@ -12666,7 +12666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DIVINE PROVIDENCE JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU11643CNE"
   },
@@ -12676,7 +12676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ART COMM & SCI JUNIOR COLLEGE GOVELI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU6196CFE"
   },
@@ -12686,7 +12686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J. H. Poddar High School & Jr. College",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU6320CFE"
   },
@@ -12696,7 +12696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RADHIKABAI MEGHE SEC. VIDYALAYA(MAR.) & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU6388CGE"
   },
@@ -12706,7 +12706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "(S.E.S.) S.D.OCHANI HIGH SCHOOL & JR.COLLEGE UNR-1",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU6613CGE"
   },
@@ -12716,7 +12716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Anand Vishwa Gurukul and Jr. college",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU6679CFE"
   },
@@ -12726,7 +12726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B. D. SHUKLA ENGLISH HIGH SCHOOL & Jr. College",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU6879CFE"
   },
@@ -12736,7 +12736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU6908CNE"
   },
@@ -12746,7 +12746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF COMMERCE, SURYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU6960CNE"
   },
@@ -12756,7 +12756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MULJEEBHAI MADHWANI MEMO.GIRLS SCL & MA MANEKBAI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU7091CGE"
   },
@@ -12766,7 +12766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANIBEN NANAVATI WOMEN'S COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU7132CFE"
   },
@@ -12776,7 +12776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S SECONDARY MARATHI HIGH SCHOOL KALAMBOLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU7474CFE"
   },
@@ -12786,7 +12786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S SECONDARY MARATHI HIGH SCHOOL KALAMBOLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU7474CGM"
   },
@@ -12796,7 +12796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N.E.S.URDU HIGH SCHOOL & JR COLLEGE NAGOTHANE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU7514CGU"
   },
@@ -12806,7 +12806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. P. WAGH HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU11596CFE"
   },
@@ -12816,7 +12816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE MAHADEV BABURAO CHAUGHULE JR COLLEGE RAHANAL, BHIWANDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU6152CFE"
   },
@@ -12826,7 +12826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MALUMA ENGLISH JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU6167CFE"
   },
@@ -12836,7 +12836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABHINAV VID.SEC SCH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU6216CFE"
   },
@@ -12846,7 +12846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G R PATIL ENG MED SEC SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU6230CFE"
   },
@@ -12856,7 +12856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J. H. Poddar High School & Jr. College",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU6320CNE"
   },
@@ -12866,7 +12866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PANNA ENGLISH SECONDARY SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU6576CFE"
   },
@@ -12876,7 +12876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHARADASHRAM VIDYAMANDIR SECONDARY SCHOOL AND JR.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU6697CGE"
   },
@@ -12886,7 +12886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B. M. RUIA GIRLS' COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU6751CGE"
   },
@@ -12896,7 +12896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI SANATAN DHARAM HIGHSCHOOL & JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU6818CGE"
   },
@@ -12906,7 +12906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE LITTLE FLOWER HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU7077CFE"
   },
@@ -12916,7 +12916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANIBEN NANAVATI WOMEN'S COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU7132CGE"
   },
@@ -12926,7 +12926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. T.R. NARAVANE VIDYALAYA & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU7257CNE"
   },
@@ -12936,7 +12936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMCHANDRA MHATRE VIDYALAYA & JR COLLEGE OF ART'S ,",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU7533CFE"
   },
@@ -12946,7 +12946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER VELANKANI JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU11645CFE"
   },
@@ -12956,7 +12956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHARADA VIDYALAY AND JR COLLEGE TOKAVADE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6377CPM"
   },
@@ -12966,7 +12966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "WESTERN COLLEGE OF COMMERCE AND BUSINESS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6433CFE"
   },
@@ -12976,7 +12976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ART,SCIENCE,COMMER JR.COLL.,KHARDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6479CFE"
   },
@@ -12986,7 +12986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADARSH VIDYAMANDIR MARATHI SEC.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6587CNE"
   },
@@ -12996,7 +12996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ALL SAINT'S INTERNATIONAL JR.COLL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6676CFE"
   },
@@ -13006,7 +13006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KANNADA BHAVAN EDUCATION SOCIETY'S HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6714CGE"
   },
@@ -13016,7 +13016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SOCIAL SERVICE LEAGUE HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6785CGE"
   },
@@ -13026,7 +13026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IDEAL HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6847CNE"
   },
@@ -13036,7 +13036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL HIGH SCHOOL & JR. COLLEGE, BHANDUP (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6989CFE"
   },
@@ -13046,7 +13046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.H.M.W. JR COLLEGE OF SCI & COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU7128CNE"
   },
@@ -13056,7 +13056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ART'S COMMERCE AND KAI.SOU. S R DATAR SCIENCE JR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU7323CGM"
   },
@@ -13066,7 +13066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHAKARRAO CHVAN VID KAMOTHEM SEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU7463CFE"
   },
@@ -13076,7 +13076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHANGU KANA THAKUR SECONDARY & HIGHER SECONDARY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU7486CPE"
   },
@@ -13086,7 +13086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Pdamshri anutai wagh Secondary School v Higher Secondary",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU11440CFM"
   },
@@ -13096,7 +13096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NIYAZ NATIONAL SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU6161CFE"
   },
@@ -13106,7 +13106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHIRVANE VIDYALAYA & JR. COLLEGE, NERUL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU6441CFE"
   },
@@ -13116,7 +13116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU6616CNE"
   },
@@ -13126,7 +13126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BRAHMAN SHIKSHA MANDAL'S JR COLL. SC&COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU6695CNE"
   },
@@ -13136,7 +13136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHIVAM VIDYAMANDIR, MANKURD",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU6859CGE"
   },
@@ -13146,7 +13146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VASUDEV VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU7075CFE"
   },
@@ -13156,7 +13156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.L.R.T. GALA PIONEER ENGLISH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU7231CFE"
   },
@@ -13166,7 +13166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARDAR VALLABBHAI PATEL HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU7243CFE"
   },
@@ -13176,7 +13176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYANJYOT JUNIOR COLLEGE OF ARTS, COM SCIENCE KHARGHAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU7433CFE"
   },
@@ -13186,7 +13186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GITA D TATKARE MADHY VIDY WARASGAON",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU7510CPM"
   },
@@ -13196,7 +13196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAI. NATHU OZARE ARTS,COMMARCE & SCIENCE JUNIOR COLLEGE ,VADWALI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU11525CFM"
   },
@@ -13206,7 +13206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA VARDHI JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU11625CFE"
   },
@@ -13216,7 +13216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PANDIT RAMSURESH DUBEY COLLEGE ARTS,COMM,SCI.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6254CFE"
   },
@@ -13226,7 +13226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LOURDES HIGHSCHOOL AND JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6270CNE"
   },
@@ -13236,7 +13236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY FAITH JUNIOR COLLEGE OF ARTS SCIENCE AND COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6288CFE"
   },
@@ -13246,7 +13246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.H.JONDHALE VIDYAMANDIR ( MAR SEC. )",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6299CGE"
   },
@@ -13256,7 +13256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.R.MADHAVI ENG.SEC. SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6307CFE"
   },
@@ -13266,7 +13266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAZIDUN JUNIOR COLLEGE, SEC-8A, AIROLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6409CFE"
   },
@@ -13276,7 +13276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. XAVIER'S HIGH SCHOOL & JR. COLLEGE, NERUL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6445CFE"
   },
@@ -13286,7 +13286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHANTIGRAM SEC. S. ULH. 3",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6624CGE"
   },
@@ -13296,7 +13296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHARASHTRA HIGH SCHOOL NO.2",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6700CGE"
   },
@@ -13306,7 +13306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHAUSAHEB HIRAY VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6740CGE"
   },
@@ -13316,7 +13316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AFAC ENGLISH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6871CFE"
   },
@@ -13326,7 +13326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA PRABODHINI ENGLISH SCHOOL & JR. COLLEGE, MULUND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU7016CFE"
   },
@@ -13336,7 +13336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAROL EDUCATION ACADEMY HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU7073CFE"
   },
@@ -13346,7 +13346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAMLADEVI JAIN HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU7118CFE"
   },
@@ -13356,7 +13356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE. MANGUBHAI DATTANI VIDYALAYA & YOJANA JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU7236CGE"
   },
@@ -13366,7 +13366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. Smt. J.R.H. Kanyashala and Junior College, Alibag",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU7331CPM"
   },
@@ -13376,7 +13376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. GEN. ARUNKUMAR HIGH SCH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU7332CGM"
   },
@@ -13386,7 +13386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAMRATA ACHARYA JUNIOR COLLEGE SHELU",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU7345CFE"
   },
@@ -13396,7 +13396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAJABHAU MONE HIGHER SECONDARY SCHOOL , GOREGAON",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU7388CPM"
   },
@@ -13406,7 +13406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Shree G. M. Vedak vidyamandir and Arts Comm. And Sci. Jr.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU7532CGM"
   },
@@ -13416,7 +13416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ROTARY ENGLISH MEDIUM HIGH SCHOOL URAN",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU7547CFE"
   },
@@ -13426,7 +13426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAYAM SIDDHI MITRA SANGH JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6192CFE"
   },
@@ -13436,7 +13436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NUTAN DYANMANDIR AND JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6287CNE"
   },
@@ -13446,7 +13446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.E.I.S.S.V.JOSHI HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6302CNE"
   },
@@ -13456,7 +13456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D.N.C MULTIPURPOSE SECONARY SCHOOL DATTANAGAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6311CGE"
   },
@@ -13466,7 +13466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TILAK JUNIOR COLLEGE OF SCIENCE & COMMERCE, GHANSOLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6402CFE"
   },
@@ -13476,7 +13476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW KALWA HIGH SCHOOL & JR COLLEGE KALWA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6523CNE"
   },
@@ -13486,7 +13486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST MARY'S CONVENT HIGH SCHOOL & jr.college",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6538CFE"
   },
@@ -13496,7 +13496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAINT JOHN BOSCO SECONDARY SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6573CNE"
   },
@@ -13506,7 +13506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MATUNGA LIONS PIONEER ENGLISH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6812CFE"
   },
@@ -13516,7 +13516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "C. E. S MARCELINE JUNIOR COLLEGE, KURLA (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6933CNE"
   },
@@ -13526,7 +13526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU7018CPE"
   },
@@ -13536,7 +13536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU7090CFE"
   },
@@ -13546,7 +13546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PAL RAJENDRA ENGLISH HIGH SCHOOL&JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU7235CNE"
   },
@@ -13556,7 +13556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ESPLANADE JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU7285CNE"
   },
@@ -13566,7 +13566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHATRAPATI SHIVAJI VIDYALAYA VAVANJE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU7415CFE"
   },
@@ -13576,7 +13576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.B.VADER SCHOOL . PALI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU7523CNM"
   },
@@ -13586,7 +13586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "USAMA M RAIS URDU HIGH MANOR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU11482CNE"
   },
@@ -13596,7 +13596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHANTI RATAN VIDYA MANDIR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU11502CNE"
   },
@@ -13606,7 +13606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PANCHAM JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU11628CFE"
   },
@@ -13616,7 +13616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N.E.S.HIGH.SCHOOL,BRAHMAN AALI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6173CFE"
   },
@@ -13626,7 +13626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "OUR LADY OF NAZARETH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6321CFE"
   },
@@ -13636,7 +13636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LOKMANYA SECONDARY AND HIGHER SECONDARY SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6331CGE"
   },
@@ -13646,7 +13646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HINDMATA JR. COLLEGE, DIGHA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6381CNE"
   },
@@ -13656,7 +13656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ICLES'S MOTILAL JHUNJHUNWALA COLLEGE, VASHI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6423CNE"
   },
@@ -13666,7 +13666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ENG HIGHSCHOOL MAJIWADA MAR / HIND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6508CGE"
   },
@@ -13676,7 +13676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DIVA HIGH MARATHI SEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6560CNE"
   },
@@ -13686,7 +13686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW GIRL'S HIGHSCHOOL MAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6685CGE"
   },
@@ -13696,7 +13696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWA. VEER SAWARKAR JUNIOR COLLEGE SHIVAJI NAGAR GOVANDI MUMBAI-43",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6862CFE"
   },
@@ -13706,7 +13706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHEMBUR ENGLISH HIGH SCHOOL AND JR COLLEGE, CHEMBUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6874CFE"
   },
@@ -13716,7 +13716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KARTHIKA HIGH SCHOOL & JR. COLLEGE, KURLA (W).",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6932CFE"
   },
@@ -13726,7 +13726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAVITRIBAI PHULE GIRL'S HIGH SCHOOL, SAKINAKA.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6941CGE"
   },
@@ -13736,7 +13736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABDUL MAJEED KHATIB JUNIOR COLLEGE ARTS AND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU7120CFE"
   },
@@ -13746,7 +13746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHARASHTRA JR. COLLEGE, UNNAT NAGAR, GOREGAON (W),",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU7137CFE"
   },
@@ -13756,7 +13756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVJIVAN VIDYALAYA HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU7187CFE"
   },
@@ -13766,7 +13766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ACHARYA NARENDRADEV VIDYALAYA AND JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU7267CFE"
   },
@@ -13776,7 +13776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M S P M'S JUNIOR COLLEGE OF ARTS & COM. KHARGHAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU7436CFE"
   },
@@ -13786,7 +13786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SECONDARY VIDYALAY CHAVANE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU7459CFM"
   },
@@ -13796,7 +13796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "T.H. WAJEKAR HIGH SCH. FUNDE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU7538CGM"
   },
@@ -13806,7 +13806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL ENGLISH HIGH SCHOOL & JR. COLLEGE.BORDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU11432CFE"
   },
@@ -13816,7 +13816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RECKON PUBLIC ACADEMY & JR CO.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU11571CFE"
   },
@@ -13826,7 +13826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SISTER NIVEDITA ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU11884CFE"
   },
@@ -13836,7 +13836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. H. A. RAIS HIGH SCHOOL AND JUNIOR COLLEGE, BHIWANDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU6177CPU"
   },
@@ -13846,7 +13846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GUARDIAN HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU6231CFE"
   },
@@ -13856,7 +13856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAVINDRA VIDYALAY (ENG SEC)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU6250CFE"
   },
@@ -13866,7 +13866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PEOPLES EDU SOC HIGH SEC MAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU6458CGE"
   },
@@ -13876,7 +13876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ENG HIGHSCHOOL MAJIWADA MAR / HIND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU6508CNE"
   },
@@ -13886,7 +13886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BABAJI SAKHARAM MAR. SEC.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU6531CNE"
   },
@@ -13896,7 +13896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AADARSHA VIDYA. MAR.HIGHSCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU6641CNE"
   },
@@ -13906,7 +13906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYANPEETH JUNIOR COLLEGE ART, COMMARCE & SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU6659CFE"
   },
@@ -13916,7 +13916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SNEHALATA RANE HIGH SCHOOL AND JR. COLLEGE, DADAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU6707CGE"
   },
@@ -13926,7 +13926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.M.BHATT HIGH SCHOOL AND JUNIOR COLLEGE PAREL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU6784CGE"
   },
@@ -13936,7 +13936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ENFANT INDIA ENGLISH HIGH SCHOOL & BURLINGTON JR.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU6857CFE"
   },
@@ -13946,7 +13946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PUBLIC JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU7046CGE"
   },
@@ -13956,7 +13956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JITEN MODY JUNIOR COLLEGE OF ARTS, COMMERCE AND SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU7293CFE"
   },
@@ -13966,7 +13966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AFAC ENGLISH SCHOOL AND JUNIOR COLLEGE CHEMBUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU7312CFE"
   },
@@ -13976,7 +13976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA GANDHI VIDYALAYA HASHI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU7325CGM"
   },
@@ -13986,7 +13986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Shri Chhatrapati vidyalaya and junior College Vavoshi Tal khalapur dist Raigad",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU7355CGM"
   },
@@ -13996,7 +13996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "URAN EDUCATION SOCT. & JR. COLLEGE URAN",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU7543CNE"
   },
@@ -14006,7 +14006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL HIGHSCH ENG SECONDARY SCHOOL BOISAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU11494CNE"
   },
@@ -14016,7 +14016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAU. SHANTABAI N. LAHOTI VIDYALAYA, ANGAON",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6127CFE"
   },
@@ -14026,7 +14026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.D.TAVRE VIDYALAYA, KALHER",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6136CPM"
   },
@@ -14036,7 +14036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE MAHADEV BABURAO CHAUGHULE JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6152CNE"
   },
@@ -14046,7 +14046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J . K . PATIL ENGLISH MEDIUM SCHOOL AND JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6232CFE"
   },
@@ -14056,7 +14056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.V.M.PUBLIC SCHOOL AND N.J.BELWALE JR.COLLEGE OF ARTS,COMMERCE AND SCIENCE ASANGAON",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6494CFE"
   },
@@ -14066,7 +14066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH JR COLLEGE ULH.5",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6619CNE"
   },
@@ -14076,7 +14076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.N.D.T.COLLEGE OF ARTS & SCB COLLEGE OF COMM. & SCI.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6721CGE"
   },
@@ -14086,7 +14086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. M. S. DR. SHIRODKAR HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6783CGE"
   },
@@ -14096,7 +14096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAJARSHI SHAHU JUNIOR COLLEGE OF ARTS, COMMERCE &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6829CFE"
   },
@@ -14106,7 +14106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LITTLE FLOWER ENGLISH HIGH SCHOOL & JR COLLEGE,",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6905CFE"
   },
@@ -14116,7 +14116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJALI ENGLISH SCHOOL & JUNIOR COLLEGE CHANDIVALI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6953CFE"
   },
@@ -14126,7 +14126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DON BOSCO HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6966CFE"
   },
@@ -14136,7 +14136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.D. SECONDARY SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU11436CGE"
   },
@@ -14146,7 +14146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LORD CHILD HIGH SCHOOL & JUNIOR COLLEGE VIRAR WEST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU11591CFE"
   },
@@ -14156,7 +14156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GNYANDEEP MULTIPURPOSE HIGHSCHOOL AND JUNIOR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU12473CFE"
   },
@@ -14166,7 +14166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHAUDHARI MADHUKAR(C.M.) JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6171CFE"
   },
@@ -14176,7 +14176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.K.S.ART,COMM & SCI JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6206CFE"
   },
@@ -14186,7 +14186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER INDIA MISSION JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6411CFE"
   },
@@ -14196,7 +14196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHAHA C. HIGHSCHOOL KINHAVALI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6482CNM"
   },
@@ -14206,7 +14206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT TRUPTI G. NEMADE JR COLLEGE OF ARTS COMMERCE AND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6529CFE"
   },
@@ -14216,7 +14216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "(SES) M.I.A.M. GIRLS HIGH SCHOOL JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6640CGE"
   },
@@ -14226,7 +14226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYAN GANGA EDUCATION TRUST'S JR COLLEGE OF SCIENCE & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6648CFE"
   },
@@ -14236,7 +14236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. XAVIERS ENG. SEC. SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6655CFE"
   },
@@ -14246,7 +14246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. K. RAI JR. COLLEGE CHMEMBUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6881CFE"
   },
@@ -14256,7 +14256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHIVAJI JR COLLEGE OF COMMERCE, KAJUPADA, KURLA (W).",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6936CNE"
   },
@@ -14266,7 +14266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU7041CFE"
   },
@@ -14276,7 +14276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ARVIND GANDBHIR HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU7079CFE"
   },
@@ -14286,7 +14286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DIVINE PROVIDENT HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU7188CFE"
   },
@@ -14296,7 +14296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER TERESA HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU7189CFE"
   },
@@ -14306,7 +14306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BIMANAGAR EDUCATION SOC'S MADHYAMIK VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU7271CNE"
   },
@@ -14316,7 +14316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ESPLANADE JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU7285CGE"
   },
@@ -14326,7 +14326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ART'S COMMERCE AND KAI.SOU. S R DATAR SCIENCE JR COLLEGE , CHONDHI KIHIM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU7323CPM"
   },
@@ -14336,7 +14336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABHINAV JNYAN MANDIR PRASHALA AND Jr. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU7349CGM"
   },
@@ -14346,7 +14346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.L. PONDA SEC. SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU11442CNE"
   },
@@ -14356,7 +14356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIGNAN PRIMARY ENGLISH VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU11497CFE"
   },
@@ -14366,7 +14366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIVA JUNIOR COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU11640CFE"
   },
@@ -14376,7 +14376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT YAMUNA PASI VIDYALYA & JUNIOR COLLEGE, SAMATA NAGAR, SATIWALI, VASAI EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU11761CFE"
   },
@@ -14386,7 +14386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Rajarshri Shahu Maharaj Vidyalaya and Junior College Wagale",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU12145CFE"
   },
@@ -14396,7 +14396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MATOSHREE VELABAI DEVJI HARIYA JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6258CFE"
   },
@@ -14406,7 +14406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "YASHWANTRAO CHAVAN JR. COLLEGE OF ARTS, SCIENCE &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6407CNE"
   },
@@ -14416,7 +14416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TERANA VID MAR SEC &HSEC ARTS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6452CNE"
   },
@@ -14426,7 +14426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PADMAVATI-VENKATESH HIGHSCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6512CNE"
   },
@@ -14436,7 +14436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVODAYA ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6677CFE"
   },
@@ -14446,7 +14446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARAT ENGLISH HIGHSCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6693CFE"
   },
@@ -14456,7 +14456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYADEEP VIDYALAYA & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6906CPE"
   },
@@ -14466,7 +14466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAP KHAN HIGH SCHOOL & JR. COLLEGE OF ARTS &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU7070CGE"
   },
@@ -14476,7 +14476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MALINI KISHOR SANGHAVI JR COLLEGE OF COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU7126CNE"
   },
@@ -14486,7 +14486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYANGANGA EDU. TRUST'S HIGH SCHOOL&JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU7234CGE"
   },
@@ -14496,7 +14496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANATA VIDYALAYA Jr. COLLEGE KHOPOLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU7359CGM"
   },
@@ -14506,7 +14506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BAL SANSKAR VIDYA MANDIR KOKARE TARFE NATE ENGLISH MEDIUM SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU7368CFE"
   },
@@ -14516,7 +14516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KANCHAN ENG. HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU11641CFE"
   },
@@ -14526,7 +14526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.J.HIGHSCHOOL WADA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU11676CNE"
   },
@@ -14536,7 +14536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.S.SANG ENG.M.HIGH & j.college",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU6160CFE"
   },
@@ -14546,7 +14546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AMARJYOTI JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU6353CNE"
   },
@@ -14556,7 +14556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER TERESSA HIGH SCH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU6392CFE"
   },
@@ -14566,7 +14566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.B.J. ENG SEC SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU6658CFE"
   },
@@ -14576,7 +14576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GYANODAYA SEC. HINDI SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU6666CNE"
   },
@@ -14586,7 +14586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYADEEP VIDYALAYA & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU6906CNE"
   },
@@ -14596,7 +14596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRERANA HIGH SCHOOL & JR. COLLEGE, SAKINAKA.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU6938CNE"
   },
@@ -14606,7 +14606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NUTAN SARSWATI HINDI HIGH SCHOOL & JR. COLLEGE, MULUND (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU7007CGE"
   },
@@ -14616,7 +14616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAI BHARAT HIGH SCHOOL & JR. COLLEGE, MULUND (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU7009CFE"
   },
@@ -14626,7 +14626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PARAG VIDYALAYA JR. COLLEGE BHANDUP W MUMBAI-78",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU7025CNE"
   },
@@ -14636,7 +14636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BANGUR NAGAR VIDYA BHAWAN & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU7117CFE"
   },
@@ -14646,7 +14646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. K. JR COLLEGE OF SCI. & COM.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU7202CNE"
   },
@@ -14656,7 +14656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA BHUSHAN HIGH SCHOOL & JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU7240CNE"
   },
@@ -14666,7 +14666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANANDIBAI DAMODAR KALE VIDYALAYA & JR. COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU7262CFE"
   },
@@ -14676,7 +14676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANATA VIDYALAYA Jr. COLLEGE KHOPOLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU7359CNE"
   },
@@ -14686,7 +14686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.B.SAWANT VID. SHIRGAON",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU7381CFM"
   },
@@ -14696,7 +14696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BALAK MANDIR SANSTHA KALYAN,GIRGAON MADHYAMIK",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU11524CFM"
   },
@@ -14706,7 +14706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHARDA JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU11568CFE"
   },
@@ -14716,7 +14716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE MAVLI MANDAL HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU11740CFE"
   },
@@ -14726,7 +14726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HUDA ENGLISH HIGH & JU.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU6169CNE"
   },
@@ -14736,7 +14736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETKARI SHIKSHAN SEC & HSEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU6395CNE"
   },
@@ -14746,7 +14746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW BOMBAY CITY JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU6408CFE"
   },
@@ -14756,7 +14756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA PRASARAK SEC & HIGHER SEC JR COLLEGE, BELAPUR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU6463CNM"
   },
@@ -14766,7 +14766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYANESHWAR DNYANMANDIR HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU6518CFE"
   },
@@ -14776,7 +14776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHOEB URDU HIGH SCHOOL and JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU6541CNE"
   },
@@ -14786,7 +14786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARAT ENG. SEC. SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU6544CFE"
   },
@@ -14796,7 +14796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVJEEVAN VIDYAMANDIR & JR. COLLEGE, BHANDUP WEST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU7000CGE"
   },
@@ -14806,7 +14806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PUBLIC ENGLISH JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU7036CNE"
   },
@@ -14816,7 +14816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "APOSTOLIC CARMEL HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU7049CFE"
   },
@@ -14826,7 +14826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NIRMALA MEM. FOUNDATION JR COLLEGE, MALAD EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU7208CFE"
   },
@@ -14836,7 +14836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHOGLE HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU7238CFE"
   },
@@ -14846,7 +14846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRAKASH COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU7280CFE"
   },
@@ -14856,7 +14856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S.Late S.P.Jain Jr.Collge Nagothane Tal :Roha Dist:Raigad",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU7513CGM"
   },
@@ -14866,7 +14866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.B.P. HIGHSCHOOL AND JR. COLLEGE MOKHADA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU11467CGM"
   },
@@ -14876,7 +14876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.H.SAVE ARTS,C.J.BHANUSHALI COM.S.B.A DANDEKAR JR.COLLEGE PALGHAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU11520CNE"
   },
@@ -14886,7 +14886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY CROSS CONVENT HIGH SCHOOL AND JUNIOR COLLEGE, THANE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU11745CFE"
   },
@@ -14896,7 +14896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HORIZON PRIMARY SCHOOL , RAYATE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6199CFE"
   },
@@ -14906,7 +14906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GLOBAL JR COLLEGE OF SCIENCE AND COMMERCE,NILAJE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6223CFE"
   },
@@ -14916,7 +14916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAKET JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6285CNE"
   },
@@ -14926,7 +14926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "St. Mary's Junior College",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6300CNE"
   },
@@ -14936,7 +14936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAINATH HINDI SCH SEC&HSEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6421CPE"
   },
@@ -14946,7 +14946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CITY CONVENT SEC HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6539CFE"
   },
@@ -14956,7 +14956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.R.ENGLISH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6579CFE"
   },
@@ -14966,7 +14966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TWINS ENG SEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6657CFE"
   },
@@ -14976,7 +14976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN-I-ISLAM'S AKBAR PEERBHOY COLLEGE OF",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6748CGE"
   },
@@ -14986,7 +14986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHAVNA TRUST JUNIOR & DEGREE COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6865CFE"
   },
@@ -14996,7 +14996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE SANATAN DHARAM VIDYALAYA & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6869CFE"
   },
@@ -15006,7 +15006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "EVERGREEN ENGLISH SCHOOL AND JR. COLLEGE, SHIVAJI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6926CFE"
   },
@@ -15016,7 +15016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHIVNER VIDYAMANDIR HIGH SCHOOL & JR. COLLEGE,",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6937CGE"
   },
@@ -15026,7 +15026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KUMARI KASTURI VIDYALAYA & JR. COLLEGE, BHANDUP (W).",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6988CGE"
   },
@@ -15036,7 +15036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE,",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU7015CFE"
   },
@@ -15046,7 +15046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ARVIND GANDBHIR HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU7079CNE"
   },
@@ -15056,7 +15056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MURARRAO RANE HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU7082CGE"
   },
@@ -15066,7 +15066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. Mehendale HIGH SCHOOL & JR COLLEGE Roha TAL.ROHA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU7518CGM"
   },
@@ -15076,7 +15076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BAHUUDESHIY DYAN SADHANA MANDAL SANCHALIT",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU11538CFM"
   },
@@ -15086,7 +15086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "OM SAI JUNIOR COLLEGE VASAI EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU11841CFE"
   },
@@ -15096,7 +15096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DAR-UL-MADINAH ENGLISH HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU12328CFE"
   },
@@ -15106,7 +15106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R R EDUCATIONAL TRUSTS JUNIOR COLLEGE OF SCIENCE AND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU12449CFE"
   },
@@ -15116,7 +15116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR.D.S.PALIWAL ENGLISH HIGHSCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6158CFE"
   },
@@ -15126,7 +15126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ACHIEVERS JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6267CFE"
   },
@@ -15136,7 +15136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MODEL COLLEGE OF SCI & COM.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6286CNE"
   },
@@ -15146,7 +15146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAZIDUN HIGH SCHOOL & JR COLLEGE, SECTOR 1A, AIROLI NAKA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6382CFE"
   },
@@ -15156,7 +15156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ARYA GURUKUL INTERNATIONAL JR. COLLEGE OF SCIENCE &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6387CFE"
   },
@@ -15166,7 +15166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VISHWABHARATI HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6398CFE"
   },
@@ -15176,7 +15176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HIGH SCHOOL VIVEKANAND SANKUL, SANPADA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6431CFE"
   },
@@ -15186,7 +15186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SYMBIOSIS CONVENT HIGH SCHOOL & JUNIOR COLLEGE OF",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6555CFE"
   },
@@ -15196,7 +15196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "St. Paul Convent School and Junior College, Ulhasnagar",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6609CFE"
   },
@@ -15206,7 +15206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S D T KALANI JR. COLLEGE ULHASNAGAR-1",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6612CFE"
   },
@@ -15216,7 +15216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "FAZALANI STAR ENGLISH HIGH SCHOOL & JR. COLLEGE, TROMBAY.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6846CNE"
   },
@@ -15226,7 +15226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "INDRA ENGLISH HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6852CFE"
   },
@@ -15236,7 +15236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI RAMKRISHANA PARMHANS JR. COLLEGE GOVENDI (E)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6863CFE"
   },
@@ -15246,7 +15246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. M. S. P. MANDL'S S.I.H. BHATIA HIGH SCHOOL & JR. COLLEGE,",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6934CFE"
   },
@@ -15256,7 +15256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYABHAVAN JR COLLEGE MULUND (W) MUMBAI-80",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU7026CFE"
   },
@@ -15266,7 +15266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE SAMARTH VIDYALAYA & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU7080CGE"
   },
@@ -15276,7 +15276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT KAMALA MEHTA V.W.A. COLLEGE OF COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU7131CFE"
   },
@@ -15286,7 +15286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. FRANCIS HIGH SCHOOL & JR.COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU7182CNE"
   },
@@ -15296,7 +15296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAMATA VIDYAMANDIR JUNIOR COLLEGE OF COMMERCE & SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU7229CFE"
   },
@@ -15306,7 +15306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAILEE DEGREE COLLEGE (SCIENCE & COMMERCE )AND M.J.JR.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU7266CNE"
   },
@@ -15316,7 +15316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D. V. M. HIGHSCHOOL, CTS NO.417 & 388 RAJARAM VARMA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU7304CFE"
   },
@@ -15326,7 +15326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S S H SCHOOL AND JR COLLEGE , KAMOTHE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU7462CFE"
   },
@@ -15336,7 +15336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHANGU KANA THAKUR SECONDARY & HIGHER SECONDARY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU7486CNE"
   },
@@ -15346,7 +15346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H.D.BHAUSAHEB JR.COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU11518CFE"
   },
@@ -15356,7 +15356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT INDIRA GANDHI VIDYALAY AVM JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU11581CFE"
   },
@@ -15366,7 +15366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AMACH GHAR SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6314CFE"
   },
@@ -15376,7 +15376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ROYAL ENGLISH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6315CFE"
   },
@@ -15386,7 +15386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANPADA COLLEGE OF COMMERCE & TECHNOLOGY, SANPADA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6438CFE"
   },
@@ -15396,7 +15396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.I.C.E.S. HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6599CFE"
   },
@@ -15406,7 +15406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHASTRI HINDI VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6603CFE"
   },
@@ -15416,7 +15416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SST COLLEGE OF ARTS & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6630CFE"
   },
@@ -15426,7 +15426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R J THAKUR JR COLLEGE OF ARTS COMMERCE AND SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6667CNE"
   },
@@ -15436,7 +15436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SATISH PRADHAN DNYANASADHANA JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6681CFE"
   },
@@ -15446,7 +15446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MARIA ENGLISH HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6824CFE"
   },
@@ -15456,7 +15456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI. M. P. SHAH JUNIOR COLLEGE OF ARTS & COMMERCE FOR WOMEN",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6835CGE"
   },
@@ -15466,7 +15466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIND COSMOPOLITAN HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6870CNE"
   },
@@ -15476,7 +15476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VANITA VIKAS KANISHTHA MAHAVIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6899CNE"
   },
@@ -15486,7 +15486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE,",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6907CNE"
   },
@@ -15496,7 +15496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRIMATI SITADEVI AND SHRI SAHIBRAM ENG MED HIGH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6949CFE"
   },
@@ -15506,7 +15506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI NIWAS BAGARKA JR COLLEGE OF ARTS COM & SCI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU7151CGE"
   },
@@ -15516,7 +15516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. C. MARUTI JR. COLLEGE OF SCI & COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU7157CNE"
   },
@@ -15526,7 +15526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUKUL ENGLISH SCHOOL & JR. COLLEGE MALAD EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU7221CFE"
   },
@@ -15536,7 +15536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU7233CGE"
   },
@@ -15546,7 +15546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NIRMALA MEMORIAL FOUNDATION JR.COLLEGE OF COMM.&",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU7250CFE"
   },
@@ -15556,7 +15556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI VRAJLAL DURLABHDAS VALIA JR COLLEGE OF COMMRECE AND SHRI VINUBHAI V VALIA JUNIOR COLLEGE OF ARTS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU7284CFE"
   },
@@ -15566,7 +15566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW CITY INTERNATIONAL KHARGHAR MADY E",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU7425CFE"
   },
@@ -15576,7 +15576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KSA BARNS HIGH SCHOOL AND JR COLLEGE , PANVEL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU7479CNE"
   },
@@ -15586,7 +15586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "YASHVANTRAO CHAFEKAR JR. COLLAGE AND ARTS,COMMERS AND SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU11521CFE"
   },
@@ -15596,7 +15596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADIVASI.P.MANDAL'S MADHYAMIK VIDYALAYA,UDHAWA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU11531CPM"
   },
@@ -15606,7 +15606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA VARDHI JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU11625CNE"
   },
@@ -15616,7 +15616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI. RANGRAO VITHOBA PAWAR JUNIOR COLLEGE BHIWANDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6193CNE"
   },
@@ -15626,7 +15626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE KESHAV RAMBHAU KOTKAR SECODNARY & H.SECONDARY VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6234CFE"
   },
@@ -15636,7 +15636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LAXMAN DEVRAM SONAWANE COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6264CPE"
   },
@@ -15646,7 +15646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HINDI HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6272CGH"
   },
@@ -15656,7 +15656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAMLADEVI JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6283CFE"
   },
@@ -15666,7 +15666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHAH J.M.SEC.ENG.SCHOOL & DKVC COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6291CFE"
   },
@@ -15676,7 +15676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHANKAR NARAYAN JUNIOR COLLEGE BHAYANDAR EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6323CNE"
   },
@@ -15686,7 +15686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND ENGLISH HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6400CFE"
   },
@@ -15696,7 +15696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND JR. COLEGE OF SCIENCE AND COMMERCE,",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6406CNE"
   },
@@ -15706,7 +15706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAINATH HINDI SCH SEC&HSEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6421CFE"
   },
@@ -15716,7 +15716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.S. JONDHLE HIGH MAR. SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6532CNE"
   },
@@ -15726,7 +15726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANKET VIDYA. SEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6656CPE"
   },
@@ -15736,7 +15736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVHIND JR.COLLEGE OF COMM.& ARTS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6799CFE"
   },
@@ -15746,7 +15746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. M. S. P. MANDL'S S.I.H. BHATIA HIGH SCHOOL & JR. COLLEGE,",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6934CGE"
   },
@@ -15756,7 +15756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6999CPE"
   },
@@ -15766,7 +15766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYANIDHI K.R. JR. COLLEGE OF COMMERCE ANDHERI WEST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU7092CGE"
   },
@@ -15776,7 +15776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAISER COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU7168CFE"
   },
@@ -15786,7 +15786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARDAR TRILOCHAN SINGH SAHNEY JUNIOR COLLEGE OF COMMERCE KHAR(WEST)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU7177CFE"
   },
@@ -15796,7 +15796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KALA VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU7191CFE"
   },
@@ -15806,7 +15806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. KAMALADEVI GAURIDUTTA MITTAL COLLEGE OF ARTS &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU7204CFE"
   },
@@ -15816,7 +15816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Rahul Shikshan Prasarak Mandal' Latur's Satyagraha junior college",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU7435CFE"
   },
@@ -15826,7 +15826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LATE SAU VIDYA VINOD ADHIKARI VIDYALAYA, LALONDE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU11477CFE"
   },
@@ -15836,7 +15836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND HIGH SCHOOL KOLWADE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU11484CNE"
   },
@@ -15846,7 +15846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADARSH VIDYALAYA AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU11507CFE"
   },
@@ -15856,7 +15856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE SIDDHIVINAYAK ENG SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU11550CFE"
   },
@@ -15866,7 +15866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NUTAN VIDYALAY SEC MAR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU11615CNE"
   },
@@ -15876,7 +15876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.A.J.V.& COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6184CFM"
   },
@@ -15886,7 +15886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAN GAN MAN VIDYAMANDIR JR COLL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6296CFE"
   },
@@ -15896,7 +15896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A P COLLEGE OF COMMERCE AND SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6343CFE"
   },
@@ -15906,7 +15906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KING LORD ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6592CFE"
   },
@@ -15916,7 +15916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMCHAND KIMATRAM TALREJA COLLEGE OF ARTS, SCIENCE &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6638CNE"
   },
@@ -15926,7 +15926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LOKAMANYA VIDYAMANDIR, MAHIM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6702CGE"
   },
@@ -15936,7 +15936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ARYAN JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6828CFE"
   },
@@ -15946,7 +15946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6999CFE"
   },
@@ -15956,7 +15956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J. J. ACADEMY HIGH SCHOOL & JR. COLLEGE, MULUND (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU7008CFE"
   },
@@ -15966,7 +15966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AMANN JR COLLEGE OF COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU7134CNE"
   },
@@ -15976,7 +15976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "L.J.N.J. MAHILA MAHAVIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU7144CGE"
   },
@@ -15986,7 +15986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. T. S. BAFNA JR COLLEGE OF ARTS & COM.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU7210CGE"
   },
@@ -15996,7 +15996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NIRMAL JR. COLLEGE OF COMMERCE & SCIENCE KANDIVALI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU7282CFE"
   },
@@ -16006,7 +16006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S. BANTHIYA MADY. PANVEL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU7478CGM"
   },
@@ -16016,7 +16016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.STANISLAUS HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU11603CFE"
   },
@@ -16026,7 +16026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. STANISLAUS HIGH SCHOOL AND JUNIOR COLLEGE NALLASOPARA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU11992CNE"
   },
@@ -16036,7 +16036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL, VAJRESWARI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6133CNM"
   },
@@ -16046,7 +16046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.R. HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6172CFE"
   },
@@ -16056,7 +16056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI L R TIWARI JUNIOR COLLEGE OF COMMERCE AND SCIENSE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6358CFE"
   },
@@ -16066,7 +16066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYANVIKAS VID.SEC & HSEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6410CPE"
   },
@@ -16076,7 +16076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N.R.BHAGAT SCHOOL ENG SEC&HSEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6442CNE"
   },
@@ -16086,7 +16086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AAN-E-ISLAM URDU SEC",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6545CFE"
   },
@@ -16096,7 +16096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "T. M. S. SEC. SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6600CFE"
   },
@@ -16106,7 +16106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GYANODAYA SEC. HINDI SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6666CPE"
   },
@@ -16116,7 +16116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DADAR VIDYA MANDIR",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6706CGE"
   },
@@ -16126,7 +16126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LILAVATI LALJI DAYAL HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6736CGE"
   },
@@ -16136,7 +16136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.D. COLLEGE OF ARTS,SCIENCE & COMM.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6798CFE"
   },
@@ -16146,7 +16146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRIYADARSHANI VIDYA MANDIR & JR. COLLEGE OF ARTS & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6808CFE"
   },
@@ -16156,7 +16156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI D. J. DOSHI GURUKUL ENGLISH HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6894CFE"
   },
@@ -16166,7 +16166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6900CNE"
   },
@@ -16176,7 +16176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6907CFE"
   },
@@ -16186,7 +16186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU6915CFE"
   },
@@ -16196,7 +16196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU7012CFE"
   },
@@ -16206,7 +16206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.V.M.'S SWAMI MUKTANANDA HIGH SCHOOL AND MVM'S",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU7102CFE"
   },
@@ -16216,7 +16216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI G.P.M.JR COLLEGE OF SCIENCE AND COMMERCE ANDHERI EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU7143CFE"
   },
@@ -16226,7 +16226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ALPHA JR COLLEGE OF SCI & COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU7147CNE"
   },
@@ -16236,7 +16236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "COM S.P.S.F SCHOOL & JR COLLEGE ASHAGAD",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU11426CFM"
   },
@@ -16246,7 +16246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANSKRUTI JUNIOR COLLEGE LALONDE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.8,
     "choiceCode": "MU11479CFE"
   },
@@ -16256,7 +16256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NARENDRA CONVENT HIGHSCHOOL AND JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6236CFE"
   },
@@ -16266,7 +16266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K M AGARWAL COLLEGE OF ARTS, SCI & COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6241CPE"
   },
@@ -16276,7 +16276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BALASAHEB MHATRE JR. COLLEGE OF SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6577CFE"
   },
@@ -16286,7 +16286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IDEAL JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6607CFE"
   },
@@ -16296,7 +16296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.S.P JAI HIND ACADAMY",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6625CGE"
   },
@@ -16306,7 +16306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SST COLLEGE OF ARTS & COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6630CNE"
   },
@@ -16316,7 +16316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.J. KHILNANI HIGH SCHOOL MAHI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6701CGE"
   },
@@ -16326,7 +16326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. BABASAHEB AMBEDKAR HIGH SCHOOL & JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6875CNE"
   },
@@ -16336,7 +16336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHEMBUR KARNATAKA JUNIOR COLLEGE & ARTS, SCIENCE &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6877CNE"
   },
@@ -16346,7 +16346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6969CGE"
   },
@@ -16356,7 +16356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ASMITA GIRLS JR COLLEGE VIKAROLI (E)",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6978CGE"
   },
@@ -16366,7 +16366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DAYANAND VEDIK VIDYALAYA HINDI HIGH SCHOOL, MULUND",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU6996CNE"
   },
@@ -16376,7 +16376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANUYOG VIDYALAYA & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU7044CGE"
   },
@@ -16386,7 +16386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANSKARDHAM VIDYALAYA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU7107CGE"
   },
@@ -16396,7 +16396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ROCKS HIGH SCHOOL & JUNIOR COLLEGE OF COMMERCE & SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU7265CFE"
   },
@@ -16406,7 +16406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANATA VIDYALAYA MOHPADA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU7357CNM"
   },
@@ -16416,7 +16416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ROYAL JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU6303CFE"
   },
@@ -16426,7 +16426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. SUSHILADEVI DESHMUKH JR. COLLEGE, AIROLI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU6386CNE"
   },
@@ -16436,7 +16436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUVARYA BALARAM PATIL VIDYALYA (MARATHI SECONDERY), DARAVE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU6455CNE"
   },
@@ -16446,7 +16446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST AGRASEN HIGH SCH & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU6530CFE"
   },
@@ -16456,7 +16456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU6616CFE"
   },
@@ -16466,7 +16466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BAL VIDYA MANDIR MAR.SEC.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU6675CGE"
   },
@@ -16476,7 +16476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU6723CGE"
   },
@@ -16486,7 +16486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA PHULE EDUCATION SOCIETY JR. COLLEGE OF ARTS AND COMMERCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU6800CFE"
   },
@@ -16496,7 +16496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RUBY ENGLISH HIGH SCHOOL & JR. COLLEGE GOVANDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU6860CGE"
   },
@@ -16506,7 +16506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI SHAMANAND HIGH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU6911CNE"
   },
@@ -16516,7 +16516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANANDA MARATHI SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU7180CFE"
   },
@@ -16526,7 +16526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VINAYAKRAO B. PATIL JR. ARTS COLLEGE,DAPCHARI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU11437CNM"
   },
@@ -16536,7 +16536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAU SITABAI RAMKRUSHANA KARANDIKAR SENIOR COLLEGE OF COMMERCE AND LATE M. B. IRANI COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU11444CGE"
   },
@@ -16546,7 +16546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADIVASI PRAGATI MANDAL SANCHALIT ARTS, COMMERCE &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.4,
     "choiceCode": "MU11536CPM"
   },
@@ -16556,7 +16556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHIWANDI NIZAMPUR NAGARPALIKA MAHAVIDHYALAY BHIWANDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU6166CPE"
   },
@@ -16566,7 +16566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.E.I.S'S NEW HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU6273CGE"
   },
@@ -16576,7 +16576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RADHIKABAI MEGHE VID SEC ENG",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU6389CFE"
   },
@@ -16586,7 +16586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GAURAV HIGH SCHOOL & JR.COLLEGE, NERUL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU6469CFE"
   },
@@ -16596,7 +16596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M. GANDHI SEC. SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU6596CGE"
   },
@@ -16606,7 +16606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. AMBEDKAR COLLEGE OF COMMERCE & ECONOMICS",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU6838CGE"
   },
@@ -16616,7 +16616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "UTTAR BHARATIYA SANGH JUNIOR COLLEGE OF COMMERCE & SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU7066CFE"
   },
@@ -16626,7 +16626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAVINDRA BHARATI HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU7108CFE"
   },
@@ -16636,7 +16636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA VIKAS UNIVERSAL JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU7207CFE"
   },
@@ -16646,7 +16646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.E.I'S NATIVE INSTITUTION MARATHI SEC SCH URAN",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU7544CGE"
   },
@@ -16656,7 +16656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYANDEEP SEC &HSEC SCH",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6470CNM"
   },
@@ -16666,7 +16666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NETAJI HIGH SCHOOLAND JR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6617CGE"
   },
@@ -16676,7 +16676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIDDHARTH COLLEGE OF COMM. & ECO.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6722CGE"
   },
@@ -16686,7 +16686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TULSI HINDI MADHYAMIK VIDYALAYA AND JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6786CGE"
   },
@@ -16696,7 +16696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAFARI ENGLISH HIGH SCHOOL & JR COLLEGE GOVANDI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6853CFE"
   },
@@ -16706,7 +16706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU6964CGE"
   },
@@ -16716,7 +16716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANUYOG VIDYALAYA & JUNIOR COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU7044CNE"
   },
@@ -16726,7 +16726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. THOMAS HIGH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU7081CGE"
   },
@@ -16736,7 +16736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. KAMALADEVI GAURIDUTTA MITTAL COLLEGE OF ARTS & COM.",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU7204CGE"
   },
@@ -16746,7 +16746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LORDS UNIVERSAL JR COLLEGE OF COM & SCI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU7212CFE"
   },
@@ -16756,7 +16756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ROCKS JR. COLLEGE OF COMMERCE & SCIENCE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU7290CNE"
   },
@@ -16766,7 +16766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAI PANDURANG RAGHUNATH PATIL UTKARSHA MADHYAMIK VIDYALAYA AND JR COLLEGE VIRAR WEST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU11592CPE"
   },
@@ -16776,7 +16776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Sinhgad Junior College of Commerce",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 34.8,
     "choiceCode": "MU6951CFE"
   },
@@ -16786,7 +16786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAHYADRI SHIKSHAN SEVA MANDALS ENGLISH HIGH SCHOOL &",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 34.4,
     "choiceCode": "MU11561CFE"
   },
@@ -16796,7 +16796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMG ENGLISH SCHOOL",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 32.8,
     "choiceCode": "MU6561CFE"
   },
@@ -16806,7 +16806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AAKASH JR COLLEGE OF SCI & COM",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 31.0,
     "choiceCode": "MU7150CFE"
   },
@@ -16816,7 +16816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI NIWAS BAGARKA JR COLLEGE OF ARTS COM & SCI",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 30.6,
     "choiceCode": "MU7151CFE"
   },
@@ -16826,7 +16826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI G.P.M. JR COLLEGE VILEPARLE EAST",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 29.8,
     "choiceCode": "MU7149CFE"
   },
@@ -16836,7 +16836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANISHA JUNIOR COLLAGE KALAWA",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 29.0,
     "choiceCode": "MU6521CFE"
   },
@@ -16846,7 +16846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BAI KABIBAI ENGLISH SCHOOL & JR. COLLEGE",
     "stream": "Commerce",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 27.0,
     "choiceCode": "MU6715CNE"
   },
@@ -16856,7 +16856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AFAC ENGLISH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 96.2,
     "choiceCode": "MU6871SGE"
   },
@@ -16866,7 +16866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AFAC ENGLISH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 93.6,
     "choiceCode": "MU6871SFE"
   },
@@ -16876,7 +16876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THAKUR SHYAMNARAYAN HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 93.6,
     "choiceCode": "MU7302SFE"
   },
@@ -16886,7 +16886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.D.M. ENGLISH HIGH SCHOOL & JR. COLLGE, SHIRGAON, BADLAPUR (E) THANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 92.8,
     "choiceCode": "MU11890SFE"
   },
@@ -16896,7 +16896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER MERRY'S HIGHSCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 92.4,
     "choiceCode": "MU11632SFE"
   },
@@ -16906,7 +16906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE MUMBADEVI JR. COLLEGE OF COMMERCE & THE NEW SARVAJANIK EDUCATION SOCIETY JR. COLLEGE OF SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 92.0,
     "choiceCode": "MU7244SFE"
   },
@@ -16916,7 +16916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI T P BHATIA JR. COLLEGE OF SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 91.8,
     "choiceCode": "MU7254SGE"
   },
@@ -16926,7 +16926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER VELANKANI JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 91.8,
     "choiceCode": "MU11645SFE"
   },
@@ -16936,7 +16936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KHAR EDUCATION SOCIETY'S JUNIOR COLLEGE OF SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 89.8,
     "choiceCode": "MU7050SFE"
   },
@@ -16946,7 +16946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRAKASH COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 89.6,
     "choiceCode": "MU7280SFE"
   },
@@ -16956,7 +16956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.XAVIER'S COLLEGE FORT",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 88.0,
     "choiceCode": "MU6724SGE"
   },
@@ -16966,7 +16966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THAKUR VIDYA MANDIR HIGH ENG",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 87.0,
     "choiceCode": "MU11618SFE"
   },
@@ -16976,7 +16976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SOUTH INDIAN SECONDARY AND HIGHER SEC. SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 86.6,
     "choiceCode": "MU6298SGE"
   },
@@ -16986,7 +16986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA ACD & SPO.MARATHI SCHOOL KHANDA COLONY",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 86.2,
     "choiceCode": "MU7480SGE"
   },
@@ -16996,7 +16996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND JUNIOR COLLEGE NALLASOPARA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 86.0,
     "choiceCode": "MU11775SFE"
   },
@@ -17006,7 +17006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "FATHER AGNEL ENG SEC",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 85.6,
     "choiceCode": "MU6422SFE"
   },
@@ -17016,7 +17016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 85.4,
     "choiceCode": "MU6908SNE"
   },
@@ -17026,7 +17026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J. J. ACADEMY HIGH SCHOOL & JR. COLLEGE, MULUND (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 85.4,
     "choiceCode": "MU7008SFE"
   },
@@ -17036,7 +17036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IQRA ENGLISH HIGH SCHOOL AND JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 85.0,
     "choiceCode": "MU6601SNE"
   },
@@ -17046,7 +17046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.N.BANDODKAR COLLEGE OF SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 84.8,
     "choiceCode": "MU6526SGE"
   },
@@ -17056,7 +17056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A V JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 84.8,
     "choiceCode": "MU11609SFE"
   },
@@ -17066,7 +17066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.K.Birla College of Arts, Science and Commerce",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 84.6,
     "choiceCode": "MU6248SGE"
   },
@@ -17076,7 +17076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A V JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 84.6,
     "choiceCode": "MU11609SGE"
   },
@@ -17086,7 +17086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SNEHALATA RANE HIGH SCHOOL AND JR. COLLEGE, DADAR ,MUMBAI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 84.4,
     "choiceCode": "MU6707SFE"
   },
@@ -17096,7 +17096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AFAC ENGLISH SCHOOL AND JUNIOR COLLEGE CHEMBUR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 84.2,
     "choiceCode": "MU7312SFE"
   },
@@ -17106,7 +17106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUKUL VIDYAPEETH ENGLISH HIGHSCHOOL AND JUNIOR COLLEGE OF ARTS COMMERCE AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 84.2,
     "choiceCode": "MU11914SFE"
   },
@@ -17116,7 +17116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CENTRAL PUBLIC SCHOOL ENG HIGH",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 84.0,
     "choiceCode": "MU6535SFE"
   },
@@ -17126,7 +17126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE B. J. P. C. INSTITUTION & JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 84.0,
     "choiceCode": "MU6737SFE"
   },
@@ -17136,7 +17136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. CHANDIBHAI HIMATHMAL MANSUKHANI COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.8,
     "choiceCode": "MU6635SGE"
   },
@@ -17146,7 +17146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S SECONDARY MARATHI HIGH SCHOOL KALAMBOLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.8,
     "choiceCode": "MU7474SGE"
   },
@@ -17156,7 +17156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A V JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.8,
     "choiceCode": "MU11609SNE"
   },
@@ -17166,7 +17166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRESIDENCY JR. COLLEGE OF SCIENCE & COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.6,
     "choiceCode": "MU6622SFE"
   },
@@ -17176,7 +17176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. FRANCIS D'ASSISI HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.6,
     "choiceCode": "MU7272SGE"
   },
@@ -17186,7 +17186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GNYANODAYA MULTIPURPOSE HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.6,
     "choiceCode": "MU11562SFE"
   },
@@ -17196,7 +17196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. J. SOMAIYA COLLEGE OF SCIENCE & COMM. VIDYAVIHAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.4,
     "choiceCode": "MU6916SGE"
   },
@@ -17206,7 +17206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "V G VAZE COLLEGE ARTS,SCI & COMM.MULUND (E) MUMBAI-81",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.4,
     "choiceCode": "MU7024SGE"
   },
@@ -17216,7 +17216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MITHIBAI COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.4,
     "choiceCode": "MU7133SGE"
   },
@@ -17226,7 +17226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AL-ITTEHAD JR COLLEGE OF ARTS SCI & COM",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.4,
     "choiceCode": "MU7135SFE"
   },
@@ -17236,7 +17236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.PETER'S JUNIOR COLLEGE OF SCI & COMM",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.2,
     "choiceCode": "MU11611SFE"
   },
@@ -17246,7 +17246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J. H. Poddar High School & Jr. College",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.0,
     "choiceCode": "MU6320SNE"
   },
@@ -17256,7 +17256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW SARASWATI ENGLISH SCHOOL PATLIPADA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.0,
     "choiceCode": "MU6652SFE"
   },
@@ -17266,7 +17266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND HIGH SCHOOL & JR COLLEGE, CHEMBUR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 83.0,
     "choiceCode": "MU6868SGE"
   },
@@ -17276,7 +17276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHANGU KANA THAKUR SECONDARY & HIGHER SECONDARY VIDYALAYA , NEW PANVEL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 82.8,
     "choiceCode": "MU7486SGE"
   },
@@ -17286,7 +17286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S.V.K.HIGHSCHOOL & JR COLLEGE , PANVEL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 82.4,
     "choiceCode": "MU7484SGE"
   },
@@ -17296,7 +17296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N.K.T. ENGLISH SEC SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 82.2,
     "choiceCode": "MU6525SFE"
   },
@@ -17306,7 +17306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH N.K.T.T. JR. COLLEGE OF COMMERCE OF AND SHETH J.T.T. JR COLLEGE OF ARTS AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 81.6,
     "choiceCode": "MU6524SGE"
   },
@@ -17316,7 +17316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMNIRANJAN JHUNJHUNWALA COLLEGE GHATKOPAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 81.6,
     "choiceCode": "MU6914SGE"
   },
@@ -17326,7 +17326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.V. KHADE VIDYALAYA SHAHAPUR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 81.4,
     "choiceCode": "MU6497SGE"
   },
@@ -17336,7 +17336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NOOR-UL ISLAM URDU HIGH SCHOOL & JR. COLLEGE GOVANDI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 81.2,
     "choiceCode": "MU6854SGU"
   },
@@ -17346,7 +17346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. K. SOMAIYA VINAY MANDIR HIGH SCHOOL JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 81.2,
     "choiceCode": "MU6891SGE"
   },
@@ -17356,7 +17356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHARWIL GLOBAL ENGLISH SCHOOL AND JUNIOR COLLEGE, KALAMB.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 81.0,
     "choiceCode": "MU12500SFE"
   },
@@ -17366,7 +17366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND JR. COLEGE OF SCIENCE AND COMMERCE, KOPARKHAIRANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 80.8,
     "choiceCode": "MU6406SNE"
   },
@@ -17376,7 +17376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ARYAN FOUNDATIONS LAKSHYA HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 80.8,
     "choiceCode": "MU6691SFE"
   },
@@ -17386,7 +17386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PODAR INTERNATIONAL SCHOOL, POWAI.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 80.6,
     "choiceCode": "MU6983SFE"
   },
@@ -17396,7 +17396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHISHUVIKAS MADHYAMIK VIDYALAYA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 80.2,
     "choiceCode": "MU6259SFE"
   },
@@ -17406,7 +17406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 79.8,
     "choiceCode": "MU6832SGE"
   },
@@ -17416,7 +17416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "U S Ostwal English Academy",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 79.8,
     "choiceCode": "MU11617SFE"
   },
@@ -17426,7 +17426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMNIRANJAN JHUNJHUNWALA COLLEGE GHATKOPAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 79.6,
     "choiceCode": "MU6914SFE"
   },
@@ -17436,7 +17436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PEN PRIVATE HIGH. SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 79.4,
     "choiceCode": "MU7497SGE"
   },
@@ -17446,7 +17446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIES COLLEGE OF ARTS, SCIENCE & COMM.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 79.0,
     "choiceCode": "MU6831SGE"
   },
@@ -17456,7 +17456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI RAGHUBIR JUNIOR COLLEGE OF SCIENCE AND COMMERCE BOISAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 79.0,
     "choiceCode": "MU11496SFE"
   },
@@ -17466,7 +17466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.N.BANDODKAR COLLEGE OF SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.8,
     "choiceCode": "MU6526SFE"
   },
@@ -17476,7 +17476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUNANAK KHALSA COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.8,
     "choiceCode": "MU6837SGE"
   },
@@ -17486,7 +17486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST ANDREW'S COLLEGE OF ARTS SCI & COM",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.8,
     "choiceCode": "MU7170SGE"
   },
@@ -17496,7 +17496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MODEL JUNIOR COLLEGE ADJADE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.6,
     "choiceCode": "MU6213SFE"
   },
@@ -17506,7 +17506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.F.NAIK VIDYALYA SEC & HSEC MARATHI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.6,
     "choiceCode": "MU6404SGE"
   },
@@ -17516,7 +17516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN-I-ISLAM'S MUSTAFA FAKIH URDU HIGH SCHOOL & JR. COLLEGE, TURBHE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.6,
     "choiceCode": "MU6439SNE"
   },
@@ -17526,7 +17526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KISHINCHAND CHELLARAM COLLEGE (K. C. COLLEGE)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.6,
     "choiceCode": "MU6718SGE"
   },
@@ -17536,7 +17536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAI HIND COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.6,
     "choiceCode": "MU6727SGE"
   },
@@ -17546,7 +17546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANANDIBAI DAMODAR KALE VIDYALAYA & JR. COLLEGE OF COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.6,
     "choiceCode": "MU7262SFE"
   },
@@ -17556,7 +17556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ORCHID GLOBAL SCHOOL OF ACADEMIC'S AND SPORTS",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.6,
     "choiceCode": "MU7340SFE"
   },
@@ -17566,7 +17566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THOMAS BAPTISTA HIGHSCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.6,
     "choiceCode": "MU11598SGE"
   },
@@ -17576,7 +17576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MESCO EDUCATION SOCIETYS RADIANT ENGLISH HIHGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.4,
     "choiceCode": "MU6510SFE"
   },
@@ -17586,7 +17586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.2,
     "choiceCode": "MU7125SFE"
   },
@@ -17596,7 +17596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY CROSS CONVENT HIGH SCHOOL AND JUNIOR COLLEGE, THANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.2,
     "choiceCode": "MU11745SFE"
   },
@@ -17606,7 +17606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P S DHANKE ENGLISH MEDIUM SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.0,
     "choiceCode": "MU6483SFE"
   },
@@ -17616,7 +17616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 78.0,
     "choiceCode": "MU6768SGE"
   },
@@ -17626,7 +17626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABDULLAH PATEL HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.8,
     "choiceCode": "MU6536SGE"
   },
@@ -17636,7 +17636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.H. MARATHI HIGHSCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.8,
     "choiceCode": "MU6687SGE"
   },
@@ -17646,7 +17646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND VIDYALAYA, KURLA (E)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.8,
     "choiceCode": "MU6930SGE"
   },
@@ -17656,7 +17656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.T.P. HINDI SEC SCH",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.6,
     "choiceCode": "MU6211SPE"
   },
@@ -17666,7 +17666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARATI VIDYAPEETH SEC MARATHI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.6,
     "choiceCode": "MU6459SGE"
   },
@@ -17676,7 +17676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N.G.V ENG HIGHSCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.6,
     "choiceCode": "MU11594SFE"
   },
@@ -17686,7 +17686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUNANAK KHALSA COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.4,
     "choiceCode": "MU6837SFE"
   },
@@ -17696,7 +17696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. S. & L. S. PATKAR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.4,
     "choiceCode": "MU7129SGE"
   },
@@ -17706,7 +17706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA ACD & SPO.MARATHI SCHOOL KHANDA COLONY",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.4,
     "choiceCode": "MU7480SNE"
   },
@@ -17716,7 +17716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL SARVODAYA JR COLLEGE OF COMMERCE AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.2,
     "choiceCode": "MU6873SGE"
   },
@@ -17726,7 +17726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GLOBAL JUNIOR COLLEGE FOR ARTS COMMERCE AND SCIENCE SAKINAKA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.2,
     "choiceCode": "MU12447SFE"
   },
@@ -17736,7 +17736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DSD SCHOOL KALYAN",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.0,
     "choiceCode": "MU6263SFE"
   },
@@ -17746,7 +17746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAGINI PRAMOD JR COLLEGE OF ARTS SCIENCE AND COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.0,
     "choiceCode": "MU11610SFE"
   },
@@ -17756,7 +17756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI J P JAGANI JUNIOR COLLEGE OF SCIENCE VASAI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 77.0,
     "choiceCode": "MU11612SFE"
   },
@@ -17766,7 +17766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MESCO EDUCATION SOCITEY'S CRESCENT ENGLISH HIGH SCHOOL & JR. COLLAGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.8,
     "choiceCode": "MU6554SFE"
   },
@@ -17776,7 +17776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "WILSON COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.8,
     "choiceCode": "MU6743SGE"
   },
@@ -17786,7 +17786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMANAND ARYA D. A. V. COLLEGE BHANDUP (E) MUMBAI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.8,
     "choiceCode": "MU6981SGE"
   },
@@ -17796,7 +17796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MODEL JUNIOR COLLEGE ADJADE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.6,
     "choiceCode": "MU6213SNE"
   },
@@ -17806,7 +17806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.K.Birla College of Arts, Science and Commerce",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.6,
     "choiceCode": "MU6248SFE"
   },
@@ -17816,7 +17816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. JOHN BAPTIST ENG. HIGH S.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.6,
     "choiceCode": "MU6517SGE"
   },
@@ -17826,7 +17826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH C. D. BARRFIWALA HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.6,
     "choiceCode": "MU7098SNE"
   },
@@ -17836,7 +17836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. D NATIONAL COLLEGE & W.A. SCIENCE COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.6,
     "choiceCode": "MU7171SGE"
   },
@@ -17846,7 +17846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Fajandar Junior College, Vahoor Tal.Mahad, Dist.Raigad",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.6,
     "choiceCode": "MU7373SGE"
   },
@@ -17856,7 +17856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P S ENGLISH SCHOOL PANVEL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.6,
     "choiceCode": "MU7493SFE"
   },
@@ -17866,7 +17866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY ANGELS JR.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.4,
     "choiceCode": "MU6217SNE"
   },
@@ -17876,7 +17876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH GOPALJI HEMRAJ HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 76.4,
     "choiceCode": "MU7237SNE"
   },
@@ -17886,7 +17886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE GAJANAND SINGH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 75.8,
     "choiceCode": "MU11747SFE"
   },
@@ -17896,7 +17896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER MARY SRIPRASTHA ENG HIGH",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 75.6,
     "choiceCode": "MU11633SFE"
   },
@@ -17906,7 +17906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE ANDHRA EDUCATION SOCIETY'S HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 75.4,
     "choiceCode": "MU6817SGE"
   },
@@ -17916,7 +17916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH C. D. BARRFIWALA HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 75.2,
     "choiceCode": "MU7098SGE"
   },
@@ -17926,7 +17926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 75.2,
     "choiceCode": "MU7125SGE"
   },
@@ -17936,7 +17936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ANNE'S HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 74.8,
     "choiceCode": "MU7195SGE"
   },
@@ -17946,7 +17946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.H.SAVE ARTS,C.J.BHANUSHALI COM.S.B.A DANDEKAR JR.COLLEGE PALGHAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 74.8,
     "choiceCode": "MU11520SGE"
   },
@@ -17956,7 +17956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOUNT MARY ENG HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 74.8,
     "choiceCode": "MU11585SNE"
   },
@@ -17966,7 +17966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI G.P.M. JR COLLEGE VILEPARLE EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 74.6,
     "choiceCode": "MU7149SFE"
   },
@@ -17976,7 +17976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARASWATI VIDYALAYA VASIND",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 74.4,
     "choiceCode": "MU6505SPE"
   },
@@ -17986,7 +17986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.B.J. ENG SEC SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 74.2,
     "choiceCode": "MU6658SFE"
   },
@@ -17996,7 +17996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S.V.K.HIGHSCHOOL & JR COLLEGE , PANVEL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 74.2,
     "choiceCode": "MU7484SPE"
   },
@@ -18006,7 +18006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA BHAWAN HIGH SCHOOL & JR. COLLEGE, NERUL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 74.0,
     "choiceCode": "MU6454SPE"
   },
@@ -18016,7 +18016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IDUBS HINDI HIGH SCHOOL & JR. COLLEGE, BHANDUP (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 74.0,
     "choiceCode": "MU6994SNE"
   },
@@ -18026,7 +18026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LOKNETE RAMSHETH THAKUR ENGLISH MEDIUM SCHOOL AND JR COLLEGE , KAMOTHE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 74.0,
     "choiceCode": "MU7469SFE"
   },
@@ -18036,7 +18036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANGAON JUNIOR COLLEGE , MANGAON",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.8,
     "choiceCode": "MU7397SGE"
   },
@@ -18046,7 +18046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SOPHIA COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.6,
     "choiceCode": "MU6750SGE"
   },
@@ -18056,7 +18056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S.Late S.P.Jain Jr.Collge Nagothane Tal :Roha Dist:Raigad",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.6,
     "choiceCode": "MU7513SGM"
   },
@@ -18066,7 +18066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHANDUP EDUCATIONAL SOCIETY'S P. A. MENON JUNIOR COLLEGEOF COMM. AND SCI., BHANDUP (EAST)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.4,
     "choiceCode": "MU6976SGE"
   },
@@ -18076,7 +18076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL ENG. SEC. SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.2,
     "choiceCode": "MU6540SFE"
   },
@@ -18086,7 +18086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN-I-ISLAM'S SAIF TYABJI GIRLS' HIGH SCHOOL AND JUNIOR COLLEGE OF ARTS AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.2,
     "choiceCode": "MU6774SGE"
   },
@@ -18096,7 +18096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.. P. GAGANGIRI MAHARAJ INTERNATIONAL SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.2,
     "choiceCode": "MU7362SFE"
   },
@@ -18106,7 +18106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THOMAS BAPTISTA HIGHSCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.2,
     "choiceCode": "MU11598SNE"
   },
@@ -18116,7 +18116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHANKAR NARAYAN JUNIOR COLLEGE BHAYANDAR EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.0,
     "choiceCode": "MU6323SNE"
   },
@@ -18126,7 +18126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHRIST ACADEMY (SEC.), KOPAR KHIRANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.0,
     "choiceCode": "MU6414SFE"
   },
@@ -18136,7 +18136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.XAVIERS HIGH SCHOOL & JR COLLEGE BHANDUP (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.0,
     "choiceCode": "MU6979SGE"
   },
@@ -18146,7 +18146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N E S RATNAM JR COLLEGE OF SCIENCE , BHANDUP (W) MUMBAI - 80",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 73.0,
     "choiceCode": "MU7030SGE"
   },
@@ -18156,7 +18156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABDULLAH PATEL ENGLISH HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.8,
     "choiceCode": "MU6553SFE"
   },
@@ -18166,7 +18166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. D NATIONAL COLLEGE & W.A. SCIENCE COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.8,
     "choiceCode": "MU7171SFE"
   },
@@ -18176,7 +18176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.C.F SEC. & HIGHER SEC. SCH K",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.8,
     "choiceCode": "MU7326SNE"
   },
@@ -18186,7 +18186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABHINAV JNYAN MANDIR PRASHALA AND Jr. COLLEGE KARJAT,RAIGAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.6,
     "choiceCode": "MU7349SGE"
   },
@@ -18196,7 +18196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANATA VIDYALAYA Jr. COLLEGE KHOPOLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.6,
     "choiceCode": "MU7359SFE"
   },
@@ -18206,7 +18206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PEN PRIVATE HIGH. SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.6,
     "choiceCode": "MU7497SNE"
   },
@@ -18216,7 +18216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VAMANRAO SABALE SECONDARY SCHOOL AND JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.4,
     "choiceCode": "MU6141SFE"
   },
@@ -18226,7 +18226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARASWATI VIDYALAYA HIGHSCOOL & JR COLL.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.4,
     "choiceCode": "MU6514SFE"
   },
@@ -18236,7 +18236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "V P M KANNADA HIGH SCHOOL & JR. COLLEGE, MULUND (E)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.4,
     "choiceCode": "MU7019SGE"
   },
@@ -18246,7 +18246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MO.NAZIR URDU JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.0,
     "choiceCode": "MU6168SFU"
   },
@@ -18256,7 +18256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Dolphin English Secondary School and Junior College Vangani East",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.0,
     "choiceCode": "MU6590SFE"
   },
@@ -18266,7 +18266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MATRUCHAYA HIGH SCHOOL & JR.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.0,
     "choiceCode": "MU7242SNE"
   },
@@ -18276,7 +18276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Hirwal Education Trust's Junior College of Art's, Commerce and Science, Mahad",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.0,
     "choiceCode": "MU7378SFE"
   },
@@ -18286,7 +18286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANSKAR ENGLISH MEDIUM SCHOOL, ANJUR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 72.0,
     "choiceCode": "MU11987SFE"
   },
@@ -18296,7 +18296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KARMAVEER BHAURAO PATIL JR. COLLEGE, VASHI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.8,
     "choiceCode": "MU6427SGE"
   },
@@ -18306,7 +18306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURU NANAK HIGHER SECONDARY SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.8,
     "choiceCode": "MU6819SGE"
   },
@@ -18316,7 +18316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT S. T. MEHTA WOMEN'S JR. COLLEGE GHATKOPAR (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.6,
     "choiceCode": "MU6918SGE"
   },
@@ -18326,7 +18326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Reliance foundation school (marathi medium)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.6,
     "choiceCode": "MU7350SFE"
   },
@@ -18336,7 +18336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.6,
     "choiceCode": "MU11601SGE"
   },
@@ -18346,7 +18346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIVEK VIDYALAYA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.4,
     "choiceCode": "MU7105SGE"
   },
@@ -18356,7 +18356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.4,
     "choiceCode": "MU7156SGE"
   },
@@ -18366,7 +18366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHAKARRAO CHVAN VID KAMOTHEM SEC",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.4,
     "choiceCode": "MU7463SFE"
   },
@@ -18376,7 +18376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NARENDRA CONVENT HIGHSCHOOL AND JR COLLEGE DOMBIVALI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.2,
     "choiceCode": "MU6236SFE"
   },
@@ -18386,7 +18386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BRAHMAN SHIKSHA MANDAL'S JR COLL. SC&COM",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.2,
     "choiceCode": "MU6695SNE"
   },
@@ -18396,7 +18396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MARY IMMACULATE GIRLS HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.0,
     "choiceCode": "MU7251SFE"
   },
@@ -18406,7 +18406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANNES JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 71.0,
     "choiceCode": "MU11679SFE"
   },
@@ -18416,7 +18416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHRIST THE KING HIGHSCHOOL & JR COLL.BRAMHANGAON",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.8,
     "choiceCode": "MU6363SFE"
   },
@@ -18426,7 +18426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ROSARY CONVENT HIGH SCHOOL &JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.8,
     "choiceCode": "MU6534SFE"
   },
@@ -18436,7 +18436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.B.VADER SCHOOL . PALI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.8,
     "choiceCode": "MU7523SGM"
   },
@@ -18446,7 +18446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ROYAL COLLEGE OF ARTS MIRA ROAD PENKAR PADA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.6,
     "choiceCode": "MU6344SGE"
   },
@@ -18456,7 +18456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.V. KHADE VIDYALAYA SHAHAPUR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.6,
     "choiceCode": "MU6497SPE"
   },
@@ -18466,7 +18466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PIONEER JUNIOR COLLEGE OF SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.6,
     "choiceCode": "MU6773SFE"
   },
@@ -18476,7 +18476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT RAMKALIDEVI SANMAN SINGH VIDYA MANDIR & JR COLLEGE OF COMMERCE BHANDUP (W), MUMBAI -78",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.6,
     "choiceCode": "MU7028SFE"
   },
@@ -18486,7 +18486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANANDA MARATHI SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.4,
     "choiceCode": "MU7180SFE"
   },
@@ -18496,7 +18496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOONSTAR GLOBAL SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.4,
     "choiceCode": "MU11787SFE"
   },
@@ -18506,7 +18506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. XAVIER'S HIGH SCHOOL & JR. COLLEGE, NERUL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.2,
     "choiceCode": "MU6445SFE"
   },
@@ -18516,7 +18516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHARADA ENGLISH HIGH SCHOOL & JR.COLL.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.2,
     "choiceCode": "MU6608SFE"
   },
@@ -18526,7 +18526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.V.G'S VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.2,
     "choiceCode": "MU6892SGE"
   },
@@ -18536,7 +18536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND VIDYALAYA, KURLA (E)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.2,
     "choiceCode": "MU6930SNE"
   },
@@ -18546,7 +18546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N E S RATNAM JR COLLEGE OF SCIENCE , BHANDUP (W) MUMBAI - 80",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.2,
     "choiceCode": "MU7030SNE"
   },
@@ -18556,7 +18556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A.I.J HIGH SCHOOL MHASALA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.2,
     "choiceCode": "MU7401SGE"
   },
@@ -18566,7 +18566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. JOSEPH SECONDARY HIGH SCHOOL KALAMBOLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.2,
     "choiceCode": "MU7475SNE"
   },
@@ -18576,7 +18576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHURA BAL VIKAS JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.2,
     "choiceCode": "MU11578SFE"
   },
@@ -18586,7 +18586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Golden Nest Junior College Of Science, Commerce And Arts",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.0,
     "choiceCode": "MU6354SFE"
   },
@@ -18596,7 +18596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "QUEEN MARY`S HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.0,
     "choiceCode": "MU6543SFE"
   },
@@ -18606,7 +18606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. CHANDIBHAI HIMATHMAL MANSUKHANI COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.0,
     "choiceCode": "MU6635SFE"
   },
@@ -18616,7 +18616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IDUBS HINDI HIGH SCHOOL & JR. COLLEGE, BHANDUP (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.0,
     "choiceCode": "MU6994SGE"
   },
@@ -18626,7 +18626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D.R.VYAS JUNIOR COLLEGE OF ARTS COMMERCE AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.0,
     "choiceCode": "MU7256SFE"
   },
@@ -18636,7 +18636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.T.MARY'S COVENT SCHOOL CHENDHARE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.0,
     "choiceCode": "MU7324SFE"
   },
@@ -18646,7 +18646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Fajandar Junior College, Vahoor Tal.Mahad, Dist.Raigad",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 70.0,
     "choiceCode": "MU7373SFE"
   },
@@ -18656,7 +18656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ENG HIGHSCHOOL MAJIWADA MAR / HIND",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 69.8,
     "choiceCode": "MU6508SNE"
   },
@@ -18666,7 +18666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR BABASAHEB AMBEDKAR COLLEGE MAHAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 69.8,
     "choiceCode": "MU7376SGE"
   },
@@ -18676,7 +18676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE B.S.G.D'S JR COLLEGE OF COM,ARTS & SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 69.6,
     "choiceCode": "MU7206SFE"
   },
@@ -18686,7 +18686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SUDARSHAN ENG HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 69.4,
     "choiceCode": "MU11563SFE"
   },
@@ -18696,7 +18696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.I.W.S. N.R. SWAMI COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 69.2,
     "choiceCode": "MU6836SGE"
   },
@@ -18706,7 +18706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THAKUR COLLEGE OF SCIENCE AND COMMERCE, KANDIVALI EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 69.2,
     "choiceCode": "MU7249SFE"
   },
@@ -18716,7 +18716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.L.E Society's Science & Commerce Jr. College , Kalamboli",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 69.0,
     "choiceCode": "MU7477SFE"
   },
@@ -18726,7 +18726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RIZVI COLLEGE OF ARTS SCI & COM",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 68.8,
     "choiceCode": "MU7061SGE"
   },
@@ -18736,7 +18736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMZANALI ENGLISH HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 68.8,
     "choiceCode": "MU7194SFE"
   },
@@ -18746,7 +18746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TUNGARESHWAR ENG HIGH",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 68.8,
     "choiceCode": "MU11570SFE"
   },
@@ -18756,7 +18756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARASWATI VIDYAMANDIR KANU COMPUND",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 68.6,
     "choiceCode": "MU7185SFE"
   },
@@ -18766,7 +18766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GNYANDEEP MULTIPURPOSE SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 68.4,
     "choiceCode": "MU11624SFE"
   },
@@ -18776,7 +18776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JSM JR. COLLEGE ALIBAG",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 68.2,
     "choiceCode": "MU7333SFE"
   },
@@ -18786,7 +18786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Allen Manav Vikas Jr College of Science and Commerce",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 68.0,
     "choiceCode": "MU6952SFE"
   },
@@ -18796,7 +18796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. N.N.PATIL HIGH SCH. AND JR COLLEGE , POYNAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.8,
     "choiceCode": "MU7322SGM"
   },
@@ -18806,7 +18806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Rahul Shikshan Prasarak Mandal' Latur's Satyagraha junior college",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.8,
     "choiceCode": "MU7435SNE"
   },
@@ -18816,7 +18816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K V PENDHARKAR JUNIOR COLLEGE DOMBIVALI(EAST)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.6,
     "choiceCode": "MU6218SGE"
   },
@@ -18826,7 +18826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. ANTONIO DA SILVA TECHNICAL HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.6,
     "choiceCode": "MU6763SGE"
   },
@@ -18836,7 +18836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SRI GANESH VIDYAMANDIR, DEONAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.4,
     "choiceCode": "MU6844SFE"
   },
@@ -18846,7 +18846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI G.P.M.JR COLLEGE OF SCIENCE AND COMMERCE ANDHERI EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.4,
     "choiceCode": "MU7143SFE"
   },
@@ -18856,7 +18856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Laxmi public School",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.4,
     "choiceCode": "MU7491SFE"
   },
@@ -18866,7 +18866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUDIKSHA ENGLISH SCHOOL PIMPARI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.2,
     "choiceCode": "MU6237SFE"
   },
@@ -18876,7 +18876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHUBHAMRAJE JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.2,
     "choiceCode": "MU6653SNE"
   },
@@ -18886,7 +18886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARVAJANIK VIDYAMANDIR PEN",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.2,
     "choiceCode": "MU7496SPE"
   },
@@ -18896,7 +18896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN E ISLAM JANJIRA H SCHOOL & Jr. Colg",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.2,
     "choiceCode": "MU7530SNE"
   },
@@ -18906,7 +18906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST THOMAS ACADEMY OF EDUCATION SCHOOL AND JUNIOR COLLEGE VICHUMBE NEW PANVEL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.2,
     "choiceCode": "MU11765SFE"
   },
@@ -18916,7 +18916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADARSH VIDYAMANDIR MARATHI SEC.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.0,
     "choiceCode": "MU6587SNE"
   },
@@ -18926,7 +18926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S.HIGH SCHOOL & JR COLLEGE P.P.THANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.0,
     "choiceCode": "MU6682SGE"
   },
@@ -18936,7 +18936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M. H. SABOO SIDDIK TECHNICAL HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.0,
     "choiceCode": "MU6777SGE"
   },
@@ -18946,7 +18946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HANSRAJ MORARJI HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.0,
     "choiceCode": "MU7099SNE"
   },
@@ -18956,7 +18956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S. BANTHIYA MADY. PANVEL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.0,
     "choiceCode": "MU7478SGE"
   },
@@ -18966,7 +18966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GOKHALE EDU.SO.COMM. & SCIENCE JR. COLLEGE ARATHI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 67.0,
     "choiceCode": "MU7529SNE"
   },
@@ -18976,7 +18976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUKUL VIDYAPEETH ENGLISH HIGH SCHOOL, KALHER",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.4,
     "choiceCode": "MU6137SFE"
   },
@@ -18986,7 +18986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G. R. PATIL ENGLISH MEDIUM SECONDARY AMBERNATH",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.4,
     "choiceCode": "MU6604SFE"
   },
@@ -18996,7 +18996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.4,
     "choiceCode": "MU6900SGE"
   },
@@ -19006,7 +19006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.M.E. SOCIETY'S ENGLISH MEDIUM HIGH SCHOOL AND JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.2,
     "choiceCode": "MU6176SFE"
   },
@@ -19016,7 +19016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.R.ENGLISH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.2,
     "choiceCode": "MU6579SFE"
   },
@@ -19026,7 +19026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AWAMI GIRLS HIGHSCHOOL,GOVANDI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.2,
     "choiceCode": "MU6849SFE"
   },
@@ -19036,7 +19036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LATE SAU VIDYA VINOD ADHIKARI VIDYALAYA, LALONDE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 66.0,
     "choiceCode": "MU11477SNE"
   },
@@ -19046,7 +19046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ICLES'S MOTILAL JHUNJHUNWALA COLLEGE, VASHI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.8,
     "choiceCode": "MU6423SGE"
   },
@@ -19056,7 +19056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M G M ACADEMY'S HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.8,
     "choiceCode": "MU11543SFE"
   },
@@ -19066,7 +19066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SISTER NIVEDITA ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE BHIWANDI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.6,
     "choiceCode": "MU11884SFE"
   },
@@ -19076,7 +19076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "C. E. S MARCELINE JUNIOR COLLEGE, KURLA (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.4,
     "choiceCode": "MU6933SNE"
   },
@@ -19086,7 +19086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAJARAM SETH VIDYALAYA, BHANDUP (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.4,
     "choiceCode": "MU7003SFE"
   },
@@ -19096,7 +19096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PACE JR. SCIENCE COLLEGE, NERUL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.2,
     "choiceCode": "MU6467SFE"
   },
@@ -19106,7 +19106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KOLAD HIGH SCH AND JR.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.2,
     "choiceCode": "MU7509SGE"
   },
@@ -19116,7 +19116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S V M JR COLLEGE OF SCI & COM",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.2,
     "choiceCode": "MU11604SFE"
   },
@@ -19126,7 +19126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GRESIYAS SEC HIGHSCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.0,
     "choiceCode": "MU6338SFE"
   },
@@ -19136,7 +19136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST ANTHONY'S CONVENT SCHOOL SECONDARY",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.0,
     "choiceCode": "MU6575SFE"
   },
@@ -19146,7 +19146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE ANDHRA EDUCATION SOCIETY'S HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.0,
     "choiceCode": "MU6817SNE"
   },
@@ -19156,7 +19156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.0,
     "choiceCode": "MU6880SGE"
   },
@@ -19166,7 +19166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA VIKASINI JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 65.0,
     "choiceCode": "MU11575SFE"
   },
@@ -19176,7 +19176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AL NOOR GIRLS HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.8,
     "choiceCode": "MU6164SFE"
   },
@@ -19186,7 +19186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ART COMM & SCI JUNIOR COLLEGE GOVELI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.8,
     "choiceCode": "MU6196SPE"
   },
@@ -19196,7 +19196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ERA ACADEMY HIGH SCHOOL AND JR.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.8,
     "choiceCode": "MU6571SFE"
   },
@@ -19206,7 +19206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BOISAR MILITRY SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.8,
     "choiceCode": "MU11514SFE"
   },
@@ -19216,7 +19216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJALI ENGLISH SCHOOL & JUNIOR COLLEGE CHANDIVALI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.6,
     "choiceCode": "MU6953SFE"
   },
@@ -19226,7 +19226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND VIDYAMANDIR AND JR COLLEGE WADA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.6,
     "choiceCode": "MU11677SGM"
   },
@@ -19236,7 +19236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VISHWABHARATI JR.COLLEGE,KOPARKHAIRANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.4,
     "choiceCode": "MU6413SFE"
   },
@@ -19246,7 +19246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SREE NARAYANA GURU COLLEGE OF COMMERCE CHEMBUR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.4,
     "choiceCode": "MU6861SFE"
   },
@@ -19256,7 +19256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABHINAV JNYAN MANDIR PRASHALA AND Jr. COLLEGE KARJAT,RAIGAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.2,
     "choiceCode": "MU7349SFE"
   },
@@ -19266,7 +19266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ROTARY ENGLISH MEDIUM HIGH SCHOOL URAN",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.2,
     "choiceCode": "MU7547SFE"
   },
@@ -19276,7 +19276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE KISHOR MANGALMURTI JUNIOR COLLAGE OF ARTS SCIENCE AND COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.2,
     "choiceCode": "MU11580SFE"
   },
@@ -19286,7 +19286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAJABHAU MONE HIGHER SECONDARY SCHOOL , GOREGAON",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 64.0,
     "choiceCode": "MU7388SGE"
   },
@@ -19296,7 +19296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IDEAL HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.6,
     "choiceCode": "MU6847SGE"
   },
@@ -19306,7 +19306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S.Late S.P.Jain Jr.Collge Nagothane Tal :Roha Dist:Raigad",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.6,
     "choiceCode": "MU7513SPM"
   },
@@ -19316,7 +19316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "EDEN HIGH SCHOOL AND JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.4,
     "choiceCode": "MU6935SFE"
   },
@@ -19326,7 +19326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL URDU SECONDARY",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.2,
     "choiceCode": "MU6265SFE"
   },
@@ -19336,7 +19336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. A R UNDRE ENG. HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.2,
     "choiceCode": "MU7526SFE"
   },
@@ -19346,7 +19346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRAYESH MARATHI & ENGLISH JR. COLLEGE, SECTOR 9 KALAMBOLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 63.0,
     "choiceCode": "MU11923SFE"
   },
@@ -19356,7 +19356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVODAYA ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.8,
     "choiceCode": "MU6677SFE"
   },
@@ -19366,7 +19366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PACE JUNIOR SCIENCE COLLEGE THANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.8,
     "choiceCode": "MU6689SFE"
   },
@@ -19376,7 +19376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW SHRI GURU GOVINDSINGH ENGLISH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.8,
     "choiceCode": "MU12424SFE"
   },
@@ -19386,7 +19386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. H. A. RAIS HIGH SCHOOL AND JUNIOR COLLEGE, BHIWANDI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.6,
     "choiceCode": "MU6177SPU"
   },
@@ -19396,7 +19396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PACE JUNIOR SCIENCE COLLEGE, DADAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.6,
     "choiceCode": "MU6765SFE"
   },
@@ -19406,7 +19406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA ACD & SPO.MARATHI SCHOOL KHANDA COLONY",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.6,
     "choiceCode": "MU7480SFE"
   },
@@ -19416,7 +19416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LATE SAU VIDYA VINOD ADHIKARI VIDYALAYA, LALONDE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.6,
     "choiceCode": "MU11477SFE"
   },
@@ -19426,7 +19426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JNANA SARITA JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.4,
     "choiceCode": "MU6598SGE"
   },
@@ -19436,7 +19436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.M.M.ROTARY SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.4,
     "choiceCode": "MU6605SFE"
   },
@@ -19446,7 +19446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAMATA VIDYAMANDIR JUNIOR COLLEGE OF COMMERCE & SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.4,
     "choiceCode": "MU7229SFE"
   },
@@ -19456,7 +19456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BIMANAGAR EDUCATION SOC'S MADHYAMIK VIDYALAYA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.4,
     "choiceCode": "MU7271SNE"
   },
@@ -19466,7 +19466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VANI VIDYALAYA & JR. COLLEGE, MULUND (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.2,
     "choiceCode": "MU7011SGE"
   },
@@ -19476,7 +19476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHAMPIONS SCIENCE JUNIOR COLLEGE, ANDHERI WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.2,
     "choiceCode": "MU7222SFE"
   },
@@ -19486,7 +19486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HORIZON PRIMARY SCHOOL , RAYATE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.0,
     "choiceCode": "MU6199SFE"
   },
@@ -19496,7 +19496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN ISLAM ALLANA GIRLS HIGH SCHOOL & JR. COLLEGE KURLA (W).",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.0,
     "choiceCode": "MU6931SNE"
   },
@@ -19506,7 +19506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURU NANAK HIGH SCHOOL & JR. COLLEGE, BHANDUP (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 62.0,
     "choiceCode": "MU6990SGE"
   },
@@ -19516,7 +19516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JSM JR. COLLEGE ALIBAG",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.8,
     "choiceCode": "MU7333SGE"
   },
@@ -19526,7 +19526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYAN GANGA SECONDARY ENGLISH SCHOOL & JUNIOR COLLEGE KALVA THANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.8,
     "choiceCode": "MU12010SFE"
   },
@@ -19536,7 +19536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Moon International School and junior college",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.8,
     "choiceCode": "MU12314SFE"
   },
@@ -19546,7 +19546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.J. MHATRE VIDYA NAVADE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.6,
     "choiceCode": "MU7460SNE"
   },
@@ -19556,7 +19556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIKRAMGAD HIGHSCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.6,
     "choiceCode": "MU11661SPM"
   },
@@ -19566,7 +19566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVI MUMBAI VIDYALAYA SEC. & JR. COLLEGE KOPARI SEC 26",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.4,
     "choiceCode": "MU6417SFE"
   },
@@ -19576,7 +19576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.G.M. HIGH SCHOOL & JR. COLLEGE, NERUL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.4,
     "choiceCode": "MU6443SFE"
   },
@@ -19586,7 +19586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D. E. SOCIET'S KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.4,
     "choiceCode": "MU6767SGE"
   },
@@ -19596,7 +19596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI GAURIDUTT MITTAL VIDYALAYA AND JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.4,
     "choiceCode": "MU6822SGE"
   },
@@ -19606,7 +19606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. M. S. P. MANDL'S S.I.H. BHATIA HIGH SCHOOL & JR. COLLEGE, KURLA (W).",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.4,
     "choiceCode": "MU6934SFE"
   },
@@ -19616,7 +19616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A.K.I URDU HIGH SCHOOL GOREGAO",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.4,
     "choiceCode": "MU7389SFE"
   },
@@ -19626,7 +19626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. XAVIER'S HIGH SCHOOL & JUNIOR COLLEGE, BHAYANDAR WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.4,
     "choiceCode": "MU12494SFE"
   },
@@ -19636,7 +19636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHOEB URDU HIGH SCHOOL and JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.2,
     "choiceCode": "MU6541SNE"
   },
@@ -19646,7 +19646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DURGADEVI SARAF JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.2,
     "choiceCode": "MU7205SFE"
   },
@@ -19656,7 +19656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN HIMAYATUL ISLAM BHAYEEMIYA ISANE URDU HIGH SCHOOL & DR.A.A. DESHMUKH JR. COLLEGE, MAHAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.2,
     "choiceCode": "MU7385SFE"
   },
@@ -19666,7 +19666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL JOHE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.2,
     "choiceCode": "MU7495SGM"
   },
@@ -19676,7 +19676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "The BMS'S Brio e-Tech Junior College of Science Commerce and Arts",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 61.0,
     "choiceCode": "MU7288SFE"
   },
@@ -19686,7 +19686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KENT VALLEY INTERNATIONAL SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.8,
     "choiceCode": "MU6195SFE"
   },
@@ -19696,7 +19696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.JOSEF.S.H.S.,UTTAN",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.8,
     "choiceCode": "MU6313SFE"
   },
@@ -19706,7 +19706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TAKSHSHILA VIDYALA SEC SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.8,
     "choiceCode": "MU6615SNE"
   },
@@ -19716,7 +19716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN ISLAM DR. M. I. J. HIGH SCHOOL & JR COLLEGE OF SCI & COM",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.8,
     "choiceCode": "MU7054SGE"
   },
@@ -19726,7 +19726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S SECONDARY MARATHI HIGH SCHOOL KALAMBOLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.8,
     "choiceCode": "MU7474SFE"
   },
@@ -19736,7 +19736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DON BOSCO HIGH SCHOOL & JUNIOR COLLEGE, BORIVALI (WEST)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.6,
     "choiceCode": "MU7268SFE"
   },
@@ -19746,7 +19746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER SMILE JR. COLLEGE OF COMMERCE AND SCIENCE, KANDIVALI (EAST)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.6,
     "choiceCode": "MU7306SFE"
   },
@@ -19756,7 +19756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GOENKA GLOBAL SCHOOL AND JUNIOR COLLEGE, WAGLE ESTATE THANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.6,
     "choiceCode": "MU11742SFE"
   },
@@ -19766,7 +19766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HERA ENGLISH SCHOOL AND JUNIOR COLLEGE, MAHAPOLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.4,
     "choiceCode": "MU6144SFE"
   },
@@ -19776,7 +19776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "T S PUBLIC SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.4,
     "choiceCode": "MU6246SFE"
   },
@@ -19786,7 +19786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW IDEAL SCHOOL AND JR COLLEGE VASHIND",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.4,
     "choiceCode": "MU6503SFE"
   },
@@ -19796,7 +19796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. R. JR COLLEGE OF COM. & SCI.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.4,
     "choiceCode": "MU7286SNE"
   },
@@ -19806,7 +19806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVJEEVAN VIDYAMANDIR AND D G TATKARE JR COLLEGE , TALASHET",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.4,
     "choiceCode": "MU7396SPM"
   },
@@ -19816,7 +19816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.K. BOSE JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.2,
     "choiceCode": "MU6235SFE"
   },
@@ -19826,7 +19826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHILA SAMITI ENG.SEC.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.2,
     "choiceCode": "MU6290SFE"
   },
@@ -19836,7 +19836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ELPHINSTONE COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.2,
     "choiceCode": "MU6726SOE"
   },
@@ -19846,7 +19846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHAVANI SHANKAR RD.JR.COLLEGE OF SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.2,
     "choiceCode": "MU6766SFE"
   },
@@ -19856,7 +19856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NIRMALA MEM. FOUNDATION JR COLLEGE, MALAD EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.2,
     "choiceCode": "MU7208SFE"
   },
@@ -19866,7 +19866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Dardmand Kalsekar High School and Junior College Arts Commerce Science Kamble Trafe Mahad",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.2,
     "choiceCode": "MU7379SFE"
   },
@@ -19876,7 +19876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CITIZENS EDUCATION SOCIETY'S JR COLLEGE OF ART'S COMMERCE AND SCIENCE , URAN",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.2,
     "choiceCode": "MU7545SNE"
   },
@@ -19886,7 +19886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MYMM Jr.College of Arts, Comm & Science, Khodala-Jogalwadi",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.2,
     "choiceCode": "MU11464SFE"
   },
@@ -19896,7 +19896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABHINAV VID.SEC SCH",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6216SFE"
   },
@@ -19906,7 +19906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRAGATI COLLEGE ( ARTS AND COMMERCE )",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6312SNE"
   },
@@ -19916,7 +19916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A.V.M.S.M.S.,BHAYANDAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6327SPE"
   },
@@ -19926,7 +19926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BANEGAR ENGLISH SCHOOL & HAFIZA JR COLLEGE OF ARTS SCI &COM",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6356SNE"
   },
@@ -19936,7 +19936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SYMBIOSIS CONVENT HIGH SCHOOL & JUNIOR COLLEGE OF SCIENCE COMMERCE & ARTS",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6555SFE"
   },
@@ -19946,7 +19946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.E. SOC. ENG. SEC. SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6694SNE"
   },
@@ -19956,7 +19956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AMARNATH HIGH SCHOOL AND JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6843SNE"
   },
@@ -19966,7 +19966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. M. SHETTY HIGH SCHOOL, POWAI.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU6957SFE"
   },
@@ -19976,7 +19976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. MARY'S HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU7042SGE"
   },
@@ -19986,7 +19986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU7241SGE"
   },
@@ -19996,7 +19996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ROCKS JR. COLLEGE OF COMMERCE & SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU7290SNE"
   },
@@ -20006,7 +20006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHANGU KANA THAKUR SECONDARY & HIGHER SECONDARY VIDYALAYA , NEW PANVEL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU7486SPE"
   },
@@ -20016,7 +20016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.B.VADER SCHOOL . PALI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU7523SNM"
   },
@@ -20026,7 +20026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. MARY'S CONVENT HIGH SCHOOL URAN",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU7546SNE"
   },
@@ -20036,7 +20036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GIRIJA MHATRE ENGLISH HIGH SCHOOL AND JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU11560SFE"
   },
@@ -20046,7 +20046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HUZAIFA URDU HIGHSCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU11599SNE"
   },
@@ -20056,7 +20056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.B.HARRIS JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 60.0,
     "choiceCode": "MU11638SFE"
   },
@@ -20066,7 +20066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "WAKADPADA HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.4,
     "choiceCode": "MU11471SFM"
   },
@@ -20076,7 +20076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SATISH PRADHAN DNYANASADHANA JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.2,
     "choiceCode": "MU6681SGE"
   },
@@ -20086,7 +20086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NARAYANA JUNIOR COLLEGE ANDHERI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.2,
     "choiceCode": "MU7164SFE"
   },
@@ -20096,7 +20096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HASHA LAKHMA PATIL HIGH SCHOOL AND JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.2,
     "choiceCode": "MU12200SFE"
   },
@@ -20106,7 +20106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANSARI FARID MEMORIAL GIRLS HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.0,
     "choiceCode": "MU6180SFE"
   },
@@ -20116,7 +20116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LAXMAN DEVRAM SONAWANE COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.0,
     "choiceCode": "MU6264SFE"
   },
@@ -20126,7 +20126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA VIDYA. DHASAI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.0,
     "choiceCode": "MU6365SPM"
   },
@@ -20136,7 +20136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AANAD DIGHE VIDYALAYA SHAHAPUR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 59.0,
     "choiceCode": "MU6499SFE"
   },
@@ -20146,7 +20146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE RAJ EDUCATION CENTER GHOTAWADE SUDHAGAD RAIGAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.8,
     "choiceCode": "MU11822SFE"
   },
@@ -20156,7 +20156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHIWANDI NIZAMPUR NAGARPALIKA MAHAVIDHYALAY BHIWANDI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.6,
     "choiceCode": "MU6166SGE"
   },
@@ -20166,7 +20166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.6,
     "choiceCode": "MU6999SPE"
   },
@@ -20176,7 +20176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "FIRSTEP GLOBAL SCHOOL AND JUNIOR COLLEGE OF ARTS, COMMERCE AND SCIENCE MIRA ROAD THANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.6,
     "choiceCode": "MU11912SFE"
   },
@@ -20186,7 +20186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHANDRABHAN SHARMA JR COLLEGE POWAI, MUMBAI-76.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.4,
     "choiceCode": "MU6980SFE"
   },
@@ -20196,7 +20196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GYAN KENDRA SEC. HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.4,
     "choiceCode": "MU7097SFE"
   },
@@ -20206,7 +20206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Anjuman Islam Janjira Agri. High School & Jr. College of Science & Arts Murud Janjira.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.4,
     "choiceCode": "MU7409SGE"
   },
@@ -20216,7 +20216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Gurukrupa secondary & higher Secondary High school kalyan (w)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.4,
     "choiceCode": "MU12129SFE"
   },
@@ -20226,7 +20226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARDA NEW HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.2,
     "choiceCode": "MU6717SNE"
   },
@@ -20236,7 +20236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "INDIAN MODEL JUNIOR COLLEGE ULWE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.2,
     "choiceCode": "MU7449SFE"
   },
@@ -20246,7 +20246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANSKRUTI JUNIOR COLLEGE LALONDE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.2,
     "choiceCode": "MU11479SFE"
   },
@@ -20256,7 +20256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST AGRASEN HIGH SCH & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.0,
     "choiceCode": "MU6530SFE"
   },
@@ -20266,7 +20266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAMARAJAR MEMORIAL ENGLISH HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.0,
     "choiceCode": "MU6813SFE"
   },
@@ -20276,7 +20276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.H.M.W. JR COLLEGE OF SCI & COM",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.0,
     "choiceCode": "MU7128SNE"
   },
@@ -20286,7 +20286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.L.R.T. GALA PIONEER ENGLISH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.0,
     "choiceCode": "MU7231SFE"
   },
@@ -20296,7 +20296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVYUG SEC. VIDYALAYA I LADVAL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.0,
     "choiceCode": "MU7369SFE"
   },
@@ -20306,7 +20306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ATMA MALIK ENGLISH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 58.0,
     "choiceCode": "MU11667SFE"
   },
@@ -20316,7 +20316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J . K . PATIL ENGLISH MEDIUM SCHOOL AND JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.8,
     "choiceCode": "MU6232SFE"
   },
@@ -20326,7 +20326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. VISHWANATH KARAD VISHWAJYOTI INTERNATIONAL SCHOOL ARTS, SCIENCE JR COLLEGE KASHIGAON",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.8,
     "choiceCode": "MU6351SFE"
   },
@@ -20336,7 +20336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MCGM'S RATANBAI WALBAI MUNCIPAL JR. SCIENCE COLLEGE MULUND (W), MUMBAI-80",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.8,
     "choiceCode": "MU7029SFE"
   },
@@ -20346,7 +20346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST MATHEWS ENG HIGH SCHOOL MALVANI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.8,
     "choiceCode": "MU7186SFE"
   },
@@ -20356,7 +20356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT INDIRA GANDHI VIDYALAY AVM JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.8,
     "choiceCode": "MU11581SFE"
   },
@@ -20366,7 +20366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CARDIFF JUNIOR COLLEGE VIRAR (E)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.8,
     "choiceCode": "MU11588SFE"
   },
@@ -20376,7 +20376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HUDA ENGLISH HIGH & JU.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.6,
     "choiceCode": "MU6169SNE"
   },
@@ -20386,7 +20386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE KESHAV RAMBHAU KOTKAR SECODNARY & H.SECONDARY VIDYALAYA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.6,
     "choiceCode": "MU6234SFE"
   },
@@ -20396,7 +20396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL URDU SECONDARY",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.6,
     "choiceCode": "MU6265SGU"
   },
@@ -20406,7 +20406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHARASHTRA COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.6,
     "choiceCode": "MU6781SGE"
   },
@@ -20416,7 +20416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHAVNA TRUST JUNIOR & DEGREE COLLEGE OF COMMERCE AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.6,
     "choiceCode": "MU6865SFE"
   },
@@ -20426,7 +20426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HASAN KHAN DESHMUKH & PASHA MIYA KHATIB HIGH SCHOOL & JUNIOR COLLEGE OF ARTS,SCIENCE & COMMERCE ,Lower Tudil",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.6,
     "choiceCode": "MU7383SPE"
   },
@@ -20436,7 +20436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI KANJIBHAI VITHALDAS PAREKH ANAND FR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.6,
     "choiceCode": "MU11630SFE"
   },
@@ -20446,7 +20446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PADMASHALI ENG.M.HIGH SCH.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.4,
     "choiceCode": "MU6174SFE"
   },
@@ -20456,7 +20456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D.N.C MULTIPURPOSE SECONARY SCHOOL DATTANAGAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.4,
     "choiceCode": "MU6311SGE"
   },
@@ -20466,7 +20466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R K MEMORIAL SEC AND JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.4,
     "choiceCode": "MU6352SFE"
   },
@@ -20476,7 +20476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANGAON JUNIOR COLLEGE , MANGAON",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.4,
     "choiceCode": "MU7397SPE"
   },
@@ -20486,7 +20486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.S.P. MANDAL'S DR. S.V. SAMANT JR. COLLEGE, TURBHE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.2,
     "choiceCode": "MU6430SFE"
   },
@@ -20496,7 +20496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMCHAND KIMATRAM TALREJA COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.2,
     "choiceCode": "MU6638SGE"
   },
@@ -20506,7 +20506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BUNTS SANGHAS ARATHI SSHASHI KIRAN SHETTY JR. COLLEGE, KURLA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.2,
     "choiceCode": "MU6948SFE"
   },
@@ -20516,7 +20516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. GOKALIBAI P P HIGH SCHOOL AND ACHARYA A V PATEL JR COLLEGE VILE PARLE WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.2,
     "choiceCode": "MU7094SGE"
   },
@@ -20526,7 +20526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DIXIT ROAD JR COLLEGE OF SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.2,
     "choiceCode": "MU7155SFE"
   },
@@ -20536,7 +20536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIR J. P. HIGH SCHOOL AND JUNIOR COLLEGE, MALAD (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.2,
     "choiceCode": "MU7198SFE"
   },
@@ -20546,7 +20546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI T P BHATIA JR. COLLEGE OF SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.2,
     "choiceCode": "MU7254SFE"
   },
@@ -20556,7 +20556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAUNT CARMEL JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.2,
     "choiceCode": "MU11606SFE"
   },
@@ -20566,7 +20566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LOKMANYA GURUKUL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.0,
     "choiceCode": "MU6214SFE"
   },
@@ -20576,7 +20576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J. H. Poddar High School & Jr. College",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.0,
     "choiceCode": "MU6320SFE"
   },
@@ -20586,7 +20586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MRS BHAVANADEVI BHAGWAN SAMBARE JUNIOR COLLEGE ZADPOLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.0,
     "choiceCode": "MU11657SFE"
   },
@@ -20596,7 +20596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Prathana Junior College of Arts, Science &Commerce",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 57.0,
     "choiceCode": "MU12315SFE"
   },
@@ -20606,7 +20606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIVEKANANDA JR. COLLEGE, KHARIVALI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.8,
     "choiceCode": "MU6131SPE"
   },
@@ -20616,7 +20616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GUARDIAN HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.8,
     "choiceCode": "MU6231SFE"
   },
@@ -20626,7 +20626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BSM'S DNYANANANDA SCHOOL AND JR COLLEGE OF SCIENCE AND COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.8,
     "choiceCode": "MU6683SFE"
   },
@@ -20636,7 +20636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NOBAL ANGEL ENGLISH HIGH SCHOOL & JR COLLEGE BHANDUP ( w )",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.8,
     "choiceCode": "MU7004SFE"
   },
@@ -20646,7 +20646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "T.H. WAJEKAR HIGH SCH. FUNDE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.8,
     "choiceCode": "MU7538SGE"
   },
@@ -20656,7 +20656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KIRAN PATIL JR COLL.OF ARTS,COMM,SCI.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.8,
     "choiceCode": "MU11565SFE"
   },
@@ -20666,7 +20666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SUNRISE GLOBAL SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.8,
     "choiceCode": "MU11784SFE"
   },
@@ -20676,7 +20676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PANNA ENGLISH SECONDARY SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.6,
     "choiceCode": "MU6576SFE"
   },
@@ -20686,7 +20686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. N.N.PATIL HIGH SCH. AND JR COLLEGE , POYNAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.6,
     "choiceCode": "MU7322SPM"
   },
@@ -20696,7 +20696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Naj Academy High school & jr College of science Commerce and Arts Mazgaon",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.6,
     "choiceCode": "MU7407SFE"
   },
@@ -20706,7 +20706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B N MEMORIAL ENG HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.6,
     "choiceCode": "MU11626SFE"
   },
@@ -20716,7 +20716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D. B. JADHAV SCHOOL, NANDKAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.6,
     "choiceCode": "MU12478SFE"
   },
@@ -20726,7 +20726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.R.PATIL ENG.MED.HIGH SCHOOL & J.R.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.4,
     "choiceCode": "MU6586SFE"
   },
@@ -20736,7 +20736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VANI VIDYALAYA & JR. COLLEGE, MULUND (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.4,
     "choiceCode": "MU7011SFE"
   },
@@ -20746,7 +20746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST ANDREWS INTERNATIONAL SCHOOL AND JR COLLEGE , AKURLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.4,
     "choiceCode": "MU7441SFE"
   },
@@ -20756,7 +20756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AGARI SHIKSHAN SANSTHA'S HIGHER SECONDARY SCHOOL, KHANDA COLONY",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.4,
     "choiceCode": "MU7488SFE"
   },
@@ -20766,7 +20766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUKUL ENGLISH MEDIUM SCHOOL AND JR.COLLEGE, VADKHAL, PEN, DIST - RAIGAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.4,
     "choiceCode": "MU11855SFE"
   },
@@ -20776,7 +20776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MODEL COLLEGE OF SCI & COM.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.2,
     "choiceCode": "MU6286SNE"
   },
@@ -20786,7 +20786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.T.P. HINDI SEC SCH",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.0,
     "choiceCode": "MU6211SFE"
   },
@@ -20796,7 +20796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAINATH HINDI SCH SEC&HSEC",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.0,
     "choiceCode": "MU6421SGE"
   },
@@ -20806,7 +20806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MS PUBLIC UPPER PRIMARY SECONDARY SCHOOL AND JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.0,
     "choiceCode": "MU6551SFE"
   },
@@ -20816,7 +20816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S H K GANDHARPALE ENG SEC",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.0,
     "choiceCode": "MU7374SFE"
   },
@@ -20826,7 +20826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. K.L.TIWARI JUNIOR COLLEGE OF COMMERCE AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 56.0,
     "choiceCode": "MU11554SFE"
   },
@@ -20836,7 +20836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. H. A. RAIS HIGH SCHOOL AND JUNIOR COLLEGE, BHIWANDI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.8,
     "choiceCode": "MU6177SGU"
   },
@@ -20846,7 +20846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.V.NERUKAR SEC.SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.8,
     "choiceCode": "MU6310SGE"
   },
@@ -20856,7 +20856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.B.&SC JR COLLEGE OF ARTS,COMMERCE AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.8,
     "choiceCode": "MU6686SFE"
   },
@@ -20866,7 +20866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RUBY ENGLISH HIGH SCHOOL & JR. COLLEGE GOVANDI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.8,
     "choiceCode": "MU6860SFE"
   },
@@ -20876,7 +20876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M B MORE FOUNDATION ARTS COMMERCE & SCIENCE JR.COLLEGE DHATAV",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.8,
     "choiceCode": "MU7512SFM"
   },
@@ -20886,7 +20886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TARAPUR V.&J.COLLEGE MIDC",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.8,
     "choiceCode": "MU11492SFE"
   },
@@ -20896,7 +20896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHIRVANE VIDYALAYA & JR. COLLEGE, NERUL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.6,
     "choiceCode": "MU6441SFE"
   },
@@ -20906,7 +20906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.6,
     "choiceCode": "MU7022SFE"
   },
@@ -20916,7 +20916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH ANANDILAL PODAR JR. COLLEGE , SANTACRUZ",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.6,
     "choiceCode": "MU7056SGE"
   },
@@ -20926,7 +20926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LORDS GRACE ENGLISH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.6,
     "choiceCode": "MU7303SFE"
   },
@@ -20936,7 +20936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GOKHALE EDUCATION SOCIETY'S HIGHSCHOOL KHARGHAR M",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.6,
     "choiceCode": "MU7422SFE"
   },
@@ -20946,7 +20946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. N.P.SHAH HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.6,
     "choiceCode": "MU11540SFE"
   },
@@ -20956,7 +20956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LOURDES HIGHSCHOOL AND JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.4,
     "choiceCode": "MU6270SNE"
   },
@@ -20966,7 +20966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ARIHANT SCHOOL AND JUNIOR COLLEGE OF COMMERCE AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.4,
     "choiceCode": "MU6336SFE"
   },
@@ -20976,7 +20976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N. ENGLISH SCHOOL DOLKHAMB",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.4,
     "choiceCode": "MU6480SFE"
   },
@@ -20986,7 +20986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SOU. NALINI YASHWANTRAO DODE VIDYALAYA, MULUND (E)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.4,
     "choiceCode": "MU6998SFE"
   },
@@ -20996,7 +20996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.R. HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.2,
     "choiceCode": "MU6172SFE"
   },
@@ -21006,7 +21006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANSAROVAR SECONDARY MARATHI VIDYALAY KAMOTHE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.2,
     "choiceCode": "MU7461SFE"
   },
@@ -21016,7 +21016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. Mehendale HIGH SCHOOL & JR COLLEGE Roha TAL.ROHA , RAIGAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.2,
     "choiceCode": "MU7518SPM"
   },
@@ -21026,7 +21026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAUSTUBH VIDYALAY AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.2,
     "choiceCode": "MU11569SFE"
   },
@@ -21036,7 +21036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANNAPURNA PUBLIC SCHOOL AND JUNIOR COLLEGE BILALPADA NALLASOPARA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.2,
     "choiceCode": "MU12133SFE"
   },
@@ -21046,7 +21046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW MODERN ENGLISH HIGH SCHOOL AND KAMLADEVI JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 55.0,
     "choiceCode": "MU6282SNE"
   },
@@ -21056,7 +21056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHANGU KANA THAKUR SECONDARY & HIGHER SECONDARY VIDYALAYA , NEW PANVEL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.8,
     "choiceCode": "MU7486SNE"
   },
@@ -21066,7 +21066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADIVASI PRAGATI MANDAL SANCHALIT ARTS, COMMERCE & SCIENCE JUNIOR COLLEGE, TALASARI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.8,
     "choiceCode": "MU11536SPE"
   },
@@ -21076,7 +21076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PANCHAM JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.8,
     "choiceCode": "MU11628SFE"
   },
@@ -21086,7 +21086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST ALOYSIUS HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.8,
     "choiceCode": "MU11629SFE"
   },
@@ -21096,7 +21096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANIRUDDHA HIGH SCHOOL AND JUNIOR COLLEGE, BENDSHIL, BADLAPUR EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.8,
     "choiceCode": "MU11746SFE"
   },
@@ -21106,7 +21106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI.DHONDU NAU THAKARE JR.COLLEGE,RAJNOLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.6,
     "choiceCode": "MU6151SNE"
   },
@@ -21116,7 +21116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUKUL ARTS SCIENCE AND COMMERCE COLLEGE,AMBADI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.6,
     "choiceCode": "MU6156SFE"
   },
@@ -21126,7 +21126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOHINDARSINGH KABAL SINGH HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.6,
     "choiceCode": "MU6261SFE"
   },
@@ -21136,7 +21136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAZIDUN HIGH SCHOOL & JR COLLEGE, SECTOR 1A, AIROLI NAKA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.6,
     "choiceCode": "MU6382SFE"
   },
@@ -21146,7 +21146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. XAVIERS ENG. SEC. SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.6,
     "choiceCode": "MU6655SFE"
   },
@@ -21156,7 +21156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MATOSHREE PRABODHINI JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.6,
     "choiceCode": "MU6690SFE"
   },
@@ -21166,7 +21166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHEMBUR KARNATAKA JUNIOR COLLEGE & ARTS, SCIENCE & COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.6,
     "choiceCode": "MU6877SFE"
   },
@@ -21176,7 +21176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "YUVA JUNIOR COLLEGE OF COMMERCE AND SCIENCE, TILAK NAGAR.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.6,
     "choiceCode": "MU6883SFE"
   },
@@ -21186,7 +21186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI BAPUSAHEB D D VISPUTE PRIMARY SCHOOL DEVAD ENG",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.6,
     "choiceCode": "MU7442SFE"
   },
@@ -21196,7 +21196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PATIL BALMANDIR (MAR SEC), MOHANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.4,
     "choiceCode": "MU6255SNE"
   },
@@ -21206,7 +21206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TILAKNAGAR VIDYAMANDIR ( SEC )",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.4,
     "choiceCode": "MU6308SGE"
   },
@@ -21216,7 +21216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TULSI HINDI MADHYAMIK VIDYALAYA AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.4,
     "choiceCode": "MU6786SGE"
   },
@@ -21226,7 +21226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. GOKALIBAI P P HIGH SCHOOL AND ACHARYA A V PATEL JR COLLEGE VILE PARLE WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.4,
     "choiceCode": "MU7094SNE"
   },
@@ -21236,7 +21236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PACE JR. SCIENCE COLLEGE, ANDHERI WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.4,
     "choiceCode": "MU7130SFE"
   },
@@ -21246,7 +21246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.K.PATIL JR COLLEGE CIDCO COLONY T.PACHNAND MARATHI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.4,
     "choiceCode": "MU7471SFE"
   },
@@ -21256,7 +21256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GYANODAYA SEC. HINDI SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.2,
     "choiceCode": "MU6666SPE"
   },
@@ -21266,7 +21266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANOHAR JOSHI JR. COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.2,
     "choiceCode": "MU6827SNE"
   },
@@ -21276,7 +21276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PODAR INTERNATIONAL HIGHER SECONDARY SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.2,
     "choiceCode": "MU7039SFE"
   },
@@ -21286,7 +21286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NERAL VIDYAMANDIR NERAL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.2,
     "choiceCode": "MU7341SPE"
   },
@@ -21296,7 +21296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.P.H. HIGH SCHOOL & P.G. JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.2,
     "choiceCode": "MU11433SGE"
   },
@@ -21306,7 +21306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHIVAI VIDYALAY ENGLISH MEDIUM SCHOOL AND JUNIOR COLLEGE,THANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.0,
     "choiceCode": "MU6661SFE"
   },
@@ -21316,7 +21316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PACE JUNIOR SCIENCE COLLEGE, CHEMBUR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.0,
     "choiceCode": "MU6929SFE"
   },
@@ -21326,7 +21326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RUSTOMJEE INTERNATIONAL SCHOOL & JR.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.0,
     "choiceCode": "MU7273SFE"
   },
@@ -21336,7 +21336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.D. SECONDARY SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 54.0,
     "choiceCode": "MU11436SNE"
   },
@@ -21346,7 +21346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LAXMAN DEVRAM SONAWANE COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.8,
     "choiceCode": "MU6264SPE"
   },
@@ -21356,7 +21356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ART,SCIENCE,COMMER JR.COLL.,KHARDI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.8,
     "choiceCode": "MU6479SFE"
   },
@@ -21366,7 +21366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHARASHTRA JR. COLLEGE, UNNAT NAGAR, GOREGAON (W), MUMBAI.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.8,
     "choiceCode": "MU7137SFE"
   },
@@ -21376,7 +21376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K E S DAGDUSHETH PARTE ENGLISH MEDIUM SECONDARY AND HIGHER SECONDARY SCHOOL MAHAD RAIGADMAHAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.8,
     "choiceCode": "MU7386SFE"
   },
@@ -21386,7 +21386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "URAN EDUCATION SOCT. & JR. COLLEGE URAN",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.8,
     "choiceCode": "MU7543SNE"
   },
@@ -21396,7 +21396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANTA VIDYALAYA AND JUNIOR COLLEGE, KARAV GADAB TAL PEN DIST. RAIGAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.8,
     "choiceCode": "MU11932SFM"
   },
@@ -21406,7 +21406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY CROSS CONVENT SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.6,
     "choiceCode": "MU6269SFE"
   },
@@ -21416,7 +21416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL KANNAD EDU. STY.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.6,
     "choiceCode": "MU6815SFE"
   },
@@ -21426,7 +21426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KCA ST. FRANCIS OF ASSISI INTERNATIONAL SCHOOL CHEMBUR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.6,
     "choiceCode": "MU6927SFE"
   },
@@ -21436,7 +21436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARASWATI VIDYAMANDIR & JR. COLLEGE, MALAD EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.6,
     "choiceCode": "MU7181SFE"
   },
@@ -21446,7 +21446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BAL SANSKAR VIDYA MANDIR KOKARE TARFE NATE ENGLISH MEDIUM SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.6,
     "choiceCode": "MU7368SFE"
   },
@@ -21456,7 +21456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOHANLAL SONE VIDYA BORLI PANC",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.6,
     "choiceCode": "MU7527SNE"
   },
@@ -21466,7 +21466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. MITRABAI ANANDRAO CHANDAVARKAR JR. COLLEGE BOISAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.6,
     "choiceCode": "MU11495SFE"
   },
@@ -21476,7 +21476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHANTI RATAN VIDYA MANDIR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.6,
     "choiceCode": "MU11502SNE"
   },
@@ -21486,7 +21486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SETH HIRACHAND MUTHA COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.4,
     "choiceCode": "MU6238SPE"
   },
@@ -21496,7 +21496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.H.JONDHALE VIDYAMANDIR ( MAR SEC. )",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.4,
     "choiceCode": "MU6299SGE"
   },
@@ -21506,7 +21506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARAT MODERN SCHOOL MANKIVALI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.4,
     "choiceCode": "MU6584SFE"
   },
@@ -21516,7 +21516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PODDAR BRIO INTERNATIONAL SCHOOL AND JUNIOR COLLEGE BADLAPUR EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.4,
     "choiceCode": "MU6610SFE"
   },
@@ -21526,7 +21526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.H. MARATHI HIGHSCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.4,
     "choiceCode": "MU6687SNE"
   },
@@ -21536,7 +21536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. BABASAHEB AMBEDKAR HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.4,
     "choiceCode": "MU6875SNE"
   },
@@ -21546,7 +21546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI. VARDAYINI MADHYAMIC VIDYALAYA KAPADE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.4,
     "choiceCode": "MU7503SFE"
   },
@@ -21556,7 +21556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.D. SECONDARY SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.4,
     "choiceCode": "MU11436SGE"
   },
@@ -21566,7 +21566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE DIVINE IMAGE SEC SCHOOL, BHAYANDER EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.2,
     "choiceCode": "MU6333SNE"
   },
@@ -21576,7 +21576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DON BOSCO HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.2,
     "choiceCode": "MU11558SFE"
   },
@@ -21586,7 +21586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.K.S. HIGHSCHOOL MANICKPUR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.2,
     "choiceCode": "MU11605SFE"
   },
@@ -21596,7 +21596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHAMPION SCIENCE JUNIOR COLLEGE, KHARGHAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.2,
     "choiceCode": "MU11766SFE"
   },
@@ -21606,7 +21606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DSS ENGLISH MEDIUM SCHOOL ATGAON",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.0,
     "choiceCode": "MU6488SFE"
   },
@@ -21616,7 +21616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. S.R.T. HIGH SCHOOL & V. M. PILANKAR Jr.COLLEGE REVDANDA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.0,
     "choiceCode": "MU7328SGE"
   },
@@ -21626,7 +21626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LOKNETA GOPINATHJI MUNDE JR COLLEGE BIRWADI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.0,
     "choiceCode": "MU7387SFE"
   },
@@ -21636,7 +21636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE MAVLI MANDAL HIGH SCHOOL AND JUNIOR COLLEGE THANE WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 53.0,
     "choiceCode": "MU11740SFE"
   },
@@ -21646,7 +21646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUKUL GRAND UNION SECONDARY SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.8,
     "choiceCode": "MU6606SFE"
   },
@@ -21656,7 +21656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL HIGH SCHOOL & JR. COLLEGE, BHANDUP (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.8,
     "choiceCode": "MU6989SFE"
   },
@@ -21666,7 +21666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. K. JR COLLEGE OF SCI. & COM.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.8,
     "choiceCode": "MU7202SNE"
   },
@@ -21676,7 +21676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE SIDDHIVINAYAK ENG SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.8,
     "choiceCode": "MU11550SFE"
   },
@@ -21686,7 +21686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ANTHONY'S HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.8,
     "choiceCode": "MU11616SFE"
   },
@@ -21696,7 +21696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MATUNGA LIONS PIONEER ENGLISH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.6,
     "choiceCode": "MU6812SFE"
   },
@@ -21706,7 +21706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PROGRESSIVE EDUCATION SOCIETY'S JR COLLEGE OF COMMERCE AND SCIENCE , KHOPOLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.6,
     "choiceCode": "MU7366SFE"
   },
@@ -21716,7 +21716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GNYANODAYA ENGLISH HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.6,
     "choiceCode": "MU11608SFE"
   },
@@ -21726,7 +21726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAMADIYA HIGH SCH.& J.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.4,
     "choiceCode": "MU6179SPU"
   },
@@ -21736,7 +21736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHEMBUR KARNATAKA JUNIOR COLLEGE & ARTS, SCIENCE & COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.4,
     "choiceCode": "MU6877SNE"
   },
@@ -21746,7 +21746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANSKAR DHAM VIDYA.MARATHI MEDIUM MADHYA. SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.4,
     "choiceCode": "MU7372SFM"
   },
@@ -21756,7 +21756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ROYAL ENGLISH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.2,
     "choiceCode": "MU6319SFE"
   },
@@ -21766,7 +21766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANPADA COLLEGE OF COMMERCE & TECHNOLOGY, SANPADA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.2,
     "choiceCode": "MU6438SFE"
   },
@@ -21776,7 +21776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.S.HIGH SCHOOL AND JR COLLEGE ,MORBA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.2,
     "choiceCode": "MU7393SGE"
   },
@@ -21786,7 +21786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. XAVIER INTERNATIONAL SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.0,
     "choiceCode": "MU6243SFE"
   },
@@ -21796,7 +21796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.H.JONDHALE VIDYAMANDIR ( MAR SEC. )",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.0,
     "choiceCode": "MU6299SFE"
   },
@@ -21806,7 +21806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VISHWABHARATI HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.0,
     "choiceCode": "MU6398SFE"
   },
@@ -21816,7 +21816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TERNA VID ENG SEC HSEC SCI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.0,
     "choiceCode": "MU6453SFE"
   },
@@ -21826,7 +21826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.G.T. INTERNATIONAL SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 52.0,
     "choiceCode": "MU7549SFE"
   },
@@ -21836,7 +21836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND ENG HIGH SCHOOL & JR COLLEGE BHIWANDI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.8,
     "choiceCode": "MU6188SFE"
   },
@@ -21846,7 +21846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G R PATIL ENG MED SEC SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.8,
     "choiceCode": "MU6230SFE"
   },
@@ -21856,7 +21856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE ENGLISH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.8,
     "choiceCode": "MU6673SFE"
   },
@@ -21866,7 +21866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AISHA ENGLISH HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.8,
     "choiceCode": "MU6851SFE"
   },
@@ -21876,7 +21876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DIVINE PROVIDENCE JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.8,
     "choiceCode": "MU11643SFE"
   },
@@ -21886,7 +21886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAMBHAJIRAO DESHMUKH PUBLIC SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.6,
     "choiceCode": "MU6200SFE"
   },
@@ -21896,7 +21896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MATOSHREE VELABAI DEVJI HARIYA JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.6,
     "choiceCode": "MU6258SNE"
   },
@@ -21906,7 +21906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHAH J.M.SEC.ENG.SCHOOL & DKVC COLLEGE OF COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.6,
     "choiceCode": "MU6291SFE"
   },
@@ -21916,7 +21916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAVINDRA BHARATI HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.6,
     "choiceCode": "MU7108SFE"
   },
@@ -21926,7 +21926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ABHAY JUNIOR COLLEGE OF ARTS, COMMERCE AND SCIENCE, VIKHROLI EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.6,
     "choiceCode": "MU7309SFE"
   },
@@ -21936,7 +21936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA VARDHI JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.6,
     "choiceCode": "MU11625SFE"
   },
@@ -21946,7 +21946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND VIDYAMANDIR AND JR COLLEGE WADA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.6,
     "choiceCode": "MU11677SPM"
   },
@@ -21956,7 +21956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GOPINATH PATIL Jr. COLLEGE, KHANIVALI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU6140SFE"
   },
@@ -21966,7 +21966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M J SCHOOL & JR COLLEGE OF ARTS ,COMMERCE &SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU6580SFE"
   },
@@ -21976,7 +21976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARDAR VALLABBHAI PATEL HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU7243SFE"
   },
@@ -21986,7 +21986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND INTRNATIONAL SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU7258SFE"
   },
@@ -21996,7 +21996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAI BHAVANI VIDYALAYA & JR. COLLEGE, KANDIVALI (WEST)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU7296SFE"
   },
@@ -22006,7 +22006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAJABHAU MONE HIGHER SECONDARY SCHOOL , GOREGAON",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU7388SPE"
   },
@@ -22016,7 +22016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RELIANCE FOUNDATION SCHOOL NAGOTHANE SECONDARY MARATHI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU7515SFE"
   },
@@ -22026,7 +22026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. A R UNDRE ENG. HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU7526SNE"
   },
@@ -22036,7 +22036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ALDEL EDUCATION TRUSTS,ST.JOHN JUNIOR COLLEGE PALGHAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU11490SFE"
   },
@@ -22046,7 +22046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JOHN 23 ENG. SEC. AGASHI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU11541SFE"
   },
@@ -22056,7 +22056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DAR-UL-MADINAH ENGLISH HIGH SCHOOL & JUNIOR COLLEGE OF ARTS, SCIENCE AND COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.4,
     "choiceCode": "MU12328SFE"
   },
@@ -22066,7 +22066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHAHA C. HIGHSCHOOL KINHAVALI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU6482SFM"
   },
@@ -22076,7 +22076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ARNOLD'S SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU7086SFE"
   },
@@ -22086,7 +22086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHATRAPATI SHIVAJI VIDYALAYA JASAI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU7539SGE"
   },
@@ -22096,7 +22096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "OMKAR JR COLLEGE , MURUD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.2,
     "choiceCode": "MU11928SFE"
   },
@@ -22106,7 +22106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.R.PATIL JUNIOR COLLEGE, MANDA (E)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.0,
     "choiceCode": "MU6252SFE"
   },
@@ -22116,7 +22116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BTM'S BRIGHT HIGH SCHOOL & JR. COLLEGE, BHANDUP (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.0,
     "choiceCode": "MU6993SNE"
   },
@@ -22126,7 +22126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ALPHA JR COLLEGE OF SCI & COM",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.0,
     "choiceCode": "MU7147SFE"
   },
@@ -22136,7 +22136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BRIGHT INTERNATIONAL SCHOOL & JR. COLLEGE, SECTOR 5, PETHALI GAON, NAVI MUMBAI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 51.0,
     "choiceCode": "MU12496SFE"
   },
@@ -22146,7 +22146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ART COMM & SCI JUNIOR COLLEGE GOVELI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.8,
     "choiceCode": "MU6196SFE"
   },
@@ -22156,7 +22156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KOLAD HIGH SCH AND JR.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.8,
     "choiceCode": "MU7509SFE"
   },
@@ -22166,7 +22166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIR VITTHALDAS THAKARSEY COLLEGE OF HOME SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.6,
     "choiceCode": "MU7065SGE"
   },
@@ -22176,7 +22176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER TERESA HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.6,
     "choiceCode": "MU7189SFE"
   },
@@ -22186,7 +22186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H.F. SEC. HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.6,
     "choiceCode": "MU11602SFE"
   },
@@ -22196,7 +22196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AMACH GHAR SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.4,
     "choiceCode": "MU6314SFE"
   },
@@ -22206,7 +22206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA.M.H.S.J.C. SHIVALE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.4,
     "choiceCode": "MU6371SNE"
   },
@@ -22216,7 +22216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NIRMALA NIKETAN COLLEGE OF HOME SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.4,
     "choiceCode": "MU6720SGE"
   },
@@ -22226,7 +22226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE. MANGUBHAI DATTANI VIDYALAYA & YOJANA JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.4,
     "choiceCode": "MU7236SGE"
   },
@@ -22236,7 +22236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "EXPERTS INTERNATIONAL HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.4,
     "choiceCode": "MU11590SFE"
   },
@@ -22246,7 +22246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KARMAVEER BHAURAO PATIL JR. COLLEGE, VASHI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.2,
     "choiceCode": "MU6427SNE"
   },
@@ -22256,7 +22256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "STERLING JR. COLLEGE OF ARTS & COMMERCE, NERUL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.2,
     "choiceCode": "MU6457SFE"
   },
@@ -22266,7 +22266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHETH KARAMSHI KANJI ENGLISH SCHOOL AND JR. COLLEGE, MULUND (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.2,
     "choiceCode": "MU7002SFE"
   },
@@ -22276,7 +22276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYANIKETAN JR COLLEGE OF COM & SCI BORIVALI WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.2,
     "choiceCode": "MU7278SFE"
   },
@@ -22286,7 +22286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.B.PATIL ENGLISH SCHOOL & JR.COLLEGE, VARSE, ROHA, DIST- RAIGAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.2,
     "choiceCode": "MU11871SFE"
   },
@@ -22296,7 +22296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW GURUKUL ENGLISH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.2,
     "choiceCode": "MU11885SFE"
   },
@@ -22306,7 +22306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUNANAK CHARITABLE TRUSTS LAKSHYA PREP HIGH SCHOOL & JUNIOR COLLEGE, CHEMBUR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.0,
     "choiceCode": "MU6886SFE"
   },
@@ -22316,7 +22316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SUDARSHAN ENG. HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 50.0,
     "choiceCode": "MU7078SNE"
   },
@@ -22326,7 +22326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. MARY'S SCH ENG SEC&HSEC",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.8,
     "choiceCode": "MU6424SNE"
   },
@@ -22336,7 +22336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TWINS ENG SEC",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.8,
     "choiceCode": "MU6657SFE"
   },
@@ -22346,7 +22346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENG. HIGHSCHOOL MARATHI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.8,
     "choiceCode": "MU6684SGE"
   },
@@ -22356,7 +22356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUKUL ENGLISH SCHOOL & JR. COLLEGE MALAD EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.8,
     "choiceCode": "MU7221SFE"
   },
@@ -22366,7 +22366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H.O.C. INTERNATIONAL SCH.& Jr. COLLEGE RASAYANI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.8,
     "choiceCode": "MU7358SNE"
   },
@@ -22376,7 +22376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVJEEVAN VIDYAMANDIR HIGH SCHOOL & JUNIOR COLLEGE, NALLSOPARA EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.8,
     "choiceCode": "MU11764SFE"
   },
@@ -22386,7 +22386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE HALARI VISA OSWAL VIDYALAYA & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.6,
     "choiceCode": "MU6194SFE"
   },
@@ -22396,7 +22396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SADHANA HINDI HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.6,
     "choiceCode": "MU6672SPE"
   },
@@ -22406,7 +22406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DIVINE PROVIDENT HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.6,
     "choiceCode": "MU7188SFE"
   },
@@ -22416,7 +22416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THAKUR VIDYA MANDIR HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.6,
     "choiceCode": "MU7232SFE"
   },
@@ -22426,7 +22426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.B.SAWANT VID. SHIRGAON",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.6,
     "choiceCode": "MU7381SFE"
   },
@@ -22436,7 +22436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B. B. PATIL ENGLISH HIGH SCH.&JR COLL, KURUND",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.4,
     "choiceCode": "MU6142SFE"
   },
@@ -22446,7 +22446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PARAG VIDYALAYA JR. COLLEGE BHANDUP W MUMBAI-78",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.4,
     "choiceCode": "MU7025SNE"
   },
@@ -22456,7 +22456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY FAMILY HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.4,
     "choiceCode": "MU7076SFE"
   },
@@ -22466,7 +22466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AL-HERA URDU HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU6189SNU"
   },
@@ -22476,7 +22476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.H.IDEAL HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU6513SFE"
   },
@@ -22486,7 +22486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYANESHWAR DNYANMANDIR HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU6518SFE"
   },
@@ -22496,7 +22496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PET OXFORD SEC . SCHOOL ULH.3",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU6629SFE"
   },
@@ -22506,7 +22506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SUSHMA PATIL SECONDARY MARATHI HIGHSCHOOL KAMOTHE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU7464SFE"
   },
@@ -22516,7 +22516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARATI ACADAMY ENGLISH JUNIOR COLLEGE,VEVAJI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.2,
     "choiceCode": "MU11528SFE"
   },
@@ -22526,7 +22526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "YASHWANTRAO CHAVAN JR. COLLEGE OF ARTS, SCIENCE & COMMERCE, KOPARKHAIRANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU6407SNE"
   },
@@ -22536,7 +22536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SADHU VASWANI INTERNATIONAL SCHOOL & JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU6435SFE"
   },
@@ -22546,7 +22546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHAHA C. HIGHSCHOOL KINHAVALI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU6482SPM"
   },
@@ -22556,7 +22556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ARCHANA TRUST ENGLISH MEDIUM SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU6500SFE"
   },
@@ -22566,7 +22566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYANPEETH JUNIOR COLLEGE ART, COMMARCE & SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU6659SFE"
   },
@@ -22576,7 +22576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE, MULUND (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU7015SFE"
   },
@@ -22586,7 +22586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMSHETH THAKUR HIGHER SECONDARY VIDYALAYA, KHARGHAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU7413SFE"
   },
@@ -22596,7 +22596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.ANNES HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 49.0,
     "choiceCode": "MU11607SFE"
   },
@@ -22606,7 +22606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NIYAZ NATIONAL SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.8,
     "choiceCode": "MU6161SFE"
   },
@@ -22616,7 +22616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BAL VIDYA MANDIR MAR.SEC.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.8,
     "choiceCode": "MU6675SFE"
   },
@@ -22626,7 +22626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TILAK JR. COLLEGE OF SCIENCE & COMMERCE, NERUL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU6450SFE"
   },
@@ -22636,7 +22636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M. GANDHI SEC. SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU6596SGE"
   },
@@ -22646,7 +22646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "FATIMA SEC. SCHOOL AMB.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU6597SFE"
   },
@@ -22656,7 +22656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL HIGH SCHOOL & JR. COLLEGE, BHANDUP (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU6989SGE"
   },
@@ -22666,7 +22666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DIVINE CHILD HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.6,
     "choiceCode": "MU7072SFE"
   },
@@ -22676,7 +22676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HUDA ENGLISH HIGH & JU.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU6169SFE"
   },
@@ -22686,7 +22686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N.E.S.HIGH.SCHOOL,BRAHMAN AALI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU6173SFE"
   },
@@ -22696,7 +22696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMG ENGLISH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU6561SFE"
   },
@@ -22706,7 +22706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAROL EDUCATION ACADEMY HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU7073SFE"
   },
@@ -22716,7 +22716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IRIS INTERNATIONAL SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU11566SFE"
   },
@@ -22726,7 +22726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R S DUBE JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU11577SNE"
   },
@@ -22736,7 +22736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R C MARUTI HIGH SCHOOL AND JUNIOR COLLEGE JUCHANDRA VASAI EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.4,
     "choiceCode": "MU11780SFE"
   },
@@ -22746,7 +22746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.E.I.S.S.V.JOSHI HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.2,
     "choiceCode": "MU6302SPE"
   },
@@ -22756,7 +22756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DON BOSCO HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.2,
     "choiceCode": "MU6966SFE"
   },
@@ -22766,7 +22766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE ELITE PUBLIC SECONDARY SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.2,
     "choiceCode": "MU7473SFE"
   },
@@ -22776,7 +22776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ROYAL ENGLISH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.0,
     "choiceCode": "MU6315SFE"
   },
@@ -22786,7 +22786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MODERN SCHOOL SEC MARATHI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.0,
     "choiceCode": "MU6429SFE"
   },
@@ -22796,7 +22796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ATMA MALIK ENGLISH MEDIUM SCHOOL MOHILI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.0,
     "choiceCode": "MU6474SFE"
   },
@@ -22806,7 +22806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KING LORD ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.0,
     "choiceCode": "MU6592SFE"
   },
@@ -22816,7 +22816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.E.S. Adv.Nanda Deshmukh English Medium Junior College, Alibag.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.0,
     "choiceCode": "MU7330SFE"
   },
@@ -22826,7 +22826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHANTILAL T SHAH HIGH SCHOOL AND JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 48.0,
     "choiceCode": "MU11644SFE"
   },
@@ -22836,7 +22836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AL-HAMD URDU HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.8,
     "choiceCode": "MU6182SFU"
   },
@@ -22846,7 +22846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.S HIGH SCHOOL, SEC. ENG, NERUL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.8,
     "choiceCode": "MU6440SFE"
   },
@@ -22856,7 +22856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA PRASARAK SANSTHAS JR COLLEGE OF ARTS, COM AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.8,
     "choiceCode": "MU6509SFE"
   },
@@ -22866,7 +22866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.8,
     "choiceCode": "MU6522SNE"
   },
@@ -22876,7 +22876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GDT FUTURE SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.8,
     "choiceCode": "MU7511SFE"
   },
@@ -22886,7 +22886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.L. PONDA SEC. SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.8,
     "choiceCode": "MU11442SFE"
   },
@@ -22896,7 +22896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MIRACLE ENG. MEDIUM SCH. NAVAPUR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.8,
     "choiceCode": "MU11486SFE"
   },
@@ -22906,7 +22906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LOKMANYA HINDI HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.8,
     "choiceCode": "MU11642SFE"
   },
@@ -22916,7 +22916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. K. PALVI VIDYAMANDIR, PADAGHE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.6,
     "choiceCode": "MU6147SFE"
   },
@@ -22926,7 +22926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K S MEHTA COLLEGE SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.6,
     "choiceCode": "MU6316SFE"
   },
@@ -22936,7 +22936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER MARYS JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.6,
     "choiceCode": "MU6324SNE"
   },
@@ -22946,7 +22946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ESPLANADE JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.6,
     "choiceCode": "MU7285SNE"
   },
@@ -22956,7 +22956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.J.HIGHSCHOOL WADA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.6,
     "choiceCode": "MU11676SPM"
   },
@@ -22966,7 +22966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Rajarshri Shahu Maharaj Vidyalaya and Junior College Wagale Estate Thane",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.6,
     "choiceCode": "MU12145SFE"
   },
@@ -22976,7 +22976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ALL SAINT'S INTERNATIONAL JR.COLL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.4,
     "choiceCode": "MU6676SFE"
   },
@@ -22986,7 +22986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.4,
     "choiceCode": "MU6797SGE"
   },
@@ -22996,7 +22996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.V.G'S VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.4,
     "choiceCode": "MU6892SPE"
   },
@@ -23006,7 +23006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA VARDHI JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.4,
     "choiceCode": "MU11625SNE"
   },
@@ -23016,7 +23016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.J.HIGHSCHOOL WADA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.4,
     "choiceCode": "MU11676SGM"
   },
@@ -23026,7 +23026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K V PENDHARKAR JUNIOR COLLEGE DOMBIVALI(EAST)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.2,
     "choiceCode": "MU6218SNE"
   },
@@ -23036,7 +23036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ROCKS HIGH SCHOOL & JUNIOR COLLEGE OF COMMERCE & SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.2,
     "choiceCode": "MU7265SFE"
   },
@@ -23046,7 +23046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANJAY GANDHIR SMRAK VIDYALAY PALE BU KOLIWADI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.2,
     "choiceCode": "MU7414SPE"
   },
@@ -23056,7 +23056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GLOBAL INTERNATIONAL SCHOOL AND JR COLLEGE OF ART'S COMMERCE AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.2,
     "choiceCode": "MU7440SFE"
   },
@@ -23066,7 +23066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DEEP JUNIOR COLLEGE SARAVALI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.2,
     "choiceCode": "MU11503SFE"
   },
@@ -23076,7 +23076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "REENA MEHTA HIGH SCH & COLLEGE BHA WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.0,
     "choiceCode": "MU6317SFE"
   },
@@ -23086,7 +23086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRITI ACADEMY SEC ENG SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.0,
     "choiceCode": "MU6611SFE"
   },
@@ -23096,7 +23096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAISER COLLEGE OF COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.0,
     "choiceCode": "MU7168SFE"
   },
@@ -23106,7 +23106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GOKHALE HIGH SCHOOL AND JUNIOR COLLEGE, BORIVALI WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.0,
     "choiceCode": "MU7269SGE"
   },
@@ -23116,7 +23116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VASANT DESHMUKH MEMO. SCH & JR COLLEGE OF SCIENCE AND COMMERCE , KHOPOLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.0,
     "choiceCode": "MU7361SFE"
   },
@@ -23126,7 +23126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LORD CHILD HIGH SCHOOL & JUNIOR COLLEGE VIRAR WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 47.0,
     "choiceCode": "MU11591SFE"
   },
@@ -23136,7 +23136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH SCHOOL, VAJRESWARI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.8,
     "choiceCode": "MU6133SFE"
   },
@@ -23146,7 +23146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAKET JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.8,
     "choiceCode": "MU6285SNE"
   },
@@ -23156,7 +23156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VEDANT JUNIOR COLLEGE OF SCIENCE COMMERCE AND ARTS",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.8,
     "choiceCode": "MU11956SFE"
   },
@@ -23166,7 +23166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ACHIEVERS JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU6267SFE"
   },
@@ -23176,7 +23176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.R.MADHAVI ENG.SEC. SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU6307SFE"
   },
@@ -23186,7 +23186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PEOPLES EDU SOC HIGH SEC MAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU6458SGE"
   },
@@ -23196,7 +23196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NARAYANA JUNIOR COLLEGE THANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU6664SFE"
   },
@@ -23206,7 +23206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAI BHARAT HIGH SCHOOL & JR. COLLEGE, MULUND (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU7009SFE"
   },
@@ -23216,7 +23216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAILEE DEGREE COLLEGE (SCIENCE & COMMERCE )AND M.J.JR. COLLEGE OF SCIENCE , GORAI ROAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU7266SFE"
   },
@@ -23226,7 +23226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H.B.P. SHRI. D. G. GOWARI VIDYALAYA & JUNIOR COLLEGE, KAMOTHE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.6,
     "choiceCode": "MU7467SFE"
   },
@@ -23236,7 +23236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. H. A. RAIS HIGH SCHOOL AND JUNIOR COLLEGE, BHIWANDI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU6177SFU"
   },
@@ -23246,7 +23246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "G.K.S.ART,COMM & SCI JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU6206SFE"
   },
@@ -23256,7 +23256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA PHULE A.S.C. COLLEGE PANVEL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU7490SGE"
   },
@@ -23266,7 +23266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWATANTRYAVIR SAWARKAR MAD. VIDYALAY AND KANISHTH MAHAVIDYALAY , NAVIN SHEVE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU7541SFE"
   },
@@ -23276,7 +23276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAU SITABAI RAMKRUSHANA KARANDIKAR SENIOR COLLEGE OF COMMERCE AND LATE M. B. IRANI COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.4,
     "choiceCode": "MU11444SNE"
   },
@@ -23286,7 +23286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PACE JUNIOR SCIENCE COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU6275SFE"
   },
@@ -23296,7 +23296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW EINGLISH SCHOOL MURBAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU6374SFE"
   },
@@ -23306,7 +23306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TRIMURTI ENG SEC SHCOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU6645SFE"
   },
@@ -23316,7 +23316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. GREGORIOUS PUBLIC SCHOOL AND JUNIOR COLLEGE MULUND (WEST)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU7017SFE"
   },
@@ -23326,7 +23326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA BHUSHAN HIGH SCHOOL & JR.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU7240SNE"
   },
@@ -23336,7 +23336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAJI AAMDAR DATTUSHETH PATIL JUNIOR COLLEGE, SEC-9,PLOT NO- 23,KAMOTHE,NAVI MUMBAI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.2,
     "choiceCode": "MU7468SFE"
   },
@@ -23346,7 +23346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ROYAL JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU6303SFE"
   },
@@ -23356,7 +23356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ASADULLAH KHAN ENGLISH HIGH SCHOOL AND JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU6548SFE"
   },
@@ -23366,7 +23366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BANDRA URDU HIGH SCHOOL & JR COLLEGE OF SCI, COMM & VOCATIONAL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU7053SGE"
   },
@@ -23376,7 +23376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P. D. TURAKHIA JR COLLEGE OF COM & SCI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU7209SNE"
   },
@@ -23386,7 +23386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU7289SFE"
   },
@@ -23396,7 +23396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARADAR VALLABHBHAI PATEL Jr. COLLEGE OF SCI. M.H. B. COLONY S. N.DUBEY ROAD DAHISAR (EAST)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU7291SFE"
   },
@@ -23406,7 +23406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANGAON JUNIOR COLLEGE , MANGAON",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU7397SFE"
   },
@@ -23416,7 +23416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "YASHVANTRAO CHAFEKAR JR. COLLAGE AND ARTS,COMMERS AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU11521SFE"
   },
@@ -23426,7 +23426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAI. NATHU OZARE ARTS,COMMARCE & SCIENCE JUNIOR COLLEGE ,VADWALI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 46.0,
     "choiceCode": "MU11525SFM"
   },
@@ -23436,7 +23436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRIRANG VIDYALAYA ENG MED. & JR COLLEGE OF SCIENCE & COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU6516SFE"
   },
@@ -23446,7 +23446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.I.C.E.S. HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU6599SGE"
   },
@@ -23456,7 +23456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMCHAND KIMATRAM TALREJA COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU6638SNE"
   },
@@ -23466,7 +23466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SATISH PRADHAN DNYANASADHANA JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU6681SFE"
   },
@@ -23476,7 +23476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HUTATMA HIRAJI PATIL JUNIOR COLLEGE KADAV",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU7338SFM"
   },
@@ -23486,7 +23486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHATRAPATI SHIVAJI VIDYALAYA W",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU7370SNE"
   },
@@ -23496,7 +23496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ANDREWS INTERNATIONAL SCHOOL & JR.COLLEGE WAKADI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.8,
     "choiceCode": "MU7419SFE"
   },
@@ -23506,7 +23506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NARAYANA JUNIOR COLLEGE OF SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.6,
     "choiceCode": "MU6244SFE"
   },
@@ -23516,7 +23516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAJARSHI SHAHU JUNIOR COLLEGE OF ARTS, COMMERCE & SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.6,
     "choiceCode": "MU6829SFE"
   },
@@ -23526,7 +23526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S R THAKUR VIDYAMANDIR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.6,
     "choiceCode": "MU11584SFE"
   },
@@ -23536,7 +23536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.D. COLLEGE OF ARTS,SCIENCE & COMM.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU6798SGE"
   },
@@ -23546,7 +23546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "APOSTOLIC CARMEL HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU7049SFE"
   },
@@ -23556,7 +23556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A. M. ENGLISH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU7217SFE"
   },
@@ -23566,7 +23566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ART'S COMMERCE AND KAI.SOU. S R DATAR SCIENCE JR COLLEGE , CHONDHI KIHIM",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU7323SGE"
   },
@@ -23576,7 +23576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANATA VIDYALAY ENG. MED SCHOO",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU7356SFE"
   },
@@ -23586,7 +23586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYAMANDIR POLADPUR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU7502SNM"
   },
@@ -23596,7 +23596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAJENDRA PARSHURAM KHARPATIL ARTS COMMERCE AND SCIENCE JR COLLEGE, CHIRNER",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU7536SFE"
   },
@@ -23606,7 +23606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. P. WAGH HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.4,
     "choiceCode": "MU11596SFE"
   },
@@ -23616,7 +23616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW BOMBAY CITY JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU6408SFE"
   },
@@ -23626,7 +23626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.K. ABHANG SEC. SCHOOL ULH.4",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU6633SNE"
   },
@@ -23636,7 +23636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHATRAPATI SHIVAJI VIDYALAYA VAVANJE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU7415SFE"
   },
@@ -23646,7 +23646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST WILFREDS Highschool",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.2,
     "choiceCode": "MU7446SFE"
   },
@@ -23656,7 +23656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAVINDRA VIDYALAY (ENG SEC)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.0,
     "choiceCode": "MU6250SFE"
   },
@@ -23666,7 +23666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST MARY'S CONVENT HIGH SCHOOL & jr.college",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.0,
     "choiceCode": "MU6538SFE"
   },
@@ -23676,7 +23676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.0,
     "choiceCode": "MU7041SFE"
   },
@@ -23686,7 +23686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW VISION JR COLLEGE OF ART'S COMMERCE AND SCIENCE ,PEN - RAIGAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.0,
     "choiceCode": "MU7498SFE"
   },
@@ -23696,7 +23696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAU SITABAI RAMKRUSHANA KARANDIKAR SENIOR COLLEGE OF COMMERCE AND LATE M. B. IRANI COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.0,
     "choiceCode": "MU11444SGE"
   },
@@ -23706,7 +23706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAHUL INTERNATIONAL JR.COLLEGE OF COMMERCE AND SCIENCE BOISAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.0,
     "choiceCode": "MU11499SFE"
   },
@@ -23716,7 +23716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KANCHAN ENG. HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.0,
     "choiceCode": "MU11641SFE"
   },
@@ -23726,7 +23726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THIM GLOBAL SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 45.0,
     "choiceCode": "MU11821SFE"
   },
@@ -23736,7 +23736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAZIDUN JUNIOR COLLEGE, SEC-8A, AIROLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU6409SFE"
   },
@@ -23746,7 +23746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.THIRANI MAR. HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU6668SNE"
   },
@@ -23756,7 +23756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARAT ENGLISH HIGHSCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU6693SFE"
   },
@@ -23766,7 +23766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IDEAL HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU6847SNE"
   },
@@ -23776,7 +23776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAI PANDURANG RAGHUNATH PATIL UTKARSHA MADHYAMIK VIDYALAYA AND JR COLLEGE VIRAR WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU11592SGE"
   },
@@ -23786,7 +23786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N.M ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.8,
     "choiceCode": "MU12146SFE"
   },
@@ -23796,7 +23796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. LAWRENCE ENG.SEC.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.6,
     "choiceCode": "MU6678SFE"
   },
@@ -23806,7 +23806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.6,
     "choiceCode": "MU7018SPE"
   },
@@ -23816,7 +23816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. THOMAS HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.6,
     "choiceCode": "MU7081SGE"
   },
@@ -23826,7 +23826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA VIKAS UNIVERSAL JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.6,
     "choiceCode": "MU7207SFE"
   },
@@ -23836,7 +23836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Rahul Shikshan Prasarak Mandal' Latur's Satyagraha junior college",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.6,
     "choiceCode": "MU7435SFE"
   },
@@ -23846,7 +23846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAYAM SIDDHI MITRA SANGH JR.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.4,
     "choiceCode": "MU6192SFE"
   },
@@ -23856,7 +23856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RAMCHANDRA MHATRE VIDYALAYA & JR COLLEGE OF ART'S , SCIENCE AND COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.4,
     "choiceCode": "MU7533SNE"
   },
@@ -23866,7 +23866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREERAM VIDYALAYA SEC ENG AIROLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU6385SFE"
   },
@@ -23876,7 +23876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GAURAV HIGH SCHOOL & JR.COLLEGE, NERUL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU6469SFE"
   },
@@ -23886,7 +23886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BALASAHEB MHATRE JR. COLLEGE OF SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU6577SFE"
   },
@@ -23896,7 +23896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JITEN MODY JUNIOR COLLEGE OF ARTS, COMMERCE AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU7293SFE"
   },
@@ -23906,7 +23906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MATHERAN VALLEY ENGLISH MEDIUM SCHOOL VANJARPADA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU7347SFE"
   },
@@ -23916,7 +23916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND HIGH SCHOOL KOLWADE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU11484SNE"
   },
@@ -23926,7 +23926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "OM SAI JUNIOR COLLEGE VASAI EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.2,
     "choiceCode": "MU11841SFE"
   },
@@ -23936,7 +23936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE MAHADEV BABURAO CHAUGHULE JR COLLEGE RAHANAL, BHIWANDI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU6152SFE"
   },
@@ -23946,7 +23946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HINDI HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU6272SGE"
   },
@@ -23956,7 +23956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU6616SNE"
   },
@@ -23966,7 +23966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R J THAKUR JR COLLEGE OF ARTS COMMERCE AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU6667SNE"
   },
@@ -23976,7 +23976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NEW ENG. HIGHSCHOOL MARATHI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU6684SFE"
   },
@@ -23986,7 +23986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D G TATKARE JR COLLEGE , KALAMBOLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 44.0,
     "choiceCode": "MU7476SFE"
   },
@@ -23996,7 +23996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANJUNATH JUNIOR COLLEGE ( COMMERCE )",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU6289SNE"
   },
@@ -24006,7 +24006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. M. S. DR. SHIRODKAR HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU6783SGE"
   },
@@ -24016,7 +24016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SINHAGAD SPRINGDALE & JR. COLLEGE, CHANDIVALI, KURLA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU6947SFE"
   },
@@ -24026,7 +24026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU7233SGE"
   },
@@ -24036,7 +24036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NIRMALA MEMORIAL FOUNDATION JR.COLLEGE OF COMM.& SCI.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU7250SFE"
   },
@@ -24046,7 +24046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYANJYOT JUNIOR COLLEGE OF ARTS, COM SCIENCE KHARGHAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU7433SFE"
   },
@@ -24056,7 +24056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R R EDUCATIONAL TRUSTS JUNIOR COLLEGE OF SCIENCE AND COMMERCE MULUND EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.8,
     "choiceCode": "MU12449SFE"
   },
@@ -24066,7 +24066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER TERESSA HIGH SCH",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.6,
     "choiceCode": "MU6392SFE"
   },
@@ -24076,7 +24076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI VIVEKANAND ENGLISH HIGH SCHOOL & JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.6,
     "choiceCode": "MU6400SFE"
   },
@@ -24086,7 +24086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PADMAVATI-VENKATESH HIGHSCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.6,
     "choiceCode": "MU6512SNE"
   },
@@ -24096,7 +24096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PRERANA HIGH SCHOOL & JR. COLLEGE, SAKINAKA.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.6,
     "choiceCode": "MU6938SNE"
   },
@@ -24106,7 +24106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VISION INTERNATIONAL SCHOOL & JUNIOR COLLEGE, MHASLA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.6,
     "choiceCode": "MU7548SFE"
   },
@@ -24116,7 +24116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARATI VIDYAPETH P.SHALA & JR.COLLLEGE, JAWHAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.6,
     "choiceCode": "MU11457SPM"
   },
@@ -24126,7 +24126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.STANISLAUS HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.6,
     "choiceCode": "MU11603SFE"
   },
@@ -24136,7 +24136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. STANISLAUS HIGH SCHOOL AND JUNIOR COLLEGE NALLASOPARA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.6,
     "choiceCode": "MU11992SNE"
   },
@@ -24146,7 +24146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A.V.M.S.M.S.,BHAYANDAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU6327SGE"
   },
@@ -24156,7 +24156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARDAR VALLABHBHAI PATEL COLLEGE OF COMMERECE AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU6350SFE"
   },
@@ -24166,7 +24166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "COMMERCE AND SCIENCE JR.COLLEGE MHASA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU6373SFE"
   },
@@ -24176,7 +24176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JNAN VIKAS MANDAL JR. COLLEGE, AIROLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU6384SFE"
   },
@@ -24186,7 +24186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ICLES'S MOTILAL JHUNJHUNWALA COLLEGE, VASHI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU6423SNE"
   },
@@ -24196,7 +24196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU6797SNE"
   },
@@ -24206,7 +24206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANATA VIDYALAYA Jr. COLLEGE KHOPOLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU7359SGE"
   },
@@ -24216,7 +24216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D. G. TATKARE JUNIOR COLLEGE MANGAON",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU7392SFE"
   },
@@ -24226,7 +24226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAYDEEP JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.4,
     "choiceCode": "MU11589SFE"
   },
@@ -24236,7 +24236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SALAHUDDIN AYYUBI M.ENG.HIGH SCH.& JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU6191SNE"
   },
@@ -24246,7 +24246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HILL SPRING INTERNATIONAL JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU6240SNE"
   },
@@ -24256,7 +24256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAMLADEVI JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU6283SFE"
   },
@@ -24266,7 +24266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CITY CONVENT SEC HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU6539SFE"
   },
@@ -24276,7 +24276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. ROCKS HIGH SCHOOL & JUNIOR COLLEGE OF COMMERCE & SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU7265SNE"
   },
@@ -24286,7 +24286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RECKON PUBLIC ACADEMY & JR CO.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.2,
     "choiceCode": "MU11571SFE"
   },
@@ -24296,7 +24296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AQSA GIRLS JUNIR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU6165SFU"
   },
@@ -24306,7 +24306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHIWANDI NIZAMPUR NAGARPALIKA MAHAVIDHYALAY BHIWANDI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU6166SPE"
   },
@@ -24316,7 +24316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "IDEAL JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU6607SFE"
   },
@@ -24326,7 +24326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN-I-ISLAM ALLANA ENGLISH HIGH SCHOOL AND JUNIOR COLLEGE OF SCI. AND COMMERCE, CST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU6713SFE"
   },
@@ -24336,7 +24336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S. BANTHIYA MADY. PANVEL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU7478SFE"
   },
@@ -24346,7 +24346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAI PANDURANG RAGHUNATH PATIL UTKARSHA MADHYAMIK VIDYALAYA AND JR COLLEGE VIRAR WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU11592SNE"
   },
@@ -24356,7 +24356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE MAHALSA NARAYANI SCHOOL AND COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU11678SFE"
   },
@@ -24366,7 +24366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST.JOSEPH & MARY CONVENT SCHOOL & JR. COLLEGE, NALLASOPARA EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 43.0,
     "choiceCode": "MU12239SFE"
   },
@@ -24376,7 +24376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVJEEVAN VIDYAMANDIR & JR. COLLEGE, BHANDUP WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.8,
     "choiceCode": "MU7000SGE"
   },
@@ -24386,7 +24386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "FR. AGNETECH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.8,
     "choiceCode": "MU7052SGE"
   },
@@ -24396,7 +24396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LILAWATI ARTS COM AND SCI JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6559SNE"
   },
@@ -24406,7 +24406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.I.C.E.S. HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6599SFE"
   },
@@ -24416,7 +24416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GURUNANAK ENG. SEC. S.ULH.4",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6631SFE"
   },
@@ -24426,7 +24426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Anand Vishwa Gurukul and Jr. college",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU6679SFE"
   },
@@ -24436,7 +24436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU7090SGE"
   },
@@ -24446,7 +24446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADIVASI PRAGATI MANDAL SANCHALIT ARTS, COMMERCE & SCIENCE JUNIOR COLLEGE, TALASARI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU11536SFE"
   },
@@ -24456,7 +24456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ASMITA GIRLS JUNIOR COLLEGE ARTS COMMERCE SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.6,
     "choiceCode": "MU11863SPE"
   },
@@ -24466,7 +24466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BABA HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU6181SFE"
   },
@@ -24476,7 +24476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU6915SFE"
   },
@@ -24486,7 +24486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST. LUKES JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.4,
     "choiceCode": "MU11648SFE"
   },
@@ -24496,7 +24496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TILAK JUNIOR COLLEGE OF SCIENCE & COMMERCE, GHANSOLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU6402SFE"
   },
@@ -24506,7 +24506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GYANODAYA SEC. HINDI SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU6666SGE"
   },
@@ -24516,7 +24516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PNP EDU SOC JR CLG VESHVI GONDHALPADA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU7329SPE"
   },
@@ -24526,7 +24526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.E.S. BANTHIYA MADY. PANVEL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU7478SNE"
   },
@@ -24536,7 +24536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KSA BARNS HIGH SCHOOL AND JR COLLEGE , PANVEL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU7479SNE"
   },
@@ -24546,7 +24546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JANUTKARSHA PRABHODINI JR. COLLEGE, KALAMDIVI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU11430SPM"
   },
@@ -24556,7 +24556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.P.H. HIGH SCHOOL & P.G. JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU11433SNE"
   },
@@ -24566,7 +24566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MEHBOOB EDUCATIONAL TRUST'S JR. COLLEGE OF SCIENCE, VIHOOR, MURUD-JANJIRA, RAIGAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.2,
     "choiceCode": "MU11887SFE"
   },
@@ -24576,7 +24576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RABIYA GIRLS HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU6178SPU"
   },
@@ -24586,7 +24586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI L R TIWARI JUNIOR COLLEGE OF COMMERCE AND SCIENSE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU6358SFE"
   },
@@ -24596,7 +24596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SARASWATI VIDYALAYA VASIND",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU6505SFE"
   },
@@ -24606,7 +24606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT ASHARPHIDEVI HINDI HIGH SCHOOL AND SCI, COM, JR COLLEGE, THANE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU6671SGE"
   },
@@ -24616,7 +24616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU6745SGE"
   },
@@ -24626,7 +24626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "EVERGREEN ENGLISH SCHOOL AND JR. COLLEGE, SHIVAJI NAGAR, GOVANDI, MUMBAI 400 043.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 42.0,
     "choiceCode": "MU6926SFE"
   },
@@ -24636,7 +24636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR.D.S.PALIWAL ENGLISH HIGHSCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU6158SFE"
   },
@@ -24646,7 +24646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI L P RAVAL JR. COLLEGE OF SCIENCE AND COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU6334SNE"
   },
@@ -24656,7 +24656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYA.M.H.S.J.C. SHIVALE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU6371SGE"
   },
@@ -24666,7 +24666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JIJAMATA CONVENT SCH SEC",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU6397SFE"
   },
@@ -24676,7 +24676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU6907SFE"
   },
@@ -24686,7 +24686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRIMATI SITADEVI AND SHRI SAHIBRAM ENG MED HIGH SCHOOL AND JR COLLEGE OF ARTS SCI. COM. KURLA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU6949SFE"
   },
@@ -24696,7 +24696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HAJI LIYAKAT ENGLISH HIGHSCHOOL NERAL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.8,
     "choiceCode": "MU7348SFE"
   },
@@ -24706,7 +24706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GLOBAL INTERNATIONAL HIGH SCHOOL & JR.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU6187SFE"
   },
@@ -24716,7 +24716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HIGH SCHOOL VIVEKANAND SANKUL, SANPADA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU6431SFE"
   },
@@ -24726,7 +24726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "B.S. JONDHLE HIGH MAR. SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU6532SNE"
   },
@@ -24736,7 +24736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KALA VIDYALAYA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU7191SFE"
   },
@@ -24746,7 +24746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BALBHARATI HIGH SCHOOL AND JUNIOR COLLEGE, KANDIVALI WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU7255SFE"
   },
@@ -24756,7 +24756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KOLAD HIGH SCH AND JR.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU7509SPE"
   },
@@ -24766,7 +24766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BAHUUDESHIY DYAN SADHANA MANDAL SANCHALIT ARTS,COM.&SCINCE JUNIOR COLLEGE,TALASARI VIKASPADA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.6,
     "choiceCode": "MU11538SFM"
   },
@@ -24776,7 +24776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AAKASH JR COLLEGE OF SCI & COM",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU7150SFE"
   },
@@ -24786,7 +24786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI NIWAS BAGARKA JR COLLEGE OF ARTS COM & SCI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU7151SFE"
   },
@@ -24796,7 +24796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR BABASAHEB AMBEDKAR COLLEGE MAHAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU7376SNE"
   },
@@ -24806,7 +24806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S S H SCHOOL AND JR COLLEGE , KAMOTHE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU7462SFE"
   },
@@ -24816,7 +24816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "H.V.P. HIGHSCHOOL CHINCHGHAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU11670SPM"
   },
@@ -24826,7 +24826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL ENG SCHOOL KUDUS",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU11671SFE"
   },
@@ -24836,7 +24836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ST THOMAS ENGLISH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.4,
     "choiceCode": "MU11845SFE"
   },
@@ -24846,7 +24846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "J P MHATRE ENGLISH PRIMARY SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU6175SFE"
   },
@@ -24856,7 +24856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "N.R.BHAGAT SCHOOL ENG SEC&HSEC",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU6442SNE"
   },
@@ -24866,7 +24866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAMRATA ACHARYA JUNIOR COLLEGE SHELU",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU7345SFE"
   },
@@ -24876,7 +24876,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADIVASI.P.MANDAL'S MADHYAMIK VIDYALAYA,UDHAWA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.2,
     "choiceCode": "MU11531SFE"
   },
@@ -24886,7 +24886,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K. D. GANDHE JUNIOR COLLEGE ARTS,COMMERCE & SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 41.0,
     "choiceCode": "MU11663SFE"
   },
@@ -24896,7 +24896,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "TILAK JUNIOR COLLEGE OF SCIENCE & COMMERCE, VASHI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU6420SFE"
   },
@@ -24906,7 +24906,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S.V.M.PUBLIC SCHOOL AND N.J.BELWALE JR.COLLEGE OF ARTS,COMMERCE AND SCIENCE ASANGAON",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU6494SFE"
   },
@@ -24916,7 +24916,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "PATUCK TECHNICAL HIGH SCHOOL &JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU7045SGE"
   },
@@ -24926,7 +24926,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU7154SOE"
   },
@@ -24936,7 +24936,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LORDS UNIVERSAL JR COLLEGE OF COM & SCI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU7212SFE"
   },
@@ -24946,7 +24946,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K.P.C. JUNIOR COLLEGE OF SCIENCE & COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU7431SFE"
   },
@@ -24956,7 +24956,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BALVIKAS VIDYAMANDIR VADHAV (SEC)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.8,
     "choiceCode": "MU7499SFM"
   },
@@ -24966,7 +24966,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ARYA GURUKUL INTERNATIONAL JR. COLLEGE OF SCIENCE & COMERCE, AIROLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU6387SFE"
   },
@@ -24976,7 +24976,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAINATH HINDI SCH SEC&HSEC",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU6421SFE"
   },
@@ -24986,7 +24986,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "(SES) S.H.M JUNIOR COLLEGE OF ARTS COMMERCE AND SCIENCE ULJASNAGAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU6618SFE"
   },
@@ -24996,7 +24996,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.M.BHATT HIGH SCHOOL AND JUNIOR COLLEGE PAREL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU6784SGE"
   },
@@ -25006,7 +25006,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KARTHIKA HIGH SCHOOL & JR. COLLEGE, KURLA (W).",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU6932SFE"
   },
@@ -25016,7 +25016,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.H.SAVE ARTS,C.J.BHANUSHALI COM.S.B.A DANDEKAR JR.COLLEGE PALGHAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.6,
     "choiceCode": "MU11520SNE"
   },
@@ -25026,7 +25026,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "HOLY FAITH JUNIOR COLLEGE OF ARTS SCIENCE AND COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU6288SFE"
   },
@@ -25036,7 +25036,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AADITYA ACADEMY",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU7084SFE"
   },
@@ -25046,7 +25046,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.K.N. BHATIA HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU7263SFE"
   },
@@ -25056,7 +25056,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANJIVANI JUNIOR COLLEGE KHARGHAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.4,
     "choiceCode": "MU7437SFE"
   },
@@ -25066,7 +25066,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MOTHER INDIA MISSION JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU6411SFE"
   },
@@ -25076,7 +25076,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DNYAN GANGA EDUCATION TRUST'S JR COLLEGE OF SCIENCE & COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU6648SFE"
   },
@@ -25086,7 +25086,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIDYABHAVAN JR COLLEGE MULUND (W) MUMBAI-80",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU7026SFE"
   },
@@ -25096,7 +25096,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.N.MHATRE & T.N.GHARAT JR COLLEGE OF SCIENCE GAVHAN KOPAR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.2,
     "choiceCode": "MU7450SFE"
   },
@@ -25106,7 +25106,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "THE SCHOLAR ENG.HIGH SCHOOL & JR.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6183SFE"
   },
@@ -25116,7 +25116,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHASKAR HINDI SEC.SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6256SFE"
   },
@@ -25126,7 +25126,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHASTRI HINDI VIDYALAYA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6603SFE"
   },
@@ -25136,7 +25136,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M. H. SABOO SIDDIK TECHNICAL HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6777SNE"
   },
@@ -25146,7 +25146,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SOCIAL SERVICE LEAGUE HIGH SCHOOL & JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6785SGE"
   },
@@ -25156,7 +25156,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU6964SGE"
   },
@@ -25166,7 +25166,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R. K. JR COLLEGE OF SCI. & COM.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 40.0,
     "choiceCode": "MU7202SFE"
   },
@@ -25176,7 +25176,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "K M AGARWAL COLLEGE OF ARTS, SCI & COM",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU6241SPE"
   },
@@ -25186,7 +25186,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.S. DESHMUKH S. SHAHAPUR SEC.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU6496SNE"
   },
@@ -25196,7 +25196,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "St. Paul Convent School and Junior College, Ulhasnagar",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU6609SFE"
   },
@@ -25206,7 +25206,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU6969SGE"
   },
@@ -25216,7 +25216,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ROHA EDUCATIONAL & WELFARE ASSOCIATION ENGLISH MEDIUM SCHOOL AND JR. COLLEGE SCIENCE AND COMMERCE ROHA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU7519SFE"
   },
@@ -25226,7 +25226,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Shree G. M. Vedak vidyamandir and Arts Comm. And Sci. Jr. College Tala",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU7532SPE"
   },
@@ -25236,7 +25236,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "RANA PRATAP MADHYAMIK VIDYALAY",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU11564SFE"
   },
@@ -25246,7 +25246,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NARAYANA JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.8,
     "choiceCode": "MU11637SFE"
   },
@@ -25256,7 +25256,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SST COLLEGE OF ARTS & COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6630SFE"
   },
@@ -25266,7 +25266,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6723SGE"
   },
@@ -25276,7 +25276,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE SANATAN DHARAM VIDYALAYA & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6869SNE"
   },
@@ -25286,7 +25286,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU6900SNE"
   },
@@ -25296,7 +25296,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Priyadarshi International School Kherne",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.6,
     "choiceCode": "MU7416SFE"
   },
@@ -25306,7 +25306,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "M.D. COLLEGE OF ARTS,SCIENCE & COMM.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU6798SFE"
   },
@@ -25316,7 +25316,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NATIONAL ENGLISH HIGH SCHOOL & JR. COLLEGE.BORDI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.4,
     "choiceCode": "MU11432SFE"
   },
@@ -25326,7 +25326,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GITA D TATKARE MADHY VIDY WARASGAON",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.2,
     "choiceCode": "MU7510SPE"
   },
@@ -25336,7 +25336,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAMADIYA HIGH SCH.& J.COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6179SGU"
   },
@@ -25346,7 +25346,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AAN-E-ISLAM URDU SEC",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6545SFE"
   },
@@ -25356,7 +25356,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHARADASHRAM VIDYAMANDIR TANTRIK VIDYALAYA & JUNIOR COLLEGE OF SCIENCE - VOCATIONAL & HSC - VOCATION",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6762SGE"
   },
@@ -25366,7 +25366,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MUMBAI JUNIOR COLLEGE OF ARTS, COM. & SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6839SNE"
   },
@@ -25376,7 +25376,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ENFANT INDIA ENGLISH HIGH SCHOOL & BURLINGTON JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU6857SFE"
   },
@@ -25386,7 +25386,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANSKARDHAM VIDYALAYA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU7107SGE"
   },
@@ -25396,7 +25396,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VIGNAN PRIMARY ENGLISH VIDYALAYA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU11497SFE"
   },
@@ -25406,7 +25406,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "Gyansagar Vidya Mandir High School and Junior College Wakanpoada Nallasopara",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 39.0,
     "choiceCode": "MU12219SFE"
   },
@@ -25416,7 +25416,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ANJUMAN SHANE ISLAM URDU HIGH SCHOOL, SAKINAKA.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU6943SFE"
   },
@@ -25426,7 +25426,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "UTTAR BHARATIYA SANGH JUNIOR COLLEGE OF COMMERCE & SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU7066SFE"
   },
@@ -25436,7 +25436,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "KAI PANDURANG RAGHUNATH PATIL UTKARSHA MADHYAMIK VIDYALAYA AND JR COLLEGE VIRAR WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.8,
     "choiceCode": "MU11592SPE"
   },
@@ -25446,7 +25446,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MAHATMA JYOTIBA FULE MADHYAMIK V UCHH MADHYAMIK VIDLYALAY",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6566SFE"
   },
@@ -25456,7 +25456,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S D T KALANI JR. COLLEGE ULHASNAGAR-1",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6612SFE"
   },
@@ -25466,7 +25466,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVNEET JUNIOR COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU6753SNE"
   },
@@ -25476,7 +25476,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ASPEE HIGHSCHOOL UCHAT",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU11666SGE"
   },
@@ -25486,7 +25486,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "LIMRA ENLISH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.6,
     "choiceCode": "MU11837SFE"
   },
@@ -25496,7 +25496,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "P.D.TAVRE VIDYALAYA, KALHER",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU6136SFE"
   },
@@ -25506,7 +25506,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NAVJIVAN VIDYALAYA HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.4,
     "choiceCode": "MU7187SFE"
   },
@@ -25516,7 +25516,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "JAN GAN MAN VIDYAMANDIR JR COLL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6296SFE"
   },
@@ -25526,7 +25526,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MANISHA JUNIOR COLLAGE KALAWA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6521SFE"
   },
@@ -25536,7 +25536,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "VEDANTA JUNIOR COLLEGE. ULH.3",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6623SFE"
   },
@@ -25546,7 +25546,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SAFA HIGH SCHOOL AND JR. COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU6733SFE"
   },
@@ -25556,7 +25556,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ARVIND GANDBHIR HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU7079SNE"
   },
@@ -25566,7 +25566,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "COM S.P.S.F SCHOOL & JR COLLEGE ASHAGAD",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.2,
     "choiceCode": "MU11426SFE"
   },
@@ -25576,7 +25576,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "EBENZER ENGLISH SCHOOL AND JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 38.0,
     "choiceCode": "MU11587SFE"
   },
@@ -25586,7 +25586,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "CHAUDHARI MADHUKAR(C.M.) JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6171SFE"
   },
@@ -25596,7 +25596,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SALAHUDDIN AYYUBI MEMORIAL URDU HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6190SPU"
   },
@@ -25606,7 +25606,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MUMBRA COLLEGE OF SCI.,ART & COM.",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU6533SFE"
   },
@@ -25616,7 +25616,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHRI T P BHATIA JR. COLLEGE OF SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU7254SNE"
   },
@@ -25626,7 +25626,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ADARSH VIDYALAYA AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU11507SFE"
   },
@@ -25636,7 +25636,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHARDA JR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU11568SFE"
   },
@@ -25646,7 +25646,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SANT LEELA SHAH HIGH SCHOOL AND JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.8,
     "choiceCode": "MU11579SFE"
   },
@@ -25656,7 +25656,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DIVINE ENGLISH SCHOOL JR COLLEG , KALHER",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU6138SFE"
   },
@@ -25666,7 +25666,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GHANSHYAMDAS JALAN JR COLLEGE OF SCI & COM",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU7213SFE"
   },
@@ -25676,7 +25676,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "DR. PARNERKAR MAHARAJ VIDYALAY & JR. COLLEGE WASHIVALI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU7354SGE"
   },
@@ -25686,7 +25686,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "R.H.SAVE SEC. VIDYA., TARAPUR",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.6,
     "choiceCode": "MU11516SFE"
   },
@@ -25696,7 +25696,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE KESHAV RAMBHAU KOTKAR SECODNARY & H.SECONDARY VIDYALAYA",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.4,
     "choiceCode": "MU6234SGE"
   },
@@ -25706,7 +25706,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MILLAT JUNIOR COLLEGE OF ARTS, SCIENCE & COMMERCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.2,
     "choiceCode": "MU7112SFE"
   },
@@ -25716,7 +25716,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT. SUSHILADEVI DESHMUKH JR. COLLEGE, AIROLI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU6386SNE"
   },
@@ -25726,7 +25726,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SUNRISE INTERNATIONAL SEC SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 37.0,
     "choiceCode": "MU6567SFE"
   },
@@ -25736,7 +25736,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHAH ADAM SHAIKHTEC.HIGH SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6162SGU"
   },
@@ -25746,7 +25746,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "A P COLLEGE OF COMMERCE AND SCIENCE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.8,
     "choiceCode": "MU6343SFE"
   },
@@ -25756,7 +25756,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "ARYAN JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.6,
     "choiceCode": "MU6828SFE"
   },
@@ -25766,7 +25766,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SHREE MAHADEV BABURAO CHAUGHULE JR COLLEGE RAHANAL, BHIWANDI",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU6152SNE"
   },
@@ -25776,7 +25776,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.4,
     "choiceCode": "MU7012SFE"
   },
@@ -25786,7 +25786,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "BHARAT ENG. SEC. SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU6544SFE"
   },
@@ -25796,7 +25796,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "AADIVASI UNNATI JUNIOR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.2,
     "choiceCode": "MU11428SFE"
   },
@@ -25806,7 +25806,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SWAMI RAMKRISHANA PARMHANS JR. COLLEGE GOVENDI (E)",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 36.0,
     "choiceCode": "MU6863SFE"
   },
@@ -25816,7 +25816,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "D.A.P. PUBLIC SCHOOL & JR. COLLEGE, TONDARE, TA-PANVEL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.6,
     "choiceCode": "MU11945SFE"
   },
@@ -25826,7 +25826,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NIRMAL JR. COLLEGE OF COMMERCE & SCIENCE KANDIVALI WEST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.2,
     "choiceCode": "MU7282SFE"
   },
@@ -25836,7 +25836,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "SMT YAMUNA PASI VIDYALYA & JUNIOR COLLEGE, SAMATA NAGAR, SATIWALI, VASAI EAST",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 35.0,
     "choiceCode": "MU11761SFE"
   },
@@ -25846,7 +25846,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "NOBEL GURUKUL CONVENT SCHOOL",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 32.6,
     "choiceCode": "MU6139SFE"
   },
@@ -25856,7 +25856,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "S. S. & L. S. PATKAR COLLEGE",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 31.8,
     "choiceCode": "MU7129SFE"
   },
@@ -25866,7 +25866,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "collegeName": "GLOBAL JR COLLEGE OF SCIENCE AND COMMERCE,NILAJE ,KALYAN",
     "stream": "Science",
     "category": "General",
-    "year": "2024-25",
+    "year": "2026-27",
     "cutoff": 27.6,
     "choiceCode": "MU6223SFE"
   }

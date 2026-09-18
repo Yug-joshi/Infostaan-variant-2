@@ -90,7 +90,7 @@ export const ScrollStorySection: React.FC = () => {
   const glassClasses = "bg-white/40 dark:bg-[#070D18]/40 backdrop-blur-xl border border-white/60 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,125,204,0.05)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-3xl p-8 lg:p-12";
 
   return (
-    <section ref={containerRef} className="relative w-full text-slate-900 dark:text-[#F4F7FB] overflow-hidden">
+    <section ref={containerRef} className="relative w-full text-slate-900 dark:text-[#F4F7FB]">
       
       {/* ----------------- DESKTOP PINNED VIEW ----------------- */}
       <div className="hidden md:flex w-full h-screen items-center justify-center relative">

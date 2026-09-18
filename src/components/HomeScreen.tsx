@@ -180,7 +180,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   };
 
   return (
-    <main className="relative w-full flex-1 flex flex-col items-center pt-24 sm:pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#070D18] text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200">
+    <main className="relative w-full flex-1 pt-24 sm:pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#070D18] text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200">
       
       {/* Absolute Background Rule - Clean subtle dark background */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
@@ -191,7 +191,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       {/* Desktop-only floating decorations (pointer-events-none) */}
       <div 
         ref={decorationsRef} 
-        className="pointer-events-none absolute inset-0 z-0 hidden lg:block overflow-hidden"
+        className="pointer-events-none absolute top-0 left-0 right-0 h-[100vh] z-0 hidden lg:block overflow-hidden"
         aria-hidden="true"
       >
         {/* Top Left: Laptop */}
@@ -218,7 +218,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
       {/* Mobile-only minimal marks */}
       <div 
-        className="pointer-events-none absolute inset-0 z-0 block lg:hidden"
+        className="pointer-events-none absolute top-0 left-0 right-0 h-[100vh] z-0 block lg:hidden"
         aria-hidden="true"
       >
         <div className="absolute top-[10%] right-[5%] w-2 h-2 rounded-full bg-[#007DCC]/30" />
@@ -226,7 +226,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       </div>
 
       {/* Central Content (Spacious & Clean) */}
-      <div ref={containerRef} className="relative z-10 w-full max-w-4xl flex flex-col items-center text-center">
+      <div ref={containerRef} className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center">
         
         {/* Eyebrow */}
         <div className="inline-flex items-center gap-2 mb-6 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-[#A9B8CA]">
@@ -350,7 +350,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
 
         {/* Continue Exploring (Personalized block) */}
-        <div className="w-full max-w-4xl pt-12 mt-12 border-t border-slate-300 dark:border-white/5 text-left">
+        <div className="w-full max-w-5xl mx-auto mt-20 sm:mt-28 pt-12 border-t border-slate-300 dark:border-white/5 text-left">
           <div className="flex items-center justify-between mb-8">
             <h3 className="text-lg font-bold text-slate-900 dark:text-[#F4F7FB]">Quick Explore</h3>
             <span className="text-xs text-slate-500 dark:text-[#71839A] uppercase tracking-wider font-bold">Discover Mumbai</span>
