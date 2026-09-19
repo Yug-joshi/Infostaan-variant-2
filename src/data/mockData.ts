@@ -27,7 +27,7 @@ export const INITIAL_SAVED_ITEMS: ShortlistItem[] = [
     canCompare: true,
     collegeId: 'hr-college',
   },
-  {
+  /* {
     id: 'item-motilal',
     category: 'internship',
     title: 'Equity Research Trainee — Motilal Oswal',
@@ -37,7 +37,7 @@ export const INITIAL_SAVED_ITEMS: ShortlistItem[] = [
     timeSavedText: 'Saved 3 days ago',
     iconType: 'trending_up',
     canCompare: false,
-  },
+  }, */
 ];
 
 export const MITHIBAI_DETAILS: CollegeDetail = {
@@ -492,7 +492,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     tagColor: 'secondary',
     actionLabel: 'View course details',
   },
-  {
+  /* {
     id: 'res-5',
     category: 'internships',
     badgeCategory: 'INTERNSHIP',
@@ -503,7 +503,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Closes in 12 days'],
     tagColor: 'tertiary',
     actionLabel: 'View opportunity',
-  },
+  }, */
   {
     id: 'res-6',
     category: 'colleges',
@@ -563,7 +563,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     tagColor: 'secondary',
     actionLabel: 'Explore career pathway',
   },
-  {
+  /* {
     id: 'res-11',
     category: 'internships',
     badgeCategory: 'INTERNSHIP',
@@ -574,8 +574,8 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Western/Harbour Line accessible'],
     tagColor: 'tertiary',
     actionLabel: 'View opportunity',
-  },
-  {
+  }, */
+  /* {
     id: 'res-12',
     category: 'internships',
     badgeCategory: 'INTERNSHIP',
@@ -586,7 +586,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Ideal for 2nd & 3rd year BAF students'],
     tagColor: 'tertiary',
     actionLabel: 'View opportunity',
-  },
+  }, */
   {
     id: 'res-13',
     category: 'colleges',
@@ -683,7 +683,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     tagColor: 'secondary',
     actionLabel: 'View course details',
   },
-  {
+  /* {
     id: 'res-21',
     category: 'internships',
     badgeCategory: 'INTERNSHIP',
@@ -694,8 +694,8 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Requires CA Inter Cleared • Lower Parel'],
     tagColor: 'tertiary',
     actionLabel: 'View opportunity',
-  },
-  {
+  }, */
+  /* {
     id: 'res-22',
     category: 'internships',
     badgeCategory: 'INTERNSHIP',
@@ -706,8 +706,8 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['BKC Campus • Immediate Joiners'],
     tagColor: 'tertiary',
     actionLabel: 'View opportunity',
-  },
-  {
+  }, */
+  /* {
     id: 'res-23',
     category: 'internships',
     badgeCategory: 'INTERNSHIP',
@@ -718,8 +718,8 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['South Mumbai Legal Hub'],
     tagColor: 'tertiary',
     actionLabel: 'View opportunity',
-  },
-  {
+  }, */
+  /* {
     id: 'res-24',
     category: 'internships',
     badgeCategory: 'INTERNSHIP',
@@ -730,7 +730,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Ideal for BAMMC / BMS graduates'],
     tagColor: 'tertiary',
     actionLabel: 'View opportunity',
-  },
+  }, */
 ];
 
 export const COMPARISON_DATA: Record<string, ComparisonProfile> = {
@@ -944,7 +944,7 @@ export const CAREER_ROADMAPS: CareerGoal[] = [
         badge: 'Practical Training & Articleship',
         timeline: 'Degree Final Year to Year 5',
         summary: 'Undergo 2 years of rigorous practical training under a licensed FCA in Mumbai. Gain real-world statutory audit, transfer pricing, and direct tax litigation exposure across leading corporations.',
-        internships: [
+        /* internships: [
           {
             title: 'Statutory Audit Articled Assistant',
             company: 'Ernst & Young (EY) India',
@@ -981,7 +981,7 @@ export const CAREER_ROADMAPS: CareerGoal[] = [
             skillsGained: 'Deep forensic review, stock audits for PSU banks, company secretarial filings.',
             applicationWindow: 'Year-round intake',
           },
-        ],
+        ], */
         proTips: [
           'Choose Lower Parel or BKC audit firms if you live on the Western line, or Dadar/Fort if you live on the Central line to prevent grueling cross-city transit fatigue.',
           'Start CA Final self-study or online coaching during the 2nd year of articleship; avoid leaving syllabus prep to the final 4-month study leave.',
@@ -1130,7 +1130,7 @@ export const CAREER_ROADMAPS: CareerGoal[] = [
         badge: 'Internships & Deal Exposure',
         timeline: 'Year 2 Summer & Final Year',
         summary: 'Work at leading Indian brokerages, credit rating agencies, or boutique advisory shops in BKC and Lower Parel.',
-        internships: [
+        /* internships: [
           {
             title: 'Equity Research Trainee — Institutional Desk',
             company: 'Motilal Oswal Financial Services',
@@ -1158,7 +1158,7 @@ export const CAREER_ROADMAPS: CareerGoal[] = [
             skillsGained: 'LBO models, private equity tear sheets, comparable company analysis (Comps).',
             applicationWindow: 'Continuous intake for final year students',
           },
-        ],
+        ], */
         proTips: [
           'Reach out directly to Mumbai alumni working at TresVista, Ambit Capital, and Edelweiss via polite LinkedIn InMail showcasing your completed financial model samples.',
         ],
@@ -1275,7 +1275,7 @@ export const CAREER_ROADMAPS: CareerGoal[] = [
         badge: 'Practical Experience',
         timeline: 'Year 2 & 3 Summer',
         summary: 'Secure practical business analyst and associate product manager (APM) internships at Mumbai tech companies or consulting boutiques.',
-        internships: [
+        /* internships: [
           {
             title: 'FinTech Product & Operations Trainee',
             company: 'Groww FinTech Hub',
@@ -1294,7 +1294,7 @@ export const CAREER_ROADMAPS: CareerGoal[] = [
             skillsGained: 'Market sizing (guesstimates), vendor benchmark studies, executive slide decks.',
             applicationWindow: 'On-campus and LinkedIn referrals',
           },
-        ],
+        ], */
         proTips: [
           'Quantify every bullet on your resume: "Boosted trial signups by 24% by redesigning onboarding flow" beats "Helped with onboarding".',
         ],
@@ -1419,7 +1419,7 @@ export const CAREER_ROADMAPS: CareerGoal[] = [
         badge: 'Industry Internships',
         timeline: 'Semesters 4–6',
         summary: 'Gain practical experience building backend systems, RESTful APIs, or analytics pipelines at Mumbai financial tech firms and brokerages.',
-        internships: [
+        /* internships: [
           {
             title: 'Backend Engineering Intern',
             company: 'Groww / Zerodha Tech Hub',
@@ -1438,7 +1438,7 @@ export const CAREER_ROADMAPS: CareerGoal[] = [
             skillsGained: 'Time-series price analysis, machine learning prediction models, SQL data extraction.',
             applicationWindow: 'Rolling intake',
           },
-        ],
+        ], */
         proTips: [
           'Clean code and thorough unit tests in your GitHub repos make you stand out 10x more than generic copy-pasted tutorial projects.',
         ],
@@ -1534,7 +1534,7 @@ export const CAREER_ROADMAPS: CareerGoal[] = [
         badge: 'Legal Internships',
         timeline: 'Semester Breaks & Year 3–5',
         summary: 'Intern with premier corporate law firms in Mumbai, reviewing transaction agreements, drafting non-disclosure agreements (NDAs), and verifying land and company titles.',
-        internships: [
+        /* internships: [
           {
             title: 'Corporate Securities Legal Intern',
             company: 'Cyril Amarchand Mangaldas',
@@ -1553,7 +1553,7 @@ export const CAREER_ROADMAPS: CareerGoal[] = [
             skillsGained: 'Shareholder agreements, venture capital funding term sheets, trademark searches.',
             applicationWindow: 'October & April deadlines',
           },
-        ],
+        ], */
         proTips: [
           'Publish well-researched case commentaries on recent SEBI insider trading orders on SCC Online or Bar & Bench.',
         ],
@@ -1663,7 +1663,7 @@ export const CAREER_ROADMAPS: CareerGoal[] = [
         badge: 'Agency Internships',
         timeline: 'Semester 4 & 5',
         summary: 'Intern at top creative agencies, digital consultancies, or FMCG marketing teams in Lower Parel, Bandra, and Andheri.',
-        internships: [
+        /* internships: [
           {
             title: 'Brand Strategy & Media Planning Intern',
             company: 'Schbang Digital Agency',
@@ -1682,7 +1682,7 @@ export const CAREER_ROADMAPS: CareerGoal[] = [
             skillsGained: 'TV commercial script drafts, digital social ad copies, brand voice guidelines.',
             applicationWindow: 'Summer & Autumn cycles',
           },
-        ],
+        ], */
         proTips: [
           'A crisp, interactive Notion portfolio link showcasing 5 high-impact creative campaigns is 100x more effective than a traditional PDF resume.',
         ],

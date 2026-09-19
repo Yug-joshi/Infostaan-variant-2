@@ -29,12 +29,11 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
   onSelectCollege,
   onNavigate,
 }) => {
-  const [filter, setFilter] = useState<'all' | 'college' | 'internship'>('all');
+  const [filter, setFilter] = useState<'all' | 'college'>('all');
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const listContainerRef = useRef<HTMLDivElement>(null);
 
   const collegeCount = savedItems.filter((i) => i.category === 'college').length;
-  const internshipCount = savedItems.filter((i) => i.category === 'internship').length;
 
   const filteredItems = useMemo(() => {
     if (filter === 'all') return savedItems;
@@ -142,20 +141,6 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
               {collegeCount}
             </span>
           </button>
-          <button
-            type="button"
-            onClick={() => setFilter('internship')}
-            className={`filter-tab px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-2 ${
-              filter === 'internship'
-                ? 'bg-[#007DCC] text-white shadow-xs'
-                : 'bg-white dark:bg-[#1a202b] text-slate-600 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-[#F4F7FB] border border-slate-200 dark:border-transparent'
-            }`}
-          >
-            <span>Internships</span>
-            <span className={`px-1.5 py-0.2 rounded-full text-xs font-normal ${filter === 'internship' ? 'bg-blue-600 text-white' : 'bg-slate-100 dark:bg-[#2f3541] text-slate-600 dark:text-[#A9B8CA]'}`}>
-              {internshipCount}
-            </span>
-          </button>
         </div>
 
         {/* Shortlist Items Container */}
@@ -207,13 +192,9 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
                               {item.title}
                             </h2>
                             <span
-                              className={`text-[11px] font-semibold px-2 py-0.5 rounded tracking-wide uppercase ${
-                                item.category === 'internship'
-                                  ? 'bg-emerald-50 text-emerald-700 dark:bg-[#00382d] dark:text-[#51dcbc]'
-                                  : 'bg-blue-50 text-blue-700 dark:bg-[#2f3541] dark:text-[#86cfff]'
-                              }`}
+                              className="text-[11px] font-semibold px-2 py-0.5 rounded tracking-wide uppercase bg-blue-50 text-blue-700 dark:bg-[#2f3541] dark:text-[#86cfff]"
                             >
-                              {item.regionBadge}
+                              {item.badgeType}
                             </span>
                           </div>
 

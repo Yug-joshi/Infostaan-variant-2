@@ -250,7 +250,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search colleges, courses, careers, internships, classes..."
+                placeholder="Search colleges, courses, careers, classes..."
                 className="w-full bg-transparent border-none text-slate-900 dark:text-[#F4F7FB] font-medium text-sm sm:text-base px-4 py-3 sm:py-4 focus:outline-none focus:ring-0 placeholder:text-slate-400 dark:placeholder-[#71839A]"
                 autoComplete="off"
               />
@@ -303,8 +303,6 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-[#71839A]/40" />
                 <button type="button" onClick={() => onSearch('CA courses')} className="hover:text-[#007DCC] dark:hover:text-[#19A7E8] transition-colors">CA courses</button>
                 <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-[#71839A]/40" />
-                <button type="button" onClick={() => onSearch('Finance internships')} className="hover:text-[#007DCC] dark:hover:text-[#19A7E8] transition-colors">Finance internships</button>
-                <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-[#71839A]/40" />
                 <button type="button" onClick={() => onSearch('Design careers')} className="hover:text-[#007DCC] dark:hover:text-[#19A7E8] transition-colors">Design careers</button>
               </div>
             )}
@@ -317,7 +315,6 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             { name: 'Colleges', icon: Building2, path: 'colleges' },
             { name: 'Courses', icon: GraduationCap, path: 'courses' },
             { name: 'Careers', icon: TrendingUp, path: 'careers' },
-            { name: 'Internships', icon: Briefcase, path: 'internships' },
             { name: 'Classes', icon: MonitorPlay, path: 'classes' },
             { name: 'Cutoffs', icon: BarChart2, action: onOpenCutoff },
           ].map((item) => {
@@ -368,13 +365,6 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               className="p-5 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-white/5 hover:border-[#007DCC]/50 cursor-pointer group transition-colors shadow-sm hover:shadow-md"
             >
               <h4 className="text-slate-900 dark:text-[#F4F7FB] font-semibold group-hover:text-[#007DCC] dark:group-hover:text-[#19A7E8] transition-colors">Career Roadmaps</h4>
-            </div>
-            
-            <div 
-              onClick={() => onSearch('', 'internships')}
-              className="p-5 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-white/5 hover:border-[#007DCC]/50 cursor-pointer group transition-colors shadow-sm hover:shadow-md"
-            >
-              <h4 className="text-slate-900 dark:text-[#F4F7FB] font-semibold group-hover:text-[#007DCC] dark:group-hover:text-[#19A7E8] transition-colors">Internship Hub</h4>
             </div>
           </div>
         </div>

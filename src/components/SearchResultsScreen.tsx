@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, Building2, MapPin, GraduationCap } from 'lucide-react';
+import { Search, X, ArrowRight, Building2, MapPin, GraduationCap, Settings2 } from 'lucide-react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { CategoryType, SearchResultItem } from '../types';
 import { searchInfostaan } from '../lib/searchEngine';
@@ -28,6 +28,19 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   
   const [inputValue, setInputValue] = useState(query);
   const [searchPhase, setSearchPhase] = useState<'idle' | 'understanding' | 'skeleton' | 'done'>('idle');
+
+  // Filter-First State
+  const [showResults, setShowResults] = useState(!!query);
+  const [selectedInterest, setSelectedInterest] = useState<string | null>(null);
+  const [selectedGrade, setSelectedGrade] = useState<string | null>(null);
+  const [selectedFee, setSelectedFee] = useState<string | null>(null);
+
+  // If query changes externally, show results
+  useEffect(() => {
+    if (query) {
+      setShowResults(true);
+    }
+  }, [query]);
 
   // Sync external query changes to input value
   useEffect(() => {
@@ -76,8 +89,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 
   const filteredResults = useMemo(() => {
     const raw = searchInfostaan(query, activeCategory);
-    // Internships are hidden from all UI results
-    return raw.filter((i) => i.category !== 'internships');
+    return raw;
   }, [query, activeCategory]);
 
   // Search loader sequence
@@ -223,12 +235,103 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                 </button>
               ))}
             </div>
+            {showResults && (
+              <button
+                type="button"
+                className="inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-[#161c27] transition-all whitespace-nowrap shrink-0"
+              >
+                <Settings2 className="w-4 h-4" />
+                More Filters
+              </button>
+            )}
           </div>
         </div>
 
         {/* Dynamic Loading Sequence / Results Container */}
         <div ref={resultsContainerRef} className="w-full">
-          {searchPhase === 'understanding' ? (
+          {!showResults ? (
+            <div className="py-6 sm:py-10 animate-fade-in text-left">
+              <div className="max-w-2xl bg-white dark:bg-[#0D1828] rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-white/10 shadow-sm mx-auto sm:mx-0">
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">Tell us what you're looking for</h2>
+                <p className="text-sm text-slate-500 dark:text-[#71839A] mb-8">Select a few options below so we can recommend the best matches in Mumbai.</p>
+
+                <div className="space-y-6">
+                  {/* Interest */}
+                  <div>
+                    <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">Your Interest</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {['Commerce', 'Science', 'Arts', 'Tech / IT', 'Law', 'Design'].map(opt => (
+                        <button
+                          key={opt}
+                          onClick={() => setSelectedInterest(selectedInterest === opt ? null : opt)}
+                          className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
+                            selectedInterest === opt
+                              ? 'bg-[#007DCC] text-white shadow-xs'
+                              : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'
+                          }`}
+                        >
+                          {opt}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Grade */}
+                  <div>
+                    <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">Current Grade</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {['10th / SSC', '12th / HSC', 'Graduate'].map(opt => (
+                        <button
+                          key={opt}
+                          onClick={() => setSelectedGrade(selectedGrade === opt ? null : opt)}
+                          className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
+                            selectedGrade === opt
+                              ? 'bg-[#007DCC] text-white shadow-xs'
+                              : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'
+                          }`}
+                        >
+                          {opt}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Budget */}
+                  <div>
+                    <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">College Fees (Per Year)</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {['Under ₹25k', '₹25k - ₹1 Lakh', 'No Limit'].map(opt => (
+                        <button
+                          key={opt}
+                          onClick={() => setSelectedFee(selectedFee === opt ? null : opt)}
+                          className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
+                            selectedFee === opt
+                              ? 'bg-[#007DCC] text-white shadow-xs'
+                              : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'
+                          }`}
+                        >
+                          {opt}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-10 pt-6 border-t border-slate-100 dark:border-white/5">
+                  <button
+                    onClick={() => {
+                      setSearchPhase('idle');
+                      setShowResults(true);
+                    }}
+                    className="w-full sm:w-auto px-8 py-3.5 bg-[#007DCC] hover:bg-[#006cb0] text-white text-sm font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 active:scale-95"
+                  >
+                    <span>Show Recommendations</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ) : searchPhase === 'understanding' ? (
             <div className="py-12">
               <PencilLoader size="medium" variant="spin" message={getLoaderMessage(activeCategory)} />
             </div>

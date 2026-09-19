@@ -118,7 +118,7 @@ export const CareerRoadmap: React.FC<CareerRoadmapProps> = ({
               Degree & Internship Career Roadmap
             </h2>
             <p className="text-sm sm:text-base text-gray-300 max-w-2xl mt-1.5 leading-relaxed">
-              Select a professional career target to see an end-to-end blueprint: from Class 12 prerequisites, recommended Mumbai colleges (Hinduja, Podar, Jai Hind, Mithibai, HR), verified internships in BKC & Lower Parel, to entry salaries.
+              Select a professional career target to see an end-to-end blueprint: from Class 12 prerequisites, recommended Mumbai colleges (Hinduja, Podar, Jai Hind, Mithibai, HR), to entry salaries.
             </p>
           </div>
 
@@ -516,6 +516,7 @@ export const CareerRoadmap: React.FC<CareerRoadmapProps> = ({
                   )}
 
                   {/* Section: Practical Internships & Articleships */}
+                  {/*
                   {step.internships && step.internships.length > 0 && (
                     <div>
                       <div className="flex items-center gap-2 mb-3">

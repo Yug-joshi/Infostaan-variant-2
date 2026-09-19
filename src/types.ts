@@ -1,10 +1,10 @@
 export type ScreenType = 'home' | 'search' | 'college-detail' | 'saved' | 'guidance' | 'connect';
 
-export type CategoryType = 'all' | 'colleges' | 'courses' | 'careers' | 'internships' | 'classes' | 'cutoffs';
+export type CategoryType = 'all' | 'colleges' | 'courses' | 'careers' /* | 'internships' */ | 'classes' | 'cutoffs';
 
 export interface SearchResultItem {
   id: string;
-  category: 'colleges' | 'courses' | 'careers' | 'internships' | 'classes' | 'cutoffs';
+  category: 'colleges' | 'courses' | 'careers' /* | 'internships' */ | 'classes' | 'cutoffs';
   badgeCategory: string;
   badgeSub: string;
   title: string;
@@ -49,7 +49,7 @@ export interface CollegeDetail {
 
 export interface ShortlistItem {
   id: string;
-  category: 'college' | 'internship';
+  category: 'college' /* | 'internship' */;
   title: string;
   regionBadge: string;
   badgeType: string;
@@ -98,6 +98,7 @@ export interface RoadmapCertificationItem {
   whenToTake: string;
 }
 
+/*
 export interface RoadmapInternshipItem {
   title: string;
   company: string;
@@ -107,6 +108,7 @@ export interface RoadmapInternshipItem {
   skillsGained: string;
   applicationWindow: string;
 }
+*/
 
 export interface RoadmapStep {
   stepNumber: number;
@@ -116,7 +118,7 @@ export interface RoadmapStep {
   summary: string;
   degreesOrCourses?: RoadmapDegreeItem[];
   certifications?: RoadmapCertificationItem[];
-  internships?: RoadmapInternshipItem[];
+  // internships?: RoadmapInternshipItem[];
   proTips: string[];
 }
 
