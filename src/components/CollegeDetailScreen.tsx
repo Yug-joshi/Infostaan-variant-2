@@ -17,6 +17,7 @@ import {
 import { CollegeDetail, ScreenType, ShortlistItem } from '../types';
 import { getCollegeDetails } from '../data/mockData';
 import { CUTOFFS } from '../data/cutoffs';
+import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
 import gsap from 'gsap';
 
 interface CollegeDetailScreenProps {
@@ -38,6 +39,9 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
   const isSaved = savedItems.some((item) => item.collegeId === collegeId);
   const college: CollegeDetail = getCollegeDetails(collegeId);
   const collegeCutoffs = CUTOFFS.filter(c => c.collegeId === collegeId);
+  // FYJC structured cutoff data for this college
+  const fyjcCutoffs = FYJC_CUTOFFS.filter(c => c.collegeId === collegeId)
+    .sort((a, b) => b.cutoff - a.cutoff);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Subtle GSAP entrance animation
@@ -303,47 +307,99 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
         </div>
 
         {/* Section: Admissions & Cutoffs */}
-        {collegeCutoffs.length > 0 && (
+        {(fyjcCutoffs.length > 0 || collegeCutoffs.length > 0) && (
           <section className="detail-fade-anim mb-10 text-left">
             <div className="p-8 sm:p-10 rounded-2xl bg-white dark:bg-[#0D1828] shadow-sm border border-slate-300 dark:border-[#D3B5E8]/15">
-              <div className="space-y-1 mb-6">
-                <span className="text-[11px] text-[#007DCC] dark:text-[#86cfff] font-bold uppercase tracking-widest">
-                  Admissions
-                </span>
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] tracking-tight">
-                  Cutoffs & Merit Lists
-                </h2>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {collegeCutoffs.map(cutoff => (
-                  <div key={cutoff.id} className="p-5 rounded-xl border border-slate-300 dark:border-[#D3B5E8]/10 bg-slate-50 dark:bg-[#161c27] flex flex-col justify-between">
-                    <div className="mb-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#007DCC]/10 text-[#007DCC] dark:text-[#86cfff] uppercase">
-                          {cutoff.academicYear}
-                        </span>
-                        <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-500/10 text-purple-600 dark:text-[#D3B5E8] uppercase">
-                          {cutoff.stream}
-                        </span>
-                      </div>
-                      <h4 className="font-semibold text-slate-900 dark:text-[#F4F7FB] text-sm mb-1">{cutoff.documentTitle}</h4>
-                      <p className="text-xs text-slate-500 dark:text-[#A9B8CA]">{cutoff.description}</p>
-                    </div>
-                    
-                    <a 
-                      href={cutoff.sourceFile}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-[#007DCC] dark:text-[#19A7E8] hover:text-[#005a9c] dark:hover:text-[#5bc1ff] text-xs font-bold uppercase tracking-wide transition-colors"
-                      aria-label={`View cutoff PDF for ${cutoff.documentTitle}`}
-                    >
-                      <FileText className="w-4 h-4" />
-                      View Cutoff PDF <ArrowRight className="w-3 h-3" />
-                    </a>
+              <div className="flex items-start justify-between gap-4 mb-6">
+                <div className="space-y-1">
+                  <span className="text-[11px] text-[#007DCC] dark:text-[#86cfff] font-bold uppercase tracking-widest">
+                    Admissions
+                  </span>
+                  <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] tracking-tight">
+                    Cutoffs
+                  </h2>
+                </div>
+                {/* PDF source link(s) */}
+                {collegeCutoffs.length > 0 && (
+                  <div className="flex flex-wrap gap-2">
+                    {collegeCutoffs.slice(0, 2).map((c) => (
+                      <a
+                        key={c.id}
+                        href={c.sourceFile}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[10px] font-semibold text-slate-500 dark:text-[#71839A] hover:text-[#007DCC] dark:hover:text-[#86cfff] transition-colors px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5"
+                        aria-label={`View cutoff PDF for ${c.documentTitle}`}
+                      >
+                        <FileText className="w-3 h-3" />
+                        <span>{c.stream || 'Official'} PDF ↗</span>
+                      </a>
+                    ))}
                   </div>
-                ))}
+                )}
               </div>
+
+              {fyjcCutoffs.length > 0 ? (
+                /* Inline FYJC cutoff rows */
+                <div className="space-y-1">
+                  {/* Header */}
+                  <div className="grid grid-cols-3 gap-2 pb-2 border-b border-slate-100 dark:border-white/5">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A]">Stream</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A]">Category</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A] text-right">Cutoff</span>
+                  </div>
+                  {fyjcCutoffs.slice(0, 12).map((c) => (
+                    <div
+                      key={c.id}
+                      className="grid grid-cols-3 gap-2 py-3 border-b border-slate-50 dark:border-white/4 last:border-0"
+                    >
+                      <span className="text-sm font-medium text-slate-700 dark:text-[#A9B8CA]">{c.stream}</span>
+                      <span className="text-sm text-slate-500 dark:text-[#71839A]">{c.category}</span>
+                      <span className="text-sm font-black text-[#007DCC] dark:text-[#19A7E8] text-right tabular-nums">
+                        {c.cutoff}%
+                      </span>
+                    </div>
+                  ))}
+                  {fyjcCutoffs.length > 12 && (
+                    <p className="text-xs text-slate-400 dark:text-[#71839A] pt-2 text-center">
+                      Showing top 12 of {fyjcCutoffs.length} cutoff records.
+                    </p>
+                  )}
+                  <p className="text-[11px] text-slate-400 dark:text-[#71839A] pt-3">
+                    Source: FYJC Mumbai {fyjcCutoffs[0]?.year} data.
+                  </p>
+                </div>
+              ) : (
+                /* Fallback: PDF only */
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {collegeCutoffs.map(cutoff => (
+                    <div key={cutoff.id} className="p-5 rounded-xl border border-slate-300 dark:border-[#D3B5E8]/10 bg-slate-50 dark:bg-[#161c27] flex flex-col justify-between">
+                      <div className="mb-4">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#007DCC]/10 text-[#007DCC] dark:text-[#86cfff] uppercase">
+                            {cutoff.academicYear}
+                          </span>
+                          <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-500/10 text-purple-600 dark:text-[#D3B5E8] uppercase">
+                            {cutoff.stream}
+                          </span>
+                        </div>
+                        <h4 className="font-semibold text-slate-900 dark:text-[#F4F7FB] text-sm mb-1">{cutoff.documentTitle}</h4>
+                        <p className="text-xs text-slate-500 dark:text-[#A9B8CA]">{cutoff.description}</p>
+                      </div>
+                      <a
+                        href={cutoff.sourceFile}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-[#007DCC] dark:text-[#19A7E8] hover:text-[#005a9c] dark:hover:text-[#5bc1ff] text-xs font-bold uppercase tracking-wide transition-colors"
+                        aria-label={`View cutoff PDF for ${cutoff.documentTitle}`}
+                      >
+                        <FileText className="w-4 h-4" />
+                        View Cutoff PDF <ArrowRight className="w-3 h-3" />
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </section>
         )}
