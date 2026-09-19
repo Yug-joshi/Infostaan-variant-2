@@ -156,7 +156,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              placeholder="Search colleges (Hinduja, Podar, Mithibai, HR), courses, careers, internships..."
+              placeholder="Search colleges, courses, careers, classes..."
               className="w-full bg-transparent font-medium text-sm sm:text-base text-slate-900 dark:text-[#F4F7FB] placeholder:text-slate-400 dark:placeholder:text-[#A9B8CA]/60 focus:outline-none"
             />
             {inputValue && (
@@ -255,63 +255,86 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                   </button>
                 </div>
               ) : (
-                filteredResults.map((item) => (
+                filteredResults.map((item) => {
+                  // For college cards: extract just stream tokens from subtitle
+                  // subtitle format: "Offered: B.Com, BMS, BAF • Approx. ₹X/yr"
+                  // We only want the part before the first "•"
+                  const getStreams = (): string[] => {
+                    if (item.category !== 'colleges' || !item.subtitle) return [];
+                    const offeredPart = item.subtitle.split('•')[0].replace(/^Offered:\s*/i, '').trim();
+                    return offeredPart.split(',').map(s => s.trim()).filter(Boolean).slice(0, 4);
+                  };
+
+                  const streams = getStreams();
+
+                  return (
                   <article
                     key={item.id}
-                    className="result-card-anim group relative flex flex-col justify-between p-3 sm:p-4 rounded-2xl bg-white dark:bg-[#0D1828] hover:bg-slate-100 dark:hover:bg-[#121f33] transition-all duration-200 shadow-sm hover:shadow-md border border-slate-300 dark:border-[#D3B5E8]/15 hover:border-[#007DCC] dark:hover:border-[#D3B5E8]/35 text-left h-full"
+                    className="result-card-anim group flex flex-col justify-between p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0D1828] hover:bg-slate-50 dark:hover:bg-[#121f33] transition-all duration-200 shadow-sm hover:shadow-md border border-slate-200 dark:border-[#D3B5E8]/12 hover:border-[#007DCC]/50 dark:hover:border-[#D3B5E8]/30 text-left cursor-pointer"
                     data-category={item.category}
+                    onClick={() => handleActionClick(item)}
                   >
-                    <div>
-                      {/* Category & Locality */}
-                      <div className="flex items-center gap-1 mb-1.5 flex-wrap">
+                    {/* Top: category type + locality */}
+                    <div className="mb-3">
+                      <div className="flex items-baseline gap-1.5 mb-2">
                         <span
-                          className={`text-[9px] sm:text-[10px] font-bold uppercase tracking-wider ${
+                          className={`text-[9px] font-bold uppercase tracking-widest ${
                             item.tagColor === 'tertiary'
                               ? 'text-emerald-600 dark:text-[#51dcbc]'
                               : item.tagColor === 'secondary'
-                              ? 'text-blue-600 dark:text-[#86cfff]'
-                              : 'text-purple-600 dark:text-[#D3B5E8]'
+                              ? 'text-[#007DCC] dark:text-[#86cfff]'
+                              : item.tagColor === 'lavender'
+                              ? 'text-purple-500 dark:text-[#D3B5E8]'
+                              : 'text-[#007DCC] dark:text-[#86cfff]'
                           }`}
                         >
                           {item.badgeCategory}
                         </span>
                         {item.badgeSub && (
-                          <>
-                            <span className="text-slate-300 dark:text-[#8a919c] text-[10px]">·</span>
-                            <span className="text-[10px] text-slate-500 dark:text-[#A9B8CA]">{item.badgeSub}</span>
-                          </>
+                          <span className="text-[10px] text-slate-400 dark:text-[#71839A] truncate">
+                            · {item.badgeSub}
+                          </span>
                         )}
                       </div>
 
-                      {/* Title */}
-                      <h2
-                        onClick={() => handleActionClick(item)}
-                        className="text-sm sm:text-base font-bold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-1 group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors cursor-pointer leading-snug"
-                      >
+                      {/* Name — primary identity */}
+                      <h2 className="text-sm sm:text-[15px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug tracking-tight group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors">
                         {item.title}
                       </h2>
 
-                      {/* Subtitle — streams/fields only */}
-                      {item.subtitle && (
-                        <p className="text-slate-500 dark:text-[#A9B8CA] text-[11px] sm:text-xs leading-snug">
-                          {item.subtitle}
+                      {/* Streams — college only, shown as dot-separated tokens */}
+                      {item.category === 'colleges' && streams.length > 0 && (
+                        <p className="mt-1.5 text-[11px] text-slate-500 dark:text-[#71839A] leading-relaxed">
+                          {streams.join(' · ')}
                         </p>
                       )}
+
+                      {/* For classes: show specialization */}
+                      {item.category === 'classes' && item.subtitle && (
+                        <p className="mt-1.5 text-[11px] text-slate-500 dark:text-[#71839A] leading-relaxed">
+                          {item.subtitle.replace(/^Specialization:\s*/i, '')}
+                        </p>
+                      )}
+
+                      {/* For courses: badgeSub is already the duration, shown above */}
+                      {/* For careers: nothing extra — title + domain is enough */}
                     </div>
 
-                    {/* Action Link */}
-                    <div className="pt-2.5 border-t border-slate-100 dark:border-white/5 mt-3">
-                      <button
-                        type="button"
-                        onClick={() => handleActionClick(item)}
-                        className="inline-flex items-center justify-between w-full p-1.5 rounded-lg hover:bg-blue-50 dark:hover:bg-[#091540] text-[10px] sm:text-xs font-bold text-[#007DCC] dark:text-[#86cfff] transition-colors"
-                      >
-                        <span>{item.actionLabel}</span>
-                        <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                      </button>
+                    {/* Bottom: Details action */}
+                    <div className="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-white/5">
+                      <span className="text-[11px] sm:text-xs font-semibold text-[#007DCC] dark:text-[#86cfff]">
+                        {item.category === 'colleges' ? 'Details' :
+                         item.category === 'classes' ? 'View Details' :
+                         item.category === 'courses' ? 'Course Info' :
+                         item.category === 'careers' ? 'Career Path' :
+                         item.category === 'cutoffs' ? 'View Cutoff' :
+                         item.actionLabel}
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 text-[#007DCC] dark:text-[#86cfff] group-hover:translate-x-0.5 transition-transform" />
                     </div>
                   </article>
-                ))
+                  );
+                })
               )}
             </div>
           )}
