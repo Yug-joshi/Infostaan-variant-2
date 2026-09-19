@@ -42,6 +42,13 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
     }
   }, [query]);
 
+  // Reset to questions when changing tabs if there's no active query
+  useEffect(() => {
+    if (!query) {
+      setShowResults(false);
+    }
+  }, [activeCategory, query]);
+
   // Sync external query changes to input value
   useEffect(() => {
     setInputValue(query);
@@ -88,9 +95,51 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   };
 
   const filteredResults = useMemo(() => {
-    const raw = searchInfostaan(query, activeCategory);
+    let raw = searchInfostaan(query, activeCategory);
+
+    // Apply Interest Filter
+    if (selectedInterest) {
+      const keywords = selectedInterest.split('/').map(k => k.trim().toLowerCase());
+      raw = raw.filter(item => {
+        const text = [item.title, item.badgeType, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
+        return keywords.some(kw => text.includes(kw));
+      });
+    }
+
+    // Apply Grade Filter
+    if (selectedGrade) {
+      const gradeLower = selectedGrade.split('/')[0].trim().toLowerCase();
+      raw = raw.filter(item => {
+        const text = [item.title, item.badgeType, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
+        // If it's a college or degree program, we consider it valid for 12th/Graduate. 
+        // For strictness, we just do a text match on the grade or allow general terms.
+        return text.includes(gradeLower) || 
+               text.includes('degree') || 
+               text.includes('college') ||
+               text.includes('university');
+      });
+    }
+
+    // Apply Fee Filter
+    if (selectedFee && selectedFee !== 'No Limit') {
+      raw = raw.filter(item => {
+        const feeMatch = item.subtitle?.match(/₹([0-9,]+)/);
+        if (!feeMatch) return true; // If no fee listed, don't filter it out
+        
+        const fee = parseInt(feeMatch[1].replace(/,/g, ''), 10);
+        
+        if (selectedFee === 'Under ₹25k') return fee <= 25000;
+        if (selectedFee === '₹25k - ₹50k') return fee > 25000 && fee <= 50000;
+        if (selectedFee === '₹50k - ₹1 Lakh') return fee > 50000 && fee <= 100000;
+        if (selectedFee === '₹1 Lakh - ₹3 Lakh') return fee > 100000 && fee <= 300000;
+        if (selectedFee === 'Over ₹3 Lakh') return fee > 300000;
+        
+        return true;
+      });
+    }
+
     return raw;
-  }, [query, activeCategory]);
+  }, [query, activeCategory, selectedInterest, selectedGrade, selectedFee]);
 
   // Search loader sequence
   useEffect(() => {
@@ -238,6 +287,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
             {showResults && (
               <button
                 type="button"
+                onClick={() => setShowResults(false)}
                 className="inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-[#161c27] transition-all whitespace-nowrap shrink-0"
               >
                 <Settings2 className="w-4 h-4" />
@@ -300,7 +350,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                   <div>
                     <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">College Fees (Per Year)</h3>
                     <div className="flex flex-wrap gap-2">
-                      {['Under ₹25k', '₹25k - ₹1 Lakh', 'No Limit'].map(opt => (
+                      {['Under ₹25k', '₹25k - ₹50k', '₹50k - ₹1 Lakh', '₹1 Lakh - ₹3 Lakh', 'Over ₹3 Lakh', 'No Limit'].map(opt => (
                         <button
                           key={opt}
                           onClick={() => setSelectedFee(selectedFee === opt ? null : opt)}
