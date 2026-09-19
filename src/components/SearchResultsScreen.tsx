@@ -1,11 +1,10 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, Check, SlidersHorizontal, Sparkles, Building2, MapPin, GraduationCap } from 'lucide-react';
+import { Search, X, ArrowRight, Building2, MapPin, GraduationCap } from 'lucide-react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { CategoryType, SearchResultItem } from '../types';
 import { searchInfostaan } from '../lib/searchEngine';
 import { PencilLoader } from './PencilLoader';
 import { SkeletonResultCards } from './SkeletonResultCards';
-import { InternshipModal } from './InternshipModal';
 import gsap from 'gsap';
 
 interface SearchResultsScreenProps {
@@ -29,8 +28,6 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   
   const [inputValue, setInputValue] = useState(query);
   const [searchPhase, setSearchPhase] = useState<'idle' | 'understanding' | 'skeleton' | 'done'>('idle');
-  const [isInternshipOpen, setIsInternshipOpen] = useState(false);
-  const [selectedInternship, setSelectedInternship] = useState<SearchResultItem | null>(null);
 
   // Sync external query changes to input value
   useEffect(() => {
@@ -78,22 +75,10 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   };
 
   const filteredResults = useMemo(() => {
-    return searchInfostaan(query, activeCategory);
+    const raw = searchInfostaan(query, activeCategory);
+    // Internships are hidden from all UI results
+    return raw.filter((i) => i.category !== 'internships');
   }, [query, activeCategory]);
-
-  const fullResultsForCounts = useMemo(() => searchInfostaan('', 'all'), []);
-
-  const counts = useMemo(() => {
-    return {
-      all: fullResultsForCounts.length,
-      colleges: fullResultsForCounts.filter((i) => i.category === 'colleges').length,
-      courses: fullResultsForCounts.filter((i) => i.category === 'courses').length,
-      careers: fullResultsForCounts.filter((i) => i.category === 'careers').length,
-      internships: fullResultsForCounts.filter((i) => i.category === 'internships').length,
-      classes: fullResultsForCounts.filter((i) => i.category === 'classes').length,
-      cutoffs: fullResultsForCounts.filter((i) => i.category === 'cutoffs').length,
-    };
-  }, [fullResultsForCounts]);
 
   // Search loader sequence
   useEffect(() => {
@@ -138,9 +123,6 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
       onSelectCollege(item.collegeId || 'hinduja');
     } else if (item.category === 'cutoffs' && item.sourceFile) {
       window.open(item.sourceFile, '_blank');
-    } else if (item.category === 'internships') {
-      setSelectedInternship(item);
-      setIsInternshipOpen(true);
     } else {
       onNavigate('/help-me-decide');
     }
@@ -164,15 +146,6 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                 Search & Explore Mumbai Programs
               </h1>
             </div>
-
-            <button
-              type="button"
-              onClick={() => onNavigate('/help-me-decide')}
-              className="self-start sm:self-auto inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-[#161c27] hover:bg-slate-100 dark:hover:bg-[#1f2838] border border-slate-300 dark:border-white/10 text-xs sm:text-sm font-semibold text-slate-700 dark:text-[#A9B8CA] shadow-md transition-colors"
-            >
-              <Sparkles className="w-4 h-4 text-amber-500" />
-              <span>Open Career Roadmap</span>
-            </button>
           </div>
 
           {/* Input Bar */}
@@ -230,40 +203,26 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
             <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none" role="tablist">
               {[
-                { id: 'all', label: 'All Results', count: counts.all },
-                { id: 'colleges', label: 'Colleges', count: counts.colleges },
-                { id: 'courses', label: 'Courses', count: counts.courses },
-                { id: 'careers', label: 'Careers', count: counts.careers },
-                { id: 'internships', label: 'Internships', count: counts.internships },
-                { id: 'classes', label: 'Classes', count: counts.classes },
-                { id: 'cutoffs', label: 'Cutoffs', count: counts.cutoffs },
+                { id: 'all', label: 'All Results' },
+                { id: 'colleges', label: 'Colleges' },
+                { id: 'courses', label: 'Courses' },
+                { id: 'careers', label: 'Careers' },
+                { id: 'classes', label: 'Classes' },
+                { id: 'cutoffs', label: 'Cutoffs' },
               ].map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveCategory(tab.id as CategoryType)}
-                  className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap flex items-center gap-1.5 ${
+                  className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap ${
                     activeCategory === tab.id
                       ? 'bg-[#007DCC] text-white shadow-xs'
                       : 'text-slate-600 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-[#F4F7FB] bg-white dark:bg-[#0D1828] hover:bg-slate-100 dark:hover:bg-[#161c27] border border-slate-300 dark:border-white/5'
                   }`}
                 >
-                  <span>{tab.label}</span>
-                  <span
-                    className={`px-1.5 py-0.2 rounded-md text-[11px] font-normal ${
-                      activeCategory === tab.id
-                        ? 'bg-white/20 text-white'
-                        : 'bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-[#8a919c]'
-                    }`}
-                  >
-                    {tab.count}
-                  </span>
+                  {tab.label}
                 </button>
               ))}
             </div>
-
-            <p className="text-xs text-slate-500 dark:text-[#A9B8CA] tracking-wide">
-              Showing {filteredResults.length} matching {activeCategory} options
-            </p>
           </div>
         </div>
 
@@ -303,7 +262,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                     data-category={item.category}
                   >
                     <div>
-                      {/* Category & Region Metadata */}
+                      {/* Category & Locality */}
                       <div className="flex items-center gap-1 mb-1.5 flex-wrap">
                         <span
                           className={`text-[9px] sm:text-[10px] font-bold uppercase tracking-wider ${
@@ -316,8 +275,12 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         >
                           {item.badgeCategory}
                         </span>
-                        <span className="text-slate-300 dark:text-[#8a919c] text-[10px]">•</span>
-                        <span className="text-[10px] text-slate-500 dark:text-[#A9B8CA]">{item.badgeSub}</span>
+                        {item.badgeSub && (
+                          <>
+                            <span className="text-slate-300 dark:text-[#8a919c] text-[10px]">·</span>
+                            <span className="text-[10px] text-slate-500 dark:text-[#A9B8CA]">{item.badgeSub}</span>
+                          </>
+                        )}
                       </div>
 
                       {/* Title */}
@@ -328,41 +291,16 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         {item.title}
                       </h2>
 
-                      {/* Subtitle / Program Specs */}
+                      {/* Subtitle — streams/fields only */}
                       {item.subtitle && (
-                        <div className="text-slate-600 dark:text-[#A9B8CA] text-[11px] sm:text-xs mb-2 leading-snug">
-                          <span>{item.subtitle}</span>
-                        </div>
-                      )}
-
-                      {/* Why Relevant Callout Box */}
-                      <div className="p-2 bg-slate-100 dark:bg-[#161c27] rounded-xl mb-3 border border-slate-300/80 dark:border-white/5 line-clamp-3">
-                        <p className="text-[10px] sm:text-[11px] text-slate-700 dark:text-[#F4F7FB] leading-tight">
-                          <span
-                            className={`font-bold mr-1 block sm:inline ${
-                              item.tagColor === 'tertiary'
-                                ? 'text-emerald-600 dark:text-[#51dcbc]'
-                                : 'text-[#007DCC] dark:text-[#9ccaff]'
-                            }`}
-                          >
-                            Why relevant:
-                          </span>
-                          {item.whyRelevant}
+                        <p className="text-slate-500 dark:text-[#A9B8CA] text-[11px] sm:text-xs leading-snug">
+                          {item.subtitle}
                         </p>
-                      </div>
+                      )}
                     </div>
 
-                    {/* Meta Strip & Action Link */}
-                    <div className="pt-2.5 border-t border-slate-100 dark:border-white/5 flex flex-col gap-2 mt-auto">
-                      <div className="flex items-center flex-wrap gap-1 text-slate-500 dark:text-[#A9B8CA] text-[9px] sm:text-[10px] leading-tight">
-                        {item.meta.map((m, idx) => (
-                          <React.Fragment key={idx}>
-                            {idx > 0 && <span className="text-slate-300 dark:text-[#8a919c]">•</span>}
-                            <span className="truncate max-w-[120px]">{m}</span>
-                          </React.Fragment>
-                        ))}
-                      </div>
-
+                    {/* Action Link */}
+                    <div className="pt-2.5 border-t border-slate-100 dark:border-white/5 mt-3">
                       <button
                         type="button"
                         onClick={() => handleActionClick(item)}
@@ -379,33 +317,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
           )}
         </div>
 
-        {/* Free-layout Banner at Bottom */}
-        <div className="mt-10 p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-[#D3B5E8]/15 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-5 text-left">
-          <div className="space-y-1">
-            <h3 className="text-lg font-bold text-slate-900 dark:text-[#F4F7FB]">
-              Need a personalized academic plan?
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-500 dark:text-[#A9B8CA]">
-              Check out the step-by-step career blueprints tailored to Mumbai colleges, fees, and internships.
-            </p>
-          </div>
-
-          <button
-            type="button"
-            onClick={() => onNavigate('guidance')}
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-white bg-[#007DCC] hover:bg-[#006cb0] px-5 py-2.5 rounded-xl transition-all shadow-xs active:scale-95 shrink-0"
-          >
-            <span>Open Career Roadmap</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
-        </div>
       </div>
-
-      <InternshipModal 
-        isOpen={isInternshipOpen}
-        onClose={() => setIsInternshipOpen(false)}
-        internship={selectedInternship}
-      />
     </main>
   );
 };

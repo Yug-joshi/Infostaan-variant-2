@@ -207,7 +207,7 @@ export default function App() {
           <Route path="/colleges" element={<Navigate to="/search?category=colleges" replace />} />
           <Route path="/courses" element={<Navigate to="/search?category=courses" replace />} />
           <Route path="/careers" element={<Navigate to="/search?category=careers" replace />} />
-          <Route path="/internships" element={<Navigate to="/search?category=internships" replace />} />
+          <Route path="/internships" element={<Navigate to="/search" replace />} />
           
           <Route path="/college/:slug" element={
             <CollegeDetailScreen

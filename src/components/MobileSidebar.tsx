@@ -12,8 +12,6 @@ import {
   MapPin,
   ArrowRight,
   GraduationCap,
-  Briefcase,
-  Layers,
   TrendingUp,
 } from 'lucide-react';
 import { ScreenType } from '../types';
@@ -268,8 +266,7 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
               {[
                 { label: 'Colleges', id: 'colleges', icon: School },
                 { label: 'Courses', id: 'courses', icon: GraduationCap },
-                { label: 'Careers', id: 'careers', icon: Briefcase },
-                { label: 'Internships', id: 'internships', icon: Layers },
+                { label: 'Careers', id: 'careers', icon: TrendingUp },
               ].map((c) => {
                 const IconComponent = c.icon;
                 return (

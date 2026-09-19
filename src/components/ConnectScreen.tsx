@@ -141,7 +141,7 @@ export const ConnectScreen: React.FC<ConnectScreenProps> = ({ onNavigate }) => {
                 
                 <button
                   type="button"
-                  onClick={() => onNavigate('/search?category=internships')}
+                  onClick={() => onNavigate('/search')}
                   className="w-full py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold transition-transform active:scale-95 flex items-center justify-center gap-2"
                 >
                   <span>Book Session</span>
