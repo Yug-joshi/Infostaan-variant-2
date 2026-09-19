@@ -34,6 +34,8 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   const [selectedInterest, setSelectedInterest] = useState<string | null>(null);
   const [selectedGrade, setSelectedGrade] = useState<string | null>(null);
   const [selectedFee, setSelectedFee] = useState<string | null>(null);
+  
+  const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
 
   // If query changes externally, show results
   useEffect(() => {
@@ -287,7 +289,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
             {showResults && (
               <button
                 type="button"
-                onClick={() => setShowResults(false)}
+                onClick={() => setIsFilterModalOpen(true)}
                 className="inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-[#161c27] transition-all whitespace-nowrap shrink-0"
               >
                 <Settings2 className="w-4 h-4" />
@@ -494,6 +496,102 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
         </div>
 
       </div>
+
+      {/* Filter Modal */}
+      {isFilterModalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsFilterModalOpen(false)} />
+          <div className="relative w-full max-w-lg bg-white dark:bg-[#0D1828] rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-fade-in">
+            <div className="p-6 border-b border-slate-200 dark:border-white/10 flex items-center justify-between">
+              <h2 className="text-xl font-bold text-slate-900 dark:text-[#F4F7FB]">Filter Results</h2>
+              <button onClick={() => setIsFilterModalOpen(false)} className="p-2 bg-slate-100 dark:bg-white/5 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
+                <X className="w-5 h-5 text-slate-600 dark:text-[#A9B8CA]" />
+              </button>
+            </div>
+            
+            <div className="p-6 overflow-y-auto space-y-8">
+              {/* Interest */}
+              <div>
+                <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">Your Interest</h3>
+                <div className="flex flex-wrap gap-2">
+                  {['Commerce', 'Science', 'Arts', 'Tech / IT', 'Law', 'Design'].map(opt => (
+                    <button
+                      key={opt}
+                      onClick={() => setSelectedInterest(selectedInterest === opt ? null : opt)}
+                      className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
+                        selectedInterest === opt
+                          ? 'bg-[#007DCC] text-white shadow-xs'
+                          : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'
+                      }`}
+                    >
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Grade */}
+              <div>
+                <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">Current Grade</h3>
+                <div className="flex flex-wrap gap-2">
+                  {['10th / SSC', '12th / HSC', 'Graduate'].map(opt => (
+                    <button
+                      key={opt}
+                      onClick={() => setSelectedGrade(selectedGrade === opt ? null : opt)}
+                      className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
+                        selectedGrade === opt
+                          ? 'bg-[#007DCC] text-white shadow-xs'
+                          : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'
+                      }`}
+                    >
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Budget */}
+              <div>
+                <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">College Fees (Per Year)</h3>
+                <div className="flex flex-wrap gap-2">
+                  {['Under ₹25k', '₹25k - ₹50k', '₹50k - ₹1 Lakh', '₹1 Lakh - ₹3 Lakh', 'Over ₹3 Lakh', 'No Limit'].map(opt => (
+                    <button
+                      key={opt}
+                      onClick={() => setSelectedFee(selectedFee === opt ? null : opt)}
+                      className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
+                        selectedFee === opt
+                          ? 'bg-[#007DCC] text-white shadow-xs'
+                          : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'
+                      }`}
+                    >
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 border-t border-slate-200 dark:border-white/10 flex justify-end gap-3">
+              <button
+                onClick={() => {
+                  setSelectedInterest(null);
+                  setSelectedGrade(null);
+                  setSelectedFee(null);
+                }}
+                className="px-6 py-3 font-semibold text-slate-600 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors"
+              >
+                Clear All
+              </button>
+              <button
+                onClick={() => setIsFilterModalOpen(false)}
+                className="px-8 py-3 bg-[#007DCC] hover:bg-[#006cb0] text-white text-sm font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 active:scale-95"
+              >
+                Apply Filters
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 };
