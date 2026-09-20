@@ -200,6 +200,7 @@ export default function App() {
               onNavigate={(path) => navigate(path)}
               onSelectCollege={handleSelectCollege}
               savedItemIds={savedItems.map((i) => i.id)}
+              onOpenCutoff={() => setIsCutoffOpen(true)}
             />
           } />
 

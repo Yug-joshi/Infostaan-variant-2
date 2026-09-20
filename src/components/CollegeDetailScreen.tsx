@@ -319,24 +319,6 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
                     Cutoffs
                   </h2>
                 </div>
-                {/* PDF source link(s) */}
-                {collegeCutoffs.length > 0 && (
-                  <div className="flex flex-wrap gap-2">
-                    {collegeCutoffs.slice(0, 2).map((c) => (
-                      <a
-                        key={c.id}
-                        href={c.sourceFile}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-[10px] font-semibold text-slate-500 dark:text-[#71839A] hover:text-[#007DCC] dark:hover:text-[#86cfff] transition-colors px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5"
-                        aria-label={`View cutoff PDF for ${c.documentTitle}`}
-                      >
-                        <FileText className="w-3 h-3" />
-                        <span>{c.stream || 'Official'} PDF ↗</span>
-                      </a>
-                    ))}
-                  </div>
-                )}
               </div>
 
               {fyjcCutoffs.length > 0 ? (
@@ -386,16 +368,6 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
                         <h4 className="font-semibold text-slate-900 dark:text-[#F4F7FB] text-sm mb-1">{cutoff.documentTitle}</h4>
                         <p className="text-xs text-slate-500 dark:text-[#A9B8CA]">{cutoff.description}</p>
                       </div>
-                      <a
-                        href={cutoff.sourceFile}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-[#007DCC] dark:text-[#19A7E8] hover:text-[#005a9c] dark:hover:text-[#5bc1ff] text-xs font-bold uppercase tracking-wide transition-colors"
-                        aria-label={`View cutoff PDF for ${cutoff.documentTitle}`}
-                      >
-                        <FileText className="w-4 h-4" />
-                        View Cutoff PDF <ArrowRight className="w-3 h-3" />
-                      </a>
                     </div>
                   ))}
                 </div>

@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { X, Search, ArrowRight, Activity, SlidersHorizontal } from 'lucide-react';
 import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
+import { PercentageDial } from './PercentageDial';
 
 interface CutoffModalProps {
   isOpen: boolean;
@@ -21,13 +22,7 @@ const STREAMS = ['All Streams', 'Arts', 'Commerce', 'Science'];
 const CATEGORIES = ['General'];
 const YEARS = ['2026-27'];
 
-const PERCENTAGE_CHIPS = [
-  { label: '90+', min: 90, max: 100 },
-  { label: '80–89', min: 80, max: 89.99 },
-  { label: '70–79', min: 70, max: 79.99 },
-  { label: '60–69', min: 60, max: 69.99 },
-  { label: 'Below 60', min: 0, max: 59.99 },
-];
+
 
 interface Filters {
   searchQuery: string;
@@ -35,7 +30,6 @@ interface Filters {
   stream: string;
   category: string;
   year: string;
-  percentageChip: string; // chip label or ''
   percentageExact: string; // exact % string or ''
 }
 
@@ -45,7 +39,6 @@ const DEFAULT_FILTERS: Filters = {
   stream: 'All Streams',
   category: 'General',
   year: '2026-27',
-  percentageChip: '',
   percentageExact: '',
 };
 
@@ -60,6 +53,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
   const [applied, setApplied] = useState<Filters>(DEFAULT_FILTERS);
   const [sortBy, setSortBy] = useState('Highest cutoff');
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [showManualInput, setShowManualInput] = useState(false);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -90,19 +84,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
     setPending((prev) => ({ ...prev, [key]: value }));
   };
 
-  const handleChipClick = (chip: typeof PERCENTAGE_CHIPS[number]) => {
-    // Toggle off if already selected
-    if (pending.percentageChip === chip.label) {
-      setPending((prev) => ({ ...prev, percentageChip: '', percentageExact: '' }));
-    } else {
-      setPending((prev) => ({ ...prev, percentageChip: chip.label, percentageExact: '' }));
-    }
-  };
 
-  const handleExactPercentageChange = (val: string) => {
-    // If user types an exact %, clear chip selection
-    setPending((prev) => ({ ...prev, percentageExact: val, percentageChip: '' }));
-  };
 
   // Apply pending → applied
   const handleApply = () => {
@@ -124,12 +106,21 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
       const val = parseFloat(f.percentageExact);
       if (!isNaN(val)) return { min: val, max: 100 };
     }
-    if (f.percentageChip) {
-      const chip = PERCENTAGE_CHIPS.find((c) => c.label === f.percentageChip);
-      if (chip) return { min: chip.min, max: chip.max };
-    }
     return null;
   };
+
+  const getActiveRange = (valStr: string) => {
+    const val = parseFloat(valStr);
+    if (isNaN(val)) return null;
+    if (val < 50) return '< 50%';
+    if (val < 60) return '50–60%';
+    if (val < 70) return '60–70%';
+    if (val < 80) return '70–80%';
+    if (val < 90) return '80–90%';
+    return '90–100%';
+  };
+
+  const activeRange = getActiveRange(pending.percentageExact);
 
   // Results use APPLIED filters only
   const filteredColleges = useMemo(() => {
@@ -256,40 +247,68 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
           </div>
 
           {/* ── MY PERCENTAGE ── */}
-          <div className="mb-4">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A] mb-2">
-              My Percentage
+          <div className="mb-6 flex flex-col items-center border-t border-slate-100 dark:border-white/5 pt-6 mt-2">
+            <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-[#F4F7FB] mb-1">Set your percentage</h3>
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-[#A9B8CA] mb-8 text-center max-w-sm">
+              Select your 10th, 12th or Graduation percentage to get more relevant results.
             </p>
-            <div className="flex items-center gap-2 flex-wrap">
-              {PERCENTAGE_CHIPS.map((chip) => (
-                <button
-                  key={chip.label}
-                  onClick={() => handleChipClick(chip)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                    pending.percentageChip === chip.label
-                      ? 'bg-[#007DCC] text-white shadow-sm'
-                      : 'bg-slate-100 dark:bg-white/8 text-slate-600 dark:text-[#A9B8CA] hover:bg-slate-200 dark:hover:bg-white/12'
-                  }`}
+            
+            <PercentageDial 
+              value={parseFloat(pending.percentageExact) || 0}
+              onChange={(v) => setPendingField('percentageExact', v.toString())}
+            />
+            
+            <div className="w-full max-w-md mt-8">
+              <div className="flex items-center justify-between mb-3 px-1">
+                <p className="text-xs font-bold text-slate-500 dark:text-[#71839A]">Quick select</p>
+                <button 
+                  onClick={() => setShowManualInput(!showManualInput)}
+                  className="text-xs font-semibold text-[#007DCC] dark:text-[#19A7E8] hover:underline"
                 >
-                  {chip.label}%
+                  {showManualInput ? 'Show ranges' : 'Enter manually'}
                 </button>
-              ))}
-              <div className="flex items-center gap-1.5 ml-1">
-                <span className="text-[11px] text-slate-400 dark:text-[#71839A]">or exact:</span>
-                <input
-                  type="number"
-                  min={0}
-                  max={100}
-                  step={0.1}
-                  value={pending.percentageExact}
-                  onChange={(e) => handleExactPercentageChange(e.target.value)}
-                  placeholder="e.g. 87.4"
-                  className="w-24 bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-lg px-2.5 py-1.5 text-xs font-medium text-slate-900 dark:text-[#F4F7FB] placeholder:text-slate-400 focus:outline-none focus:border-[#007DCC] focus:ring-1 focus:ring-[#007DCC]/20 transition-all"
-                />
-                {pending.percentageExact && (
-                  <span className="text-[10px] text-slate-400">% and above</span>
-                )}
               </div>
+              
+              {showManualInput ? (
+                <div className="flex items-center gap-3 animate-fade-in">
+                  <div className="relative flex-1">
+                    <input
+                      type="number"
+                      min={0}
+                      max={100}
+                      step={0.1}
+                      value={pending.percentageExact}
+                      onChange={(e) => setPendingField('percentageExact', e.target.value)}
+                      placeholder="e.g. 87.4"
+                      className="w-full bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] focus:outline-none focus:border-[#007DCC] transition-all"
+                    />
+                    <span className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 font-bold">%</span>
+                  </div>
+                </div>
+              ) : (
+                <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 animate-fade-in">
+                  {[
+                    { label: '< 50%', val: 45 },
+                    { label: '50–60%', val: 55 },
+                    { label: '60–70%', val: 65 },
+                    { label: '70–80%', val: 75 },
+                    { label: '80–90%', val: 85 },
+                    { label: '90–100%', val: 95 }
+                  ].map(r => (
+                    <button
+                      key={r.label}
+                      onClick={() => setPendingField('percentageExact', r.val.toString())}
+                      className={`px-1 py-2.5 rounded-xl border text-[11px] sm:text-xs font-bold transition-all active:scale-95 ${
+                        activeRange === r.label 
+                          ? 'bg-[#007DCC] border-[#007DCC] text-white shadow-md'
+                          : 'border-slate-200 dark:border-white/10 bg-white dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/50 hover:text-[#007DCC]'
+                      }`}
+                    >
+                      {r.label}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
@@ -394,9 +413,9 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
               {applied.stream !== 'All Streams' && (
                 <span className="ml-1.5 text-[#007DCC] dark:text-[#86cfff]">· {applied.stream}</span>
               )}
-              {(applied.percentageChip || applied.percentageExact) && (
+              {(applied.percentageExact) && (
                 <span className="ml-1.5 text-[#007DCC] dark:text-[#86cfff]">
-                  · {applied.percentageExact ? `${applied.percentageExact}%+` : applied.percentageChip + '%'}
+                  · {applied.percentageExact}%+
                 </span>
               )}
             </p>

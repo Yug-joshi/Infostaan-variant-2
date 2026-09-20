@@ -241,7 +241,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
         </h1>
 
         {/* Search */}
-        <div className="w-full max-w-3xl mb-10 relative z-50">
+        <div className="w-full max-w-3xl mb-10 relative z-[60]">
           <form onSubmit={handleSubmit} className="relative w-full group">
             <div className="flex items-center bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-full shadow-xl dark:shadow-2xl transition-all duration-300 focus-within:border-[#007DCC] focus-within:ring-4 focus-within:ring-[#007DCC]/10 focus-within:shadow-[#007DCC]/10 px-3 py-2 sm:px-4">
               <Search className="text-[#007DCC] w-6 h-6 ml-3 shrink-0" />
@@ -264,31 +264,31 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             
             {/* Search Dropdown */}
             {query.trim().length > 0 && (
-              <div className="absolute top-full left-0 right-0 mt-3 bg-[#0D1828] border border-[#D3B5E8]/20 rounded-2xl shadow-2xl overflow-hidden z-50 text-left">
+              <div className="absolute top-full left-0 right-0 mt-3 bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-[#D3B5E8]/20 rounded-2xl shadow-xl dark:shadow-2xl overflow-hidden z-50 text-left">
                 <div className="p-2">
                   <button
                     type="button"
                     onClick={() => onSelectCollege('mithibai')}
-                    className="w-full text-left px-4 py-3.5 hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
+                    className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
                   >
-                    <Building2 className="w-5 h-5 text-[#A9B8CA]" />
-                    <span className="text-[#F4F7FB]">{query} <span className="text-[#71839A]">in Colleges</span></span>
+                    <Building2 className="w-5 h-5 text-[#007DCC] dark:text-[#A9B8CA]" />
+                    <span className="text-slate-900 dark:text-[#F4F7FB]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Colleges</span></span>
                   </button>
                   <button
                     type="button"
                     onClick={() => onSearch(query, 'courses')}
-                    className="w-full text-left px-4 py-3.5 hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
+                    className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
                   >
-                    <GraduationCap className="w-5 h-5 text-[#A9B8CA]" />
-                    <span className="text-[#F4F7FB]">{query} <span className="text-[#71839A]">in Courses</span></span>
+                    <GraduationCap className="w-5 h-5 text-[#007DCC] dark:text-[#A9B8CA]" />
+                    <span className="text-slate-900 dark:text-[#F4F7FB]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Courses</span></span>
                   </button>
                   <button
                     type="button"
                     onClick={() => onSearch(query, 'careers')}
-                    className="w-full text-left px-4 py-3.5 hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
+                    className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
                   >
-                    <TrendingUp className="w-5 h-5 text-[#A9B8CA]" />
-                    <span className="text-[#F4F7FB]">{query} <span className="text-[#71839A]">in Careers</span></span>
+                    <TrendingUp className="w-5 h-5 text-[#007DCC] dark:text-[#A9B8CA]" />
+                    <span className="text-slate-900 dark:text-[#F4F7FB]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Careers</span></span>
                   </button>
                 </div>
               </div>
