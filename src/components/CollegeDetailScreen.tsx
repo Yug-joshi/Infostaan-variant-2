@@ -296,7 +296,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
               </h3>
               <button
                 type="button"
-                onClick={() => onNavigate('guidance')}
+                onClick={() => onNavigate('/career-roadmap')}
                 className="w-full py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2"
               >
                 <span>View Career Roadmap</span>

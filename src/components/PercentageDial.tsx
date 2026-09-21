@@ -27,7 +27,15 @@ function describeArc(x: number, y: number, radius: number, startAngle: number, e
 
 export const PercentageDial: React.FC<PercentageDialProps> = ({ value, onChange, className = '' }) => {
   const svgRef = useRef<SVGSVGElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
+  const activeArcRef = useRef<SVGPathElement>(null);
+  const knobRef = useRef<SVGCircleElement>(null);
+  const floatingGroupRef = useRef<SVGGElement>(null);
+  const floatingTextRef = useRef<SVGTextElement>(null);
+  const centerTextRef = useRef<HTMLDivElement>(null);
+  
+  const isDragging = useRef(false);
+  const draggedValue = useRef(value);
+  const rafRef = useRef<number | null>(null);
 
   // Math constants
   const cx = 150;
@@ -37,20 +45,58 @@ export const PercentageDial: React.FC<PercentageDialProps> = ({ value, onChange,
   const endAngle = 135;
   const angleRange = endAngle - startAngle;
 
-  const currentAngle = startAngle + (Math.max(0, Math.min(100, value)) / 100) * angleRange;
-  const knobPos = polarToCartesian(cx, cy, radius, currentAngle);
+  const updateVisuals = useCallback((pct: number) => {
+    const safePct = Math.max(0, Math.min(100, isNaN(pct) ? 0 : pct));
+    const currentAngle = startAngle + (safePct / 100) * angleRange;
+    const pos = polarToCartesian(cx, cy, radius, currentAngle);
+
+    if (activeArcRef.current) {
+      if (safePct > 0) {
+        activeArcRef.current.setAttribute('d', describeArc(cx, cy, radius, startAngle, currentAngle));
+        activeArcRef.current.style.display = 'block';
+      } else {
+        activeArcRef.current.style.display = 'none';
+      }
+    }
+    
+    if (knobRef.current) {
+      knobRef.current.setAttribute('cx', pos.x.toString());
+      knobRef.current.setAttribute('cy', pos.y.toString());
+    }
+
+    if (floatingGroupRef.current) {
+      floatingGroupRef.current.setAttribute('transform', `translate(${pos.x}, ${pos.y - 32})`);
+    }
+
+    const formattedPct = safePct.toFixed(1);
+    if (floatingTextRef.current) {
+      floatingTextRef.current.textContent = `${formattedPct}%`;
+    }
+
+    if (centerTextRef.current) {
+      centerTextRef.current.innerHTML = `${formattedPct}<span class="text-2xl sm:text-3xl text-slate-400 dark:text-[#71839A]">%</span>`;
+    }
+  }, [cx, cy, radius, startAngle, endAngle, angleRange]);
+
+  // Sync ref with prop when not dragging (e.g. from manual input or quick select)
+  useEffect(() => {
+    if (!isDragging.current) {
+      draggedValue.current = isNaN(value) ? 0 : value;
+      updateVisuals(draggedValue.current);
+    }
+  }, [value, updateVisuals]);
 
   // Generate tick marks (e.g., every 5%)
   const ticks = Array.from({ length: 21 }).map((_, i) => {
     const p = i * 5;
     const a = startAngle + (p / 100) * angleRange;
     const isMajor = p % 25 === 0;
-    const inner = polarToCartesian(cx, cy, isMajor ? radius + 15 : radius + 15);
-    const outer = polarToCartesian(cx, cy, isMajor ? radius + 25 : radius + 20);
+    const inner = polarToCartesian(cx, cy, isMajor ? radius + 15 : radius + 15, a);
+    const outer = polarToCartesian(cx, cy, isMajor ? radius + 25 : radius + 20, a);
     return { p, a, inner, outer, isMajor };
   });
 
-  const handlePointerUpdate = useCallback((clientX: number, clientY: number) => {
+  const handlePointerUpdate = (clientX: number, clientY: number) => {
     if (!svgRef.current) return;
     const rect = svgRef.current.getBoundingClientRect();
     
@@ -58,88 +104,59 @@ export const PercentageDial: React.FC<PercentageDialProps> = ({ value, onChange,
     const x = clientX - rect.left - (rect.width / 2);
     const y = clientY - rect.top - (rect.height / 2);
 
-    // atan2 gives angle from positive x-axis. 
-    // We want angle from positive y-axis (downwards), where top is 0.
-    // In our polarToCartesian, angle=0 is TOP (x=0, y=-R). 
-    // So dx=x, dy=y. angle in rad from top = atan2(y, x) + PI/2.
     let angle = Math.atan2(y, x) * (180 / Math.PI) + 90;
     
-    // Normalize angle to be between -180 and 180
     if (angle > 180) angle -= 360;
 
-    // Constrain to our arc
-    if (angle < startAngle && angle > -180) angle = startAngle;
-    if (angle > endAngle || angle < -180) {
-       // if it's in the bottom wedge, snap to closest end
-       if (angle > endAngle && angle < 180) {
+    if (angle > endAngle || angle < startAngle) {
+       if (angle > 0) {
            angle = endAngle;
-       } else if (angle < startAngle) {
+       } else {
            angle = startAngle;
        }
     }
 
     const percentage = ((angle - startAngle) / angleRange) * 100;
     const clamped = Math.max(0, Math.min(100, percentage));
-    onChange(Number(clamped.toFixed(1)));
-  }, [onChange, angleRange]);
+    
+    draggedValue.current = clamped;
+    
+    if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    rafRef.current = requestAnimationFrame(() => {
+      updateVisuals(draggedValue.current);
+    });
+  };
 
-  // Mouse handlers
-  const handleMouseDown = (e: React.MouseEvent) => {
-    setIsDragging(true);
+  const handlePointerDown = (e: React.PointerEvent<SVGSVGElement>) => {
+    isDragging.current = true;
+    e.currentTarget.setPointerCapture(e.pointerId);
     handlePointerUpdate(e.clientX, e.clientY);
   };
 
-  useEffect(() => {
-    if (!isDragging) return;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      handlePointerUpdate(e.clientX, e.clientY);
-    };
-    const handleMouseUp = () => {
-      setIsDragging(false);
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-    };
-  }, [isDragging, handlePointerUpdate]);
-
-  // Touch handlers
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setIsDragging(true);
-    handlePointerUpdate(e.touches[0].clientX, e.touches[0].clientY);
+  const handlePointerMove = (e: React.PointerEvent<SVGSVGElement>) => {
+    if (!isDragging.current) return;
+    e.preventDefault(); 
+    handlePointerUpdate(e.clientX, e.clientY);
   };
 
-  useEffect(() => {
-    if (!isDragging) return;
-
-    const handleTouchMove = (e: TouchEvent) => {
-      e.preventDefault(); // Prevent scrolling while dragging
-      handlePointerUpdate(e.touches[0].clientX, e.touches[0].clientY);
-    };
-    const handleTouchEnd = () => {
-      setIsDragging(false);
-    };
-
-    window.addEventListener('touchmove', handleTouchMove, { passive: false });
-    window.addEventListener('touchend', handleTouchEnd);
-    return () => {
-      window.removeEventListener('touchmove', handleTouchMove);
-      window.removeEventListener('touchend', handleTouchEnd);
-    };
-  }, [isDragging, handlePointerUpdate]);
+  const handlePointerUp = (e: React.PointerEvent<SVGSVGElement>) => {
+    if (isDragging.current) {
+      isDragging.current = false;
+      onChange(Number(draggedValue.current.toFixed(1)));
+      try { e.currentTarget.releasePointerCapture(e.pointerId); } catch(err) {}
+    }
+  };
 
   return (
     <div className={`relative flex flex-col items-center justify-center select-none ${className}`}>
       <svg
         ref={svgRef}
         viewBox="0 0 300 300"
-        className="w-full h-auto max-w-[320px] sm:max-w-[360px] touch-none"
-        onMouseDown={handleMouseDown}
-        onTouchStart={handleTouchStart}
+        className="w-full h-auto max-w-[280px] sm:max-w-[320px] touch-none"
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerUp}
         style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.05))' }}
       >
         <defs>
@@ -188,24 +205,20 @@ export const PercentageDial: React.FC<PercentageDialProps> = ({ value, onChange,
         />
 
         {/* Active Arc */}
-        {value > 0 && (
-          <path
-            d={describeArc(cx, cy, radius, startAngle, currentAngle)}
-            fill="none"
-            stroke="url(#activeArcGrad)"
-            strokeWidth="16"
-            strokeLinecap="round"
-            className="transition-all duration-75 ease-out"
-          />
-        )}
+        <path
+          ref={activeArcRef}
+          fill="none"
+          stroke="url(#activeArcGrad)"
+          strokeWidth="16"
+          strokeLinecap="round"
+        />
 
         {/* Knob */}
         <circle
-          cx={knobPos.x}
-          cy={knobPos.y}
+          ref={knobRef}
           r="14"
           fill="white"
-          className="cursor-grab active:cursor-grabbing transition-all duration-75 ease-out dark:fill-[#0D1828]"
+          className="cursor-grab active:cursor-grabbing dark:fill-[#0D1828]"
           filter="url(#knobShadow)"
           stroke="#5B5CE2"
           strokeWidth="3"
@@ -213,13 +226,15 @@ export const PercentageDial: React.FC<PercentageDialProps> = ({ value, onChange,
         
         {/* Floating Percentage Label above Knob */}
         <g 
-          className="transition-all duration-75 ease-out pointer-events-none"
-          transform={`translate(${knobPos.x}, ${knobPos.y - 32})`}
+          ref={floatingGroupRef}
+          className="pointer-events-none"
         >
           <rect x="-24" y="-12" width="48" height="24" rx="6" fill="#007DCC" className="dark:fill-[#19A7E8]" />
-          <text x="0" y="0" textAnchor="middle" alignmentBaseline="central" className="text-[11px] font-bold fill-white dark:fill-[#070D18]">
-            {value.toFixed(1)}%
-          </text>
+          <text 
+            ref={floatingTextRef}
+            x="0" y="0" textAnchor="middle" alignmentBaseline="central" 
+            className="text-[11px] font-bold fill-white dark:fill-[#070D18]"
+          />
         </g>
       </svg>
 
@@ -228,9 +243,10 @@ export const PercentageDial: React.FC<PercentageDialProps> = ({ value, onChange,
         <div className="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-3">
           <GraduationCap className="w-5 h-5 text-[#007DCC] dark:text-[#86cfff]" />
         </div>
-        <div className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-1">
-          {value.toFixed(1)}<span className="text-2xl sm:text-3xl text-slate-400 dark:text-[#71839A]">%</span>
-        </div>
+        <div 
+          ref={centerTextRef}
+          className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-1"
+        />
         <div className="text-xs sm:text-sm font-semibold text-slate-500 dark:text-[#71839A]">
           Your Percentage
         </div>

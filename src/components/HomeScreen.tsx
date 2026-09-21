@@ -336,7 +336,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
         {/* Help Me Decide Button (Removed surrounding card as per request) */}
         <div className="relative z-50 mb-16 -mt-10">
           <button
-            onClick={() => onNavigate('guidance')}
+            onClick={() => onNavigate('/help-me-decide')}
             className="px-8 py-3.5 rounded-full bg-[#007DCC]/90 hover:bg-[#007DCC] text-white font-semibold transition-all shadow-md hover:shadow-lg flex items-center gap-2 group backdrop-blur-sm border border-white/10"
           >
             <span>Help Me Decide</span>
@@ -361,7 +361,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             </div>
             
             <div 
-              onClick={() => onNavigate('guidance')}
+              onClick={() => onNavigate('/career-roadmap')}
               className="p-5 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-white/5 hover:border-[#007DCC]/50 cursor-pointer group transition-colors shadow-sm hover:shadow-md"
             >
               <h4 className="text-slate-900 dark:text-[#F4F7FB] font-semibold group-hover:text-[#007DCC] dark:group-hover:text-[#19A7E8] transition-colors">Career Roadmaps</h4>

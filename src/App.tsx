@@ -9,6 +9,8 @@ import { SearchResultsScreen } from './components/SearchResultsScreen';
 import { CollegeDetailScreen } from './components/CollegeDetailScreen';
 import { ShortlistScreen } from './components/ShortlistScreen';
 import { GuidanceScreen } from './components/GuidanceScreen';
+import { HelpMeDecideScreen } from './components/HelpMeDecideScreen';
+import { CareerRoadmapScreen } from './components/CareerRoadmapScreen';
 import { ConnectScreen } from './components/ConnectScreen';
 import { CompareModal } from './components/CompareModal';
 import { SignInModal } from './components/SignInModal';
@@ -229,8 +231,21 @@ export default function App() {
             />
           } />
 
-          <Route path="/help-me-decide" element={
+          <Route path="/guidance" element={
             <GuidanceScreen
+              onNavigate={(path) => navigate(path)}
+            />
+          } />
+
+          <Route path="/help-me-decide" element={
+            <HelpMeDecideScreen
+              onNavigate={(path) => navigate(path)}
+              onSelectCollege={handleSelectCollege}
+            />
+          } />
+
+          <Route path="/career-roadmap" element={
+            <CareerRoadmapScreen
               onNavigate={(path) => navigate(path)}
               onSelectCollege={handleSelectCollege}
             />
@@ -243,7 +258,6 @@ export default function App() {
           } />
 
           {/* Legacy route fallbacks */}
-          <Route path="/guidance" element={<Navigate to="/help-me-decide" replace />} />
           <Route path="/connect" element={<Navigate to="/dashboard" replace />} />
         </Routes>
       </div>

@@ -192,14 +192,14 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
               <button
                 type="button"
                 onClick={() => navigateAndClose('/help-me-decide')}
-                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/help-me-decide'
+                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/help-me-decide' || currentPath === '/guidance' || currentPath === '/career-roadmap'
                   ? 'bg-[#007DCC] text-white shadow-xs'
                   : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
                   }`}
               >
                 <div className="flex items-center gap-3">
                   <Sparkles className="w-4 h-4 shrink-0 text-amber-500 dark:text-amber-400" />
-                  <span>Career Roadmap & Guide</span>
+                  <span>Help Me Decide</span>
                 </div>
                 <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300">
                   New
