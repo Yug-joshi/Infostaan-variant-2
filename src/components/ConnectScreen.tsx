@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { Briefcase, Clock, IndianRupee, ArrowRight, ShieldCheck, GraduationCap } from 'lucide-react';
+import { Briefcase, Clock, IndianRupee, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { MENTORS_DATA } from '../data/mentorsData';
 import gsap from 'gsap';
 
 interface ConnectScreenProps {
@@ -28,45 +29,6 @@ export const ConnectScreen: React.FC<ConnectScreenProps> = ({ onNavigate }) => {
     return () => ctx.revert();
   }, []);
 
-  const mentors = [
-    {
-      id: '1',
-      name: 'Rohan Sharma',
-      role: 'Investment Banker',
-      company: 'Top Tier Bank',
-      experience: '5+ Years',
-      price: 499,
-      tags: ['Finance', 'Interviews', 'Networking'],
-    },
-    {
-      id: '2',
-      name: 'Priya Patel',
-      role: 'Chartered Accountant',
-      company: 'Big 4 Audit Firm',
-      experience: '3+ Years',
-      price: 399,
-      tags: ['Articleship', 'CA Exams', 'Audit'],
-    },
-    {
-      id: '3',
-      name: 'Aditya Desai',
-      role: 'Software Engineer',
-      company: 'Leading Tech MNC',
-      experience: '4+ Years',
-      price: 499,
-      tags: ['Tech Placement', 'DSA', 'Resume Review'],
-    },
-    {
-      id: '4',
-      name: 'Neha Gupta',
-      role: 'Management Consultant',
-      company: 'MBB Firm',
-      experience: '2+ Years',
-      price: 599,
-      tags: ['Case Prep', 'Consulting', 'B-School'],
-    }
-  ];
-
   return (
     <main className="w-full flex-1 pt-24 sm:pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200">
       <div ref={containerRef} className="max-w-6xl mx-auto">
@@ -77,63 +39,72 @@ export const ConnectScreen: React.FC<ConnectScreenProps> = ({ onNavigate }) => {
             <span>Infostaan Connect</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB] mb-6">
-            1:1 Guidance from Industry Experts
+            One on One Guidance from Industry Experts
           </h1>
           <p className="text-base sm:text-lg text-slate-600 dark:text-[#A9B8CA] leading-relaxed">
-            Don't guess your career roadmap. Book a paid 1:1 session with working professionals in Mumbai to get authentic, actionable advice on placements, exams, and articleships.
+            Don't guess your career roadmap. Book a paid One on One session with working professionals in Mumbai to get authentic, actionable advice on placements, exams, and articleships.
           </p>
         </div>
 
         {/* Mentors Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {mentors.map((mentor) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {MENTORS_DATA.map((mentor) => (
             <div 
               key={mentor.id}
-              className="bg-white dark:bg-[#0D1828] rounded-2xl border border-slate-200 dark:border-[#D3B5E8]/15 hover:border-[#007DCC] transition-colors shadow-sm hover:shadow-md p-6 flex flex-col h-full"
+              onClick={() => onNavigate(`/mentor/${mentor.id}`)}
+              className="bg-white dark:bg-[#0D1828] rounded-3xl border border-slate-200 dark:border-[#D3B5E8]/15 hover:border-[#007DCC] transition-all shadow-sm hover:shadow-lg p-6 flex flex-col justify-between cursor-pointer group text-left"
             >
-              {/* Profile Header */}
-              <div className="flex items-center gap-4 mb-5">
-                <div className="w-12 h-12 rounded-full bg-slate-100 dark:bg-[#161c27] flex items-center justify-center shrink-0">
-                  <span className="text-lg font-bold text-slate-500 dark:text-[#A9B8CA]">
-                    {mentor.name.charAt(0)}
-                  </span>
+              <div>
+                {/* Profile Header */}
+                <div className="flex items-center gap-4 mb-5">
+                  <div className="relative shrink-0">
+                    <img
+                      src={mentor.avatar}
+                      alt={mentor.name}
+                      className="w-14 h-14 rounded-2xl object-cover ring-2 ring-blue-50 dark:ring-white/10 group-hover:ring-[#007DCC]/40 transition-all"
+                    />
+                    {mentor.online && (
+                      <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-[#0D1828]" />
+                    )}
+                  </div>
+                  <div className="truncate">
+                    <h3 className="font-extrabold text-base sm:text-lg text-slate-900 dark:text-[#F4F7FB] leading-tight group-hover:text-[#007DCC] transition-colors truncate">
+                      {mentor.name}
+                    </h3>
+                    <p className="text-xs text-[#007DCC] dark:text-[#86cfff] font-bold mt-0.5 truncate">
+                      {mentor.role}
+                    </p>
+                    <p className="text-[11px] text-slate-400 font-medium truncate">
+                      {mentor.area}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 dark:text-[#F4F7FB] leading-tight">
-                    {mentor.name}
-                  </h3>
-                  <p className="text-xs text-[#007DCC] dark:text-[#86cfff] font-medium mt-0.5">
-                    {mentor.role}
-                  </p>
-                </div>
-              </div>
 
-              {/* Work Info */}
-              <div className="space-y-3 mb-6 flex-1">
-                <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-[#A9B8CA]">
-                  <Briefcase className="w-4 h-4 shrink-0" />
-                  <span>{mentor.company}</span>
+                {/* Work Info */}
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center gap-2 text-xs text-slate-600 dark:text-[#A9B8CA]">
+                    <Briefcase className="w-4 h-4 shrink-0 text-[#007DCC]" />
+                    <span className="truncate">{mentor.company}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs text-slate-600 dark:text-[#A9B8CA]">
+                    <Clock className="w-4 h-4 shrink-0 text-[#007DCC]" />
+                    <span>{mentor.experience} Experience</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-[#A9B8CA]">
-                  <Clock className="w-4 h-4 shrink-0" />
-                  <span>{mentor.experience} Exp.</span>
-                </div>
-              </div>
 
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {mentor.tags.map(tag => (
-                  <span key={tag} className="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-100 dark:bg-[#161c27] text-slate-600 dark:text-[#A9B8CA]">
-                    {tag}
-                  </span>
-                ))}
+                {/* Description */}
+                <p className="text-xs text-slate-500 dark:text-[#71839A] line-clamp-2 leading-relaxed mb-6">
+                  {mentor.desc}
+                </p>
               </div>
 
               {/* Pricing & CTA */}
-              <div className="pt-5 border-t border-slate-100 dark:border-white/5 mt-auto">
+              <div className="pt-4 border-t border-slate-100 dark:border-white/5 mt-auto">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs text-slate-500 dark:text-[#A9B8CA] uppercase tracking-wider font-semibold">30 Min Session</span>
-                  <div className="flex items-center font-bold text-slate-900 dark:text-[#F4F7FB]">
+                  <span className="text-[11px] text-slate-500 dark:text-[#A9B8CA] uppercase tracking-wider font-semibold">
+                    30 Min 1:1 Session
+                  </span>
+                  <div className="flex items-center font-extrabold text-slate-900 dark:text-[#F4F7FB] text-lg">
                     <IndianRupee className="w-4 h-4" />
                     <span>{mentor.price}</span>
                   </div>
@@ -141,11 +112,14 @@ export const ConnectScreen: React.FC<ConnectScreenProps> = ({ onNavigate }) => {
                 
                 <button
                   type="button"
-                  onClick={() => onNavigate('/search')}
-                  className="w-full py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold transition-transform active:scale-95 flex items-center justify-center gap-2"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onNavigate(`/mentor/${mentor.id}`);
+                  }}
+                  className="w-full py-3 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95 flex items-center justify-center gap-2"
                 >
                   <span>Book Session</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
             </div>
@@ -153,7 +127,7 @@ export const ConnectScreen: React.FC<ConnectScreenProps> = ({ onNavigate }) => {
         </div>
 
         {/* How it works section */}
-        <div className="mt-20 p-8 sm:p-10 rounded-2xl bg-slate-50 dark:bg-[#161c27] border border-slate-200 dark:border-white/5">
+        <div className="mt-20 p-8 sm:p-10 rounded-3xl bg-slate-50 dark:bg-[#161c27] border border-slate-200 dark:border-white/5 text-left">
           <h2 className="text-xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-8 text-center">
             How Infostaan Connect Works
           </h2>
@@ -170,7 +144,7 @@ export const ConnectScreen: React.FC<ConnectScreenProps> = ({ onNavigate }) => {
                 <span className="font-bold">2</span>
               </div>
               <h3 className="font-bold text-slate-900 dark:text-[#F4F7FB]">Book a Time</h3>
-              <p className="text-sm text-slate-500 dark:text-[#A9B8CA]">Pay securely and schedule a 30-minute virtual session that fits your routine.</p>
+              <p className="text-sm text-slate-500 dark:text-[#A9B8CA]">Select an available time slot and book a 30-minute virtual 1:1 session.</p>
             </div>
             <div className="space-y-3">
               <div className="w-12 h-12 mx-auto rounded-full bg-white dark:bg-[#0D1828] shadow-sm flex items-center justify-center text-[#007DCC] dark:text-[#86cfff]">

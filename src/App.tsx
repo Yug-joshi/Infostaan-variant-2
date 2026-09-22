@@ -9,7 +9,9 @@ import { SearchResultsScreen } from './components/SearchResultsScreen';
 import { CollegeDetailScreen } from './components/CollegeDetailScreen';
 import { ShortlistScreen } from './components/ShortlistScreen';
 import { GuidanceScreen } from './components/GuidanceScreen';
+import { CareerRoadmapScreen } from './components/CareerRoadmapScreen';
 import { ConnectScreen } from './components/ConnectScreen';
+import { MentorDetailScreen } from './components/MentorDetailScreen';
 import { CompareModal } from './components/CompareModal';
 import { SignInModal } from './components/SignInModal';
 import { CutoffModal } from './components/CutoffModal';
@@ -37,7 +39,6 @@ export default function App() {
   const logoRef = useRef<HTMLImageElement>(null);
   
   useEffect(() => {
-    // Very short branded boot loader (300-800ms)
     const ctx = gsap.context(() => {
       if (logoRef.current) {
         gsap.fromTo(logoRef.current, 
@@ -64,7 +65,6 @@ export default function App() {
     }, 2800);
   };
 
-  // Scroll to top on route change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location.pathname, location.search]);
@@ -233,6 +233,19 @@ export default function App() {
             <GuidanceScreen
               onNavigate={(path) => navigate(path)}
               onSelectCollege={handleSelectCollege}
+            />
+          } />
+
+          <Route path="/career-roadmap" element={
+            <CareerRoadmapScreen
+              onNavigate={(path) => navigate(path)}
+              onSelectCollege={handleSelectCollege}
+            />
+          } />
+
+          <Route path="/mentor/:id" element={
+            <MentorDetailScreen
+              onNavigate={(path) => navigate(path)}
             />
           } />
 

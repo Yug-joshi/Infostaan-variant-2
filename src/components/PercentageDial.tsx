@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import { GraduationCap } from 'lucide-react';
 
 interface PercentageDialProps {
@@ -27,7 +27,23 @@ function describeArc(x: number, y: number, radius: number, startAngle: number, e
 
 export const PercentageDial: React.FC<PercentageDialProps> = ({ value, onChange, className = '' }) => {
   const svgRef = useRef<SVGSVGElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
+  const activeArcRef = useRef<SVGPathElement>(null);
+  const knobCircleRef = useRef<SVGCircleElement>(null);
+  const labelGroupRef = useRef<SVGGElement>(null);
+  const labelTextRef = useRef<SVGTextElement>(null);
+  const centerValueRef = useRef<HTMLDivElement>(null);
+
+  const isDraggingRef = useRef(false);
+  const currentValueRef = useRef(value);
+  const rafIdRef = useRef<number | null>(null);
+
+  // Sync ref with prop if not dragging
+  useEffect(() => {
+    if (!isDraggingRef.current) {
+      currentValueRef.current = value;
+      updateVisuals(value);
+    }
+  }, [value]);
 
   // Math constants
   const cx = 150;
@@ -37,40 +53,54 @@ export const PercentageDial: React.FC<PercentageDialProps> = ({ value, onChange,
   const endAngle = 135;
   const angleRange = endAngle - startAngle;
 
-  const currentAngle = startAngle + (Math.max(0, Math.min(100, value)) / 100) * angleRange;
-  const knobPos = polarToCartesian(cx, cy, radius, currentAngle);
+  const updateVisuals = (val: number) => {
+    const clampedVal = Math.max(0, Math.min(100, val));
+    const currentAngle = startAngle + (clampedVal / 100) * angleRange;
+    const knobPos = polarToCartesian(cx, cy, radius, currentAngle);
 
-  // Generate tick marks (e.g., every 5%)
-  const ticks = Array.from({ length: 21 }).map((_, i) => {
-    const p = i * 5;
-    const a = startAngle + (p / 100) * angleRange;
-    const isMajor = p % 25 === 0;
-    const inner = polarToCartesian(cx, cy, isMajor ? radius + 15 : radius + 15);
-    const outer = polarToCartesian(cx, cy, isMajor ? radius + 25 : radius + 20);
-    return { p, a, inner, outer, isMajor };
-  });
+    // Direct DOM updates for zero latency
+    if (activeArcRef.current) {
+      if (clampedVal > 0) {
+        activeArcRef.current.setAttribute('d', describeArc(cx, cy, radius, startAngle, currentAngle));
+        activeArcRef.current.setAttribute('opacity', '1');
+      } else {
+        activeArcRef.current.setAttribute('opacity', '0');
+      }
+    }
 
-  const handlePointerUpdate = useCallback((clientX: number, clientY: number) => {
-    if (!svgRef.current) return;
+    if (knobCircleRef.current) {
+      knobCircleRef.current.setAttribute('cx', String(knobPos.x));
+      knobCircleRef.current.setAttribute('cy', String(knobPos.y));
+    }
+
+    if (labelGroupRef.current) {
+      labelGroupRef.current.setAttribute('transform', `translate(${knobPos.x}, ${knobPos.y - 32})`);
+    }
+
+    if (labelTextRef.current) {
+      labelTextRef.current.textContent = `${clampedVal.toFixed(1)}%`;
+    }
+
+    if (centerValueRef.current) {
+      centerValueRef.current.innerHTML = `${clampedVal.toFixed(1)}<span className="text-2xl sm:text-3xl text-slate-400 dark:text-[#71839A]">%</span>`;
+    }
+  };
+
+  const calculatePercentageFromPointer = useCallback((clientX: number, clientY: number) => {
+    if (!svgRef.current) return currentValueRef.current;
     const rect = svgRef.current.getBoundingClientRect();
     
-    // Calculate position relative to center of SVG
+    // Position relative to SVG center (accounting for viewBox scale)
     const x = clientX - rect.left - (rect.width / 2);
     const y = clientY - rect.top - (rect.height / 2);
 
-    // atan2 gives angle from positive x-axis. 
-    // We want angle from positive y-axis (downwards), where top is 0.
-    // In our polarToCartesian, angle=0 is TOP (x=0, y=-R). 
-    // So dx=x, dy=y. angle in rad from top = atan2(y, x) + PI/2.
     let angle = Math.atan2(y, x) * (180 / Math.PI) + 90;
     
-    // Normalize angle to be between -180 and 180
     if (angle > 180) angle -= 360;
 
-    // Constrain to our arc
+    // Constrain to arc range [-135, 135]
     if (angle < startAngle && angle > -180) angle = startAngle;
     if (angle > endAngle || angle < -180) {
-       // if it's in the bottom wedge, snap to closest end
        if (angle > endAngle && angle < 180) {
            angle = endAngle;
        } else if (angle < startAngle) {
@@ -79,67 +109,74 @@ export const PercentageDial: React.FC<PercentageDialProps> = ({ value, onChange,
     }
 
     const percentage = ((angle - startAngle) / angleRange) * 100;
-    const clamped = Math.max(0, Math.min(100, percentage));
-    onChange(Number(clamped.toFixed(1)));
-  }, [onChange, angleRange]);
+    return Math.max(0, Math.min(100, Number(percentage.toFixed(1))));
+  }, [angleRange, startAngle, endAngle]);
 
-  // Mouse handlers
-  const handleMouseDown = (e: React.MouseEvent) => {
-    setIsDragging(true);
-    handlePointerUpdate(e.clientX, e.clientY);
+  const handlePointerDown = (e: React.PointerEvent<SVGSVGElement>) => {
+    isDraggingRef.current = true;
+    if (svgRef.current) {
+      svgRef.current.setPointerCapture(e.pointerId);
+    }
+    const newVal = calculatePercentageFromPointer(e.clientX, e.clientY);
+    currentValueRef.current = newVal;
+    updateVisuals(newVal);
+    onChange(newVal);
   };
 
-  useEffect(() => {
-    if (!isDragging) return;
+  const handlePointerMove = (e: React.PointerEvent<SVGSVGElement>) => {
+    if (!isDraggingRef.current) return;
+    const clientX = e.clientX;
+    const clientY = e.clientY;
 
-    const handleMouseMove = (e: MouseEvent) => {
-      handlePointerUpdate(e.clientX, e.clientY);
-    };
-    const handleMouseUp = () => {
-      setIsDragging(false);
-    };
+    if (rafIdRef.current) {
+      cancelAnimationFrame(rafIdRef.current);
+    }
 
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-    };
-  }, [isDragging, handlePointerUpdate]);
-
-  // Touch handlers
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setIsDragging(true);
-    handlePointerUpdate(e.touches[0].clientX, e.touches[0].clientY);
+    rafIdRef.current = requestAnimationFrame(() => {
+      const newVal = calculatePercentageFromPointer(clientX, clientY);
+      if (newVal !== currentValueRef.current) {
+        currentValueRef.current = newVal;
+        updateVisuals(newVal);
+        onChange(newVal);
+      }
+    });
   };
 
-  useEffect(() => {
-    if (!isDragging) return;
+  const handlePointerUp = (e: React.PointerEvent<SVGSVGElement>) => {
+    if (isDraggingRef.current) {
+      isDraggingRef.current = false;
+      if (svgRef.current) {
+        try {
+          svgRef.current.releasePointerCapture(e.pointerId);
+        } catch (_) {}
+      }
+      onChange(currentValueRef.current);
+    }
+  };
 
-    const handleTouchMove = (e: TouchEvent) => {
-      e.preventDefault(); // Prevent scrolling while dragging
-      handlePointerUpdate(e.touches[0].clientX, e.touches[0].clientY);
-    };
-    const handleTouchEnd = () => {
-      setIsDragging(false);
-    };
+  // Generate tick marks (every 5%)
+  const ticks = Array.from({ length: 21 }).map((_, i) => {
+    const p = i * 5;
+    const a = startAngle + (p / 100) * angleRange;
+    const isMajor = p % 25 === 0;
+    const inner = polarToCartesian(cx, cy, isMajor ? radius + 15 : radius + 15, a);
+    const outer = polarToCartesian(cx, cy, isMajor ? radius + 25 : radius + 20, a);
+    return { p, a, inner, outer, isMajor };
+  });
 
-    window.addEventListener('touchmove', handleTouchMove, { passive: false });
-    window.addEventListener('touchend', handleTouchEnd);
-    return () => {
-      window.removeEventListener('touchmove', handleTouchMove);
-      window.removeEventListener('touchend', handleTouchEnd);
-    };
-  }, [isDragging, handlePointerUpdate]);
+  const initialAngle = startAngle + (Math.max(0, Math.min(100, value)) / 100) * angleRange;
+  const initialKnobPos = polarToCartesian(cx, cy, radius, initialAngle);
 
   return (
     <div className={`relative flex flex-col items-center justify-center select-none ${className}`}>
       <svg
         ref={svgRef}
         viewBox="0 0 300 300"
-        className="w-full h-auto max-w-[320px] sm:max-w-[360px] touch-none"
-        onMouseDown={handleMouseDown}
-        onTouchStart={handleTouchStart}
+        className="w-full h-auto max-w-[320px] sm:max-w-[360px] touch-none cursor-pointer"
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerUp}
         style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.05))' }}
       >
         <defs>
@@ -188,24 +225,24 @@ export const PercentageDial: React.FC<PercentageDialProps> = ({ value, onChange,
         />
 
         {/* Active Arc */}
-        {value > 0 && (
-          <path
-            d={describeArc(cx, cy, radius, startAngle, currentAngle)}
-            fill="none"
-            stroke="url(#activeArcGrad)"
-            strokeWidth="16"
-            strokeLinecap="round"
-            className="transition-all duration-75 ease-out"
-          />
-        )}
+        <path
+          ref={activeArcRef}
+          d={describeArc(cx, cy, radius, startAngle, initialAngle)}
+          fill="none"
+          stroke="url(#activeArcGrad)"
+          strokeWidth="16"
+          strokeLinecap="round"
+          opacity={value > 0 ? '1' : '0'}
+        />
 
         {/* Knob */}
         <circle
-          cx={knobPos.x}
-          cy={knobPos.y}
+          ref={knobCircleRef}
+          cx={initialKnobPos.x}
+          cy={initialKnobPos.y}
           r="14"
           fill="white"
-          className="cursor-grab active:cursor-grabbing transition-all duration-75 ease-out dark:fill-[#0D1828]"
+          className="cursor-grab active:cursor-grabbing dark:fill-[#0D1828]"
           filter="url(#knobShadow)"
           stroke="#5B5CE2"
           strokeWidth="3"
@@ -213,11 +250,19 @@ export const PercentageDial: React.FC<PercentageDialProps> = ({ value, onChange,
         
         {/* Floating Percentage Label above Knob */}
         <g 
-          className="transition-all duration-75 ease-out pointer-events-none"
-          transform={`translate(${knobPos.x}, ${knobPos.y - 32})`}
+          ref={labelGroupRef}
+          className="pointer-events-none"
+          transform={`translate(${initialKnobPos.x}, ${initialKnobPos.y - 32})`}
         >
           <rect x="-24" y="-12" width="48" height="24" rx="6" fill="#007DCC" className="dark:fill-[#19A7E8]" />
-          <text x="0" y="0" textAnchor="middle" alignmentBaseline="central" className="text-[11px] font-bold fill-white dark:fill-[#070D18]">
+          <text
+            ref={labelTextRef}
+            x="0"
+            y="0"
+            textAnchor="middle"
+            alignmentBaseline="central"
+            className="text-[11px] font-bold fill-white dark:fill-[#070D18]"
+          >
             {value.toFixed(1)}%
           </text>
         </g>
@@ -228,7 +273,10 @@ export const PercentageDial: React.FC<PercentageDialProps> = ({ value, onChange,
         <div className="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-3">
           <GraduationCap className="w-5 h-5 text-[#007DCC] dark:text-[#86cfff]" />
         </div>
-        <div className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-1">
+        <div
+          ref={centerValueRef}
+          className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-1"
+        >
           {value.toFixed(1)}<span className="text-2xl sm:text-3xl text-slate-400 dark:text-[#71839A]">%</span>
         </div>
         <div className="text-xs sm:text-sm font-semibold text-slate-500 dark:text-[#71839A]">

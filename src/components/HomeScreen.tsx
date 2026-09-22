@@ -22,6 +22,7 @@ import booksImg from '../assets/images/books.png';
 import gradCapImg from '../assets/images/grad_cap.png';
 import gsap from 'gsap';
 import { ScrollStorySection } from './ScrollStorySection';
+import { ConnectCarousel } from './ConnectCarousel';
 
 interface HomeScreenProps {
   onSearch: (query: string, category?: string) => void;
@@ -371,8 +372,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
       </div>
 
-      {/* New Scroll-Locked Storytelling Section */}
+      {/* Scroll-Locked Storytelling Section */}
       <ScrollStorySection />
+
+      {/* FINAL SECTION: Infostaan Connect Carousel */}
+      <ConnectCarousel onNavigate={onNavigate} />
     </main>
   );
 };

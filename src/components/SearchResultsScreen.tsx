@@ -1,11 +1,10 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, Building2, MapPin, GraduationCap, Settings2 } from 'lucide-react';
+import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Settings2, Compass, CheckCircle2 } from 'lucide-react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { CategoryType, SearchResultItem } from '../types';
 import { searchInfostaan } from '../lib/searchEngine';
 import { PencilLoader } from './PencilLoader';
 import { SkeletonResultCards } from './SkeletonResultCards';
-import gsap from 'gsap';
 
 interface FilterState {
   interest?: string | null;
@@ -16,7 +15,7 @@ interface FilterState {
   subjectCategory?: string | null;
   subject?: string | null;
   level?: string | null;
-  locality?: string | null;
+  region?: string | null;
 }
 
 interface SearchResultsScreenProps {
@@ -26,6 +25,15 @@ interface SearchResultsScreenProps {
   savedItemIds?: string[];
   onOpenCutoff?: () => void;
 }
+
+const MUMBAI_REGIONS = [
+  'All Mumbai',
+  'South Mumbai',
+  'Western Suburbs',
+  'Central Suburbs',
+  'Eastern Suburbs',
+  'Harbour / Central-East',
+];
 
 export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   onNavigate,
@@ -43,12 +51,13 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   const [inputValue, setInputValue] = useState(query);
   const [searchPhase, setSearchPhase] = useState<'idle' | 'understanding' | 'skeleton' | 'done'>('idle');
 
-  // Filter-First State
+  // Filter-First & Multi-Step Questionnaire State
+  const [wizardStep, setWizardStep] = useState<number>(1);
   const [pendingFilters, setPendingFilters] = useState<FilterState>({});
   const [appliedFilters, setAppliedFilters] = useState<FilterState | null>(null);
   const [hasSubmittedFilters, setHasSubmittedFilters] = useState(false);
   
-  const showResults = !!query || hasSubmittedFilters || activeCategory === 'cutoffs';
+  const showResults = !!query || hasSubmittedFilters;
   
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
 
@@ -59,10 +68,11 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
     }
   }, [query]);
 
-  // Reset to questions when changing tabs if there's no active query
+  // Reset to questionnaire when changing category tabs if there's no active query
   useEffect(() => {
     if (!query) {
       setHasSubmittedFilters(false);
+      setWizardStep(1);
       setPendingFilters({});
       setAppliedFilters(null);
     }
@@ -104,76 +114,96 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 
   const getLoaderMessage = (cat: CategoryType) => {
     switch (cat) {
-      case 'colleges': return 'Finding relevant colleges...';
-      case 'courses': return 'Finding relevant courses...';
-      case 'careers': return 'Exploring career paths...';
-      case 'classes': return 'Finding relevant classes...';
-      case 'cutoffs': return 'Finding cutoff documents...';
-      default: return "Finding what's relevant...";
+      case 'colleges': return 'Finding relevant colleges in Mumbai...';
+      case 'courses': return 'Finding relevant courses in Mumbai...';
+      case 'careers': return 'Exploring Mumbai career paths...';
+      case 'classes': return 'Finding relevant classes in Mumbai...';
+      default: return "Finding what's relevant in Mumbai...";
     }
+  };
+
+  // Helper to test if a result item matches the target Mumbai region
+  const matchItemRegion = (item: SearchResultItem, targetRegion: string | null | undefined): boolean => {
+    if (!targetRegion || targetRegion === 'All Mumbai') return true;
+    const text = [item.title, item.badgeSub || '', ...(item.meta || []), item.subtitle || ''].join(' ').toUpperCase();
+    if (targetRegion === 'South Mumbai') {
+      return text.includes('SOUTH MUMBAI') || text.includes('CHURCHGATE') || text.includes('CHARNI') || text.includes('FORT') || text.includes('MARINE') || text.includes('SOUTH');
+    }
+    if (targetRegion === 'Western Suburbs') {
+      return text.includes('WESTERN') || text.includes('VILE PARLE') || text.includes('ANDHERI') || text.includes('BORIVALI') || text.includes('BANDRA') || text.includes('SUBURBS');
+    }
+    if (targetRegion === 'Central Suburbs') {
+      return text.includes('CENTRAL') || text.includes('MATUNGA') || text.includes('DADAR') || text.includes('KURLA');
+    }
+    if (targetRegion === 'Eastern Suburbs') {
+      return text.includes('EASTERN') || text.includes('GHATKOPAR') || text.includes('MULUND') || text.includes('BHANDUP');
+    }
+    if (targetRegion === 'Harbour / Central-East') {
+      return text.includes('CHEMBUR') || text.includes('HARBOUR') || text.includes('BELAPUR');
+    }
+    return true; // Fallback: allow item if region is unknown to prevent data loss
   };
 
   const filteredResults = useMemo(() => {
     let raw = searchInfostaan(query, activeCategory);
     
-    if (!appliedFilters && !query && activeCategory !== 'cutoffs') return [];
+    if (!appliedFilters && !query) return [];
     
-    if (activeCategory === 'classes' && appliedFilters) {
-      if (appliedFilters.subjectCategory || appliedFilters.subject) {
-        const keywords = [appliedFilters.subjectCategory, appliedFilters.subject].filter(Boolean).map(k => k!.toLowerCase());
-        raw = raw.filter(item => {
-           const text = [item.title, item.badgeCategory, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
-           return keywords.some(kw => text.includes(kw));
-        });
+    if (appliedFilters) {
+      // Region filter matching
+      if (appliedFilters.region) {
+        raw = raw.filter(item => matchItemRegion(item, appliedFilters.region));
       }
-      if (appliedFilters.level) {
-        const levelLower = appliedFilters.level.split('/')[0].trim().toLowerCase();
-        raw = raw.filter(item => {
-           const text = [item.title, item.badgeCategory, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
-           return text.includes(levelLower) || text.includes('standard') || text.includes('class') || text.includes('board');
-        });
-      }
-      if (appliedFilters.locality && appliedFilters.locality !== 'Near me / Mumbai') {
-        const loc = appliedFilters.locality.toLowerCase();
-        raw = raw.filter(item => {
-           const text = [item.title, item.badgeCategory, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
-           return text.includes(loc);
-        });
-      }
-    } else if (appliedFilters) {
-      const interest = appliedFilters.interest || appliedFilters.domain;
-      if (interest) {
-        const keywords = interest.split('/').map(k => k.trim().toLowerCase());
-        raw = raw.filter(item => {
-          const text = [item.title, item.badgeCategory, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
-          return keywords.some(kw => text.includes(kw));
-        });
-      }
-      const grade = appliedFilters.grade || appliedFilters.degreeLevel;
-      if (grade) {
-        const gradeLower = grade.split('/')[0].trim().toLowerCase();
-        raw = raw.filter(item => {
-          const text = [item.title, item.badgeCategory, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
-          return text.includes(gradeLower) || 
-                 text.includes('degree') || 
-                 text.includes('college') ||
-                 text.includes('university') ||
-                 text.includes('undergraduate') ||
-                 text.includes('postgraduate');
-        });
-      }
-      if (appliedFilters.fee && appliedFilters.fee !== 'No Limit') {
-        raw = raw.filter(item => {
-          const feeMatch = item.subtitle?.match(/₹([0-9,]+)/);
-          if (!feeMatch) return true;
-          const fee = parseInt(feeMatch[1].replace(/,/g, ''), 10);
-          if (appliedFilters.fee === 'Under ₹25k') return fee <= 25000;
-          if (appliedFilters.fee === '₹25k - ₹50k') return fee > 25000 && fee <= 50000;
-          if (appliedFilters.fee === '₹50k - ₹1 Lakh') return fee > 50000 && fee <= 100000;
-          if (appliedFilters.fee === '₹1 Lakh - ₹3 Lakh') return fee > 100000 && fee <= 300000;
-          if (appliedFilters.fee === 'Over ₹3 Lakh') return fee > 300000;
-          return true;
-        });
+
+      if (activeCategory === 'classes') {
+        if (appliedFilters.subjectCategory || appliedFilters.subject) {
+          const keywords = [appliedFilters.subjectCategory, appliedFilters.subject].filter(Boolean).map(k => k!.toLowerCase());
+          raw = raw.filter(item => {
+             const text = [item.title, item.badgeCategory, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
+             return keywords.some(kw => text.includes(kw));
+          });
+        }
+        if (appliedFilters.level) {
+          const levelLower = appliedFilters.level.split('/')[0].trim().toLowerCase();
+          raw = raw.filter(item => {
+             const text = [item.title, item.badgeCategory, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
+             return text.includes(levelLower) || text.includes('standard') || text.includes('class') || text.includes('board');
+          });
+        }
+      } else {
+        const interest = appliedFilters.interest || appliedFilters.domain;
+        if (interest) {
+          const keywords = interest.split('/').map(k => k.trim().toLowerCase());
+          raw = raw.filter(item => {
+            const text = [item.title, item.badgeCategory, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
+            return keywords.some(kw => text.includes(kw));
+          });
+        }
+        const grade = appliedFilters.grade || appliedFilters.degreeLevel;
+        if (grade) {
+          const gradeLower = grade.split('/')[0].trim().toLowerCase();
+          raw = raw.filter(item => {
+            const text = [item.title, item.badgeCategory, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
+            return text.includes(gradeLower) || 
+                   text.includes('degree') || 
+                   text.includes('college') ||
+                   text.includes('university') ||
+                   text.includes('undergraduate') ||
+                   text.includes('postgraduate');
+          });
+        }
+        if (appliedFilters.fee && appliedFilters.fee !== 'No Limit') {
+          raw = raw.filter(item => {
+            const feeMatch = item.subtitle?.match(/₹([0-9,]+)/);
+            if (!feeMatch) return true;
+            const fee = parseInt(feeMatch[1].replace(/,/g, ''), 10);
+            if (appliedFilters.fee === 'Under ₹25k') return fee <= 25000;
+            if (appliedFilters.fee === '₹25k - ₹50k') return fee > 25000 && fee <= 50000;
+            if (appliedFilters.fee === '₹50k - ₹1 Lakh') return fee > 50000 && fee <= 100000;
+            if (appliedFilters.fee === 'Over ₹1 Lakh') return fee > 100000;
+            return true;
+          });
+        }
       }
     }
     return raw;
@@ -183,12 +213,10 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   useEffect(() => {
     setSearchPhase('understanding');
     
-    // "Understanding" phase (spinning pencil): 2500ms
     const timer1 = setTimeout(() => {
       setSearchPhase('skeleton');
     }, 2500);
     
-    // "Skeleton" phase: 500ms
     const timer2 = setTimeout(() => {
       setSearchPhase('done');
     }, 3000);
@@ -199,162 +227,442 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
     };
   }, [query, activeCategory]);
 
-  // Subtle GSAP animations when results change (only when done)
-  useEffect(() => {
-    if (searchPhase === 'done' && resultsContainerRef.current) {
-      const cards = resultsContainerRef.current.querySelectorAll('.result-card-anim');
-      gsap.fromTo(
-        cards,
-        { opacity: 0, y: 12 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.35,
-          stagger: 0.04,
-          ease: 'power2.out',
-        }
-      );
-    }
-  }, [filteredResults, searchPhase]);
-
   const handleActionClick = (item: SearchResultItem) => {
-    if (item.category === 'colleges') {
-      onSelectCollege(item.collegeId || 'hinduja');
-    } else if (item.category === 'cutoffs') {
-      if (onOpenCutoff) {
-        onOpenCutoff();
-      }
+    if (item.category === 'colleges' && item.collegeSlug) {
+      onSelectCollege(item.collegeSlug);
     } else {
-      onNavigate('/help-me-decide');
+      onSelectCollege('mithibai');
     }
   };
 
-  const renderClassForm = () => {
-    const subjectCategories = ['School Subjects', 'Professional / Entrance Exam', 'IT & Coding', 'Accounts & Finance', 'Languages', 'Design', 'Other'];
-    const subjectsMap: Record<string, string[]> = {
-      'School Subjects': ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'English', 'Other'],
-      'Professional / Entrance Exam': ['CA', 'JEE', 'NEET', 'Law Entrance', 'Other'],
-      'IT & Coding': ['Python', 'Web Development', 'Java', 'Data Analytics', 'Other'],
-      'Accounts & Finance': ['Tally', 'GST', 'Financial Analysis', 'Other'],
-      'Languages': ['English Speaking', 'German', 'French', 'Other'],
-      'Design': ['NID', 'NIFT', 'NATA', 'CEED', 'Other'],
-      'Other': []
-    };
-    const levels = ['School', '10th / SSC', '12th / HSC', 'College', 'Graduate', 'Working'];
-    const localities = ['Near me / Mumbai', 'Andheri', 'Borivali', 'Bandra', 'Dadar', 'Ghatkopar', 'Powai', 'Chembur', 'South Mumbai'];
+  const subjectCategories = ['Commerce & Professional', 'Science & Engineering', 'Arts & Humanities'];
+  const subjectsMap: Record<string, string[]> = {
+    'Commerce & Professional': ['CA Foundation / Inter', 'CS Executive', 'CMA', 'B.Com / BAF / BMS Coaching', '11th & 12th Commerce'],
+    'Science & Engineering': ['JEE Main & Advanced', 'NEET UG', 'MHT-CET', '11th & 12th Science', 'Engineering Maths'],
+    'Arts & Humanities': ['Law Entrance (MH CET 3/5 Yr)', 'CLAT', 'Psychology & Mass Comm', 'Economics Coaching', 'Design Entrances (NID/NIFT)']
+  };
+  const levels = ['Class 11th / 12th', 'Undergraduate', 'Postgraduate / Professional'];
 
-    return (
-      <div className="space-y-6">
-        <div>
-          <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">What do you want to learn?</h3>
-          <div className="flex flex-wrap gap-2 mb-4">
-            {subjectCategories.map(opt => (
-              <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, subjectCategory: prev.subjectCategory === opt ? null : opt, subject: null }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.subjectCategory === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-                {opt}
-              </button>
-            ))}
-          </div>
-          {pendingFilters.subjectCategory && subjectsMap[pendingFilters.subjectCategory]?.length > 0 && (
-            <div className="flex flex-wrap gap-2 pl-2 border-l-2 border-slate-200 dark:border-white/10 animate-fade-in">
-               {subjectsMap[pendingFilters.subjectCategory].map(opt => (
-                  <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, subject: prev.subject === opt ? null : opt }))} className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${pendingFilters.subject === opt ? 'bg-emerald-600 text-white shadow-xs' : 'bg-white dark:bg-[#0D1828] text-slate-600 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-emerald-600/50'}`}>
-                    {opt}
-                  </button>
-               ))}
-            </div>
-          )}
-        </div>
-        {(pendingFilters.subjectCategory || pendingFilters.subject) && (
-          <div className="animate-fade-in">
-            <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">What's your current level?</h3>
-            <div className="flex flex-wrap gap-2">
-              {levels.map(opt => (
-                <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, level: prev.level === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.level === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-                  {opt}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-        {pendingFilters.level && (
-          <div className="animate-fade-in">
-            <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">Where do you want the class?</h3>
-            <div className="flex flex-wrap gap-2">
-              {localities.map(opt => (
-                <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, locality: prev.locality === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.locality === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-                  {opt}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-    );
+  const handleCommitFilters = () => {
+    setSearchPhase('idle');
+    setAppliedFilters({ ...pendingFilters });
+    setHasSubmittedFilters(true);
+    setIsFilterModalOpen(false);
   };
 
-  const renderCollegeForm = () => (
+  // ── COLLEGES MULTI-STEP WIZARD ──
+  const renderCollegeWizard = () => (
     <div className="space-y-6">
-      <div>
-        <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">Your Interest</h3>
-        <div className="flex flex-wrap gap-2">
-          {['Commerce', 'Science', 'Arts', 'Tech / IT', 'Law', 'Design'].map(opt => (
-            <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, interest: prev.interest === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.interest === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-              {opt}
+      {/* Progress Track */}
+      <div className="flex items-center justify-between text-xs font-bold text-[#007DCC] uppercase tracking-wider mb-2">
+        <span>Step {wizardStep} of 3: {wizardStep === 1 ? 'Interest / Stream' : wizardStep === 2 ? 'Education Level' : 'Region & Fees'}</span>
+        <span>{Math.round((wizardStep / 3) * 100)}%</span>
+      </div>
+      <div className="w-full h-1.5 bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden mb-6">
+        <div className="h-full bg-[#007DCC] transition-all duration-300" style={{ width: `${(wizardStep / 3) * 100}%` }} />
+      </div>
+
+      {wizardStep === 1 && (
+        <div className="space-y-4 animate-fade-in">
+          <h3 className="text-sm font-bold text-slate-900 dark:text-[#F4F7FB] uppercase tracking-wider">
+            Step 1: What are you interested in?
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {['Commerce', 'Science', 'Arts', 'Tech / IT', 'Law', 'Design'].map((opt) => (
+              <button
+                key={opt}
+                type="button"
+                onClick={() => setPendingFilters((prev) => ({ ...prev, interest: prev.interest === opt ? null : opt }))}
+                className={`p-4 rounded-2xl border text-left text-sm font-bold transition-all ${
+                  pendingFilters.interest === opt
+                    ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
+                    : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                }`}
+              >
+                {opt}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {wizardStep === 2 && (
+        <div className="space-y-4 animate-fade-in">
+          <h3 className="text-sm font-bold text-slate-900 dark:text-[#F4F7FB] uppercase tracking-wider">
+            Step 2: Current Grade / Education Level
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {['10th / SSC', '12th / HSC', 'Graduate'].map((opt) => (
+              <button
+                key={opt}
+                type="button"
+                onClick={() => setPendingFilters((prev) => ({ ...prev, grade: prev.grade === opt ? null : opt }))}
+                className={`p-4 rounded-2xl border text-left text-sm font-bold transition-all ${
+                  pendingFilters.grade === opt
+                    ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
+                    : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                }`}
+              >
+                {opt}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {wizardStep === 3 && (
+        <div className="space-y-6 animate-fade-in">
+          <div>
+            <h3 className="text-sm font-bold text-slate-900 dark:text-[#F4F7FB] uppercase tracking-wider mb-3">
+              Step 3: Preferred Mumbai Region
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+              {MUMBAI_REGIONS.map((r) => (
+                <button
+                  key={r}
+                  type="button"
+                  onClick={() => setPendingFilters((prev) => ({ ...prev, region: prev.region === r ? null : r }))}
+                  className={`p-3 rounded-xl border text-xs font-bold transition-all text-left ${
+                    pendingFilters.region === r
+                      ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
+                      : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                  }`}
+                >
+                  {r}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold text-slate-900 dark:text-[#F4F7FB] uppercase tracking-wider mb-3">
+              Annual Fees Range
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {['Under ₹25k', '₹25k - ₹50k', '₹50k - ₹1 Lakh', 'Over ₹1 Lakh', 'No Limit'].map((opt) => (
+                <button
+                  key={opt}
+                  type="button"
+                  onClick={() => setPendingFilters((prev) => ({ ...prev, fee: prev.fee === opt ? null : opt }))}
+                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+                    pendingFilters.fee === opt
+                      ? 'bg-[#007DCC] text-white'
+                      : 'bg-slate-100 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10'
+                  }`}
+                >
+                  {opt}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Navigation Controls */}
+      <div className="flex items-center justify-between pt-6 border-t border-slate-200 dark:border-white/10">
+        {wizardStep > 1 ? (
+          <button
+            type="button"
+            onClick={() => setWizardStep(wizardStep - 1)}
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 text-xs font-bold"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Previous</span>
+          </button>
+        ) : <div />}
+
+        <div className="flex items-center gap-3">
+          {wizardStep < 3 && (
+            <button
+              type="button"
+              onClick={() => setWizardStep(wizardStep + 1)}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-200 dark:bg-white/10 text-slate-800 dark:text-[#F4F7FB] text-xs font-bold"
+            >
+              <span>Next Step</span>
+              <ArrowRight className="w-4 h-4" />
             </button>
-          ))}
+          )}
+
+          <button
+            type="button"
+            onClick={handleCommitFilters}
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold shadow-md transition-all active:scale-95"
+          >
+            <span>Find Colleges</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
         </div>
       </div>
-      {pendingFilters.interest && (
-        <div className="animate-fade-in">
-          <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">Current Grade</h3>
-          <div className="flex flex-wrap gap-2">
-            {['10th / SSC', '12th / HSC', 'Graduate'].map(opt => (
-              <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, grade: prev.grade === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.grade === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-                {opt}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-      {pendingFilters.grade && (
-        <div className="animate-fade-in">
-          <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">College Fees (Per Year)</h3>
-          <div className="flex flex-wrap gap-2">
-            {['Under ₹25k', '₹25k - ₹50k', '₹50k - ₹1 Lakh', '₹1 Lakh - ₹3 Lakh', 'Over ₹3 Lakh', 'No Limit'].map(opt => (
-              <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, fee: prev.fee === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.fee === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-                {opt}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 
-  const renderCourseForm = () => (
+  // ── COURSES MULTI-STEP WIZARD ──
+  const renderCourseWizard = () => (
     <div className="space-y-6">
-      <div>
-        <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">Domain / Field</h3>
-        <div className="flex flex-wrap gap-2">
-          {['Commerce', 'Finance', 'Media', 'Tech', 'Management', 'Arts'].map(opt => (
-            <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, domain: prev.domain === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.domain === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-              {opt}
-            </button>
-          ))}
-        </div>
+      <div className="flex items-center justify-between text-xs font-bold text-[#007DCC] uppercase tracking-wider mb-2">
+        <span>Step {wizardStep} of 3: {wizardStep === 1 ? 'Interest / Study Domain' : wizardStep === 2 ? 'Degree Level' : 'Mumbai Region'}</span>
+        <span>{Math.round((wizardStep / 3) * 100)}%</span>
       </div>
-      {pendingFilters.domain && (
-        <div className="animate-fade-in">
-          <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">Degree Level</h3>
-          <div className="flex flex-wrap gap-2">
-            {['Undergraduate', 'Postgraduate', 'Diploma', 'Certification'].map(opt => (
-              <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, degreeLevel: prev.degreeLevel === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.degreeLevel === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
+      <div className="w-full h-1.5 bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden mb-6">
+        <div className="h-full bg-[#007DCC] transition-all duration-300" style={{ width: `${(wizardStep / 3) * 100}%` }} />
+      </div>
+
+      {wizardStep === 1 && (
+        <div className="space-y-4 animate-fade-in">
+          <h3 className="text-sm font-bold text-slate-900 dark:text-[#F4F7FB] uppercase tracking-wider">
+            Step 1: Interest / Study Domain
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {['Commerce', 'Finance', 'Media', 'Tech', 'Management', 'Arts'].map((opt) => (
+              <button
+                key={opt}
+                type="button"
+                onClick={() => setPendingFilters((prev) => ({ ...prev, domain: prev.domain === opt ? null : opt }))}
+                className={`p-4 rounded-2xl border text-left text-sm font-bold transition-all ${
+                  pendingFilters.domain === opt
+                    ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
+                    : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                }`}
+              >
                 {opt}
               </button>
             ))}
           </div>
         </div>
       )}
+
+      {wizardStep === 2 && (
+        <div className="space-y-4 animate-fade-in">
+          <h3 className="text-sm font-bold text-slate-900 dark:text-[#F4F7FB] uppercase tracking-wider">
+            Step 2: Degree Level / Course Type
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {['Undergraduate', 'Postgraduate', 'Diploma', 'Certification'].map((opt) => (
+              <button
+                key={opt}
+                type="button"
+                onClick={() => setPendingFilters((prev) => ({ ...prev, degreeLevel: prev.degreeLevel === opt ? null : opt }))}
+                className={`p-4 rounded-2xl border text-center text-xs font-bold transition-all ${
+                  pendingFilters.degreeLevel === opt
+                    ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
+                    : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                }`}
+              >
+                {opt}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {wizardStep === 3 && (
+        <div className="space-y-4 animate-fade-in">
+          <h3 className="text-sm font-bold text-slate-900 dark:text-[#F4F7FB] uppercase tracking-wider">
+            Step 3: Mumbai Region
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+            {MUMBAI_REGIONS.map((r) => (
+              <button
+                key={r}
+                type="button"
+                onClick={() => setPendingFilters((prev) => ({ ...prev, region: prev.region === r ? null : r }))}
+                className={`p-3 rounded-xl border text-xs font-bold transition-all text-left ${
+                  pendingFilters.region === r
+                    ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
+                    : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                }`}
+              >
+                {r}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Controls */}
+      <div className="flex items-center justify-between pt-6 border-t border-slate-200 dark:border-white/10">
+        {wizardStep > 1 ? (
+          <button
+            type="button"
+            onClick={() => setWizardStep(wizardStep - 1)}
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 text-xs font-bold"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Previous</span>
+          </button>
+        ) : <div />}
+
+        <div className="flex items-center gap-3">
+          {wizardStep < 3 && (
+            <button
+              type="button"
+              onClick={() => setWizardStep(wizardStep + 1)}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-200 dark:bg-white/10 text-slate-800 dark:text-[#F4F7FB] text-xs font-bold"
+            >
+              <span>Next Step</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          )}
+
+          <button
+            type="button"
+            onClick={handleCommitFilters}
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold shadow-md transition-all active:scale-95"
+          >
+            <span>Find Courses</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
+  // ── CLASSES MULTI-STEP WIZARD ──
+  const renderClassWizard = () => (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between text-xs font-bold text-[#007DCC] uppercase tracking-wider mb-2">
+        <span>Step {wizardStep} of 3: {wizardStep === 1 ? 'Interest / Coaching Category' : wizardStep === 2 ? 'Exam / Subject' : 'Level & Mumbai Region'}</span>
+        <span>{Math.round((wizardStep / 3) * 100)}%</span>
+      </div>
+      <div className="w-full h-1.5 bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden mb-6">
+        <div className="h-full bg-[#007DCC] transition-all duration-300" style={{ width: `${(wizardStep / 3) * 100}%` }} />
+      </div>
+
+      {wizardStep === 1 && (
+        <div className="space-y-4 animate-fade-in">
+          <h3 className="text-sm font-bold text-slate-900 dark:text-[#F4F7FB] uppercase tracking-wider">
+            Step 1: What do you want to learn?
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {subjectCategories.map((opt) => (
+              <button
+                key={opt}
+                type="button"
+                onClick={() => setPendingFilters((prev) => ({ ...prev, subjectCategory: prev.subjectCategory === opt ? null : opt, subject: null }))}
+                className={`p-4 rounded-2xl border text-left text-xs font-bold transition-all ${
+                  pendingFilters.subjectCategory === opt
+                    ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
+                    : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                }`}
+              >
+                {opt}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {wizardStep === 2 && (
+        <div className="space-y-4 animate-fade-in">
+          <h3 className="text-sm font-bold text-slate-900 dark:text-[#F4F7FB] uppercase tracking-wider">
+            Step 2: Specific Exam or Subject
+          </h3>
+          {pendingFilters.subjectCategory && subjectsMap[pendingFilters.subjectCategory]?.length > 0 ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+              {subjectsMap[pendingFilters.subjectCategory].map((opt) => (
+                <button
+                  key={opt}
+                  type="button"
+                  onClick={() => setPendingFilters((prev) => ({ ...prev, subject: prev.subject === opt ? null : opt }))}
+                  className={`p-3 rounded-xl border text-xs font-bold transition-all text-left ${
+                    pendingFilters.subject === opt
+                      ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
+                      : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                  }`}
+                >
+                  {opt}
+                </button>
+              ))}
+            </div>
+          ) : (
+            <p className="text-xs text-slate-500">Please select a category in Step 1 first, or proceed to Step 3.</p>
+          )}
+        </div>
+      )}
+
+      {wizardStep === 3 && (
+        <div className="space-y-6 animate-fade-in">
+          <div>
+            <h3 className="text-sm font-bold text-slate-900 dark:text-[#F4F7FB] uppercase tracking-wider mb-3">
+              Step 3: Level & Mumbai Region
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-4">
+              {levels.map((opt) => (
+                <button
+                  key={opt}
+                  type="button"
+                  onClick={() => setPendingFilters((prev) => ({ ...prev, level: prev.level === opt ? null : opt }))}
+                  className={`p-3 rounded-xl border text-xs font-bold transition-all ${
+                    pendingFilters.level === opt
+                      ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
+                      : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA]'
+                  }`}
+                >
+                  {opt}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-[#A9B8CA] mb-3">
+              Target Mumbai Region
+            </h4>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+              {MUMBAI_REGIONS.map((r) => (
+                <button
+                  key={r}
+                  type="button"
+                  onClick={() => setPendingFilters((prev) => ({ ...prev, region: prev.region === r ? null : r }))}
+                  className={`p-3 rounded-xl border text-xs font-bold transition-all text-left ${
+                    pendingFilters.region === r
+                      ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
+                      : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                  }`}
+                >
+                  {r}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Controls */}
+      <div className="flex items-center justify-between pt-6 border-t border-slate-200 dark:border-white/10">
+        {wizardStep > 1 ? (
+          <button
+            type="button"
+            onClick={() => setWizardStep(wizardStep - 1)}
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 text-xs font-bold"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Previous</span>
+          </button>
+        ) : <div />}
+
+        <div className="flex items-center gap-3">
+          {wizardStep < 3 && (
+            <button
+              type="button"
+              onClick={() => setWizardStep(wizardStep + 1)}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-200 dark:bg-white/10 text-slate-800 dark:text-[#F4F7FB] text-xs font-bold"
+            >
+              <span>Next Step</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          )}
+
+          <button
+            type="button"
+            onClick={handleCommitFilters}
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold shadow-md transition-all active:scale-95"
+          >
+            <span>Find Classes</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
     </div>
   );
 
@@ -364,8 +672,8 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
       className="w-full pt-20 sm:pt-24 pb-20 bg-slate-100 dark:bg-[#070D18] min-h-screen text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200"
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Search Header & Filter Bar (Left-aligned, free-flow layout) */}
-        <div className="flex flex-col gap-6 mb-8 text-left relative z-[60]">
+        {/* Search Header & Filter Bar */}
+        <div className="flex flex-col gap-6 mb-8 text-left relative z-30">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-[#007DCC] dark:text-[#86cfff] text-xs font-bold uppercase tracking-wider mb-2">
@@ -378,8 +686,8 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
             </div>
           </div>
 
-          {/* Input Bar */}
-          <div className="relative z-[60] flex items-center w-full bg-white dark:bg-[#0D1828] rounded-2xl px-4 py-3 shadow-xs transition-all border border-slate-300 dark:border-[#D3B5E8]/15 focus-within:border-[#007DCC] focus-within:ring-2 focus-within:ring-[#007DCC]/20">
+          {/* Input Bar with layered suggestions */}
+          <div className="relative z-30 flex items-center w-full bg-white dark:bg-[#0D1828] rounded-2xl px-4 py-3 shadow-xs transition-all border border-slate-300 dark:border-[#D3B5E8]/15 focus-within:border-[#007DCC] focus-within:ring-2 focus-within:ring-[#007DCC]/20">
             <Search className="text-[#007DCC] dark:text-[#9ccaff] mr-3 w-5 h-5 shrink-0" />
             <input
               aria-label="Search opportunities, courses, and institutions in Mumbai"
@@ -399,9 +707,9 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                 <X className="w-4 h-4" />
               </button>
             )}
-            {/* Search Suggestions Dropdown */}
+            {/* Search Suggestions Dropdown Overlay */}
             {inputValue.trim().length > 0 && (
-              <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#1a202b] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-2xl shadow-xl overflow-hidden z-50 text-left">
+              <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#1a202b] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-2xl shadow-xl overflow-hidden z-40 text-left">
                 <div className="p-2">
                   <button
                     type="button"
@@ -417,7 +725,8 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                   <button
                     type="button"
                     onClick={() => {
-                      // Perform search logic here if needed
+                      setInputValue('');
+                      setActiveCategory('courses');
                     }}
                     className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3"
                   >
@@ -429,7 +738,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
             )}
           </div>
 
-          {/* Category Filter Tabs */}
+          {/* Category Filter Tabs (Cutoffs removed) */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
             <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none" role="tablist">
               {[
@@ -438,7 +747,6 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                 { id: 'courses', label: 'Courses' },
                 { id: 'careers', label: 'Careers' },
                 { id: 'classes', label: 'Classes' },
-                { id: 'cutoffs', label: 'Cutoffs' },
               ].map((tab) => (
                 <button
                   key={tab.id}
@@ -466,29 +774,45 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
           </div>
         </div>
 
-        {/* Dynamic Loading Sequence / Results Container */}
+        {/* Subtle Career Roadmap Banner in Careers view */}
+        {activeCategory === 'careers' && showResults && (
+          <div className="mb-6 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-left">
+            <div className="flex items-center gap-3">
+              <div className="p-2.5 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-[#007DCC] dark:text-[#86cfff] shrink-0">
+                <Compass className="w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="font-bold text-sm text-slate-900 dark:text-[#F4F7FB]">Looking for step-by-step career pathways?</h4>
+                <p className="text-xs text-slate-500 dark:text-[#71839A]">Explore structured Mumbai career roadmaps for CA, BMS, Tech & Design.</p>
+              </div>
+            </div>
+            <button
+              onClick={() => navigate('/career-roadmap')}
+              className="px-4 py-2 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all whitespace-nowrap shrink-0 flex items-center justify-center gap-1.5"
+            >
+              <span>Open Career Roadmap</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        )}
+
+        {/* Dynamic Questionnaire / Results Container */}
         <div ref={resultsContainerRef} className="w-full">
           {!showResults ? (
             <div className="py-6 sm:py-10 animate-fade-in text-left">
               <div className="max-w-2xl bg-white dark:bg-[#0D1828] rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-white/10 shadow-sm mx-auto sm:mx-0">
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">Tell us what you're looking for</h2>
-                <p className="text-sm text-slate-500 dark:text-[#71839A] mb-8">Select a few options below so we can recommend the best matches in Mumbai.</p>
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">
+                  Tell us what you're looking for in Mumbai
+                </h2>
+                <p className="text-sm text-slate-500 dark:text-[#71839A] mb-6">
+                  Select your preferences below to recommend top Mumbai matches.
+                </p>
 
-                {activeCategory === 'classes' ? renderClassForm() : activeCategory === 'courses' ? renderCourseForm() : renderCollegeForm()}
-
-                <div className="mt-10 pt-6 border-t border-slate-100 dark:border-white/5">
-                  <button
-                    onClick={() => {
-                      setSearchPhase('idle');
-                      setAppliedFilters(pendingFilters);
-                      setHasSubmittedFilters(true);
-                    }}
-                    className="w-full sm:w-auto px-8 py-3.5 bg-[#007DCC] hover:bg-[#006cb0] text-white text-sm font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 active:scale-95"
-                  >
-                    <span>Find {activeCategory === 'classes' ? 'Classes' : activeCategory === 'colleges' ? 'Colleges' : activeCategory === 'courses' ? 'Courses' : 'Results'}</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
+                {activeCategory === 'classes'
+                  ? renderClassWizard()
+                  : activeCategory === 'courses'
+                  ? renderCourseWizard()
+                  : renderCollegeWizard()}
               </div>
             </div>
           ) : searchPhase === 'understanding' ? (
@@ -502,26 +826,23 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
               {filteredResults.length === 0 ? (
                 <div className="md:col-span-2 p-10 text-center rounded-2xl bg-white dark:bg-[#0D1828] text-slate-600 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 shadow-xs">
                   <p className="text-base font-semibold text-slate-900 dark:text-[#F4F7FB] mb-1">
-                    No matching results found for "{query}"
+                    No matching results found for your filters
                   </p>
-                  <p className="text-xs sm:text-sm">
-                    Try searching for Hinduja, Podar, Mithibai, HR College, Chartered Accountant, or BKC.
+                  <p className="text-xs sm:text-sm mb-4">
+                    Try adjusting your Mumbai region or selecting All Mumbai.
                   </p>
                   <button
                     onClick={() => {
                       setInputValue('Hinduja');
                       setActiveCategory('all');
                     }}
-                    className="mt-4 px-4 py-2 rounded-xl bg-[#007DCC] text-white text-xs sm:text-sm font-semibold hover:bg-[#006cb0] transition-colors"
+                    className="px-4 py-2 rounded-xl bg-[#007DCC] text-white text-xs sm:text-sm font-semibold hover:bg-[#006cb0] transition-colors"
                   >
                     Search K.P.B. Hinduja College
                   </button>
                 </div>
               ) : (
                 filteredResults.map((item) => {
-                  // For college cards: extract just stream tokens from subtitle
-                  // subtitle format: "Offered: B.Com, BMS, BAF • Approx. ₹X/yr"
-                  // We only want the part before the first "•"
                   const getStreams = (): string[] => {
                     if (item.category !== 'colleges' || !item.subtitle) return [];
                     const offeredPart = item.subtitle.split('•')[0].replace(/^Offered:\s*/i, '').trim();
@@ -560,12 +881,12 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         )}
                       </div>
 
-                      {/* Name — primary identity */}
+                      {/* Name */}
                       <h2 className="text-sm sm:text-[15px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug tracking-tight group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors line-clamp-2">
                         {item.title}
                       </h2>
 
-                      {/* Concise description */}
+                      {/* Description */}
                       {(item.category === 'colleges' && streams.length > 0) ? (
                         <p className="mt-1.5 text-[11px] text-slate-500 dark:text-[#71839A] truncate">
                           {streams.join(' · ')}
@@ -577,14 +898,13 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                       )}
                     </div>
 
-                    {/* Bottom: Details action */}
+                    {/* Bottom action */}
                     <div className="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-white/5">
                       <span className="text-[11px] sm:text-xs font-semibold text-[#007DCC] dark:text-[#86cfff]">
                         {item.category === 'colleges' ? 'Details' :
                          item.category === 'classes' ? 'View Details' :
                          item.category === 'courses' ? 'Course Info' :
                          item.category === 'careers' ? 'Career Path' :
-                         item.category === 'cutoffs' ? 'View Cutoff' :
                          item.actionLabel}
                       </span>
                       <ArrowRight className="w-3.5 h-3.5 text-[#007DCC] dark:text-[#86cfff] group-hover:translate-x-0.5 transition-transform" />
@@ -603,7 +923,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
       {isFilterModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsFilterModalOpen(false)} />
-          <div className="relative w-full max-w-lg bg-white dark:bg-[#0D1828] rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-fade-in">
+          <div className="relative w-full max-w-lg bg-white dark:bg-[#0D1828] rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-fade-in text-left">
             <div className="p-6 border-b border-slate-200 dark:border-white/10 flex items-center justify-between">
               <h2 className="text-xl font-bold text-slate-900 dark:text-[#F4F7FB]">Filter Results</h2>
               <button onClick={() => setIsFilterModalOpen(false)} className="p-2 bg-slate-100 dark:bg-white/5 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
@@ -612,7 +932,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
             </div>
             
             <div className="p-6 overflow-y-auto space-y-8">
-               {activeCategory === 'classes' ? renderClassForm() : activeCategory === 'courses' ? renderCourseForm() : renderCollegeForm()}
+               {activeCategory === 'classes' ? renderClassWizard() : activeCategory === 'courses' ? renderCourseWizard() : renderCollegeWizard()}
             </div>
 
             <div className="p-6 border-t border-slate-200 dark:border-white/10 flex justify-end gap-3">
@@ -625,11 +945,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                 Clear All
               </button>
               <button
-                onClick={() => {
-                  setAppliedFilters(pendingFilters);
-                  setHasSubmittedFilters(true);
-                  setIsFilterModalOpen(false);
-                }}
+                onClick={handleCommitFilters}
                 className="px-8 py-3 bg-[#007DCC] hover:bg-[#006cb0] text-white text-sm font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 active:scale-95"
               >
                 Apply Filters

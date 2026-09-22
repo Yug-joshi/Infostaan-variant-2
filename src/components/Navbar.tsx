@@ -99,7 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <span>Connect</span>
             <span className="px-1.5 py-0.5 rounded-md text-[9px] font-bold bg-amber-500 text-white uppercase tracking-wider">
-              1:1
+              One on One
             </span>
           </Link>
         </nav>

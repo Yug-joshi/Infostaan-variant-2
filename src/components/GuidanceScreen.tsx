@@ -11,10 +11,6 @@ import {
   CheckCircle2,
   Building2,
   Building,
-  Terminal,
-  Camera,
-  Lightbulb,
-  Train,
   Check,
   Compass,
   GraduationCap,
@@ -22,8 +18,6 @@ import {
   Clock,
   MapPin,
 } from 'lucide-react';
-import { ScreenType } from '../types';
-import { CareerRoadmap } from './CareerRoadmap';
 import { PencilLoader } from './PencilLoader';
 import gsap from 'gsap';
 
@@ -36,9 +30,6 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
   onNavigate,
   onSelectCollege,
 }) => {
-  // Active view: 'roadmap' or 'wizard'
-  const [activeTab, setActiveTab] = useState<'roadmap' | 'wizard'>('roadmap');
-
   // Help Me Decide wizard step: starts strictly at 1
   const [currentStep, setCurrentStep] = useState<number>(1);
 
@@ -60,7 +51,7 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
 
   const stepContainerRef = useRef<HTMLDivElement>(null);
 
-  // Subtle GSAP animation when changing wizard steps or tabs
+  // Subtle GSAP animation when changing wizard steps
   useEffect(() => {
     if (stepContainerRef.current) {
       gsap.fromTo(
@@ -69,7 +60,7 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
         { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }
       );
     }
-  }, [currentStep, activeTab]);
+  }, [currentStep]);
 
   const toggleInterest = (id: string) => {
     if (selectedInterests.includes(id)) {
@@ -102,7 +93,7 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
     if (currentStep > 1) {
       setCurrentStep(currentStep - 1);
     } else {
-      onNavigate('home');
+      onNavigate('/');
     }
   };
 
@@ -178,521 +169,407 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
 
   return (
     <main className="w-full pt-20 sm:pt-24 pb-20 bg-slate-100 dark:bg-[#070D18] min-h-screen text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200">
-      {/* Top Switcher Strip */}
-      <div className="w-full border-b border-slate-200 dark:border-white/10 bg-white dark:bg-[#0D1828] sticky top-16 z-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              id="tab-career-roadmap"
-              onClick={() => setActiveTab('roadmap')}
-              className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 ${
-                activeTab === 'roadmap'
-                  ? 'bg-[#007DCC] text-white shadow-sm'
-                  : 'text-slate-600 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-[#161c27]'
-              }`}
-            >
-              <Compass className="w-4 h-4" />
-              <span>Career Roadmap</span>
-            </button>
-
-            <button
-              type="button"
-              id="tab-help-me-decide"
-              onClick={() => setActiveTab('wizard')}
-              className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 ${
-                activeTab === 'wizard'
-                  ? 'bg-[#007DCC] text-white shadow-sm'
-                  : 'text-slate-600 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-[#161c27]'
-              }`}
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>Help Me Decide Wizard</span>
-              {currentStep > 1 && currentStep <= 4 && (
-                <span className="w-2 h-2 rounded-full bg-emerald-400" />
-              )}
-            </button>
-          </div>
-
-          <div className="text-xs text-slate-500 dark:text-[#8a919c] hidden md:block">
-            {activeTab === 'roadmap'
-              ? '6 Verified Mumbai Career Pathways'
-              : `Admission Matching • Step ${currentStep} of 4`}
-          </div>
-        </div>
-      </div>
-
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
-        {/* VIEW 1: INTERACTIVE CAREER ROADMAP */}
-        {activeTab === 'roadmap' && (
-          <div className="w-full">
-            <CareerRoadmap
-              onSelectCollege={onSelectCollege}
-              onNavigate={onNavigate}
-            />
-
-            {/* Bottom Callout to try Help Me Decide */}
-            <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-5 text-left shadow-2xs">
-              <div className="space-y-1">
-                <h4 className="font-bold text-slate-900 dark:text-white text-base sm:text-lg">
-                  Help Me Decide
-                </h4>
+        <div ref={stepContainerRef} className="w-full flex flex-col text-left">
+          {/* Step Indicator & Progress */}
+          {currentStep <= 4 && (
+            <div className="w-full mb-8">
+              <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-[#A9B8CA] mb-3">
+                <span className="text-[#007DCC] dark:text-[#86cfff] flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#007DCC]" />
+                  STEP {currentStep} OF 4 •{' '}
+                  {currentStep === 1
+                    ? 'YOUR CURRENT STAGE'
+                    : currentStep === 2
+                    ? 'YOUR AREA OF INTEREST'
+                    : currentStep === 3
+                    ? 'COMMUTE & LOCATION'
+                    : 'KEY PRIORITIES'}
+                </span>
+                <span>{progressPercent}% Complete</span>
               </div>
+              {/* Progress Track */}
+              <div className="w-full h-1.5 bg-slate-200 dark:bg-[#161c27] rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-gradient-to-r from-[#007DCC] to-[#19A7E8] transition-all duration-300 rounded-full"
+                  style={{ width: `${progressPercent}%` }}
+                />
+              </div>
+            </div>
+          )}
+
+          {/* STEP 1: Academic Stage */}
+          {currentStep === 1 && (
+            <div className="w-full mb-8">
+              <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
+                What is your current academic stage?
+              </h1>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+                {[
+                  {
+                    id: 'class10',
+                    title: 'Class 10th Passed / Junior College Aspirant',
+                    desc: 'Exploring FYJC admissions across Mumbai junior colleges (Hinduja, Podar, Mithibai, HR)',
+                  },
+                  {
+                    id: 'class12-commerce',
+                    title: 'Class 12th Commerce',
+                    desc: 'Targeting B.Com, BAF, BMS, BFM degree courses and professional certifications',
+                  },
+                  {
+                    id: 'class12-science',
+                    title: 'Class 12th Science',
+                    desc: 'Targeting B.Sc IT, Data Science, or Engineering tracks in Powai / Suburban hubs',
+                  },
+                  {
+                    id: 'undergrad',
+                    title: 'Currently in Undergraduate Degree',
+                    desc: 'Looking for BFSI corporate internships in BKC & Nariman Point, plus career pathways',
+                  },
+                ].map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => setStage(item.id)}
+                    className={`p-5 rounded-2xl border text-left transition-all ${
+                      stage === item.id
+                        ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
+                        : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/10 hover:border-[#007DCC]/40'
+                    }`}
+                  >
+                    <p className="font-semibold text-slate-900 dark:text-[#F4F7FB] text-base mb-1">
+                      {item.title}
+                    </p>
+                    <p className="text-xs text-slate-600 dark:text-[#A9B8CA]">{item.desc}</p>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* STEP 2: Interests */}
+          {currentStep === 2 && (
+            <div className="w-full mb-8">
+              <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
+                What subjects or areas excite you most?
+              </h1>
+
+              <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                {/* Option 1: Commerce & Corporate Finance */}
+                <div
+                  onClick={() => toggleInterest('commerce-finance')}
+                  className={`group relative p-6 rounded-2xl border transition-all duration-200 cursor-pointer flex flex-col justify-between select-none ${
+                    selectedInterests.includes('commerce-finance')
+                      ? 'bg-blue-50/70 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
+                      : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/15 hover:border-[#007DCC]/40'
+                  }`}
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="p-3 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-[#007DCC] dark:text-[#86cfff]">
+                      <TrendingUp className="w-6 h-6" />
+                    </div>
+                    {selectedInterests.includes('commerce-finance') && (
+                      <span className="p-1 rounded-full bg-[#007DCC] text-white">
+                        <Check className="w-4 h-4" />
+                      </span>
+                    )}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-[#F4F7FB] mb-1">
+                      Commerce, CA & Corporate Finance
+                    </h3>
+                    <p className="text-xs text-slate-600 dark:text-[#A9B8CA] leading-relaxed">
+                      Financial accounting, tax laws, audit compliance, stock markets, and CA synchronization.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Option 2: Business Management */}
+                <div
+                  onClick={() => toggleInterest('management-bms')}
+                  className={`group relative p-6 rounded-2xl border transition-all duration-200 cursor-pointer flex flex-col justify-between select-none ${
+                    selectedInterests.includes('management-bms')
+                      ? 'bg-blue-50/70 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
+                      : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/15 hover:border-[#007DCC]/40'
+                  }`}
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="p-3 rounded-xl bg-[#007DCC]/10 text-[#007DCC] dark:text-[#86cfff]">
+                      <Briefcase className="w-6 h-6" />
+                    </div>
+                    {selectedInterests.includes('management-bms') && (
+                      <span className="p-1 rounded-full bg-[#007DCC] text-white">
+                        <Check className="w-4 h-4" />
+                      </span>
+                    )}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-[#F4F7FB] mb-1">
+                      Business Management & BMS
+                    </h3>
+                    <p className="text-xs text-slate-600 dark:text-[#A9B8CA] leading-relaxed">
+                      Marketing strategies, corporate operations, HR management, entrepreneurship, and leadership.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Option 3: Tech & Coding */}
+                <div
+                  onClick={() => toggleInterest('tech-coding')}
+                  className={`group relative p-6 rounded-2xl border transition-all duration-200 cursor-pointer flex flex-col justify-between select-none ${
+                    selectedInterests.includes('tech-coding')
+                      ? 'bg-blue-50/70 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
+                      : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/15 hover:border-[#007DCC]/40'
+                  }`}
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="p-3 rounded-xl bg-[#007DCC]/10 text-[#007DCC] dark:text-[#86cfff]">
+                      <Code className="w-6 h-6" />
+                    </div>
+                    {selectedInterests.includes('tech-coding') && (
+                      <span className="p-1 rounded-full bg-[#007DCC] text-white">
+                        <Check className="w-4 h-4" />
+                      </span>
+                    )}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-[#F4F7FB] mb-1">
+                      Technology, B.Sc IT & Analytics
+                    </h3>
+                    <p className="text-xs text-slate-600 dark:text-[#A9B8CA] leading-relaxed">
+                      Software engineering, data science, web development, cloud computing, and IT infrastructure.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Option 4: Design & Media */}
+                <div
+                  onClick={() => toggleInterest('design-media')}
+                  className={`group relative p-6 rounded-2xl border transition-all duration-200 cursor-pointer flex flex-col justify-between select-none ${
+                    selectedInterests.includes('design-media')
+                      ? 'bg-blue-50/70 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
+                      : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/15 hover:border-[#007DCC]/40'
+                  }`}
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="p-3 rounded-xl bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-[#D3B5E8]">
+                      <Palette className="w-6 h-6" />
+                    </div>
+                    {selectedInterests.includes('design-media') && (
+                      <span className="p-1 rounded-full bg-[#007DCC] text-white">
+                        <Check className="w-4 h-4" />
+                      </span>
+                    )}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-[#F4F7FB] mb-1">
+                      Media, BMM & Creative Arts
+                    </h3>
+                    <p className="text-xs text-slate-600 dark:text-[#A9B8CA] leading-relaxed">
+                      Journalism, public relations, advertising production, digital media, and film studies.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* STEP 3: Commute & Location */}
+          {currentStep === 3 && (
+            <div className="w-full mb-8">
+              <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
+                What is your preferred Mumbai commute line?
+              </h1>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+                {[
+                  {
+                    id: 'western',
+                    title: 'Western Railway Line',
+                    desc: 'Churchgate, Marine Lines, Charni Road, Dadar, Vile Parle, Borivali',
+                  },
+                  {
+                    id: 'central',
+                    title: 'Central Railway Line',
+                    desc: 'CSMT, Dadar, Matunga, Kurla, Ghatkopar, Thane',
+                  },
+                  {
+                    id: 'south-mumbai',
+                    title: 'South Mumbai Core Hubs',
+                    desc: 'Direct walkability to Churchgate, Marine Drive & Fort audit firms',
+                  },
+                ].map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => setCommuteLine(item.id)}
+                    className={`p-5 rounded-2xl border text-left transition-all ${
+                      commuteLine === item.id
+                        ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
+                        : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/10 hover:border-[#007DCC]/40'
+                    }`}
+                  >
+                    <p className="font-semibold text-slate-900 dark:text-[#F4F7FB] text-base mb-1">
+                      {item.title}
+                    </p>
+                    <p className="text-xs text-slate-600 dark:text-[#A9B8CA]">{item.desc}</p>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* STEP 4: Key Priorities */}
+          {currentStep === 4 && (
+            <div className="w-full mb-8">
+              <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
+                What is your top priority for college decision?
+              </h1>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+                {[
+                  {
+                    id: 'ca-flexibility',
+                    title: 'Early Morning Shift / CA Articleship Sync',
+                    desc: 'Lectures ending by 10:15 AM so you can commute to Big 4 audit firms in BKC / South Mumbai',
+                  },
+                  {
+                    id: 'placements',
+                    title: 'Corporate Campus Placements & Industry Tie-ups',
+                    desc: 'Strong campus recruitment, high average CTC, and active placement cell',
+                  },
+                  {
+                    id: 'brand',
+                    title: 'Legacy Brand & Autonomous Excellence',
+                    desc: 'Top cutoffs, prestigious alumni network, and autonomous syllabus flexibility',
+                  },
+                  {
+                    id: 'fest',
+                    title: 'Extracurricular Exposure & College Culture',
+                    desc: 'Vibrant fest culture (Umang, Malhar, Kiran) and student organization leadership',
+                  },
+                ].map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => setPriority(item.id)}
+                    className={`p-5 rounded-2xl border text-left transition-all ${
+                      priority === item.id
+                        ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
+                        : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/10 hover:border-[#007DCC]/40'
+                    }`}
+                  >
+                    <p className="font-semibold text-slate-900 dark:text-[#F4F7FB] text-base mb-1">
+                      {item.title}
+                    </p>
+                    <p className="text-xs text-slate-600 dark:text-[#A9B8CA]">{item.desc}</p>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* STEP 5: CALCULATING LOADER */}
+          {isCalculating && (
+            <div className="py-16 text-center">
+              <PencilLoader
+                size="large"
+                variant="spin"
+                message="Matching your choices with 10,000+ Mumbai admission data points..."
+              />
+            </div>
+          )}
+
+          {/* STEP 5: RECOMMENDATION RESULTS */}
+          {!isCalculating && currentStep === 5 && (
+            <div className="w-full text-left animate-fade-in">
+              <div className="mb-8">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-[#51dcbc] text-xs font-bold uppercase tracking-wider mb-2">
+                  <CheckCircle2 className="w-4 h-4" />
+                  <span>Personalized Recommendation Ready</span>
+                </span>
+                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight">
+                  Recommended Colleges For You
+                </h1>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                {matchedColleges.map((col) => (
+                  <div
+                    key={col.id}
+                    className="p-6 rounded-3xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 shadow-md flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-3">
+                        <span className="px-3 py-1 rounded-full bg-[#007DCC]/10 text-[#007DCC] dark:text-[#86cfff] text-xs font-bold">
+                          {col.matchRate} Match
+                        </span>
+                        <span className="text-xs font-semibold text-slate-500 dark:text-[#A9B8CA]">
+                          {col.badge}
+                        </span>
+                      </div>
+                      <h2 className="text-xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">
+                        {col.name}
+                      </h2>
+                      <p className="text-xs font-medium text-slate-500 dark:text-[#71839A] mb-4">
+                        {col.location}
+                      </p>
+                      <p className="text-sm text-slate-600 dark:text-[#A9B8CA] leading-relaxed mb-6">
+                        {col.desc}
+                      </p>
+                    </div>
+
+                    <button
+                      onClick={() => onSelectCollege(col.id)}
+                      className="w-full py-3 bg-[#007DCC] hover:bg-[#006cb0] text-white font-bold text-sm rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+                    >
+                      <span>{col.actionText}</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex items-center justify-between pt-6 border-t border-slate-200 dark:border-white/10">
+                <button
+                  onClick={() => setCurrentStep(1)}
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-200 dark:bg-white/10 text-slate-700 dark:text-[#F4F7FB] font-bold text-sm hover:bg-slate-300 dark:hover:bg-white/20 transition-all"
+                >
+                  <RotateCcw className="w-4 h-4" />
+                  <span>Restart Wizard</span>
+                </button>
+                <button
+                  onClick={() => onNavigate('/')}
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] text-white font-bold text-sm hover:bg-[#006cb0] transition-all"
+                >
+                  <span>Return to Home</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Bottom Action Bar for Steps 1 - 4 */}
+          {currentStep <= 4 && !isCalculating && (
+            <div className="flex items-center justify-between pt-6 border-t border-slate-200 dark:border-white/10">
               <button
                 type="button"
-                onClick={() => {
-                  setCurrentStep(1);
-                  setActiveTab('wizard');
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className="px-5 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white font-bold text-xs sm:text-sm whitespace-nowrap flex items-center justify-center gap-2 transition-all shadow-xs shrink-0"
+                onClick={handleBack}
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] font-semibold text-sm transition-all"
               >
-                <span>Launch Matching Wizard</span>
+                <ArrowLeft className="w-4 h-4" />
+                <span>{currentStep === 1 ? 'Exit to Home' : 'Previous Step'}</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={handleNext}
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white font-bold text-sm shadow-md transition-all active:scale-95"
+              >
+                <span>{currentStep === 4 ? 'Generate Recommendation' : 'Next Step'}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
-          </div>
-        )}
-
-        {/* VIEW 2: HELP ME DECIDE WIZARD (Free responsive layout, left-aligned) */}
-        {activeTab === 'wizard' && (
-          <div ref={stepContainerRef} className="w-full flex flex-col text-left">
-            {/* Step Indicator & Progress */}
-            {currentStep <= 4 && (
-              <div className="w-full mb-8">
-                <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-[#A9B8CA] mb-3">
-                  <span className="text-[#007DCC] dark:text-[#86cfff] flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#007DCC]" />
-                    STEP {currentStep} OF 4 •{' '}
-                    {currentStep === 1
-                      ? 'YOUR CURRENT STAGE'
-                      : currentStep === 2
-                      ? 'YOUR AREA OF INTEREST'
-                      : currentStep === 3
-                      ? 'COMMUTE & LOCATION'
-                      : 'KEY PRIORITIES'}
-                  </span>
-                  <span>{progressPercent}% Complete</span>
-                </div>
-                {/* Progress Track */}
-                <div className="w-full h-1.5 bg-slate-200 dark:bg-[#161c27] rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-[#007DCC] to-[#19A7E8] transition-all duration-300 rounded-full"
-                    style={{ width: `${progressPercent}%` }}
-                  />
-                </div>
-              </div>
-            )}
-
-            {/* STEP 1: Academic Stage */}
-            {currentStep === 1 && (
-              <div className="w-full mb-8">
-                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
-                  What is your current academic stage?
-                </h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-                  {[
-                    {
-                      id: 'class10',
-                      title: 'Class 10th Passed / Junior College Aspirant',
-                      desc: 'Exploring FYJC admissions across Mumbai junior colleges (Hinduja, Podar, Mithibai, HR)',
-                    },
-                    {
-                      id: 'class12-commerce',
-                      title: 'Class 12th Commerce',
-                      desc: 'Targeting B.Com, BAF, BMS, BFM degree courses and professional certifications',
-                    },
-                    {
-                      id: 'class12-science',
-                      title: 'Class 12th Science',
-                      desc: 'Targeting B.Sc IT, Data Science, or Engineering tracks in Powai / Suburban hubs',
-                    },
-                    {
-                      id: 'undergrad',
-                      title: 'Currently in Undergraduate Degree',
-                      desc: 'Looking for BFSI corporate internships in BKC & Nariman Point, plus career pathways',
-                    },
-                  ].map((item) => (
-                    <button
-                      key={item.id}
-                      type="button"
-                      onClick={() => setStage(item.id)}
-                      className={`p-5 rounded-2xl border text-left transition-all ${
-                        stage === item.id
-                          ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
-                          : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/10 hover:border-[#007DCC]/40'
-                      }`}
-                    >
-                      <p className="font-semibold text-slate-900 dark:text-[#F4F7FB] text-base mb-1">
-                        {item.title}
-                      </p>
-                      <p className="text-xs text-slate-600 dark:text-[#A9B8CA]">{item.desc}</p>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* STEP 2: Interests */}
-            {currentStep === 2 && (
-              <div className="w-full mb-8">
-                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
-                  What subjects or areas excite you most?
-                </h1>
-
-                <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                  {/* Option 1: Commerce & Corporate Finance */}
-                  <div
-                    onClick={() => toggleInterest('commerce-finance')}
-                    className={`group relative p-6 rounded-2xl border transition-all duration-200 cursor-pointer flex flex-col justify-between select-none ${
-                      selectedInterests.includes('commerce-finance')
-                        ? 'bg-blue-50/70 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
-                        : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/15 hover:border-[#007DCC]/40'
-                    }`}
-                  >
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-[#242a36] flex items-center justify-center text-[#007DCC] dark:text-[#9ccaff]">
-                          <TrendingUp className="w-5 h-5" />
-                        </div>
-                        {selectedInterests.includes('commerce-finance') && (
-                          <span className="w-5 h-5 rounded-full bg-[#007DCC] flex items-center justify-center text-white">
-                            <CheckCircle2 className="w-4 h-4" />
-                          </span>
-                        )}
-                      </div>
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-[#F4F7FB] mb-1">
-                        Commerce & Corporate Finance
-                      </h3>
-                      <p className="text-xs sm:text-sm text-slate-600 dark:text-[#A9B8CA] leading-relaxed">
-                        Accounting, capital markets, investment banking, CA pathways
-                      </p>
-                    </div>
-                    <div className="mt-6 pt-4 border-t border-slate-200 dark:border-[#D3B5E8]/10 flex items-center gap-1.5 text-xs text-slate-500 dark:text-[#8a919c]">
-                      <Building2 className="w-3.5 h-3.5 text-[#007DCC] dark:text-[#86cfff]" />
-                      <span>Key Hub: Nariman Point & Fort</span>
-                    </div>
-                  </div>
-
-                  {/* Option 2: Management & Entrepreneurship */}
-                  <div
-                    onClick={() => toggleInterest('management')}
-                    className={`group relative p-6 rounded-2xl border transition-all duration-200 cursor-pointer flex flex-col justify-between select-none ${
-                      selectedInterests.includes('management')
-                        ? 'bg-blue-50/70 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
-                        : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/15 hover:border-[#007DCC]/40'
-                    }`}
-                  >
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-[#242a36] flex items-center justify-center text-[#007DCC] dark:text-[#9ccaff]">
-                          <Briefcase className="w-5 h-5" />
-                        </div>
-                        {selectedInterests.includes('management') && (
-                          <span className="w-5 h-5 rounded-full bg-[#007DCC] flex items-center justify-center text-white">
-                            <CheckCircle2 className="w-4 h-4" />
-                          </span>
-                        )}
-                      </div>
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-[#F4F7FB] mb-1">
-                        Management & Entrepreneurship
-                      </h3>
-                      <p className="text-xs sm:text-sm text-slate-600 dark:text-[#A9B8CA] leading-relaxed">
-                        BMS, BBA, marketing, operations, startup ventures
-                      </p>
-                    </div>
-                    <div className="mt-6 pt-4 border-t border-slate-200 dark:border-[#D3B5E8]/10 flex items-center gap-1.5 text-xs text-slate-500 dark:text-[#8a919c]">
-                      <Building className="w-3.5 h-3.5 text-[#007DCC] dark:text-[#86cfff]" />
-                      <span>Key Hub: BKC & Lower Parel</span>
-                    </div>
-                  </div>
-
-                  {/* Option 3: Technology & Computer Science */}
-                  <div
-                    onClick={() => toggleInterest('tech-cs')}
-                    className={`group relative p-6 rounded-2xl border transition-all duration-200 cursor-pointer flex flex-col justify-between select-none ${
-                      selectedInterests.includes('tech-cs')
-                        ? 'bg-blue-50/70 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
-                        : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/15 hover:border-[#007DCC]/40'
-                    }`}
-                  >
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-[#242a36] flex items-center justify-center text-[#007DCC] dark:text-[#9ccaff]">
-                          <Code className="w-5 h-5" />
-                        </div>
-                        {selectedInterests.includes('tech-cs') && (
-                          <span className="w-5 h-5 rounded-full bg-[#007DCC] flex items-center justify-center text-white">
-                            <CheckCircle2 className="w-4 h-4" />
-                          </span>
-                        )}
-                      </div>
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-[#F4F7FB] mb-1">
-                        Technology & Computer Science
-                      </h3>
-                      <p className="text-xs sm:text-sm text-slate-600 dark:text-[#A9B8CA] leading-relaxed">
-                        B.Sc IT, engineering, software dev, data analytics
-                      </p>
-                    </div>
-                    <div className="mt-6 pt-4 border-t border-slate-200 dark:border-[#D3B5E8]/10 flex items-center gap-1.5 text-xs text-slate-500 dark:text-[#8a919c]">
-                      <Terminal className="w-3.5 h-3.5 text-[#007DCC] dark:text-[#86cfff]" />
-                      <span>Key Hub: Powai & Navi Mumbai</span>
-                    </div>
-                  </div>
-
-                  {/* Option 4: Media, Law & Creative Arts */}
-                  <div
-                    onClick={() => toggleInterest('media-law')}
-                    className={`group relative p-6 rounded-2xl border transition-all duration-200 cursor-pointer flex flex-col justify-between select-none ${
-                      selectedInterests.includes('media-law')
-                        ? 'bg-blue-50/70 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
-                        : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/15 hover:border-[#007DCC]/40'
-                    }`}
-                  >
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-[#242a36] flex items-center justify-center text-[#007DCC] dark:text-[#9ccaff]">
-                          <Palette className="w-5 h-5" />
-                        </div>
-                        {selectedInterests.includes('media-law') && (
-                          <span className="w-5 h-5 rounded-full bg-[#007DCC] flex items-center justify-center text-white">
-                            <CheckCircle2 className="w-4 h-4" />
-                          </span>
-                        )}
-                      </div>
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-[#F4F7FB] mb-1">
-                        Media, Law & Creative Arts
-                      </h3>
-                      <p className="text-xs sm:text-sm text-slate-600 dark:text-[#A9B8CA] leading-relaxed">
-                        BAMMC, mass media, corporate law, design, journalism
-                      </p>
-                    </div>
-                    <div className="mt-6 pt-4 border-t border-slate-200 dark:border-[#D3B5E8]/10 flex items-center gap-1.5 text-xs text-slate-500 dark:text-[#8a919c]">
-                      <Camera className="w-3.5 h-3.5 text-[#007DCC] dark:text-[#86cfff]" />
-                      <span>Key Hub: Bandra & Churchgate</span>
-                    </div>
-                  </div>
-                </div>
-
-
-              </div>
-            )}
-
-            {/* STEP 3: Commute Line */}
-            {currentStep === 3 && (
-              <div className="w-full mb-8">
-                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
-                  Where in Mumbai do you live or commute from?
-                </h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-                  {[
-                    {
-                      id: 'western',
-                      title: 'Western Line (Borivali to Churchgate)',
-                      desc: 'Ideal for Mithibai (Vile Parle), NM College, Hinduja (Charni Road), H.R. (Churchgate), Jai Hind',
-                    },
-                    {
-                      id: 'central',
-                      title: 'Central Main Line (Thane / Kalyan to CST)',
-                      desc: 'Direct access to R.A. Podar (Matunga), Ruia, Somaiya (Vidyavihar), and CST colleges',
-                    },
-                    {
-                      id: 'harbour',
-                      title: 'Harbour / Navi Mumbai (Vashi to Panvel)',
-                      desc: 'Easy reach to SIES (Nerul), Chembur, and CST via Harbour branch',
-                    },
-                    {
-                      id: 'south-mumbai',
-                      title: 'South Mumbai Resident',
-                      desc: 'Direct Charni Road, Churchgate, and Marine Lines institutional access',
-                    },
-                  ].map((item) => (
-                    <button
-                      key={item.id}
-                      type="button"
-                      onClick={() => setCommuteLine(item.id)}
-                      className={`p-5 rounded-2xl border text-left transition-all ${
-                        commuteLine === item.id
-                          ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
-                          : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/10 hover:border-[#007DCC]/40'
-                      }`}
-                    >
-                      <div className="flex items-center gap-2 mb-1">
-                        <Train className="w-4 h-4 text-[#007DCC] dark:text-[#51dcbc]" />
-                        <p className="font-semibold text-slate-900 dark:text-[#F4F7FB] text-base">{item.title}</p>
-                      </div>
-                      <p className="text-xs text-slate-600 dark:text-[#A9B8CA]">{item.desc}</p>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* STEP 4: Key Priorities */}
-            {currentStep === 4 && (
-              <div className="w-full mb-8">
-                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
-                  What matters most to you in a college?
-                </h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-                  {[
-                    {
-                      id: 'ca-flexibility',
-                      title: 'CA / Professional Articleship Flexibility',
-                      desc: 'Requires early morning lectures (ending by 10:15–10:30 AM) and lenient articleship attendance like at Hinduja and H.R.',
-                    },
-                    {
-                      id: 'placements',
-                      title: 'High Corporate Placements & Big 4 Recruitment',
-                      desc: 'Prioritizes campuses with top brand recall among Big 4 audit and global consulting firms.',
-                    },
-                    {
-                      id: 'commute-saving',
-                      title: 'Shortest Commute (<30 mins)',
-                      desc: 'Keeps travel minimal on Suburban rail to preserve daily study bandwidth and mental energy.',
-                    },
-                    {
-                      id: 'campus-culture',
-                      title: 'Extracurriculars & Festival Culture',
-                      desc: 'Famous college fests (Malhar, Umang, Kiran), debating societies, and student leadership networks.',
-                    },
-                  ].map((item) => (
-                    <button
-                      key={item.id}
-                      type="button"
-                      onClick={() => setPriority(item.id)}
-                      className={`p-5 rounded-2xl border text-left transition-all ${
-                        priority === item.id
-                          ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
-                          : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/10 hover:border-[#007DCC]/40'
-                      }`}
-                    >
-                      <p className="font-semibold text-slate-900 dark:text-[#F4F7FB] text-base mb-1">{item.title}</p>
-                      <p className="text-xs text-slate-600 dark:text-[#A9B8CA]">{item.desc}</p>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Calculating State */}
-            {isCalculating && (
-              <div className="w-full py-20 flex flex-col items-center justify-center">
-                <PencilLoader size="medium" variant="write" message="Putting your options together..." />
-              </div>
-            )}
-
-            {/* STEP 5: Outcome Recommendations */}
-            {currentStep === 5 && !isCalculating && (
-              <div className="w-full py-4 text-left">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-[#007DCC]/20 text-[#007DCC] dark:text-[#9ccaff] text-xs font-bold uppercase tracking-wider mb-3">
-                  <Sparkles className="w-4 h-4" />
-                  <span>Recommendation Results</span>
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-[#F4F7FB] mb-8">
-                  Your Recommendations
-                </h2>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left mb-8">
-                  {matchedColleges.map((col) => (
-                    <div
-                      key={col.id}
-                      className="p-6 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-[#D3B5E8]/15 hover:border-[#007DCC] transition-all flex flex-col justify-between shadow-2xs"
-                    >
-                      <div>
-                        <span className="text-[11px] font-bold text-[#007DCC] dark:text-[#51dcbc] uppercase tracking-wider block">
-                          {col.matchRate} Match • {col.badge}
-                        </span>
-                        <h3 className="text-xl font-bold text-slate-900 dark:text-[#F4F7FB] mt-1 mb-1">
-                          {col.name}
-                        </h3>
-                        <p className="text-xs text-slate-500 dark:text-[#A9B8CA] mb-3 flex items-center gap-1">
-                          <MapPin className="w-3.5 h-3.5 text-[#007DCC]" />
-                          <span>{col.location}</span>
-                        </p>
-                        <p className="text-xs sm:text-sm text-slate-600 dark:text-[#A9B8CA] leading-relaxed">
-                          {col.desc}
-                        </p>
-                      </div>
-                      <button
-                        type="button"
-                        onClick={() => onSelectCollege(col.id)}
-                        className="mt-6 w-full py-2.5 rounded-xl bg-[#007DCC] text-white font-bold text-sm hover:bg-[#19A7E8] transition-colors flex items-center justify-center gap-2"
-                      >
-                        <span>{col.actionText}</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex flex-wrap items-center gap-3">
-                  <button
-                    type="button"
-                    onClick={() => setCurrentStep(1)}
-                    className="px-5 py-2.5 rounded-xl bg-white dark:bg-[#161c27] hover:bg-slate-100 dark:hover:bg-[#1a202b] text-slate-700 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-[#F4F7FB] text-xs sm:text-sm font-semibold transition-colors flex items-center gap-2 border border-slate-200 dark:border-white/10"
-                  >
-                    <RotateCcw className="w-4 h-4" />
-                    <span>Retake Quiz (Step 1)</span>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => setActiveTab('roadmap')}
-                    className="px-5 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs sm:text-sm font-bold transition-colors flex items-center gap-2"
-                  >
-                    <Compass className="w-4 h-4" />
-                    <span>View Career Roadmap</span>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => onNavigate('search')}
-                    className="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-[#242a36] dark:hover:bg-[#2f3541] text-slate-800 dark:text-white text-xs sm:text-sm font-bold transition-colors flex items-center gap-2"
-                  >
-                    <span>View All Search Results</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {/* Wizard Bottom Navigation Bar */}
-            {currentStep <= 4 && (
-              <div className="w-full flex items-center justify-between pt-6 border-t border-slate-200 dark:border-[#D3B5E8]/15 mt-6">
-                <button
-                  type="button"
-                  onClick={handleBack}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-slate-500 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors"
-                >
-                  <ArrowLeft className="w-4 h-4" />
-                  <span>{currentStep === 1 ? 'Exit to Home' : 'Back'}</span>
-                </button>
-
-                <div className="flex items-center gap-4">
-                  {currentStep === 2 && (
-                    <span className="text-xs text-slate-500 dark:text-[#8a919c] font-medium hidden sm:inline">
-                      {selectedInterests.length} of 2 selected
-                    </span>
-                  )}
-                  <button
-                    type="button"
-                    onClick={handleNext}
-                    disabled={currentStep === 2 && selectedInterests.length === 0}
-                    className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold transition-all shadow-md active:scale-95 ${
-                      currentStep === 2 && selectedInterests.length === 0
-                        ? 'bg-slate-200 dark:bg-[#161c27] text-slate-400 dark:text-[#8a919c] cursor-not-allowed'
-                        : 'bg-[#007DCC] hover:bg-[#006cb0] text-white'
-                    }`}
-                  >
-                    <span>Continue</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </main>
   );

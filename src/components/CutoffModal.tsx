@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { X, Search, ArrowRight, Activity, SlidersHorizontal } from 'lucide-react';
+import { X, Search, ArrowRight, ArrowLeft, Activity, SlidersHorizontal, GraduationCap, CheckCircle2, RotateCcw, MapPin } from 'lucide-react';
 import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
 import { PercentageDial } from './PercentageDial';
 
@@ -11,35 +11,43 @@ interface CutoffModalProps {
 
 // Education levels supported by the current dataset
 const EDUCATION_LEVELS = [
-  { id: '12th', label: '12th / FYJC', hasData: true },
-  { id: '10th', label: '10th', hasData: false },
-  { id: 'jee', label: 'JEE', hasData: false },
-  { id: 'law3', label: 'Law 3-Year', hasData: false },
-  { id: 'law5', label: 'Law 5-Year', hasData: false },
+  { id: '12th', label: '12th / FYJC', hasData: true, desc: 'First Year Junior College (Class 11/12) cutoffs across Mumbai' },
+  { id: '10th', label: '10th / SSC', hasData: false, desc: 'Secondary School Certificate cutoffs (Data Coming Soon)' },
+  { id: 'jee', label: 'JEE Main / Engineering', hasData: false, desc: 'Engineering degree admission cutoffs (Data Coming Soon)' },
+  { id: 'law3', label: 'Law 3-Year (MH CET)', hasData: false, desc: 'LLB 3-Year degree cutoffs (Data Coming Soon)' },
+  { id: 'law5', label: 'Law 5-Year (MH CET)', hasData: false, desc: 'Integrated LLB 5-Year cutoffs (Data Coming Soon)' },
 ];
 
 const STREAMS = ['All Streams', 'Arts', 'Commerce', 'Science'];
+const MUMBAI_REGIONS = [
+  'All Mumbai',
+  'South Mumbai',
+  'Western Suburbs',
+  'Central Suburbs',
+  'Eastern Suburbs',
+  'Harbour / Central-East',
+];
 const CATEGORIES = ['General'];
 const YEARS = ['2026-27'];
-
-
 
 interface Filters {
   searchQuery: string;
   educationLevel: string;
   stream: string;
+  region: string;
   category: string;
   year: string;
-  percentageExact: string; // exact % string or ''
+  percentageExact: string;
 }
 
 const DEFAULT_FILTERS: Filters = {
   searchQuery: '',
   educationLevel: '12th',
   stream: 'All Streams',
+  region: 'All Mumbai',
   category: 'General',
   year: '2026-27',
-  percentageExact: '',
+  percentageExact: '85',
 };
 
 export const CutoffModal: React.FC<CutoffModalProps> = ({
@@ -47,87 +55,100 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
   onClose,
   onSelectCollege,
 }) => {
-  // PENDING — what the user is selecting right now
+  // Wizard Step: 1 = Education Level, 2 = Percentage Dial, 3 = Stream & Region, 4 = Results
+  const [step, setStep] = useState<number>(1);
   const [pending, setPending] = useState<Filters>(DEFAULT_FILTERS);
-  // APPLIED — what the results actually use (only updated on Apply)
   const [applied, setApplied] = useState<Filters>(DEFAULT_FILTERS);
   const [sortBy, setSortBy] = useState('Highest cutoff');
-  const [filtersOpen, setFiltersOpen] = useState(false);
-  const [showManualInput, setShowManualInput] = useState(false);
-
   const searchInputRef = useRef<HTMLInputElement>(null);
 
-  // Reset everything when modal opens
+  // Reset wizard when modal opens
   useEffect(() => {
     if (isOpen) {
+      setStep(1);
       setPending(DEFAULT_FILTERS);
       setApplied(DEFAULT_FILTERS);
       setSortBy('Highest cutoff');
-      setTimeout(() => searchInputRef.current?.focus(), 100);
     }
   }, [isOpen]);
 
-  // Keyboard shortcut Ctrl+K focuses search
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'k' && (e.ctrlKey || e.metaKey)) {
-        e.preventDefault();
-        searchInputRef.current?.focus();
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  // Helpers to update pending state
   const setPendingField = <K extends keyof Filters>(key: K, value: Filters[K]) => {
     setPending((prev) => ({ ...prev, [key]: value }));
   };
 
+  const dialValue = parseFloat(pending.percentageExact) || 85;
 
-
-  // Apply pending → applied
   const handleApply = () => {
     setApplied({ ...pending });
-    setFiltersOpen(false);
+    setStep(4);
   };
 
-  // Clear: reset pending only; user must then Apply to clear results
-  const handleClear = () => {
-    setPending(DEFAULT_FILTERS);
-  };
-
-  // Check if pending differs from applied (to show "pending changes" indicator)
-  const hasPendingChanges = JSON.stringify(pending) !== JSON.stringify(applied);
-
-  // Derive the active percentage range from applied filters
-  const getPercentageBounds = (f: Filters): { min: number; max: number } | null => {
-    if (f.percentageExact) {
-      const val = parseFloat(f.percentageExact);
-      if (!isNaN(val)) return { min: val, max: 100 };
+  // Region mapper for cutoff records
+  const getCollegeRegion = (collegeName: string): string => {
+    const name = collegeName.toUpperCase();
+    if (
+      name.includes("XAVIER") ||
+      name.includes("H.R.") ||
+      name.includes("JAI HIND") ||
+      name.includes("HINDUJA") ||
+      name.includes("FORT") ||
+      name.includes("CHURCHGATE") ||
+      name.includes("CHARNI ROAD") ||
+      name.includes("MARINE") ||
+      name.includes("SYDENHAM") ||
+      name.includes("ELPHINSTONE") ||
+      name.includes("WILSON")
+    ) {
+      return 'South Mumbai';
     }
-    return null;
+    if (
+      name.includes("MITHIBAI") ||
+      name.includes("N.M.") ||
+      name.includes("NARSEE") ||
+      name.includes("SVKM") ||
+      name.includes("ANDHERI") ||
+      name.includes("PARLE") ||
+      name.includes("MALAD") ||
+      name.includes("BORIVALI") ||
+      name.includes("BANDRA") ||
+      name.includes("KANDIVALI") ||
+      name.includes("GOREGAON") ||
+      name.includes("SANTACRUZ") ||
+      name.includes("BHAVAN")
+    ) {
+      return 'Western Suburbs';
+    }
+    if (
+      name.includes("PODAR") ||
+      name.includes("MATUNGA") ||
+      name.includes("DADAR") ||
+      name.includes("SIES") ||
+      name.includes("RUPAREL") ||
+      name.includes("KHALSA") ||
+      name.includes("VIDYALANKAR")
+    ) {
+      return 'Central Suburbs';
+    }
+    if (
+      name.includes("GHATKOPAR") ||
+      name.includes("MULUND") ||
+      name.includes("BHANDUP") ||
+      name.includes("VIKHROLI") ||
+      name.includes("SOMAIYA")
+    ) {
+      return 'Eastern Suburbs';
+    }
+    if (name.includes("CHEMBUR") || name.includes("VASHI") || name.includes("BELAPUR")) {
+      return 'Harbour / Central-East';
+    }
+    return 'All Mumbai'; // Default fallback for unmapped records
   };
 
-  const getActiveRange = (valStr: string) => {
-    const val = parseFloat(valStr);
-    if (isNaN(val)) return null;
-    if (val < 50) return '< 50%';
-    if (val < 60) return '50–60%';
-    if (val < 70) return '60–70%';
-    if (val < 80) return '70–80%';
-    if (val < 90) return '80–90%';
-    return '90–100%';
-  };
-
-  const activeRange = getActiveRange(pending.percentageExact);
-
-  // Results use APPLIED filters only
+  // Filter colleges based on APPLIED filters
   const filteredColleges = useMemo(() => {
-    // Only FYJC (12th) data is available; other education levels show no results
     if (applied.educationLevel !== '12th') return [];
 
-    const bounds = getPercentageBounds(applied);
+    const userPct = parseFloat(applied.percentageExact);
 
     let result = FYJC_CUTOFFS.filter((c) => {
       const q = applied.searchQuery.toLowerCase().trim();
@@ -142,11 +163,24 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
       const matchesYear = c.year === applied.year;
       const matchesCategory = c.category === applied.category;
 
-      const matchesPct =
-        !bounds ||
-        (c.cutoff >= bounds.min && c.cutoff <= bounds.max);
+      // Region check: if All Mumbai, allow all; else check mapped region or fallback
+      const collegeRegion = getCollegeRegion(c.collegeName);
+      const matchesRegion =
+        applied.region === 'All Mumbai' ||
+        collegeRegion === applied.region ||
+        collegeRegion === 'All Mumbai';
 
-      return matchesSearch && matchesStream && matchesYear && matchesCategory && matchesPct;
+      // Cutoff eligibility check: student qualifies if college cutoff <= student percentage
+      const matchesPct = isNaN(userPct) || c.cutoff <= userPct;
+
+      return (
+        matchesSearch &&
+        matchesStream &&
+        matchesYear &&
+        matchesCategory &&
+        matchesRegion &&
+        matchesPct
+      );
     });
 
     if (sortBy === 'Highest cutoff') {
@@ -160,15 +194,10 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
 
   const displayedColleges = filteredColleges.slice(0, 60);
 
-  const selectedLevel = EDUCATION_LEVELS.find((l) => l.id === pending.educationLevel);
-
   if (!isOpen) return null;
 
-  const filterSelectClass =
-    'w-full bg-white/60 dark:bg-black/30 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-700 dark:text-[#A9B8CA] focus:outline-none focus:border-[#007DCC] focus:ring-2 focus:ring-[#007DCC]/20 transition-all';
-
   return (
-    <div className="fixed inset-0 z-[100] flex items-end md:items-center justify-center p-0 md:p-6">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6">
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-slate-900/60 dark:bg-[#070D18]/80 backdrop-blur-sm"
@@ -176,358 +205,347 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
       />
 
       {/* Modal Container */}
-      <div className="relative w-full h-[92vh] md:h-auto md:max-h-[92vh] md:w-[90vw] md:max-w-5xl bg-white dark:bg-[#0B1623] border border-slate-200 dark:border-white/10 shadow-2xl rounded-t-3xl md:rounded-2xl flex flex-col overflow-hidden text-slate-900 dark:text-[#F4F7FB]">
+      <div className="relative w-full max-w-4xl max-h-[90vh] bg-white dark:bg-[#0B1623] border border-slate-200 dark:border-white/10 shadow-2xl rounded-3xl flex flex-col overflow-hidden text-slate-900 dark:text-[#F4F7FB]">
+        {/* Header */}
+        <div className="shrink-0 px-6 py-4 border-b border-slate-100 dark:border-white/8 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center shrink-0">
+              <Activity className="w-4.5 h-4.5 text-[#007DCC] dark:text-[#86cfff]" />
+            </div>
+            <div>
+              <h2 className="text-lg font-bold leading-tight">Mumbai Cutoff Explorer</h2>
+              <p className="text-xs text-slate-500 dark:text-[#71839A]">
+                {step === 1
+                  ? 'Step 1 of 3: Select Education Level'
+                  : step === 2
+                  ? 'Step 2 of 3: Set Your Percentage'
+                  : step === 3
+                  ? 'Step 3 of 3: Field & Region Filters'
+                  : `Eligible Colleges (${filteredColleges.length})`}
+              </p>
+            </div>
+          </div>
+          <button
+            onClick={onClose}
+            className="p-2 text-slate-400 hover:text-slate-900 dark:text-[#71839A] dark:hover:text-[#F4F7FB] rounded-xl hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
+            aria-label="Close"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
 
-        {/* ── HEADER ── */}
-        <div className="shrink-0 px-5 pt-5 pb-4 md:px-8 md:pt-7 md:pb-5 border-b border-slate-100 dark:border-white/8">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center shrink-0">
-                <Activity className="w-4.5 h-4.5 text-[#007DCC] dark:text-[#86cfff]" />
-              </div>
+        {/* Wizard Body */}
+        <div className="flex-1 overflow-y-auto p-6 text-left">
+          {/* STEP 1: Education Level */}
+          {step === 1 && (
+            <div className="max-w-2xl mx-auto space-y-6">
               <div>
-                <h2 className="text-lg md:text-xl font-bold leading-tight">Cutoffs</h2>
-                <p className="text-xs text-slate-500 dark:text-[#71839A]">
-                  FYJC cutoffs for Mumbai colleges · {applied.year}
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">
+                  Select Education Level
+                </h3>
+                <p className="text-sm text-slate-500 dark:text-[#71839A]">
+                  Choose your target qualification level to check cutoff trends across Mumbai.
                 </p>
               </div>
-            </div>
-            <button
-              onClick={onClose}
-              className="p-2 text-slate-400 hover:text-slate-900 dark:text-[#71839A] dark:hover:text-[#F4F7FB] rounded-xl hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
-              aria-label="Close"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
 
-          {/* ── EDUCATION LEVEL CHIPS ── */}
-          <div className="mb-4">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A] mb-2">
-              Education Level
-            </p>
-            <div className="flex items-center gap-2 flex-wrap">
-              {EDUCATION_LEVELS.map((level) => (
-                <button
-                  key={level.id}
-                  onClick={() => setPendingField('educationLevel', level.id)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                    pending.educationLevel === level.id
-                      ? 'bg-[#007DCC] text-white shadow-sm'
-                      : level.hasData
-                      ? 'bg-slate-100 dark:bg-white/8 text-slate-600 dark:text-[#A9B8CA] hover:bg-slate-200 dark:hover:bg-white/12'
-                      : 'bg-slate-50 dark:bg-white/4 text-slate-400 dark:text-[#4a5568] cursor-default'
-                  }`}
-                  title={!level.hasData ? 'Data not yet available' : undefined}
-                >
-                  {level.label}
-                  {!level.hasData && (
-                    <span className="ml-1.5 text-[9px] opacity-60">soon</span>
-                  )}
-                </button>
-              ))}
-            </div>
-          </div>
+              <div className="space-y-3">
+                {EDUCATION_LEVELS.map((level) => (
+                  <button
+                    key={level.id}
+                    onClick={() => setPendingField('educationLevel', level.id)}
+                    className={`w-full p-4 rounded-2xl border text-left transition-all flex items-center justify-between ${
+                      pending.educationLevel === level.id
+                        ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
+                        : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 hover:border-[#007DCC]/40'
+                    }`}
+                  >
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="font-bold text-base text-slate-900 dark:text-[#F4F7FB]">
+                          {level.label}
+                        </span>
+                        {!level.hasData && (
+                          <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400">
+                            Data Coming Soon
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-xs text-slate-500 dark:text-[#71839A] mt-1">
+                        {level.desc}
+                      </p>
+                    </div>
 
-          {/* ── SEARCH BAR ── */}
-          <div className="relative mb-4">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 dark:text-[#71839A] pointer-events-none" />
-            <input
-              ref={searchInputRef}
-              type="text"
-              value={pending.searchQuery}
-              onChange={(e) => setPendingField('searchQuery', e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && handleApply()}
-              placeholder="Search college name..."
-              className="w-full bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-xl pl-10 pr-4 py-3 text-sm text-slate-900 dark:text-[#F4F7FB] placeholder:text-slate-400 dark:placeholder:text-[#71839A] focus:outline-none focus:border-[#007DCC] focus:ring-2 focus:ring-[#007DCC]/20 transition-all"
-            />
-            <span className="absolute right-3.5 top-1/2 -translate-y-1/2 hidden sm:block text-[10px] font-semibold text-slate-300 dark:text-[#3a4a5a] px-1.5 py-0.5 rounded bg-slate-100 dark:bg-white/5">
-              Enter ↵
-            </span>
-          </div>
-
-          {/* ── MY PERCENTAGE ── */}
-          <div className="mb-6 flex flex-col items-center border-t border-slate-100 dark:border-white/5 pt-6 mt-2">
-            <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-[#F4F7FB] mb-1">Set your percentage</h3>
-            <p className="text-xs sm:text-sm text-slate-500 dark:text-[#A9B8CA] mb-8 text-center max-w-sm">
-              Select your 10th, 12th or Graduation percentage to get more relevant results.
-            </p>
-            
-            <PercentageDial 
-              value={parseFloat(pending.percentageExact) || 0}
-              onChange={(v) => setPendingField('percentageExact', v.toString())}
-            />
-            
-            <div className="w-full max-w-md mt-8">
-              <div className="flex items-center justify-between mb-3 px-1">
-                <p className="text-xs font-bold text-slate-500 dark:text-[#71839A]">Quick select</p>
-                <button 
-                  onClick={() => setShowManualInput(!showManualInput)}
-                  className="text-xs font-semibold text-[#007DCC] dark:text-[#19A7E8] hover:underline"
-                >
-                  {showManualInput ? 'Show ranges' : 'Enter manually'}
-                </button>
-              </div>
-              
-              {showManualInput ? (
-                <div className="flex items-center gap-3 animate-fade-in">
-                  <div className="relative flex-1">
-                    <input
-                      type="number"
-                      min={0}
-                      max={100}
-                      step={0.1}
-                      value={pending.percentageExact}
-                      onChange={(e) => setPendingField('percentageExact', e.target.value)}
-                      placeholder="e.g. 87.4"
-                      className="w-full bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] focus:outline-none focus:border-[#007DCC] transition-all"
-                    />
-                    <span className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 font-bold">%</span>
-                  </div>
-                </div>
-              ) : (
-                <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 animate-fade-in">
-                  {[
-                    { label: '< 50%', val: 45 },
-                    { label: '50–60%', val: 55 },
-                    { label: '60–70%', val: 65 },
-                    { label: '70–80%', val: 75 },
-                    { label: '80–90%', val: 85 },
-                    { label: '90–100%', val: 95 }
-                  ].map(r => (
-                    <button
-                      key={r.label}
-                      onClick={() => setPendingField('percentageExact', r.val.toString())}
-                      className={`px-1 py-2.5 rounded-xl border text-[11px] sm:text-xs font-bold transition-all active:scale-95 ${
-                        activeRange === r.label 
-                          ? 'bg-[#007DCC] border-[#007DCC] text-white shadow-md'
-                          : 'border-slate-200 dark:border-white/10 bg-white dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/50 hover:text-[#007DCC]'
-                      }`}
-                    >
-                      {r.label}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* ── MORE FILTERS (collapsible) ── */}
-          <button
-            onClick={() => setFiltersOpen((v) => !v)}
-            className="flex items-center gap-1.5 text-xs font-semibold text-slate-500 dark:text-[#71839A] hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors mb-1"
-          >
-            <SlidersHorizontal className="w-3.5 h-3.5" />
-            <span>More Filters</span>
-            <span className="text-[10px] ml-0.5 opacity-60">{filtersOpen ? '▲' : '▼'}</span>
-          </button>
-
-          {filtersOpen && (
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 pb-1">
-              {/* Stream */}
-              <div>
-                <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A] mb-1.5">
-                  Stream
-                </label>
-                <select
-                  value={pending.stream}
-                  onChange={(e) => setPendingField('stream', e.target.value)}
-                  className={filterSelectClass}
-                >
-                  {STREAMS.map((s) => (
-                    <option key={s} value={s}>{s}</option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Category */}
-              <div>
-                <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A] mb-1.5">
-                  Category
-                </label>
-                <select
-                  value={pending.category}
-                  onChange={(e) => setPendingField('category', e.target.value)}
-                  className={filterSelectClass}
-                >
-                  {CATEGORIES.map((c) => (
-                    <option key={c} value={c}>{c}</option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Academic Year */}
-              <div>
-                <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A] mb-1.5">
-                  Academic Year
-                </label>
-                <select
-                  value={pending.year}
-                  onChange={(e) => setPendingField('year', e.target.value)}
-                  className={filterSelectClass}
-                >
-                  {YEARS.map((y) => (
-                    <option key={y} value={y}>{y}</option>
-                  ))}
-                </select>
+                    {pending.educationLevel === level.id && (
+                      <CheckCircle2 className="w-5 h-5 text-[#007DCC] dark:text-[#86cfff] shrink-0" />
+                    )}
+                  </button>
+                ))}
               </div>
             </div>
           )}
 
-          {/* ── APPLY / CLEAR ROW ── */}
-          <div className="flex items-center justify-between mt-4 gap-3">
-            <button
-              onClick={handleClear}
-              className="text-xs font-semibold text-slate-500 dark:text-[#71839A] hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors px-2 py-1.5"
-            >
-              Clear All
-            </button>
-
-            <button
-              onClick={handleApply}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all shadow-sm active:scale-[0.98] ${
-                hasPendingChanges
-                  ? 'bg-[#007DCC] hover:bg-[#006cb0] text-white'
-                  : 'bg-slate-100 dark:bg-white/8 text-slate-400 dark:text-[#4a5568] cursor-default'
-              }`}
-              disabled={!hasPendingChanges}
-            >
-              <span>Apply Filters</span>
-              {hasPendingChanges && (
-                <span className="w-2 h-2 rounded-full bg-white/70 animate-pulse" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* ── RESULTS AREA ── */}
-        <div className="flex-1 overflow-y-auto">
-
-          {/* Results meta bar */}
-          <div className="flex items-center justify-between px-5 md:px-8 py-3.5 border-b border-slate-100 dark:border-white/5 sticky top-0 bg-white dark:bg-[#0B1623] z-10">
-            <p className="text-sm text-slate-500 dark:text-[#71839A]">
-              <span className="font-bold text-slate-900 dark:text-[#F4F7FB]">
-                {filteredColleges.length.toLocaleString()}
-              </span>{' '}
-              {applied.educationLevel !== '12th' ? 'results' : 'colleges'}
-              {applied.stream !== 'All Streams' && (
-                <span className="ml-1.5 text-[#007DCC] dark:text-[#86cfff]">· {applied.stream}</span>
-              )}
-              {(applied.percentageExact) && (
-                <span className="ml-1.5 text-[#007DCC] dark:text-[#86cfff]">
-                  · {applied.percentageExact}%+
-                </span>
-              )}
-            </p>
-
-            <div className="flex items-center gap-2">
-              <span className="text-xs text-slate-400 dark:text-[#71839A]">Sort:</span>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="bg-transparent text-xs font-semibold text-slate-700 dark:text-[#F4F7FB] border-0 focus:ring-0 cursor-pointer"
-              >
-                <option value="Highest cutoff">Highest first</option>
-                <option value="Lowest cutoff">Lowest first</option>
-              </select>
-            </div>
-          </div>
-
-          {/* Results list */}
-          <div className="px-5 md:px-8 pb-8">
-            {applied.educationLevel !== '12th' ? (
-              /* No data state for non-FYJC levels */
-              <div className="py-20 flex flex-col items-center justify-center text-center">
-                <div className="w-14 h-14 mb-4 bg-slate-100 dark:bg-white/5 rounded-full flex items-center justify-center">
-                  <Activity className="w-6 h-6 text-slate-300 dark:text-[#3a4a5a]" />
-                </div>
-                <h3 className="text-base font-bold text-slate-700 dark:text-[#A9B8CA] mb-1">
-                  {selectedLevel?.label} cutoff data coming soon
+          {/* STEP 2: Percentage Selector */}
+          {step === 2 && (
+            <div className="max-w-xl mx-auto space-y-6 text-center">
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">
+                  What is your percentage?
                 </h3>
-                <p className="text-sm text-slate-400 dark:text-[#71839A] max-w-xs">
-                  Currently only 12th / FYJC cutoffs are available for Mumbai colleges.
+                <p className="text-sm text-slate-500 dark:text-[#71839A]">
+                  Use the dial or enter your score to view colleges you qualify for ($\le$ your percentage).
                 </p>
               </div>
-            ) : displayedColleges.length > 0 ? (
-              <div className="divide-y divide-slate-100 dark:divide-white/5">
-                {displayedColleges.map((c, index) => (
-                  <div
-                    key={`${c.id}-${index}`}
-                    className="flex items-center justify-between py-4 group hover:bg-slate-50 dark:hover:bg-white/3 -mx-5 md:-mx-8 px-5 md:px-8 transition-colors"
-                  >
-                    {/* College info */}
-                    <div className="flex-1 min-w-0 pr-4">
-                      <h3 className="text-[14px] sm:text-[15px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug mb-1 capitalize">
-                        {c.collegeName.toLowerCase().replace(/\b\w/g, (ch) => ch.toUpperCase())}
-                      </h3>
-                      <div className="flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500 dark:text-[#71839A]">
-                        <span>{c.stream}</span>
-                        <span className="w-0.5 h-0.5 rounded-full bg-current opacity-40" />
-                        <span>{c.category}</span>
-                        <span className="w-0.5 h-0.5 rounded-full bg-current opacity-40" />
-                        <span>{c.year}</span>
-                      </div>
-                    </div>
 
-                    {/* Cutoff % + action */}
-                    <div className="flex items-center gap-3 shrink-0">
-                      <div className="text-right">
-                        <div className="text-xl sm:text-2xl font-black text-[#007DCC] dark:text-[#19A7E8] tracking-tight tabular-nums">
+              {/* Dial Component */}
+              <div className="py-2">
+                <PercentageDial
+                  value={dialValue}
+                  onChange={(val) => setPendingField('percentageExact', String(val))}
+                />
+              </div>
+
+              {/* Direct numeric input & quick presets */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Exact %:</span>
+                  <input
+                    type="number"
+                    min="0"
+                    max="100"
+                    step="0.1"
+                    value={pending.percentageExact}
+                    onChange={(e) => setPendingField('percentageExact', e.target.value)}
+                    className="w-24 px-3 py-2 rounded-xl bg-slate-100 dark:bg-[#0D1828] border border-slate-300 dark:border-white/10 font-bold text-sm text-center focus:outline-none focus:border-[#007DCC]"
+                  />
+                </div>
+
+                <div className="flex items-center gap-2">
+                  {[75, 80, 85, 90, 95].map((pct) => (
+                    <button
+                      key={pct}
+                      onClick={() => setPendingField('percentageExact', String(pct))}
+                      className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                        parseFloat(pending.percentageExact) === pct
+                          ? 'bg-[#007DCC] text-white'
+                          : 'bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-[#A9B8CA] hover:bg-slate-200 dark:hover:bg-white/10'
+                      }`}
+                    >
+                      {pct}%
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* STEP 3: Stream & Mumbai Region */}
+          {step === 3 && (
+            <div className="max-w-2xl mx-auto space-y-6">
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">
+                  Stream & Mumbai Region
+                </h3>
+                <p className="text-sm text-slate-500 dark:text-[#71839A]">
+                  Filter cutoffs by stream and target Mumbai regional zone.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-[#A9B8CA] mb-3">
+                    Academic Stream
+                  </h4>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    {STREAMS.map((s) => (
+                      <button
+                        key={s}
+                        onClick={() => setPendingField('stream', s)}
+                        className={`p-4 rounded-2xl border text-center font-bold text-sm transition-all ${
+                          pending.stream === s
+                            ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
+                            : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                        }`}
+                      >
+                        {s}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-[#A9B8CA] mb-3 flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-[#007DCC]" />
+                    <span>Mumbai Region</span>
+                  </h4>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                    {MUMBAI_REGIONS.map((r) => (
+                      <button
+                        key={r}
+                        onClick={() => setPendingField('region', r)}
+                        className={`p-3 rounded-xl border text-xs font-bold transition-all text-left ${
+                          pending.region === r
+                            ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
+                            : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                        }`}
+                      >
+                        {r}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* STEP 4: Cutoffs Results List */}
+          {step === 4 && (
+            <div className="space-y-6">
+              {/* Search & Sort Bar */}
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="relative w-full sm:w-auto flex-1">
+                  <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                  <input
+                    ref={searchInputRef}
+                    type="text"
+                    placeholder="Search college by name..."
+                    value={pending.searchQuery}
+                    onChange={(e) => {
+                      setPendingField('searchQuery', e.target.value);
+                      setApplied((prev) => ({ ...prev, searchQuery: e.target.value }));
+                    }}
+                    className="w-full pl-10 pr-4 py-2.5 bg-slate-100 dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 rounded-xl text-sm font-medium text-slate-900 dark:text-[#F4F7FB] focus:outline-none focus:border-[#007DCC]"
+                  />
+                </div>
+
+                <div className="flex items-center gap-3 w-full sm:w-auto">
+                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="px-4 py-2.5 bg-slate-100 dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 rounded-xl text-sm font-semibold text-slate-700 dark:text-[#A9B8CA] focus:outline-none"
+                  >
+                    <option value="Highest cutoff">Sort: Highest Cutoff First</option>
+                    <option value="Lowest cutoff">Sort: Lowest Cutoff First</option>
+                  </select>
+
+                  <button
+                    onClick={() => setStep(1)}
+                    className="px-4 py-2.5 bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 rounded-xl text-xs font-bold text-[#007DCC] dark:text-[#86cfff] hover:bg-slate-50 dark:hover:bg-white/5 transition-all flex items-center gap-1.5 shrink-0"
+                  >
+                    <SlidersHorizontal className="w-3.5 h-3.5" />
+                    <span>Modify Filters</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Results Cards */}
+              {displayedColleges.length === 0 ? (
+                <div className="p-12 text-center rounded-2xl bg-slate-50 dark:bg-[#0D1828] border border-slate-200 dark:border-white/10">
+                  <p className="text-base font-bold text-slate-900 dark:text-[#F4F7FB] mb-1">
+                    No matching cutoffs found
+                  </p>
+                  <p className="text-xs text-slate-500 dark:text-[#71839A] mb-4">
+                    Try adjusting your percentage dial or selecting All Mumbai region.
+                  </p>
+                  <button
+                    onClick={() => setStep(1)}
+                    className="px-4 py-2 bg-[#007DCC] text-white text-xs font-bold rounded-xl"
+                  >
+                    Back to Wizard
+                  </button>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {displayedColleges.map((c, idx) => (
+                    <div
+                      key={`${c.collegeName}-${c.stream}-${idx}`}
+                      onClick={() => onSelectCollege(c.collegeSlug || 'mithibai')}
+                      className="p-5 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50 transition-all cursor-pointer flex items-center justify-between gap-4 group shadow-2xs"
+                    >
+                      <div>
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-[#007DCC] dark:text-[#86cfff] text-[10px] font-bold uppercase">
+                            {c.stream}
+                          </span>
+                          <span className="text-[10px] font-medium text-slate-400">
+                            {getCollegeRegion(c.collegeName)}
+                          </span>
+                        </div>
+                        <h4 className="font-bold text-sm sm:text-base text-slate-900 dark:text-[#F4F7FB] group-hover:text-[#007DCC] transition-colors leading-snug">
+                          {c.collegeName}
+                        </h4>
+                        <p className="text-xs text-slate-500 dark:text-[#71839A] mt-1">
+                          Eligible for {applied.percentageExact}% · Code: {c.choiceCode || 'MU00'}
+                        </p>
+                      </div>
+
+                      <div className="text-right shrink-0">
+                        <div className="text-xl sm:text-2xl font-black text-[#007DCC] dark:text-[#86cfff]">
                           {c.cutoff}%
                         </div>
-                        <div className="text-[10px] text-slate-400 dark:text-[#4a5568]">cutoff</div>
+                        <span className="text-[10px] font-semibold text-slate-400">
+                          Cutoff
+                        </span>
                       </div>
-
-                      {c.collegeId ? (
-                        <button
-                          onClick={() => {
-                            onClose();
-                            onSelectCollege(c.collegeId as string);
-                          }}
-                          className="w-9 h-9 rounded-full flex items-center justify-center bg-slate-100 dark:bg-white/8 group-hover:bg-[#007DCC] text-slate-400 dark:text-[#71839A] group-hover:text-white transition-all shadow-sm"
-                          title="View college details"
-                        >
-                          <ArrowRight className="w-4 h-4" />
-                        </button>
-                      ) : (
-                        <div className="w-9 h-9 rounded-full flex items-center justify-center border border-slate-100 dark:border-white/5 text-slate-200 dark:text-white/10">
-                          <ArrowRight className="w-4 h-4" />
-                        </div>
-                      )}
                     </div>
-                  </div>
-                ))}
-
-                {filteredColleges.length > 60 && (
-                  <div className="py-6 text-center">
-                    <p className="text-sm text-slate-400 dark:text-[#71839A]">
-                      Showing 1–60 of {filteredColleges.length.toLocaleString()} results.{' '}
-                      Use search or filters to narrow down.
-                    </p>
-                  </div>
-                )}
-              </div>
-            ) : (
-              /* Empty state */
-              <div className="py-20 flex flex-col items-center justify-center text-center">
-                <div className="w-14 h-14 mb-4 bg-slate-100 dark:bg-white/5 rounded-full flex items-center justify-center">
-                  <Search className="w-6 h-6 text-slate-300 dark:text-[#3a4a5a]" />
+                  ))}
                 </div>
-                <h3 className="text-base font-bold text-slate-700 dark:text-[#A9B8CA] mb-1">
-                  No matching colleges
-                </h3>
-                <p className="text-sm text-slate-400 dark:text-[#71839A] max-w-xs">
-                  Try adjusting your filters or percentage range, then click Apply Filters.
-                </p>
-                <button
-                  onClick={handleClear}
-                  className="mt-4 px-4 py-2 text-xs font-semibold text-[#007DCC] dark:text-[#86cfff] hover:underline"
-                >
-                  Clear all filters
-                </button>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* Footer Controls */}
+        <div className="shrink-0 px-6 py-4 border-t border-slate-100 dark:border-white/8 flex items-center justify-between bg-slate-50/50 dark:bg-[#0D1828]/50">
+          {step > 1 && step < 4 ? (
+            <button
+              onClick={() => setStep(step - 1)}
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] text-xs font-bold transition-all"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Previous</span>
+            </button>
+          ) : (
+            <div />
+          )}
+
+          {step === 1 && (
+            <button
+              onClick={() => setStep(2)}
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+            >
+              <span>Next: Percentage</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          )}
+
+          {step === 2 && (
+            <button
+              onClick={() => setStep(3)}
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+            >
+              <span>Next: Stream & Region</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          )}
+
+          {step === 3 && (
+            <button
+              onClick={handleApply}
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+            >
+              <span>Apply Filters & View Cutoffs</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          )}
+
+          {step === 4 && (
+            <button
+              onClick={onClose}
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] text-white text-xs font-bold"
+            >
+              <span>Done</span>
+            </button>
+          )}
         </div>
       </div>
     </div>
