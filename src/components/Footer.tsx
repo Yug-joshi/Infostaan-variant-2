@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
             to="/help-me-decide"
             className="text-slate-600 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-[#F4F7FB] transition-colors"
           >
-            Help Me Decide
+            Guidance & Roadmap
           </Link>
         </div>
       </div>

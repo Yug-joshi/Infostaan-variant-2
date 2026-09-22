@@ -67,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <Link
             to="/help-me-decide"
             className={`transition-colors hover:text-slate-900 dark:hover:text-[#F4F7FB] ${
-              currentPath === '/help-me-decide' || currentPath === '/guidance' || currentPath === '/career-roadmap'
+              currentPath === '/help-me-decide'
                 ? 'text-[#007DCC] dark:text-[#19A7E8] font-semibold'
                 : ''
             }`}

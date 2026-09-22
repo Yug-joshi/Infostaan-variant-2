@@ -47,59 +47,64 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
   onClose,
   onSelectCollege,
 }) => {
-  const [step, setStep] = useState(1);
+  // PENDING — what the user is selecting right now
   const [pending, setPending] = useState<Filters>(DEFAULT_FILTERS);
+  // APPLIED — what the results actually use (only updated on Apply)
   const [applied, setApplied] = useState<Filters>(DEFAULT_FILTERS);
   const [sortBy, setSortBy] = useState('Highest cutoff');
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const [showManualInput, setShowManualInput] = useState(false);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
 
+  // Reset everything when modal opens
   useEffect(() => {
     if (isOpen) {
-      setStep(1);
       setPending(DEFAULT_FILTERS);
       setApplied(DEFAULT_FILTERS);
       setSortBy('Highest cutoff');
+      setTimeout(() => searchInputRef.current?.focus(), 100);
     }
   }, [isOpen]);
 
-  useEffect(() => {
-    if (step === 4) {
-      setTimeout(() => searchInputRef.current?.focus(), 100);
-    }
-  }, [step]);
-
+  // Keyboard shortcut Ctrl+K focuses search
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'k' && (e.ctrlKey || e.metaKey)) {
-        if (step === 4) {
-          e.preventDefault();
-          searchInputRef.current?.focus();
-        }
+        e.preventDefault();
+        searchInputRef.current?.focus();
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [step]);
+  }, []);
 
+  // Helpers to update pending state
   const setPendingField = <K extends keyof Filters>(key: K, value: Filters[K]) => {
     setPending((prev) => ({ ...prev, [key]: value }));
   };
 
+
+
+  // Apply pending → applied
   const handleApply = () => {
     setApplied({ ...pending });
-    setStep(4);
+    setFiltersOpen(false);
   };
 
+  // Clear: reset pending only; user must then Apply to clear results
   const handleClear = () => {
     setPending(DEFAULT_FILTERS);
   };
 
+  // Check if pending differs from applied (to show "pending changes" indicator)
+  const hasPendingChanges = JSON.stringify(pending) !== JSON.stringify(applied);
+
+  // Derive the active percentage range from applied filters
   const getPercentageBounds = (f: Filters): { min: number; max: number } | null => {
-    if (f.percentageExact !== '') {
+    if (f.percentageExact) {
       const val = parseFloat(f.percentageExact);
-      if (!isNaN(val)) return { min: Math.max(0, val - 5), max: Math.min(100, val + 5) };
+      if (!isNaN(val)) return { min: val, max: 100 };
     }
     return null;
   };
@@ -117,7 +122,9 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
 
   const activeRange = getActiveRange(pending.percentageExact);
 
+  // Results use APPLIED filters only
   const filteredColleges = useMemo(() => {
+    // Only FYJC (12th) data is available; other education levels show no results
     if (applied.educationLevel !== '12th') return [];
 
     const bounds = getPercentageBounds(applied);
@@ -152,22 +159,28 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
   }, [applied, sortBy]);
 
   const displayedColleges = filteredColleges.slice(0, 60);
-  const selectedLevel = EDUCATION_LEVELS.find((l) => l.id === applied.educationLevel);
+
+  const selectedLevel = EDUCATION_LEVELS.find((l) => l.id === pending.educationLevel);
 
   if (!isOpen) return null;
 
-  const filterSelectClass = 'w-full bg-slate-50 dark:bg-black/30 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm font-medium text-slate-700 dark:text-[#A9B8CA] focus:outline-none focus:border-[#007DCC] focus:ring-2 focus:ring-[#007DCC]/20 transition-all';
+  const filterSelectClass =
+    'w-full bg-white/60 dark:bg-black/30 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-700 dark:text-[#A9B8CA] focus:outline-none focus:border-[#007DCC] focus:ring-2 focus:ring-[#007DCC]/20 transition-all';
 
   return (
     <div className="fixed inset-0 z-[100] flex items-end md:items-center justify-center p-0 md:p-6">
+      {/* Backdrop */}
       <div
         className="absolute inset-0 bg-slate-900/60 dark:bg-[#070D18]/80 backdrop-blur-sm"
         onClick={onClose}
       />
 
-      <div className="relative w-full h-[92vh] md:h-auto md:max-h-[92vh] md:w-[90vw] md:max-w-3xl bg-white dark:bg-[#0B1623] border border-slate-200 dark:border-white/10 shadow-2xl rounded-t-3xl md:rounded-2xl flex flex-col overflow-hidden text-slate-900 dark:text-[#F4F7FB]">
+      {/* Modal Container */}
+      <div className="relative w-full h-[92vh] md:h-auto md:max-h-[92vh] md:w-[90vw] md:max-w-5xl bg-white dark:bg-[#0B1623] border border-slate-200 dark:border-white/10 shadow-2xl rounded-t-3xl md:rounded-2xl flex flex-col overflow-hidden text-slate-900 dark:text-[#F4F7FB]">
+
+        {/* ── HEADER ── */}
         <div className="shrink-0 px-5 pt-5 pb-4 md:px-8 md:pt-7 md:pb-5 border-b border-slate-100 dark:border-white/8">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center shrink-0">
                 <Activity className="w-4.5 h-4.5 text-[#007DCC] dark:text-[#86cfff]" />
@@ -175,7 +188,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
               <div>
                 <h2 className="text-lg md:text-xl font-bold leading-tight">Cutoffs</h2>
                 <p className="text-xs text-slate-500 dark:text-[#71839A]">
-                  Step {step} of 4
+                  FYJC cutoffs for Mumbai colleges · {applied.year}
                 </p>
               </div>
             </div>
@@ -187,63 +200,65 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
               <X className="w-5 h-5" />
             </button>
           </div>
-        </div>
 
-        {/* --- STEP 1: EDUCATION LEVEL --- */}
-        {step === 1 && (
-          <div className="flex-1 overflow-y-auto px-5 py-8 md:px-10 animate-fade-in flex flex-col">
-            <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-[#F4F7FB] mb-2">Education Level</h3>
-            <p className="text-sm text-slate-500 dark:text-[#71839A] mb-8">What are you looking for cutoffs for?</p>
-            
-            <div className="flex flex-col gap-3">
+          {/* ── EDUCATION LEVEL CHIPS ── */}
+          <div className="mb-4">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A] mb-2">
+              Education Level
+            </p>
+            <div className="flex items-center gap-2 flex-wrap">
               {EDUCATION_LEVELS.map((level) => (
                 <button
                   key={level.id}
                   onClick={() => setPendingField('educationLevel', level.id)}
-                  className={`w-full text-left px-5 py-4 rounded-xl border font-semibold transition-all flex items-center justify-between ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                     pending.educationLevel === level.id
-                      ? 'bg-blue-50 dark:bg-[#007DCC]/20 border-[#007DCC] text-[#007DCC] dark:text-[#86cfff] shadow-sm'
+                      ? 'bg-[#007DCC] text-white shadow-sm'
                       : level.hasData
-                      ? 'bg-white dark:bg-[#161c27] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/50'
-                      : 'bg-slate-50 dark:bg-white/4 border-slate-100 dark:border-white/5 text-slate-400 dark:text-[#4a5568] cursor-not-allowed'
+                      ? 'bg-slate-100 dark:bg-white/8 text-slate-600 dark:text-[#A9B8CA] hover:bg-slate-200 dark:hover:bg-white/12'
+                      : 'bg-slate-50 dark:bg-white/4 text-slate-400 dark:text-[#4a5568] cursor-default'
                   }`}
+                  title={!level.hasData ? 'Data not yet available' : undefined}
                 >
-                  <span>{level.label}</span>
+                  {level.label}
                   {!level.hasData && (
-                    <span className="text-[10px] uppercase tracking-wider px-2 py-1 bg-slate-200 dark:bg-white/10 rounded-full">Coming soon</span>
+                    <span className="ml-1.5 text-[9px] opacity-60">soon</span>
                   )}
                 </button>
               ))}
             </div>
-
-            <div className="mt-auto pt-8 flex justify-end">
-              <button
-                onClick={() => setStep(2)}
-                disabled={!pending.educationLevel}
-                className="px-8 py-3 bg-[#007DCC] hover:bg-[#006cb0] disabled:opacity-50 disabled:cursor-not-allowed text-white text-sm font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 active:scale-95"
-              >
-                Next <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
           </div>
-        )}
 
-        {/* --- STEP 2: PERCENTAGE --- */}
-        {step === 2 && (
-          <div className="flex-1 overflow-y-auto px-5 py-8 md:px-10 animate-fade-in flex flex-col items-center">
-            <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-[#F4F7FB] mb-2 text-center">Set your percentage</h3>
-            <p className="text-sm text-slate-500 dark:text-[#A9B8CA] mb-6 text-center max-w-sm">
-              Select your expected or actual percentage to get accurate results.
+          {/* ── SEARCH BAR ── */}
+          <div className="relative mb-4">
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 dark:text-[#71839A] pointer-events-none" />
+            <input
+              ref={searchInputRef}
+              type="text"
+              value={pending.searchQuery}
+              onChange={(e) => setPendingField('searchQuery', e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleApply()}
+              placeholder="Search college name..."
+              className="w-full bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-xl pl-10 pr-4 py-3 text-sm text-slate-900 dark:text-[#F4F7FB] placeholder:text-slate-400 dark:placeholder:text-[#71839A] focus:outline-none focus:border-[#007DCC] focus:ring-2 focus:ring-[#007DCC]/20 transition-all"
+            />
+            <span className="absolute right-3.5 top-1/2 -translate-y-1/2 hidden sm:block text-[10px] font-semibold text-slate-300 dark:text-[#3a4a5a] px-1.5 py-0.5 rounded bg-slate-100 dark:bg-white/5">
+              Enter ↵
+            </span>
+          </div>
+
+          {/* ── MY PERCENTAGE ── */}
+          <div className="mb-6 flex flex-col items-center border-t border-slate-100 dark:border-white/5 pt-6 mt-2">
+            <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-[#F4F7FB] mb-1">Set your percentage</h3>
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-[#A9B8CA] mb-8 text-center max-w-sm">
+              Select your 10th, 12th or Graduation percentage to get more relevant results.
             </p>
             
-            <div className="w-full flex justify-center py-4">
-              <PercentageDial 
-                value={parseFloat(pending.percentageExact) || 0}
-                onChange={(v) => setPendingField('percentageExact', v.toString())}
-              />
-            </div>
+            <PercentageDial 
+              value={parseFloat(pending.percentageExact) || 0}
+              onChange={(v) => setPendingField('percentageExact', v.toString())}
+            />
             
-            <div className="w-full max-w-md mt-6">
+            <div className="w-full max-w-md mt-8">
               <div className="flex items-center justify-between mb-3 px-1">
                 <p className="text-xs font-bold text-slate-500 dark:text-[#71839A]">Quick select</p>
                 <button 
@@ -295,32 +310,23 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                 </div>
               )}
             </div>
-
-            <div className="w-full mt-auto pt-8 flex justify-between">
-              <button
-                onClick={() => setStep(1)}
-                className="px-6 py-3 font-semibold text-slate-600 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors"
-              >
-                Previous
-              </button>
-              <button
-                onClick={() => setStep(3)}
-                className="px-8 py-3 bg-[#007DCC] hover:bg-[#006cb0] text-white text-sm font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 active:scale-95"
-              >
-                Next <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
           </div>
-        )}
 
-        {/* --- STEP 3: FILTERS --- */}
-        {step === 3 && (
-          <div className="flex-1 overflow-y-auto px-5 py-8 md:px-10 animate-fade-in flex flex-col">
-            <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-[#F4F7FB] mb-6">Additional Filters</h3>
-            
-            <div className="space-y-6 flex-1">
+          {/* ── MORE FILTERS (collapsible) ── */}
+          <button
+            onClick={() => setFiltersOpen((v) => !v)}
+            className="flex items-center gap-1.5 text-xs font-semibold text-slate-500 dark:text-[#71839A] hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors mb-1"
+          >
+            <SlidersHorizontal className="w-3.5 h-3.5" />
+            <span>More Filters</span>
+            <span className="text-[10px] ml-0.5 opacity-60">{filtersOpen ? '▲' : '▼'}</span>
+          </button>
+
+          {filtersOpen && (
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 pb-1">
+              {/* Stream */}
               <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A] mb-2">
+                <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A] mb-1.5">
                   Stream
                 </label>
                 <select
@@ -334,8 +340,9 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                 </select>
               </div>
 
+              {/* Category */}
               <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A] mb-2">
+                <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A] mb-1.5">
                   Category
                 </label>
                 <select
@@ -349,8 +356,9 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                 </select>
               </div>
 
+              {/* Academic Year */}
               <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A] mb-2">
+                <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A] mb-1.5">
                   Academic Year
                 </label>
                 <select
@@ -364,173 +372,164 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                 </select>
               </div>
             </div>
+          )}
 
-            <div className="mt-auto pt-8 flex justify-between items-center">
-              <button
-                onClick={() => setStep(2)}
-                className="px-6 py-3 font-semibold text-slate-600 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors"
-              >
-                Previous
-              </button>
-              <button
-                onClick={handleApply}
-                className="px-8 py-3 bg-[#007DCC] hover:bg-[#006cb0] text-white text-sm font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 active:scale-95"
-              >
-                Apply Filters
-              </button>
-            </div>
-          </div>
-        )}
+          {/* ── APPLY / CLEAR ROW ── */}
+          <div className="flex items-center justify-between mt-4 gap-3">
+            <button
+              onClick={handleClear}
+              className="text-xs font-semibold text-slate-500 dark:text-[#71839A] hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors px-2 py-1.5"
+            >
+              Clear All
+            </button>
 
-        {/* --- STEP 4: RESULTS --- */}
-        {step === 4 && (
-          <div className="flex flex-col flex-1 min-h-0 animate-fade-in">
-            <div className="px-5 md:px-8 py-4 border-b border-slate-100 dark:border-white/8 shrink-0">
-              <button
-                onClick={() => setStep(3)}
-                className="text-xs font-semibold text-[#007DCC] dark:text-[#86cfff] mb-4 hover:underline flex items-center gap-1"
-              >
-                ← Back to Filters
-              </button>
-              
-              <div className="relative mb-2">
-                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 dark:text-[#71839A] pointer-events-none" />
-                <input
-                  ref={searchInputRef}
-                  type="text"
-                  value={pending.searchQuery}
-                  onChange={(e) => {
-                    setPendingField('searchQuery', e.target.value);
-                    setApplied((prev) => ({ ...prev, searchQuery: e.target.value }));
-                  }}
-                  placeholder="Search college name..."
-                  className="w-full bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-xl pl-10 pr-4 py-3 text-sm text-slate-900 dark:text-[#F4F7FB] placeholder:text-slate-400 dark:placeholder:text-[#71839A] focus:outline-none focus:border-[#007DCC] focus:ring-2 focus:ring-[#007DCC]/20 transition-all"
-                />
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between px-5 md:px-8 py-3.5 border-b border-slate-100 dark:border-white/5 bg-white dark:bg-[#0B1623] shrink-0">
-              <p className="text-sm text-slate-500 dark:text-[#71839A]">
-                <span className="font-bold text-slate-900 dark:text-[#F4F7FB]">
-                  {filteredColleges.length.toLocaleString()}
-                </span>{' '}
-                {applied.educationLevel !== '12th' ? 'results' : 'colleges'}
-                {applied.stream !== 'All Streams' && (
-                  <span className="ml-1.5 text-[#007DCC] dark:text-[#86cfff]">· {applied.stream}</span>
-                )}
-                {(applied.percentageExact) && (
-                  <span className="ml-1.5 text-[#007DCC] dark:text-[#86cfff]">
-                    · {applied.percentageExact}% (±5%)
-                  </span>
-                )}
-              </p>
-
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-slate-400 dark:text-[#71839A]">Sort:</span>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-transparent text-xs font-semibold text-slate-700 dark:text-[#F4F7FB] border-0 focus:ring-0 cursor-pointer"
-                >
-                  <option value="Highest cutoff">Highest first</option>
-                  <option value="Lowest cutoff">Lowest first</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="flex-1 overflow-y-auto px-5 md:px-8 pb-8">
-              {applied.educationLevel !== '12th' ? (
-                <div className="py-20 flex flex-col items-center justify-center text-center">
-                  <div className="w-14 h-14 mb-4 bg-slate-100 dark:bg-white/5 rounded-full flex items-center justify-center">
-                    <Activity className="w-6 h-6 text-slate-300 dark:text-[#3a4a5a]" />
-                  </div>
-                  <h3 className="text-base font-bold text-slate-700 dark:text-[#A9B8CA] mb-1">
-                    {selectedLevel?.label} cutoff data coming soon
-                  </h3>
-                  <p className="text-sm text-slate-400 dark:text-[#71839A] max-w-xs">
-                    Currently only 12th / FYJC cutoffs are available for Mumbai colleges.
-                  </p>
-                </div>
-              ) : displayedColleges.length > 0 ? (
-                <div className="divide-y divide-slate-100 dark:divide-white/5">
-                  {displayedColleges.map((c, index) => (
-                    <div
-                      key={`${c.id}-${index}`}
-                      className="flex items-center justify-between py-4 group hover:bg-slate-50 dark:hover:bg-white/3 -mx-5 md:-mx-8 px-5 md:px-8 transition-colors"
-                    >
-                      <div className="flex-1 min-w-0 pr-4">
-                        <h3 className="text-[14px] sm:text-[15px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug mb-1 capitalize">
-                          {c.collegeName.toLowerCase().replace(/\b\w/g, (ch) => ch.toUpperCase())}
-                        </h3>
-                        <div className="flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500 dark:text-[#71839A]">
-                          <span>{c.stream}</span>
-                          <span className="w-0.5 h-0.5 rounded-full bg-current opacity-40" />
-                          <span>{c.category}</span>
-                          <span className="w-0.5 h-0.5 rounded-full bg-current opacity-40" />
-                          <span>{c.year}</span>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-3 shrink-0">
-                        <div className="text-right">
-                          <div className="text-xl sm:text-2xl font-black text-[#007DCC] dark:text-[#19A7E8] tracking-tight tabular-nums">
-                            {c.cutoff}%
-                          </div>
-                          <div className="text-[10px] text-slate-400 dark:text-[#4a5568]">cutoff</div>
-                        </div>
-
-                        {c.collegeId ? (
-                          <button
-                            onClick={() => {
-                              onClose();
-                              onSelectCollege(c.collegeId as string);
-                            }}
-                            className="w-9 h-9 rounded-full flex items-center justify-center bg-slate-100 dark:bg-white/8 group-hover:bg-[#007DCC] text-slate-400 dark:text-[#71839A] group-hover:text-white transition-all shadow-sm"
-                            title="View college details"
-                          >
-                            <ArrowRight className="w-4 h-4" />
-                          </button>
-                        ) : (
-                          <div className="w-9 h-9 rounded-full flex items-center justify-center border border-slate-100 dark:border-white/5 text-slate-200 dark:text-white/10">
-                            <ArrowRight className="w-4 h-4" />
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-
-                  {filteredColleges.length > 60 && (
-                    <div className="py-6 text-center">
-                      <p className="text-sm text-slate-400 dark:text-[#71839A]">
-                        Showing 1–60 of {filteredColleges.length.toLocaleString()} results. Use search or filters to narrow down.
-                      </p>
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <div className="py-20 flex flex-col items-center justify-center text-center">
-                  <div className="w-14 h-14 mb-4 bg-slate-100 dark:bg-white/5 rounded-full flex items-center justify-center">
-                    <Search className="w-6 h-6 text-slate-300 dark:text-[#3a4a5a]" />
-                  </div>
-                  <h3 className="text-base font-bold text-slate-700 dark:text-[#A9B8CA] mb-1">
-                    No matching colleges
-                  </h3>
-                  <p className="text-sm text-slate-400 dark:text-[#71839A] max-w-xs">
-                    Try adjusting your filters or percentage range, then click Apply Filters.
-                  </p>
-                  <button
-                    onClick={handleClear}
-                    className="mt-4 px-4 py-2 text-xs font-semibold text-[#007DCC] dark:text-[#86cfff] hover:underline"
-                  >
-                    Clear all filters
-                  </button>
-                </div>
+            <button
+              onClick={handleApply}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all shadow-sm active:scale-[0.98] ${
+                hasPendingChanges
+                  ? 'bg-[#007DCC] hover:bg-[#006cb0] text-white'
+                  : 'bg-slate-100 dark:bg-white/8 text-slate-400 dark:text-[#4a5568] cursor-default'
+              }`}
+              disabled={!hasPendingChanges}
+            >
+              <span>Apply Filters</span>
+              {hasPendingChanges && (
+                <span className="w-2 h-2 rounded-full bg-white/70 animate-pulse" />
               )}
+            </button>
+          </div>
+        </div>
+
+        {/* ── RESULTS AREA ── */}
+        <div className="flex-1 overflow-y-auto">
+
+          {/* Results meta bar */}
+          <div className="flex items-center justify-between px-5 md:px-8 py-3.5 border-b border-slate-100 dark:border-white/5 sticky top-0 bg-white dark:bg-[#0B1623] z-10">
+            <p className="text-sm text-slate-500 dark:text-[#71839A]">
+              <span className="font-bold text-slate-900 dark:text-[#F4F7FB]">
+                {filteredColleges.length.toLocaleString()}
+              </span>{' '}
+              {applied.educationLevel !== '12th' ? 'results' : 'colleges'}
+              {applied.stream !== 'All Streams' && (
+                <span className="ml-1.5 text-[#007DCC] dark:text-[#86cfff]">· {applied.stream}</span>
+              )}
+              {(applied.percentageExact) && (
+                <span className="ml-1.5 text-[#007DCC] dark:text-[#86cfff]">
+                  · {applied.percentageExact}%+
+                </span>
+              )}
+            </p>
+
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-slate-400 dark:text-[#71839A]">Sort:</span>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="bg-transparent text-xs font-semibold text-slate-700 dark:text-[#F4F7FB] border-0 focus:ring-0 cursor-pointer"
+              >
+                <option value="Highest cutoff">Highest first</option>
+                <option value="Lowest cutoff">Lowest first</option>
+              </select>
             </div>
           </div>
-        )}
+
+          {/* Results list */}
+          <div className="px-5 md:px-8 pb-8">
+            {applied.educationLevel !== '12th' ? (
+              /* No data state for non-FYJC levels */
+              <div className="py-20 flex flex-col items-center justify-center text-center">
+                <div className="w-14 h-14 mb-4 bg-slate-100 dark:bg-white/5 rounded-full flex items-center justify-center">
+                  <Activity className="w-6 h-6 text-slate-300 dark:text-[#3a4a5a]" />
+                </div>
+                <h3 className="text-base font-bold text-slate-700 dark:text-[#A9B8CA] mb-1">
+                  {selectedLevel?.label} cutoff data coming soon
+                </h3>
+                <p className="text-sm text-slate-400 dark:text-[#71839A] max-w-xs">
+                  Currently only 12th / FYJC cutoffs are available for Mumbai colleges.
+                </p>
+              </div>
+            ) : displayedColleges.length > 0 ? (
+              <div className="divide-y divide-slate-100 dark:divide-white/5">
+                {displayedColleges.map((c, index) => (
+                  <div
+                    key={`${c.id}-${index}`}
+                    className="flex items-center justify-between py-4 group hover:bg-slate-50 dark:hover:bg-white/3 -mx-5 md:-mx-8 px-5 md:px-8 transition-colors"
+                  >
+                    {/* College info */}
+                    <div className="flex-1 min-w-0 pr-4">
+                      <h3 className="text-[14px] sm:text-[15px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug mb-1 capitalize">
+                        {c.collegeName.toLowerCase().replace(/\b\w/g, (ch) => ch.toUpperCase())}
+                      </h3>
+                      <div className="flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500 dark:text-[#71839A]">
+                        <span>{c.stream}</span>
+                        <span className="w-0.5 h-0.5 rounded-full bg-current opacity-40" />
+                        <span>{c.category}</span>
+                        <span className="w-0.5 h-0.5 rounded-full bg-current opacity-40" />
+                        <span>{c.year}</span>
+                      </div>
+                    </div>
+
+                    {/* Cutoff % + action */}
+                    <div className="flex items-center gap-3 shrink-0">
+                      <div className="text-right">
+                        <div className="text-xl sm:text-2xl font-black text-[#007DCC] dark:text-[#19A7E8] tracking-tight tabular-nums">
+                          {c.cutoff}%
+                        </div>
+                        <div className="text-[10px] text-slate-400 dark:text-[#4a5568]">cutoff</div>
+                      </div>
+
+                      {c.collegeId ? (
+                        <button
+                          onClick={() => {
+                            onClose();
+                            onSelectCollege(c.collegeId as string);
+                          }}
+                          className="w-9 h-9 rounded-full flex items-center justify-center bg-slate-100 dark:bg-white/8 group-hover:bg-[#007DCC] text-slate-400 dark:text-[#71839A] group-hover:text-white transition-all shadow-sm"
+                          title="View college details"
+                        >
+                          <ArrowRight className="w-4 h-4" />
+                        </button>
+                      ) : (
+                        <div className="w-9 h-9 rounded-full flex items-center justify-center border border-slate-100 dark:border-white/5 text-slate-200 dark:text-white/10">
+                          <ArrowRight className="w-4 h-4" />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+
+                {filteredColleges.length > 60 && (
+                  <div className="py-6 text-center">
+                    <p className="text-sm text-slate-400 dark:text-[#71839A]">
+                      Showing 1–60 of {filteredColleges.length.toLocaleString()} results.{' '}
+                      Use search or filters to narrow down.
+                    </p>
+                  </div>
+                )}
+              </div>
+            ) : (
+              /* Empty state */
+              <div className="py-20 flex flex-col items-center justify-center text-center">
+                <div className="w-14 h-14 mb-4 bg-slate-100 dark:bg-white/5 rounded-full flex items-center justify-center">
+                  <Search className="w-6 h-6 text-slate-300 dark:text-[#3a4a5a]" />
+                </div>
+                <h3 className="text-base font-bold text-slate-700 dark:text-[#A9B8CA] mb-1">
+                  No matching colleges
+                </h3>
+                <p className="text-sm text-slate-400 dark:text-[#71839A] max-w-xs">
+                  Try adjusting your filters or percentage range, then click Apply Filters.
+                </p>
+                <button
+                  onClick={handleClear}
+                  className="mt-4 px-4 py-2 text-xs font-semibold text-[#007DCC] dark:text-[#86cfff] hover:underline"
+                >
+                  Clear all filters
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
 };
-

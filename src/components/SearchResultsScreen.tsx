@@ -8,30 +8,15 @@ import { SkeletonResultCards } from './SkeletonResultCards';
 import gsap from 'gsap';
 
 interface FilterState {
-  // Colleges
-  collegeStudyArea?: string | null;
-  collegeLevel?: string | null; // 10th, 12th, Graduate
-  collegePriority?: string | null;
-  collegeLocality?: string | null;
-  collegeFee?: string | null;
-  
-  // Courses
-  courseInterest?: string | null;
-  courseType?: string | null;
-  courseLevel?: string | null;
-  courseGoal?: string | null;
-  
-  // Classes
-  classSubject?: string | null;
-  classLevel?: string | null;
-  classLocality?: string | null;
-  classMode?: string | null;
-  
-  // Careers
-  careerInterest?: string | null;
-  careerActivity?: string | null;
-  careerEducation?: string | null;
-  careerWorkType?: string | null;
+  interest?: string | null;
+  grade?: string | null;
+  fee?: string | null;
+  domain?: string | null;
+  degreeLevel?: string | null;
+  subjectCategory?: string | null;
+  subject?: string | null;
+  level?: string | null;
+  locality?: string | null;
 }
 
 interface SearchResultsScreenProps {
@@ -133,113 +118,64 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
     
     if (!appliedFilters && !query && activeCategory !== 'cutoffs') return [];
     
-    if (activeCategory === 'colleges' && appliedFilters) {
-      if (appliedFilters.collegeStudyArea) {
-        const keywords = appliedFilters.collegeStudyArea.split('/').map(k => k.trim().toLowerCase());
+    if (activeCategory === 'classes' && appliedFilters) {
+      if (appliedFilters.subjectCategory || appliedFilters.subject) {
+        const keywords = [appliedFilters.subjectCategory, appliedFilters.subject].filter(Boolean).map(k => k!.toLowerCase());
         raw = raw.filter(item => {
-          const text = [item.title, item.badgeCategory, item.badgeSub, item.subtitle, ...(item.meta || [])].join(' ').toLowerCase();
+           const text = [item.title, item.badgeCategory, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
+           return keywords.some(kw => text.includes(kw));
+        });
+      }
+      if (appliedFilters.level) {
+        const levelLower = appliedFilters.level.split('/')[0].trim().toLowerCase();
+        raw = raw.filter(item => {
+           const text = [item.title, item.badgeCategory, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
+           return text.includes(levelLower) || text.includes('standard') || text.includes('class') || text.includes('board');
+        });
+      }
+      if (appliedFilters.locality && appliedFilters.locality !== 'Near me / Mumbai') {
+        const loc = appliedFilters.locality.toLowerCase();
+        raw = raw.filter(item => {
+           const text = [item.title, item.badgeCategory, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
+           return text.includes(loc);
+        });
+      }
+    } else if (appliedFilters) {
+      const interest = appliedFilters.interest || appliedFilters.domain;
+      if (interest) {
+        const keywords = interest.split('/').map(k => k.trim().toLowerCase());
+        raw = raw.filter(item => {
+          const text = [item.title, item.badgeCategory, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
           return keywords.some(kw => text.includes(kw));
         });
       }
-      if (appliedFilters.collegeLocality && appliedFilters.collegeLocality !== 'Anywhere in Mumbai') {
-        const loc = appliedFilters.collegeLocality.toLowerCase();
+      const grade = appliedFilters.grade || appliedFilters.degreeLevel;
+      if (grade) {
+        const gradeLower = grade.split('/')[0].trim().toLowerCase();
         raw = raw.filter(item => {
-          const text = [item.title, item.badgeCategory, item.badgeSub, item.subtitle, ...(item.meta || [])].join(' ').toLowerCase();
-          return text.includes(loc);
+          const text = [item.title, item.badgeCategory, item.badgeSub, ...(item.meta || [])].join(' ').toLowerCase();
+          return text.includes(gradeLower) || 
+                 text.includes('degree') || 
+                 text.includes('college') ||
+                 text.includes('university') ||
+                 text.includes('undergraduate') ||
+                 text.includes('postgraduate');
         });
       }
-      if (appliedFilters.collegeFee && appliedFilters.collegeFee !== 'No Limit') {
+      if (appliedFilters.fee && appliedFilters.fee !== 'No Limit') {
         raw = raw.filter(item => {
           const feeMatch = item.subtitle?.match(/₹([0-9,]+)/);
           if (!feeMatch) return true;
           const fee = parseInt(feeMatch[1].replace(/,/g, ''), 10);
-          if (appliedFilters.collegeFee === 'Under ₹25k') return fee <= 25000;
-          if (appliedFilters.collegeFee === '₹25k - ₹50k') return fee > 25000 && fee <= 50000;
-          if (appliedFilters.collegeFee === '₹50k - ₹1 Lakh') return fee > 50000 && fee <= 100000;
-          if (appliedFilters.collegeFee === 'Over ₹1 Lakh') return fee > 100000;
-          return true;
-        });
-      }
-    } else if (activeCategory === 'courses' && appliedFilters) {
-      if (appliedFilters.courseInterest) {
-        const kw = appliedFilters.courseInterest.toLowerCase();
-        raw = raw.filter(item => {
-          const text = [item.title, item.subtitle, ...(item.meta || []), item.whyRelevant].join(' ').toLowerCase();
-          return text.includes(kw);
-        });
-      }
-      if (appliedFilters.courseType) {
-        const kw = appliedFilters.courseType.toLowerCase();
-        raw = raw.filter(item => {
-          const text = [item.title, item.subtitle, ...(item.meta || [])].join(' ').toLowerCase();
-          return text.includes(kw) || (kw === 'degree' && text.includes('undergraduate'));
-        });
-      }
-      if (appliedFilters.courseLevel) {
-        const kw = appliedFilters.courseLevel.split('/')[0].trim().toLowerCase();
-        raw = raw.filter(item => {
-          const text = [item.title, item.subtitle, ...(item.meta || [])].join(' ').toLowerCase();
-          return text.includes(kw) || text.includes('undergraduate') || text.includes('degree');
-        });
-      }
-    } else if (activeCategory === 'classes' && appliedFilters) {
-      if (appliedFilters.classSubject) {
-        const kw = appliedFilters.classSubject.toLowerCase();
-        raw = raw.filter(item => {
-           const text = [item.title, item.badgeCategory, item.badgeSub, item.subtitle, ...(item.meta || [])].join(' ').toLowerCase();
-           return text.includes(kw);
-        });
-      }
-      if (appliedFilters.classLevel) {
-        const levelLower = appliedFilters.classLevel.split('/')[0].trim().toLowerCase();
-        raw = raw.filter(item => {
-           const text = [item.title, item.badgeCategory, item.badgeSub, item.subtitle, ...(item.meta || [])].join(' ').toLowerCase();
-           return text.includes(levelLower) || text.includes('standard') || text.includes('class') || text.includes('board');
-        });
-      }
-      if (appliedFilters.classLocality && appliedFilters.classLocality !== 'Anywhere in Mumbai') {
-        const loc = appliedFilters.classLocality.toLowerCase();
-        raw = raw.filter(item => {
-           const text = [item.title, item.badgeCategory, item.badgeSub, item.subtitle, ...(item.meta || [])].join(' ').toLowerCase();
-           return text.includes(loc);
-        });
-      }
-      if (appliedFilters.classMode && appliedFilters.classMode !== 'Either') {
-        const mode = appliedFilters.classMode.toLowerCase();
-        raw = raw.filter(item => {
-           const text = [item.title, item.badgeCategory, item.badgeSub, item.subtitle, ...(item.meta || [])].join(' ').toLowerCase();
-           return text.includes(mode);
-        });
-      }
-    } else if (activeCategory === 'careers' && appliedFilters) {
-      if (appliedFilters.careerInterest) {
-        const kw = appliedFilters.careerInterest.toLowerCase();
-        raw = raw.filter(item => {
-          const text = [item.title, item.badgeSub, item.whyRelevant, ...(item.meta || [])].join(' ').toLowerCase();
-          return text.includes(kw);
-        });
-      }
-      if (appliedFilters.careerActivity) {
-        const kw = appliedFilters.careerActivity.toLowerCase();
-        raw = raw.filter(item => {
-          const text = [item.title, item.whyRelevant, ...(item.meta || [])].join(' ').toLowerCase();
-          if (kw.includes('number')) return text.includes('finance') || text.includes('accounting') || text.includes('audit');
-          if (kw.includes('research')) return text.includes('research') || text.includes('analysis');
-          if (kw.includes('people')) return text.includes('management') || text.includes('marketing') || text.includes('hr');
-          return true;
-        });
-      }
-      if (appliedFilters.careerWorkType) {
-        const kw = appliedFilters.careerWorkType.toLowerCase();
-        raw = raw.filter(item => {
-          const text = [item.title, item.whyRelevant, ...(item.meta || [])].join(' ').toLowerCase();
-          if (kw.includes('corporate')) return text.includes('corporate') || text.includes('bank') || text.includes('finance');
-          if (kw.includes('creative')) return text.includes('media') || text.includes('design') || text.includes('marketing');
+          if (appliedFilters.fee === 'Under ₹25k') return fee <= 25000;
+          if (appliedFilters.fee === '₹25k - ₹50k') return fee > 25000 && fee <= 50000;
+          if (appliedFilters.fee === '₹50k - ₹1 Lakh') return fee > 50000 && fee <= 100000;
+          if (appliedFilters.fee === '₹1 Lakh - ₹3 Lakh') return fee > 100000 && fee <= 300000;
+          if (appliedFilters.fee === 'Over ₹3 Lakh') return fee > 300000;
           return true;
         });
       }
     }
-    
     return raw;
   }, [query, activeCategory, appliedFilters]);
 
@@ -294,59 +230,61 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   };
 
   const renderClassForm = () => {
-    const subjects = ['Mathematics', 'Science', 'Commerce', 'Accounts', 'Coding / IT', 'CA', 'JEE', 'NEET', 'Languages', 'Design'];
-    const levels = ['School', '10th', '12th', 'College', 'Graduate', 'Working'];
-    const localities = ['Anywhere in Mumbai', 'Andheri', 'Borivali', 'Bandra', 'Dadar', 'Ghatkopar', 'Powai', 'South Mumbai'];
-    const modes = ['Offline', 'Online', 'Either'];
+    const subjectCategories = ['School Subjects', 'Professional / Entrance Exam', 'IT & Coding', 'Accounts & Finance', 'Languages', 'Design', 'Other'];
+    const subjectsMap: Record<string, string[]> = {
+      'School Subjects': ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'English', 'Other'],
+      'Professional / Entrance Exam': ['CA', 'JEE', 'NEET', 'Law Entrance', 'Other'],
+      'IT & Coding': ['Python', 'Web Development', 'Java', 'Data Analytics', 'Other'],
+      'Accounts & Finance': ['Tally', 'GST', 'Financial Analysis', 'Other'],
+      'Languages': ['English Speaking', 'German', 'French', 'Other'],
+      'Design': ['NID', 'NIFT', 'NATA', 'CEED', 'Other'],
+      'Other': []
+    };
+    const levels = ['School', '10th / SSC', '12th / HSC', 'College', 'Graduate', 'Working'];
+    const localities = ['Near me / Mumbai', 'Andheri', 'Borivali', 'Bandra', 'Dadar', 'Ghatkopar', 'Powai', 'Chembur', 'South Mumbai'];
 
     return (
       <div className="space-y-6">
         <div>
-          <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">What do you want to learn or prepare for?</h3>
-          <div className="flex flex-wrap gap-2">
-            {subjects.map(opt => (
-              <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, classSubject: prev.classSubject === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.classSubject === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
+          <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">What do you want to learn?</h3>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {subjectCategories.map(opt => (
+              <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, subjectCategory: prev.subjectCategory === opt ? null : opt, subject: null }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.subjectCategory === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
                 {opt}
               </button>
             ))}
           </div>
+          {pendingFilters.subjectCategory && subjectsMap[pendingFilters.subjectCategory]?.length > 0 && (
+            <div className="flex flex-wrap gap-2 pl-2 border-l-2 border-slate-200 dark:border-white/10 animate-fade-in">
+               {subjectsMap[pendingFilters.subjectCategory].map(opt => (
+                  <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, subject: prev.subject === opt ? null : opt }))} className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${pendingFilters.subject === opt ? 'bg-emerald-600 text-white shadow-xs' : 'bg-white dark:bg-[#0D1828] text-slate-600 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-emerald-600/50'}`}>
+                    {opt}
+                  </button>
+               ))}
+            </div>
+          )}
         </div>
-        {pendingFilters.classSubject && (
+        {(pendingFilters.subjectCategory || pendingFilters.subject) && (
           <div className="animate-fade-in">
-            <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">What's your current level?</h3>
+            <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">What's your current level?</h3>
             <div className="flex flex-wrap gap-2">
               {levels.map(opt => (
-                <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, classLevel: prev.classLevel === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.classLevel === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
+                <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, level: prev.level === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.level === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
                   {opt}
                 </button>
               ))}
             </div>
           </div>
         )}
-        {pendingFilters.classLevel && (
-          <div className="animate-fade-in space-y-6">
-            <div>
-              <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">Where do you want to attend?</h3>
-              <select 
-                value={pendingFilters.classLocality || ''}
-                onChange={(e) => setPendingFilters(prev => ({ ...prev, classLocality: e.target.value || null }))}
-                className="w-full max-w-sm px-4 py-2.5 rounded-xl text-sm font-medium bg-slate-50 dark:bg-[#161c27] text-slate-900 dark:text-[#F4F7FB] border border-slate-200 dark:border-white/10 focus:outline-none focus:border-[#007DCC] focus:ring-1 focus:ring-[#007DCC]"
-              >
-                <option value="">Select a locality in Mumbai...</option>
-                {localities.map(opt => (
-                  <option key={opt} value={opt}>{opt}</option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">How do you want to learn?</h3>
-              <div className="flex flex-wrap gap-2">
-                {modes.map(opt => (
-                  <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, classMode: prev.classMode === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.classMode === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-                    {opt}
-                  </button>
-                ))}
-              </div>
+        {pendingFilters.level && (
+          <div className="animate-fade-in">
+            <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">Where do you want the class?</h3>
+            <div className="flex flex-wrap gap-2">
+              {localities.map(opt => (
+                <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, locality: prev.locality === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.locality === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
+                  {opt}
+                </button>
+              ))}
             </div>
           </div>
         )}
@@ -357,51 +295,36 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   const renderCollegeForm = () => (
     <div className="space-y-6">
       <div>
-        <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">What do you want to study?</h3>
+        <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">Your Interest</h3>
         <div className="flex flex-wrap gap-2">
-          {['Commerce', 'Science', 'Arts', 'IT / Technology', 'Management', 'Law', 'Other'].map(opt => (
-            <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, collegeStudyArea: prev.collegeStudyArea === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.collegeStudyArea === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
+          {['Commerce', 'Science', 'Arts', 'Tech / IT', 'Law', 'Design'].map(opt => (
+            <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, interest: prev.interest === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.interest === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
               {opt}
             </button>
           ))}
         </div>
       </div>
-      {pendingFilters.collegeStudyArea && (
+      {pendingFilters.interest && (
         <div className="animate-fade-in">
-          <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">Where are you in your education?</h3>
+          <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">Current Grade</h3>
           <div className="flex flex-wrap gap-2">
             {['10th / SSC', '12th / HSC', 'Graduate'].map(opt => (
-              <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, collegeLevel: prev.collegeLevel === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.collegeLevel === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
+              <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, grade: prev.grade === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.grade === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
                 {opt}
               </button>
             ))}
           </div>
         </div>
       )}
-      {pendingFilters.collegeLevel && (
-        <div className="animate-fade-in space-y-6">
-          <div>
-            <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">Where in Mumbai would you prefer to study?</h3>
-            <select 
-              value={pendingFilters.collegeLocality || ''}
-              onChange={(e) => setPendingFilters(prev => ({ ...prev, collegeLocality: e.target.value || null }))}
-              className="w-full max-w-sm px-4 py-2.5 rounded-xl text-sm font-medium bg-slate-50 dark:bg-[#161c27] text-slate-900 dark:text-[#F4F7FB] border border-slate-200 dark:border-white/10 focus:outline-none focus:border-[#007DCC] focus:ring-1 focus:ring-[#007DCC]"
-            >
-              <option value="">Select a locality...</option>
-              {['Anywhere in Mumbai', 'South Mumbai', 'Western Suburbs', 'Central Mumbai', 'Andheri', 'Vile Parle', 'Churchgate', 'Matunga', 'Charni Road'].map(opt => (
-                <option key={opt} value={opt}>{opt}</option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">Approximate Budget (Per Year)</h3>
-            <div className="flex flex-wrap gap-2">
-              {['Under ₹25k', '₹25k - ₹50k', '₹50k - ₹1 Lakh', 'Over ₹1 Lakh', 'No Limit'].map(opt => (
-                <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, collegeFee: prev.collegeFee === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.collegeFee === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-                  {opt}
-                </button>
-              ))}
-            </div>
+      {pendingFilters.grade && (
+        <div className="animate-fade-in">
+          <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">College Fees (Per Year)</h3>
+          <div className="flex flex-wrap gap-2">
+            {['Under ₹25k', '₹25k - ₹50k', '₹50k - ₹1 Lakh', '₹1 Lakh - ₹3 Lakh', 'Over ₹3 Lakh', 'No Limit'].map(opt => (
+              <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, fee: prev.fee === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.fee === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
+                {opt}
+              </button>
+            ))}
           </div>
         </div>
       )}
@@ -411,92 +334,25 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   const renderCourseForm = () => (
     <div className="space-y-6">
       <div>
-        <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">What area interests you?</h3>
+        <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">Domain / Field</h3>
         <div className="flex flex-wrap gap-2">
-          {['Commerce', 'Finance', 'Technology', 'Science', 'Management', 'Design', 'Media', 'Law', 'Other'].map(opt => (
-            <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, courseInterest: prev.courseInterest === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.courseInterest === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
+          {['Commerce', 'Finance', 'Media', 'Tech', 'Management', 'Arts'].map(opt => (
+            <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, domain: prev.domain === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.domain === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
               {opt}
             </button>
           ))}
         </div>
       </div>
-      {pendingFilters.courseInterest && (
-        <div className="animate-fade-in space-y-6">
-          <div>
-            <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">What are you looking for?</h3>
-            <div className="flex flex-wrap gap-2">
-              {['Degree', 'Professional Course', 'Skill Course', 'Certification', 'Exam Preparation'].map(opt => (
-                <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, courseType: prev.courseType === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.courseType === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-                  {opt}
-                </button>
-              ))}
-            </div>
+      {pendingFilters.domain && (
+        <div className="animate-fade-in">
+          <h3 className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3 uppercase tracking-wider">Degree Level</h3>
+          <div className="flex flex-wrap gap-2">
+            {['Undergraduate', 'Postgraduate', 'Diploma', 'Certification'].map(opt => (
+              <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, degreeLevel: prev.degreeLevel === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.degreeLevel === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
+                {opt}
+              </button>
+            ))}
           </div>
-          {pendingFilters.courseType && (
-            <div>
-              <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">What's your current level?</h3>
-              <div className="flex flex-wrap gap-2">
-                {['10th', '12th', 'Graduate', 'Working'].map(opt => (
-                  <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, courseLevel: prev.courseLevel === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.courseLevel === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-                    {opt}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
-
-  const renderCareerForm = () => (
-    <div className="space-y-6">
-      <div>
-        <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">What are you interested in?</h3>
-        <div className="flex flex-wrap gap-2">
-          {['Finance', 'Technology', 'Business', 'Design', 'Law', 'Media', 'Science', 'Other'].map(opt => (
-            <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, careerInterest: prev.careerInterest === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.careerInterest === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-              {opt}
-            </button>
-          ))}
-        </div>
-      </div>
-      {pendingFilters.careerInterest && (
-        <div className="animate-fade-in space-y-6">
-          <div>
-            <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">What do you enjoy doing?</h3>
-            <div className="flex flex-wrap gap-2">
-              {['Working with numbers', 'Building things', 'Solving problems', 'Creating things', 'Working with people', 'Researching / analysing', 'Leading / managing'].map(opt => (
-                <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, careerActivity: prev.careerActivity === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.careerActivity === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-                  {opt}
-                </button>
-              ))}
-            </div>
-          </div>
-          {pendingFilters.careerActivity && (
-            <div>
-              <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">Where are you in your education?</h3>
-              <div className="flex flex-wrap gap-2">
-                {['10th / SSC', '12th / HSC', 'Graduate', 'Working'].map(opt => (
-                  <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, careerEducation: prev.careerEducation === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.careerEducation === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-                    {opt}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-          {pendingFilters.careerEducation && (
-            <div>
-              <h3 className="text-sm font-semibold text-slate-900 dark:text-[#F4F7FB] mb-3">What kind of work interests you?</h3>
-              <div className="flex flex-wrap gap-2">
-                {['Corporate', 'Creative', 'Technical', 'Business', 'Public-facing'].map(opt => (
-                  <button key={opt} onClick={() => setPendingFilters(prev => ({ ...prev, careerWorkType: prev.careerWorkType === opt ? null : opt }))} className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pendingFilters.careerWorkType === opt ? 'bg-[#007DCC] text-white shadow-xs' : 'bg-slate-50 dark:bg-[#161c27] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50'}`}>
-                    {opt}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       )}
     </div>
@@ -617,7 +473,8 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
               <div className="max-w-2xl bg-white dark:bg-[#0D1828] rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-white/10 shadow-sm mx-auto sm:mx-0">
                 <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">Tell us what you're looking for</h2>
                 <p className="text-sm text-slate-500 dark:text-[#71839A] mb-8">Select a few options below so we can recommend the best matches in Mumbai.</p>
-                {activeCategory === 'classes' ? renderClassForm() : activeCategory === 'courses' ? renderCourseForm() : activeCategory === 'careers' ? renderCareerForm() : renderCollegeForm()}
+
+                {activeCategory === 'classes' ? renderClassForm() : activeCategory === 'courses' ? renderCourseForm() : renderCollegeForm()}
 
                 <div className="mt-10 pt-6 border-t border-slate-100 dark:border-white/5">
                   <button
@@ -628,7 +485,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                     }}
                     className="w-full sm:w-auto px-8 py-3.5 bg-[#007DCC] hover:bg-[#006cb0] text-white text-sm font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 active:scale-95"
                   >
-                    <span>{activeCategory === 'careers' ? 'Explore Careers' : `Find ${activeCategory === 'classes' ? 'Classes' : activeCategory === 'colleges' ? 'Colleges' : activeCategory === 'courses' ? 'Courses' : 'Results'}`}</span>
+                    <span>Find {activeCategory === 'classes' ? 'Classes' : activeCategory === 'colleges' ? 'Colleges' : activeCategory === 'courses' ? 'Courses' : 'Results'}</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -755,7 +612,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
             </div>
             
             <div className="p-6 overflow-y-auto space-y-8">
-               {activeCategory === 'classes' ? renderClassForm() : activeCategory === 'courses' ? renderCourseForm() : activeCategory === 'careers' ? renderCareerForm() : renderCollegeForm()}
+               {activeCategory === 'classes' ? renderClassForm() : activeCategory === 'courses' ? renderCourseForm() : renderCollegeForm()}
             </div>
 
             <div className="p-6 border-t border-slate-200 dark:border-white/10 flex justify-end gap-3">
