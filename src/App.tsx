@@ -15,6 +15,8 @@ import { MentorDetailScreen } from './components/MentorDetailScreen';
 import { CompareModal } from './components/CompareModal';
 import { SignInModal } from './components/SignInModal';
 import { CutoffModal } from './components/CutoffModal';
+import { ClassesModal } from './components/ClassesModal';
+import { CategoryFilterModal, FilterCategoryType } from './components/CategoryFilterModal';
 import { MobileSidebar } from './components/MobileSidebar';
 import { PencilLoader } from './components/PencilLoader';
 import { Check } from 'lucide-react';
@@ -33,29 +35,62 @@ export default function App() {
   });
   const [isSignInOpen, setIsSignInOpen] = useState<boolean>(false);
   const [isCutoffOpen, setIsCutoffOpen] = useState<boolean>(false);
+  const [isClassesOpen, setIsClassesOpen] = useState<boolean>(false);
+  const [isCategoryFilterOpen, setIsCategoryFilterOpen] = useState<boolean>(false);
+  const [activeCategoryFilter, setActiveCategoryFilter] = useState<FilterCategoryType>('colleges');
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState<boolean>(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isBooting, setIsBooting] = useState<boolean>(true);
+
+  const handleOpenCategoryFilter = (cat: FilterCategoryType) => {
+    setActiveCategoryFilter(cat);
+    setIsCategoryFilterOpen(true);
+  };
+
+  const handleApplyCategoryFilters = (cat: FilterCategoryType, filters: Record<string, string>) => {
+    setIsCategoryFilterOpen(false);
+    const params = new URLSearchParams();
+    Object.entries(filters).forEach(([k, v]) => {
+      if (v && !v.startsWith('All')) {
+        params.set(k, v);
+      }
+    });
+    const queryString = params.toString();
+    navigate(`/${cat}${queryString ? '?' + queryString : ''}`);
+  };
+
+  const handleApplyClassesFilters = (filters: { interest?: string; region?: string; specialization?: string; searchQuery?: string }) => {
+    setIsClassesOpen(false);
+    const params = new URLSearchParams();
+    if (filters.interest && !filters.interest.startsWith('All')) params.set('interest', filters.interest);
+    if (filters.region && !filters.region.startsWith('All')) params.set('region', filters.region);
+    if (filters.specialization && !filters.specialization.startsWith('All')) params.set('specialization', filters.specialization);
+    if (filters.searchQuery) params.set('query', filters.searchQuery);
+    const queryString = params.toString();
+    navigate(`/classes${queryString ? '?' + queryString : ''}`);
+  };
+
+  const handleApplyCutoffFilters = (filters: { educationLevel?: string; selectedRangeId?: string | null; percentageExact?: string; stream?: string; region?: string; searchQuery?: string }) => {
+    setIsCutoffOpen(false);
+    const params = new URLSearchParams();
+    if (filters.educationLevel) params.set('educationLevel', filters.educationLevel);
+    if (filters.selectedRangeId) params.set('range', filters.selectedRangeId);
+    if (filters.percentageExact) params.set('percentage', filters.percentageExact);
+    if (filters.stream && !filters.stream.startsWith('All')) params.set('stream', filters.stream);
+    if (filters.region && !filters.region.startsWith('All')) params.set('region', filters.region);
+    if (filters.searchQuery) params.set('query', filters.searchQuery);
+    const queryString = params.toString();
+    navigate(`/cutoffs${queryString ? '?' + queryString : ''}`);
+  };
   const logoRef = useRef<HTMLImageElement>(null);
   
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      if (logoRef.current) {
-        gsap.fromTo(logoRef.current, 
-          { opacity: 0, scale: 0.9 }, 
-          { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out' }
-        );
-      }
-    });
-
+    // Keep initial loader visible for 2.8 seconds
     const timer = setTimeout(() => {
       setIsBooting(false);
-    }, 700);
+    }, 2800);
 
-    return () => {
-      clearTimeout(timer);
-      ctx.revert();
-    };
+    return () => clearTimeout(timer);
   }, []);
 
   const showToast = (message: string) => {
@@ -156,11 +191,14 @@ export default function App() {
 
   if (isBooting) {
     return (
-      <div className={`min-h-screen flex items-center justify-center font-sans transition-colors duration-200 bg-slate-100 dark:bg-[#070D18]`}>
-        <div className="text-center animate-pulse">
-           <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB]">
-             Infostaan<span className="text-[#007DCC]">.</span>
-           </h1>
+      <div className="min-h-screen flex items-center justify-center font-sans transition-colors duration-200 bg-slate-100 dark:bg-[#070D18]">
+        <div className="text-center px-4 animate-in fade-in duration-150">
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB]">
+            Infostaan<span className="text-[#007DCC]">.</span>
+          </h1>
+          <p className="text-xs sm:text-sm font-semibold tracking-wide text-slate-500 dark:text-[#71839A] mt-1.5">
+            guiding your journey
+          </p>
         </div>
       </div>
     );
@@ -192,6 +230,8 @@ export default function App() {
               onNavigate={(path) => navigate(path)}
               onSelectCollege={handleSelectCollege}
               onOpenCutoff={() => setIsCutoffOpen(true)}
+              onOpenClasses={() => setIsClassesOpen(true)}
+              onOpenCategoryFilter={handleOpenCategoryFilter}
             />
           } />
           
@@ -204,11 +244,55 @@ export default function App() {
             />
           } />
 
-          <Route path="/explore" element={<Navigate to="/search" replace />} />
-          <Route path="/colleges" element={<Navigate to="/search?category=colleges" replace />} />
-          <Route path="/courses" element={<Navigate to="/search?category=courses" replace />} />
-          <Route path="/careers" element={<Navigate to="/search?category=careers" replace />} />
-          <Route path="/internships" element={<Navigate to="/search" replace />} />
+          <Route path="/colleges" element={
+            <SearchResultsScreen
+              defaultCategory="colleges"
+              onNavigate={(path) => navigate(path)}
+              onSelectCollege={handleSelectCollege}
+              savedItemIds={savedItems.map((i) => i.id)}
+              onOpenCutoff={() => setIsCutoffOpen(true)}
+            />
+          } />
+
+          <Route path="/courses" element={
+            <SearchResultsScreen
+              defaultCategory="courses"
+              onNavigate={(path) => navigate(path)}
+              onSelectCollege={handleSelectCollege}
+              savedItemIds={savedItems.map((i) => i.id)}
+              onOpenCutoff={() => setIsCutoffOpen(true)}
+            />
+          } />
+
+          <Route path="/careers" element={
+            <SearchResultsScreen
+              defaultCategory="careers"
+              onNavigate={(path) => navigate(path)}
+              onSelectCollege={handleSelectCollege}
+              savedItemIds={savedItems.map((i) => i.id)}
+              onOpenCutoff={() => setIsCutoffOpen(true)}
+            />
+          } />
+
+          <Route path="/classes" element={
+            <SearchResultsScreen
+              defaultCategory="classes"
+              onNavigate={(path) => navigate(path)}
+              onSelectCollege={handleSelectCollege}
+              savedItemIds={savedItems.map((i) => i.id)}
+              onOpenCutoff={() => setIsCutoffOpen(true)}
+            />
+          } />
+
+          <Route path="/cutoffs" element={
+            <SearchResultsScreen
+              defaultCategory="cutoffs"
+              onNavigate={(path) => navigate(path)}
+              onSelectCollege={handleSelectCollege}
+              savedItemIds={savedItems.map((i) => i.id)}
+              onOpenCutoff={() => setIsCutoffOpen(true)}
+            />
+          } />
           
           <Route path="/college/:slug" element={
             <CollegeDetailScreen
@@ -293,6 +377,22 @@ export default function App() {
         isOpen={isCutoffOpen}
         onClose={() => setIsCutoffOpen(false)}
         onSelectCollege={handleSelectCollege}
+        onApplyFilters={handleApplyCutoffFilters}
+      />
+
+      {/* Classes Filter Wizard Modal */}
+      <ClassesModal
+        isOpen={isClassesOpen}
+        onClose={() => setIsClassesOpen(false)}
+        onApplyFilters={handleApplyClassesFilters}
+      />
+
+      {/* Data-driven Category Filter Modal (Colleges, Courses, Careers) */}
+      <CategoryFilterModal
+        isOpen={isCategoryFilterOpen}
+        onClose={() => setIsCategoryFilterOpen(false)}
+        category={activeCategoryFilter}
+        onApplyFilters={handleApplyCategoryFilters}
       />
 
       {/* Universal Calm Footer */}

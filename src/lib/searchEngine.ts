@@ -2,6 +2,7 @@ import { SearchResultItem, CategoryType } from '../types';
 import { ALL_SEARCH_RESULTS } from '../data/mockData';
 import { CLASSES, ClassData } from '../data/classes';
 import { CUTOFFS, CutoffMetadata } from '../data/cutoffs';
+import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
 
 export function searchInfostaan(query: string, category: CategoryType): SearchResultItem[] {
   const q = query.toLowerCase().trim();
@@ -69,7 +70,25 @@ export function searchInfostaan(query: string, category: CategoryType): SearchRe
       collegeId: cutoff.collegeId,
       sourceFile: cutoff.sourceFile
     }));
-    results = [...results, ...cutoffResults];
+
+    const fyjcResults: SearchResultItem[] = FYJC_CUTOFFS.filter(c => {
+      if (!q) return true;
+      return c.collegeName.toLowerCase().includes(q) || c.stream.toLowerCase().includes(q);
+    }).slice(0, 30).map(c => ({
+      id: c.id,
+      category: 'cutoffs',
+      badgeCategory: `${c.stream} Cutoff`,
+      badgeSub: `${c.cutoff}% (${c.year})`,
+      title: c.collegeName,
+      subtitle: `FYJC Cutoff: ${c.cutoff}% • Choice Code: ${c.choiceCode} • Category: ${c.category || 'General'}`,
+      meta: [c.stream, `Category: ${c.category}`, `Code: ${c.choiceCode}`],
+      whyRelevant: `Official FYJC cutoff threshold: ${c.cutoff}%`,
+      tagColor: 'tertiary',
+      actionLabel: 'View Details',
+      collegeId: c.collegeId || 'mithibai',
+    }));
+
+    results = [...results, ...cutoffResults, ...fyjcResults];
   }
 
   // Simple sorting: put cutoffs and classes near the top if they strongly match

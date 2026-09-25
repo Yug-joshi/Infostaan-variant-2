@@ -1,17 +1,18 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { X, Search, ArrowRight, ArrowLeft, Activity, SlidersHorizontal, GraduationCap, CheckCircle2, RotateCcw, MapPin } from 'lucide-react';
+import { X, Search, ArrowRight, ArrowLeft, Activity, SlidersHorizontal, GraduationCap, CheckCircle2, MapPin, Building2 } from 'lucide-react';
 import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
-import { PercentageDial } from './PercentageDial';
+import { PercentageScale } from './PercentageScale';
 
 interface CutoffModalProps {
   isOpen: boolean;
   onClose: () => void;
   onSelectCollege: (id: string) => void;
+  onApplyFilters?: (filters: { educationLevel: string; selectedRangeId: string | null; percentageExact: string; stream: string; region: string; searchQuery: string }) => void;
 }
 
 // Education levels supported by the current dataset
 const EDUCATION_LEVELS = [
-  { id: '12th', label: '12th / FYJC', hasData: true, desc: 'First Year Junior College (Class 11/12) cutoffs across Mumbai' },
+  { id: 'fyjc', label: 'FYJC / 11th', hasData: true, desc: 'First Year Junior College (11th admission) cutoffs across Mumbai' },
   { id: '10th', label: '10th / SSC', hasData: false, desc: 'Secondary School Certificate cutoffs (Data Coming Soon)' },
   { id: 'jee', label: 'JEE Main / Engineering', hasData: false, desc: 'Engineering degree admission cutoffs (Data Coming Soon)' },
   { id: 'law3', label: 'Law 3-Year (MH CET)', hasData: false, desc: 'LLB 3-Year degree cutoffs (Data Coming Soon)' },
@@ -19,6 +20,7 @@ const EDUCATION_LEVELS = [
 ];
 
 const STREAMS = ['All Streams', 'Arts', 'Commerce', 'Science'];
+
 const MUMBAI_REGIONS = [
   'All Mumbai',
   'South Mumbai',
@@ -27,26 +29,39 @@ const MUMBAI_REGIONS = [
   'Eastern Suburbs',
   'Harbour / Central-East',
 ];
-const CATEGORIES = ['General'];
-const YEARS = ['2026-27'];
+
+interface PercentageRangeOption {
+  id: string;
+  label: string;
+  min: number;
+  max: number;
+}
+
+const PERCENTAGE_RANGES: PercentageRangeOption[] = [
+  { id: '35-45', label: '35–45%', min: 35, max: 45 },
+  { id: '45-55', label: '45–55%', min: 45, max: 55 },
+  { id: '55-65', label: '55–65%', min: 55, max: 65 },
+  { id: '65-75', label: '65–75%', min: 65, max: 75 },
+  { id: '75-85', label: '75–85%', min: 75, max: 85 },
+  { id: '85-95', label: '85–95%', min: 85, max: 95 },
+  { id: '95-100', label: '95–100%', min: 95, max: 100 },
+];
 
 interface Filters {
   searchQuery: string;
   educationLevel: string;
   stream: string;
   region: string;
-  category: string;
-  year: string;
+  selectedRangeId: string | null;
   percentageExact: string;
 }
 
 const DEFAULT_FILTERS: Filters = {
   searchQuery: '',
-  educationLevel: '12th',
+  educationLevel: 'fyjc',
   stream: 'All Streams',
   region: 'All Mumbai',
-  category: 'General',
-  year: '2026-27',
+  selectedRangeId: '75-85',
   percentageExact: '85',
 };
 
@@ -54,8 +69,9 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
   isOpen,
   onClose,
   onSelectCollege,
+  onApplyFilters,
 }) => {
-  // Wizard Step: 1 = Education Level, 2 = Percentage Dial, 3 = Stream & Region, 4 = Results
+  // Wizard Step: 1 = Education Level, 2 = Percentage Range / Dial, 3 = Stream & Region, 4 = Results
   const [step, setStep] = useState<number>(1);
   const [pending, setPending] = useState<Filters>(DEFAULT_FILTERS);
   const [applied, setApplied] = useState<Filters>(DEFAULT_FILTERS);
@@ -79,8 +95,12 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
   const dialValue = parseFloat(pending.percentageExact) || 85;
 
   const handleApply = () => {
-    setApplied({ ...pending });
-    setStep(4);
+    if (onApplyFilters) {
+      onApplyFilters(pending);
+    } else {
+      setApplied({ ...pending });
+      setStep(4);
+    }
   };
 
   // Region mapper for cutoff records
@@ -141,14 +161,12 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
     if (name.includes("CHEMBUR") || name.includes("VASHI") || name.includes("BELAPUR")) {
       return 'Harbour / Central-East';
     }
-    return 'All Mumbai'; // Default fallback for unmapped records
+    return 'All Mumbai';
   };
 
   // Filter colleges based on APPLIED filters
   const filteredColleges = useMemo(() => {
-    if (applied.educationLevel !== '12th') return [];
-
-    const userPct = parseFloat(applied.percentageExact);
+    if (applied.educationLevel !== 'fyjc' && applied.educationLevel !== '12th') return [];
 
     let result = FYJC_CUTOFFS.filter((c) => {
       const q = applied.searchQuery.toLowerCase().trim();
@@ -160,27 +178,26 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
       const matchesStream =
         applied.stream === 'All Streams' || c.stream === applied.stream;
 
-      const matchesYear = c.year === applied.year;
-      const matchesCategory = c.category === applied.category;
-
-      // Region check: if All Mumbai, allow all; else check mapped region or fallback
       const collegeRegion = getCollegeRegion(c.collegeName);
       const matchesRegion =
         applied.region === 'All Mumbai' ||
-        collegeRegion === applied.region ||
-        collegeRegion === 'All Mumbai';
+        collegeRegion === applied.region;
 
-      // Cutoff eligibility check: student qualifies if college cutoff <= student percentage
-      const matchesPct = isNaN(userPct) || c.cutoff <= userPct;
+      // Range filtering takes precedence if a range is selected
+      let matchesPct = true;
+      if (applied.selectedRangeId) {
+        const range = PERCENTAGE_RANGES.find((r) => r.id === applied.selectedRangeId);
+        if (range) {
+          matchesPct = c.cutoff >= range.min && c.cutoff <= range.max;
+        }
+      } else {
+        const userPct = parseFloat(applied.percentageExact);
+        if (!isNaN(userPct)) {
+          matchesPct = c.cutoff <= userPct;
+        }
+      }
 
-      return (
-        matchesSearch &&
-        matchesStream &&
-        matchesYear &&
-        matchesCategory &&
-        matchesRegion &&
-        matchesPct
-      );
+      return matchesSearch && matchesStream && matchesRegion && matchesPct;
     });
 
     if (sortBy === 'Highest cutoff') {
@@ -218,9 +235,9 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                 {step === 1
                   ? 'Step 1 of 3: Select Education Level'
                   : step === 2
-                  ? 'Step 2 of 3: Set Your Percentage'
+                  ? 'Step 2 of 3: Cutoff Percentage Range'
                   : step === 3
-                  ? 'Step 3 of 3: Field & Region Filters'
+                  ? 'Step 3 of 3: Stream & Region Filters'
                   : `Eligible Colleges (${filteredColleges.length})`}
               </p>
             </div>
@@ -284,55 +301,80 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
             </div>
           )}
 
-          {/* STEP 2: Percentage Selector */}
+          {/* STEP 2: Percentage Range Filter */}
           {step === 2 && (
-            <div className="max-w-xl mx-auto space-y-6 text-center">
+            <div className="max-w-xl mx-auto space-y-4 text-center">
               <div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">
-                  What is your percentage?
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-1">
+                  Select Cutoff Percentage Range
                 </h3>
-                <p className="text-sm text-slate-500 dark:text-[#71839A]">
-                  Use the dial or enter your score to view colleges you qualify for ($\le$ your percentage).
+                <p className="text-xs sm:text-sm text-slate-500 dark:text-[#71839A]">
+                  Pick a target range or adjust your exact percentage to view eligible colleges.
                 </p>
               </div>
 
-              {/* Dial Component */}
-              <div className="py-2">
-                <PercentageDial
-                  value={dialValue}
-                  onChange={(val) => setPendingField('percentageExact', String(val))}
-                />
-              </div>
-
-              {/* Direct numeric input & quick presets */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Exact %:</span>
-                  <input
-                    type="number"
-                    min="0"
-                    max="100"
-                    step="0.1"
-                    value={pending.percentageExact}
-                    onChange={(e) => setPendingField('percentageExact', e.target.value)}
-                    className="w-24 px-3 py-2 rounded-xl bg-slate-100 dark:bg-[#0D1828] border border-slate-300 dark:border-white/10 font-bold text-sm text-center focus:outline-none focus:border-[#007DCC]"
-                  />
-                </div>
-
-                <div className="flex items-center gap-2">
-                  {[75, 80, 85, 90, 95].map((pct) => (
+              {/* Quick Select Ranges */}
+              <div>
+                <h4 className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-[#A9B8CA] mb-2 text-left">
+                  Quick select:
+                </h4>
+                <div className="grid grid-cols-3 sm:grid-cols-7 gap-1.5 sm:gap-2">
+                  {PERCENTAGE_RANGES.map((r) => (
                     <button
-                      key={pct}
-                      onClick={() => setPendingField('percentageExact', String(pct))}
-                      className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                        parseFloat(pending.percentageExact) === pct
-                          ? 'bg-[#007DCC] text-white'
-                          : 'bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-[#A9B8CA] hover:bg-slate-200 dark:hover:bg-white/10'
+                      key={r.id}
+                      type="button"
+                      onClick={() => {
+                        setPendingField('selectedRangeId', r.id);
+                        setPendingField('percentageExact', String(r.max));
+                      }}
+                      className={`py-2 px-1.5 rounded-xl border text-xs font-bold transition-all text-center ${
+                        pending.selectedRangeId === r.id
+                          ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
+                          : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
                       }`}
                     >
-                      {pct}%
+                      {r.label}
                     </button>
                   ))}
+                </div>
+              </div>
+
+              {/* Horizontal Percentage Selector Component */}
+              <div className="pt-2 border-t border-slate-100 dark:border-white/5">
+                <PercentageScale
+                  value={dialValue}
+                  onChange={(val) => {
+                    setPendingField('percentageExact', String(val));
+                    const matched = PERCENTAGE_RANGES.find(r => val >= r.min && val <= r.max);
+                    setPendingField('selectedRangeId', matched ? matched.id : null);
+                  }}
+                />
+
+                {/* Exact Percentage Input */}
+                <div className="flex items-center justify-center gap-2 mt-2 pt-2 border-t border-slate-100 dark:border-white/5">
+                  <span className="text-xs font-bold text-slate-500 dark:text-[#A9B8CA]">
+                    Or enter your percentage:
+                  </span>
+                  <div className="flex items-center gap-1">
+                    <input
+                      type="number"
+                      min="0"
+                      max="100"
+                      step="0.1"
+                      value={pending.percentageExact}
+                      onChange={(e) => {
+                        const raw = e.target.value;
+                        setPendingField('percentageExact', raw);
+                        const val = parseFloat(raw);
+                        if (!isNaN(val)) {
+                          const matched = PERCENTAGE_RANGES.find(r => val >= r.min && val <= r.max);
+                          setPendingField('selectedRangeId', matched ? matched.id : null);
+                        }
+                      }}
+                      className="w-20 px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-[#0D1828] border border-slate-300 dark:border-white/10 font-bold text-sm text-center text-slate-900 dark:text-[#F4F7FB] focus:outline-none focus:border-[#007DCC]"
+                    />
+                    <span className="font-bold text-sm text-slate-500">%</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -346,7 +388,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                   Stream & Mumbai Region
                 </h3>
                 <p className="text-sm text-slate-500 dark:text-[#71839A]">
-                  Filter cutoffs by stream and target Mumbai regional zone.
+                  Filter cutoffs by academic stream and target Mumbai region.
                 </p>
               </div>
 
@@ -397,7 +439,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
             </div>
           )}
 
-          {/* STEP 4: Cutoffs Results List */}
+          {/* STEP 4: Cutoffs Results List (Vertical Stacked Cards) */}
           {step === 4 && (
             <div className="space-y-6">
               {/* Search & Sort Bar */}
@@ -428,7 +470,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                   </select>
 
                   <button
-                    onClick={() => setStep(1)}
+                    onClick={() => setStep(3)}
                     className="px-4 py-2.5 bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 rounded-xl text-xs font-bold text-[#007DCC] dark:text-[#86cfff] hover:bg-slate-50 dark:hover:bg-white/5 transition-all flex items-center gap-1.5 shrink-0"
                   >
                     <SlidersHorizontal className="w-3.5 h-3.5" />
@@ -437,57 +479,74 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                 </div>
               </div>
 
-              {/* Results Cards */}
+              {/* Vertical Stacked Result Cards */}
               {displayedColleges.length === 0 ? (
                 <div className="p-12 text-center rounded-2xl bg-slate-50 dark:bg-[#0D1828] border border-slate-200 dark:border-white/10">
                   <p className="text-base font-bold text-slate-900 dark:text-[#F4F7FB] mb-1">
                     No matching cutoffs found
                   </p>
                   <p className="text-xs text-slate-500 dark:text-[#71839A] mb-4">
-                    Try adjusting your percentage dial or selecting All Mumbai region.
+                    Try adjusting your percentage range or selecting All Mumbai region.
                   </p>
                   <button
-                    onClick={() => setStep(1)}
+                    onClick={() => setStep(2)}
                     className="px-4 py-2 bg-[#007DCC] text-white text-xs font-bold rounded-xl"
                   >
-                    Back to Wizard
+                    Back to Range Selection
                   </button>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {displayedColleges.map((c, idx) => (
-                    <div
-                      key={`${c.collegeName}-${c.stream}-${idx}`}
-                      onClick={() => onSelectCollege(c.collegeSlug || 'mithibai')}
-                      className="p-5 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50 transition-all cursor-pointer flex items-center justify-between gap-4 group shadow-2xs"
-                    >
-                      <div>
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-[#007DCC] dark:text-[#86cfff] text-[10px] font-bold uppercase">
-                            {c.stream}
-                          </span>
-                          <span className="text-[10px] font-medium text-slate-400">
-                            {getCollegeRegion(c.collegeName)}
-                          </span>
-                        </div>
-                        <h4 className="font-bold text-sm sm:text-base text-slate-900 dark:text-[#F4F7FB] group-hover:text-[#007DCC] transition-colors leading-snug">
-                          {c.collegeName}
-                        </h4>
-                        <p className="text-xs text-slate-500 dark:text-[#71839A] mt-1">
-                          Eligible for {applied.percentageExact}% · Code: {c.choiceCode || 'MU00'}
-                        </p>
-                      </div>
+                <div className="flex flex-col gap-3.5">
+                  {displayedColleges.map((c, idx) => {
+                    const slug = c.collegeId || 'mithibai';
+                    const region = getCollegeRegion(c.collegeName);
 
-                      <div className="text-right shrink-0">
-                        <div className="text-xl sm:text-2xl font-black text-[#007DCC] dark:text-[#86cfff]">
-                          {c.cutoff}%
+                    return (
+                      <div
+                        key={`${c.collegeName}-${c.stream}-${idx}`}
+                        className="p-5 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 group shadow-2xs"
+                      >
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                            <span className="px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-[#007DCC] dark:text-[#86cfff] text-[10px] font-extrabold uppercase">
+                              {c.stream}
+                            </span>
+                            <span className="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-[#A9B8CA] text-[10px] font-semibold flex items-center gap-1">
+                              <MapPin className="w-3 h-3 text-[#007DCC]" />
+                              {region}
+                            </span>
+                            {c.year && (
+                              <span className="text-[10px] font-semibold text-slate-400">
+                                {c.year}
+                              </span>
+                            )}
+                          </div>
+
+                          {/* Clickable College Name */}
+                          <button
+                            type="button"
+                            onClick={() => onSelectCollege(slug)}
+                            className="text-left font-bold text-base sm:text-lg text-slate-900 dark:text-[#F4F7FB] hover:text-[#007DCC] dark:hover:text-[#86cfff] transition-colors leading-snug block truncate group-hover:underline cursor-pointer"
+                          >
+                            {c.collegeName}
+                          </button>
+
+                          <p className="text-xs text-slate-500 dark:text-[#71839A] mt-1">
+                            Category: {c.category || 'General'} • Code: {c.choiceCode || 'MU00'}
+                          </p>
                         </div>
-                        <span className="text-[10px] font-semibold text-slate-400">
-                          Cutoff
-                        </span>
+
+                        <div className="flex sm:flex-col items-center sm:items-end justify-between shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100 dark:border-white/5">
+                          <div className="text-2xl sm:text-3xl font-black text-[#007DCC] dark:text-[#86cfff]">
+                            {c.cutoff}%
+                          </div>
+                          <span className="text-[10px] font-bold uppercase text-slate-400 tracking-wider">
+                            FYJC Cutoff
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -504,6 +563,14 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
               <ArrowLeft className="w-4 h-4" />
               <span>Previous</span>
             </button>
+          ) : step === 1 ? (
+            <button
+              onClick={onClose}
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] text-xs font-bold transition-all"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Cancel</span>
+            </button>
           ) : (
             <div />
           )}
@@ -513,7 +580,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
               onClick={() => setStep(2)}
               className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
             >
-              <span>Next: Percentage</span>
+              <span>Next: Percentage Range</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           )}

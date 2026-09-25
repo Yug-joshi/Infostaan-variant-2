@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useCallback } from 'react';
-import { GraduationCap } from 'lucide-react';
+import React, { useRef, useCallback } from 'react';
 
 interface PercentageDialProps {
   value: number; // 0 to 100
@@ -7,280 +6,119 @@ interface PercentageDialProps {
   className?: string;
 }
 
-function polarToCartesian(centerX: number, centerY: number, radius: number, angleInDegrees: number) {
-  const angleInRadians = (angleInDegrees - 90) * Math.PI / 180.0;
-  return {
-    x: centerX + radius * Math.cos(angleInRadians),
-    y: centerY + radius * Math.sin(angleInRadians)
-  };
-}
-
-function describeArc(x: number, y: number, radius: number, startAngle: number, endAngle: number) {
-  const start = polarToCartesian(x, y, radius, startAngle);
-  const end = polarToCartesian(x, y, radius, endAngle);
-  const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
-  return [
-    "M", start.x, start.y,
-    "A", radius, radius, 0, largeArcFlag, 1, end.x, end.y
-  ].join(" ");
-}
+const SCALE_TICKS = [35, 45, 55, 65, 75, 85, 95, 100];
 
 export const PercentageDial: React.FC<PercentageDialProps> = ({ value, onChange, className = '' }) => {
-  const svgRef = useRef<SVGSVGElement>(null);
-  const activeArcRef = useRef<SVGPathElement>(null);
-  const knobCircleRef = useRef<SVGCircleElement>(null);
-  const labelGroupRef = useRef<SVGGElement>(null);
-  const labelTextRef = useRef<SVGTextElement>(null);
-  const centerValueRef = useRef<HTMLDivElement>(null);
-
+  const trackRef = useRef<HTMLDivElement>(null);
   const isDraggingRef = useRef(false);
-  const currentValueRef = useRef(value);
-  const rafIdRef = useRef<number | null>(null);
 
-  // Sync ref with prop if not dragging
-  useEffect(() => {
-    if (!isDraggingRef.current) {
-      currentValueRef.current = value;
-      updateVisuals(value);
-    }
-  }, [value]);
+  const clampedValue = Math.min(100, Math.max(0, isNaN(value) ? 85 : value));
 
-  // Math constants
-  const cx = 150;
-  const cy = 150;
-  const radius = 110;
-  const startAngle = -135;
-  const endAngle = 135;
-  const angleRange = endAngle - startAngle;
+  const updateValueFromPointer = useCallback((clientX: number) => {
+    if (!trackRef.current) return;
+    const rect = trackRef.current.getBoundingClientRect();
+    const offsetX = clientX - rect.left;
+    const percentage = Math.min(100, Math.max(0, (offsetX / rect.width) * 100));
+    const rounded = Math.round(percentage * 10) / 10;
+    onChange(rounded);
+  }, [onChange]);
 
-  const updateVisuals = (val: number) => {
-    const clampedVal = Math.max(0, Math.min(100, val));
-    const currentAngle = startAngle + (clampedVal / 100) * angleRange;
-    const knobPos = polarToCartesian(cx, cy, radius, currentAngle);
-
-    // Direct DOM updates for zero latency
-    if (activeArcRef.current) {
-      if (clampedVal > 0) {
-        activeArcRef.current.setAttribute('d', describeArc(cx, cy, radius, startAngle, currentAngle));
-        activeArcRef.current.setAttribute('opacity', '1');
-      } else {
-        activeArcRef.current.setAttribute('opacity', '0');
-      }
-    }
-
-    if (knobCircleRef.current) {
-      knobCircleRef.current.setAttribute('cx', String(knobPos.x));
-      knobCircleRef.current.setAttribute('cy', String(knobPos.y));
-    }
-
-    if (labelGroupRef.current) {
-      labelGroupRef.current.setAttribute('transform', `translate(${knobPos.x}, ${knobPos.y - 32})`);
-    }
-
-    if (labelTextRef.current) {
-      labelTextRef.current.textContent = `${clampedVal.toFixed(1)}%`;
-    }
-
-    if (centerValueRef.current) {
-      centerValueRef.current.innerHTML = `${clampedVal.toFixed(1)}<span className="text-2xl sm:text-3xl text-slate-400 dark:text-[#71839A]">%</span>`;
-    }
-  };
-
-  const calculatePercentageFromPointer = useCallback((clientX: number, clientY: number) => {
-    if (!svgRef.current) return currentValueRef.current;
-    const rect = svgRef.current.getBoundingClientRect();
-    
-    // Position relative to SVG center (accounting for viewBox scale)
-    const x = clientX - rect.left - (rect.width / 2);
-    const y = clientY - rect.top - (rect.height / 2);
-
-    let angle = Math.atan2(y, x) * (180 / Math.PI) + 90;
-    
-    if (angle > 180) angle -= 360;
-
-    // Constrain to arc range [-135, 135]
-    if (angle < startAngle && angle > -180) angle = startAngle;
-    if (angle > endAngle || angle < -180) {
-       if (angle > endAngle && angle < 180) {
-           angle = endAngle;
-       } else if (angle < startAngle) {
-           angle = startAngle;
-       }
-    }
-
-    const percentage = ((angle - startAngle) / angleRange) * 100;
-    return Math.max(0, Math.min(100, Number(percentage.toFixed(1))));
-  }, [angleRange, startAngle, endAngle]);
-
-  const handlePointerDown = (e: React.PointerEvent<SVGSVGElement>) => {
+  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
     isDraggingRef.current = true;
-    if (svgRef.current) {
-      svgRef.current.setPointerCapture(e.pointerId);
-    }
-    const newVal = calculatePercentageFromPointer(e.clientX, e.clientY);
-    currentValueRef.current = newVal;
-    updateVisuals(newVal);
-    onChange(newVal);
+    e.currentTarget.setPointerCapture(e.pointerId);
+    updateValueFromPointer(e.clientX);
   };
 
-  const handlePointerMove = (e: React.PointerEvent<SVGSVGElement>) => {
-    if (!isDraggingRef.current) return;
-    const clientX = e.clientX;
-    const clientY = e.clientY;
-
-    if (rafIdRef.current) {
-      cancelAnimationFrame(rafIdRef.current);
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (isDraggingRef.current) {
+      updateValueFromPointer(e.clientX);
     }
-
-    rafIdRef.current = requestAnimationFrame(() => {
-      const newVal = calculatePercentageFromPointer(clientX, clientY);
-      if (newVal !== currentValueRef.current) {
-        currentValueRef.current = newVal;
-        updateVisuals(newVal);
-        onChange(newVal);
-      }
-    });
   };
 
-  const handlePointerUp = (e: React.PointerEvent<SVGSVGElement>) => {
+  const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
     if (isDraggingRef.current) {
       isDraggingRef.current = false;
-      if (svgRef.current) {
-        try {
-          svgRef.current.releasePointerCapture(e.pointerId);
-        } catch (_) {}
-      }
-      onChange(currentValueRef.current);
+      try {
+        e.currentTarget.releasePointerCapture(e.pointerId);
+      } catch (_) {}
     }
   };
 
-  // Generate tick marks (every 5%)
-  const ticks = Array.from({ length: 21 }).map((_, i) => {
-    const p = i * 5;
-    const a = startAngle + (p / 100) * angleRange;
-    const isMajor = p % 25 === 0;
-    const inner = polarToCartesian(cx, cy, isMajor ? radius + 15 : radius + 15, a);
-    const outer = polarToCartesian(cx, cy, isMajor ? radius + 25 : radius + 20, a);
-    return { p, a, inner, outer, isMajor };
-  });
-
-  const initialAngle = startAngle + (Math.max(0, Math.min(100, value)) / 100) * angleRange;
-  const initialKnobPos = polarToCartesian(cx, cy, radius, initialAngle);
-
   return (
-    <div className={`relative flex flex-col items-center justify-center select-none ${className}`}>
-      <svg
-        ref={svgRef}
-        viewBox="0 0 300 300"
-        className="w-full h-auto max-w-[320px] sm:max-w-[360px] touch-none cursor-pointer"
-        onPointerDown={handlePointerDown}
-        onPointerMove={handlePointerMove}
-        onPointerUp={handlePointerUp}
-        onPointerCancel={handlePointerUp}
-        style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.05))' }}
-      >
-        <defs>
-          <linearGradient id="activeArcGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#007DCC" />
-            <stop offset="100%" stopColor="#5B5CE2" />
-          </linearGradient>
-          <filter id="knobShadow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="#000000" floodOpacity="0.15" />
-          </filter>
-        </defs>
-
-        {/* Ticks */}
-        {ticks.map((tick, i) => (
-          <g key={i}>
-            <line
-              x1={tick.inner.x}
-              y1={tick.inner.y}
-              x2={tick.outer.x}
-              y2={tick.outer.y}
-              stroke="currentColor"
-              strokeWidth={tick.isMajor ? 2 : 1.5}
-              className="text-slate-300 dark:text-slate-700"
-            />
-            {tick.isMajor && (
-              <text
-                x={polarToCartesian(cx, cy, radius + 40, tick.a).x}
-                y={polarToCartesian(cx, cy, radius + 40, tick.a).y}
-                textAnchor="middle"
-                alignmentBaseline="middle"
-                className="text-[10px] font-bold fill-slate-400 dark:fill-[#71839A]"
-              >
-                {tick.p}
-              </text>
-            )}
-          </g>
-        ))}
-
-        {/* Background Track */}
-        <path
-          d={describeArc(cx, cy, radius, startAngle, endAngle)}
-          fill="none"
-          strokeWidth="16"
-          strokeLinecap="round"
-          className="stroke-slate-100 dark:stroke-white/5"
-        />
-
-        {/* Active Arc */}
-        <path
-          ref={activeArcRef}
-          d={describeArc(cx, cy, radius, startAngle, initialAngle)}
-          fill="none"
-          stroke="url(#activeArcGrad)"
-          strokeWidth="16"
-          strokeLinecap="round"
-          opacity={value > 0 ? '1' : '0'}
-        />
-
-        {/* Knob */}
-        <circle
-          ref={knobCircleRef}
-          cx={initialKnobPos.x}
-          cy={initialKnobPos.y}
-          r="14"
-          fill="white"
-          className="cursor-grab active:cursor-grabbing dark:fill-[#0D1828]"
-          filter="url(#knobShadow)"
-          stroke="#5B5CE2"
-          strokeWidth="3"
-        />
-        
-        {/* Floating Percentage Label above Knob */}
-        <g 
-          ref={labelGroupRef}
-          className="pointer-events-none"
-          transform={`translate(${initialKnobPos.x}, ${initialKnobPos.y - 32})`}
-        >
-          <rect x="-24" y="-12" width="48" height="24" rx="6" fill="#007DCC" className="dark:fill-[#19A7E8]" />
-          <text
-            ref={labelTextRef}
-            x="0"
-            y="0"
-            textAnchor="middle"
-            alignmentBaseline="central"
-            className="text-[11px] font-bold fill-white dark:fill-[#070D18]"
-          >
-            {value.toFixed(1)}%
-          </text>
-        </g>
-      </svg>
-
-      {/* Center Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none mt-2 sm:mt-4">
-        <div className="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-3">
-          <GraduationCap className="w-5 h-5 text-[#007DCC] dark:text-[#86cfff]" />
+    <div className={`w-full max-w-xl mx-auto flex flex-col items-center select-none ${className}`}>
+      {/* Current Percentage Prominent Display */}
+      <div className="text-center my-1">
+        <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-[#71839A]">
+          Choose your percentage
+        </span>
+        <div className="text-3xl sm:text-4xl font-black text-[#007DCC] dark:text-[#86cfff] tracking-tight leading-none my-1">
+          {clampedValue.toFixed(1).replace(/\.0$/, '')}%
         </div>
+        <div className="text-[11px] font-medium text-slate-500 dark:text-[#71839A]">
+          Your percentage
+        </div>
+      </div>
+
+      {/* Interactive Horizontal Track & Scale */}
+      <div className="w-full px-3 py-1">
         <div
-          ref={centerValueRef}
-          className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-1"
+          ref={trackRef}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerUp}
+          className="relative w-full h-10 flex items-center cursor-pointer touch-none"
         >
-          {value.toFixed(1)}<span className="text-2xl sm:text-3xl text-slate-400 dark:text-[#71839A]">%</span>
+          {/* Background Track */}
+          <div className="w-full h-2.5 rounded-full bg-slate-200 dark:bg-white/10 relative overflow-hidden">
+            {/* Active Fill Track */}
+            <div
+              className="h-full bg-gradient-to-r from-[#007DCC] to-[#19A7E8] rounded-full transition-all duration-75"
+              style={{ width: `${clampedValue}%` }}
+            />
+          </div>
+
+          {/* Draggable Marker / Knob */}
+          <div
+            className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white dark:bg-[#0D1828] border-3 border-[#007DCC] dark:border-[#86cfff] shadow-md flex items-center justify-center transition-transform active:scale-125 pointer-events-none z-10"
+            style={{ left: `${clampedValue}%` }}
+          >
+            <div className="w-2 h-2 rounded-full bg-[#007DCC] dark:bg-[#86cfff]" />
+          </div>
+
+          {/* Accessible Invisible Range Input Overlay */}
+          <input
+            type="range"
+            min="0"
+            max="100"
+            step="0.1"
+            value={clampedValue}
+            onChange={(e) => onChange(parseFloat(e.target.value))}
+            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20"
+            aria-label="Select cutoff percentage"
+          />
         </div>
-        <div className="text-xs sm:text-sm font-semibold text-slate-500 dark:text-[#71839A]">
-          Your Percentage
+
+        {/* Compact Scale Markers Row: 35 ── 45 ── 55 ── 65 ── 75 ── 85 ── 95 ── 100 */}
+        <div className="relative w-full h-5 mt-0.5">
+          {SCALE_TICKS.map((tick) => {
+            const isCurrent = Math.abs(clampedValue - tick) < 2.5;
+            return (
+              <div
+                key={tick}
+                onClick={() => onChange(tick)}
+                className={`absolute top-0 -translate-x-1/2 flex flex-col items-center cursor-pointer transition-colors ${
+                  isCurrent
+                    ? 'text-[#007DCC] dark:text-[#86cfff] font-extrabold'
+                    : 'text-slate-400 dark:text-slate-500 font-medium hover:text-slate-700 dark:hover:text-[#A9B8CA]'
+                }`}
+                style={{ left: `${tick}%` }}
+              >
+                <div className={`w-0.5 h-1 rounded-full mb-0.5 ${isCurrent ? 'bg-[#007DCC] dark:bg-[#86cfff]' : 'bg-slate-300 dark:bg-white/20'}`} />
+                <span className="text-[10px] leading-none">{tick}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

@@ -14,6 +14,7 @@ export interface SearchResultItem {
   tagColor: 'primary' | 'secondary' | 'tertiary' | 'lavender';
   actionLabel: string;
   collegeId?: string;
+  collegeSlug?: string;
   sourceFile?: string;
 }
 

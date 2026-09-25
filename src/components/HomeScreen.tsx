@@ -24,11 +24,15 @@ import gsap from 'gsap';
 import { ScrollStorySection } from './ScrollStorySection';
 import { ConnectCarousel } from './ConnectCarousel';
 
+import { FilterCategoryType } from './CategoryFilterModal';
+
 interface HomeScreenProps {
   onSearch: (query: string, category?: string) => void;
   onNavigate: (path: string) => void;
   onSelectCollege: (collegeId: string) => void;
   onOpenCutoff: () => void;
+  onOpenClasses: () => void;
+  onOpenCategoryFilter: (category: FilterCategoryType) => void;
 }
 
 export const HomeScreen: React.FC<HomeScreenProps> = ({
@@ -36,6 +40,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   onNavigate,
   onSelectCollege,
   onOpenCutoff,
+  onOpenClasses,
+  onOpenCategoryFilter,
 }) => {
   const [query, setQuery] = useState('');
   const containerRef = useRef<HTMLDivElement>(null);
@@ -237,12 +243,12 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB] mb-10 leading-[1.1]">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB] mb-6 leading-tight">
           What are you looking for?
         </h1>
 
         {/* Search */}
-        <div className="w-full max-w-3xl mb-10 relative z-[60]">
+        <div className="w-full max-w-3xl mb-8 relative z-[60]">
           <form onSubmit={handleSubmit} className="relative w-full group">
             <div className="flex items-center bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-full shadow-xl dark:shadow-2xl transition-all duration-300 focus-within:border-[#007DCC] focus-within:ring-4 focus-within:ring-[#007DCC]/10 focus-within:shadow-[#007DCC]/10 px-3 py-2 sm:px-4">
               <Search className="text-[#007DCC] w-6 h-6 ml-3 shrink-0" />
@@ -297,7 +303,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           </form>
 
           {/* Contextual Suggestions */}
-          <div className="h-6 mt-5">
+          <div className="h-6 mt-4">
             {query.trim().length === 0 && (
               <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-2 text-xs sm:text-sm text-slate-500 dark:text-[#71839A]">
                 <button type="button" onClick={() => onSearch('B.Com colleges in Mumbai')} className="hover:text-[#007DCC] dark:hover:text-[#19A7E8] transition-colors">B.Com colleges</button>
@@ -310,13 +316,13 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           </div>
         </div>
 
-        {/* Discovery Shortcuts */}
-        <div className="w-full max-w-4xl flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-16 relative z-50">
+        {/* Discovery Shortcuts (Opens category filter popups first) */}
+        <div className="w-full max-w-4xl flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-6 relative z-50">
           {[
-            { name: 'Colleges', icon: Building2, path: 'colleges' },
-            { name: 'Courses', icon: GraduationCap, path: 'courses' },
-            { name: 'Careers', icon: TrendingUp, path: 'careers' },
-            { name: 'Classes', icon: MonitorPlay, path: 'classes' },
+            { name: 'Colleges', icon: Building2, action: () => onOpenCategoryFilter('colleges') },
+            { name: 'Courses', icon: GraduationCap, action: () => onOpenCategoryFilter('courses') },
+            { name: 'Careers', icon: TrendingUp, action: () => onOpenCategoryFilter('careers') },
+            { name: 'Classes', icon: MonitorPlay, action: onOpenClasses },
             { name: 'Cutoffs', icon: BarChart2, action: onOpenCutoff },
           ].map((item) => {
             const IconComp = item.icon;
@@ -324,8 +330,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               <button
                 key={item.name}
                 type="button"
-                onClick={item.action ? item.action : () => onSearch('', item.path)}
-                className="px-3 py-2 sm:px-4 sm:py-2.5 rounded-2xl bg-white/60 dark:bg-[#0D1828]/60 hover:bg-white dark:hover:bg-[#0D1828]/80 border border-slate-200 dark:border-white/5 hover:border-[#007DCC]/50 text-slate-700 dark:text-[#A9B8CA] hover:text-[#007DCC] dark:hover:text-[#F4F7FB] text-xs sm:text-sm font-bold transition-all active:scale-95 shadow-sm hover:shadow-md flex items-center gap-1.5 sm:gap-2 cursor-pointer backdrop-blur-sm group"
+                onClick={item.action}
+                className="px-3.5 py-2.5 sm:px-4 sm:py-2.5 rounded-2xl bg-white/60 dark:bg-[#0D1828]/60 hover:bg-white dark:hover:bg-[#0D1828]/80 border border-slate-200 dark:border-white/5 hover:border-[#007DCC]/50 text-slate-700 dark:text-[#A9B8CA] hover:text-[#007DCC] dark:hover:text-[#F4F7FB] text-xs sm:text-sm font-bold transition-all active:scale-95 shadow-sm hover:shadow-md flex items-center gap-1.5 sm:gap-2 cursor-pointer backdrop-blur-sm group"
               >
                 <IconComp className="w-4 h-4 text-[#007DCC] group-hover:text-[#005a9c] dark:group-hover:text-[#19A7E8] transition-colors" />
                 <span>{item.name}</span>
@@ -334,49 +340,52 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           })}
         </div>
 
-        {/* Help Me Decide Button (Removed surrounding card as per request) */}
-        <div className="relative z-50 mb-16 -mt-10">
+        {/* Help Me Decide Button (Directly below shortcut options under search bar) */}
+        <div className="relative z-50 mb-10">
           <button
             onClick={() => onNavigate('guidance')}
-            className="px-8 py-3.5 rounded-full bg-[#007DCC]/90 hover:bg-[#007DCC] text-white font-semibold transition-all shadow-md hover:shadow-lg flex items-center gap-2 group backdrop-blur-sm border border-white/10"
+            className="px-8 py-3.5 rounded-full bg-[#007DCC]/90 hover:bg-[#007DCC] text-white font-semibold transition-all shadow-md hover:shadow-lg flex items-center gap-2 group backdrop-blur-sm border border-white/10 cursor-pointer"
           >
             <span>Help Me Decide</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
+      </div>
 
+      {/* Infostaan Connect Carousel */}
+      <div className="w-full my-6">
+        <ConnectCarousel onNavigate={onNavigate} />
+      </div>
 
-
-        {/* Continue Exploring (Personalized block) */}
-        <div className="w-full max-w-5xl mx-auto mt-20 sm:mt-28 pt-12 border-t border-slate-300 dark:border-white/5 text-left">
-          <div className="flex items-center justify-between mb-8">
+      <div className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center">
+        {/* Quick Explore */}
+        <div className="w-full max-w-5xl mx-auto mt-6 pt-10 border-t border-slate-300 dark:border-white/5 text-left">
+          <div className="flex items-center justify-between mb-6">
             <h3 className="text-lg font-bold text-slate-900 dark:text-[#F4F7FB]">Quick Explore</h3>
             <span className="text-xs text-slate-500 dark:text-[#71839A] uppercase tracking-wider font-bold">Discover Mumbai</span>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div 
-              onClick={() => onSearch('', 'colleges')}
+              onClick={() => onOpenCategoryFilter('colleges')}
               className="p-5 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-white/5 hover:border-[#007DCC]/50 cursor-pointer group transition-colors shadow-sm hover:shadow-md"
             >
-              <h4 className="text-slate-900 dark:text-[#F4F7FB] font-semibold group-hover:text-[#007DCC] dark:group-hover:text-[#19A7E8] transition-colors">Top Mumbai Colleges</h4>
+              <h4 className="text-slate-900 dark:text-[#F4F7FB] font-semibold group-hover:text-[#007DCC] dark:group-hover:text-[#19A7E8] transition-colors mb-1">Top Mumbai Colleges</h4>
+              <p className="text-xs text-slate-500 dark:text-[#71839A]">Filter commerce, arts, science & autonomous Mumbai colleges</p>
             </div>
             
             <div 
               onClick={() => onNavigate('guidance')}
               className="p-5 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-white/5 hover:border-[#007DCC]/50 cursor-pointer group transition-colors shadow-sm hover:shadow-md"
             >
-              <h4 className="text-slate-900 dark:text-[#F4F7FB] font-semibold group-hover:text-[#007DCC] dark:group-hover:text-[#19A7E8] transition-colors">Career Roadmaps</h4>
+              <h4 className="text-slate-900 dark:text-[#F4F7FB] font-semibold group-hover:text-[#007DCC] dark:group-hover:text-[#19A7E8] transition-colors mb-1">Career Roadmaps</h4>
+              <p className="text-xs text-slate-500 dark:text-[#71839A]">Explore step-by-step career pathways tailored for Mumbai students</p>
             </div>
           </div>
         </div>
-
       </div>
 
       {/* Scroll-Locked Storytelling Section */}
       <ScrollStorySection />
-
-      {/* FINAL SECTION: Infostaan Connect Carousel */}
-      <ConnectCarousel onNavigate={onNavigate} />
     </main>
   );
 };

@@ -22,7 +22,7 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
   };
 
   return (
-    <section className="w-full py-16 bg-slate-50/80 dark:bg-[#070D18] border-t border-slate-200/80 dark:border-white/5 text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200 overflow-hidden relative select-none">
+    <section className="w-full py-10 bg-transparent text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200 overflow-hidden relative select-none">
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }
@@ -57,8 +57,8 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
             </p>
           </div>
 
-          {/* Action & Nav Controls */}
-          <div className="flex items-center gap-3 shrink-0">
+          {/* Action Button */}
+          <div className="flex items-center shrink-0">
             <button
               type="button"
               onClick={() => onNavigate('/dashboard')}
@@ -67,29 +67,10 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
               <span>View all mentors</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
-
-            <div className="flex items-center gap-2 ml-2">
-              <button
-                type="button"
-                onClick={handlePrev}
-                aria-label="Previous mentors"
-                className="p-2 rounded-xl bg-white dark:bg-[#0D1828] text-slate-600 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC] transition-colors shadow-2xs active:scale-95"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </button>
-              <button
-                type="button"
-                onClick={handleNext}
-                aria-label="Next mentors"
-                className="p-2 rounded-xl bg-white dark:bg-[#0D1828] text-slate-600 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:border-[#007DCC] transition-colors shadow-2xs active:scale-95"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
           </div>
         </div>
 
-        {/* Marquee Track Container (Clean cards, no faded side overlays) */}
+        {/* Marquee Track Container (Clean cards, continuous auto-scroll) */}
         <div
           className="relative w-full overflow-hidden py-2"
           onMouseEnter={() => setIsHovered(true)}
@@ -107,7 +88,7 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
               <div
                 key={`${m.id}-${idx}`}
                 onClick={() => onNavigate(`/mentor/${m.id}`)}
-                className="w-[calc((100vw-3.5rem)/3)] md:w-[calc((100vw-6rem)/3)] lg:w-60 xl:w-64 shrink-0 flex flex-col justify-between p-4 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 hover:border-[#007DCC] transition-all duration-200 shadow-sm hover:shadow-md text-left cursor-pointer group"
+                className="w-[calc((100vw-3.2rem)/3)] md:w-[calc((100vw-5rem)/3)] lg:w-[calc((100%-4rem)/5)] xl:w-52 shrink-0 flex flex-col justify-between p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 hover:border-[#007DCC] transition-all duration-200 shadow-sm hover:shadow-md text-left cursor-pointer group"
               >
                 <div>
                   {/* Top: 1:1 Avatar + Name & Role */}
@@ -161,23 +142,6 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Small Pagination Dots */}
-        <div className="flex items-center justify-center gap-1.5 mt-8">
-          {MENTORS_DATA.map((_, i) => (
-            <button
-              key={i}
-              type="button"
-              onClick={() => setCurrentIndex(i)}
-              aria-label={`Go to slide ${i + 1}`}
-              className={`h-1.5 rounded-full transition-all ${
-                currentIndex % MENTORS_DATA.length === i
-                  ? 'w-6 bg-[#007DCC]'
-                  : 'w-1.5 bg-slate-300 dark:bg-white/20'
-              }`}
-            />
-          ))}
         </div>
       </div>
     </section>
