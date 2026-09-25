@@ -7,6 +7,7 @@ interface ClassesModalProps {
   onClose: () => void;
   onApplyFiltersToExplore?: (region: string, interest: string) => void;
   onApplyFilters?: (filters: { interest: string; region: string; specialization: string; searchQuery: string }) => void;
+  onViewAll?: () => void;
 }
 
 const INTERESTS = [
@@ -54,6 +55,7 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
   onClose,
   onApplyFiltersToExplore,
   onApplyFilters,
+  onViewAll,
 }) => {
   const [step, setStep] = useState<number>(1);
   const [pending, setPending] = useState<Filters>(DEFAULT_FILTERS);
@@ -444,13 +446,23 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
           )}
 
           {step === 3 && (
-            <button
-              onClick={handleApply}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
-            >
-              <span>Apply Filters & Find Classes</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
+            <div className="flex items-center gap-2">
+              {onViewAll && (
+                <button
+                  onClick={() => { onViewAll(); onClose(); }}
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] text-xs font-bold transition-all"
+                >
+                  <span>View All Classes</span>
+                </button>
+              )}
+              <button
+                onClick={handleApply}
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+              >
+                <span>Apply Filters & Find Classes</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
           )}
 
           {step === 4 && (

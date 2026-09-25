@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Settings2, Compass, SlidersHorizontal, BarChart2 } from 'lucide-react';
+import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Compass, SlidersHorizontal, BarChart2 } from 'lucide-react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { CategoryType, SearchResultItem } from '../types';
 import { searchInfostaan } from '../lib/searchEngine';
@@ -7,6 +7,7 @@ import { PencilLoader } from './PencilLoader';
 import { SkeletonResultCards } from './SkeletonResultCards';
 import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
 import { FilterCategoryType } from './CategoryFilterModal';
+import { getCollegeRegion, matchItemRegion, applyStreamFilter } from '../lib/categoryFilters';
 
 interface SearchResultsScreenProps {
   defaultCategory?: CategoryType;
@@ -19,52 +20,7 @@ interface SearchResultsScreenProps {
   onOpenClasses?: () => void;
 }
 
-const MUMBAI_REGIONS = [
-  'All Mumbai',
-  'South Mumbai',
-  'Western Suburbs',
-  'Central Suburbs',
-  'Eastern Suburbs',
-  'Harbour / Central-East',
-];
 
-const getCollegeRegion = (collegeName: string): string => {
-  const name = collegeName.toUpperCase();
-  if (
-    name.includes("XAVIER") || name.includes("H.R.") || name.includes("JAI HIND") ||
-    name.includes("HINDUJA") || name.includes("FORT") || name.includes("CHURCHGATE") ||
-    name.includes("CHARNI ROAD") || name.includes("MARINE") || name.includes("SYDENHAM") ||
-    name.includes("ELPHINSTONE") || name.includes("WILSON")
-  ) {
-    return 'South Mumbai';
-  }
-  if (
-    name.includes("MITHIBAI") || name.includes("N.M.") || name.includes("NARSEE") ||
-    name.includes("SVKM") || name.includes("ANDHERI") || name.includes("PARLE") ||
-    name.includes("MALAD") || name.includes("BORIVALI") || name.includes("BANDRA") ||
-    name.includes("KANDIVALI") || name.includes("GOREGAON") || name.includes("SANTACRUZ") ||
-    name.includes("BHAVAN")
-  ) {
-    return 'Western Suburbs';
-  }
-  if (
-    name.includes("PODAR") || name.includes("MATUNGA") || name.includes("DADAR") ||
-    name.includes("SIES") || name.includes("RUPAREL") || name.includes("KHALSA") ||
-    name.includes("VIDYALANKAR")
-  ) {
-    return 'Central Suburbs';
-  }
-  if (
-    name.includes("GHATKOPAR") || name.includes("MULUND") || name.includes("BHANDUP") ||
-    name.includes("VIKHROLI") || name.includes("SOMAIYA")
-  ) {
-    return 'Eastern Suburbs';
-  }
-  if (name.includes("CHEMBUR") || name.includes("VASHI") || name.includes("BELAPUR")) {
-    return 'Harbour / Central-East';
-  }
-  return 'All Mumbai';
-};
 
 export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   defaultCategory,
@@ -265,13 +221,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
     }
 
     const streamFilter = streamParam || fieldParam || interestParam || industryParam || specializationParam;
-    if (streamFilter && !streamFilter.startsWith('All')) {
-      const keywords = streamFilter.toLowerCase().split(/[\s&,/]+/).filter(Boolean);
-      raw = raw.filter(item => {
-        const text = [item.title, item.badgeCategory, item.badgeSub || '', ...(item.meta || []), item.subtitle || ''].join(' ').toLowerCase();
-        return keywords.some(kw => text.includes(kw));
-      });
-    }
+    raw = applyStreamFilter(raw, streamFilter);
 
     return raw;
   }, [query, activeCategory, regionParam, streamParam, fieldParam, interestParam, industryParam, specializationParam, percentageParam, rangeParam, educationLevelParam]);

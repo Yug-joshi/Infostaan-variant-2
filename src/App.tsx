@@ -6,6 +6,7 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HomeScreen } from './components/HomeScreen';
 import { SearchResultsScreen } from './components/SearchResultsScreen';
+import { CategoryResultsPage } from './components/CategoryResultsPage';
 import { CollegeDetailScreen } from './components/CollegeDetailScreen';
 import { ShortlistScreen } from './components/ShortlistScreen';
 import { GuidanceScreen } from './components/GuidanceScreen';
@@ -57,6 +58,17 @@ export default function App() {
     });
     const queryString = params.toString();
     navigate(`/${cat}${queryString ? '?' + queryString : ''}`);
+  };
+
+  // View All — navigates with ONLY ?all=true, no filter params
+  const handleViewAllCategory = (cat: FilterCategoryType) => {
+    setIsCategoryFilterOpen(false);
+    navigate(`/${cat}?all=true`);
+  };
+
+  const handleViewAllClasses = () => {
+    setIsClassesOpen(false);
+    navigate('/classes?all=true');
   };
 
   const handleApplyClassesFilters = (filters: { interest?: string; region?: string; specialization?: string; searchQuery?: string }) => {
@@ -245,49 +257,37 @@ export default function App() {
           } />
 
           <Route path="/colleges" element={
-            <SearchResultsScreen
-              defaultCategory="colleges"
-              onNavigate={(path) => navigate(path)}
+            <CategoryResultsPage
+              category="colleges"
               onSelectCollege={handleSelectCollege}
               savedItemIds={savedItems.map((i) => i.id)}
-              onOpenCutoff={() => setIsCutoffOpen(true)}
               onOpenCategoryFilter={handleOpenCategoryFilter}
-              onOpenClasses={() => setIsClassesOpen(true)}
             />
           } />
 
           <Route path="/courses" element={
-            <SearchResultsScreen
-              defaultCategory="courses"
-              onNavigate={(path) => navigate(path)}
+            <CategoryResultsPage
+              category="courses"
               onSelectCollege={handleSelectCollege}
               savedItemIds={savedItems.map((i) => i.id)}
-              onOpenCutoff={() => setIsCutoffOpen(true)}
               onOpenCategoryFilter={handleOpenCategoryFilter}
-              onOpenClasses={() => setIsClassesOpen(true)}
             />
           } />
 
           <Route path="/careers" element={
-            <SearchResultsScreen
-              defaultCategory="careers"
-              onNavigate={(path) => navigate(path)}
+            <CategoryResultsPage
+              category="careers"
               onSelectCollege={handleSelectCollege}
               savedItemIds={savedItems.map((i) => i.id)}
-              onOpenCutoff={() => setIsCutoffOpen(true)}
               onOpenCategoryFilter={handleOpenCategoryFilter}
-              onOpenClasses={() => setIsClassesOpen(true)}
             />
           } />
 
           <Route path="/classes" element={
-            <SearchResultsScreen
-              defaultCategory="classes"
-              onNavigate={(path) => navigate(path)}
+            <CategoryResultsPage
+              category="classes"
               onSelectCollege={handleSelectCollege}
               savedItemIds={savedItems.map((i) => i.id)}
-              onOpenCutoff={() => setIsCutoffOpen(true)}
-              onOpenCategoryFilter={handleOpenCategoryFilter}
               onOpenClasses={() => setIsClassesOpen(true)}
             />
           } />
@@ -397,6 +397,7 @@ export default function App() {
         isOpen={isClassesOpen}
         onClose={() => setIsClassesOpen(false)}
         onApplyFilters={handleApplyClassesFilters}
+        onViewAll={handleViewAllClasses}
       />
 
       {/* Data-driven Category Filter Modal (Colleges, Courses, Careers) */}
@@ -405,6 +406,7 @@ export default function App() {
         onClose={() => setIsCategoryFilterOpen(false)}
         category={activeCategoryFilter}
         onApplyFilters={handleApplyCategoryFilters}
+        onViewAll={handleViewAllCategory}
       />
 
       {/* Universal Calm Footer */}

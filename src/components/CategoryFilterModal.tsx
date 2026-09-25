@@ -8,6 +8,7 @@ interface CategoryFilterModalProps {
   onClose: () => void;
   category: FilterCategoryType;
   onApplyFilters: (category: FilterCategoryType, filters: Record<string, string>) => void;
+  onViewAll?: (category: FilterCategoryType) => void;
 }
 
 // Data-driven filter options per category based on actual dataset fields
@@ -83,6 +84,7 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
   onClose,
   category,
   onApplyFilters,
+  onViewAll,
 }) => {
   const config = CATEGORY_CONFIGS[category] || CATEGORY_CONFIGS.colleges;
   const IconComp = config.icon;
@@ -191,24 +193,39 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="shrink-0 px-6 py-4 border-t border-slate-100 dark:border-white/8 flex items-center justify-between bg-slate-50/50 dark:bg-[#0D1828]/50">
-          <button
-            type="button"
-            onClick={handlePrev}
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] text-xs font-bold transition-all"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>{stepIndex === 0 ? 'Cancel' : 'Previous'}</span>
-          </button>
+        <div className="shrink-0 px-6 py-4 border-t border-slate-100 dark:border-white/8 bg-slate-50/50 dark:bg-[#0D1828]/50">
+          <div className="flex items-center justify-between gap-3">
+            <button
+              type="button"
+              onClick={handlePrev}
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] text-xs font-bold transition-all"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>{stepIndex === 0 ? 'Cancel' : 'Previous'}</span>
+            </button>
 
-          <button
-            type="button"
-            onClick={handleNext}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
-          >
-            <span>{stepIndex === config.steps.length - 1 ? config.submitLabel : 'Next Step'}</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
+            <div className="flex items-center gap-2">
+              {/* View All — only on the last step, mutually exclusive with filters */}
+              {stepIndex === config.steps.length - 1 && onViewAll && (
+                <button
+                  type="button"
+                  onClick={() => { onViewAll(category); onClose(); }}
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] text-xs font-bold transition-all"
+                >
+                  <span>View All {category.charAt(0).toUpperCase() + category.slice(1)}</span>
+                </button>
+              )}
+
+              <button
+                type="button"
+                onClick={handleNext}
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+              >
+                <span>{stepIndex === config.steps.length - 1 ? config.submitLabel : 'Next Step'}</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
