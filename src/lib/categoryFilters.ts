@@ -121,74 +121,139 @@ export interface ClassFilterParams {
 
 /**
  * Matches a ClassData item against a Mumbai region string.
- * Mirrors the logic in ClassesModal.
+ *
+ * Actual region values in the dataset:
+ *   "Mumbai South"    → South Mumbai
+ *   "Mumbai West"     → Western Suburbs
+ *   "Mumbai North"    → Western Suburbs (Borivali/Kandivali/Malad belt)
+ *   "Eastern Suburbs" → Eastern Suburbs
+ *   "Kalyan" / "Thane" → excluded (not Mumbai proper)
+ *
+ * The area and address fields are also checked for locality keywords.
  */
 export const matchClassRegion = (cls: ClassData, targetRegion: string): boolean => {
   if (!targetRegion || targetRegion === 'All Mumbai') return true;
-  const text = [cls.region || '', cls.area || '', cls.address || ''].join(' ').toUpperCase();
+
+  const regionStr = (cls.region || '').toUpperCase();
+  const areaStr   = (cls.area    || '').toUpperCase();
+  const addrStr   = (cls.address || '').toUpperCase();
+  const combined  = `${regionStr} ${areaStr} ${addrStr}`;
+
   if (targetRegion === 'South Mumbai') {
     return (
-      text.includes('SOUTH') || text.includes('LOWER PAREL') ||
-      text.includes('MAHALAKSHMI') || text.includes('FORT') ||
-      text.includes('CHURCHGATE') || text.includes('CHARNI') ||
-      text.includes('MUMBAI SOUTH')
+      regionStr === 'MUMBAI SOUTH' ||
+      combined.includes('SOUTH') ||
+      combined.includes('LOWER PAREL') ||
+      combined.includes('MAHALAKSHMI') ||
+      combined.includes('MAHALAXMI') ||
+      combined.includes('FORT') ||
+      combined.includes('CHURCHGATE') ||
+      combined.includes('CHARNI') ||
+      combined.includes('PAREL') ||
+      combined.includes('WORLI') ||
+      combined.includes('DADAR') ||
+      combined.includes('NM JOSHI') ||
+      combined.includes('DELISLE')
     );
   }
+
   if (targetRegion === 'Western Suburbs') {
     return (
-      text.includes('WESTERN') || text.includes('ANDHERI') ||
-      text.includes('BANDRA') || text.includes('BORIVALI') ||
-      text.includes('PARLE') || text.includes('MALAD') ||
-      text.includes('KANDIVALI') || text.includes('GOREGAON') ||
-      text.includes('SANTACRUZ')
+      regionStr === 'MUMBAI WEST' ||
+      regionStr === 'MUMBAI NORTH' ||
+      combined.includes('WESTERN') ||
+      combined.includes('ANDHERI') ||
+      combined.includes('BANDRA') ||
+      combined.includes('BORIVALI') ||
+      combined.includes('KANDIVALI') ||
+      combined.includes('MALAD') ||
+      combined.includes('GOREGAON') ||
+      combined.includes('SANTACRUZ') ||
+      combined.includes('VILE PARLE') ||
+      combined.includes('JOGESHWARI') ||
+      combined.includes('DAHISAR') ||
+      combined.includes('MIRA ROAD')
     );
   }
+
   if (targetRegion === 'Central Suburbs') {
     return (
-      text.includes('CENTRAL') || text.includes('MATUNGA') ||
-      text.includes('DADAR') || text.includes('SIES') ||
-      text.includes('KURLA') || text.includes('GHATKOPAR')
+      combined.includes('MATUNGA') ||
+      combined.includes('SION') ||
+      combined.includes('KURLA') ||
+      combined.includes('GHATKOPAR') ||
+      combined.includes('CHEMBUR') ||
+      combined.includes('WADALA') ||
+      combined.includes('VIDYAVIHAR') ||
+      combined.includes('TILAKNAGAR')
     );
   }
+
   if (targetRegion === 'Eastern Suburbs') {
     return (
-      text.includes('EASTERN') || text.includes('MULUND') ||
-      text.includes('BHANDUP') || text.includes('VIKHROLI')
+      regionStr === 'EASTERN SUBURBS' ||
+      combined.includes('EASTERN') ||
+      combined.includes('MULUND') ||
+      combined.includes('BHANDUP') ||
+      combined.includes('VIKHROLI') ||
+      combined.includes('KANJURMARG') ||
+      combined.includes('NAHUR')
     );
   }
+
   if (targetRegion === 'Harbour / Central-East') {
     return (
-      text.includes('CHEMBUR') || text.includes('VASHI') ||
-      text.includes('BELAPUR') || text.includes('HARBOUR')
+      combined.includes('HARBOUR') ||
+      combined.includes('BELAPUR') ||
+      combined.includes('VASHI') ||
+      combined.includes('NERUL') ||
+      combined.includes('PANVEL')
     );
   }
+
   return true;
 };
 
 /**
  * Filters the CLASSES array by the given parameters.
  * Used by CategoryResultsPage for the /classes route.
+ * Returns up to 200 results (the dataset is large).
  */
 export const filterClasses = (params: ClassFilterParams): ClassData[] => {
   const q = (params.query || '').toLowerCase().trim();
+
   return CLASSES.filter((cls) => {
+    // Text search across name, area, address, and specializations
     const matchesSearch =
       !q ||
       cls.name.toLowerCase().includes(q) ||
       cls.area?.toLowerCase().includes(q) ||
-      cls.specializations?.toLowerCase().includes(q);
+      cls.address?.toLowerCase().includes(q) ||
+      cls.specializations?.toLowerCase().includes(q) ||
+      cls.streams?.toLowerCase().includes(q);
 
+    // Interest / stream filter
     const matchesInterest =
       !params.interest || params.interest.startsWith('All') ||
       cls.streams?.toLowerCase().includes(params.interest.toLowerCase()) ||
       cls.specializations?.toLowerCase().includes(params.interest.toLowerCase());
 
+    // Region filter
     const matchesRegion = matchClassRegion(cls, params.region || 'All Mumbai');
 
+    // Specialization filter
     const matchesSpec =
       !params.specialization || params.specialization.startsWith('All') ||
-      cls.specializations?.toLowerCase().includes(params.specialization.toLowerCase());
+      cls.specializations?.toLowerCase().includes(params.specialization.toLowerCase()) ||
+      cls.streams?.toLowerCase().includes(params.specialization.toLowerCase());
 
-    return matchesSearch && matchesInterest && matchesRegion && matchesSpec;
-  });
+    // Exclude non-Mumbai locations (Kalyan, Thane, Navi Mumbai, Vasai, Virar)
+    const regionUpper = (cls.region || '').toUpperCase();
+    const isInMumbai = !['KALYAN', 'THANE', 'VASAI', 'VIRAR', 'NAVI MUMBAI'].some(
+      (excluded) => regionUpper.includes(excluded)
+    );
+
+    return matchesSearch && matchesInterest && matchesRegion && matchesSpec && isInMumbai;
+  }).slice(0, 200);
 };
+

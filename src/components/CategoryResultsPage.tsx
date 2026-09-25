@@ -160,7 +160,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
         query: isViewAll ? null : query,
       });
       // Map ClassData → SearchResultItem shape
-      return filtered.slice(0, 60).map((cls) => ({
+      return filtered.slice(0, 200).map((cls) => ({
         id: cls.id,
         category: 'classes' as const,
         badgeCategory: 'Coaching Class',
