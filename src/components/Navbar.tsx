@@ -57,12 +57,14 @@ export const Navbar: React.FC<NavbarProps> = ({
           <Link
             to="/search"
             className={`transition-colors hover:text-slate-900 dark:hover:text-[#F4F7FB] ${
-              currentPath === '/search' || currentPath.startsWith('/college/')
+              currentPath === '/search' || currentPath.startsWith('/college/') ||
+              currentPath === '/colleges' || currentPath === '/courses' ||
+              currentPath === '/careers' || currentPath === '/classes'
                 ? 'text-[#007DCC] dark:text-[#19A7E8] font-semibold'
                 : ''
             }`}
           >
-            Explore
+            Search
           </Link>
           <Link
             to="/help-me-decide"

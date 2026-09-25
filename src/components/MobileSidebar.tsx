@@ -27,6 +27,9 @@ interface MobileSidebarProps {
   onSearch: (query: string, category?: string) => void;
   onOpenSignIn: () => void;
   onSelectCollege: (collegeId: string) => void;
+  onOpenCategoryFilter?: (cat: 'colleges' | 'courses' | 'careers') => void;
+  onOpenClasses?: () => void;
+  onOpenCutoff?: () => void;
 }
 
 export const MobileSidebar: React.FC<MobileSidebarProps> = ({
@@ -36,6 +39,9 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
   onSearch,
   onOpenSignIn,
   onSelectCollege,
+  onOpenCategoryFilter,
+  onOpenClasses,
+  onOpenCutoff,
 }) => {
   const { theme, toggleTheme } = useTheme();
   const backdropRef = useRef<HTMLDivElement>(null);
@@ -184,7 +190,7 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
               >
                 <div className="flex items-center gap-3">
                   <Compass className="w-4 h-4 shrink-0" />
-                  <span>Explore & Search</span>
+                  <span>Home</span>
                 </div>
                 <ArrowRight className="w-4 h-4 opacity-50" />
               </button>
@@ -267,13 +273,24 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                 { label: 'Colleges', id: 'colleges', icon: School },
                 { label: 'Courses', id: 'courses', icon: GraduationCap },
                 { label: 'Careers', id: 'careers', icon: TrendingUp },
+                { label: 'Classes', id: 'classes', icon: School },
               ].map((c) => {
                 const IconComponent = c.icon;
+                const handleClick = () => {
+                  if (c.id === 'colleges' || c.id === 'courses' || c.id === 'careers') {
+                    if (onOpenCategoryFilter) {
+                      onOpenCategoryFilter(c.id as 'colleges' | 'courses' | 'careers');
+                    }
+                  } else if (c.id === 'classes') {
+                    if (onOpenClasses) onOpenClasses();
+                  }
+                  handleClose();
+                };
                 return (
                   <button
                     key={c.id}
                     type="button"
-                    onClick={() => searchCategoryAndClose(c.id)}
+                    onClick={handleClick}
                     className="sidebar-anim-item p-2.5 rounded-xl bg-slate-50 dark:bg-[#161c27] border border-slate-200/80 dark:border-white/5 hover:border-[#007DCC] dark:hover:border-[#007DCC] flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-[#A9B8CA] hover:text-[#007DCC] dark:hover:text-white transition-all text-left"
                   >
                     <IconComponent className="w-3.5 h-3.5 text-[#007DCC] dark:text-[#86cfff]" />

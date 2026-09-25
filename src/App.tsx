@@ -251,6 +251,8 @@ export default function App() {
               onSelectCollege={handleSelectCollege}
               savedItemIds={savedItems.map((i) => i.id)}
               onOpenCutoff={() => setIsCutoffOpen(true)}
+              onOpenCategoryFilter={handleOpenCategoryFilter}
+              onOpenClasses={() => setIsClassesOpen(true)}
             />
           } />
 
@@ -261,6 +263,8 @@ export default function App() {
               onSelectCollege={handleSelectCollege}
               savedItemIds={savedItems.map((i) => i.id)}
               onOpenCutoff={() => setIsCutoffOpen(true)}
+              onOpenCategoryFilter={handleOpenCategoryFilter}
+              onOpenClasses={() => setIsClassesOpen(true)}
             />
           } />
 
@@ -271,6 +275,8 @@ export default function App() {
               onSelectCollege={handleSelectCollege}
               savedItemIds={savedItems.map((i) => i.id)}
               onOpenCutoff={() => setIsCutoffOpen(true)}
+              onOpenCategoryFilter={handleOpenCategoryFilter}
+              onOpenClasses={() => setIsClassesOpen(true)}
             />
           } />
 
@@ -281,6 +287,8 @@ export default function App() {
               onSelectCollege={handleSelectCollege}
               savedItemIds={savedItems.map((i) => i.id)}
               onOpenCutoff={() => setIsCutoffOpen(true)}
+              onOpenCategoryFilter={handleOpenCategoryFilter}
+              onOpenClasses={() => setIsClassesOpen(true)}
             />
           } />
 
@@ -342,6 +350,7 @@ export default function App() {
           {/* Legacy route fallbacks */}
           <Route path="/guidance" element={<Navigate to="/help-me-decide" replace />} />
           <Route path="/connect" element={<Navigate to="/dashboard" replace />} />
+          <Route path="/explore" element={<Navigate to="/search" replace />} />
         </Routes>
       </div>
 
@@ -353,6 +362,9 @@ export default function App() {
         onSearch={handleSearch}
         onOpenSignIn={() => setIsSignInOpen(true)}
         onSelectCollege={handleSelectCollege}
+        onOpenCategoryFilter={handleOpenCategoryFilter}
+        onOpenClasses={() => setIsClassesOpen(true)}
+        onOpenCutoff={() => setIsCutoffOpen(true)}
       />
 
       {/* Side-by-Side Comparison Modal */}

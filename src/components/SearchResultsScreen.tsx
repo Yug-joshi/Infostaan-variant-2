@@ -1,23 +1,12 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Settings2, Compass, CheckCircle2, BarChart2 } from 'lucide-react';
+import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Settings2, Compass, SlidersHorizontal, BarChart2 } from 'lucide-react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { CategoryType, SearchResultItem } from '../types';
 import { searchInfostaan } from '../lib/searchEngine';
 import { PencilLoader } from './PencilLoader';
 import { SkeletonResultCards } from './SkeletonResultCards';
 import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
-
-interface FilterState {
-  interest?: string | null;
-  grade?: string | null;
-  fee?: string | null;
-  domain?: string | null;
-  degreeLevel?: string | null;
-  subjectCategory?: string | null;
-  subject?: string | null;
-  level?: string | null;
-  region?: string | null;
-}
+import { FilterCategoryType } from './CategoryFilterModal';
 
 interface SearchResultsScreenProps {
   defaultCategory?: CategoryType;
@@ -26,6 +15,8 @@ interface SearchResultsScreenProps {
   onSaveItem?: (item: SearchResultItem) => void;
   savedItemIds?: string[];
   onOpenCutoff?: () => void;
+  onOpenCategoryFilter?: (cat: FilterCategoryType) => void;
+  onOpenClasses?: () => void;
 }
 
 const MUMBAI_REGIONS = [
@@ -82,6 +73,8 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   onSaveItem,
   savedItemIds = [],
   onOpenCutoff,
+  onOpenCategoryFilter,
+  onOpenClasses,
 }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -102,9 +95,10 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   const rangeParam = searchParams.get('range');
   const educationLevelParam = searchParams.get('educationLevel');
 
-  const hasAppliedParams = !!(query || regionParam || streamParam || fieldParam || interestParam || industryParam || levelParam || specializationParam || percentageParam || rangeParam || educationLevelParam || defaultCategory);
+  // Only URL params trigger results — defaultCategory alone does NOT dump all data
+  const hasAppliedParams = !!(query || regionParam || streamParam || fieldParam || interestParam || industryParam || levelParam || specializationParam || percentageParam || rangeParam || educationLevelParam);
 
-  // Show results if query or any committed URL filter parameter exists
+  // Show results only when at least one URL filter or search query exists
   const showResults = hasAppliedParams;
 
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
@@ -141,20 +135,33 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
     }
   };
 
+  // Fires the right filter popup based on the active category
+  const handleModifyFilters = () => {
+    if (activeCategory === 'colleges' || activeCategory === 'courses' || activeCategory === 'careers') {
+      if (onOpenCategoryFilter) onOpenCategoryFilter(activeCategory as FilterCategoryType);
+    } else if (activeCategory === 'classes') {
+      if (onOpenClasses) onOpenClasses();
+    } else if (activeCategory === 'cutoffs') {
+      if (onOpenCutoff) onOpenCutoff();
+    } else {
+      if (onOpenCutoff) onOpenCutoff();
+    }
+  };
+
   const getPageHeaderInfo = () => {
     switch (activeCategory) {
       case 'colleges':
-        return { badge: 'Mumbai Colleges Catalog', title: 'Explore Colleges in Mumbai' };
+        return { badge: 'Mumbai Colleges', title: 'Colleges in Mumbai' };
       case 'courses':
-        return { badge: 'Mumbai Courses & Degrees', title: 'Explore Courses in Mumbai' };
+        return { badge: 'Mumbai Courses & Degrees', title: 'Courses in Mumbai' };
       case 'careers':
-        return { badge: 'Mumbai Career Pathways', title: 'Explore Careers in Mumbai' };
+        return { badge: 'Mumbai Career Pathways', title: 'Careers in Mumbai' };
       case 'classes':
-        return { badge: 'Mumbai Coaching Classes', title: 'Explore Coaching Classes in Mumbai' };
+        return { badge: 'Mumbai Coaching Classes', title: 'Coaching Classes in Mumbai' };
       case 'cutoffs':
-        return { badge: 'Mumbai Cutoff Explorer', title: 'Explore Admission Cutoffs in Mumbai' };
+        return { badge: 'Mumbai Cutoff Explorer', title: 'Admission Cutoffs in Mumbai' };
       default:
-        return { badge: 'Mumbai Student Catalog', title: 'Search & Explore Mumbai Programs' };
+        return { badge: 'Mumbai Student Catalog', title: 'Search Mumbai Programs' };
     }
   };
 
@@ -385,13 +392,11 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
             {showResults && (
               <button
                 type="button"
-                onClick={() => {
-                  if (onOpenCutoff) onOpenCutoff();
-                }}
+                onClick={handleModifyFilters}
                 className="inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-[#161c27] transition-all whitespace-nowrap shrink-0"
               >
-                <Settings2 className="w-4 h-4" />
-                More Filters
+                <SlidersHorizontal className="w-4 h-4" />
+                Modify Filters
               </button>
             )}
           </div>
@@ -424,21 +429,42 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
           {!showResults ? (
             <div className="py-16 text-center max-w-xl mx-auto">
               <div className="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-blue-900/20 text-[#007DCC] dark:text-[#86cfff] flex items-center justify-center mx-auto mb-4">
-                <Search className="w-7 h-7" />
+                <SlidersHorizontal className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">
-                Start Exploring Mumbai Options
+                {activeCategory === 'colleges' ? 'Find Colleges in Mumbai'
+                  : activeCategory === 'courses' ? 'Find Courses in Mumbai'
+                  : activeCategory === 'careers' ? 'Find Careers in Mumbai'
+                  : activeCategory === 'classes' ? 'Find Coaching Classes in Mumbai'
+                  : activeCategory === 'cutoffs' ? 'Check Admission Cutoffs'
+                  : 'Search Mumbai Programs'}
               </h3>
               <p className="text-xs sm:text-sm text-slate-500 dark:text-[#71839A] mb-6 leading-relaxed">
-                Use the search bar above or pick a shortcut button on the Homepage to filter colleges, courses, classes, and careers across Mumbai.
+                {activeCategory === 'colleges' ? 'Select your preferred stream and Mumbai region to find matching colleges.'
+                  : activeCategory === 'courses' ? 'Choose your field of study and qualification level to discover courses.'
+                  : activeCategory === 'careers' ? 'Select your target industry to explore Mumbai career pathways.'
+                  : activeCategory === 'classes' ? 'Choose your subject and Mumbai region to find nearby coaching classes.'
+                  : activeCategory === 'cutoffs' ? 'Select your percentage and stream to see eligible colleges.'
+                  : 'Use the search bar above or pick a category shortcut on the Homepage.'}
               </p>
-              <button
-                type="button"
-                onClick={() => navigate('/')}
-                className="px-5 py-2.5 rounded-xl bg-[#007DCC] text-white text-xs font-bold hover:bg-[#006cb0] transition-colors"
-              >
-                Go to Homepage Shortcuts
-              </button>
+              {(activeCategory === 'colleges' || activeCategory === 'courses' || activeCategory === 'careers' || activeCategory === 'classes' || activeCategory === 'cutoffs') ? (
+                <button
+                  type="button"
+                  onClick={handleModifyFilters}
+                  className="px-5 py-2.5 rounded-xl bg-[#007DCC] text-white text-xs font-bold hover:bg-[#006cb0] transition-colors inline-flex items-center gap-2"
+                >
+                  <SlidersHorizontal className="w-4 h-4" />
+                  <span>Select Filters</span>
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => navigate('/')}
+                  className="px-5 py-2.5 rounded-xl bg-[#007DCC] text-white text-xs font-bold hover:bg-[#006cb0] transition-colors"
+                >
+                  Go to Homepage
+                </button>
+              )}
             </div>
           ) : searchPhase === 'understanding' ? (
             <div className="py-12">
