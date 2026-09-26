@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Compass, SlidersHorizontal, BarChart2 } from 'lucide-react';
+import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Compass, SlidersHorizontal, BarChart2, Heart, Users, Star, Award, CheckCircle, Info } from 'lucide-react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { CategoryType, SearchResultItem } from '../types';
 import { searchInfostaan } from '../lib/searchEngine';
@@ -451,6 +451,122 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                   };
 
                   const streams = getStreams();
+
+                  if (item.category === 'colleges' || item.category === 'classes') {
+                    const isCollege = item.category === 'colleges';
+                    const facts: { icon: any; value: string; label: string }[] = [];
+                    item.meta.forEach(m => {
+                      const lower = m.toLowerCase();
+                      if (lower.includes('autonomous') || lower.includes('university')) {
+                        facts.push({ icon: Building2, value: m.split('•')[0].trim(), label: 'Status' });
+                      } else if (lower.includes('naac') || lower.includes('grade')) {
+                        facts.push({ icon: Star, value: m.split('•').find(p => p.toLowerCase().includes('naac') || p.toLowerCase().includes('grade'))?.trim() || m, label: 'Rating' });
+                      } else if (lower.includes('student') || lower.includes('batch')) {
+                        facts.push({ icon: Users, value: m, label: 'Students' });
+                      } else if (lower.includes('year') || lower.includes('exp')) {
+                        facts.push({ icon: Award, value: m, label: 'Experience' });
+                      } else {
+                        facts.push({ icon: CheckCircle, value: m, label: isCollege ? 'Info' : 'Feature' });
+                      }
+                    });
+
+                    const imgUrl = isCollege 
+                      ? "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=400&q=80"
+                      : "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=400&q=80";
+
+                    return (
+                      <article
+                        key={item.id}
+                        className="result-card-anim group flex flex-col p-0 rounded-2xl bg-white dark:bg-[#0D1828] hover:bg-slate-50 dark:hover:bg-[#121f33] transition-all duration-200 shadow-sm hover:shadow-md border border-slate-200 dark:border-[#D3B5E8]/12 hover:border-[#007DCC]/50 dark:hover:border-[#007DCC]/50 text-left cursor-pointer overflow-hidden relative"
+                        data-category={item.category}
+                        onClick={() => handleActionClick(item)}
+                      >
+                        {/* IMAGE HEADER */}
+                        <div className="relative w-full h-[90px] sm:h-[110px] bg-slate-200 dark:bg-slate-800 shrink-0">
+                          <img 
+                            src={imgUrl}
+                            alt={item.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#0D1828]/90 via-[#0D1828]/20 to-transparent" />
+                          
+                          {/* BADGE */}
+                          <div className="absolute top-3 left-3">
+                            <span className="px-2 py-1 rounded bg-[#007DCC] text-white text-[9px] font-bold uppercase tracking-wider shadow-sm">
+                              {item.badgeCategory || (isCollege ? 'COLLEGE' : 'CLASS')}
+                            </span>
+                          </div>
+
+                          {/* SAVE BUTTON */}
+                          <button 
+                            onClick={(e) => { 
+                              e.stopPropagation(); 
+                              if (onSaveItem) onSaveItem(item);
+                            }}
+                            className="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-black/40 hover:bg-black/60 transition-colors border border-white/20 z-10"
+                          >
+                            <Heart className={`w-3.5 h-3.5 ${savedItemIds?.includes(item.id) ? 'fill-[#19A7E8] text-[#19A7E8]' : 'text-white'}`} />
+                          </button>
+                        </div>
+
+                        {/* CONTENT */}
+                        <div className="p-3 sm:p-4 flex flex-col flex-grow">
+                          
+                          {/* TITLE & LOCATION */}
+                          <div className="mb-2">
+                            <h2 className="text-sm sm:text-base font-bold text-slate-900 dark:text-[#F4F7FB] leading-tight group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors line-clamp-2 mb-1.5">
+                              {item.title}
+                            </h2>
+                            
+                            <div className="flex items-start gap-1 text-slate-500 dark:text-[#A9B8CA]">
+                              <MapPin className="w-3.5 h-3.5 shrink-0 mt-0.5 text-slate-400 dark:text-[#71839A]" />
+                              <span className="text-[11px] sm:text-xs leading-tight line-clamp-1 font-medium">
+                                {item.badgeSub || 'Mumbai'}
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* TAGS */}
+                          {streams.length > 0 && (
+                            <div className="flex flex-wrap gap-1.5 mb-3">
+                              {streams.map((stream, idx) => (
+                                <span key={idx} className="px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#162133] border border-slate-200 dark:border-white/5 text-slate-600 dark:text-[#A9B8CA] text-[10px] sm:text-[11px] font-medium">
+                                  {stream}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+
+                          {/* HIGHLIGHT BAR */}
+                          {facts.length > 0 && (
+                            <div className="mt-auto flex items-stretch bg-slate-50 dark:bg-[#121E30] rounded-xl p-2 border border-slate-200 dark:border-white/5 mb-3">
+                              {facts.slice(0, 3).map((fact, idx) => {
+                                const FactIcon = fact.icon;
+                                return (
+                                  <div key={idx} className="flex-1 flex flex-col items-center text-center px-1 border-r border-slate-200 dark:border-white/5 last:border-0 min-w-0">
+                                    <div className="flex items-center justify-center gap-1 text-slate-800 dark:text-[#F4F7FB] font-semibold text-[11px] sm:text-xs w-full">
+                                      <FactIcon className="w-3 h-3 text-[#19A7E8] shrink-0" />
+                                      <span className="truncate">{fact.value}</span>
+                                    </div>
+                                    <span className="text-[9px] sm:text-[10px] text-slate-500 dark:text-[#71839A] mt-0.5 truncate w-full">{fact.label}</span>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          )}
+
+                          <div className={`${facts.length === 0 ? 'mt-auto' : ''}`} />
+
+                          {/* DETAILS ACTION */}
+                          <div className="flex items-center justify-start pt-3 border-t border-slate-100 dark:border-white/5 mt-auto">
+                            <span className="text-[11px] sm:text-xs font-bold text-[#007DCC] dark:text-[#86cfff] flex items-center gap-1 group-hover:text-[#19A7E8] transition-colors">
+                              Details <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                            </span>
+                          </div>
+                        </div>
+                      </article>
+                    );
+                  }
 
                   return (
                   <article

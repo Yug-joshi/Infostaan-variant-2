@@ -205,8 +205,8 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
             </button>
 
             <div className="flex items-center gap-2">
-              {/* View All — only on the last step, mutually exclusive with filters */}
-              {stepIndex === config.steps.length - 1 && onViewAll && (
+              {/* View All — available on all steps */}
+              {onViewAll && (
                 <button
                   type="button"
                   onClick={() => { onViewAll(category); onClose(); }}

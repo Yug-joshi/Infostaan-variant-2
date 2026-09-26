@@ -55,16 +55,14 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Desktop Navigation Tabs (Hidden on mobile) */}
         <nav className="hidden md:flex items-center gap-2 lg:gap-6 text-sm font-medium text-slate-600 dark:text-[#A9B8CA]">
           <Link
-            to="/search"
+            to="/"
             className={`transition-colors hover:text-slate-900 dark:hover:text-[#F4F7FB] ${
-              currentPath === '/search' || currentPath.startsWith('/college/') ||
-              currentPath === '/colleges' || currentPath === '/courses' ||
-              currentPath === '/careers' || currentPath === '/classes'
+              currentPath === '/'
                 ? 'text-[#007DCC] dark:text-[#19A7E8] font-semibold'
                 : ''
             }`}
           >
-            Search
+            Home
           </Link>
           <Link
             to="/help-me-decide"

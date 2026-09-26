@@ -425,27 +425,7 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
             <div />
           )}
 
-          {step === 1 && (
-            <button
-              onClick={() => setStep(2)}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
-            >
-              <span>Next: Mumbai Region</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          )}
-
-          {step === 2 && (
-            <button
-              onClick={() => setStep(3)}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
-            >
-              <span>Next: Specialization</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          )}
-
-          {step === 3 && (
+          {step < 4 && (
             <div className="flex items-center gap-2">
               {onViewAll && (
                 <button
@@ -455,13 +435,36 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
                   <span>View All Classes</span>
                 </button>
               )}
-              <button
-                onClick={handleApply}
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
-              >
-                <span>Apply Filters & Find Classes</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
+              
+              {step === 1 && (
+                <button
+                  onClick={() => setStep(2)}
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+                >
+                  <span>Next: Mumbai Region</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              )}
+
+              {step === 2 && (
+                <button
+                  onClick={() => setStep(3)}
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+                >
+                  <span>Next: Specialization</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              )}
+
+              {step === 3 && (
+                <button
+                  onClick={handleApply}
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+                >
+                  <span>Apply Filters & Find Classes</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              )}
             </div>
           )}
 

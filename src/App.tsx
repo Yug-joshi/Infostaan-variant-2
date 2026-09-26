@@ -57,7 +57,11 @@ export default function App() {
       }
     });
     const queryString = params.toString();
-    navigate(`/${cat}${queryString ? '?' + queryString : ''}`);
+    if (queryString) {
+      navigate(`/${cat}?${queryString}`);
+    } else {
+      navigate(`/${cat}?all=true`);
+    }
   };
 
   // View All — navigates with ONLY ?all=true, no filter params
@@ -79,7 +83,11 @@ export default function App() {
     if (filters.specialization && !filters.specialization.startsWith('All')) params.set('specialization', filters.specialization);
     if (filters.searchQuery) params.set('query', filters.searchQuery);
     const queryString = params.toString();
-    navigate(`/classes${queryString ? '?' + queryString : ''}`);
+    if (queryString) {
+      navigate(`/classes?${queryString}`);
+    } else {
+      navigate(`/classes?all=true`);
+    }
   };
 
   const handleApplyCutoffFilters = (filters: { educationLevel?: string; selectedRangeId?: string | null; percentageExact?: string; stream?: string; region?: string; searchQuery?: string }) => {
@@ -117,10 +125,7 @@ export default function App() {
   }, [location.pathname, location.search]);
 
   const handleSearch = (query: string, category: string = 'all') => {
-    const params = new URLSearchParams();
-    if (query) params.set('query', query);
-    if (category && category !== 'all') params.set('category', category);
-    navigate(`/search?${params.toString()}`);
+    navigate('/');
   };
 
   const handleSelectCollege = (collegeSlug: string) => {
@@ -247,14 +252,7 @@ export default function App() {
             />
           } />
           
-          <Route path="/search" element={
-            <SearchResultsScreen
-              onNavigate={(path) => navigate(path)}
-              onSelectCollege={handleSelectCollege}
-              savedItemIds={savedItems.map((i) => i.id)}
-              onOpenCutoff={() => setIsCutoffOpen(true)}
-            />
-          } />
+          <Route path="/search" element={<Navigate to="/" replace />} />
 
           <Route path="/colleges" element={
             <CategoryResultsPage
@@ -350,7 +348,7 @@ export default function App() {
           {/* Legacy route fallbacks */}
           <Route path="/guidance" element={<Navigate to="/help-me-decide" replace />} />
           <Route path="/connect" element={<Navigate to="/dashboard" replace />} />
-          <Route path="/explore" element={<Navigate to="/search" replace />} />
+          <Route path="/explore" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
 

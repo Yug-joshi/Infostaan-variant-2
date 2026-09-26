@@ -19,19 +19,19 @@ export const Footer: React.FC = () => {
 
         <div className="flex flex-wrap justify-center items-center gap-6 text-sm">
           <Link
-            to="/search?category=colleges"
+            to="/colleges"
             className="text-slate-600 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-[#F4F7FB] transition-colors"
           >
             Colleges
           </Link>
           <Link
-            to="/search?category=courses"
+            to="/courses"
             className="text-slate-600 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-[#F4F7FB] transition-colors"
           >
             Courses
           </Link>
           <Link
-            to="/search?category=careers"
+            to="/careers"
             className="text-slate-600 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-[#F4F7FB] transition-colors"
           >
             Careers

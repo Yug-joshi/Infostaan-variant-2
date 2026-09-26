@@ -151,7 +151,7 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
                 <p className="text-lg font-semibold text-slate-900 dark:text-[#F4F7FB] mb-6">No items saved in this view</p>
                 <button
                   type="button"
-                  onClick={() => onNavigate('/search')}
+                  onClick={() => onNavigate('/')}
                   className="px-5 py-2.5 rounded-lg bg-[#007DCC] text-white text-sm font-medium hover:bg-[#006cb0] transition-colors inline-flex items-center gap-2"
                 >
                   <span>Explore Mumbai Opportunities</span>

@@ -24,7 +24,7 @@ export const CareerRoadmapScreen: React.FC<CareerRoadmapScreenProps> = ({
         {/* Header Breadcrumb & Back Navigation */}
         <div className="flex items-center justify-between gap-4 mb-6">
           <button
-            onClick={() => navigate('/search?category=careers')}
+            onClick={() => navigate('/careers')}
             className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] transition-all"
           >
             <ArrowLeft className="w-4 h-4" />

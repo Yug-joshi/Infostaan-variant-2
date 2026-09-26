@@ -75,7 +75,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
             <nav className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-500 dark:text-[#A9B8CA] mb-6 pt-2">
               <button onClick={() => navigate('/')} className="hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors">Home</button>
               <span>/</span>
-              <button onClick={() => navigate('/search?category=colleges')} className="hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors">Colleges</button>
+              <button onClick={() => navigate('/colleges')} className="hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors">Colleges</button>
               <span>/</span>
               <span className="text-slate-900 dark:text-[#F4F7FB]">{college.name}</span>
             </nav>
