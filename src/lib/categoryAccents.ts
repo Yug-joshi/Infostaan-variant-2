@@ -67,20 +67,20 @@ export const CATEGORY_ACCENTS: Record<DiscoveryCategory, CategoryAccent> = {
   },
   courses: {
     // Indigo / lavender — academic depth
-    color: '#6C63FF',
+    color: '#F59E0B',
     colorHover: '#8B85FF',
-    bgLight: 'rgba(108,99,255,0.08)',
-    bgDark: 'rgba(108,99,255,0.15)',
+    bgLight: 'rgba(239, 221, 57, 0.78)',
+    bgDark: 'rgba(231, 227, 20, 0.89)',
     borderLight: 'rgba(108,99,255,0.20)',
     borderDark: 'rgba(108,99,255,0.30)',
-    ring: '#6C63FF',
+    ring: '#F59E0B',
     selectedText: '#6C63FF',
     chipBgLight: 'rgba(108,99,255,0.10)',
     chipBgDark: 'rgba(108,99,255,0.20)',
-    chipText: '#6C63FF',
+    chipText: '#FBBF24',
     chipTextDark: '#b8b4ff',
-    ctaBg: '#6C63FF',
-    ctaHover: '#5a52e0',
+    ctaBg: '#F59E0B',
+    ctaHover: '#F59E33',
   },
   careers: {
     // Periwinkle / blue-violet — forward momentum

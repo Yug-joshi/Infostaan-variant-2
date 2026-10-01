@@ -16,6 +16,7 @@ export interface SearchResultItem {
   collegeId?: string;
   collegeSlug?: string;
   sourceFile?: string;
+  slug?: string;
 }
 
 export interface CollegeDetail {

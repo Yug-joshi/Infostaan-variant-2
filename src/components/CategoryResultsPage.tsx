@@ -172,6 +172,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
       // Map ClassData → SearchResultItem shape
       return filtered.slice(0, 200).map((cls) => ({
         id: cls.id,
+        slug: cls.slug,
         category: 'classes' as const,
         badgeCategory: 'Coaching Class',
         badgeSub: cls.area || cls.region || 'Mumbai',
@@ -220,8 +221,9 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
       onSelectCollege(item.collegeSlug);
     } else if (item.category === 'colleges') {
       onSelectCollege('mithibai');
+    } else if (item.category === 'classes' && item.slug) {
+      window.location.href = `/class/${item.slug}`;
     }
-    // careers / courses / classes: future detail routes
   };
 
   // ─────────────────────────────────────────────────────────────────────────

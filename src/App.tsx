@@ -23,7 +23,7 @@ import { PencilLoader } from './components/PencilLoader';
 import { Check } from 'lucide-react';
 import logoImg from './assets/logo.png';
 import gsap from 'gsap';
-
+import ClassDetailScreen from './components/ClassDetailScreen';
 export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -216,14 +216,20 @@ export default function App() {
           aria-hidden="true"
           className="pointer-events-none absolute select-none object-contain"
           style={{
-            width: 'min(70vw, 340px)',
-            opacity: 0.4,
-            top: '50%',
+            width: 'min(55vw, 280px)',
+            top: '40%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
           }}
         />
-        <div className="relative z-10 text-center px-4 animate-in fade-in duration-150">
+        <div
+          className="absolute z-10 text-center px-4 animate-in fade-in duration-150"
+          style={{
+            top: '75%',
+            left: '49%',
+            transform: 'translate(-50%, -50%)',
+          }}
+        >
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB]">
             Infostaan<span className="text-[#007DCC]">.</span>
           </h1>
@@ -265,7 +271,10 @@ export default function App() {
               onOpenCategoryFilter={handleOpenCategoryFilter}
             />
           } />
-
+          <Route
+            path="/class/:slug"
+            element={<ClassDetailScreen />}
+          />
           <Route path="/search" element={<Navigate to="/" replace />} />
 
           <Route path="/colleges" element={
@@ -410,6 +419,10 @@ export default function App() {
         onClose={() => setIsClassesOpen(false)}
         onApplyFilters={handleApplyClassesFilters}
         onViewAll={handleViewAllClasses}
+        onViewClass={(slug) => {
+          setIsClassesOpen(false);
+          navigate(`/class/${slug}`);
+        }}
       />
 
       {/* Data-driven Category Filter Modal (Colleges, Courses, Careers) */}
