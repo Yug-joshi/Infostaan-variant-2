@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, ArrowRight, ArrowLeft, Building2, GraduationCap, TrendingUp, CheckCircle2, MapPin, SlidersHorizontal } from 'lucide-react';
+import { getCategoryAccent } from '../lib/categoryAccents';
+import { useTheme } from '../context/ThemeContext';
 
 export type FilterCategoryType = 'colleges' | 'courses' | 'careers';
 
@@ -86,8 +88,11 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
   onApplyFilters,
   onViewAll,
 }) => {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const config = CATEGORY_CONFIGS[category] || CATEGORY_CONFIGS.colleges;
   const IconComp = config.icon;
+  const accent = getCategoryAccent(category);
 
   const [stepIndex, setStepIndex] = useState(0);
   const [selectedValues, setSelectedValues] = useState<Record<string, string>>({});
@@ -131,20 +136,39 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-slate-900/60 dark:bg-[#070D18]/80 backdrop-blur-sm"
+        className="absolute inset-0 backdrop-blur-md transition-opacity"
+        style={{ background: isDark ? 'rgba(3, 7, 18, 0.78)' : 'rgba(7, 13, 24, 0.65)' }}
         onClick={onClose}
       />
 
-      {/* Modal Container */}
-      <div className="relative w-full max-w-2xl bg-white dark:bg-[#0B1623] border border-slate-200 dark:border-white/10 shadow-2xl rounded-3xl flex flex-col overflow-hidden text-slate-900 dark:text-[#F4F7FB]">
-        {/* Header */}
-        <div className="shrink-0 px-6 py-4 border-b border-slate-100 dark:border-white/8 flex items-center justify-between">
+      {/* Modal Container — glass shell */}
+      <div
+        className="relative w-full max-w-2xl border shadow-2xl rounded-3xl flex flex-col overflow-hidden text-slate-900 dark:text-[#F4F7FB] backdrop-blur-xl transition-colors duration-200"
+        style={{
+          background: isDark ? 'rgba(13, 24, 40, 0.96)' : 'rgba(255, 255, 255, 0.94)',
+          borderColor: isDark ? accent.borderDark : accent.borderLight,
+          boxShadow: isDark
+            ? `0 25px 60px rgba(0,0,0,0.65), 0 0 0 1px ${accent.borderDark}`
+            : `0 25px 60px rgba(0,0,0,0.15), 0 0 0 1px ${accent.borderLight}`,
+        }}
+      >
+        {/* Header — accent tinted band */}
+        <div
+          className="shrink-0 px-6 py-4 border-b flex items-center justify-between transition-colors duration-200"
+          style={{
+            background: isDark ? accent.bgDark : accent.bgLight,
+            borderColor: isDark ? accent.borderDark : accent.borderLight,
+          }}
+        >
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center shrink-0">
-              <IconComp className="w-4.5 h-4.5 text-[#007DCC] dark:text-[#86cfff]" />
+            <div
+              className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
+              style={{ background: isDark ? 'rgba(255, 255, 255, 0.08)' : accent.bgDark }}
+            >
+              <IconComp className="w-[18px] h-[18px]" style={{ color: isDark ? accent.chipTextDark : accent.color }} />
             </div>
             <div>
-              <h2 className="text-lg font-bold leading-tight">{config.title}</h2>
+              <h2 className="text-lg font-bold leading-tight text-slate-900 dark:text-[#F4F7FB]">{config.title}</h2>
               <p className="text-xs text-slate-500 dark:text-[#71839A]">
                 Step {stepIndex + 1} of {config.steps.length}: {currentStep.title}
               </p>
@@ -178,14 +202,20 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
                   key={opt}
                   type="button"
                   onClick={() => handleSelectOption(opt)}
-                  className={`p-4 rounded-2xl border text-left font-bold text-sm transition-all flex items-center justify-between ${
+                  className={`p-4 rounded-2xl border text-left font-bold text-sm transition-all flex items-center justify-between cursor-pointer ${
                     isSelected
-                      ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
-                      : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                      ? 'text-slate-900 dark:text-[#F4F7FB]'
+                      : 'bg-white/60 dark:bg-[#162232] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#C5D3E3] hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-50 dark:hover:bg-[#1c2b3f]'
                   }`}
+                  style={isSelected ? {
+                    background: isDark ? accent.bgDark : accent.bgLight,
+                    borderColor: isDark ? accent.colorHover : accent.ring,
+                    boxShadow: `0 0 0 1.5px ${isDark ? accent.colorHover : accent.ring}`,
+                    color: isDark ? accent.chipTextDark : accent.selectedText,
+                  } : undefined}
                 >
                   <span>{opt}</span>
-                  {isSelected && <CheckCircle2 className="w-4 h-4 text-[#007DCC] shrink-0 ml-2" />}
+                  {isSelected && <CheckCircle2 className="w-4 h-4 shrink-0 ml-2" style={{ color: isDark ? accent.colorHover : accent.color }} />}
                 </button>
               );
             })}
@@ -193,12 +223,18 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="shrink-0 px-6 py-4 border-t border-slate-100 dark:border-white/8 bg-slate-50/50 dark:bg-[#0D1828]/50">
+        <div
+          className="shrink-0 px-6 py-4 border-t transition-colors duration-200"
+          style={{
+            background: isDark ? accent.bgDark : accent.bgLight,
+            borderColor: isDark ? accent.borderDark : accent.borderLight,
+          }}
+        >
           <div className="flex items-center justify-between gap-3">
             <button
               type="button"
               onClick={handlePrev}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] text-xs font-bold transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>{stepIndex === 0 ? 'Cancel' : 'Previous'}</span>
@@ -210,7 +246,7 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
                 <button
                   type="button"
                   onClick={() => { onViewAll(category); onClose(); }}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] text-xs font-bold transition-all"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer"
                 >
                   <span>View All {category.charAt(0).toUpperCase() + category.slice(1)}</span>
                 </button>
@@ -219,7 +255,10 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
               <button
                 type="button"
                 onClick={handleNext}
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
+                style={{ background: accent.ctaBg }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = accent.ctaHover; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = accent.ctaBg; }}
               >
                 <span>{stepIndex === config.steps.length - 1 ? config.submitLabel : 'Next Step'}</span>
                 <ArrowRight className="w-4 h-4" />

@@ -103,12 +103,12 @@ export default function App() {
     navigate(`/cutoffs${queryString ? '?' + queryString : ''}`);
   };
   const logoRef = useRef<HTMLImageElement>(null);
-  
+
   useEffect(() => {
-    // Keep initial loader visible for 2.8 seconds
+    // 2-second branded loading screen.
     const timer = setTimeout(() => {
       setIsBooting(false);
-    }, 2800);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -208,13 +208,27 @@ export default function App() {
 
   if (isBooting) {
     return (
-      <div className="min-h-screen flex items-center justify-center font-sans transition-colors duration-200 bg-slate-100 dark:bg-[#070D18]">
-        <div className="text-center px-4 animate-in fade-in duration-150">
+      <div className="min-h-screen flex items-center justify-center font-sans transition-colors duration-200 bg-slate-100 dark:bg-[#070D18] relative overflow-hidden">
+        {/* Logo watermark — centered behind the text */}
+        <img
+          src={logoImg}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute select-none object-contain"
+          style={{
+            width: 'min(70vw, 340px)',
+            opacity: 0.4,
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+          }}
+        />
+        <div className="relative z-10 text-center px-4 animate-in fade-in duration-150">
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB]">
             Infostaan<span className="text-[#007DCC]">.</span>
           </h1>
           <p className="text-xs sm:text-sm font-semibold tracking-wide text-slate-500 dark:text-[#71839A] mt-1.5">
-            guiding your journey
+            Guiding your journey
           </p>
         </div>
       </div>
@@ -251,7 +265,7 @@ export default function App() {
               onOpenCategoryFilter={handleOpenCategoryFilter}
             />
           } />
-          
+
           <Route path="/search" element={<Navigate to="/" replace />} />
 
           <Route path="/colleges" element={
@@ -299,7 +313,7 @@ export default function App() {
               onOpenCutoff={() => setIsCutoffOpen(true)}
             />
           } />
-          
+
           <Route path="/college/:slug" element={
             <CollegeDetailScreen
               savedItems={savedItems}

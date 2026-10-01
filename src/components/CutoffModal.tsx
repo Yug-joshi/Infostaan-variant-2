@@ -2,6 +2,8 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { X, Search, ArrowRight, ArrowLeft, Activity, SlidersHorizontal, GraduationCap, CheckCircle2, MapPin, Building2 } from 'lucide-react';
 import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
 import { PercentageScale } from './PercentageScale';
+import { getCategoryAccent } from '../lib/categoryAccents';
+import { useTheme } from '../context/ThemeContext';
 
 interface CutoffModalProps {
   isOpen: boolean;
@@ -71,6 +73,9 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
   onSelectCollege,
   onApplyFilters,
 }) => {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+  const accent = getCategoryAccent('cutoffs');
   // Wizard Step: 1 = Education Level, 2 = Percentage Range / Dial, 3 = Stream & Region, 4 = Results
   const [step, setStep] = useState<number>(1);
   const [pending, setPending] = useState<Filters>(DEFAULT_FILTERS);
@@ -217,20 +222,39 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-slate-900/60 dark:bg-[#070D18]/80 backdrop-blur-sm"
+        className="absolute inset-0 backdrop-blur-md transition-opacity"
+        style={{ background: isDark ? 'rgba(3, 7, 18, 0.78)' : 'rgba(7, 13, 24, 0.65)' }}
         onClick={onClose}
       />
 
-      {/* Modal Container */}
-      <div className="relative w-full max-w-4xl max-h-[90vh] bg-white dark:bg-[#0B1623] border border-slate-200 dark:border-white/10 shadow-2xl rounded-3xl flex flex-col overflow-hidden text-slate-900 dark:text-[#F4F7FB]">
-        {/* Header */}
-        <div className="shrink-0 px-6 py-4 border-b border-slate-100 dark:border-white/8 flex items-center justify-between">
+      {/* Modal Container — glass shell */}
+      <div
+        className="relative w-full max-w-4xl max-h-[90vh] border shadow-2xl rounded-3xl flex flex-col overflow-hidden text-slate-900 dark:text-[#F4F7FB] backdrop-blur-xl transition-colors duration-200"
+        style={{
+          background: isDark ? 'rgba(13, 24, 40, 0.96)' : 'rgba(255, 255, 255, 0.94)',
+          borderColor: isDark ? accent.borderDark : accent.borderLight,
+          boxShadow: isDark
+            ? `0 25px 60px rgba(0,0,0,0.65), 0 0 0 1px ${accent.borderDark}`
+            : `0 25px 60px rgba(0,0,0,0.15), 0 0 0 1px ${accent.borderLight}`,
+        }}
+      >
+        {/* Header — accent tinted band */}
+        <div
+          className="shrink-0 px-6 py-4 border-b flex items-center justify-between transition-colors duration-200"
+          style={{
+            background: isDark ? accent.bgDark : accent.bgLight,
+            borderColor: isDark ? accent.borderDark : accent.borderLight,
+          }}
+        >
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center shrink-0">
-              <Activity className="w-4.5 h-4.5 text-[#007DCC] dark:text-[#86cfff]" />
+            <div
+              className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
+              style={{ background: isDark ? 'rgba(255, 255, 255, 0.08)' : accent.bgDark }}
+            >
+              <Activity className="w-[18px] h-[18px]" style={{ color: isDark ? accent.chipTextDark : accent.color }} />
             </div>
             <div>
-              <h2 className="text-lg font-bold leading-tight">Mumbai Cutoff Explorer</h2>
+              <h2 className="text-lg font-bold leading-tight text-slate-900 dark:text-[#F4F7FB]">Mumbai Cutoff Explorer</h2>
               <p className="text-xs text-slate-500 dark:text-[#71839A]">
                 {step === 1
                   ? 'Step 1 of 3: Select Education Level'
@@ -270,11 +294,16 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                   <button
                     key={level.id}
                     onClick={() => setPendingField('educationLevel', level.id)}
-                    className={`w-full p-4 rounded-2xl border text-left transition-all flex items-center justify-between ${
+                    className={`w-full p-4 rounded-2xl border text-left transition-all flex items-center justify-between cursor-pointer ${
                       pending.educationLevel === level.id
-                        ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
-                        : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 hover:border-[#007DCC]/40'
+                        ? 'text-slate-900 dark:text-[#F4F7FB]'
+                        : 'bg-white/60 dark:bg-[#162232] border-slate-200 dark:border-white/10 hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-50 dark:hover:bg-[#1c2b3f]'
                     }`}
+                    style={pending.educationLevel === level.id ? {
+                      background: isDark ? accent.bgDark : accent.bgLight,
+                      borderColor: isDark ? accent.colorHover : accent.ring,
+                      boxShadow: `0 0 0 1.5px ${isDark ? accent.colorHover : accent.ring}`,
+                    } : undefined}
                   >
                     <div>
                       <div className="flex items-center gap-2">
@@ -293,7 +322,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                     </div>
 
                     {pending.educationLevel === level.id && (
-                      <CheckCircle2 className="w-5 h-5 text-[#007DCC] dark:text-[#86cfff] shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 shrink-0" style={{ color: isDark ? accent.colorHover : accent.color }} />
                     )}
                   </button>
                 ))}
@@ -327,11 +356,17 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                         setPendingField('selectedRangeId', r.id);
                         setPendingField('percentageExact', String(r.max));
                       }}
-                      className={`py-2 px-1.5 rounded-xl border text-xs font-bold transition-all text-center ${
+                      className={`py-2 px-1.5 rounded-xl border text-xs font-bold transition-all text-center cursor-pointer ${
                         pending.selectedRangeId === r.id
-                          ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
-                          : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                          ? ''
+                          : 'bg-white/60 dark:bg-[#162232] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#C5D3E3] hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-50 dark:hover:bg-[#1c2b3f]'
                       }`}
+                      style={pending.selectedRangeId === r.id ? {
+                        background: isDark ? accent.bgDark : accent.bgLight,
+                        borderColor: isDark ? accent.colorHover : accent.ring,
+                        boxShadow: `0 0 0 1.5px ${isDark ? accent.colorHover : accent.ring}`,
+                        color: isDark ? accent.chipTextDark : accent.selectedText,
+                      } : undefined}
                     >
                       {r.label}
                     </button>
@@ -371,7 +406,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                           setPendingField('selectedRangeId', matched ? matched.id : null);
                         }
                       }}
-                      className="w-20 px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-[#0D1828] border border-slate-300 dark:border-white/10 font-bold text-sm text-center text-slate-900 dark:text-[#F4F7FB] focus:outline-none focus:border-[#007DCC]"
+                      className="w-20 px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-[#162232] border border-slate-300 dark:border-white/10 font-bold text-sm text-center text-slate-900 dark:text-[#F4F7FB] focus:outline-none focus:border-[#0B9EC4]"
                     />
                     <span className="font-bold text-sm text-slate-500">%</span>
                   </div>
@@ -402,11 +437,17 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                       <button
                         key={s}
                         onClick={() => setPendingField('stream', s)}
-                        className={`p-4 rounded-2xl border text-center font-bold text-sm transition-all ${
+                        className={`p-4 rounded-2xl border text-center font-bold text-sm transition-all cursor-pointer ${
                           pending.stream === s
-                            ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
-                            : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                            ? ''
+                            : 'bg-white/60 dark:bg-[#162232] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#C5D3E3] hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-50 dark:hover:bg-[#1c2b3f]'
                         }`}
+                        style={pending.stream === s ? {
+                          background: isDark ? accent.bgDark : accent.bgLight,
+                          borderColor: isDark ? accent.colorHover : accent.ring,
+                          boxShadow: `0 0 0 1.5px ${isDark ? accent.colorHover : accent.ring}`,
+                          color: isDark ? accent.chipTextDark : accent.selectedText,
+                        } : undefined}
                       >
                         {s}
                       </button>
@@ -416,7 +457,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
 
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-[#A9B8CA] mb-3 flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-[#007DCC]" />
+                    <MapPin className="w-3.5 h-3.5" style={{ color: isDark ? accent.chipTextDark : accent.color }} />
                     <span>Mumbai Region</span>
                   </h4>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
@@ -424,11 +465,16 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                       <button
                         key={r}
                         onClick={() => setPendingField('region', r)}
-                        className={`p-3 rounded-xl border text-xs font-bold transition-all text-left ${
+                        className={`p-3 rounded-xl border text-xs font-bold transition-all text-left cursor-pointer ${
                           pending.region === r
-                            ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
-                            : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                            ? ''
+                            : 'bg-white/60 dark:bg-[#162232] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#C5D3E3] hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-50 dark:hover:bg-[#1c2b3f]'
                         }`}
+                        style={pending.region === r ? {
+                          background: isDark ? accent.bgDark : accent.bgLight,
+                          borderColor: isDark ? accent.colorHover : accent.ring,
+                          color: isDark ? accent.chipTextDark : accent.selectedText,
+                        } : undefined}
                       >
                         {r}
                       </button>
@@ -455,7 +501,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                       setPendingField('searchQuery', e.target.value);
                       setApplied((prev) => ({ ...prev, searchQuery: e.target.value }));
                     }}
-                    className="w-full pl-10 pr-4 py-2.5 bg-slate-100 dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 rounded-xl text-sm font-medium text-slate-900 dark:text-[#F4F7FB] focus:outline-none focus:border-[#007DCC]"
+                    className="w-full pl-10 pr-4 py-2.5 bg-slate-100 dark:bg-[#162232] border border-slate-200 dark:border-white/10 rounded-xl text-sm font-medium text-slate-900 dark:text-[#F4F7FB] focus:outline-none focus:border-[#0B9EC4]"
                   />
                 </div>
 
@@ -463,7 +509,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="px-4 py-2.5 bg-slate-100 dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 rounded-xl text-sm font-semibold text-slate-700 dark:text-[#A9B8CA] focus:outline-none"
+                    className="px-4 py-2.5 bg-slate-100 dark:bg-[#162232] border border-slate-200 dark:border-white/10 rounded-xl text-sm font-semibold text-slate-700 dark:text-[#A9B8CA] focus:outline-none"
                   >
                     <option value="Highest cutoff">Sort: Highest Cutoff First</option>
                     <option value="Lowest cutoff">Sort: Lowest Cutoff First</option>
@@ -471,7 +517,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
 
                   <button
                     onClick={() => setStep(3)}
-                    className="px-4 py-2.5 bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 rounded-xl text-xs font-bold text-[#007DCC] dark:text-[#86cfff] hover:bg-slate-50 dark:hover:bg-white/5 transition-all flex items-center gap-1.5 shrink-0"
+                    className="px-4 py-2.5 bg-white dark:bg-[#162232] border border-slate-200 dark:border-white/10 rounded-xl text-xs font-bold text-[#0B9EC4] dark:text-[#62d6f5] hover:bg-slate-50 dark:hover:bg-white/5 transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
                   >
                     <SlidersHorizontal className="w-3.5 h-3.5" />
                     <span>Modify Filters</span>
@@ -481,7 +527,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
 
               {/* Vertical Stacked Result Cards */}
               {displayedColleges.length === 0 ? (
-                <div className="p-12 text-center rounded-2xl bg-slate-50 dark:bg-[#0D1828] border border-slate-200 dark:border-white/10">
+                <div className="p-12 text-center rounded-2xl bg-slate-50 dark:bg-[#131F30] border border-slate-200 dark:border-white/10">
                   <p className="text-base font-bold text-slate-900 dark:text-[#F4F7FB] mb-1">
                     No matching cutoffs found
                   </p>
@@ -490,7 +536,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                   </p>
                   <button
                     onClick={() => setStep(2)}
-                    className="px-4 py-2 bg-[#007DCC] text-white text-xs font-bold rounded-xl"
+                    className="px-4 py-2 bg-[#0B9EC4] hover:bg-[#0888aa] text-white text-xs font-bold rounded-xl transition-all cursor-pointer"
                   >
                     Back to Range Selection
                   </button>
@@ -504,15 +550,15 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                     return (
                       <div
                         key={`${c.collegeName}-${c.stream}-${idx}`}
-                        className="p-5 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 group shadow-2xs"
+                        className="p-5 rounded-2xl bg-white dark:bg-[#131F30] border border-slate-200 dark:border-white/10 hover:border-[#0B9EC4]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 group shadow-2xs"
                       >
                         <div className="flex-1 min-w-0">
                           <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                            <span className="px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-[#007DCC] dark:text-[#86cfff] text-[10px] font-extrabold uppercase">
+                            <span className="px-2.5 py-0.5 rounded-full bg-cyan-50 dark:bg-cyan-900/30 text-[#0B9EC4] dark:text-[#62d6f5] text-[10px] font-extrabold uppercase">
                               {c.stream}
                             </span>
                             <span className="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-[#A9B8CA] text-[10px] font-semibold flex items-center gap-1">
-                              <MapPin className="w-3 h-3 text-[#007DCC]" />
+                              <MapPin className="w-3 h-3 text-[#0B9EC4]" />
                               {region}
                             </span>
                             {c.year && (
@@ -526,7 +572,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                           <button
                             type="button"
                             onClick={() => onSelectCollege(slug)}
-                            className="text-left font-bold text-base sm:text-lg text-slate-900 dark:text-[#F4F7FB] hover:text-[#007DCC] dark:hover:text-[#86cfff] transition-colors leading-snug block truncate group-hover:underline cursor-pointer"
+                            className="text-left font-bold text-base sm:text-lg text-slate-900 dark:text-[#F4F7FB] hover:text-[#0B9EC4] dark:hover:text-[#62d6f5] transition-colors leading-snug block truncate group-hover:underline cursor-pointer"
                           >
                             {c.collegeName}
                           </button>
@@ -537,7 +583,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                         </div>
 
                         <div className="flex sm:flex-col items-center sm:items-end justify-between shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100 dark:border-white/5">
-                          <div className="text-2xl sm:text-3xl font-black text-[#007DCC] dark:text-[#86cfff]">
+                          <div className="text-2xl sm:text-3xl font-black" style={{ color: isDark ? accent.chipTextDark : accent.color }}>
                             {c.cutoff}%
                           </div>
                           <span className="text-[10px] font-bold uppercase text-slate-400 tracking-wider">
@@ -554,11 +600,17 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
         </div>
 
         {/* Footer Controls */}
-        <div className="shrink-0 px-6 py-4 border-t border-slate-100 dark:border-white/8 flex items-center justify-between bg-slate-50/50 dark:bg-[#0D1828]/50">
+        <div
+          className="shrink-0 px-6 py-4 border-t flex items-center justify-between transition-colors duration-200"
+          style={{
+            background: isDark ? accent.bgDark : accent.bgLight,
+            borderColor: isDark ? accent.borderDark : accent.borderLight,
+          }}
+        >
           {step > 1 && step < 4 ? (
             <button
               onClick={() => setStep(step - 1)}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] text-xs font-bold transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Previous</span>
@@ -566,7 +618,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
           ) : step === 1 ? (
             <button
               onClick={onClose}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] text-xs font-bold transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Cancel</span>
@@ -578,7 +630,8 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
           {step === 1 && (
             <button
               onClick={() => setStep(2)}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
+              style={{ background: accent.ctaBg }}
             >
               <span>Next: Percentage Range</span>
               <ArrowRight className="w-4 h-4" />
@@ -588,9 +641,10 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
           {step === 2 && (
             <button
               onClick={() => setStep(3)}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
+              style={{ background: accent.ctaBg }}
             >
-              <span>Next: Stream & Region</span>
+              <span>Next: Stream &amp; Region</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           )}
@@ -598,9 +652,10 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
           {step === 3 && (
             <button
               onClick={handleApply}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
+              style={{ background: accent.ctaBg }}
             >
-              <span>Apply Filters & View Cutoffs</span>
+              <span>Apply Filters &amp; View Cutoffs</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           )}
@@ -608,7 +663,8 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
           {step === 4 && (
             <button
               onClick={onClose}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] text-white text-xs font-bold"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold cursor-pointer"
+              style={{ background: accent.ctaBg }}
             >
               <span>Done</span>
             </button>

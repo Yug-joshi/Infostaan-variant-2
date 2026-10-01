@@ -21,6 +21,7 @@ import { SearchResultItem } from '../types';
 import { searchInfostaan } from '../lib/searchEngine';
 import { matchItemRegion, applyStreamFilter, filterClasses } from '../lib/categoryFilters';
 import { FilterCategoryType } from './CategoryFilterModal';
+import { getCategoryAccent } from '../lib/categoryAccents';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
@@ -106,6 +107,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
 
   const config = PAGE_CONFIG[category];
   const IconComp = config.icon;
+  const accent = getCategoryAccent(category);
 
   // ── Read URL params ────────────────────────────────────────────────────────
   const allParam = searchParams.get('all');          // "true" = View All mode
@@ -237,7 +239,13 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
         <div className="flex flex-col gap-4 mb-8 text-left">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-[#007DCC] dark:text-[#86cfff] text-xs font-bold uppercase tracking-wider mb-2">
+              <div
+                className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider mb-2"
+                style={{
+                  background: accent.chipBgLight,
+                  color: accent.chipText,
+                }}
+              >
                 <MapPin className="w-3.5 h-3.5" />
                 <span>{config.badge}</span>
               </div>
@@ -273,7 +281,12 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                   key={chip.param}
                   type="button"
                   onClick={() => removeChip(chip.param)}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#007DCC]/10 dark:bg-[#007DCC]/20 text-[#007DCC] dark:text-[#86cfff] text-xs font-semibold border border-[#007DCC]/20 dark:border-[#007DCC]/30 hover:bg-[#007DCC]/20 transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border transition-colors"
+                  style={{
+                    background: accent.chipBgLight,
+                    color: accent.chipText,
+                    borderColor: accent.borderLight,
+                  }}
                 >
                   <span>{chip.label}</span>
                   <X className="w-3 h-3" />
@@ -287,7 +300,10 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
         {category === 'careers' && showResults && (
           <div className="mb-6 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-left">
             <div className="flex items-center gap-3">
-              <div className="p-2.5 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-[#007DCC] dark:text-[#86cfff] shrink-0">
+              <div
+                className="p-2.5 rounded-xl shrink-0"
+                style={{ background: accent.bgLight, color: accent.color }}
+              >
                 <Compass className="w-5 h-5" />
               </div>
               <div>
@@ -302,7 +318,8 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
             <button
               type="button"
               onClick={() => navigate('/career-roadmap')}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#007DCC] text-white text-xs font-bold hover:bg-[#006cb0] transition-colors shrink-0"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-white text-xs font-bold transition-colors shrink-0"
+              style={{ background: accent.ctaBg }}
             >
               <span>Open Career Roadmap</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -314,8 +331,11 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
         {!showResults ? (
           /* Empty state — no params, no all=true */
           <div className="py-20 text-center max-w-lg mx-auto">
-            <div className="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-900/20 text-[#007DCC] dark:text-[#86cfff] flex items-center justify-center mx-auto mb-5">
-              <IconComp className="w-8 h-8" />
+            <div
+              className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5"
+              style={{ background: accent.bgLight }}
+            >
+              <IconComp className="w-8 h-8" style={{ color: accent.color }} />
             </div>
             <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-3">
               {config.emptyTitle}
@@ -326,7 +346,8 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
             <button
               type="button"
               onClick={handleOpenFilter}
-              className="px-6 py-3 rounded-xl bg-[#007DCC] text-white text-sm font-bold hover:bg-[#006cb0] transition-colors inline-flex items-center gap-2 shadow-md shadow-[#007DCC]/20"
+              className="px-6 py-3 rounded-xl text-white text-sm font-bold transition-colors inline-flex items-center gap-2 shadow-md"
+              style={{ background: accent.ctaBg }}
             >
               <SlidersHorizontal className="w-4 h-4" />
               <span>{config.filterLabel}</span>
@@ -347,7 +368,8 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
             <button
               type="button"
               onClick={handleOpenFilter}
-              className="px-5 py-2.5 rounded-xl bg-[#007DCC] text-white text-xs font-bold hover:bg-[#006cb0] transition-colors inline-flex items-center gap-2"
+              className="px-5 py-2.5 rounded-xl text-white text-xs font-bold transition-colors inline-flex items-center gap-2"
+              style={{ background: accent.ctaBg }}
             >
               <SlidersHorizontal className="w-4 h-4" />
               Modify Filters

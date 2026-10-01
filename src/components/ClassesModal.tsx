@@ -1,6 +1,8 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { X, Search, ArrowRight, ArrowLeft, MonitorPlay, SlidersHorizontal, CheckCircle2, MapPin, Phone, Globe } from 'lucide-react';
 import { CLASSES, ClassData } from '../data/classes';
+import { getCategoryAccent } from '../lib/categoryAccents';
+import { useTheme } from '../context/ThemeContext';
 
 interface ClassesModalProps {
   isOpen: boolean;
@@ -57,6 +59,9 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
   onApplyFilters,
   onViewAll,
 }) => {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+  const accent = getCategoryAccent('classes');
   const [step, setStep] = useState<number>(1);
   const [pending, setPending] = useState<Filters>(DEFAULT_FILTERS);
   const [applied, setApplied] = useState<Filters>(DEFAULT_FILTERS);
@@ -169,20 +174,39 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-slate-900/60 dark:bg-[#070D18]/80 backdrop-blur-sm"
+        className="absolute inset-0 backdrop-blur-md transition-opacity"
+        style={{ background: isDark ? 'rgba(3, 7, 18, 0.78)' : 'rgba(7, 13, 24, 0.65)' }}
         onClick={onClose}
       />
 
-      {/* Modal Container */}
-      <div className="relative w-full max-w-4xl max-h-[90vh] bg-white dark:bg-[#0B1623] border border-slate-200 dark:border-white/10 shadow-2xl rounded-3xl flex flex-col overflow-hidden text-slate-900 dark:text-[#F4F7FB]">
-        {/* Header */}
-        <div className="shrink-0 px-6 py-4 border-b border-slate-100 dark:border-white/8 flex items-center justify-between">
+      {/* Modal Container — glass shell */}
+      <div
+        className="relative w-full max-w-4xl max-h-[90vh] border shadow-2xl rounded-3xl flex flex-col overflow-hidden text-slate-900 dark:text-[#F4F7FB] backdrop-blur-xl transition-colors duration-200"
+        style={{
+          background: isDark ? 'rgba(13, 24, 40, 0.96)' : 'rgba(255, 255, 255, 0.94)',
+          borderColor: isDark ? accent.borderDark : accent.borderLight,
+          boxShadow: isDark
+            ? `0 25px 60px rgba(0,0,0,0.65), 0 0 0 1px ${accent.borderDark}`
+            : `0 25px 60px rgba(0,0,0,0.15), 0 0 0 1px ${accent.borderLight}`,
+        }}
+      >
+        {/* Header — accent tinted band */}
+        <div
+          className="shrink-0 px-6 py-4 border-b flex items-center justify-between transition-colors duration-200"
+          style={{
+            background: isDark ? accent.bgDark : accent.bgLight,
+            borderColor: isDark ? accent.borderDark : accent.borderLight,
+          }}
+        >
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center shrink-0">
-              <MonitorPlay className="w-4.5 h-4.5 text-[#007DCC] dark:text-[#86cfff]" />
+            <div
+              className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
+              style={{ background: isDark ? 'rgba(255, 255, 255, 0.08)' : accent.bgDark }}
+            >
+              <MonitorPlay className="w-[18px] h-[18px]" style={{ color: isDark ? accent.chipTextDark : accent.color }} />
             </div>
             <div>
-              <h2 className="text-lg font-bold leading-tight">Mumbai Coaching Classes</h2>
+              <h2 className="text-lg font-bold leading-tight text-slate-900 dark:text-[#F4F7FB]">Mumbai Coaching Classes</h2>
               <p className="text-xs text-slate-500 dark:text-[#71839A]">
                 {step === 1
                   ? 'Step 1 of 3: Select Stream / Interest'
@@ -222,17 +246,23 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
                   <button
                     key={interest}
                     onClick={() => setPendingField('interest', interest)}
-                    className={`p-4 rounded-2xl border text-left transition-all flex items-center justify-between ${
+                    className={`p-4 rounded-2xl border text-left transition-all flex items-center justify-between cursor-pointer ${
                       pending.interest === interest
-                        ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
-                        : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 hover:border-[#007DCC]/40'
+                        ? 'text-slate-900 dark:text-[#F4F7FB]'
+                        : 'bg-white/60 dark:bg-[#162232] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#C5D3E3] hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-50 dark:hover:bg-[#1c2b3f]'
                     }`}
+                    style={pending.interest === interest ? {
+                      background: isDark ? accent.bgDark : accent.bgLight,
+                      borderColor: isDark ? accent.colorHover : accent.ring,
+                      boxShadow: `0 0 0 1.5px ${isDark ? accent.colorHover : accent.ring}`,
+                      color: isDark ? accent.chipTextDark : accent.selectedText,
+                    } : undefined}
                   >
                     <span className="font-bold text-sm text-slate-900 dark:text-[#F4F7FB]">
                       {interest}
                     </span>
                     {pending.interest === interest && (
-                      <CheckCircle2 className="w-5 h-5 text-[#007DCC] dark:text-[#86cfff] shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 shrink-0" style={{ color: isDark ? accent.colorHover : accent.color }} />
                     )}
                   </button>
                 ))}
@@ -257,13 +287,19 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
                   <button
                     key={r}
                     onClick={() => setPendingField('region', r)}
-                    className={`p-4 rounded-2xl border text-sm font-bold transition-all text-left flex flex-col justify-between h-24 ${
+                    className={`p-4 rounded-2xl border text-sm font-bold transition-all text-left flex flex-col justify-between h-24 cursor-pointer ${
                       pending.region === r
-                        ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
-                        : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                        ? ''
+                        : 'bg-white/60 dark:bg-[#162232] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#C5D3E3] hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-50 dark:hover:bg-[#1c2b3f]'
                     }`}
+                    style={pending.region === r ? {
+                      background: isDark ? accent.bgDark : accent.bgLight,
+                      borderColor: isDark ? accent.colorHover : accent.ring,
+                      boxShadow: `0 0 0 1.5px ${isDark ? accent.colorHover : accent.ring}`,
+                      color: isDark ? accent.chipTextDark : accent.selectedText,
+                    } : undefined}
                   >
-                    <MapPin className="w-4 h-4 text-[#007DCC]" />
+                    <MapPin className="w-4 h-4" style={{ color: isDark ? accent.chipTextDark : accent.color }} />
                     <span>{r}</span>
                   </button>
                 ))}
@@ -292,11 +328,16 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
                     <button
                       key={tag}
                       onClick={() => setPendingField('specialization', tag)}
-                      className={`p-3 rounded-xl border text-xs font-bold transition-all text-left ${
+                      className={`p-3 rounded-xl border text-xs font-bold transition-all text-left cursor-pointer ${
                         pending.specialization === tag
-                          ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] text-[#007DCC] dark:text-[#86cfff]'
-                          : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:border-[#007DCC]/40'
+                          ? ''
+                          : 'bg-white/60 dark:bg-[#162232] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#C5D3E3] hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-50 dark:hover:bg-[#1c2b3f]'
                       }`}
+                      style={pending.specialization === tag ? {
+                        background: isDark ? accent.bgDark : accent.bgLight,
+                        borderColor: isDark ? accent.colorHover : accent.ring,
+                        color: isDark ? accent.chipTextDark : accent.selectedText,
+                      } : undefined}
                     >
                       {tag}
                     </button>
@@ -321,13 +362,13 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
                       setPendingField('searchQuery', e.target.value);
                       setApplied((prev) => ({ ...prev, searchQuery: e.target.value }));
                     }}
-                    className="w-full pl-10 pr-4 py-2.5 bg-slate-100 dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 rounded-xl text-sm font-medium text-slate-900 dark:text-[#F4F7FB] focus:outline-none focus:border-[#007DCC]"
+                    className="w-full pl-10 pr-4 py-2.5 bg-slate-100 dark:bg-[#162232] border border-slate-200 dark:border-white/10 rounded-xl text-sm font-medium text-slate-900 dark:text-[#F4F7FB] focus:outline-none focus:border-[#0EB89C]"
                   />
                 </div>
 
                 <button
                   onClick={() => setStep(3)}
-                  className="px-4 py-2.5 bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 rounded-xl text-xs font-bold text-[#007DCC] dark:text-[#86cfff] hover:bg-slate-50 dark:hover:bg-white/5 transition-all flex items-center gap-1.5 shrink-0"
+                  className="px-4 py-2.5 bg-white dark:bg-[#162232] border border-slate-200 dark:border-white/10 rounded-xl text-xs font-bold text-[#0EB89C] dark:text-[#51dcbc] hover:bg-slate-50 dark:hover:bg-white/5 transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
                 >
                   <SlidersHorizontal className="w-3.5 h-3.5" />
                   <span>Modify Filters</span>
@@ -336,7 +377,7 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
 
               {/* Vertical Stacked Cards */}
               {displayedClasses.length === 0 ? (
-                <div className="p-12 text-center rounded-2xl bg-slate-50 dark:bg-[#0D1828] border border-slate-200 dark:border-white/10">
+                <div className="p-12 text-center rounded-2xl bg-slate-50 dark:bg-[#131F30] border border-slate-200 dark:border-white/10">
                   <p className="text-base font-bold text-slate-900 dark:text-[#F4F7FB] mb-1">
                     No matching classes found
                   </p>
@@ -345,7 +386,7 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
                   </p>
                   <button
                     onClick={() => setStep(1)}
-                    className="px-4 py-2 bg-[#007DCC] text-white text-xs font-bold rounded-xl"
+                    className="px-4 py-2 bg-[#0EB89C] hover:bg-[#0aa088] text-white text-xs font-bold rounded-xl transition-all cursor-pointer"
                   >
                     Back to Wizard
                   </button>
@@ -355,16 +396,16 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
                   {displayedClasses.map((cls) => (
                     <div
                       key={cls.id}
-                      className="p-5 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 hover:border-[#007DCC]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 group shadow-2xs"
+                      className="p-5 rounded-2xl bg-white dark:bg-[#131F30] border border-slate-200 dark:border-white/10 hover:border-[#0EB89C]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 group shadow-2xs"
                     >
                       <div className="flex-1 min-w-0">
                         <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                          <span className="px-2.5 py-0.5 rounded-full bg-purple-50 dark:bg-purple-900/30 text-[#007DCC] dark:text-[#86cfff] text-[10px] font-extrabold uppercase">
+                          <span className="px-2.5 py-0.5 rounded-full bg-teal-50 dark:bg-teal-900/30 text-[#0EB89C] dark:text-[#51dcbc] text-[10px] font-extrabold uppercase">
                             {cls.streams || 'Coaching'}
                           </span>
                           {(cls.area || cls.region) && (
                             <span className="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-[#A9B8CA] text-[10px] font-semibold flex items-center gap-1">
-                              <MapPin className="w-3 h-3 text-[#007DCC]" />
+                              <MapPin className="w-3 h-3 text-[#0EB89C]" />
                               {cls.area || cls.region}
                             </span>
                           )}
@@ -375,7 +416,7 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
                         </h4>
 
                         {cls.specializations && (
-                          <p className="text-xs font-semibold text-[#007DCC] dark:text-[#86cfff] mt-1">
+                          <p className="text-xs font-semibold text-[#0EB89C] dark:text-[#51dcbc] mt-1">
                             Courses: {cls.specializations}
                           </p>
                         )}
@@ -390,7 +431,7 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
                       {cls.contact && (
                         <div className="flex items-center gap-2 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100 dark:border-white/5">
                           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-[#A9B8CA] text-xs font-semibold">
-                            <Phone className="w-3.5 h-3.5 text-[#007DCC]" />
+                            <Phone className="w-3.5 h-3.5 text-[#0EB89C]" />
                             {cls.contact}
                           </span>
                         </div>
@@ -404,11 +445,17 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
         </div>
 
         {/* Footer Controls */}
-        <div className="shrink-0 px-6 py-4 border-t border-slate-100 dark:border-white/8 flex items-center justify-between bg-slate-50/50 dark:bg-[#0D1828]/50">
+        <div
+          className="shrink-0 px-6 py-4 border-t flex items-center justify-between transition-colors duration-200"
+          style={{
+            background: isDark ? accent.bgDark : accent.bgLight,
+            borderColor: isDark ? accent.borderDark : accent.borderLight,
+          }}
+        >
           {step > 1 && step < 4 ? (
             <button
               onClick={() => setStep(step - 1)}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] text-xs font-bold transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Previous</span>
@@ -416,7 +463,7 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
           ) : step === 1 ? (
             <button
               onClick={onClose}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] text-xs font-bold transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Cancel</span>
@@ -430,7 +477,7 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
               {onViewAll && (
                 <button
                   onClick={() => { onViewAll(); onClose(); }}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-[#161c27] text-xs font-bold transition-all"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer"
                 >
                   <span>View All Classes</span>
                 </button>
@@ -439,7 +486,8 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
               {step === 1 && (
                 <button
                   onClick={() => setStep(2)}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
+                  style={{ background: accent.ctaBg }}
                 >
                   <span>Next: Mumbai Region</span>
                   <ArrowRight className="w-4 h-4" />
@@ -449,7 +497,8 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
               {step === 2 && (
                 <button
                   onClick={() => setStep(3)}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
+                  style={{ background: accent.ctaBg }}
                 >
                   <span>Next: Specialization</span>
                   <ArrowRight className="w-4 h-4" />
@@ -459,9 +508,10 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
               {step === 3 && (
                 <button
                   onClick={handleApply}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
+                  style={{ background: accent.ctaBg }}
                 >
-                  <span>Apply Filters & Find Classes</span>
+                  <span>Apply Filters &amp; Find Classes</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               )}
@@ -471,7 +521,8 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
           {step === 4 && (
             <button
               onClick={onClose}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] text-white text-xs font-bold"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold cursor-pointer"
+              style={{ background: accent.ctaBg }}
             >
               <span>Done</span>
             </button>

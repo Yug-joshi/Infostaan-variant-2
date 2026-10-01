@@ -25,6 +25,7 @@ import { ScrollStorySection } from './ScrollStorySection';
 import { ConnectCarousel } from './ConnectCarousel';
 
 import { FilterCategoryType } from './CategoryFilterModal';
+import { getCategoryAccent } from '../lib/categoryAccents';
 
 interface HomeScreenProps {
   onSearch: (query: string, category?: string) => void;
@@ -318,27 +319,43 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
         {/* Discovery Shortcuts (Opens category filter popups first) */}
         <div className="w-full max-w-4xl flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-6 relative z-50">
-          {[
-            { name: 'Colleges', icon: Building2, action: () => onOpenCategoryFilter('colleges') },
-            { name: 'Courses', icon: GraduationCap, action: () => onOpenCategoryFilter('courses') },
-            { name: 'Careers', icon: TrendingUp, action: () => onOpenCategoryFilter('careers') },
-            { name: 'Classes', icon: MonitorPlay, action: onOpenClasses },
-            { name: 'Cutoffs', icon: BarChart2, action: onOpenCutoff },
-          ].map((item) => {
+          {([
+            { name: 'Colleges', cat: 'colleges', icon: Building2, action: () => onOpenCategoryFilter('colleges') },
+            { name: 'Courses', cat: 'courses', icon: GraduationCap, action: () => onOpenCategoryFilter('courses') },
+            { name: 'Careers', cat: 'careers', icon: TrendingUp, action: () => onOpenCategoryFilter('careers') },
+            { name: 'Classes', cat: 'classes', icon: MonitorPlay, action: onOpenClasses },
+            { name: 'Cutoffs', cat: 'cutoffs', icon: BarChart2, action: onOpenCutoff },
+          ] as const).map((item) => {
             const IconComp = item.icon;
+            const accent = getCategoryAccent(item.cat);
             return (
               <button
                 key={item.name}
                 type="button"
                 onClick={item.action}
-                className="px-3.5 py-2.5 sm:px-4 sm:py-2.5 rounded-2xl bg-white/60 dark:bg-[#0D1828]/60 hover:bg-white dark:hover:bg-[#0D1828]/80 border border-slate-200 dark:border-white/5 hover:border-[#007DCC]/50 text-slate-700 dark:text-[#A9B8CA] hover:text-[#007DCC] dark:hover:text-[#F4F7FB] text-xs sm:text-sm font-bold transition-all active:scale-95 shadow-sm hover:shadow-md flex items-center gap-1.5 sm:gap-2 cursor-pointer backdrop-blur-sm group"
+                style={{
+                  background: accent.bgLight,
+                  borderColor: accent.borderLight,
+                }}
+                className="flex flex-col items-center justify-center gap-1.5 w-[72px] sm:w-20 py-3.5 sm:py-4 rounded-2xl border transition-all duration-200 active:scale-95 shadow-sm hover:shadow-md cursor-pointer group"
               >
-                <IconComp className="w-4 h-4 text-[#007DCC] group-hover:text-[#005a9c] dark:group-hover:text-[#19A7E8] transition-colors" />
-                <span>{item.name}</span>
+                <span
+                  className="flex items-center justify-center w-9 h-9 rounded-xl transition-transform duration-200 group-hover:scale-110"
+                  style={{ background: accent.bgDark }}
+                >
+                  <IconComp className="w-[18px] h-[18px]" style={{ color: accent.color }} />
+                </span>
+                <span
+                  className="text-[11px] sm:text-xs font-semibold leading-tight text-center"
+                  style={{ color: accent.chipText }}
+                >
+                  {item.name}
+                </span>
               </button>
             );
           })}
         </div>
+
 
         {/* Help Me Decide Button (Directly below shortcut options under search bar) */}
         <div className="relative z-50 mb-10">
