@@ -1,16 +1,20 @@
 /**
  * Centralized category accent configuration for Discovery Shortcuts.
  *
- * Each category has a distinct but cohesive cool accent.
+ * Each category uses a clearly distinct color family.
+ *
  * Used by:
  *   - HomeScreen (Discovery Shortcut buttons)
  *   - CategoryFilterModal (popup header + selected states)
  *   - CategoryResultsPage (page badge, filter chips, active highlights)
  *
- * Color philosophy (from Master Instructions §17):
- *   - Cool, refined, educational palette
- *   - No orange, warm pink, red, gold, neon
- *   - Harmonious with brand dark navy (#070D18) and primary blue (#007DCC)
+ * Color palette:
+ *   - Colleges: Royal Blue
+ *   - Courses: Amber
+ *   - Careers: Red
+ *   - Classes: Emerald
+ *   - Cutoffs: Purple
+ *   - Guidance: Magenta
  */
 
 export type DiscoveryCategory =
@@ -49,110 +53,118 @@ export interface CategoryAccent {
 
 export const CATEGORY_ACCENTS: Record<DiscoveryCategory, CategoryAccent> = {
   colleges: {
-    // Deep sky blue — primary brand extended
-    color: '#007DCC',
-    colorHover: '#19A7E8',
-    bgLight: 'rgba(0,125,204,0.08)',
-    bgDark: 'rgba(0,125,204,0.15)',
-    borderLight: 'rgba(0,125,204,0.20)',
-    borderDark: 'rgba(0,125,204,0.30)',
-    ring: '#007DCC',
-    selectedText: '#007DCC',
-    chipBgLight: 'rgba(0,125,204,0.10)',
-    chipBgDark: 'rgba(0,125,204,0.20)',
-    chipText: '#007DCC',
-    chipTextDark: '#86cfff',
-    ctaBg: '#007DCC',
-    ctaHover: '#006cb0',
+    // Royal Blue
+    color: '#2563EB',
+    colorHover: '#3B82F6',
+    bgLight: 'rgba(37,99,235,0.08)',
+    bgDark: 'rgba(37,99,235,0.15)',
+    borderLight: 'rgba(37,99,235,0.20)',
+    borderDark: 'rgba(37,99,235,0.30)',
+    ring: '#2563EB',
+    selectedText: '#2563EB',
+    chipBgLight: 'rgba(37,99,235,0.10)',
+    chipBgDark: 'rgba(37,99,235,0.20)',
+    chipText: '#2563EB',
+    chipTextDark: '#93C5FD',
+    ctaBg: '#2563EB',
+    ctaHover: '#1D4ED8',
   },
+
   courses: {
-    // Indigo / lavender — academic depth
+    // Amber / Yellow
     color: '#F59E0B',
-    colorHover: '#8B85FF',
-    bgLight: 'rgba(239, 221, 57, 0.78)',
-    bgDark: 'rgba(231, 227, 20, 0.89)',
-    borderLight: 'rgba(108,99,255,0.20)',
-    borderDark: 'rgba(108,99,255,0.30)',
+    colorHover: '#FBBF24',
+    bgLight: 'rgba(245,158,11,0.08)',
+    bgDark: 'rgba(245,158,11,0.15)',
+    borderLight: 'rgba(245,158,11,0.20)',
+    borderDark: 'rgba(245,158,11,0.30)',
     ring: '#F59E0B',
-    selectedText: '#6C63FF',
-    chipBgLight: 'rgba(108,99,255,0.10)',
-    chipBgDark: 'rgba(108,99,255,0.20)',
-    chipText: '#FBBF24',
-    chipTextDark: '#b8b4ff',
+    selectedText: '#D97706',
+    chipBgLight: 'rgba(245,158,11,0.10)',
+    chipBgDark: 'rgba(245,158,11,0.20)',
+    chipText: '#D97706',
+    chipTextDark: '#FCD34D',
     ctaBg: '#F59E0B',
-    ctaHover: '#F59E33',
+    ctaHover: '#D97706',
   },
+
   careers: {
-    // Periwinkle / blue-violet — forward momentum
-    color: '#4F6EF7',
-    colorHover: '#7191FA',
-    bgLight: 'rgba(79,110,247,0.08)',
-    bgDark: 'rgba(79,110,247,0.15)',
-    borderLight: 'rgba(79,110,247,0.20)',
-    borderDark: 'rgba(79,110,247,0.30)',
-    ring: '#4F6EF7',
-    selectedText: '#4F6EF7',
-    chipBgLight: 'rgba(79,110,247,0.10)',
-    chipBgDark: 'rgba(79,110,247,0.20)',
-    chipText: '#4F6EF7',
-    chipTextDark: '#a0b5fc',
-    ctaBg: '#4F6EF7',
-    ctaHover: '#3d5be5',
+    // Red
+    color: '#EF4444',
+    colorHover: '#F87171',
+    bgLight: 'rgba(239,68,68,0.08)',
+    bgDark: 'rgba(239,68,68,0.15)',
+    borderLight: 'rgba(239,68,68,0.20)',
+    borderDark: 'rgba(239,68,68,0.30)',
+    ring: '#EF4444',
+    selectedText: '#DC2626',
+    chipBgLight: 'rgba(239,68,68,0.10)',
+    chipBgDark: 'rgba(239,68,68,0.20)',
+    chipText: '#DC2626',
+    chipTextDark: '#FCA5A5',
+    ctaBg: '#EF4444',
+    ctaHover: '#DC2626',
   },
+
   classes: {
-    // Mint / teal-green — learning, growth
-    color: '#0EB89C',
-    colorHover: '#19B89A',
-    bgLight: 'rgba(14,184,156,0.08)',
-    bgDark: 'rgba(14,184,156,0.15)',
-    borderLight: 'rgba(14,184,156,0.20)',
-    borderDark: 'rgba(14,184,156,0.30)',
-    ring: '#0EB89C',
-    selectedText: '#0EB89C',
-    chipBgLight: 'rgba(14,184,156,0.10)',
-    chipBgDark: 'rgba(14,184,156,0.20)',
-    chipText: '#0EB89C',
-    chipTextDark: '#51dcbc',
-    ctaBg: '#0EB89C',
-    ctaHover: '#0aa088',
+    // Emerald Green
+    color: '#10B981',
+    colorHover: '#34D399',
+    bgLight: 'rgba(16,185,129,0.08)',
+    bgDark: 'rgba(16,185,129,0.15)',
+    borderLight: 'rgba(16,185,129,0.20)',
+    borderDark: 'rgba(16,185,129,0.30)',
+    ring: '#10B981',
+    selectedText: '#059669',
+    chipBgLight: 'rgba(16,185,129,0.10)',
+    chipBgDark: 'rgba(16,185,129,0.20)',
+    chipText: '#059669',
+    chipTextDark: '#6EE7B7',
+    ctaBg: '#10B981',
+    ctaHover: '#059669',
   },
+
   cutoffs: {
-    // Teal / cyan-blue — data, precision
-    color: '#0B9EC4',
-    colorHover: '#10B8E2',
-    bgLight: 'rgba(11,158,196,0.08)',
-    bgDark: 'rgba(11,158,196,0.15)',
-    borderLight: 'rgba(11,158,196,0.20)',
-    borderDark: 'rgba(11,158,196,0.30)',
-    ring: '#0B9EC4',
-    selectedText: '#0B9EC4',
-    chipBgLight: 'rgba(11,158,196,0.10)',
-    chipBgDark: 'rgba(11,158,196,0.20)',
-    chipText: '#0B9EC4',
-    chipTextDark: '#62d6f5',
-    ctaBg: '#0B9EC4',
-    ctaHover: '#0888aa',
+    // Purple
+    color: '#8B5CF6',
+    colorHover: '#A78BFA',
+    bgLight: 'rgba(139,92,246,0.08)',
+    bgDark: 'rgba(139,92,246,0.15)',
+    borderLight: 'rgba(139,92,246,0.20)',
+    borderDark: 'rgba(139,92,246,0.30)',
+    ring: '#8B5CF6',
+    selectedText: '#7C3AED',
+    chipBgLight: 'rgba(139,92,246,0.10)',
+    chipBgDark: 'rgba(139,92,246,0.20)',
+    chipText: '#7C3AED',
+    chipTextDark: '#C4B5FD',
+    ctaBg: '#8B5CF6',
+    ctaHover: '#7C3AED',
   },
+
   guidance: {
-    // Soft violet — thoughtful decision support
-    color: '#7C5CFC',
-    colorHover: '#9B7FFE',
-    bgLight: 'rgba(124,92,252,0.08)',
-    bgDark: 'rgba(124,92,252,0.15)',
-    borderLight: 'rgba(124,92,252,0.20)',
-    borderDark: 'rgba(124,92,252,0.30)',
-    ring: '#7C5CFC',
-    selectedText: '#7C5CFC',
-    chipBgLight: 'rgba(124,92,252,0.10)',
-    chipBgDark: 'rgba(124,92,252,0.20)',
-    chipText: '#7C5CFC',
-    chipTextDark: '#c4b0ff',
-    ctaBg: '#7C5CFC',
-    ctaHover: '#6a4ae8',
+    // Magenta
+    color: '#D946EF',
+    colorHover: '#E879F9',
+    bgLight: 'rgba(217,70,239,0.08)',
+    bgDark: 'rgba(217,70,239,0.15)',
+    borderLight: 'rgba(217,70,239,0.20)',
+    borderDark: 'rgba(217,70,239,0.30)',
+    ring: '#D946EF',
+    selectedText: '#C026D3',
+    chipBgLight: 'rgba(217,70,239,0.10)',
+    chipBgDark: 'rgba(217,70,239,0.20)',
+    chipText: '#C026D3',
+    chipTextDark: '#F0ABFC',
+    ctaBg: '#D946EF',
+    ctaHover: '#C026D3',
   },
 };
 
 /** Falls back to colleges accent for unknown categories */
 export const getCategoryAccent = (category: string): CategoryAccent => {
-  return CATEGORY_ACCENTS[category as DiscoveryCategory] ?? CATEGORY_ACCENTS.colleges;
+  return (
+    CATEGORY_ACCENTS[category as DiscoveryCategory] ??
+    CATEGORY_ACCENTS.colleges
+  );
 };

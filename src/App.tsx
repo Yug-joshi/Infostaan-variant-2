@@ -108,7 +108,7 @@ export default function App() {
     // 2-second branded loading screen.
     const timer = setTimeout(() => {
       setIsBooting(false);
-    }, 2000);
+    }, 1400);
 
     return () => clearTimeout(timer);
   }, []);
@@ -233,7 +233,7 @@ export default function App() {
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB]">
             Infostaan<span className="text-[#007DCC]">.</span>
           </h1>
-          <p className="text-xs sm:text-sm font-semibold tracking-wide text-slate-500 dark:text-[#71839A] mt-1.5">
+          <p className="text-sm sm:text-sm font-semibold tracking-wide text-slate-500 dark:text-[#71839A] mt-1.5">
             Guiding your journey
           </p>
         </div>
