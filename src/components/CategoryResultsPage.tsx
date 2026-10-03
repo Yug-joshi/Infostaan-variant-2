@@ -575,10 +575,9 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                   {/* Bottom action */}
                   <div className="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-white/5">
                     <span className="text-[11px] sm:text-xs font-semibold text-[#007DCC] dark:text-[#86cfff]">
-                      {item.category === 'careers' ? 'Career Path'
-                        : item.category === 'cutoffs'
-                          ? 'View Cutoff'
-                          : item.actionLabel}
+                      {item.category === 'cutoffs'
+                        ? 'View Cutoff'
+                        : item.actionLabel}
                     </span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#007DCC] dark:text-[#86cfff] group-hover:translate-x-0.5 transition-transform" />
                   </div>

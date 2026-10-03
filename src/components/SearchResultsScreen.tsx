@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Compass, SlidersHorizontal, BarChart2, Heart, Users, Star, Award, CheckCircle, Info } from 'lucide-react';
+import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Compass, SlidersHorizontal, BarChart2, Heart, Users, Star, Award, CheckCircle, Info, TrendingUp } from 'lucide-react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { CategoryType, SearchResultItem } from '../types';
 import { searchInfostaan } from '../lib/searchEngine';
