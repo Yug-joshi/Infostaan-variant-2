@@ -419,7 +419,7 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
   ).length;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden" role="dialog" aria-modal="true" aria-labelledby="filter-drawer-title">
+    <div className="fixed inset-0 z-[110] overflow-hidden" role="dialog" aria-modal="true" aria-labelledby="filter-drawer-title">
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-slate-900/50 dark:bg-black/70 backdrop-blur-xs transition-opacity duration-300"
@@ -428,7 +428,7 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
       />
 
       {/* Drawer Container (Desktop right drawer, Mobile bottom sheet / drawer) */}
-      <div className="fixed inset-x-0 bottom-0 max-sm:max-h-[92vh] max-sm:rounded-t-3xl max-sm:border-t sm:top-0 sm:right-0 sm:bottom-0 sm:left-auto sm:w-[420px] sm:max-w-full sm:rounded-none sm:border-l bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 shadow-2xl flex flex-col z-50 animate-in slide-in-from-right duration-250 ease-out transition-all">
+      <div className="fixed inset-x-0 bottom-0 max-sm:max-h-[92vh] max-sm:rounded-t-3xl max-sm:border-t sm:top-0 sm:right-0 sm:bottom-0 sm:left-auto sm:w-[420px] sm:max-w-full sm:rounded-none sm:border-l bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 shadow-2xl flex flex-col z-[110] animate-in slide-in-from-right duration-250 ease-out transition-all">
         
         {/* Mobile Drag Indicator Bar */}
         <div className="sm:hidden pt-3 pb-1 flex justify-center">

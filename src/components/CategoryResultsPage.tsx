@@ -1,4 +1,4 @@
-import React, { useMemo, useRef } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import {
   ArrowRight,
   Building2,
@@ -22,6 +22,7 @@ import { searchInfostaan } from '../lib/searchEngine';
 import { matchItemRegion, applyStreamFilter, filterClasses } from '../lib/categoryFilters';
 import { FilterCategoryType } from './CategoryFilterModal';
 import { getCategoryAccent } from '../lib/categoryAccents';
+import { ResultFilterDrawer } from './ResultFilterDrawer';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
@@ -104,6 +105,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
 
   const config = PAGE_CONFIG[category];
   const IconComp = config.icon;
@@ -223,6 +225,8 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
       onSelectCollege('mithibai');
     } else if (item.category === 'classes' && item.slug) {
       window.location.href = `/class/${item.slug}`;
+    } else if (item.category === 'careers') {
+      navigate('/career-roadmap');
     }
   };
 
@@ -266,7 +270,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
             {showResults && (
               <button
                 type="button"
-                onClick={handleOpenFilter}
+                onClick={() => setIsFilterDrawerOpen(true)}
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-[#161c27] transition-all whitespace-nowrap shrink-0 self-start sm:self-auto"
               >
                 <SlidersHorizontal className="w-4 h-4" />
@@ -369,7 +373,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
             </p>
             <button
               type="button"
-              onClick={handleOpenFilter}
+              onClick={() => setIsFilterDrawerOpen(true)}
               className="px-5 py-2.5 rounded-xl text-white text-xs font-bold transition-colors inline-flex items-center gap-2"
               style={{ background: accent.ctaBg }}
             >
@@ -382,37 +386,57 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
             {results.map((item) => {
               const getStreams = (): string[] => {
-                if (item.category !== 'colleges' || !item.subtitle) return [];
-                const offeredPart = item.subtitle.split('•')[0]
-                  .replace(/^Offered:\s*/i, '').trim();
-                return offeredPart.split(',').map((s) => s.trim()).filter(Boolean).slice(0, 4);
+                if (item.category === 'colleges' && item.subtitle) {
+                  const offeredPart = item.subtitle.split('•')[0]
+                    .replace(/^Offered:\s*/i, '').trim();
+                  return offeredPart.split(',').map((s) => s.trim()).filter(Boolean).slice(0, 4);
+                }
+                if (item.category === 'careers' && item.meta) {
+                  return item.meta.slice(0, 3);
+                }
+                if (item.category === 'courses' && item.meta) {
+                  return item.meta.slice(0, 3);
+                }
+                return [];
               };
               const streams = getStreams();
 
-              if (item.category === 'colleges' || item.category === 'classes' || item.category === 'courses') {
+              if (item.category === 'colleges' || item.category === 'classes' || item.category === 'courses' || item.category === 'careers') {
                 const isCollege = item.category === 'colleges';
                 const isCourse = item.category === 'courses';
+                const isCareer = item.category === 'careers';
                 const facts: { icon: any; value: string; label: string }[] = [];
-                item.meta.forEach(m => {
-                  const lower = m.toLowerCase();
-                  if (lower.includes('autonomous') || lower.includes('university')) {
-                    facts.push({ icon: Building2, value: m.split('•')[0].trim(), label: 'Status' });
-                  } else if (lower.includes('naac') || lower.includes('grade')) {
-                    facts.push({ icon: Star, value: m.split('•').find(p => p.toLowerCase().includes('naac') || p.toLowerCase().includes('grade'))?.trim() || m, label: 'Rating' });
-                  } else if (lower.includes('student') || lower.includes('batch')) {
-                    facts.push({ icon: Users, value: m, label: 'Students' });
-                  } else if (lower.includes('year') || lower.includes('exp')) {
-                    facts.push({ icon: Award, value: m, label: 'Experience' });
-                  } else {
-                    facts.push({ icon: CheckCircle, value: m, label: isCollege ? 'Info' : 'Feature' });
+                if (isCareer) {
+                  if (item.meta && item.meta[0]) {
+                    facts.push({ icon: Award, value: item.meta[0], label: 'Level' });
                   }
-                });
+                  if (item.meta && item.meta[1]) {
+                    facts.push({ icon: TrendingUp, value: item.meta[1], label: 'Sector' });
+                  }
+                } else {
+                  item.meta.forEach(m => {
+                    const lower = m.toLowerCase();
+                    if (lower.includes('autonomous') || lower.includes('university')) {
+                      facts.push({ icon: Building2, value: m.split('•')[0].trim(), label: 'Status' });
+                    } else if (lower.includes('naac') || lower.includes('grade')) {
+                      facts.push({ icon: Star, value: m.split('•').find(p => p.toLowerCase().includes('naac') || p.toLowerCase().includes('grade'))?.trim() || m, label: 'Rating' });
+                    } else if (lower.includes('student') || lower.includes('batch')) {
+                      facts.push({ icon: Users, value: m, label: 'Students' });
+                    } else if (lower.includes('year') || lower.includes('exp')) {
+                      facts.push({ icon: Award, value: m, label: 'Experience' });
+                    } else {
+                      facts.push({ icon: CheckCircle, value: m, label: isCollege ? 'Info' : 'Feature' });
+                    }
+                  });
+                }
 
                 const imgUrl = isCollege
                   ? "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=400&q=80"
                   : isCourse
                     ? "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=400&q=80"
-                    : "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=400&q=80";
+                    : isCareer
+                      ? "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80"
+                      : "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=400&q=80";
 
                 return (
                   <article
@@ -433,7 +457,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                       {/* BADGE */}
                       <div className="absolute top-3 left-3">
                         <span className="px-2 py-1 rounded bg-[#007DCC] text-white text-[9px] font-bold uppercase tracking-wider shadow-sm">
-                          {item.badgeCategory || (isCollege ? 'COLLEGE' : isCourse ? 'COURSE' : 'CLASS')}
+                          {item.badgeCategory || (isCollege ? 'COLLEGE' : isCourse ? 'COURSE' : isCareer ? 'CAREER' : 'CLASS')}
                         </span>
                       </div>
 
@@ -500,7 +524,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                       {/* DETAILS ACTION */}
                       <div className="flex items-center justify-start pt-3 border-t border-slate-100 dark:border-white/5 mt-auto">
                         <span className="text-[11px] sm:text-xs font-bold text-[#007DCC] dark:text-[#86cfff] flex items-center gap-1 group-hover:text-[#19A7E8] transition-colors">
-                          Details <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                          {isCareer ? 'Career Path' : isCourse ? 'Course Info' : 'Details'} <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                         </span>
                       </div>
                     </div>
@@ -564,6 +588,13 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
           </div>
         )}
       </div>
+
+      {/* Result Page Filter Drawer Shell */}
+      <ResultFilterDrawer
+        isOpen={isFilterDrawerOpen}
+        onClose={() => setIsFilterDrawerOpen(false)}
+        category={category}
+      />
     </main>
   );
 };
