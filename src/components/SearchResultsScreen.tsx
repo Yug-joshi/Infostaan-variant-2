@@ -52,12 +52,13 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   const rangeParam = searchParams.get('range');
   const educationLevelParam = searchParams.get('educationLevel');
   const sortParam = searchParams.get('sort');
+  const allParam = searchParams.get('all');
 
   // Only URL params trigger results — defaultCategory alone does NOT dump all data
   const hasAppliedParams = !!(query || regionParam || streamParam || fieldParam || interestParam || industryParam || levelParam || specializationParam || percentageParam || rangeParam || educationLevelParam);
 
-  // Show results only when at least one URL filter or search query exists
-  const showResults = hasAppliedParams;
+  // Show results only when at least one URL filter, search query, or 'all=true' exists
+  const showResults = hasAppliedParams || allParam === 'true';
 
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
