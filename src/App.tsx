@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { ScreenType, ShortlistItem } from './types';
 import { INITIAL_SAVED_ITEMS } from './data/mockData';
@@ -29,6 +29,7 @@ export default function App() {
   const location = useLocation();
   const [selectedCollegeId, setSelectedCollegeId] = useState<string>('mithibai');
   const [savedItems, setSavedItems] = useState<ShortlistItem[]>(INITIAL_SAVED_ITEMS);
+  const allSavedItemIds = useMemo(() => savedItems.flatMap((i) => [i.id, i.collegeId || '']).filter(Boolean), [savedItems]);
   const [isCompareOpen, setIsCompareOpen] = useState<boolean>(false);
   const [compareColleges, setCompareColleges] = useState<{ col1: string; col2: string }>({
     col1: 'mithibai',
@@ -201,6 +202,40 @@ export default function App() {
     }
   };
 
+  const handleToggleSaveItem = (item: any) => {
+    // Determine if it's already saved by checking ID or collegeId
+    const itemCollegeId = item.collegeSlug || item.collegeId;
+    const isSaved = savedItems.some(
+      (i) => i.id === item.id || (itemCollegeId && i.collegeId && i.collegeId === itemCollegeId)
+    );
+
+    if (isSaved) {
+      setSavedItems(
+        savedItems.filter(
+          (i) => i.id !== item.id && (!itemCollegeId || !i.collegeId || i.collegeId !== itemCollegeId)
+        )
+      );
+      showToast('Removed from shortlist');
+    } else {
+      const isCollege = item.category === 'colleges' || item.category === 'cutoffs';
+      const newItem: ShortlistItem = {
+        id: item.id,
+        category: isCollege ? 'college' : item.category === 'courses' ? 'course' : item.category === 'classes' ? 'class' : 'career',
+        title: item.title,
+        regionBadge: item.badgeSub || 'Mumbai',
+        badgeType: item.badgeCategory || (isCollege ? 'COLLEGE' : 'INFO'),
+        locationInfo: item.subtitle || item.badgeSub || 'Mumbai',
+        timeSavedText: 'Saved just now',
+        lineText: item.badgeSub || 'General',
+        iconType: isCollege ? 'school' : item.category === 'courses' ? 'library_books' : 'work',
+        canCompare: isCollege,
+        collegeId: itemCollegeId,
+      };
+      setSavedItems([newItem, ...savedItems]);
+      showToast('Saved to shortlist!');
+    }
+  };
+
   const handleRemoveSavedItem = (id: string) => {
     setSavedItems(savedItems.filter((item) => item.id !== id));
     showToast('Item removed from shortlist');
@@ -291,8 +326,9 @@ export default function App() {
             <CategoryResultsPage
               category="colleges"
               onSelectCollege={handleSelectCollege}
-              savedItemIds={savedItems.map((i) => i.id)}
+              savedItemIds={allSavedItemIds}
               onOpenCategoryFilter={handleOpenCategoryFilter}
+              onSaveItem={handleToggleSaveItem}
             />
           } />
 
@@ -300,8 +336,9 @@ export default function App() {
             <CategoryResultsPage
               category="courses"
               onSelectCollege={handleSelectCollege}
-              savedItemIds={savedItems.map((i) => i.id)}
+              savedItemIds={allSavedItemIds}
               onOpenCategoryFilter={handleOpenCategoryFilter}
+              onSaveItem={handleToggleSaveItem}
             />
           } />
 
@@ -309,8 +346,9 @@ export default function App() {
             <CategoryResultsPage
               category="careers"
               onSelectCollege={handleSelectCollege}
-              savedItemIds={savedItems.map((i) => i.id)}
+              savedItemIds={allSavedItemIds}
               onOpenCategoryFilter={handleOpenCategoryFilter}
+              onSaveItem={handleToggleSaveItem}
             />
           } />
 
@@ -318,8 +356,9 @@ export default function App() {
             <CategoryResultsPage
               category="classes"
               onSelectCollege={handleSelectCollege}
-              savedItemIds={savedItems.map((i) => i.id)}
+              savedItemIds={allSavedItemIds}
               onOpenClasses={() => setIsClassesOpen(true)}
+              onSaveItem={handleToggleSaveItem}
             />
           } />
 
@@ -328,8 +367,9 @@ export default function App() {
               defaultCategory="cutoffs"
               onNavigate={(path) => navigate(path)}
               onSelectCollege={handleSelectCollege}
-              savedItemIds={savedItems.map((i) => i.id)}
+              savedItemIds={allSavedItemIds}
               onOpenCutoff={() => setIsCutoffOpen(true)}
+              onSaveItem={handleToggleSaveItem}
             />
           } />
 

@@ -3,23 +3,43 @@ import { ALL_SEARCH_RESULTS } from '../data/mockData';
 import { CLASSES, ClassData } from '../data/classes';
 import { CUTOFFS, CutoffMetadata } from '../data/cutoffs';
 import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
+import { getAllColleges } from './collegeData';
 
 export function searchInfostaan(query: string, category: CategoryType): SearchResultItem[] {
   const q = query.toLowerCase().trim();
   
   let results: SearchResultItem[] = [];
 
-  // 1. Existing mock data
-  const mockResults = ALL_SEARCH_RESULTS.filter(item => {
-    if (category !== 'all' && item.category !== category) return false;
-    if (!q) return true;
-    return (
-      item.title.toLowerCase().includes(q) ||
-      item.subtitle?.toLowerCase().includes(q) ||
-      item.badgeCategory.toLowerCase().includes(q)
-    );
-  });
-  results = [...results, ...mockResults];
+  // 1. Colleges: use the complete unified list (curated + all uploaded FYJC cutoffs excel data)
+  if (category === 'all' || category === 'colleges') {
+    const allColleges = getAllColleges();
+    const collegeResults = allColleges.filter(item => {
+      if (!q) return true;
+      return (
+        item.title.toLowerCase().includes(q) ||
+        item.subtitle?.toLowerCase().includes(q) ||
+        item.badgeCategory.toLowerCase().includes(q) ||
+        item.badgeSub?.toLowerCase().includes(q) ||
+        item.meta?.some(m => m.toLowerCase().includes(q))
+      );
+    });
+    results = [...results, ...collegeResults];
+  }
+
+  // 2. Courses and Careers from curated mock data
+  if (category === 'all' || category === 'courses' || category === 'careers') {
+    const otherResults = ALL_SEARCH_RESULTS.filter(item => {
+      if (item.category === 'colleges') return false; // Already handled above
+      if (category !== 'all' && item.category !== category) return false;
+      if (!q) return true;
+      return (
+        item.title.toLowerCase().includes(q) ||
+        item.subtitle?.toLowerCase().includes(q) ||
+        item.badgeCategory.toLowerCase().includes(q)
+      );
+    });
+    results = [...results, ...otherResults];
+  }
 
   // 2. Classes
   if (category === 'all' || category === 'classes') {

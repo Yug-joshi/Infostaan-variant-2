@@ -1,13 +1,14 @@
 import { CareerGoal, CollegeDetail, ComparisonProfile, SearchResultItem, ShortlistItem } from '../types';
+import { FYJC_CUTOFFS } from './fyjcCutoffs';
 
 export const INITIAL_SAVED_ITEMS: ShortlistItem[] = [
   {
-    id: 'item-mithibai',
+    id: 'res-3',
     category: 'college',
     title: 'Mithibai College of Arts & Commerce',
     regionBadge: 'Western Suburbs',
-    badgeType: 'Western Suburbs',
-    locationInfo: 'Vile Parle West, Mumbai • B.Com, BMS, BAF • Approx. ₹45,000/yr',
+    badgeType: 'COLLEGE',
+    locationInfo: 'Offered: B.Com, BMS, BAF, BFM • Approx. ₹32,000–₹55,000/yr',
     timeSavedText: 'Saved 2 days ago',
     lineText: 'Western Line',
     iconType: 'school',
@@ -15,29 +16,18 @@ export const INITIAL_SAVED_ITEMS: ShortlistItem[] = [
     collegeId: 'mithibai',
   },
   {
-    id: 'item-hr',
+    id: 'res-2',
     category: 'college',
     title: 'H.R. College of Commerce & Economics',
     regionBadge: 'South Mumbai',
-    badgeType: 'South Mumbai',
-    locationInfo: 'Churchgate, Mumbai • B.Com, BAF, BFM • Approx. ₹38,000/yr',
+    badgeType: 'COLLEGE',
+    locationInfo: 'Offered: B.Com, BAF, BMS • Approx. ₹28,000–₹48,000/yr',
     timeSavedText: 'Saved yesterday',
     lineText: 'South Mumbai',
-    iconType: 'account_balance',
+    iconType: 'school',
     canCompare: true,
     collegeId: 'hr-college',
   },
-  /* {
-    id: 'item-motilal',
-    category: 'internship',
-    title: 'Equity Research Trainee — Motilal Oswal',
-    regionBadge: 'Finance & Markets',
-    badgeType: 'Finance & Markets',
-    locationInfo: 'Malad West, Mumbai • 6 Months • ₹15,000/month',
-    timeSavedText: 'Saved 3 days ago',
-    iconType: 'trending_up',
-    canCompare: false,
-  }, */
 ];
 
 export const MITHIBAI_DETAILS: CollegeDetail = {
@@ -510,6 +500,22 @@ export const getCollegeDetails = (id: string): CollegeDetail => {
     return COLLEGE_DETAILS_MAP[id];
   }
 
+  // Alias map to catch auto-generated slugs from FYJC_CUTOFFS and map them back to predefined static data
+  const aliasMap: Record<string, string> = {
+    'k-p-b-hinduja-college-of-commerce': 'hinduja',
+    'r-a-podar-college-of-commerce-economics': 'podar',
+    'narsee-monjee-college-of-commerce-economics': 'nm-college',
+    'st-xaviers-college-fort': 'xaviers',
+    'h-r-college-of-commerce-economics': 'hr-college',
+    'jai-hind-college-churchgate': 'jai-hind',
+    'mithibai-college': 'mithibai'
+  };
+
+  const aliasId = aliasMap[id] || aliasMap[id.replace(/-mumbai$/, '')];
+  if (aliasId && COLLEGE_DETAILS_MAP[aliasId]) {
+    return COLLEGE_DETAILS_MAP[aliasId];
+  }
+
   // 1. Try to find it in ALL_SEARCH_RESULTS
   const searchResult = ALL_SEARCH_RESULTS.find(item => item.collegeId === id);
   if (searchResult) {
@@ -548,7 +554,76 @@ export const getCollegeDetails = (id: string): CollegeDetail => {
     };
   }
 
-  // 2. Generic fallback using the ID string (e.g., from Cutoffs list)
+  // 2. Check in FYJC_CUTOFFS (from Excel uploads)
+  const normId = id.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const matchingFyjc = FYJC_CUTOFFS.filter(c =>
+    (c.collegeId && c.collegeId.toLowerCase() === id.toLowerCase()) ||
+    c.collegeName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === normId
+  );
+
+  if (matchingFyjc.length > 0) {
+    const primary = matchingFyjc[0];
+    const streams = Array.from(new Set(matchingFyjc.map(c => c.stream)));
+    const cutoffs = matchingFyjc.map(c => c.cutoff).filter(n => typeof n === 'number' && !isNaN(n));
+    const minCutoff = cutoffs.length > 0 ? Math.min(...cutoffs) : null;
+    const maxCutoff = cutoffs.length > 0 ? Math.max(...cutoffs) : null;
+    
+    const words = primary.collegeName.toLowerCase().split(/\s+/);
+    const cleanName = words.map(w => {
+      if (['and', '&', 'of', 'for', 'in', 'at', 'on', 'the', 'to'].includes(w)) return w;
+      if (w === 'jr' || w === 'jr.') return 'Jr.';
+      if (w === 'sr' || w === 'sr.') return 'Sr.';
+      return w.charAt(0).toUpperCase() + w.slice(1);
+    }).join(' ').replace(/^(.)/, c => c.toUpperCase());
+
+    const cutoffRange = maxCutoff !== null ? (minCutoff !== null && minCutoff !== maxCutoff ? `${minCutoff}% - ${maxCutoff}%` : `${maxCutoff}%`) : 'Official FYJC';
+
+    return {
+      id: id,
+      badge: `Affiliated Junior College • ${streams.join(', ')}`,
+      name: cleanName,
+      subName: `Choice Code: ${primary.choiceCode || 'MU-FYJC'} • ${streams.join(', ')}`,
+      location: 'Mumbai Region',
+      transitDetail: 'Access via Mumbai suburban railway and local transit',
+      commuteTime: 'Accessible via local transit',
+      commuteHeading: 'Commute Overview',
+      commuteDescription: 'Conveniently accessible across central and western suburban transit corridors.',
+      commuteBadge: 'Mumbai Transit',
+      image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80',
+      whyFit: [
+        {
+          icon: 'domain_verification',
+          title: 'Official Cutoff Threshold',
+          description: `Highest recorded cutoff: ${maxCutoff}% (${primary.year || '2025-26'}). Offers academic tracks in ${streams.join(', ')}.`,
+          iconColor: 'tertiary',
+        }
+      ],
+      keyFacts: [
+        {
+          label: 'Streams Offered',
+          value: streams.join(', '),
+          description: 'Official academic streams offered for 11th and 12th junior college admissions.',
+        },
+        {
+          label: 'Cutoff Range',
+          value: cutoffRange,
+          description: 'Minimum to maximum cutoff percentages across rounds and streams.',
+        },
+        {
+          label: 'Admission Board',
+          value: 'Maharashtra State Board',
+          description: 'Admissions conducted via Centralised Online FYJC Admission Process.',
+        }
+      ],
+      isRightForYou: {
+        strongFit: `Students meeting the cutoff range of ${cutoffRange} looking for reputable junior college options.`,
+        keepInMind: 'Cutoffs may vary across reservation categories and allocation rounds.',
+      },
+      compareTargetName: 'Other Regional Colleges',
+    };
+  }
+
+  // 3. Generic fallback using the ID string (e.g., from Cutoffs list)
   const genericName = id
     .replace(/-/g, ' ')
     .split(' ')
@@ -797,7 +872,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Autonomous • NAAC A+', 'Sion, Matunga, Central Mumbai'],
     tagColor: 'tertiary',
     actionLabel: 'View college details',
-    collegeId: 'podar',
+    collegeId: 'sies-college',
   },
   {
     id: 'res-col-2',
@@ -810,7 +885,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Autonomous • Andheri West, Mumbai'],
     tagColor: 'tertiary',
     actionLabel: 'View college details',
-    collegeId: 'mithibai',
+    collegeId: 'bhavans-college',
   },
   {
     id: 'res-col-3',
@@ -823,7 +898,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Autonomous • Malad West, Mumbai'],
     tagColor: 'tertiary',
     actionLabel: 'View college details',
-    collegeId: 'mithibai',
+    collegeId: 'nagindas-khandwala',
   },
   {
     id: 'res-col-4',
@@ -836,7 +911,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Autonomous • Kandivali West, Mumbai'],
     tagColor: 'tertiary',
     actionLabel: 'View college details',
-    collegeId: 'mithibai',
+    collegeId: 'kes-shroff',
   },
   {
     id: 'res-col-5',
@@ -849,7 +924,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Affiliated to MU • Vile Parle East, Mumbai'],
     tagColor: 'tertiary',
     actionLabel: 'View college details',
-    collegeId: 'nm-college',
+    collegeId: 'dahanukar-college',
   },
   {
     id: 'res-col-6',
@@ -862,7 +937,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Autonomous • Vidyavihar, Ghatkopar, Mumbai'],
     tagColor: 'tertiary',
     actionLabel: 'View college details',
-    collegeId: 'podar',
+    collegeId: 'somaiya-college',
   },
   {
     id: 'res-col-7',
@@ -875,7 +950,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Autonomous • Grant Road, South Mumbai'],
     tagColor: 'tertiary',
     actionLabel: 'View college details',
-    collegeId: 'hr-college',
+    collegeId: 'sophia-college',
   },
   {
     id: 'res-col-8',
@@ -888,7 +963,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Affiliated to MU • Charni Road, Marine Lines, South Mumbai'],
     tagColor: 'tertiary',
     actionLabel: 'View college details',
-    collegeId: 'hinduja',
+    collegeId: 'wilson-college',
   },
   {
     id: 'res-col-9',
@@ -901,7 +976,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['NAAC A Grade • Dadar, Matunga, Mumbai'],
     tagColor: 'tertiary',
     actionLabel: 'View college details',
-    collegeId: 'podar',
+    collegeId: 'ruparel-college',
   },
   {
     id: 'res-col-10',
@@ -914,7 +989,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Affiliated to MU • Bandra West, Mumbai'],
     tagColor: 'tertiary',
     actionLabel: 'View college details',
-    collegeId: 'mithibai',
+    collegeId: 'rizvi-college',
   },
   {
     id: 'res-col-11',
@@ -927,7 +1002,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Affiliated to MU • Parel, Lower Parel, South Mumbai'],
     tagColor: 'tertiary',
     actionLabel: 'View college details',
-    collegeId: 'hinduja',
+    collegeId: 'md-college',
   },
   {
     id: 'res-col-12',
@@ -940,7 +1015,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Autonomous • Mulund East, Bhandup, Mumbai'],
     tagColor: 'tertiary',
     actionLabel: 'View college details',
-    collegeId: 'podar',
+    collegeId: 'vaze-college',
   },
   {
     id: 'res-17',

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import {
   MapPin,
   Bookmark,
@@ -9,6 +9,7 @@ import {
   CheckCircle2,
   Info,
   ArrowRight,
+  ArrowLeft,
   Briefcase,
   GraduationCap,
   Sparkles,
@@ -39,9 +40,29 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
   const isSaved = savedItems.some((item) => item.collegeId === collegeId);
   const college: CollegeDetail = getCollegeDetails(collegeId);
   const collegeCutoffs = CUTOFFS.filter(c => c.collegeId === collegeId);
+  const [searchParams] = useSearchParams();
+  const streamQuery = searchParams.get('stream');
+
+  const [selectedCategory, setSelectedCategory] = useState<string>('General');
+
   // FYJC structured cutoff data for this college
-  const fyjcCutoffs = FYJC_CUTOFFS.filter(c => c.collegeId === collegeId)
-    .sort((a, b) => b.cutoff - a.cutoff);
+  const rawFyjc = FYJC_CUTOFFS.filter(c =>
+    (c.collegeId === collegeId) ||
+    (c.collegeName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === collegeId)
+  ).sort((a, b) => b.cutoff - a.cutoff);
+
+  const availableCategories = Array.from(new Set(rawFyjc.map(c => c.category))).sort();
+
+  let fyjcCutoffs = rawFyjc;
+  if (streamQuery) {
+    fyjcCutoffs = rawFyjc.filter(c => c.stream.toLowerCase() === streamQuery.toLowerCase() && c.category === selectedCategory);
+  } else {
+    // Show only top 3 (Arts, Commerce, Science) for selected category
+    const arts = rawFyjc.find(c => c.stream === 'Arts' && c.category === selectedCategory);
+    const comm = rawFyjc.find(c => c.stream === 'Commerce' && c.category === selectedCategory);
+    const sci = rawFyjc.find(c => c.stream === 'Science' && c.category === selectedCategory);
+    fyjcCutoffs = [arts, comm, sci].filter(Boolean) as typeof rawFyjc;
+  }
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Subtle GSAP entrance animation
@@ -71,14 +92,42 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
         {/* Editorial Header / Left-aligned free layout */}
         <header className="detail-fade-anim pb-8 text-left flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-2 max-w-3xl">
-            {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-500 dark:text-[#A9B8CA] mb-6 pt-2">
-              <button onClick={() => navigate('/')} className="hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors">Home</button>
-              <span>/</span>
-              <button onClick={() => navigate('/colleges')} className="hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors">Colleges</button>
-              <span>/</span>
-              <span className="text-slate-900 dark:text-[#F4F7FB]">{college.name}</span>
-            </nav>
+            {/* Back button & Breadcrumb */}
+            <div className="flex flex-col gap-2 mb-6 pt-2">
+              <button
+                type="button"
+                onClick={() => {
+                  if (window.history.length > 1) {
+                    navigate(-1);
+                  } else {
+                    navigate('/colleges?all=true');
+                  }
+                }}
+                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-500 hover:text-[#007DCC] dark:text-[#A9B8CA] dark:hover:text-[#86cfff] transition-colors w-fit group"
+              >
+                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
+                <span>Back to results</span>
+              </button>
+
+              <nav className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-500 dark:text-[#A9B8CA]">
+                <button onClick={() => navigate('/')} className="hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors">Home</button>
+                <span>/</span>
+                <button
+                  onClick={() => {
+                    if (window.history.length > 1) {
+                      navigate(-1);
+                    } else {
+                      navigate('/colleges?all=true');
+                    }
+                  }}
+                  className="hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors"
+                >
+                  Colleges
+                </button>
+                <span>/</span>
+                <span className="text-slate-900 dark:text-[#F4F7FB] truncate max-w-[200px] sm:max-w-md">{college.name}</span>
+              </nav>
+            </div>
 
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-full text-[#007DCC] dark:text-[#86cfff] text-xs font-bold shadow-sm">
@@ -95,7 +144,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
             <p className="text-sm sm:text-base text-slate-600 dark:text-[#A9B8CA] font-medium tracking-normal">
               {college.subName}
             </p>
-            
+
             {/* Location & Transit */}
             <div className="flex items-center gap-1.5 text-slate-500 dark:text-[#8a919c] text-xs sm:text-sm flex-wrap pt-1">
               <MapPin className="w-4 h-4 text-[#007DCC] dark:text-[#86cfff] shrink-0" />
@@ -105,39 +154,79 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
             </div>
           </div>
 
-          {/* Action Strip */}
-          <div className="flex flex-wrap items-center gap-3 self-start md:self-auto shrink-0">
-            <button
-              id="saveBtn"
-              type="button"
-              onClick={() => onToggleSave(college.id)}
-              className={`h-11 px-5 rounded-xl font-bold text-xs sm:text-sm shadow-xs transition-all duration-200 flex items-center gap-2 active:scale-95 ${
-                isSaved
+          {/* Right Side: Cutoffs & Action Strip */}
+          <div className="flex flex-col items-start md:items-end gap-5 self-start md:self-auto shrink-0 mt-4 md:mt-0">
+
+            {/* Top Highlighted Cutoffs */}
+            {rawFyjc.length > 0 && (
+              <div className="flex flex-col items-start md:items-end gap-2 w-full">
+                <div className="flex items-center gap-2">
+                  {streamQuery && (
+                    <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-[#71839A] uppercase tracking-widest">
+                      {streamQuery} FYJC Cutoff
+                    </span>
+                  )}
+                  {!streamQuery && (
+                    <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-[#71839A] uppercase tracking-widest">
+                      FYJC Cutoffs
+                    </span>
+                  )}
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="text-[10px] sm:text-[11px] font-bold bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-md px-2 py-0.5 outline-none focus:border-[#007DCC] text-slate-700 dark:text-[#A9B8CA] cursor-pointer"
+                  >
+                    {availableCategories.map(cat => (
+                      <option key={cat} value={cat}>{cat}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className="flex flex-wrap items-center gap-2 justify-start md:justify-end w-full">
+                  {fyjcCutoffs.length > 0 ? fyjcCutoffs.map(c => (
+                    <div key={c.id} className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#007DCC]/10 dark:bg-[#007DCC]/20 border border-[#007DCC]/20 dark:border-[#007DCC]/30">
+                      <span className="text-[11px] font-bold text-slate-700 dark:text-[#A9B8CA]">{c.stream}</span>
+                      <span className="text-xs sm:text-sm font-black text-[#007DCC] dark:text-[#51dcbc]">{c.cutoff}%</span>
+                    </div>
+                  )) : (
+                    <span className="text-xs text-slate-500 italic px-2">No {selectedCategory} cutoff available.</span>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Action Buttons */}
+            <div className="flex flex-wrap items-center gap-3">
+              <button
+                id="saveBtn"
+                type="button"
+                onClick={() => onToggleSave(college.id)}
+                className={`h-11 px-5 rounded-xl font-bold text-xs sm:text-sm shadow-xs transition-all duration-200 flex items-center gap-2 active:scale-95 ${isSaved
                   ? 'bg-emerald-600 hover:bg-emerald-700 text-white dark:bg-[#00a388] dark:hover:bg-[#008f77]'
                   : 'bg-[#007DCC] hover:bg-[#006cb0] text-white'
-              }`}
-            >
-              {isSaved ? (
-                <>
-                  <BookmarkCheck className="w-4 h-4" />
-                  <span>Shortlisted</span>
-                </>
-              ) : (
-                <>
-                  <Bookmark className="w-4 h-4" />
-                  <span>Save to Shortlist</span>
-                </>
-              )}
-            </button>
+                  }`}
+              >
+                {isSaved ? (
+                  <>
+                    <BookmarkCheck className="w-4 h-4" />
+                    <span>Shortlisted</span>
+                  </>
+                ) : (
+                  <>
+                    <Bookmark className="w-4 h-4" />
+                    <span>Save to Shortlist</span>
+                  </>
+                )}
+              </button>
 
-            <button
-              type="button"
-              onClick={() => onOpenCompare(college.id)}
-              className="h-11 px-5 bg-white dark:bg-[#0D1828] hover:bg-slate-100 dark:hover:bg-[#161c27] text-slate-800 dark:text-[#F4F7FB] font-bold text-xs sm:text-sm rounded-xl transition-all duration-200 flex items-center gap-2 border border-slate-300 dark:border-[#D3B5E8]/15 shadow-sm"
-            >
-              <Scale className="w-4 h-4 text-slate-500 dark:text-[#A9B8CA]" />
-              <span>Compare College</span>
-            </button>
+              <button
+                type="button"
+                onClick={() => onOpenCompare(college.id)}
+                className="h-11 px-5 bg-white dark:bg-[#0D1828] hover:bg-slate-100 dark:hover:bg-[#161c27] text-slate-800 dark:text-[#F4F7FB] font-bold text-xs sm:text-sm rounded-xl transition-all duration-200 flex items-center gap-2 border border-slate-300 dark:border-[#D3B5E8]/15 shadow-sm"
+              >
+                <Scale className="w-4 h-4 text-slate-500 dark:text-[#A9B8CA]" />
+                <span>Compare College</span>
+              </button>
+            </div>
           </div>
         </header>
 
@@ -175,6 +264,8 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
             </div>
           </div>
         </div>
+
+
 
         {/* Free-flowing 2-column layout for details */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-10 text-left">
@@ -305,76 +396,6 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
             </div>
           </div>
         </div>
-
-        {/* Section: Admissions & Cutoffs */}
-        {(fyjcCutoffs.length > 0 || collegeCutoffs.length > 0) && (
-          <section className="detail-fade-anim mb-10 text-left">
-            <div className="p-8 sm:p-10 rounded-2xl bg-white dark:bg-[#0D1828] shadow-sm border border-slate-300 dark:border-[#D3B5E8]/15">
-              <div className="flex items-start justify-between gap-4 mb-6">
-                <div className="space-y-1">
-                  <span className="text-[11px] text-[#007DCC] dark:text-[#86cfff] font-bold uppercase tracking-widest">
-                    Admissions
-                  </span>
-                  <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] tracking-tight">
-                    Cutoffs
-                  </h2>
-                </div>
-              </div>
-
-              {fyjcCutoffs.length > 0 ? (
-                /* Inline FYJC cutoff rows */
-                <div className="space-y-1">
-                  {/* Header */}
-                  <div className="grid grid-cols-3 gap-2 pb-2 border-b border-slate-100 dark:border-white/5">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A]">Stream</span>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A]">Category</span>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-[#71839A] text-right">Cutoff</span>
-                  </div>
-                  {fyjcCutoffs.slice(0, 12).map((c) => (
-                    <div
-                      key={c.id}
-                      className="grid grid-cols-3 gap-2 py-3 border-b border-slate-50 dark:border-white/4 last:border-0"
-                    >
-                      <span className="text-sm font-medium text-slate-700 dark:text-[#A9B8CA]">{c.stream}</span>
-                      <span className="text-sm text-slate-500 dark:text-[#71839A]">{c.category}</span>
-                      <span className="text-sm font-black text-[#007DCC] dark:text-[#19A7E8] text-right tabular-nums">
-                        {c.cutoff}%
-                      </span>
-                    </div>
-                  ))}
-                  {fyjcCutoffs.length > 12 && (
-                    <p className="text-xs text-slate-400 dark:text-[#71839A] pt-2 text-center">
-                      Showing top 12 of {fyjcCutoffs.length} cutoff records.
-                    </p>
-                  )}
-                  <p className="text-[11px] text-slate-400 dark:text-[#71839A] pt-3">
-                    Source: FYJC Mumbai {fyjcCutoffs[0]?.year} data.
-                  </p>
-                </div>
-              ) : (
-                /* Fallback: PDF only */
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {collegeCutoffs.map(cutoff => (
-                    <div key={cutoff.id} className="p-5 rounded-xl border border-slate-300 dark:border-[#D3B5E8]/10 bg-slate-50 dark:bg-[#161c27] flex flex-col justify-between">
-                      <div className="mb-4">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#007DCC]/10 text-[#007DCC] dark:text-[#86cfff] uppercase">
-                            {cutoff.academicYear}
-                          </span>
-                          <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-500/10 text-purple-600 dark:text-[#D3B5E8] uppercase">
-                            {cutoff.stream}
-                          </span>
-                        </div>
-                        <h4 className="font-semibold text-slate-900 dark:text-[#F4F7FB] text-sm mb-1">{cutoff.documentTitle}</h4>
-                        <p className="text-xs text-slate-500 dark:text-[#A9B8CA]">{cutoff.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </section>
-        )}
 
         {/* Section 4: Compare Next Step */}
         <section className="detail-fade-anim pt-2" id="compare">

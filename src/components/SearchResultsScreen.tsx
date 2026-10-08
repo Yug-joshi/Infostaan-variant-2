@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Compass, SlidersHorizontal, BarChart2, Heart, Users, Star, Award, CheckCircle, Info, TrendingUp, MonitorPlay } from 'lucide-react';
+import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Compass, SlidersHorizontal, BarChart2, Bookmark, Users, Star, Award, CheckCircle, Info, TrendingUp, MonitorPlay } from 'lucide-react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { CategoryType, SearchResultItem } from '../types';
 import { searchInfostaan } from '../lib/searchEngine';
@@ -8,6 +8,7 @@ import { SkeletonResultCards } from './SkeletonResultCards';
 import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
 import { FilterCategoryType } from './CategoryFilterModal';
 import { getCollegeRegion, matchItemRegion, applyStreamFilter } from '../lib/categoryFilters';
+import { formatCollegeTitle, getCollegeGroupingKey } from '../lib/collegeData';
 import { ResultFilterDrawer, DrawerCategoryType } from './ResultFilterDrawer';
 
 interface SearchResultsScreenProps {
@@ -62,6 +63,26 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
+  const pageParam = parseInt(searchParams.get('page') || '1', 10);
+  const currentPage = isNaN(pageParam) || pageParam < 1 ? 1 : pageParam;
+  const ITEMS_PER_PAGE = 16;
+
+  const handlePageChange = (newPage: number) => {
+    const next = new URLSearchParams(searchParams);
+    if (newPage <= 1) {
+      next.delete('page');
+    } else {
+      next.set('page', newPage.toString());
+    }
+    setSearchParams(next);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    if (!showResults && !isFilterDrawerOpen) {
+      setIsFilterDrawerOpen(true);
+    }
+  }, [showResults, isFilterDrawerOpen]);
 
   // Sync external query changes to input value
   useEffect(() => {
@@ -199,19 +220,46 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
         cutoffs = [...cutoffs].sort((a, b) => b.cutoff - a.cutoff);
       }
 
-      return cutoffs.slice(0, 60).map(c => ({
-        id: c.id,
-        category: 'cutoffs' as const,
-        badgeCategory: `${c.stream} Cutoff`,
-        badgeSub: `${c.cutoff}% (${c.year})`,
-        title: c.collegeName,
-        subtitle: `FYJC Cutoff: ${c.cutoff}% • Code: ${c.choiceCode} • Category: ${c.category || 'General'}`,
-        meta: [c.stream, `Region: ${getCollegeRegion(c.collegeName)}`, `Code: ${c.choiceCode}`],
-        whyRelevant: `Official FYJC cutoff threshold: ${c.cutoff}%`,
-        tagColor: 'tertiary' as const,
-        actionLabel: 'View College Details',
-        collegeSlug: c.collegeId || c.collegeName.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-      }));
+      // Group cutoffs strictly by college key so every college gets exactly 1 card regardless of streams
+      const grouped = new Map<string, typeof FYJC_CUTOFFS[0][]>();
+      cutoffs.forEach(c => {
+         const key = getCollegeGroupingKey(c);
+         if (!grouped.has(key)) grouped.set(key, []);
+         grouped.get(key)!.push(c);
+      });
+      
+      const uniqueColleges = Array.from(grouped.values());
+
+      return uniqueColleges.map(group => {
+         const primary = group[0];
+         const names = group.map(c => c.collegeName.trim());
+         names.sort((a, b) => {
+           const aPenalty = a.endsWith('&') || a.endsWith('AND') ? -20 : 0;
+           const bPenalty = b.endsWith('&') || b.endsWith('AND') ? -20 : 0;
+           return (b.length + bPenalty) - (a.length + aPenalty);
+         });
+         const bestName = names[0];
+
+         const streams = Array.from(new Set(group.map(c => c.stream)));
+         const streamText = streams.join(', ');
+         const slug = primary.collegeId || bestName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+         
+         return {
+            id: `cutoff-${slug}`,
+            category: 'cutoffs' as const,
+            badgeCategory: streams.length > 1 ? 'MULTIPLE' : `${primary.stream}`,
+            badgeSub: group.length > 1 ? `${primary.cutoff}% (Top)` : `${primary.cutoff}% (${primary.year})`,
+            title: formatCollegeTitle(bestName),
+            subtitle: group.length > 1 
+               ? `${group.length} Cutoffs • Range: ${Math.min(...group.map(g => g.cutoff))}% - ${Math.max(...group.map(g => g.cutoff))}%` 
+               : `FYJC Cutoff: ${primary.cutoff}% • Code: ${primary.choiceCode}`,
+            meta: [streamText, `Region: ${getCollegeRegion(bestName)}`],
+            whyRelevant: `Highest cutoff threshold: ${primary.cutoff}%`,
+            tagColor: 'tertiary' as const,
+            actionLabel: 'View College Details',
+            collegeSlug: slug,
+         };
+      });
     }
 
     let raw = searchInfostaan(query, activeCategory);
@@ -247,18 +295,36 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
     }
   }, [query, activeCategory]);
 
+  // Reset pagination when filters change (delete page param if present)
+  useEffect(() => {
+    if (searchParams.has('page')) {
+      const next = new URLSearchParams(searchParams);
+      next.delete('page');
+      setSearchParams(next, { replace: true });
+    }
+  }, [activeCategory, query, streamParam, regionParam, rangeParam, percentageParam, sortParam]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredResults.length / ITEMS_PER_PAGE));
+  const safePage = Math.min(currentPage, totalPages);
+  const paginatedResults = useMemo(() => {
+    const start = (safePage - 1) * ITEMS_PER_PAGE;
+    return filteredResults.slice(start, start + ITEMS_PER_PAGE);
+  }, [filteredResults, safePage]);
+
   const handleActionClick = (item: SearchResultItem) => {
+    const qs = streamParam && streamParam !== 'All Streams' ? `?stream=${streamParam}` : '';
+    
     if (item.category === 'careers') {
       navigate('/career-roadmap');
     } else if (item.category === 'classes' && item.slug) {
       navigate(`/class/${item.slug}`);
     } else if (item.collegeSlug) {
-      onSelectCollege(item.collegeSlug);
+      onSelectCollege(item.collegeSlug + qs);
     } else if (item.collegeId) {
-      onSelectCollege(item.collegeId);
+      onSelectCollege(item.collegeId + qs);
     } else if (item.category === 'colleges' || item.category === 'cutoffs') {
       const slug = item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-      onSelectCollege(slug || 'mithibai');
+      onSelectCollege((slug || 'mithibai') + qs);
     }
   };
 
@@ -283,7 +349,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
           </div>
 
           {/* Input Bar with layered suggestions */}
-          <div className="relative z-30 flex items-center w-full min-w-0 bg-white dark:bg-[#0D1828] rounded-2xl px-3 sm:px-4 py-3 shadow-xs transition-all border border-slate-300 dark:border-[#D3B5E8]/15 focus-within:border-[#007DCC] focus-within:ring-2 focus-within:ring-[#007DCC]/20">
+          <div className="relative z-30 flex items-center w-full md:w-1/2 min-w-0 bg-white dark:bg-[#0D1828] rounded-2xl px-3 sm:px-4 py-3 shadow-xs transition-all border border-slate-300 dark:border-[#D3B5E8]/15 focus-within:border-[#007DCC] focus-within:ring-2 focus-within:ring-[#007DCC]/20">
             <Search className="text-[#007DCC] dark:text-[#9ccaff] mr-2 sm:mr-3 w-5 h-5 shrink-0" />
             <input
               aria-label="Search opportunities, courses, and institutions in Mumbai"
@@ -310,8 +376,13 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                   <button
                     type="button"
                     onClick={() => {
-                      setInputValue('');
-                      onSelectCollege('mithibai');
+                      setSearchParams(prev => {
+                        const next = new URLSearchParams(prev);
+                        next.set('q', inputValue.trim());
+                        return next;
+                      }, { replace: true });
+                      setActiveCategory('colleges');
+                      setSearchPhase('understanding');
                     }}
                     className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3"
                   >
@@ -406,7 +477,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                 <button
                   type="button"
                   onClick={handleModifyFilters}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 min-h-[44px] rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-[#161c27] transition-all whitespace-nowrap shrink-0"
+                  className="lg:hidden inline-flex items-center justify-center gap-2 px-4 py-2.5 min-h-[44px] rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-[#161c27] transition-all whitespace-nowrap shrink-0"
                 >
                   <SlidersHorizontal className="w-4 h-4" />
                   Modify Filters
@@ -438,9 +509,31 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
           </div>
         )}
 
-        {/* Results Container */}
-        <div ref={resultsContainerRef} className="w-full">
-          {!showResults ? (
+        {/* Main Layout: Sidebar + Results */}
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start relative w-full">
+          {/* Desktop Sidebar Filter (Permanent) */}
+          <aside className="hidden lg:block w-[300px] shrink-0 sticky top-28 z-20 h-[calc(100vh-8rem)]">
+            <ResultFilterDrawer
+              isOpen={true}
+              inline={true}
+              onClose={() => {}}
+              category={
+                activeCategory === 'cutoffs'
+                  ? 'cutoffs'
+                  : activeCategory === 'classes'
+                    ? 'classes'
+                    : activeCategory === 'courses'
+                      ? 'courses'
+                      : activeCategory === 'careers'
+                        ? 'careers'
+                        : 'colleges'
+              }
+            />
+          </aside>
+
+          {/* Results Container */}
+          <div ref={resultsContainerRef} className="flex-1 w-full min-w-0">
+            {!showResults ? (
             <div className="w-full py-12 sm:py-16 text-center max-w-xl mx-auto">
               <div className="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-blue-900/20 text-[#007DCC] dark:text-[#86cfff] flex items-center justify-center mx-auto mb-4">
                 <SlidersHorizontal className="w-7 h-7" />
@@ -487,7 +580,8 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
           ) : searchPhase === 'skeleton' ? (
             <SkeletonResultCards />
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
               {filteredResults.length === 0 ? (
                 <div className="col-span-full w-full max-w-xl mx-auto p-6 sm:p-10 text-center rounded-2xl bg-white dark:bg-[#0D1828] text-slate-600 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 shadow-xs">
                   <p className="text-base font-semibold text-slate-900 dark:text-[#F4F7FB] mb-1">
@@ -507,7 +601,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                   </button>
                 </div>
               ) : (
-                filteredResults.map((item) => {
+                paginatedResults.map((item) => {
                   const isCollege = item.category === 'colleges' || item.category === 'cutoffs';
                   const isCutoff = item.category === 'cutoffs';
                   const isCourse = item.category === 'courses';
@@ -539,21 +633,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                   if (isCollege || isCourse || isCareer || isClass) {
                     const facts: { icon: any; value: string; label: string }[] = [];
                     if (isCutoff) {
-                      facts.push({
-                        icon: Star,
-                        value: item.badgeSub ? item.badgeSub.split(' ')[0] : 'Cutoff',
-                        label: 'FYJC Cutoff',
-                      });
-                      facts.push({
-                        icon: Award,
-                        value: item.meta[0] || 'Stream',
-                        label: 'Stream',
-                      });
-                      facts.push({
-                        icon: MapPin,
-                        value: (item.meta[1] || 'Mumbai').replace('Region: ', ''),
-                        label: 'Region',
-                      });
+                      // Do not push any facts. The cutoff is displayed directly as highlighted text below.
                     } else if (isCareer) {
                       if (item.meta && item.meta[0]) {
                         facts.push({ icon: Award, value: item.meta[0], label: 'Level' });
@@ -563,7 +643,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                       }
                     } else {
                       item.meta.forEach(m => {
-                        if (isClass) return; // Classes don't use facts, only streams
+                        if (isClass || isCollege) return; // Classes and Colleges don't use facts
                         const lower = m.toLowerCase();
                         if (lower.includes('autonomous') || lower.includes('university')) {
                           facts.push({ icon: Building2, value: m.split('•')[0].trim(), label: 'Status' });
@@ -600,7 +680,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         onClick={isClickable ? () => handleActionClick(item) : undefined}
                       >
                         {/* HEADER (gradient + category icon) */}
-                        <div className="relative w-full h-[120px] sm:h-[160px] rounded-t-[15px] bg-gradient-to-br from-[#091540] via-[#0B3366] to-[#007DCC] shrink-0 flex items-start justify-between gap-2 p-3 sm:p-4 overflow-hidden">
+                        <div className="relative w-full h-[90px] sm:h-[110px] rounded-t-[15px] bg-gradient-to-br from-[#091540] via-[#0B3366] to-[#007DCC] shrink-0 flex items-start justify-between gap-2 p-3 sm:p-4 overflow-hidden">
                           <HeaderIcon
                             aria-hidden="true"
                             className="pointer-events-none absolute -right-2 -bottom-2 w-20 h-20 sm:w-28 sm:h-28 text-white/10"
@@ -621,7 +701,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                             }}
                             className="relative shrink-0 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 transition-colors border border-white/20"
                           >
-                            <Heart className={`w-4 h-4 ${savedItemIds?.includes(item.id) ? 'fill-[#19A7E8] text-[#19A7E8]' : 'text-white'}`} />
+                            <Bookmark className={`w-4 h-4 ${savedItemIds?.includes(item.id) ? 'fill-[#19A7E8] text-[#19A7E8]' : 'text-white'}`} />
                           </button>
                         </div>
 
@@ -630,7 +710,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 
                           {/* TITLE & LOCATION */}
                           <div className="mb-2 min-w-0 flex flex-col gap-1">
-                            <h2 className={`text-[15px] sm:text-base font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug break-words ${isClickable ? 'group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors' : ''}`}>
+                            <h2 className={`text-[13px] sm:text-[14px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug break-words ${isClickable ? 'group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors' : ''}`}>
                               {item.title}
                             </h2>
 
@@ -642,11 +722,22 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                                   : item.badgeSub || 'Mumbai'}
                               </span>
                             </div>
+                            
+                            {isCutoff && (
+                              <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
+                                <span className="text-sm font-extrabold text-[#007DCC] dark:text-[#86cfff] bg-[#007DCC]/10 dark:bg-[#86cfff]/10 px-2 py-0.5 rounded-md">
+                                  {item.badgeSub ? item.badgeSub.split(' ')[0] : 'Cutoff'}
+                                </span>
+                                <span className="text-[11px] font-semibold text-slate-600 dark:text-[#A9B8CA] uppercase tracking-wide">
+                                  FYJC Cutoff
+                                </span>
+                              </div>
+                            )}
                           </div>
 
                           {/* DESKTOP ONLY: TAGS & FACTS */}
                           <div className="hidden sm:flex flex-col flex-grow min-w-0">
-                            {streams.length > 0 && (
+                            {(!isCutoff && streams.length > 0) && (
                               <div className="flex flex-wrap gap-1.5 mb-3 min-w-0">
                                 {streams.slice(0, 2).map((stream, idx) => (
                                   <span key={idx} className="max-w-full px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#162133] border border-slate-200 dark:border-white/5 text-slate-600 dark:text-[#A9B8CA] text-[11px] leading-snug font-medium break-words">
@@ -678,12 +769,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                             {(isCollege && !isCutoff) && (
                                <div><span className="text-slate-400 font-normal">Cutoff:</span> Check Details</div>
                             )}
-                            {isCutoff && (
-                               <>
-                                 <div><span className="text-slate-400 font-normal">Cutoff:</span> {item.badgeSub ? item.badgeSub.split(' ')[0] : 'Check Details'}</div>
-                                 {streams[0] && <div><span className="text-slate-400 font-normal">Stream:</span> {streams[0]}</div>}
-                               </>
-                            )}
+
                             {isCourse && (
                                <>
                                  <div><span className="text-slate-400 font-normal">Stream:</span> {streams[0] || 'General'}</div>
@@ -704,18 +790,6 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                             )}
                           </div>
 
-                          {/* DETAILS ACTION */}
-                          <div className="flex items-center justify-start pt-2 border-t border-slate-100 dark:border-white/5 mt-auto">
-                            {isClickable ? (
-                              <span className="text-[10px] sm:text-xs font-bold text-[#007DCC] dark:text-[#86cfff] flex items-center gap-1 group-hover:text-[#19A7E8] transition-colors">
-                                {isCutoff ? 'View College Details' : isCareer ? 'Career Path' : isCourse ? 'Course Info' : 'Details'} <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0 group-hover:translate-x-0.5 transition-transform" />
-                              </span>
-                            ) : (
-                              <span className="text-[10px] sm:text-xs font-bold text-slate-500 dark:text-[#A9B8CA] flex items-center gap-1">
-                                <Info className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" /> {isCourse ? 'Course Info' : 'Details'}
-                              </span>
-                            )}
-                          </div>
                         </div>
                       </article>
                     );
@@ -752,7 +826,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                       </div>
 
                       {/* Name */}
-                      <h2 className="text-xs sm:text-[15px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug tracking-tight group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors break-words">
+                      <h2 className="text-xs sm:text-[13px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug tracking-tight group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors break-words">
                         {item.title}
                       </h2>
 
@@ -767,24 +841,63 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         </p>
                       )}
                     </div>
-
-                    {/* Bottom action */}
-                    <div className="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-white/5 mt-auto">
-                      <span className="text-[10px] sm:text-xs font-semibold text-[#007DCC] dark:text-[#86cfff]">
-                        {item.category === 'colleges' ? 'Details' :
-                         item.category === 'classes' ? 'View Details' :
-                         item.category === 'courses' ? 'Course Info' :
-                         item.category === 'careers' ? 'Career Path' :
-                         item.actionLabel}
-                      </span>
-                      <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#007DCC] dark:text-[#86cfff] group-hover:translate-x-0.5 transition-transform" />
-                    </div>
                   </article>
                   );
                 })
               )}
             </div>
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="flex items-center justify-center gap-2 mt-12 mb-8">
+                <button
+                  onClick={() => handlePageChange(Math.max(1, safePage - 1))}
+                  disabled={safePage === 1}
+                  className="p-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-[#A9B8CA] hover:bg-slate-50 dark:hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                >
+                  <ArrowLeft className="w-5 h-5" />
+                </button>
+                <div className="flex items-center gap-1.5 mx-2">
+                  {[...Array(totalPages)].map((_, i) => {
+                    const page = i + 1;
+                    // Simple windowing: show first, last, and +/- 1 around current
+                    if (
+                      page === 1 || 
+                      page === totalPages || 
+                      (page >= safePage - 1 && page <= safePage + 1)
+                    ) {
+                      return (
+                        <button
+                          key={page}
+                          onClick={() => handlePageChange(page)}
+                          className={`w-9 h-9 rounded-xl text-sm font-bold flex items-center justify-center transition-all ${
+                            safePage === page
+                              ? 'bg-[#007DCC] text-white shadow-sm'
+                              : 'bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-white/5'
+                          }`}
+                        >
+                          {page}
+                        </button>
+                      );
+                    }
+                    if (page === safePage - 2 || page === safePage + 2) {
+                      return <span key={page} className="text-slate-400 dark:text-slate-600 px-1">...</span>;
+                    }
+                    return null;
+                  })}
+                </div>
+                <button
+                  onClick={() => handlePageChange(Math.min(totalPages, safePage + 1))}
+                  disabled={safePage === totalPages}
+                  className="p-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-[#A9B8CA] hover:bg-slate-50 dark:hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                >
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </div>
+            )}
+            </>
           )}
+        </div>
         </div>
 
       </div>

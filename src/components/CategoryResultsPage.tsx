@@ -1,5 +1,6 @@
-import React, { useState, useMemo, useRef } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import {
+  ArrowLeft,
   ArrowRight,
   Building2,
   GraduationCap,
@@ -9,12 +10,13 @@ import {
   MapPin,
   Compass,
   X,
-  Heart,
+  Bookmark,
   Users,
   Star,
   Award,
   CheckCircle,
-  Info
+  Info,
+  Search
 } from 'lucide-react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { SearchResultItem } from '../types';
@@ -114,6 +116,12 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
   // ── Read URL params ────────────────────────────────────────────────────────
   const allParam = searchParams.get('all');          // "true" = View All mode
   const query = searchParams.get('query') || '';
+  const [inputValue, setInputValue] = useState(query);
+  
+  useEffect(() => {
+    setInputValue(query);
+  }, [query]);
+
   const regionParam = searchParams.get('region');
   const streamParam = searchParams.get('stream');
   const fieldParam = searchParams.get('field');
@@ -164,6 +172,8 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
   const results: SearchResultItem[] = useMemo(() => {
     if (!showResults) return [];
 
+    let raw: SearchResultItem[] = [];
+
     if (category === 'classes') {
       // Classes use their own dataset — not the search engine
       const filtered = filterClasses({
@@ -173,7 +183,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
         query: isViewAll ? null : query,
       });
       // Map ClassData → SearchResultItem shape
-      return filtered.slice(0, 200).map((cls) => ({
+      raw = filtered.slice(0, 200).map((cls) => ({
         id: cls.id,
         slug: cls.slug,
         category: 'classes' as const,
@@ -183,17 +193,15 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
         subtitle: cls.specializations
           ? `Specialization: ${cls.specializations}`
           : 'Coaching & Classes',
-        meta: [cls.streams || 'All Streams', cls.address || 'Mumbai'],
+        meta: [cls.streams || 'All Streams'],
         whyRelevant: 'Coaching class in Mumbai',
         tagColor: 'lavender' as const,
         actionLabel: 'View Details',
       }));
-    }
+    } else {
+      // colleges / courses / careers — use searchInfostaan, then apply shared filters
+      raw = searchInfostaan(query, category);
 
-    // colleges / courses / careers — use searchInfostaan, then apply shared filters
-    let raw = searchInfostaan(isViewAll ? '' : query, category);
-
-    if (!isViewAll) {
       if (regionParam && regionParam !== 'All Mumbai') {
         raw = raw.filter((item) => matchItemRegion(item, regionParam));
       }
@@ -206,26 +214,22 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
     
     // -- Sorting logic --
     if (sortParam) {
-      if (sortParam === 'cutoff_desc' && category === 'cutoffs') {
-        finalResults.sort((a, b) => {
-          const aCutoff = parseFloat(a.badgeSub || '0');
-          const bCutoff = parseFloat(b.badgeSub || '0');
-          return bCutoff - aCutoff;
-        });
-      } else if (sortParam === 'cutoff_asc' && category === 'cutoffs') {
-        finalResults.sort((a, b) => {
-          const aCutoff = parseFloat(a.badgeSub || '0');
-          const bCutoff = parseFloat(b.badgeSub || '0');
-          return aCutoff - bCutoff;
-        });
-      } else if (sortParam === 'distance_asc' && (category === 'classes' || category === 'colleges')) {
+      if (sortParam === 'distance_asc' && (category === 'classes' || category === 'colleges')) {
         finalResults.sort((a, b) => (a.badgeSub?.length || 0) - (b.badgeSub?.length || 0));
       } else if (sortParam === 'distance_desc' && (category === 'classes' || category === 'colleges')) {
         finalResults.sort((a, b) => (b.badgeSub?.length || 0) - (a.badgeSub?.length || 0));
       } else if (sortParam === 'cutoff_desc' && category === 'colleges') {
-        finalResults.sort((a, b) => b.title.localeCompare(a.title));
+        const getCutoffNum = (item: SearchResultItem): number => {
+          const m = item.subtitle?.match(/(\d+(\.\d+)?)\s*%/);
+          return m ? parseFloat(m[1]) : 0;
+        };
+        finalResults.sort((a, b) => getCutoffNum(b) - getCutoffNum(a) || a.title.localeCompare(b.title));
       } else if (sortParam === 'cutoff_asc' && category === 'colleges') {
-        finalResults.sort((a, b) => a.title.localeCompare(b.title));
+        const getCutoffNum = (item: SearchResultItem): number => {
+          const m = item.subtitle?.match(/(\d+(\.\d+)?)\s*%/);
+          return m ? parseFloat(m[1]) : 0;
+        };
+        finalResults.sort((a, b) => getCutoffNum(a) - getCutoffNum(b) || a.title.localeCompare(b.title));
       }
     }
 
@@ -235,6 +239,37 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
     streamParam, fieldParam, interestParam, industryParam,
     levelParam, specializationParam, sortParam
   ]);
+
+  const ITEMS_PER_PAGE = 16;
+  const pageParam = parseInt(searchParams.get('page') || '1', 10);
+  const currentPage = isNaN(pageParam) || pageParam < 1 ? 1 : pageParam;
+
+  const handlePageChange = (newPage: number) => {
+    const next = new URLSearchParams(searchParams);
+    if (newPage <= 1) {
+      next.delete('page');
+    } else {
+      next.set('page', newPage.toString());
+    }
+    setSearchParams(next);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Reset pagination when filters change (delete page param if present)
+  useEffect(() => {
+    if (searchParams.has('page')) {
+      const next = new URLSearchParams(searchParams);
+      next.delete('page');
+      setSearchParams(next, { replace: true });
+    }
+  }, [category, query, regionParam, streamParam, fieldParam, interestParam, industryParam, levelParam, specializationParam, sortParam]);
+
+  const totalPages = Math.max(1, Math.ceil(results.length / ITEMS_PER_PAGE));
+  const safePage = Math.min(currentPage, totalPages);
+  const paginatedResults = useMemo(() => {
+    const start = (safePage - 1) * ITEMS_PER_PAGE;
+    return results.slice(start, start + ITEMS_PER_PAGE);
+  }, [results, safePage]);
 
   // ── Open correct modal for "Modify Filters" / "Choose Filters" ────────────
   const handleOpenFilter = () => {
@@ -300,8 +335,42 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
             </div>
 
             {showResults && (
-              <div className="flex items-center gap-2 self-start sm:self-auto">
-                {(category === 'cutoffs' || category === 'classes' || category === 'colleges') && (
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 self-start sm:self-auto w-full sm:w-auto">
+                <div className="relative flex items-center w-full sm:w-[250px] bg-white dark:bg-[#0D1828] rounded-xl px-3 py-2.5 shadow-sm border border-slate-300 dark:border-white/10 focus-within:border-[#007DCC] focus-within:ring-1 focus-within:ring-[#007DCC]">
+                  <Search className="w-4 h-4 text-slate-400 shrink-0 mr-2" />
+                  <input
+                    type="text"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        const next = new URLSearchParams(searchParams);
+                        if (inputValue.trim()) {
+                          next.set('query', inputValue.trim());
+                        } else {
+                          next.delete('query');
+                        }
+                        setSearchParams(next, { replace: true });
+                      }
+                    }}
+                    placeholder={`Search ${category}...`}
+                    className="w-full bg-transparent text-sm font-medium text-slate-900 dark:text-[#F4F7FB] focus:outline-none placeholder:text-slate-400"
+                  />
+                  {inputValue && (
+                    <button
+                      onClick={() => {
+                        setInputValue('');
+                        const next = new URLSearchParams(searchParams);
+                        next.delete('query');
+                        setSearchParams(next, { replace: true });
+                      }}
+                      className="ml-2 shrink-0 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+                    >
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  )}
+                </div>
+                {(category === 'classes' || category === 'colleges') && (
                   <select
                     className="px-3 py-2.5 min-h-[44px] rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 focus:outline-none focus:border-[#007DCC] cursor-pointer"
                     value={sortParam || 'default'}
@@ -329,7 +398,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                     }}
                   >
                     <option value="default">Sort: Recommended</option>
-                    {(category === 'cutoffs' || category === 'colleges') && (
+                    {category === 'colleges' && (
                       <>
                         <option value="cutoff_desc">Percentage: High to Low</option>
                         <option value="cutoff_asc">Percentage: Low to High</option>
@@ -346,7 +415,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                 <button
                   type="button"
                   onClick={() => setIsFilterDrawerOpen(true)}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-[#161c27] transition-all whitespace-nowrap shrink-0"
+                  className="lg:hidden inline-flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-[#161c27] transition-all whitespace-nowrap shrink-0"
                 >
                   <SlidersHorizontal className="w-4 h-4" />
                   Modify Filters
@@ -409,8 +478,21 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
           </div>
         )}
 
-        {/* ── Results / Empty State ─────────────────────────────────────────── */}
-        {!showResults ? (
+        {/* Main Layout: Sidebar + Results */}
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start relative w-full">
+          {/* Desktop Sidebar Filter (Permanent) */}
+          <aside className="hidden lg:block w-[300px] shrink-0 sticky top-28 z-20 h-[calc(100vh-8rem)]">
+            <ResultFilterDrawer
+              isOpen={true}
+              inline={true}
+              onClose={() => {}}
+              category={category}
+            />
+          </aside>
+
+          {/* Results Container */}
+          <div className="flex-1 w-full min-w-0">
+            {!showResults ? (
           /* Empty state — no params, no all=true */
           <div className="w-full py-12 sm:py-20 text-center max-w-lg mx-auto">
             <div
@@ -473,7 +555,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
         ) : (
           /* Results grid */
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
-            {results.map((item) => {
+            {paginatedResults.map((item) => {
               const getStreams = (): string[] => {
                 if (item.category === 'colleges' && item.subtitle) {
                   const offeredPart = item.subtitle.split('•')[0]
@@ -507,7 +589,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                   }
                 } else {
                   item.meta.forEach(m => {
-                    if (item.category === 'classes') return; // Classes don't use facts, only streams
+                    if (item.category === 'classes' || item.category === 'colleges') return; // Classes and Colleges don't use facts
                     const lower = m.toLowerCase();
                     if (lower.includes('autonomous') || lower.includes('university')) {
                       facts.push({ icon: Building2, value: m.split('•')[0].trim(), label: 'Status' });
@@ -564,7 +646,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                         }}
                         className="relative shrink-0 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 transition-colors border border-white/20"
                       >
-                        <Heart className={`w-4 h-4 ${savedItemIds?.includes(item.id) ? 'fill-[#19A7E8] text-[#19A7E8]' : 'text-white'}`} />
+                        <Bookmark className={`w-4 h-4 ${savedItemIds?.includes(item.id) ? 'fill-[#19A7E8] text-[#19A7E8]' : 'text-white'}`} />
                       </button>
                     </div>
 
@@ -573,7 +655,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
 
                       {/* TITLE & LOCATION */}
                       <div className="mb-2 min-w-0 flex flex-col gap-1">
-                        <h2 className={`text-[15px] sm:text-base font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug break-words ${isClickable ? 'group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors' : ''}`}>
+                        <h2 className={`text-[13px] sm:text-[14px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug break-words ${isClickable ? 'group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors' : ''}`}>
                           {item.title}
                         </h2>
 
@@ -587,13 +669,18 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
 
                       {/* DESKTOP ONLY: TAGS & FACTS */}
                       <div className="hidden sm:flex flex-col flex-grow min-w-0">
-                        {streams.length > 0 && (
-                          <div className="flex flex-wrap gap-1.5 mb-3 min-w-0">
+                        {(streams.length > 0 || (isCollege && item.subtitle?.includes('Cutoff:'))) && (
+                          <div className="flex flex-wrap items-center gap-1.5 mb-3 min-w-0">
                             {streams.slice(0, 2).map((stream, idx) => (
                               <span key={idx} className="max-w-full px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#162133] border border-slate-200 dark:border-white/5 text-slate-600 dark:text-[#A9B8CA] text-[11px] leading-snug font-medium break-words">
                                 {stream}
                               </span>
                             ))}
+                            {isCollege && item.subtitle?.includes('Cutoff:') && (
+                              <span className="px-1.5 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/40 text-emerald-700 dark:text-emerald-300 text-[11px] leading-snug font-semibold">
+                                {item.subtitle.split('Cutoff:')[1].trim()}
+                              </span>
+                            )}
                           </div>
                         )}
 
@@ -617,7 +704,12 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                       {/* MOBILE ONLY: CATEGORY SPECIFIC CONTENT */}
                       <div className="flex sm:hidden flex-col flex-grow min-w-0 gap-1.5 mb-2 mt-auto text-xs text-slate-600 dark:text-[#A9B8CA] font-medium leading-snug">
                         {isCollege && (
-                           <div><span className="text-slate-400 font-normal">Cutoff:</span> Check Details</div>
+                           <div>
+                             <span className="text-slate-400 font-normal">Cutoff:</span>{' '}
+                             <span className="font-semibold text-emerald-600 dark:text-emerald-400">
+                               {item.subtitle?.includes('Cutoff:') ? item.subtitle.split('Cutoff:')[1].trim() : 'Check Details'}
+                             </span>
+                           </div>
                         )}
                         {isCourse && (
                            <>
@@ -638,20 +730,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                            </>
                         )}
                       </div>
-
-                      {/* DETAILS ACTION */}
-                      <div className="flex items-center justify-start pt-2 border-t border-slate-100 dark:border-white/5 mt-auto">
-                        {isClickable ? (
-                          <span className="text-[10px] sm:text-xs font-bold text-[#007DCC] dark:text-[#86cfff] flex items-center gap-1 group-hover:text-[#19A7E8] transition-colors">
-                            {isCareer ? 'Career Path' : isCourse ? 'Course Info' : 'Details'} <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0 group-hover:translate-x-0.5 transition-transform" />
-                          </span>
-                        ) : (
-                          <span className="text-[10px] sm:text-xs font-bold text-slate-500 dark:text-[#A9B8CA] flex items-center gap-1">
-                            <Info className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" /> {isCourse ? 'Course Info' : 'Details'}
-                          </span>
-                        )}
                       </div>
-                    </div>
                   </article>
                 );
               }
@@ -685,7 +764,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                       )}
                     </div>
 
-                    <h2 className="text-[13px] sm:text-[15px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug tracking-tight group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors break-words">
+                    <h2 className="text-xs sm:text-[13px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug tracking-tight group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors break-words">
                       {item.title}
                     </h2>
 
@@ -695,21 +774,62 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                       </p>
                     ) : null}
                   </div>
-
-                  {/* Bottom action */}
-                  <div className="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-white/5 mt-auto">
-                    <span className="text-[10px] sm:text-xs font-semibold text-[#007DCC] dark:text-[#86cfff]">
-                      {item.category === 'cutoffs'
-                        ? 'View Cutoff'
-                        : item.actionLabel}
-                    </span>
-                    <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#007DCC] dark:text-[#86cfff] group-hover:translate-x-0.5 transition-transform" />
-                  </div>
                 </article>
               );
             })}
           </div>
         )}
+
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2 mt-8 mb-8">
+            <button
+              onClick={() => handlePageChange(Math.max(1, safePage - 1))}
+              disabled={safePage === 1}
+              className="p-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-[#A9B8CA] hover:bg-slate-50 dark:hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            >
+              <ArrowLeft className="w-5 h-5" />
+            </button>
+            <div className="flex items-center gap-1.5 mx-2">
+              {[...Array(totalPages)].map((_, i) => {
+                const page = i + 1;
+                // Simple windowing: show first, last, and +/- 1 around current
+                if (
+                  page === 1 || 
+                  page === totalPages || 
+                  (page >= safePage - 1 && page <= safePage + 1)
+                ) {
+                  return (
+                    <button
+                      key={page}
+                      onClick={() => handlePageChange(page)}
+                      className={`w-9 h-9 rounded-xl text-sm font-bold flex items-center justify-center transition-all ${
+                        safePage === page
+                          ? 'bg-[#007DCC] text-white shadow-sm'
+                          : 'bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-white/5'
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  );
+                }
+                if (page === safePage - 2 || page === safePage + 2) {
+                  return <span key={page} className="text-slate-400 dark:text-[#71839A] px-1">...</span>;
+                }
+                return null;
+              })}
+            </div>
+            <button
+              onClick={() => handlePageChange(Math.min(totalPages, safePage + 1))}
+              disabled={safePage === totalPages}
+              className="p-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-[#A9B8CA] hover:bg-slate-50 dark:hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            >
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
+        )}
+        </div>
+        </div>
       </div>
 
       {/* Result Page Filter Drawer Shell */}

@@ -29,6 +29,7 @@ interface ResultFilterDrawerProps {
   onApply?: (filters: Record<string, string>) => void;
   /** Optional callback when filters are reset */
   onReset?: () => void;
+  inline?: boolean;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -292,6 +293,8 @@ const CATEGORY_CONFIGS: Record<DrawerCategoryType, CategoryMeta> = {
 // Component: ResultFilterDrawer
 // ─────────────────────────────────────────────────────────────────────────────
 
+
+
 export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
   isOpen,
   onClose,
@@ -299,6 +302,7 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
   activeFilters,
   onApply,
   onReset,
+  inline = false,
 }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const config = CATEGORY_CONFIGS[category] || CATEGORY_CONFIGS.colleges;
@@ -327,9 +331,9 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
     }
   }, [isOpen, searchParams, activeFilters]);
 
-  // Handle keyboard Escape and lock body scroll
+  // Handle keyboard Escape and lock body scroll (only when NOT inline)
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen || inline) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -343,9 +347,9 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
       document.body.style.overflow = originalOverflow;
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, inline]);
 
-  if (!isOpen) return null;
+  if (!isOpen && !inline) return null;
 
   // Handle setting a field value
   const handleSelectField = (fieldId: string, value: string) => {
@@ -419,22 +423,30 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
     (k) => draftFilters[k] && !draftFilters[k].startsWith('All') && k !== 'all'
   ).length;
 
-  return (
-    <div className="fixed inset-0 z-[110] overflow-hidden" role="dialog" aria-modal="true" aria-labelledby="filter-drawer-title">
-      {/* Backdrop */}
-      <div
-        className="fixed inset-0 bg-slate-900/50 dark:bg-black/70 backdrop-blur-xs transition-opacity duration-300"
-        onClick={onClose}
-        aria-hidden="true"
-      />
+  const drawerClasses = inline
+    ? "w-full h-full flex flex-col bg-white dark:bg-[#0D1828] rounded-2xl border border-slate-200 dark:border-white/10 shadow-sm overflow-hidden text-left"
+    : "fixed inset-x-0 bottom-0 max-sm:max-h-[92vh] max-sm:rounded-t-3xl max-sm:border-t sm:top-0 sm:right-0 sm:bottom-0 sm:left-auto sm:w-[420px] sm:max-w-full sm:rounded-none sm:border-l bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 shadow-2xl flex flex-col z-[110] animate-in slide-in-from-right duration-250 ease-out transition-all text-left";
 
-      {/* Drawer Container (Desktop right drawer, Mobile bottom sheet / drawer) */}
-      <div className="fixed inset-x-0 bottom-0 max-sm:max-h-[92vh] max-sm:rounded-t-3xl max-sm:border-t sm:top-0 sm:right-0 sm:bottom-0 sm:left-auto sm:w-[420px] sm:max-w-full sm:rounded-none sm:border-l bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 shadow-2xl flex flex-col z-[110] animate-in slide-in-from-right duration-250 ease-out transition-all">
+  return (
+    <div className={inline ? "w-full h-full" : "fixed inset-0 z-[110] overflow-hidden"} role={inline ? "region" : "dialog"} aria-modal={!inline} aria-labelledby="filter-drawer-title">
+      {/* Backdrop */}
+      {!inline && (
+        <div
+          className="fixed inset-0 bg-slate-900/50 dark:bg-black/70 backdrop-blur-xs transition-opacity duration-300"
+          onClick={onClose}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Drawer Container */}
+      <div className={drawerClasses}>
         
         {/* Mobile Drag Indicator Bar */}
-        <div className="sm:hidden pt-3 pb-1 flex justify-center">
-          <div className="w-12 h-1.5 rounded-full bg-slate-300 dark:bg-white/20" />
-        </div>
+        {!inline && (
+          <div className="sm:hidden pt-3 pb-1 flex justify-center">
+            <div className="w-12 h-1.5 rounded-full bg-slate-300 dark:bg-white/20" />
+          </div>
+        )}
 
         {/* ── HEADER ────────────────────────────────────────────────────────── */}
         <div className="px-5 py-4 sm:py-5 border-b border-slate-200 dark:border-white/10 flex items-center justify-between shrink-0">
@@ -451,7 +463,7 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
                   id="filter-drawer-title"
                   className="text-base sm:text-lg font-bold text-slate-900 dark:text-[#F4F7FB] leading-none"
                 >
-                  Modify Filters
+                  {inline ? 'Filters' : 'Modify Filters'}
                 </h2>
                 {activeCount > 0 && (
                   <span
@@ -462,25 +474,29 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
                   </span>
                 )}
               </div>
-              <div className="flex items-center gap-1.5 mt-1">
-                <span
-                  className="text-[11px] font-semibold uppercase tracking-wider"
-                  style={{ color: accent.chipText }}
-                >
-                  {config.badge}
-                </span>
-              </div>
+              {!inline && (
+                <div className="flex items-center gap-1.5 mt-1">
+                  <span
+                    className="text-[11px] font-semibold uppercase tracking-wider"
+                    style={{ color: accent.chipText }}
+                  >
+                    {config.badge}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
 
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="Close filters"
-            className="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-[#F4F7FB] hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
+          {!inline && (
+            <button
+              type="button"
+              onClick={onClose}
+              aria-label="Close filters"
+              className="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-[#F4F7FB] hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          )}
         </div>
 
         {/* ── DRAWER BODY (SCROLLABLE) ──────────────────────────────────────── */}

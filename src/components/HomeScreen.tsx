@@ -276,7 +276,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 <div className="p-2">
                   <button
                     type="button"
-                    onClick={() => onSelectCollege('mithibai')}
+                    onClick={() => onSearch(query, 'colleges')}
                     className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
                   >
                     <Building2 className="w-5 h-5 text-[#007DCC] dark:text-[#A9B8CA]" />
