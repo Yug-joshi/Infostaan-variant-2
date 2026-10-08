@@ -169,13 +169,13 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 
       if (rangeParam) {
         const rangeMap: Record<string, [number, number]> = {
-          '35-45': [35, 45],
-          '45-55': [45, 55],
-          '55-65': [55, 65],
-          '65-75': [65, 75],
-          '75-85': [75, 85],
-          '85-95': [85, 95],
-          '95-100': [95, 100],
+          '35–45%': [35, 45],
+          '45–55%': [45, 55],
+          '55–65%': [55, 65],
+          '65–75%': [65, 75],
+          '75–85%': [75, 85],
+          '85–95%': [85, 95],
+          '95–100%': [95, 100],
         };
         const bounds = rangeMap[rangeParam];
         if (bounds) {
