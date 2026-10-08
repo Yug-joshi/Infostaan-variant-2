@@ -57,6 +57,18 @@ const CATEGORY_CONFIGS = {
         desc: 'Select degree type or professional certification.',
         options: ['All Levels', 'Undergraduate Degree (B.Com/BMS/BAF)', 'Professional Qualification (CA/CS/CMA)', 'Diploma & Certifications'],
       },
+      {
+        id: 'duration',
+        title: 'Course Duration',
+        desc: 'Select your preferred course duration.',
+        options: ['Any Duration', 'Short-term (1-6 Months)', 'Medium-term (1-2 Years)', 'Degree (3-4 Years)', 'Integrated (5 Years)'],
+      },
+      {
+        id: 'mode',
+        title: 'Mode of Study',
+        desc: 'Select your preferred mode of learning.',
+        options: ['Any Mode', 'Full-Time Classroom', 'Part-Time / Weekend', 'Online / Distance', 'Hybrid'],
+      },
     ],
     submitLabel: 'Find Courses',
   },
@@ -234,10 +246,10 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
             <button
               type="button"
               onClick={handlePrev}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-3 sm:px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span>{stepIndex === 0 ? 'Cancel' : 'Previous'}</span>
+              <span className="hidden sm:inline">{stepIndex === 0 ? 'Cancel' : 'Previous'}</span>
             </button>
 
             <div className="flex items-center gap-2">
@@ -246,21 +258,23 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
                 <button
                   type="button"
                   onClick={() => { onViewAll(category); onClose(); }}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer"
+                  className="inline-flex items-center gap-2 px-3 sm:px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
                 >
-                  <span>View All {category.charAt(0).toUpperCase() + category.slice(1)}</span>
+                  <span className="hidden sm:inline">View All {category.charAt(0).toUpperCase() + category.slice(1)}</span>
+                  <span className="sm:hidden">View All</span>
                 </button>
               )}
 
               <button
                 type="button"
                 onClick={handleNext}
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
+                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer whitespace-nowrap"
                 style={{ background: accent.ctaBg }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = accent.ctaHover; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = accent.ctaBg; }}
               >
-                <span>{stepIndex === config.steps.length - 1 ? config.submitLabel : 'Next Step'}</span>
+                <span className="hidden sm:inline">{stepIndex === config.steps.length - 1 ? config.submitLabel : 'Next Step'}</span>
+                <span className="sm:hidden">{stepIndex === config.steps.length - 1 ? 'Apply' : 'Next'}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

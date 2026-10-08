@@ -75,6 +75,11 @@ export default function App() {
     navigate('/classes?all=true');
   };
 
+  const handleViewAllCutoffs = () => {
+    setIsCutoffOpen(false);
+    navigate('/cutoffs?all=true');
+  };
+
   const handleApplyClassesFilters = (filters: { interest?: string; region?: string; specialization?: string; searchQuery?: string }) => {
     setIsClassesOpen(false);
     const params = new URLSearchParams();
@@ -171,6 +176,11 @@ export default function App() {
         region = 'Western Suburbs';
         info = 'Vile Parle West, Mumbai • B.Com, BAF, BMS • Approx. ₹42,000/yr';
         line = 'Western Line';
+      } else if (id === 'xaviers') {
+        collegeTitle = "St. Xavier's College (Autonomous)";
+        region = 'South Mumbai';
+        info = 'Fort / Dhobi Talao, Mumbai • B.Com, BMS, BA, B.Sc • Approx. ₹45,000/yr';
+        line = 'Central / Western Line (CSMT)';
       }
 
       const newItem: ShortlistItem = {
@@ -411,6 +421,7 @@ export default function App() {
         onClose={() => setIsCutoffOpen(false)}
         onSelectCollege={handleSelectCollege}
         onApplyFilters={handleApplyCutoffFilters}
+        onViewAll={handleViewAllCutoffs}
       />
 
       {/* Classes Filter Wizard Modal */}

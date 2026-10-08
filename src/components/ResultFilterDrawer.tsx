@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 import { getCategoryAccent } from '../lib/categoryAccents';
+import { LOCALITY_ZONES } from '../lib/categoryFilters';
 
 export type DrawerCategoryType = 'colleges' | 'courses' | 'careers' | 'classes' | 'cutoffs';
 
@@ -601,40 +602,85 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
                     )}
                   </div>
 
-                  <div className="flex flex-wrap gap-1.5">
-                    {section.options.map((opt) => {
-                      const isSelected =
-                        currentValue === opt ||
-                        (!currentValue && opt.startsWith('All'));
-                      return (
-                        <button
-                          key={opt}
-                          type="button"
-                          onClick={() => handleSelectField(section.id, opt)}
-                          className={`text-xs px-3 py-1.5 rounded-xl border font-medium transition-all ${
-                            isSelected
-                              ? 'shadow-xs font-semibold'
-                              : 'bg-slate-50 dark:bg-white/5 border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-white/10'
-                          }`}
-                          style={
-                            isSelected
-                              ? {
-                                  background: accent.bgLight,
-                                  borderColor: accent.borderLight,
-                                  color: accent.selectedText,
-                                }
-                              : undefined
-                          }
-                        >
-                          {opt}
-                        </button>
-                      );
-                    })}
+                    <div className="flex flex-wrap gap-1.5">
+                      {section.options.map((opt) => {
+                        const isSelected =
+                          currentValue === opt ||
+                          (!currentValue && opt.startsWith('All'));
+                        return (
+                          <button
+                            key={opt}
+                            type="button"
+                            onClick={() => handleSelectField(section.id, opt)}
+                            className={`text-xs px-3 py-1.5 rounded-xl border font-medium transition-all ${
+                              isSelected
+                                ? 'shadow-xs font-semibold'
+                                : 'bg-slate-50 dark:bg-white/5 border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-white/10'
+                            }`}
+                            style={
+                              isSelected
+                                ? {
+                                    background: accent.bgLight,
+                                    borderColor: accent.borderLight,
+                                    color: accent.selectedText,
+                                  }
+                                : undefined
+                            }
+                          >
+                            {opt}
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {section.id === 'region' && (
+                      <div className="mt-3 pt-3 border-t border-slate-100 dark:border-white/10 space-y-2">
+                        <p className="text-[11px] font-semibold text-slate-500 dark:text-[#71839A]">
+                          Or filter by specific Mumbai locality:
+                        </p>
+                        <div className="space-y-2.5 max-h-52 overflow-y-auto pr-1">
+                          {LOCALITY_ZONES.map((group) => (
+                            <div key={group.zone} className="space-y-1">
+                              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 block">
+                                {group.zone}
+                              </span>
+                              <div className="flex flex-wrap gap-1">
+                                {group.localities.map((loc) => {
+                                  const isSelected = currentValue === loc;
+                                  return (
+                                    <button
+                                      key={loc}
+                                      type="button"
+                                      onClick={() => handleSelectField('region', loc)}
+                                      className={`text-[11px] px-2.5 py-1 rounded-lg border font-medium transition-all ${
+                                        isSelected
+                                          ? 'shadow-xs font-semibold'
+                                          : 'bg-white dark:bg-white/5 border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-50 dark:hover:bg-white/10'
+                                      }`}
+                                      style={
+                                        isSelected
+                                          ? {
+                                              background: accent.bgLight,
+                                              borderColor: accent.borderLight,
+                                              color: accent.selectedText,
+                                            }
+                                          : undefined
+                                      }
+                                    >
+                                      {loc}
+                                    </button>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
 
         </div>
 

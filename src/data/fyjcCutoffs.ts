@@ -6492,7 +6492,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
   },
   {
     "id": "fc_649",
-    "collegeId": "mithibai",
+    "collegeId": null,
     "collegeName": "SMT MITHIBAI MOTIRAM KUNDNANI COLLEGE OF COMMERCE AND ECOMONICS BANDRA",
     "stream": "Commerce",
     "category": "General",
@@ -7492,7 +7492,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
   },
   {
     "id": "fc_749",
-    "collegeId": "podar",
+    "collegeId": null,
     "collegeName": "PODAR INTERNATIONAL HIGHER SECONDARY SCHOOL",
     "stream": "Commerce",
     "category": "General",
@@ -8422,7 +8422,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
   },
   {
     "id": "fc_842",
-    "collegeId": "podar",
+    "collegeId": null,
     "collegeName": "SHETH ANANDILAL PODAR JR. COLLEGE , SANTACRUZ",
     "stream": "Commerce",
     "category": "General",
@@ -8442,7 +8442,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
   },
   {
     "id": "fc_844",
-    "collegeId": "podar",
+    "collegeId": null,
     "collegeName": "PODAR INTERNATIONAL SCHOOL, POWAI.",
     "stream": "Commerce",
     "category": "General",
@@ -16292,7 +16292,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
   },
   {
     "id": "fc_1629",
-    "collegeId": "jai-hind",
+    "collegeId": null,
     "collegeName": "K.S.P JAI HIND ACADAMY",
     "stream": "Commerce",
     "category": "General",
@@ -17382,7 +17382,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
   },
   {
     "id": "fc_1738",
-    "collegeId": "podar",
+    "collegeId": null,
     "collegeName": "PODAR INTERNATIONAL SCHOOL, POWAI.",
     "stream": "Science",
     "category": "General",
@@ -20912,7 +20912,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
   },
   {
     "id": "fc_2091",
-    "collegeId": "podar",
+    "collegeId": null,
     "collegeName": "SHETH ANANDILAL PODAR JR. COLLEGE , SANTACRUZ",
     "stream": "Science",
     "category": "General",
@@ -21272,7 +21272,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
   },
   {
     "id": "fc_2127",
-    "collegeId": "podar",
+    "collegeId": null,
     "collegeName": "PODAR INTERNATIONAL HIGHER SECONDARY SCHOOL",
     "stream": "Science",
     "category": "General",

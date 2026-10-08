@@ -634,18 +634,18 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
           {step > 1 && step < 4 ? (
             <button
               onClick={() => setStep(step - 1)}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-3 sm:px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span>Previous</span>
+              <span className="hidden sm:inline">Previous</span>
             </button>
           ) : step === 1 ? (
             <button
               onClick={onClose}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-3 sm:px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span>Cancel</span>
+              <span className="hidden sm:inline">Cancel</span>
             </button>
           ) : (
             <div />
@@ -659,21 +659,23 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
                     onViewAll();
                     onClose();
                   }}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer"
+                  className="inline-flex items-center gap-2 px-3 sm:px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
                 >
-                  <span>View All Classes</span>
+                  <span className="hidden sm:inline">View All Classes</span>
+                  <span className="sm:hidden">View All</span>
                 </button>
               )}
 
               {step === 1 && (
                 <button
                   onClick={() => setStep(2)}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer whitespace-nowrap"
                   style={{
                     background: accent.ctaBg,
                   }}
                 >
-                  <span>Next: Mumbai Region</span>
+                  <span className="hidden sm:inline">Next: Mumbai Region</span>
+                  <span className="sm:hidden">Next</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               )}
@@ -681,12 +683,13 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
               {step === 2 && (
                 <button
                   onClick={() => setStep(3)}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer whitespace-nowrap"
                   style={{
                     background: accent.ctaBg,
                   }}
                 >
-                  <span>Next: Specialization</span>
+                  <span className="hidden sm:inline">Next: Specialization</span>
+                  <span className="sm:hidden">Next</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               )}
@@ -694,14 +697,13 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
               {step === 3 && (
                 <button
                   onClick={handleApply}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer whitespace-nowrap"
                   style={{
                     background: accent.ctaBg,
                   }}
                 >
-                  <span>
-                    Apply Filters &amp; Find Classes
-                  </span>
+                  <span className="hidden sm:inline">Apply Filters &amp; View</span>
+                  <span className="sm:hidden">Apply</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               )}
@@ -711,7 +713,7 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
           {step === 4 && (
             <button
               onClick={onClose}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold cursor-pointer"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 rounded-xl text-white text-xs font-bold cursor-pointer whitespace-nowrap"
               style={{
                 background: accent.ctaBg,
               }}

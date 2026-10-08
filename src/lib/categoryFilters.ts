@@ -1,5 +1,72 @@
 import { SearchResultItem } from '../types';
 import { CLASSES, ClassData } from '../data/classes';
+import { ALL_SEARCH_RESULTS } from '../data/mockData';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Locality utilities (Mumbai only)
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Canonical list of Mumbai localities offered in the Region / Area filter.
+ * Matching is done against the real area / address / location fields of each
+ * dataset — see getAvailableLocalities() for which ones actually have data.
+ */
+export const MUMBAI_LOCALITIES: string[] = [
+  'Borivali', 'Kandivali', 'Malad', 'Goregaon', 'Jogeshwari', 'Andheri',
+  'Vile Parle', 'Santacruz', 'Bandra', 'Dadar', 'Matunga', 'Sion', 'Kurla',
+  'Ghatkopar', 'Vikhroli', 'Bhandup', 'Mulund', 'Chembur', 'Powai',
+  'Lower Parel', 'Worli', 'Charni Road', 'Churchgate', 'Fort', 'Colaba',
+  'Marine Lines', 'Grant Road', 'Mumbai Central', 'Mahalaxmi', 'Elphinstone Road',
+  'Prabhadevi', 'Parel', 'Tilak Nagar', 'Vidyavihar', 'Kanjurmarg',
+  'Dahisar', 'Mira Road', 'Bhayandar', 'Naigaon', 'Vasai Road', 'Nalasopara', 'Virar'
+];
+
+export const LOCALITY_ZONES = [
+  {
+    zone: 'Western Suburbs',
+    localities: ['Virar', 'Nalasopara', 'Vasai Road', 'Naigaon', 'Bhayandar', 'Mira Road', 'Dahisar', 'Borivali', 'Kandivali', 'Malad', 'Goregaon', 'Jogeshwari', 'Andheri', 'Vile Parle', 'Santacruz', 'Bandra'],
+  },
+  {
+    zone: 'South Mumbai',
+    localities: ['Churchgate', 'Colaba', 'Fort', 'Marine Lines', 'Charni Road', 'Grant Road', 'Mumbai Central', 'Mahalaxmi', 'Lower Parel', 'Worli', 'Elphinstone Road', 'Prabhadevi', 'Parel'],
+  },
+  {
+    zone: 'Central Suburbs',
+    localities: ['Dadar', 'Matunga', 'Sion', 'Kurla', 'Ghatkopar', 'Vikhroli', 'Bhandup', 'Mulund', 'Powai', 'Tilak Nagar', 'Vidyavihar', 'Kanjurmarg'],
+  },
+  {
+    zone: 'Harbour Line',
+    localities: ['Chembur'],
+  },
+];
+
+export const isLocality = (value: string | null | undefined): boolean => {
+  if (!value) return false;
+  const valLower = value.trim().toLowerCase();
+  return MUMBAI_LOCALITIES.some((loc) => loc.toLowerCase() === valLower);
+};
+
+/** Whole-word, case-insensitive locality match (avoids "Sion" matching "Mansion"). */
+export const textHasLocality = (text: string, locality: string): boolean => {
+  if (!text || !locality) return false;
+  let locPattern = locality.trim();
+  if (/mahalaxmi|mahalakshmi/i.test(locPattern)) {
+    locPattern = 'Mahala?xmi';
+  } else if (/elphinstone/i.test(locPattern)) {
+    locPattern = 'Elphinstone';
+  }
+  const escaped = locPattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
+  return new RegExp(`\\b${escaped}\\b`, 'i').test(text);
+};
+
+/**
+ * Multi-value URL params (currently only `region`) are stored comma-separated,
+ * e.g. `region=Andheri,Vile Parle`. Values within one param are OR-ed.
+ */
+export const MULTI_VALUE_PARAMS = ['region'];
+
+export const parseMultiValue = (value: string | null | undefined): string[] =>
+  (value || '').split(',').map((v) => v.trim()).filter(Boolean);
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Region utilities (shared between SearchResultsScreen and CategoryResultsPage)
@@ -15,23 +82,25 @@ export const getCollegeRegion = (collegeName: string): string => {
     name.includes('XAVIER') || name.includes('H.R.') || name.includes('JAI HIND') ||
     name.includes('HINDUJA') || name.includes('FORT') || name.includes('CHURCHGATE') ||
     name.includes('CHARNI ROAD') || name.includes('MARINE') || name.includes('SYDENHAM') ||
-    name.includes('ELPHINSTONE') || name.includes('WILSON')
+    name.includes('ELPHINSTONE') || name.includes('WILSON') || name.includes('SOPHIA')
   ) return 'South Mumbai';
   if (
     name.includes('MITHIBAI') || name.includes('N.M.') || name.includes('NARSEE') ||
     name.includes('SVKM') || name.includes('ANDHERI') || name.includes('PARLE') ||
     name.includes('MALAD') || name.includes('BORIVALI') || name.includes('BANDRA') ||
     name.includes('KANDIVALI') || name.includes('GOREGAON') || name.includes('SANTACRUZ') ||
-    name.includes('BHAVAN')
+    name.includes('BHAVAN') || name.includes('RIZVI') || name.includes('DAHANUKAR') ||
+    name.includes('KHANDWALA') || name.includes('SHROFF') || name.includes('VIVEK')
   ) return 'Western Suburbs';
   if (
     name.includes('PODAR') || name.includes('MATUNGA') || name.includes('DADAR') ||
     name.includes('SIES') || name.includes('RUPAREL') || name.includes('KHALSA') ||
-    name.includes('VIDYALANKAR')
+    name.includes('VIDYALANKAR') || name.includes('SOMAIYA') || name.includes('VAZE') ||
+    name.includes('KRISHNA MENON')
   ) return 'Central Suburbs';
   if (
     name.includes('GHATKOPAR') || name.includes('MULUND') || name.includes('BHANDUP') ||
-    name.includes('VIKHROLI') || name.includes('SOMAIYA')
+    name.includes('VIKHROLI')
   ) return 'Eastern Suburbs';
   if (name.includes('CHEMBUR') || name.includes('VASHI') || name.includes('BELAPUR')) {
     return 'Harbour / Central-East';
@@ -41,12 +110,15 @@ export const getCollegeRegion = (collegeName: string): string => {
 
 /**
  * Tests whether a SearchResultItem matches the user's selected Mumbai region.
+ * Accepts a broad zone, a locality, or a comma-separated list of either (OR).
  */
 export const matchItemRegion = (
   item: SearchResultItem,
   targetRegion: string | null | undefined,
 ): boolean => {
   if (!targetRegion || targetRegion === 'All Mumbai') return true;
+  const targets = parseMultiValue(targetRegion);
+  if (targets.length > 1) return targets.some((t) => matchItemRegion(item, t));
   const text = [
     item.title,
     item.badgeSub || '',
@@ -54,33 +126,41 @@ export const matchItemRegion = (
     item.subtitle || '',
   ].join(' ').toUpperCase();
 
+  if (isLocality(targetRegion)) return textHasLocality(text, targetRegion);
+
   if (targetRegion === 'South Mumbai') {
     return (
       text.includes('SOUTH MUMBAI') || text.includes('CHURCHGATE') ||
       text.includes('CHARNI') || text.includes('FORT') ||
-      text.includes('MARINE') || text.includes('SOUTH')
+      text.includes('MARINE') || text.includes('SOUTH') ||
+      text.includes('PAREL') || text.includes('WORLI') ||
+      text.includes('COLABA') || text.includes('GRANT ROAD')
     );
   }
   if (targetRegion === 'Western Suburbs') {
     return (
       text.includes('WESTERN') || text.includes('VILE PARLE') ||
       text.includes('ANDHERI') || text.includes('BORIVALI') ||
-      text.includes('BANDRA') || text.includes('SUBURBS')
+      text.includes('BANDRA') || text.includes('MALAD') ||
+      text.includes('KANDIVALI') || text.includes('GOREGAON') ||
+      text.includes('SANTACRUZ') || text.includes('SUBURBS')
     );
   }
   if (targetRegion === 'Central Suburbs') {
     return (
       text.includes('CENTRAL') || text.includes('MATUNGA') ||
-      text.includes('DADAR') || text.includes('KURLA')
+      text.includes('DADAR') || text.includes('KURLA') ||
+      text.includes('SION') || text.includes('VIDYAVIHAR')
     );
   }
   if (targetRegion === 'Eastern Suburbs') {
     return (
       text.includes('EASTERN') || text.includes('GHATKOPAR') ||
-      text.includes('MULUND') || text.includes('BHANDUP')
+      text.includes('MULUND') || text.includes('BHANDUP') ||
+      text.includes('VIKHROLI') || text.includes('POWAI')
     );
   }
-  if (targetRegion === 'Harbour / Central-East') {
+  if (targetRegion === 'Harbour / Central-East' || targetRegion === 'Harbour Line') {
     return text.includes('CHEMBUR') || text.includes('HARBOUR') || text.includes('BELAPUR');
   }
   return true;
@@ -95,7 +175,8 @@ export const applyStreamFilter = (
   streamFilter: string | null | undefined,
 ): SearchResultItem[] => {
   if (!streamFilter || streamFilter.startsWith('All')) return items;
-  const keywords = streamFilter.toLowerCase().split(/[\s&,/]+/).filter(Boolean);
+  // Parentheses are separators too, so "Management (BMS)" yields "bms" (not "(bms)").
+  const keywords = streamFilter.toLowerCase().split(/[\s&,/()]+/).filter(Boolean);
   return items.filter((item) => {
     const text = [
       item.title,
@@ -133,11 +214,16 @@ export interface ClassFilterParams {
  */
 export const matchClassRegion = (cls: ClassData, targetRegion: string): boolean => {
   if (!targetRegion || targetRegion === 'All Mumbai') return true;
+  const targets = parseMultiValue(targetRegion);
+  if (targets.length > 1) return targets.some((t) => matchClassRegion(cls, t));
 
   const regionStr = (cls.region || '').toUpperCase();
   const areaStr   = (cls.area    || '').toUpperCase();
   const addrStr   = (cls.address || '').toUpperCase();
   const combined  = `${regionStr} ${areaStr} ${addrStr}`;
+
+  // Locality: match the class's own area / address fields only.
+  if (isLocality(targetRegion)) return textHasLocality(`${areaStr} ${addrStr}`, targetRegion);
 
   if (targetRegion === 'South Mumbai') {
     return (
@@ -172,7 +258,12 @@ export const matchClassRegion = (cls: ClassData, targetRegion: string): boolean 
       combined.includes('VILE PARLE') ||
       combined.includes('JOGESHWARI') ||
       combined.includes('DAHISAR') ||
-      combined.includes('MIRA ROAD')
+      combined.includes('MIRA ROAD') ||
+      combined.includes('BHAYANDAR') ||
+      combined.includes('NAIGAON') ||
+      combined.includes('VASAI') ||
+      combined.includes('NALASOPARA') ||
+      combined.includes('VIRAR')
     );
   }
 
@@ -241,19 +332,42 @@ export const filterClasses = (params: ClassFilterParams): ClassData[] => {
     // Region filter
     const matchesRegion = matchClassRegion(cls, params.region || 'All Mumbai');
 
-    // Specialization filter
+    // Specialization filter — composite options like "CA / CS / CMA" match any part.
+    const specTokens = (params.specialization || '')
+      .toLowerCase().split('/').map((t) => t.trim()).filter(Boolean);
     const matchesSpec =
       !params.specialization || params.specialization.startsWith('All') ||
-      cls.specializations?.toLowerCase().includes(params.specialization.toLowerCase()) ||
-      cls.streams?.toLowerCase().includes(params.specialization.toLowerCase());
+      specTokens.some((t) =>
+        cls.specializations?.toLowerCase().includes(t) ||
+        cls.streams?.toLowerCase().includes(t));
 
-    // Exclude non-Mumbai locations (Kalyan, Thane, Navi Mumbai, Vasai, Virar)
+    // Exclude non-Mumbai locations that are still out of scope
     const regionUpper = (cls.region || '').toUpperCase();
-    const isInMumbai = !['KALYAN', 'THANE', 'VASAI', 'VIRAR', 'NAVI MUMBAI'].some(
+    const isInMumbai = !['KALYAN', 'THANE', 'NAVI MUMBAI'].some(
       (excluded) => regionUpper.includes(excluded)
     );
 
     return matchesSearch && matchesInterest && matchesRegion && matchesSpec && isInMumbai;
   }).slice(0, 200);
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Available localities per category (derived from real data, computed once)
+// ─────────────────────────────────────────────────────────────────────────────
+
+const localityCache: Partial<Record<'colleges' | 'classes', string[]>> = {};
+
+/**
+ * Returns only the localities that have at least one matching record in the
+ * dataset, so the filter never offers options that cannot produce results.
+ */
+export const getAvailableLocalities = (category: 'colleges' | 'classes'): string[] => {
+  if (!localityCache[category]) {
+    localityCache[category] = category === 'classes'
+      ? MUMBAI_LOCALITIES.filter((loc) => filterClasses({ region: loc }).length > 0)
+      : MUMBAI_LOCALITIES.filter((loc) =>
+          ALL_SEARCH_RESULTS.some((item) => item.category === 'colleges' && matchItemRegion(item, loc)));
+  }
+  return localityCache[category]!;
 };
 

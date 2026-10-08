@@ -39,7 +39,7 @@ export function searchInfostaan(query: string, category: CategoryType): SearchRe
       badgeSub: cls.area || cls.region || 'Mumbai',
       title: cls.name,
       subtitle: cls.specializations ? `Specialization: ${cls.specializations}` : 'Coaching & Classes',
-      meta: [cls.streams || 'All Streams', cls.address || 'Mumbai'],
+      meta: cls.streams ? [cls.streams] : [],
       whyRelevant: q ? `Matches your search for "${query}"` : 'Recommended coaching class in Mumbai',
       tagColor: 'lavender',
       actionLabel: 'View Details',

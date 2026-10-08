@@ -430,6 +430,71 @@ export const NM_COLLEGE_DETAILS: CollegeDetail = {
   compareTargetName: 'Mithibai or H.R. College',
 };
 
+export const XAVIERS_COLLEGE_DETAILS: CollegeDetail = {
+  id: 'xaviers',
+  badge: 'Autonomous Institution • NAAC A++ Grade',
+  name: "St. Xavier's College",
+  subName: 'Autonomous Institution Affiliated to University of Mumbai',
+  location: 'Fort / Dhobi Talao, South Mumbai',
+  transitDetail: '600m from CSMT / Churchgate Station',
+  commuteTime: '7-minute walk from CSMT station',
+  commuteHeading: '7-minute walk from CSMT Terminus',
+  commuteDescription:
+    'Situated at Mahapalika Marg, Dhobi Talao. Seamless commuting access for students traveling via Central, Harbour, or Western suburban lines.',
+  commuteBadge: 'Heritage transit hub • South Mumbai',
+  image:
+    'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=1000',
+  whyFit: [
+    {
+      icon: 'domain_verification',
+      title: 'Renowned academic rigor and interdisciplinary honors programs.',
+      description: 'Prestigious autonomous curriculum with comprehensive continuous assessment and credit system.',
+      iconColor: 'tertiary',
+    },
+    {
+      icon: 'directions_walk',
+      title: 'Central location near major suburban railway hubs.',
+      description: 'Convenient 7-minute walk from Chhatrapati Shivaji Maharaj Terminus (CSMT).',
+      iconColor: 'secondary',
+    },
+    {
+      icon: 'groups',
+      title: 'Vibrant campus culture and premier corporate placements.',
+      description: 'Hosts Malhar, Mumbai’s iconic inter-collegiate festival, with top global consulting and finance recruiters.',
+      iconColor: 'primary',
+    },
+  ],
+  keyFacts: [
+    {
+      label: 'Programs Offered',
+      value: 'B.Com, BMS, BA, B.Sc, B.Sc IT',
+      description: 'Specialized degree tracks evaluated under autonomous credit systems.',
+    },
+    {
+      label: 'Annual Fee Range',
+      value: '₹35,000 – ₹60,000 / yr',
+      description: 'Covers traditional aided degree programs up to self-financed professional cohorts.',
+    },
+    {
+      label: 'Academic Affiliation',
+      value: 'Autonomous • NAAC A++',
+      description: 'First autonomous college under University of Mumbai with A++ NAAC accreditation.',
+    },
+    {
+      label: 'Selection Criteria',
+      value: 'XET Entrance & Merit',
+      description: 'BMS admissions selected via St. Xavier’s Entrance Test (XET) and HSC merit criteria.',
+    },
+  ],
+  isRightForYou: {
+    strongFit:
+      'You seek academic excellence, analytical rigor, holistic development, and a historic campus atmosphere in South Mumbai.',
+    keepInMind:
+      'Strict 75% attendance rule and rigorous continuous internal evaluation (CIA) system.',
+  },
+  compareTargetName: 'Jai Hind or H.R. College',
+};
+
 export const COLLEGE_DETAILS_MAP: Record<string, CollegeDetail> = {
   mithibai: MITHIBAI_DETAILS,
   'hr-college': HR_COLLEGE_DETAILS,
@@ -437,10 +502,92 @@ export const COLLEGE_DETAILS_MAP: Record<string, CollegeDetail> = {
   podar: PODAR_COLLEGE_DETAILS,
   'jai-hind': JAI_HIND_COLLEGE_DETAILS,
   'nm-college': NM_COLLEGE_DETAILS,
+  xaviers: XAVIERS_COLLEGE_DETAILS,
 };
 
 export const getCollegeDetails = (id: string): CollegeDetail => {
-  return COLLEGE_DETAILS_MAP[id] || MITHIBAI_DETAILS;
+  if (COLLEGE_DETAILS_MAP[id]) {
+    return COLLEGE_DETAILS_MAP[id];
+  }
+
+  // 1. Try to find it in ALL_SEARCH_RESULTS
+  const searchResult = ALL_SEARCH_RESULTS.find(item => item.collegeId === id);
+  if (searchResult) {
+    return {
+      id: id,
+      badge: searchResult.badgeCategory + (searchResult.badgeSub ? ` • ${searchResult.badgeSub}` : ''),
+      name: searchResult.title,
+      subName: searchResult.subtitle || 'College in Mumbai',
+      location: searchResult.badgeSub || 'Mumbai',
+      transitDetail: 'Access via local transit network',
+      commuteTime: 'Standard local commute',
+      commuteHeading: 'Commute Overview',
+      commuteDescription: 'Accessible from nearby local train and bus stations.',
+      commuteBadge: 'Mumbai Transit',
+      image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80',
+      whyFit: [
+        {
+          icon: 'domain_verification',
+          title: 'Academic Highlights',
+          description: searchResult.whyRelevant || 'Reputed institution offering quality programs.',
+          iconColor: 'tertiary',
+        }
+      ],
+      keyFacts: [
+        {
+          label: 'Programs Offered',
+          value: 'Degree & Diploma Courses',
+          description: 'Offers a variety of specialized courses matching industry standards.',
+        }
+      ],
+      isRightForYou: {
+        strongFit: 'You are looking for a reliable educational institution in this region.',
+        keepInMind: 'Please verify the latest cutoffs before applying.',
+      },
+      compareTargetName: 'Other Regional Colleges',
+    };
+  }
+
+  // 2. Generic fallback using the ID string (e.g., from Cutoffs list)
+  const genericName = id
+    .replace(/-/g, ' ')
+    .split(' ')
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+
+  return {
+    id: id,
+    badge: 'Affiliated Institution',
+    name: genericName.toLowerCase().includes('college') ? genericName : `${genericName} College`,
+    subName: 'Institution in Mumbai Region',
+    location: 'Mumbai Region',
+    transitDetail: 'Access via Mumbai transit',
+    commuteTime: 'Varies by location',
+    commuteHeading: 'Commute Overview',
+    commuteDescription: 'Connectivity via local train lines and road networks.',
+    commuteBadge: 'Mumbai Suburban Network',
+    image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80',
+    whyFit: [
+      {
+        icon: 'info',
+        title: 'Information Note',
+        description: 'Detailed campus insights and editorial reviews are currently being compiled for this institution.',
+        iconColor: 'tertiary',
+      }
+    ],
+    keyFacts: [
+      {
+        label: 'Status',
+        value: 'Details Updating',
+        description: 'Additional academic facts and fee structures will be available soon.',
+      }
+    ],
+    isRightForYou: {
+      strongFit: 'Students exploring options in the Mumbai metropolitan area.',
+      keepInMind: 'Always refer to the official university portal for binding admission rules.',
+    },
+    compareTargetName: 'Other Local Colleges',
+  };
 };
 
 export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
@@ -512,10 +659,10 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     title: 'NMIMS — Anil Surendra Modi School of Commerce',
     subtitle: 'Offered: BBA, B.Com (Hons), B.Sc Finance • Approx. ₹3,20,000/yr',
     whyRelevant: 'High-octane corporate finance training, Bloomberg terminal labs, and Tier-1 consulting placements.',
-    meta: ['Deemed-to-be University'],
+    meta: ['Deemed-to-be University', 'Vile Parle West, Mumbai'],
     tagColor: 'tertiary',
     actionLabel: 'View college details',
-    collegeId: 'mithibai',
+    collegeId: 'nm-college',
   },
   {
     id: 'res-7',
@@ -525,10 +672,10 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     title: "St. Xavier's College (Autonomous)",
     subtitle: 'Offered: BMS, B.Com, BA, B.Sc • Approx. ₹35,000–₹60,000/yr',
     whyRelevant: 'Historic legacy campus with renowned analytical rigor, entrance test selection, and global alumni network.',
-    meta: ['Autonomous • A++ Grade NAAC'],
+    meta: ['Autonomous • A++ Grade NAAC', 'Fort, South Mumbai'],
     tagColor: 'tertiary',
     actionLabel: 'View college details',
-    collegeId: 'hr-college',
+    collegeId: 'xaviers',
   },
   {
     id: 'res-8',
@@ -638,6 +785,162 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     tagColor: 'tertiary',
     actionLabel: 'View college details',
     collegeId: 'nm-college',
+  },
+  {
+    id: 'res-col-1',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Sion West, Central Suburbs',
+    title: 'SIES College of Arts, Science & Commerce',
+    subtitle: 'Offered: B.Com, BMS, BAF, B.Sc IT • Approx. ₹22,000–₹42,000/yr',
+    whyRelevant: 'Leading academic hub in Sion & Matunga with strong placement records in finance and technology.',
+    meta: ['Autonomous • NAAC A+', 'Sion, Matunga, Central Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'podar',
+  },
+  {
+    id: 'res-col-2',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Andheri West, Western Suburbs',
+    title: "Bhavan's College (Autonomous)",
+    subtitle: 'Offered: B.Com, BMS, BAF, B.Sc, BA • Approx. ₹20,000–₹45,000/yr',
+    whyRelevant: 'Sprawling green campus in Andheri West offering top undergraduate Commerce and Management tracks.',
+    meta: ['Autonomous • Andheri West, Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'mithibai',
+  },
+  {
+    id: 'res-col-3',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Malad West, Western Suburbs',
+    title: 'Nagindas Khandwala College of Commerce & Arts',
+    subtitle: 'Offered: B.Com, BAF, BMS, BFM, B.Sc IT • Approx. ₹24,000–₹48,000/yr',
+    whyRelevant: 'Premier autonomous institute in Malad West known for corporate tie-ups and FinTech courses.',
+    meta: ['Autonomous • Malad West, Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'mithibai',
+  },
+  {
+    id: 'res-col-4',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Kandivali West, Western Suburbs',
+    title: 'K.E.S. Shroff College of Arts & Commerce',
+    subtitle: 'Offered: B.Com, BAF, BMS, BBI, B.Sc Data Science • Approx. ₹22,000–₹45,000/yr',
+    whyRelevant: 'Fastest-growing autonomous institution in Kandivali West with updated industry skill tracks.',
+    meta: ['Autonomous • Kandivali West, Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'mithibai',
+  },
+  {
+    id: 'res-col-5',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Vile Parle East, Western Suburbs',
+    title: 'M.L. Dahanukar College of Commerce',
+    subtitle: 'Offered: B.Com, BAF, BMS, BFM • Approx. ₹20,000–₹40,000/yr',
+    whyRelevant: 'Renowned commerce college 3 mins walk from Vile Parle East station.',
+    meta: ['Affiliated to MU • Vile Parle East, Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'nm-college',
+  },
+  {
+    id: 'res-col-6',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Vidyavihar / Ghatkopar, Central Suburbs',
+    title: 'K.J. Somaiya College of Arts & Commerce',
+    subtitle: 'Offered: B.Com, BMS, BAF, BFM, BA • Approx. ₹25,000–₹50,000/yr',
+    whyRelevant: 'Somaiya Vidyavihar flagship campus for Central Line students near Ghatkopar and Kurla.',
+    meta: ['Autonomous • Vidyavihar, Ghatkopar, Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'podar',
+  },
+  {
+    id: 'res-col-7',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Grant Road / Pedder Road, South Mumbai',
+    title: 'Sophia College for Women',
+    subtitle: 'Offered: BA, B.Sc, BMS, BMM • Approx. ₹22,000–₹48,000/yr',
+    whyRelevant: 'Historic women’s degree institution situated on Pedder Road near Grant Road Station.',
+    meta: ['Autonomous • Grant Road, South Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'hr-college',
+  },
+  {
+    id: 'res-col-8',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Charni Road / Chowpatty, South Mumbai',
+    title: 'Wilson College',
+    subtitle: 'Offered: B.Com, BMS, BAF, BAMMC, B.Sc • Approx. ₹22,000–₹45,000/yr',
+    whyRelevant: 'Heritage seafront college campus directly opposite Chowpatty beach and Charni Road Station.',
+    meta: ['Affiliated to MU • Charni Road, Marine Lines, South Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'hinduja',
+  },
+  {
+    id: 'res-col-9',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Matunga / Dadar West, Central Suburbs',
+    title: 'D.G. Ruparel College of Arts, Science & Commerce',
+    subtitle: 'Offered: B.Com, BMS, B.Sc, BA • Approx. ₹18,000–₹38,000/yr',
+    whyRelevant: 'Premier academic landmark near Matunga West and Dadar Station for science and commerce.',
+    meta: ['NAAC A Grade • Dadar, Matunga, Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'podar',
+  },
+  {
+    id: 'res-col-10',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Bandra West, Western Suburbs',
+    title: 'Rizvi College of Arts, Science & Commerce',
+    subtitle: 'Offered: B.Com, BAF, BMS, B.Sc IT • Approx. ₹22,000–₹45,000/yr',
+    whyRelevant: 'Prominent Bandra West institution close to Carter Road and Bandra railway station.',
+    meta: ['Affiliated to MU • Bandra West, Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'mithibai',
+  },
+  {
+    id: 'res-col-11',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Parel, South Mumbai',
+    title: 'Maharshi Dayanand (MD) College',
+    subtitle: 'Offered: B.Com, BMS, BAF, B.Sc • Approx. ₹16,000–₹35,000/yr',
+    whyRelevant: 'Strategic central campus in Parel near Lower Parel and Dadar commercial belts.',
+    meta: ['Affiliated to MU • Parel, Lower Parel, South Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'hinduja',
+  },
+  {
+    id: 'res-col-12',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Mulund East, Central Suburbs',
+    title: 'V.G. Vaze College of Arts, Science & Commerce',
+    subtitle: 'Offered: B.Com, BAF, BMS, B.Sc IT • Approx. ₹18,000–₹40,000/yr',
+    whyRelevant: 'Top-ranked autonomous college in Mulund East serving Bhandup, Mulund and Thane commuters.',
+    meta: ['Autonomous • Mulund East, Bhandup, Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'podar',
   },
   {
     id: 'res-17',

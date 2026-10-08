@@ -10,6 +10,7 @@ interface CutoffModalProps {
   onClose: () => void;
   onSelectCollege: (id: string) => void;
   onApplyFilters?: (filters: { educationLevel: string; selectedRangeId: string | null; percentageExact: string; stream: string; region: string; searchQuery: string }) => void;
+  onViewAll?: () => void;
 }
 
 // Education levels supported by the current dataset
@@ -72,6 +73,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
   onClose,
   onSelectCollege,
   onApplyFilters,
+  onViewAll,
 }) => {
   const { theme } = useTheme();
   const isDark = theme === 'dark';
@@ -261,7 +263,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
                   : step === 2
                   ? 'Step 2 of 3: Cutoff Percentage Range'
                   : step === 3
-                  ? 'Step 3 of 3: Stream & Region Filters'
+                  ? 'Step 3 of 3: Mumbai Region Filter'
                   : `Eligible Colleges (${filteredColleges.length})`}
               </p>
             </div>
@@ -415,45 +417,19 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
             </div>
           )}
 
-          {/* STEP 3: Stream & Mumbai Region */}
+          {/* STEP 3: Mumbai Region */}
           {step === 3 && (
             <div className="max-w-2xl mx-auto space-y-6">
               <div>
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">
-                  Stream & Mumbai Region
+                  Mumbai Region
                 </h3>
                 <p className="text-sm text-slate-500 dark:text-[#71839A]">
-                  Filter cutoffs by academic stream and target Mumbai region.
+                  Filter cutoffs by target Mumbai region.
                 </p>
               </div>
 
               <div className="space-y-6">
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-[#A9B8CA] mb-3">
-                    Academic Stream
-                  </h4>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                    {STREAMS.map((s) => (
-                      <button
-                        key={s}
-                        onClick={() => setPendingField('stream', s)}
-                        className={`p-4 rounded-2xl border text-center font-bold text-sm transition-all cursor-pointer ${
-                          pending.stream === s
-                            ? ''
-                            : 'bg-white/60 dark:bg-[#162232] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#C5D3E3] hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-50 dark:hover:bg-[#1c2b3f]'
-                        }`}
-                        style={pending.stream === s ? {
-                          background: isDark ? accent.bgDark : accent.bgLight,
-                          borderColor: isDark ? accent.colorHover : accent.ring,
-                          boxShadow: `0 0 0 1.5px ${isDark ? accent.colorHover : accent.ring}`,
-                          color: isDark ? accent.chipTextDark : accent.selectedText,
-                        } : undefined}
-                      >
-                        {s}
-                      </button>
-                    ))}
-                  </div>
-                </div>
 
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-[#A9B8CA] mb-3 flex items-center gap-1.5">
@@ -610,65 +586,81 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
           {step > 1 && step < 4 ? (
             <button
               onClick={() => setStep(step - 1)}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-3 sm:px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span>Previous</span>
+              <span className="hidden sm:inline">Previous</span>
             </button>
           ) : step === 1 ? (
             <button
               onClick={onClose}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-3 sm:px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span>Cancel</span>
+              <span className="hidden sm:inline">Cancel</span>
             </button>
           ) : (
             <div />
           )}
 
-          {step === 1 && (
-            <button
-              onClick={() => setStep(2)}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
-              style={{ background: accent.ctaBg }}
-            >
-              <span>Next: Percentage Range</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          )}
+          <div className="flex items-center gap-2">
+            {onViewAll && step < 4 && (
+              <button
+                type="button"
+                onClick={onViewAll}
+                className="inline-flex items-center gap-2 px-3 sm:px-4 py-2.5 rounded-xl bg-white/70 dark:bg-[#162232] text-slate-700 dark:text-[#C5D3E3] border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-[#1c2b3f] text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
+              >
+                <span className="hidden sm:inline">View All Cutoffs</span>
+                <span className="sm:hidden">View All</span>
+              </button>
+            )}
 
-          {step === 2 && (
-            <button
-              onClick={() => setStep(3)}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
-              style={{ background: accent.ctaBg }}
-            >
-              <span>Next: Stream &amp; Region</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          )}
+            {step === 1 && (
+              <button
+                onClick={() => setStep(2)}
+                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer whitespace-nowrap"
+                style={{ background: accent.ctaBg }}
+              >
+                <span className="hidden sm:inline">Next: Percentage Range</span>
+                <span className="sm:hidden">Next</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            )}
 
-          {step === 3 && (
-            <button
-              onClick={handleApply}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
-              style={{ background: accent.ctaBg }}
-            >
-              <span>Apply Filters &amp; View Cutoffs</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          )}
+            {step === 2 && (
+              <button
+                onClick={() => setStep(3)}
+                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer whitespace-nowrap"
+                style={{ background: accent.ctaBg }}
+              >
+                <span className="hidden sm:inline">Next: Mumbai Region</span>
+                <span className="sm:hidden">Next</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            )}
 
-          {step === 4 && (
-            <button
-              onClick={onClose}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold cursor-pointer"
-              style={{ background: accent.ctaBg }}
-            >
-              <span>Done</span>
-            </button>
-          )}
+            {step === 3 && (
+              <button
+                onClick={handleApply}
+                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer whitespace-nowrap"
+                style={{ background: accent.ctaBg }}
+              >
+                <span className="hidden sm:inline">Apply Filters &amp; View</span>
+                <span className="sm:hidden">Apply</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            )}
+
+            {step === 4 && (
+              <button
+                onClick={onClose}
+                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 rounded-xl text-white text-xs font-bold cursor-pointer whitespace-nowrap"
+                style={{ background: accent.ctaBg }}
+              >
+                <span>Done</span>
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>

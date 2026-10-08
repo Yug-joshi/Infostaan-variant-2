@@ -164,51 +164,51 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
                 return (
                   <article
                     key={item.id}
-                    className={`shortlist-card-anim group relative p-5 sm:p-6 bg-white dark:bg-[#161c27] hover:bg-slate-50 dark:hover:bg-[#1a202b] rounded-xl border border-slate-200 dark:border-[#D3B5E8]/10 hover:border-[#007DCC] dark:hover:border-[#D3B5E8]/30 transition-all duration-200 shadow-xs ${
+                    className={`shortlist-card-anim group relative p-4 sm:p-6 bg-white dark:bg-[#161c27] hover:bg-slate-50 dark:hover:bg-[#1a202b] rounded-xl border border-slate-200 dark:border-[#D3B5E8]/10 hover:border-[#007DCC] dark:hover:border-[#D3B5E8]/30 transition-all duration-200 shadow-xs ${
                       isItemDeleting ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
                     }`}
                   >
-                    <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                    <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 sm:gap-4">
                       {/* Left: Metadata & Titles */}
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-[#242a36] flex items-center justify-center shrink-0 text-[#007DCC] dark:text-[#9ccaff] group-hover:scale-105 transition-transform">
+                      <div className="flex items-start gap-3 sm:gap-4">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 dark:bg-[#242a36] flex items-center justify-center shrink-0 text-[#007DCC] dark:text-[#9ccaff] group-hover:scale-105 transition-transform">
                           {item.iconType === 'school' ? (
-                            <School className="w-6 h-6" />
+                            <School className="w-5 h-5 sm:w-6 sm:h-6" />
                           ) : (
-                            <Building2 className="w-6 h-6" />
+                            <Building2 className="w-5 h-5 sm:w-6 sm:h-6" />
                           )}
                         </div>
 
                         <div className="space-y-1">
-                          <div className="flex items-center gap-2 flex-wrap">
+                          <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
                             <h2
                               onClick={() => {
                                 if (item.collegeId) onSelectCollege(item.collegeId);
                               }}
-                              className={`text-lg sm:text-xl font-bold text-slate-900 dark:text-[#F4F7FB] group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors ${
+                              className={`text-[15px] sm:text-xl font-bold text-slate-900 dark:text-[#F4F7FB] group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors ${
                                 item.collegeId ? 'cursor-pointer' : ''
                               }`}
                             >
                               {item.title}
                             </h2>
                             <span
-                              className="text-[11px] font-semibold px-2 py-0.5 rounded tracking-wide uppercase bg-blue-50 text-blue-700 dark:bg-[#2f3541] dark:text-[#86cfff]"
+                              className="text-[10px] sm:text-[11px] font-semibold px-1.5 sm:px-2 py-0.5 rounded tracking-wide uppercase bg-blue-50 text-blue-700 dark:bg-[#2f3541] dark:text-[#86cfff]"
                             >
                               {item.badgeType}
                             </span>
                           </div>
 
-                          <p className="text-xs sm:text-sm text-slate-600 dark:text-[#A9B8CA]">
+                          <p className="text-[11px] sm:text-sm text-slate-600 dark:text-[#A9B8CA]">
                             {item.locationInfo}
                           </p>
 
-                          <div className="flex items-center gap-2 text-xs font-medium text-slate-500 dark:text-[#8a919c] mt-0.5">
-                            <Clock className="w-3.5 h-3.5" />
+                          <div className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-medium text-slate-500 dark:text-[#8a919c] mt-0.5">
+                            <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
                             <span>{item.timeSavedText}</span>
                             {item.lineText && (
                               <>
                                 <span className="text-slate-300 dark:text-[#404751]">•</span>
-                                <span className="text-slate-600 dark:text-[#A9B8CA]">{item.lineText}</span>
+                                <span className="text-slate-600 dark:text-[#A9B8CA] line-clamp-1 sm:line-clamp-none break-all">{item.lineText}</span>
                               </>
                             )}
                           </div>
@@ -216,7 +216,7 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
                       </div>
 
                       {/* Contextual Actions */}
-                      <div className="flex flex-wrap items-center gap-2 sm:gap-3 lg:self-center pl-16 lg:pl-0">
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-3 lg:self-center pl-13 sm:pl-16 lg:pl-0">
                         {item.canCompare && (
                           <button
                             type="button"
