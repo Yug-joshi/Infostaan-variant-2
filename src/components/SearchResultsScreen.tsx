@@ -210,7 +210,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
         whyRelevant: `Official FYJC cutoff threshold: ${c.cutoff}%`,
         tagColor: 'tertiary' as const,
         actionLabel: 'View College Details',
-        collegeSlug: c.collegeId || 'mithibai',
+        collegeSlug: c.collegeId || c.collegeName.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
       }));
     }
 

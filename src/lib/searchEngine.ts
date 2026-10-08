@@ -85,7 +85,7 @@ export function searchInfostaan(query: string, category: CategoryType): SearchRe
       whyRelevant: `Official FYJC cutoff threshold: ${c.cutoff}%`,
       tagColor: 'tertiary',
       actionLabel: 'View Details',
-      collegeId: c.collegeId || 'mithibai',
+      collegeId: c.collegeId || c.collegeName.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
     }));
 
     results = [...results, ...cutoffResults, ...fyjcResults];
