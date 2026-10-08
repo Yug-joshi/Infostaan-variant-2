@@ -245,7 +245,7 @@ const CATEGORY_CONFIGS: Record<DrawerCategoryType, CategoryMeta> = {
         desc: 'Target admission phase',
         options: [
           'FYJC / 11th',
-          '10th / SSC',
+
           'JEE Main / Engineering',
           'Law 3-Year (MH CET)',
           'Law 5-Year (MH CET)',

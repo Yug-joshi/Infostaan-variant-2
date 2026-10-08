@@ -16,7 +16,7 @@ interface CutoffModalProps {
 // Education levels supported by the current dataset
 const EDUCATION_LEVELS = [
   { id: 'fyjc', label: 'FYJC / 11th', hasData: true, desc: 'First Year Junior College (11th admission) cutoffs across Mumbai' },
-  { id: '10th', label: '10th / SSC', hasData: false, desc: 'Secondary School Certificate cutoffs (Data Coming Soon)' },
+
   { id: 'jee', label: 'JEE Main / Engineering', hasData: false, desc: 'Engineering degree admission cutoffs (Data Coming Soon)' },
   { id: 'law3', label: 'Law 3-Year (MH CET)', hasData: false, desc: 'LLB 3-Year degree cutoffs (Data Coming Soon)' },
   { id: 'law5', label: 'Law 5-Year (MH CET)', hasData: false, desc: 'Integrated LLB 5-Year cutoffs (Data Coming Soon)' },
