@@ -232,6 +232,12 @@ const CATEGORY_CONFIGS: Record<DrawerCategoryType, CategoryMeta> = {
     icon: BarChart2,
     searchPlaceholder: 'Search college cutoffs, stream, or area...',
     quickFilterParam: 'stream',
+    quickFilterOptions: [
+      { label: 'All', value: 'All Streams' },
+      { label: 'Commerce', value: 'Commerce' },
+      { label: 'Science', value: 'Science' },
+      { label: 'Arts', value: 'Arts' },
+    ],
     discoverySections: [
       {
         id: 'stream',

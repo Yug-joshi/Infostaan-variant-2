@@ -51,14 +51,14 @@ export interface CollegeDetail {
 
 export interface ShortlistItem {
   id: string;
-  category: 'college' /* | 'internship' */;
+  category: 'college' | 'course' | 'class' | 'career';
   title: string;
   regionBadge: string;
   badgeType: string;
   locationInfo: string;
   timeSavedText: string;
   lineText?: string;
-  iconType: 'school' | 'account_balance' | 'trending_up';
+  iconType: 'school' | 'account_balance' | 'trending_up' | 'library_books' | 'work';
   canCompare?: boolean;
   collegeId?: string;
 }
