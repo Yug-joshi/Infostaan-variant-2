@@ -61,24 +61,24 @@ export default function App() {
     if (queryString) {
       navigate(`/${cat}?${queryString}`);
     } else {
-      navigate(`/${cat}?all=true`);
+      navigate(`/${cat}`);
     }
   };
 
-  // View All — navigates with ONLY ?all=true, no filter params
+  // View All — navigates to category route with no filter params
   const handleViewAllCategory = (cat: FilterCategoryType) => {
     setIsCategoryFilterOpen(false);
-    navigate(`/${cat}?all=true`);
+    navigate(`/${cat}`);
   };
 
   const handleViewAllClasses = () => {
     setIsClassesOpen(false);
-    navigate('/classes?all=true');
+    navigate('/classes');
   };
 
   const handleViewAllCutoffs = () => {
     setIsCutoffOpen(false);
-    navigate('/cutoffs?all=true');
+    navigate('/cutoffs');
   };
 
   const handleApplyClassesFilters = (filters: { interest?: string; region?: string; specialization?: string; searchQuery?: string }) => {
@@ -92,7 +92,7 @@ export default function App() {
     if (queryString) {
       navigate(`/classes?${queryString}`);
     } else {
-      navigate(`/classes?all=true`);
+      navigate(`/classes`);
     }
   };
 

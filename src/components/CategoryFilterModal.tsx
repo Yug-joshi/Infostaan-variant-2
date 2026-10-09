@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, ArrowRight, ArrowLeft, Building2, GraduationCap, TrendingUp, CheckCircle2, MapPin, SlidersHorizontal } from 'lucide-react';
 import { getCategoryAccent } from '../lib/categoryAccents';
 import { useTheme } from '../context/ThemeContext';
+import { parseMultiValue } from '../lib/categoryFilters';
 
 export type FilterCategoryType = 'colleges' | 'courses' | 'careers';
 
@@ -22,7 +23,7 @@ const CATEGORY_CONFIGS = {
       {
         id: 'region',
         title: 'Select Mumbai Region',
-        desc: 'Choose your target regional zone in Mumbai.',
+        desc: 'Choose up to 3 target regional zones in Mumbai.',
         options: [
           'All Mumbai',
           'South Mumbai',
@@ -121,6 +122,44 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
   const currentStep = config.steps[stepIndex] || config.steps[0];
 
   const handleSelectOption = (value: string) => {
+    if (currentStep.id === 'region') {
+      if (value.startsWith('All')) {
+        setSelectedValues((prev) => {
+          const next = { ...prev };
+          delete next.region;
+          return next;
+        });
+        return;
+      }
+
+      const current = parseMultiValue(selectedValues.region);
+      if (current.includes(value)) {
+        const remaining = current.filter((r) => r !== value);
+        setSelectedValues((prev) => {
+          const next = { ...prev };
+          if (remaining.length > 0) {
+            next.region = remaining.join(', ');
+          } else {
+            delete next.region;
+          }
+          return next;
+        });
+      } else {
+        if (current.length < 3) {
+          setSelectedValues((prev) => ({
+            ...prev,
+            region: [...current, value].join(', '),
+          }));
+        } else {
+          setSelectedValues((prev) => ({
+            ...prev,
+            region: [...current.slice(1), value].join(', '),
+          }));
+        }
+      }
+      return;
+    }
+
     setSelectedValues((prev) => ({
       ...prev,
       [currentStep.id]: value,
@@ -198,9 +237,18 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
         {/* Wizard Body */}
         <div className="p-6 overflow-y-auto space-y-6 text-left">
           <div>
-            <h3 className="text-xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-1.5">
-              {currentStep.title}
-            </h3>
+            <div className="flex items-center justify-between mb-1.5">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-[#F4F7FB]">
+                {currentStep.title}
+              </h3>
+              {currentStep.id === 'region' && (
+                <span className="text-xs font-semibold text-[#007DCC] dark:text-[#86cfff]">
+                  {parseMultiValue(selectedValues.region).length > 0
+                    ? `${parseMultiValue(selectedValues.region).length}/3 selected`
+                    : 'Select up to 3'}
+                </span>
+              )}
+            </div>
             <p className="text-sm text-slate-500 dark:text-[#71839A]">
               {currentStep.desc}
             </p>
@@ -208,17 +256,19 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {currentStep.options.map((opt) => {
-              const isSelected = selectedValues[currentStep.id] === opt || (!selectedValues[currentStep.id] && opt.startsWith('All'));
+              const selectedRegions = currentStep.id === 'region' ? parseMultiValue(selectedValues.region) : [];
+              const isSelected = currentStep.id === 'region'
+                ? (opt.startsWith('All') ? selectedRegions.length === 0 : selectedRegions.includes(opt))
+                : (selectedValues[currentStep.id] === opt || (!selectedValues[currentStep.id] && opt.startsWith('All')));
               return (
                 <button
                   key={opt}
                   type="button"
                   onClick={() => handleSelectOption(opt)}
-                  className={`p-4 rounded-2xl border text-left font-bold text-sm transition-all flex items-center justify-between cursor-pointer ${
-                    isSelected
+                  className={`p-4 rounded-2xl border text-left font-bold text-sm transition-all flex items-center justify-between cursor-pointer ${isSelected
                       ? 'text-slate-900 dark:text-[#F4F7FB]'
                       : 'bg-white/60 dark:bg-[#162232] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#C5D3E3] hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-50 dark:hover:bg-[#1c2b3f]'
-                  }`}
+                    }`}
                   style={isSelected ? {
                     background: isDark ? accent.bgDark : accent.bgLight,
                     borderColor: isDark ? accent.colorHover : accent.ring,

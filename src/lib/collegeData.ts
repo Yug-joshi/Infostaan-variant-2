@@ -135,6 +135,11 @@ export function getAllColleges(): SearchResultItem[] {
       ? bestName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
       : key;
 
+    // Index by slug as well if distinct
+    if (slug !== key && !cachedCollegeMap.has(slug)) {
+      cachedCollegeMap.set(slug, group);
+    }
+
     // Skip if already in curated list
     if (seenSlugs.has(key.toLowerCase()) || seenSlugs.has(slug) || seenNormalizedNames.has(normName)) {
       continue;

@@ -113,7 +113,7 @@ export const getCollegeRegion = (collegeName: string): string => {
  * Accepts a broad zone, a locality, or a comma-separated list of either (OR).
  */
 export const matchItemRegion = (
-  item: SearchResultItem,
+  item: SearchResultItem | { title: string; badgeSub?: string; meta?: string[]; subtitle?: string },
   targetRegion: string | null | undefined,
 ): boolean => {
   if (!targetRegion || targetRegion === 'All Mumbai') return true;

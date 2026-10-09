@@ -13,6 +13,7 @@ import {
 import { CLASSES, ClassData } from '../data/classes';
 import { getCategoryAccent } from '../lib/categoryAccents';
 import { useTheme } from '../context/ThemeContext';
+import { parseMultiValue } from '../lib/categoryFilters';
 
 interface ClassesModalProps {
   isOpen: boolean;
@@ -102,6 +103,24 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
       ...prev,
       [key]: value,
     }));
+  };
+
+  const handleSelectRegion = (r: string) => {
+    if (r === 'All Mumbai') {
+      setPendingField('region', 'All Mumbai');
+      return;
+    }
+    const current = parseMultiValue(pending.region).filter((x) => x !== 'All Mumbai');
+    if (current.includes(r)) {
+      const remaining = current.filter((x) => x !== r);
+      setPendingField('region', remaining.length > 0 ? remaining.join(', ') : 'All Mumbai');
+    } else {
+      if (current.length < 3) {
+        setPendingField('region', [...current, r].join(', '));
+      } else {
+        setPendingField('region', [...current.slice(1), r].join(', '));
+      }
+    }
   };
 
   const handleApply = () => {
@@ -385,58 +404,69 @@ export const ClassesModal: React.FC<ClassesModalProps> = ({
           {step === 2 && (
             <div className="max-w-2xl mx-auto space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">
-                  Select Mumbai Region
-                </h3>
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-[#F4F7FB]">
+                    Select Mumbai Region
+                  </h3>
+                  <span className="text-xs font-semibold text-[#007DCC] dark:text-[#86cfff]">
+                    {parseMultiValue(pending.region).filter((x) => x !== 'All Mumbai').length > 0
+                      ? `${parseMultiValue(pending.region).filter((x) => x !== 'All Mumbai').length}/3 selected`
+                      : 'Select up to 3'}
+                  </span>
+                </div>
 
                 <p className="text-sm text-slate-500 dark:text-[#71839A]">
-                  Filter coaching classes by your preferred local zone in Mumbai.
+                  Filter coaching classes by your preferred local zone in Mumbai (select up to 3).
                 </p>
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {MUMBAI_REGIONS.map((r) => (
-                  <button
-                    key={r}
-                    onClick={() =>
-                      setPendingField('region', r)
-                    }
-                    className={`p-4 rounded-2xl border text-sm font-bold transition-all text-left flex flex-col justify-between h-24 cursor-pointer ${pending.region === r
-                      ? ''
-                      : 'bg-white/60 dark:bg-[#162232] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#C5D3E3] hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-50 dark:hover:bg-[#1c2b3f]'
-                      }`}
-                    style={
-                      pending.region === r
-                        ? {
-                          background: isDark
-                            ? accent.bgDark
-                            : accent.bgLight,
-                          borderColor: isDark
-                            ? accent.colorHover
-                            : accent.ring,
-                          boxShadow: `0 0 0 1.5px ${isDark
-                            ? accent.colorHover
-                            : accent.ring
-                            }`,
+                {MUMBAI_REGIONS.map((r) => {
+                  const selectedRegions = parseMultiValue(pending.region);
+                  const isSelected = r === 'All Mumbai'
+                    ? (selectedRegions.length === 0 || selectedRegions.includes('All Mumbai'))
+                    : selectedRegions.includes(r);
+                  return (
+                    <button
+                      key={r}
+                      onClick={() => handleSelectRegion(r)}
+                      className={`p-4 rounded-2xl border text-sm font-bold transition-all text-left flex flex-col justify-between h-24 cursor-pointer ${isSelected
+                        ? ''
+                        : 'bg-white/60 dark:bg-[#162232] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#C5D3E3] hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-50 dark:hover:bg-[#1c2b3f]'
+                        }`}
+                      style={
+                        isSelected
+                          ? {
+                            background: isDark
+                              ? accent.bgDark
+                              : accent.bgLight,
+                            borderColor: isDark
+                              ? accent.colorHover
+                              : accent.ring,
+                            boxShadow: `0 0 0 1.5px ${isDark
+                              ? accent.colorHover
+                              : accent.ring
+                              }`,
+                            color: isDark
+                              ? accent.chipTextDark
+                              : accent.selectedText,
+                          }
+                          : undefined
+                      }
+                    >
+                      <MapPin
+                        className="w-4 h-4"
+                        style={{
                           color: isDark
                             ? accent.chipTextDark
-                            : accent.selectedText,
-                        }
-                        : undefined
-                    }
-                  >
-                    <MapPin
-                      className="w-4 h-4"
-                      style={{
-                        color: isDark
-                          ? accent.chipTextDark
-                          : accent.color,
-                      }}
-                    />
+                            : accent.color,
+                        }}
+                      />
 
-                    <span>{r}</span>
-                  </button>
-                ))}
+                      <span>{r}</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
           )}

@@ -21,7 +21,7 @@ import {
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { SearchResultItem } from '../types';
 import { searchInfostaan } from '../lib/searchEngine';
-import { matchItemRegion, applyStreamFilter, filterClasses } from '../lib/categoryFilters';
+import { matchItemRegion, applyStreamFilter, filterClasses, parseMultiValue } from '../lib/categoryFilters';
 import { FilterCategoryType } from './CategoryFilterModal';
 import { getCategoryAccent } from '../lib/categoryAccents';
 import { ResultFilterDrawer } from './ResultFilterDrawer';
@@ -90,6 +90,7 @@ const PAGE_CONFIG: Record<
 interface FilterChip {
   label: string;
   param: string;
+  value?: string;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -117,7 +118,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
   const allParam = searchParams.get('all');          // "true" = View All mode
   const query = searchParams.get('query') || '';
   const [inputValue, setInputValue] = useState(query);
-  
+
   useEffect(() => {
     setInputValue(query);
   }, [query]);
@@ -131,22 +132,13 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
   const specializationParam = searchParams.get('specialization');
   const sortParam = searchParams.get('sort');
 
-  // ── Show results gate ──────────────────────────────────────────────────────
-  // Only one of two explicit signals shows results:
-  //   1. all=true  → intentional "show everything"
-  //   2. at least one filter / query param → filtered discovery
-  // Bare /colleges with NO params → empty entry state.
+  // ── Show results ───────────────────────────────────────────────────────────
+  // Default state is always to show results (all results when no filter applied).
   const isViewAll = allParam === 'true';
-  const hasFilters = !!(
-    query || regionParam || streamParam || fieldParam ||
-    interestParam || industryParam || levelParam || specializationParam
-  );
-  const showResults = isViewAll || hasFilters;
 
   // ── Derive active filter chips ─────────────────────────────────────────────
   const activeChips: FilterChip[] = useMemo(() => {
     const chips: FilterChip[] = [];
-    if (isViewAll) { chips.push({ label: 'All Results', param: 'all' }); return chips; }
     const add = (label: string | null, param: string) => {
       if (label && !label.startsWith('All')) chips.push({ label, param });
     };
@@ -154,33 +146,47 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
     add(fieldParam, 'field');
     add(interestParam, 'interest');
     add(industryParam, 'industry');
-    add(regionParam, 'region');
+    if (regionParam && regionParam !== 'All Mumbai') {
+      const regions = parseMultiValue(regionParam);
+      regions.forEach((r) => {
+        chips.push({ label: r, param: 'region', value: r });
+      });
+    }
     add(levelParam, 'level');
     add(specializationParam, 'specialization');
     if (query) chips.push({ label: `"${query}"`, param: 'query' });
     return chips;
-  }, [isViewAll, streamParam, fieldParam, interestParam, industryParam, regionParam, levelParam, specializationParam, query]);
+  }, [streamParam, fieldParam, interestParam, industryParam, regionParam, levelParam, specializationParam, query]);
 
   // Remove a single active filter chip
-  const removeChip = (param: string) => {
+  const removeChip = (param: string, value?: string) => {
     const next = new URLSearchParams(searchParams);
-    next.delete(param);
+    if (param === 'region' && value) {
+      const current = parseMultiValue(next.get('region'));
+      const remaining = current.filter((r) => r !== value);
+      if (remaining.length > 0) {
+        next.set('region', remaining.join(', '));
+      } else {
+        next.delete('region');
+      }
+    } else {
+      next.delete(param);
+    }
     setSearchParams(next, { replace: true });
   };
 
   // ── Compute filtered results ───────────────────────────────────────────────
   const results: SearchResultItem[] = useMemo(() => {
-    if (!showResults) return [];
-
     let raw: SearchResultItem[] = [];
 
     if (category === 'classes') {
       // Classes use their own dataset — not the search engine
+      const trimmedQuery = query ? query.trim() : null;
       const filtered = filterClasses({
-        interest: isViewAll ? null : interestParam,
-        region: isViewAll ? null : regionParam,
-        specialization: isViewAll ? null : specializationParam,
-        query: isViewAll ? null : query,
+        interest: interestParam || null,
+        region: regionParam || null,
+        specialization: specializationParam || null,
+        query: trimmedQuery,
       });
       // Map ClassData → SearchResultItem shape
       raw = filtered.slice(0, 200).map((cls) => ({
@@ -211,7 +217,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
     }
 
     let finalResults = raw;
-    
+
     // -- Sorting logic --
     if (sortParam) {
       if (sortParam === 'distance_asc' && (category === 'classes' || category === 'colleges')) {
@@ -235,7 +241,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
 
     return finalResults;
   }, [
-    showResults, category, isViewAll, query, regionParam,
+    category, query, regionParam,
     streamParam, fieldParam, interestParam, industryParam,
     levelParam, specializationParam, sortParam
   ]);
@@ -325,17 +331,14 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
               <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB] break-words">
                 {config.title}
               </h1>
-              {showResults && (
-                <p className="text-sm text-slate-500 dark:text-[#71839A] mt-1">
-                  {isViewAll
-                    ? `Showing all ${results.length} results`
-                    : `${results.length} result${results.length !== 1 ? 's' : ''} found`}
-                </p>
-              )}
+              <p className="text-sm text-slate-500 dark:text-[#71839A] mt-1">
+                {activeChips.length === 0
+                  ? `Showing all ${results.length} results`
+                  : `${results.length} result${results.length !== 1 ? 's' : ''} found`}
+              </p>
             </div>
 
-            {showResults && (
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 self-start sm:self-auto w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 self-start sm:self-auto w-full sm:w-auto">
                 <div className="relative flex items-center w-full sm:w-[250px] bg-white dark:bg-[#0D1828] rounded-xl px-3 py-2.5 shadow-sm border border-slate-300 dark:border-white/10 focus-within:border-[#007DCC] focus-within:ring-1 focus-within:ring-[#007DCC]">
                   <Search className="w-4 h-4 text-slate-400 shrink-0 mr-2" />
                   <input
@@ -347,6 +350,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                         const next = new URLSearchParams(searchParams);
                         if (inputValue.trim()) {
                           next.set('query', inputValue.trim());
+                          next.delete('all');
                         } else {
                           next.delete('query');
                         }
@@ -421,17 +425,16 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                   Modify Filters
                 </button>
               </div>
-            )}
-          </div>
+            </div>
 
           {/* Active filter chips */}
-          {showResults && activeChips.length > 0 && (
+          {activeChips.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {activeChips.map((chip) => (
                 <button
-                  key={chip.param}
+                  key={`${chip.param}-${chip.value || chip.label}`}
                   type="button"
-                  onClick={() => removeChip(chip.param)}
+                  onClick={() => removeChip(chip.param, chip.value)}
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 max-w-full rounded-full text-xs font-semibold border transition-colors text-left"
                   style={{
                     background: accent.chipBgLight,
@@ -447,8 +450,8 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
           )}
         </div>
 
-        {/* ── Career Roadmap banner (careers only, when showing results) ───── */}
-        {category === 'careers' && showResults && (
+        {/* ── Career Roadmap banner (careers only) ───── */}
+        {category === 'careers' && (
           <div className="mb-6 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-left">
             <div className="flex items-center gap-3 min-w-0">
               <div
@@ -485,350 +488,322 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
             <ResultFilterDrawer
               isOpen={true}
               inline={true}
-              onClose={() => {}}
+              onClose={() => { }}
               category={category}
             />
           </aside>
 
           {/* Results Container */}
           <div className="flex-1 w-full min-w-0">
-            {!showResults ? (
-          /* Empty state — no params, no all=true */
-          <div className="w-full py-12 sm:py-20 text-center max-w-lg mx-auto">
-            <div
-              className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5"
-              style={{ background: accent.bgLight }}
-            >
-              <IconComp className="w-8 h-8" style={{ color: accent.color }} />
-            </div>
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-3">
-              {config.emptyTitle}
-            </h2>
-            <p className="text-sm text-slate-500 dark:text-[#71839A] mb-8 leading-relaxed">
-              {config.emptyDesc}
-            </p>
-            <button
-              type="button"
-              onClick={handleOpenFilter}
-              className="px-6 py-3 min-h-[44px] rounded-xl text-white text-sm font-bold transition-colors inline-flex items-center justify-center gap-2 shadow-md"
-              style={{ background: accent.ctaBg }}
-            >
-              <SlidersHorizontal className="w-4 h-4" />
-              <span>{config.filterLabel}</span>
-            </button>
-          </div>
-        ) : results.length === 0 ? (
-          /* No matching results after filtering */
-          <div className="w-full py-12 sm:py-16 text-center max-w-md mx-auto">
-            <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-[#0D1828] flex items-center justify-center mx-auto mb-4 border border-slate-200 dark:border-white/10">
-              <IconComp className="w-7 h-7 text-slate-400 dark:text-[#71839A]" />
-            </div>
-            <p className="text-base font-semibold text-slate-900 dark:text-[#F4F7FB] mb-1">
-              No matching results found
-            </p>
-            <p className="text-xs text-slate-500 dark:text-[#71839A] mb-5">
-              Try adjusting your filters or selecting a broader region.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              <button
-                type="button"
-                onClick={() => {
-                  const next = new URLSearchParams();
-                  next.set('all', 'true');
-                  setSearchParams(next, { replace: true });
-                }}
-                className="px-4 py-2.5 min-h-[44px] rounded-xl border border-slate-300 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] bg-white dark:bg-white/5 hover:bg-slate-50 dark:hover:bg-white/10 text-xs font-bold transition-colors"
-              >
-                Clear All Filters
-              </button>
-              <button
-                type="button"
-                onClick={() => setIsFilterDrawerOpen(true)}
-                className="px-5 py-2.5 min-h-[44px] rounded-xl text-white text-xs font-bold transition-colors inline-flex items-center justify-center gap-2"
-                style={{ background: accent.ctaBg }}
-              >
-                <SlidersHorizontal className="w-4 h-4" />
-                Modify Filters
-              </button>
-            </div>
-          </div>
-        ) : (
-          /* Results grid */
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
-            {paginatedResults.map((item) => {
-              const getStreams = (): string[] => {
-                if (item.category === 'colleges' && item.subtitle) {
-                  const offeredPart = item.subtitle.split('•')[0]
-                    .replace(/^Offered:\s*/i, '').trim();
-                  return offeredPart.split(',').map((s) => s.trim()).filter(Boolean).slice(0, 4);
-                }
-                if (item.category === 'careers' && item.meta) {
-                  return item.meta.slice(0, 3);
-                }
-                if (item.category === 'courses' && item.meta) {
-                  return item.meta.slice(0, 3);
-                }
-                if (item.category === 'classes' && item.meta) {
-                  return item.meta;
-                }
-                return [];
-              };
-              const streams = getStreams();
-
-              if (item.category === 'colleges' || item.category === 'classes' || item.category === 'courses' || item.category === 'careers') {
-                const isCollege = item.category === 'colleges';
-                const isCourse = item.category === 'courses';
-                const isCareer = item.category === 'careers';
-                const facts: { icon: any; value: string; label: string }[] = [];
-                if (isCareer) {
-                  if (item.meta && item.meta[0]) {
-                    facts.push({ icon: Award, value: item.meta[0], label: 'Level' });
-                  }
-                  if (item.meta && item.meta[1]) {
-                    facts.push({ icon: TrendingUp, value: item.meta[1], label: 'Sector' });
-                  }
-                } else {
-                  item.meta.forEach(m => {
-                    if (item.category === 'classes' || item.category === 'colleges') return; // Classes and Colleges don't use facts
-                    const lower = m.toLowerCase();
-                    if (lower.includes('autonomous') || lower.includes('university')) {
-                      facts.push({ icon: Building2, value: m.split('•')[0].trim(), label: 'Status' });
-                    } else if (lower.includes('naac') || lower.includes('grade')) {
-                      facts.push({ icon: Star, value: m.split('•').find(p => p.toLowerCase().includes('naac') || p.toLowerCase().includes('grade'))?.trim() || m, label: 'Rating' });
-                    } else if (lower.includes('student') || lower.includes('batch')) {
-                      facts.push({ icon: Users, value: m, label: 'Students' });
-                    } else if (lower.includes('year') || lower.includes('exp')) {
-                      facts.push({ icon: Award, value: m, label: 'Experience' });
-                    } else {
-                      facts.push({ icon: CheckCircle, value: m, label: isCollege ? 'Info' : 'Feature' });
-                    }
-                  });
-                }
-
-                // Decorative header icon (replaces the previous remote images, which returned 404)
-                const HeaderIcon = isCollege ? Building2 : isCourse ? GraduationCap : isCareer ? TrendingUp : MonitorPlay;
-
-                // Mirrors handleCardClick targets so cards without a destination don't look clickable
-                const isClickable = !!(
-                  item.collegeSlug ||
-                  item.collegeId ||
-                  item.category === 'colleges' ||
-                  (item.category === 'classes' && item.slug) ||
-                  item.category === 'careers'
-                );
-
-                return (
-                  <article
-                    key={item.id}
-                    className={`result-card-anim group flex flex-col p-0 min-w-0 rounded-2xl bg-white dark:bg-[#0D1828] transition-all duration-200 shadow-sm border border-slate-200 dark:border-[#D3B5E8]/12 text-left relative ${isClickable ? 'cursor-pointer hover:bg-slate-50 dark:hover:bg-[#121f33] hover:shadow-md hover:border-[#007DCC]/50 dark:hover:border-[#007DCC]/50' : ''}`}
-                    data-category={item.category}
-                    onClick={isClickable ? () => handleCardClick(item) : undefined}
+            {results.length === 0 ? (
+              /* No matching results after filtering */
+              <div className="w-full py-12 sm:py-16 text-center max-w-md mx-auto">
+                <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-[#0D1828] flex items-center justify-center mx-auto mb-4 border border-slate-200 dark:border-white/10">
+                  <IconComp className="w-7 h-7 text-slate-400 dark:text-[#71839A]" />
+                </div>
+                <p className="text-base font-semibold text-slate-900 dark:text-[#F4F7FB] mb-1">
+                  No matching results found
+                </p>
+                <p className="text-xs text-slate-500 dark:text-[#71839A] mb-5">
+                  Try adjusting your filters or selecting a broader region.
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSearchParams(new URLSearchParams(), { replace: true });
+                    }}
+                    className="px-4 py-2.5 min-h-[44px] rounded-xl border border-slate-300 dark:border-white/10 text-slate-700 dark:text-[#A9B8CA] bg-white dark:bg-white/5 hover:bg-slate-50 dark:hover:bg-white/10 text-xs font-bold transition-colors"
                   >
-                    {/* HEADER (gradient + category icon) */}
-                    <div className="relative w-full h-[120px] sm:h-[160px] rounded-t-[15px] bg-gradient-to-br from-[#091540] via-[#0B3366] to-[#007DCC] shrink-0 flex items-start justify-between gap-2 p-3 sm:p-4 overflow-hidden">
-                      <HeaderIcon
-                        aria-hidden="true"
-                        className="pointer-events-none absolute -right-2 -bottom-2 w-20 h-20 sm:w-28 sm:h-28 text-white/10"
-                      />
+                    Clear All Filters
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setIsFilterDrawerOpen(true)}
+                    className="px-5 py-2.5 min-h-[44px] rounded-xl text-white text-xs font-bold transition-colors inline-flex items-center justify-center gap-2"
+                    style={{ background: accent.ctaBg }}
+                  >
+                    <SlidersHorizontal className="w-4 h-4" />
+                    Modify Filters
+                  </button>
+                </div>
+              </div>
+            ) : (
+              /* Results grid */
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+                {paginatedResults.map((item) => {
+                  const getStreams = (): string[] => {
+                    if (item.category === 'colleges' && item.subtitle) {
+                      const offeredPart = item.subtitle.split('•')[0]
+                        .replace(/^Offered:\s*/i, '').trim();
+                      return offeredPart.split(',').map((s) => s.trim()).filter(Boolean).slice(0, 4);
+                    }
+                    if (item.category === 'careers' && item.meta) {
+                      return item.meta.slice(0, 3);
+                    }
+                    if (item.category === 'courses' && item.meta) {
+                      return item.meta.slice(0, 3);
+                    }
+                    if (item.category === 'classes' && item.meta) {
+                      return item.meta;
+                    }
+                    return [];
+                  };
+                  const streams = getStreams();
 
-                      {/* BADGE */}
-                      <span className="relative min-w-0 px-2 py-1 rounded bg-[#007DCC] border border-white/20 text-white text-[10px] font-bold uppercase tracking-wider leading-snug break-words shadow-sm">
-                        {item.badgeCategory || (isCollege ? 'COLLEGE' : isCourse ? 'COURSE' : isCareer ? 'CAREER' : 'CLASS')}
-                      </span>
+                  if (item.category === 'colleges' || item.category === 'classes' || item.category === 'courses' || item.category === 'careers') {
+                    const isCollege = item.category === 'colleges';
+                    const isCourse = item.category === 'courses';
+                    const isCareer = item.category === 'careers';
+                    const facts: { icon: any; value: string; label: string }[] = [];
+                    if (isCareer) {
+                      if (item.meta && item.meta[0]) {
+                        facts.push({ icon: Award, value: item.meta[0], label: 'Level' });
+                      }
+                      if (item.meta && item.meta[1]) {
+                        facts.push({ icon: TrendingUp, value: item.meta[1], label: 'Sector' });
+                      }
+                    } else {
+                      item.meta.forEach(m => {
+                        if (item.category === 'classes' || item.category === 'colleges') return; // Classes and Colleges don't use facts
+                        const lower = m.toLowerCase();
+                        if (lower.includes('autonomous') || lower.includes('university')) {
+                          facts.push({ icon: Building2, value: m.split('•')[0].trim(), label: 'Status' });
+                        } else if (lower.includes('naac') || lower.includes('grade')) {
+                          facts.push({ icon: Star, value: m.split('•').find(p => p.toLowerCase().includes('naac') || p.toLowerCase().includes('grade'))?.trim() || m, label: 'Rating' });
+                        } else if (lower.includes('student') || lower.includes('batch')) {
+                          facts.push({ icon: Users, value: m, label: 'Students' });
+                        } else if (lower.includes('year') || lower.includes('exp')) {
+                          facts.push({ icon: Award, value: m, label: 'Experience' });
+                        } else {
+                          facts.push({ icon: CheckCircle, value: m, label: isCollege ? 'Info' : 'Feature' });
+                        }
+                      });
+                    }
 
-                      {/* SAVE BUTTON */}
-                      <button
-                        type="button"
-                        aria-label="Save"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          if (onSaveItem) onSaveItem(item);
-                        }}
-                        className="relative shrink-0 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 transition-colors border border-white/20"
+                    // Decorative header icon (replaces the previous remote images, which returned 404)
+                    const HeaderIcon = isCollege ? Building2 : isCourse ? GraduationCap : isCareer ? TrendingUp : MonitorPlay;
+
+                    // Mirrors handleCardClick targets so cards without a destination don't look clickable
+                    const isClickable = !!(
+                      item.collegeSlug ||
+                      item.collegeId ||
+                      item.category === 'colleges' ||
+                      (item.category === 'classes' && item.slug) ||
+                      item.category === 'careers'
+                    );
+
+                    return (
+                      <article
+                        key={item.id}
+                        className={`result-card-anim group flex flex-col p-0 min-w-0 rounded-2xl bg-white dark:bg-[#0D1828] transition-all duration-200 shadow-sm border border-slate-200 dark:border-[#D3B5E8]/12 text-left relative ${isClickable ? 'cursor-pointer hover:bg-slate-50 dark:hover:bg-[#121f33] hover:shadow-md hover:border-[#007DCC]/50 dark:hover:border-[#007DCC]/50' : ''}`}
+                        data-category={item.category}
+                        onClick={isClickable ? () => handleCardClick(item) : undefined}
                       >
-                        <Bookmark className={`w-4 h-4 ${savedItemIds?.includes(item.id) ? 'fill-[#19A7E8] text-[#19A7E8]' : 'text-white'}`} />
-                      </button>
-                    </div>
+                        {/* HEADER (gradient + category icon) */}
+                        <div className="relative w-full h-[120px] sm:h-[160px] rounded-t-[15px] bg-gradient-to-br from-[#091540] via-[#0B3366] to-[#007DCC] shrink-0 flex items-start justify-between gap-2 p-3 sm:p-4 overflow-hidden">
+                          <HeaderIcon
+                            aria-hidden="true"
+                            className="pointer-events-none absolute -right-2 -bottom-2 w-20 h-20 sm:w-28 sm:h-28 text-white/10"
+                          />
 
-                    {/* CONTENT */}
-                    <div className="p-3 sm:p-4 flex flex-col flex-grow min-w-0">
+                          {/* BADGE */}
+                          <span className="relative min-w-0 px-2 py-1 rounded bg-[#007DCC] border border-white/20 text-white text-[10px] font-bold uppercase tracking-wider leading-snug break-words shadow-sm">
+                            {item.badgeCategory || (isCollege ? 'COLLEGE' : isCourse ? 'COURSE' : isCareer ? 'CAREER' : 'CLASS')}
+                          </span>
 
-                      {/* TITLE & LOCATION */}
-                      <div className="mb-2 min-w-0 flex flex-col gap-1">
-                        <h2 className={`text-[13px] sm:text-[14px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug break-words ${isClickable ? 'group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors' : ''}`}>
+                          {/* SAVE BUTTON */}
+                          <button
+                            type="button"
+                            aria-label="Save"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              if (onSaveItem) onSaveItem(item);
+                            }}
+                            className="relative shrink-0 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 transition-colors border border-white/20"
+                          >
+                            <Bookmark className={`w-4 h-4 ${savedItemIds?.includes(item.id) ? 'fill-[#19A7E8] text-[#19A7E8]' : 'text-white'}`} />
+                          </button>
+                        </div>
+
+                        {/* CONTENT */}
+                        <div className="p-3 sm:p-4 flex flex-col flex-grow min-w-0">
+
+                          {/* TITLE & LOCATION */}
+                          <div className="mb-2 min-w-0 flex flex-col gap-1">
+                            <h2 className={`text-[13px] sm:text-[14px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug break-words ${isClickable ? 'group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors' : ''}`}>
+                              {item.title}
+                            </h2>
+
+                            <div className="flex items-start gap-1 text-slate-500 dark:text-[#A9B8CA] min-w-0">
+                              <MapPin className="w-3.5 h-3.5 shrink-0 mt-[2px] text-slate-400 dark:text-[#71839A]" />
+                              <span className="min-w-0 text-xs leading-snug break-words font-medium">
+                                {item.badgeSub || 'Mumbai'}
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* DESKTOP ONLY: TAGS & FACTS */}
+                          <div className="hidden sm:flex flex-col flex-grow min-w-0">
+                            {(streams.length > 0 || (isCollege && item.subtitle?.includes('Cutoff:'))) && (
+                              <div className="flex flex-wrap items-center gap-1.5 mb-3 min-w-0">
+                                {streams.slice(0, 2).map((stream, idx) => (
+                                  <span key={idx} className="max-w-full px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#162133] border border-slate-200 dark:border-white/5 text-slate-600 dark:text-[#A9B8CA] text-[11px] leading-snug font-medium break-words">
+                                    {stream}
+                                  </span>
+                                ))}
+                                {isCollege && item.subtitle?.includes('Cutoff:') && (
+                                  <span className="px-1.5 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/40 text-emerald-700 dark:text-emerald-300 text-[11px] leading-snug font-semibold">
+                                    {item.subtitle.split('Cutoff:')[1].trim()}
+                                  </span>
+                                )}
+                              </div>
+                            )}
+
+                            {facts.length > 0 && (
+                              <div className="mt-auto flex items-stretch bg-slate-50 dark:bg-[#121E30] rounded-xl p-2 border border-slate-200 dark:border-white/5 mb-3 min-w-0">
+                                {facts.slice(0, 2).map((fact, idx) => {
+                                  const FactIcon = fact.icon;
+                                  return (
+                                    <div key={idx} className="flex-1 flex flex-col items-center justify-center text-center px-1 border-r border-slate-200 dark:border-white/5 last:border-0 min-w-0">
+                                      <FactIcon className="w-3.5 h-3.5 text-[#19A7E8] shrink-0 mb-1" />
+                                      <span className="w-full text-slate-800 dark:text-[#F4F7FB] font-semibold text-xs leading-snug break-words">{fact.value}</span>
+                                      <span className="w-full text-[10px] text-slate-500 dark:text-[#71839A] mt-0.5 leading-snug break-words">{fact.label}</span>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            )}
+                            <div className={`${facts.length === 0 ? 'mt-auto' : ''}`} />
+                          </div>
+
+                          {/* MOBILE ONLY: CATEGORY SPECIFIC CONTENT */}
+                          <div className="flex sm:hidden flex-col flex-grow min-w-0 gap-1.5 mb-2 mt-auto text-xs text-slate-600 dark:text-[#A9B8CA] font-medium leading-snug">
+                            {isCollege && (
+                              <div>
+                                <span className="text-slate-400 font-normal">Cutoff:</span>{' '}
+                                <span className="font-semibold text-emerald-600 dark:text-emerald-400">
+                                  {item.subtitle?.includes('Cutoff:') ? item.subtitle.split('Cutoff:')[1].trim() : 'Check Details'}
+                                </span>
+                              </div>
+                            )}
+                            {isCourse && (
+                              <>
+                                <div><span className="text-slate-400 font-normal">Stream:</span> {streams[0] || 'General'}</div>
+                                <div>
+                                  <span className="text-slate-400 font-normal">Fees:</span> {
+                                    item.subtitle?.includes('₹')
+                                      ? item.subtitle.split('•').find((p: string) => p.includes('₹'))?.replace('Approx.', '').trim()
+                                      : 'View Details'
+                                  }
+                                </div>
+                              </>
+                            )}
+                            {isCareer && (
+                              <>
+                                <div><span className="text-slate-400 font-normal">Industry:</span> {streams[0] || 'General'}</div>
+                                {item.meta?.[0] && <div><span className="text-slate-400 font-normal">Level:</span> {item.meta[0]}</div>}
+                              </>
+                            )}
+                          </div>
+                        </div>
+                      </article>
+                    );
+                  }
+
+                  return (
+                    <article
+                      key={item.id}
+                      onClick={() => handleCardClick(item)}
+                      className="group flex flex-col justify-between p-3 sm:p-4 rounded-2xl bg-white dark:bg-[#0D1828] hover:bg-slate-50 dark:hover:bg-[#121f33] transition-all duration-200 shadow-sm hover:shadow-md border border-slate-200 dark:border-[#D3B5E8]/12 hover:border-[#007DCC]/50 dark:hover:border-[#D3B5E8]/30 text-left cursor-pointer min-w-0"
+                      data-category={item.category}
+                    >
+                      {/* Top: category type + locality */}
+                      <div className="mb-2 min-w-0 flex flex-col gap-1.5">
+                        <div className="flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 min-w-0">
+                          <span
+                            className={`text-[9px] sm:text-[10px] font-bold uppercase tracking-widest ${item.tagColor === 'tertiary'
+                              ? 'text-emerald-600 dark:text-[#51dcbc]'
+                              : item.tagColor === 'secondary'
+                                ? 'text-[#007DCC] dark:text-[#86cfff]'
+                                : item.tagColor === 'lavender'
+                                  ? 'text-purple-500 dark:text-[#D3B5E8]'
+                                  : 'text-[#007DCC] dark:text-[#86cfff]'
+                              }`}
+                          >
+                            {item.badgeCategory}
+                          </span>
+                          {item.badgeSub && (
+                            <span className="min-w-0 text-[10px] sm:text-[11px] text-slate-400 dark:text-[#71839A] break-words">
+                              · {item.badgeSub}
+                            </span>
+                          )}
+                        </div>
+
+                        <h2 className="text-xs sm:text-[13px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug tracking-tight group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors break-words">
                           {item.title}
                         </h2>
 
-                        <div className="flex items-start gap-1 text-slate-500 dark:text-[#A9B8CA] min-w-0">
-                          <MapPin className="w-3.5 h-3.5 shrink-0 mt-[2px] text-slate-400 dark:text-[#71839A]" />
-                          <span className="min-w-0 text-xs leading-snug break-words font-medium">
-                            {item.badgeSub || 'Mumbai'}
-                          </span>
-                        </div>
+                        {item.subtitle ? (
+                          <p className="text-[11px] sm:text-xs text-slate-500 dark:text-[#71839A] break-words">
+                            {item.subtitle}
+                          </p>
+                        ) : null}
                       </div>
-
-                      {/* DESKTOP ONLY: TAGS & FACTS */}
-                      <div className="hidden sm:flex flex-col flex-grow min-w-0">
-                        {(streams.length > 0 || (isCollege && item.subtitle?.includes('Cutoff:'))) && (
-                          <div className="flex flex-wrap items-center gap-1.5 mb-3 min-w-0">
-                            {streams.slice(0, 2).map((stream, idx) => (
-                              <span key={idx} className="max-w-full px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#162133] border border-slate-200 dark:border-white/5 text-slate-600 dark:text-[#A9B8CA] text-[11px] leading-snug font-medium break-words">
-                                {stream}
-                              </span>
-                            ))}
-                            {isCollege && item.subtitle?.includes('Cutoff:') && (
-                              <span className="px-1.5 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/40 text-emerald-700 dark:text-emerald-300 text-[11px] leading-snug font-semibold">
-                                {item.subtitle.split('Cutoff:')[1].trim()}
-                              </span>
-                            )}
-                          </div>
-                        )}
-
-                        {facts.length > 0 && (
-                          <div className="mt-auto flex items-stretch bg-slate-50 dark:bg-[#121E30] rounded-xl p-2 border border-slate-200 dark:border-white/5 mb-3 min-w-0">
-                            {facts.slice(0, 2).map((fact, idx) => {
-                              const FactIcon = fact.icon;
-                              return (
-                                <div key={idx} className="flex-1 flex flex-col items-center justify-center text-center px-1 border-r border-slate-200 dark:border-white/5 last:border-0 min-w-0">
-                                  <FactIcon className="w-3.5 h-3.5 text-[#19A7E8] shrink-0 mb-1" />
-                                  <span className="w-full text-slate-800 dark:text-[#F4F7FB] font-semibold text-xs leading-snug break-words">{fact.value}</span>
-                                  <span className="w-full text-[10px] text-slate-500 dark:text-[#71839A] mt-0.5 leading-snug break-words">{fact.label}</span>
-                                </div>
-                              );
-                            })}
-                          </div>
-                        )}
-                        <div className={`${facts.length === 0 ? 'mt-auto' : ''}`} />
-                      </div>
-
-                      {/* MOBILE ONLY: CATEGORY SPECIFIC CONTENT */}
-                      <div className="flex sm:hidden flex-col flex-grow min-w-0 gap-1.5 mb-2 mt-auto text-xs text-slate-600 dark:text-[#A9B8CA] font-medium leading-snug">
-                        {isCollege && (
-                           <div>
-                             <span className="text-slate-400 font-normal">Cutoff:</span>{' '}
-                             <span className="font-semibold text-emerald-600 dark:text-emerald-400">
-                               {item.subtitle?.includes('Cutoff:') ? item.subtitle.split('Cutoff:')[1].trim() : 'Check Details'}
-                             </span>
-                           </div>
-                        )}
-                        {isCourse && (
-                           <>
-                             <div><span className="text-slate-400 font-normal">Stream:</span> {streams[0] || 'General'}</div>
-                             <div>
-                               <span className="text-slate-400 font-normal">Fees:</span> {
-                                 item.subtitle?.includes('₹') 
-                                   ? item.subtitle.split('•').find((p: string) => p.includes('₹'))?.replace('Approx.', '').trim()
-                                   : 'View Details'
-                               }
-                             </div>
-                           </>
-                        )}
-                        {isCareer && (
-                           <>
-                             <div><span className="text-slate-400 font-normal">Industry:</span> {streams[0] || 'General'}</div>
-                             {item.meta?.[0] && <div><span className="text-slate-400 font-normal">Level:</span> {item.meta[0]}</div>}
-                           </>
-                        )}
-                      </div>
-                      </div>
-                  </article>
-                );
-              }
-
-              return (
-                <article
-                  key={item.id}
-                  onClick={() => handleCardClick(item)}
-                  className="group flex flex-col justify-between p-3 sm:p-4 rounded-2xl bg-white dark:bg-[#0D1828] hover:bg-slate-50 dark:hover:bg-[#121f33] transition-all duration-200 shadow-sm hover:shadow-md border border-slate-200 dark:border-[#D3B5E8]/12 hover:border-[#007DCC]/50 dark:hover:border-[#D3B5E8]/30 text-left cursor-pointer min-w-0"
-                  data-category={item.category}
-                >
-                  {/* Top: category type + locality */}
-                  <div className="mb-2 min-w-0 flex flex-col gap-1.5">
-                    <div className="flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 min-w-0">
-                      <span
-                        className={`text-[9px] sm:text-[10px] font-bold uppercase tracking-widest ${item.tagColor === 'tertiary'
-                          ? 'text-emerald-600 dark:text-[#51dcbc]'
-                          : item.tagColor === 'secondary'
-                            ? 'text-[#007DCC] dark:text-[#86cfff]'
-                            : item.tagColor === 'lavender'
-                              ? 'text-purple-500 dark:text-[#D3B5E8]'
-                              : 'text-[#007DCC] dark:text-[#86cfff]'
-                          }`}
-                      >
-                        {item.badgeCategory}
-                      </span>
-                      {item.badgeSub && (
-                        <span className="min-w-0 text-[10px] sm:text-[11px] text-slate-400 dark:text-[#71839A] break-words">
-                          · {item.badgeSub}
-                        </span>
-                      )}
-                    </div>
-
-                    <h2 className="text-xs sm:text-[13px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug tracking-tight group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors break-words">
-                      {item.title}
-                    </h2>
-
-                    {item.subtitle ? (
-                      <p className="text-[11px] sm:text-xs text-slate-500 dark:text-[#71839A] break-words">
-                        {item.subtitle}
-                      </p>
-                    ) : null}
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        )}
-
-        {/* Pagination Controls */}
-        {totalPages > 1 && (
-          <div className="flex items-center justify-center gap-2 mt-8 mb-8">
-            <button
-              onClick={() => handlePageChange(Math.max(1, safePage - 1))}
-              disabled={safePage === 1}
-              className="p-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-[#A9B8CA] hover:bg-slate-50 dark:hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-            <div className="flex items-center gap-1.5 mx-2">
-              {[...Array(totalPages)].map((_, i) => {
-                const page = i + 1;
-                // Simple windowing: show first, last, and +/- 1 around current
-                if (
-                  page === 1 || 
-                  page === totalPages || 
-                  (page >= safePage - 1 && page <= safePage + 1)
-                ) {
-                  return (
-                    <button
-                      key={page}
-                      onClick={() => handlePageChange(page)}
-                      className={`w-9 h-9 rounded-xl text-sm font-bold flex items-center justify-center transition-all ${
-                        safePage === page
-                          ? 'bg-[#007DCC] text-white shadow-sm'
-                          : 'bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-white/5'
-                      }`}
-                    >
-                      {page}
-                    </button>
+                    </article>
                   );
-                }
-                if (page === safePage - 2 || page === safePage + 2) {
-                  return <span key={page} className="text-slate-400 dark:text-[#71839A] px-1">...</span>;
-                }
-                return null;
-              })}
-            </div>
-            <button
-              onClick={() => handlePageChange(Math.min(totalPages, safePage + 1))}
-              disabled={safePage === totalPages}
-              className="p-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-[#A9B8CA] hover:bg-slate-50 dark:hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-            >
-              <ArrowRight className="w-5 h-5" />
-            </button>
+                })}
+              </div>
+            )}
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="flex items-center justify-center gap-2 mt-8 mb-8">
+                <button
+                  onClick={() => handlePageChange(Math.max(1, safePage - 1))}
+                  disabled={safePage === 1}
+                  className="p-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-[#A9B8CA] hover:bg-slate-50 dark:hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                >
+                  <ArrowLeft className="w-5 h-5" />
+                </button>
+                <div className="flex items-center gap-1.5 mx-2">
+                  {[...Array(totalPages)].map((_, i) => {
+                    const page = i + 1;
+                    // Simple windowing: show first, last, and +/- 1 around current
+                    if (
+                      page === 1 ||
+                      page === totalPages ||
+                      (page >= safePage - 1 && page <= safePage + 1)
+                    ) {
+                      return (
+                        <button
+                          key={page}
+                          onClick={() => handlePageChange(page)}
+                          className={`w-9 h-9 rounded-xl text-sm font-bold flex items-center justify-center transition-all ${safePage === page
+                              ? 'bg-[#007DCC] text-white shadow-sm'
+                              : 'bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-white/5'
+                            }`}
+                        >
+                          {page}
+                        </button>
+                      );
+                    }
+                    if (page === safePage - 2 || page === safePage + 2) {
+                      return <span key={page} className="text-slate-400 dark:text-[#71839A] px-1">...</span>;
+                    }
+                    return null;
+                  })}
+                </div>
+                <button
+                  onClick={() => handlePageChange(Math.min(totalPages, safePage + 1))}
+                  disabled={safePage === totalPages}
+                  className="p-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-[#A9B8CA] hover:bg-slate-50 dark:hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                >
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </div>
+            )}
           </div>
-        )}
-        </div>
         </div>
       </div>
 

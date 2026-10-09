@@ -7,7 +7,7 @@ import { PencilLoader } from './PencilLoader';
 import { SkeletonResultCards } from './SkeletonResultCards';
 import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
 import { FilterCategoryType } from './CategoryFilterModal';
-import { getCollegeRegion, matchItemRegion, applyStreamFilter } from '../lib/categoryFilters';
+import { getCollegeRegion, matchItemRegion, applyStreamFilter, parseMultiValue } from '../lib/categoryFilters';
 import { formatCollegeTitle, getCollegeGroupingKey } from '../lib/collegeData';
 import { ResultFilterDrawer, DrawerCategoryType } from './ResultFilterDrawer';
 
@@ -53,13 +53,9 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   const rangeParam = searchParams.get('range');
   const educationLevelParam = searchParams.get('educationLevel');
   const sortParam = searchParams.get('sort');
-  const allParam = searchParams.get('all');
 
-  // Only URL params trigger results — defaultCategory alone does NOT dump all data
-  const hasAppliedParams = !!(query || regionParam || streamParam || fieldParam || interestParam || industryParam || levelParam || specializationParam || percentageParam || rangeParam || educationLevelParam);
-
-  // Show results only when at least one URL filter, search query, or 'all=true' exists
-  const showResults = hasAppliedParams || allParam === 'true';
+  // Default state is always to show results
+  const showResults = true;
 
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
@@ -77,12 +73,6 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
     setSearchParams(next);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
-  useEffect(() => {
-    if (!showResults && !isFilterDrawerOpen) {
-      setIsFilterDrawerOpen(true);
-    }
-  }, [showResults, isFilterDrawerOpen]);
 
   // Sync external query changes to input value
   useEffect(() => {
@@ -154,34 +144,18 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
     }
   };
 
-  // Helper to test if a result item matches the target Mumbai region
-  const matchItemRegion = (item: SearchResultItem, targetRegion: string | null | undefined): boolean => {
-    if (!targetRegion || targetRegion === 'All Mumbai') return true;
-    const text = [item.title, item.badgeSub || '', ...(item.meta || []), item.subtitle || ''].join(' ').toUpperCase();
-    if (targetRegion === 'South Mumbai') {
-      return text.includes('SOUTH MUMBAI') || text.includes('CHURCHGATE') || text.includes('CHARNI') || text.includes('FORT') || text.includes('MARINE') || text.includes('SOUTH');
-    }
-    if (targetRegion === 'Western Suburbs') {
-      return text.includes('WESTERN') || text.includes('VILE PARLE') || text.includes('ANDHERI') || text.includes('BORIVALI') || text.includes('BANDRA') || text.includes('SUBURBS');
-    }
-    if (targetRegion === 'Central Suburbs') {
-      return text.includes('CENTRAL') || text.includes('MATUNGA') || text.includes('DADAR') || text.includes('KURLA');
-    }
-    if (targetRegion === 'Eastern Suburbs') {
-      return text.includes('EASTERN') || text.includes('GHATKOPAR') || text.includes('MULUND') || text.includes('BHANDUP');
-    }
-    if (targetRegion === 'Harbour / Central-East') {
-      return text.includes('CHEMBUR') || text.includes('HARBOUR') || text.includes('BELAPUR');
-    }
-    return true;
-  };
-
   const filteredResults = useMemo(() => {
     if (activeCategory === 'cutoffs' || percentageParam || rangeParam || educationLevelParam) {
       let cutoffs = FYJC_CUTOFFS;
 
       if (regionParam && regionParam !== 'All Mumbai') {
-        cutoffs = cutoffs.filter(c => getCollegeRegion(c.collegeName) === regionParam);
+        const regions = parseMultiValue(regionParam);
+        cutoffs = cutoffs.filter(c => {
+          const colReg = getCollegeRegion(c.collegeName);
+          return regions.includes(colReg) || regions.some(r => matchItemRegion({
+            title: c.collegeName,
+          }, r));
+        });
       }
 
       if (streamParam && !streamParam.startsWith('All')) {
@@ -189,23 +163,28 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
       }
 
       if (rangeParam) {
-        const rangeMap: Record<string, [number, number]> = {
-          '35–45%': [35, 45],
-          '45–55%': [45, 55],
-          '55–65%': [55, 65],
-          '65–75%': [65, 75],
-          '75–85%': [75, 85],
-          '85–95%': [85, 95],
-          '95–100%': [95, 100],
-        };
-        const bounds = rangeMap[rangeParam];
+        // Normalize rangeParam: handle '45-55', '45–55', '45-55%', '45–55%'
+        let bounds: [number, number] | undefined;
+        const normalized = rangeParam.trim().replace(/%/g, '').replace(/[–—]/g, '-');
+        const parts = normalized.split('-');
+        if (parts.length === 2) {
+          const min = parseFloat(parts[0]);
+          const max = parseFloat(parts[1]);
+          if (!isNaN(min) && !isNaN(max)) {
+            bounds = [min, max];
+          }
+        }
+
         if (bounds) {
-          cutoffs = cutoffs.filter(c => c.cutoff >= bounds[0] && c.cutoff <= bounds[1]);
+          cutoffs = cutoffs.filter(c => typeof c.cutoff === 'number' && !isNaN(c.cutoff) && c.cutoff >= bounds![0] && c.cutoff <= bounds![1]);
+        } else {
+          // If range is unrecognized or invalid, do not leave unfiltered
+          cutoffs = [];
         }
       } else if (percentageParam) {
         const userPct = parseFloat(percentageParam);
         if (!isNaN(userPct)) {
-          cutoffs = cutoffs.filter(c => c.cutoff <= userPct);
+          cutoffs = cutoffs.filter(c => typeof c.cutoff === 'number' && !isNaN(c.cutoff) && c.cutoff <= userPct);
         }
       }
 
