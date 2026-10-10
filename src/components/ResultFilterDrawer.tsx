@@ -429,6 +429,7 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
   const activeCount = Object.keys(draftFilters).reduce((count, k) => {
     const val = draftFilters[k];
     if (!val || val.startsWith('All') || k === 'all') return count;
+    if (['query', 'category', 'page', 'sort', 'userLoc', 'q'].includes(k)) return count;
     if (k === 'region') return count + parseMultiValue(val).length;
     return count + 1;
   }, 0);
@@ -555,7 +556,7 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
             </div>
 
             {/* Quick Option Pills */}
-            {config.quickFilterOptions && config.quickFilterOptions.length > 0 && (
+            {category !== 'cutoffs' && config.quickFilterOptions && config.quickFilterOptions.length > 0 && (
               <div>
                 <p className="text-[11px] font-medium text-slate-500 dark:text-[#71839A] mb-2">
                   Quick categories

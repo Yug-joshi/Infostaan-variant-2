@@ -641,22 +641,28 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                                 {item.badgeSub || 'Mumbai'}
                               </span>
                             </div>
+
+                            {isCollege && item.subtitle?.includes('Cutoff:') && (
+                              <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
+                                <span className="text-sm font-extrabold text-[#007DCC] dark:text-[#86cfff] bg-[#007DCC]/10 dark:bg-[#86cfff]/10 px-2 py-0.5 rounded-md">
+                                  {item.subtitle.split('Cutoff:')[1].trim()}
+                                </span>
+                                <span className="text-[11px] font-semibold text-slate-600 dark:text-[#A9B8CA] uppercase tracking-wide">
+                                  FYJC Cutoff
+                                </span>
+                              </div>
+                            )}
                           </div>
 
                           {/* DESKTOP ONLY: TAGS & FACTS */}
                           <div className="hidden sm:flex flex-col flex-grow min-w-0">
-                            {(streams.length > 0 || (isCollege && item.subtitle?.includes('Cutoff:'))) && (
+                            {streams.length > 0 && (
                               <div className="flex flex-wrap items-center gap-1.5 mb-3 min-w-0">
                                 {streams.slice(0, 2).map((stream, idx) => (
                                   <span key={idx} className="max-w-full px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#162133] border border-slate-200 dark:border-white/5 text-slate-600 dark:text-[#A9B8CA] text-[11px] leading-snug font-medium break-words">
                                     {stream}
                                   </span>
                                 ))}
-                                {isCollege && item.subtitle?.includes('Cutoff:') && (
-                                  <span className="px-1.5 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/40 text-emerald-700 dark:text-emerald-300 text-[11px] leading-snug font-semibold">
-                                    {item.subtitle.split('Cutoff:')[1].trim()}
-                                  </span>
-                                )}
                               </div>
                             )}
 

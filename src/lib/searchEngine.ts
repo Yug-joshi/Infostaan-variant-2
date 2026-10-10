@@ -46,11 +46,7 @@ export function searchInfostaan(query: string, category: CategoryType): SearchRe
     const classResults: SearchResultItem[] = CLASSES.filter(cls => {
       if (!q) return true;
       return (
-        cls.name.toLowerCase().includes(q) ||
-        cls.area?.toLowerCase().includes(q) ||
-        cls.region?.toLowerCase().includes(q) ||
-        cls.streams?.toLowerCase().includes(q) ||
-        cls.specializations?.toLowerCase().includes(q)
+        cls.name.toLowerCase().includes(q)
       );
     }).slice(0, 15).map(cls => ({
       id: cls.id,
@@ -108,7 +104,11 @@ export function searchInfostaan(query: string, category: CategoryType): SearchRe
       collegeId: c.collegeId || c.collegeName.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
     }));
 
-    results = [...results, ...cutoffResults, ...fyjcResults];
+    if (category === 'cutoffs') {
+      results = [...results, ...cutoffResults, ...fyjcResults];
+    } else {
+      results = [...results, ...cutoffResults];
+    }
   }
 
   // Simple sorting: put cutoffs and classes near the top if they strongly match

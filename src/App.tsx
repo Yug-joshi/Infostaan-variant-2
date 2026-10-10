@@ -131,7 +131,11 @@ export default function App() {
   }, [location.pathname, location.search]);
 
   const handleSearch = (query: string, category: string = 'all') => {
-    navigate('/');
+    if (category === 'all') {
+      navigate(`/search?query=${encodeURIComponent(query)}`);
+    } else {
+      navigate(`/${category}?query=${encodeURIComponent(query)}`);
+    }
   };
 
   const handleSelectCollege = (collegeSlug: string) => {
@@ -316,11 +320,17 @@ export default function App() {
               onOpenCategoryFilter={handleOpenCategoryFilter}
             />
           } />
-          <Route
-            path="/class/:slug"
-            element={<ClassDetailScreen />}
-          />
-          <Route path="/search" element={<Navigate to="/" replace />} />
+          <Route path="/class/:slug" element={<ClassDetailScreen />} />
+          <Route path="/search" element={
+            <SearchResultsScreen
+              defaultCategory="all"
+              onNavigate={(path) => navigate(path)}
+              onSelectCollege={handleSelectCollege}
+              savedItemIds={allSavedItemIds}
+              onOpenCutoff={() => setIsCutoffOpen(true)}
+              onSaveItem={handleToggleSaveItem}
+            />
+          } />
 
           <Route path="/colleges" element={
             <CategoryResultsPage

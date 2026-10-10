@@ -163,7 +163,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
       ref={containerRef}
       className="w-full pt-20 sm:pt-24 pb-20 bg-[#F4F7FB] dark:bg-[#070D18] min-h-screen text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200"
     >
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-6">
         
         {/* Navigation Breadcrumb */}
         <div className="detail-fade-anim flex flex-col gap-1.5 pt-1 text-left">
@@ -202,8 +202,197 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
           </nav>
         </div>
 
-        {/* ── 1. COMPACT COLLEGE HEADER (Image Background with controlled height) ── */}
-        <header className="detail-fade-anim relative w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-200/80 dark:border-white/10 bg-slate-900 text-white min-h-[190px] sm:min-h-[220px] flex flex-col justify-end p-5 sm:p-8 text-left">
+        
+        {/* ── RESPONSIVE TOP SECTION (Option 3 for Desktop, Original for Mobile) ── */}
+        <div className="flex flex-col gap-6">
+
+          {/* === DESKTOP LAYOUT (Hidden on Mobile) === */}
+          <div className="hidden lg:flex flex-col gap-6">
+            
+            {/* 1. DESKTOP CUTOFF PANEL (Top) */}
+            <section className="detail-fade-anim w-full rounded-3xl bg-[#F0F7FF] dark:bg-[#0c1a2e] border border-blue-100 dark:border-blue-900/30 shadow-sm p-7 text-left flex flex-col gap-5 relative overflow-hidden">
+              <div className="flex items-center justify-between z-10">
+                <div className="flex items-center gap-2.5">
+                  <h2 className="text-xl font-black text-slate-900 dark:text-[#F4F7FB] tracking-tight flex items-center gap-2">
+                    <span>FYJC Admission Cutoff</span>
+                    <span className="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-[#007DCC]/10 text-[#007DCC] dark:bg-[#007DCC]/25 dark:text-[#86cfff]">
+                      {admissionYear}
+                    </span>
+                  </h2>
+                </div>
+                <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-[#A9B8CA] font-medium">
+                  <ShieldCheck className="w-4 h-4 text-[#007DCC] dark:text-[#51dcbc]" />
+                  <span>Data source: Official FYJC</span>
+                </div>
+              </div>
+
+              {rawFyjc.length > 0 ? (
+                <div className="flex gap-8 z-10 items-center mt-2">
+                  <div className="flex-1 max-w-xs">
+                    {activeCutoffRecord ? (
+                      <div className="flex flex-col">
+                        <div className="flex items-baseline gap-3">
+                          <span className="text-[5rem] font-black text-[#007DCC] dark:text-[#51dcbc] tracking-tight leading-none">
+                            {activeCutoffRecord.cutoff.toFixed(2)}%
+                          </span>
+                          <span className="text-sm font-semibold text-slate-500 dark:text-[#A9B8CA]">
+                            ({Math.round((activeCutoffRecord.cutoff / 100) * 500)} / 500)
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2 mt-4">
+                          <span className="text-sm font-semibold text-slate-600 dark:text-[#A9B8CA]">{selectedStream} •</span>
+                          <select
+                            value={selectedCategory}
+                            onChange={(e) => setSelectedCategory(e.target.value)}
+                            className="appearance-none bg-transparent text-sm font-bold text-[#007DCC] dark:text-[#86cfff] outline-none cursor-pointer pr-4 relative z-10"
+                            style={{ backgroundImage: 'url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22%23007DCC%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right center', backgroundSize: '10px' }}
+                          >
+                            {availableCategories.map((cat) => (
+                              <option key={`desktop-cat-${cat}`} value={cat} className="text-slate-900">
+                                {cat} Category
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="py-3">
+                        <span className="text-2xl font-bold text-slate-400">Not Available</span>
+                        <p className="text-xs text-slate-500 mt-1">
+                          No {selectedCategory} record for {selectedStream} stream.
+                        </p>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="flex-[1.5] flex flex-col justify-center border-l border-blue-200/60 dark:border-blue-800/40 pl-8">
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-[#A9B8CA] mb-3">
+                      Other category cutoffs ({selectedStream})
+                    </span>
+                    {otherCategoryCutoffs.length > 0 ? (
+                      <div className="grid grid-cols-4 gap-3">
+                        {otherCategoryCutoffs.slice(0, 4).map((item) => (
+                          <button
+                            key={`desktop-other-${item.id}`}
+                            type="button"
+                            onClick={() => setSelectedCategory(item.category)}
+                            className="bg-white dark:bg-white/5 border border-slate-200/60 dark:border-white/10 rounded-xl p-3 text-center hover:border-[#007DCC]/50 hover:shadow-sm transition-all cursor-pointer group"
+                          >
+                            <span className="block text-[11px] font-bold text-slate-500 dark:text-[#A9B8CA] group-hover:text-[#007DCC] transition-colors truncate">
+                              {item.category}
+                            </span>
+                            <span className="block text-xl font-black text-slate-900 dark:text-[#F4F7FB] mt-1">
+                              {item.cutoff.toFixed(2)}%
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="text-sm text-slate-500 dark:text-[#A9B8CA]">
+                        {availableCategories.length === 1 && availableCategories[0] === 'General'
+                          ? 'General merit threshold is the sole published category.'
+                          : 'No additional category records recorded.'}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ) : (
+                <div className="p-8 text-center bg-white/50 dark:bg-white/5 rounded-2xl border border-blue-100/50 dark:border-white/10 text-slate-500">
+                  <p className="font-semibold text-sm">Cutoff data currently being updated.</p>
+                </div>
+              )}
+            </section>
+
+            {/* 2. DESKTOP HEADER (Middle) */}
+            <header className="detail-fade-anim w-full rounded-3xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 shadow-sm p-6 text-left flex justify-between items-center gap-6">
+              <div className="flex flex-col gap-2.5 flex-1">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/30 rounded-full text-blue-700 dark:text-blue-300 text-[11px] font-bold w-fit">
+                  <Building2 className="w-3.5 h-3.5" />
+                  <span>{college.badge || 'Affiliated Junior College'}</span>
+                </div>
+
+                <h1 className="text-3xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mt-1">
+                  {college.name}
+                </h1>
+
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-slate-600 dark:text-[#A9B8CA] font-medium mt-0.5">
+                  {choiceCode && (
+                    <>
+                      <span className="font-semibold text-slate-700 dark:text-[#C5D3E3]">Choice Code: {choiceCode}</span>
+                      <span className="text-slate-300 dark:text-slate-600">•</span>
+                    </>
+                  )}
+                  {availableStreams.length > 0 && (
+                    <>
+                      <span>{availableStreams.join(', ')}</span>
+                      <span className="text-slate-300 dark:text-slate-600">•</span>
+                    </>
+                  )}
+                  <span>{college.location}</span>
+                </div>
+
+                <div className="flex items-center gap-4 text-xs font-semibold mt-2">
+                   <div className="flex items-center gap-1.5 text-slate-500 dark:text-[#8a919c]">
+                     <MapPin className="w-3.5 h-3.5 text-[#007DCC]" />
+                     <span>{college.transitDetail || 'Access via Mumbai suburban railway and local transit'}</span>
+                   </div>
+                   <div className="flex items-center gap-1.5 text-slate-500 dark:text-[#8a919c]">
+                     <Train className="w-3.5 h-3.5 text-[#007DCC]" />
+                     <span>Well connected via local train and bus</span>
+                   </div>
+                </div>
+              </div>
+
+              <div className="relative w-[280px] h-[160px] rounded-2xl overflow-hidden shrink-0 shadow-sm border border-slate-100 dark:border-white/5 group">
+                <img
+                  src={college.image}
+                  alt={college.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
+                <div className="absolute bottom-3 right-3">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/50 backdrop-blur-md text-white text-[11px] font-bold border border-white/20 transition-all cursor-pointer hover:bg-black/70">
+                    <Camera className="w-3.5 h-3.5" />
+                    <span>View Photos</span>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            {/* 3. DESKTOP TABS (Bottom) */}
+            <div className="flex flex-wrap items-center gap-3">
+              {availableStreams.length > 0 ? (
+                availableStreams.map((str) => {
+                  const isActive = selectedStream.toLowerCase() === str.toLowerCase();
+                  return (
+                    <button
+                      key={`desktop-tab-${str}`}
+                      type="button"
+                      onClick={() => setSelectedStream(str)}
+                      className={`flex-1 py-3 px-4 rounded-xl font-bold text-sm transition-all duration-150 text-center cursor-pointer border ${
+                        isActive
+                          ? 'bg-[#007DCC] border-[#007DCC] text-white shadow-md'
+                          : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#C5D3E3] hover:bg-slate-50 dark:hover:bg-white/5'
+                      }`}
+                    >
+                      {str}
+                    </button>
+                  );
+                })
+              ) : (
+                 <div className="w-full p-4 rounded-xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-sm text-slate-500 text-center">
+                   No specific stream data available.
+                 </div>
+              )}
+            </div>
+
+          </div>
+
+          {/* === MOBILE LAYOUT (Hidden on Desktop) === */}
+          <div className="flex flex-col gap-6 lg:hidden">
+            {/* ── 1. COMPACT COLLEGE HEADER (Image Background with controlled height) ── */}
+        <header className="lg:hidden detail-fade-anim relative w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-200/80 dark:border-white/10 bg-slate-900 text-white min-h-[190px] sm:min-h-[220px] flex flex-col justify-end p-5 sm:p-8 text-left">
           {/* Background Image */}
           <img
             src={college.image}
@@ -261,7 +450,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
         </header>
 
         {/* ── 2. PROMINENT CUTOFF PANEL (Immediately Below Header) ── */}
-        <section className="detail-fade-anim w-full rounded-2xl sm:rounded-3xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 shadow-md p-5 sm:p-7 text-left space-y-5">
+        <section className="lg:hidden detail-fade-anim w-full rounded-2xl sm:rounded-3xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 shadow-md p-5 sm:p-7 text-left space-y-5">
           {/* Panel Top Heading & Year Badge */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-white/5 pb-4">
             <div className="flex items-center gap-2.5">
@@ -401,7 +590,10 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
           )}
         </section>
 
-        {/* ── 3. ACTIONS: Save to Shortlist & Compare College (Below Cutoff Panel) ── */}
+                  </div>
+
+          {/* === SHARED ACTIONS (Visible on both) === */}
+          {/* ── 3. ACTIONS: Save to Shortlist & Compare College (Below Cutoff Panel) ── */}
         <section className="detail-fade-anim grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
           <button
             id="saveBtn"
@@ -434,7 +626,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
             <Scale className="w-5 h-5 text-slate-500 dark:text-[#A9B8CA]" />
             <span>Compare College</span>
           </button>
-        </section>
+        </section>\n        </div>
 
         {/* ── 4. SUPPORTING COLLEGE INFORMATION (Commute, Campus, Details Below) ── */}
         {/* Campus & Commute Context Vignette */}

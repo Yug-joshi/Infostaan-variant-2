@@ -314,14 +314,9 @@ export const filterClasses = (params: ClassFilterParams): ClassData[] => {
   const q = (params.query || '').toLowerCase().trim();
 
   return CLASSES.filter((cls) => {
-    // Text search across name, area, address, and specializations
     const matchesSearch =
       !q ||
-      cls.name.toLowerCase().includes(q) ||
-      cls.area?.toLowerCase().includes(q) ||
-      cls.address?.toLowerCase().includes(q) ||
-      cls.specializations?.toLowerCase().includes(q) ||
-      cls.streams?.toLowerCase().includes(q);
+      cls.name.toLowerCase().includes(q);
 
     // Interest / stream filter
     const matchesInterest =

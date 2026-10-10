@@ -36,10 +36,10 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
-  
+
   const query = searchParams.get('query') || '';
   const activeCategory = (searchParams.get('category') as CategoryType) || defaultCategory || 'all';
-  
+
   const [inputValue, setInputValue] = useState(query);
 
   const regionParam = searchParams.get('region');
@@ -59,6 +59,19 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
+  const [isSearchDropdownOpen, setIsSearchDropdownOpen] = useState(false);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchContainerRef.current && !searchContainerRef.current.contains(event.target as Node)) {
+        setIsSearchDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   const pageParam = parseInt(searchParams.get('page') || '1', 10);
   const currentPage = isNaN(pageParam) || pageParam < 1 ? 1 : pageParam;
   const ITEMS_PER_PAGE = 16;
@@ -202,42 +215,42 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
       // Group cutoffs strictly by college key so every college gets exactly 1 card regardless of streams
       const grouped = new Map<string, typeof FYJC_CUTOFFS[0][]>();
       cutoffs.forEach(c => {
-         const key = getCollegeGroupingKey(c);
-         if (!grouped.has(key)) grouped.set(key, []);
-         grouped.get(key)!.push(c);
+        const key = getCollegeGroupingKey(c);
+        if (!grouped.has(key)) grouped.set(key, []);
+        grouped.get(key)!.push(c);
       });
-      
+
       const uniqueColleges = Array.from(grouped.values());
 
       return uniqueColleges.map(group => {
-         const primary = group[0];
-         const names = group.map(c => c.collegeName.trim());
-         names.sort((a, b) => {
-           const aPenalty = a.endsWith('&') || a.endsWith('AND') ? -20 : 0;
-           const bPenalty = b.endsWith('&') || b.endsWith('AND') ? -20 : 0;
-           return (b.length + bPenalty) - (a.length + aPenalty);
-         });
-         const bestName = names[0];
+        const primary = group[0];
+        const names = group.map(c => c.collegeName.trim());
+        names.sort((a, b) => {
+          const aPenalty = a.endsWith('&') || a.endsWith('AND') ? -20 : 0;
+          const bPenalty = b.endsWith('&') || b.endsWith('AND') ? -20 : 0;
+          return (b.length + bPenalty) - (a.length + aPenalty);
+        });
+        const bestName = names[0];
 
-         const streams = Array.from(new Set(group.map(c => c.stream)));
-         const streamText = streams.join(', ');
-         const slug = primary.collegeId || bestName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-         
-         return {
-            id: `cutoff-${slug}`,
-            category: 'cutoffs' as const,
-            badgeCategory: streams.length > 1 ? 'MULTIPLE' : `${primary.stream}`,
-            badgeSub: group.length > 1 ? `${primary.cutoff}% (Top)` : `${primary.cutoff}% (${primary.year})`,
-            title: formatCollegeTitle(bestName),
-            subtitle: group.length > 1 
-               ? `${group.length} Cutoffs • Range: ${Math.min(...group.map(g => g.cutoff))}% - ${Math.max(...group.map(g => g.cutoff))}%` 
-               : `FYJC Cutoff: ${primary.cutoff}% • Code: ${primary.choiceCode}`,
-            meta: [streamText, `Region: ${getCollegeRegion(bestName)}`],
-            whyRelevant: `Highest cutoff threshold: ${primary.cutoff}%`,
-            tagColor: 'tertiary' as const,
-            actionLabel: 'View College Details',
-            collegeSlug: slug,
-         };
+        const streams = Array.from(new Set(group.map(c => c.stream)));
+        const streamText = streams.join(', ');
+        const slug = primary.collegeId || bestName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+        return {
+          id: `cutoff-${slug}`,
+          category: 'cutoffs' as const,
+          badgeCategory: streams.length > 1 ? 'MULTIPLE' : `${primary.stream}`,
+          badgeSub: group.length > 1 ? `${primary.cutoff}% (Top)` : `${primary.cutoff}% (${primary.year})`,
+          title: formatCollegeTitle(bestName),
+          subtitle: group.length > 1
+            ? `${group.length} Cutoffs • Range: ${Math.min(...group.map(g => g.cutoff))}% - ${Math.max(...group.map(g => g.cutoff))}%`
+            : `FYJC Cutoff: ${primary.cutoff}% • Code: ${primary.choiceCode}`,
+          meta: [streamText, `Region: ${getCollegeRegion(bestName)}`],
+          whyRelevant: `Highest cutoff threshold: ${primary.cutoff}%`,
+          tagColor: 'tertiary' as const,
+          actionLabel: 'View College Details',
+          collegeSlug: slug,
+        };
       });
     }
 
@@ -292,7 +305,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 
   const handleActionClick = (item: SearchResultItem) => {
     const qs = streamParam && streamParam !== 'All Streams' ? `?stream=${streamParam}` : '';
-    
+
     if (item.category === 'careers') {
       navigate('/career-roadmap');
     } else if (item.category === 'classes' && item.slug) {
@@ -328,13 +341,17 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
           </div>
 
           {/* Input Bar with layered suggestions */}
-          <div className="relative z-30 flex items-center w-full md:w-1/2 min-w-0 bg-white dark:bg-[#0D1828] rounded-2xl px-3 sm:px-4 py-3 shadow-xs transition-all border border-slate-300 dark:border-[#D3B5E8]/15 focus-within:border-[#007DCC] focus-within:ring-2 focus-within:ring-[#007DCC]/20">
+          <div ref={searchContainerRef} className="relative z-30 flex items-center w-full md:w-1/2 min-w-0 bg-white dark:bg-[#0D1828] rounded-2xl px-3 sm:px-4 py-3 shadow-xs transition-all border border-slate-300 dark:border-[#D3B5E8]/15 focus-within:border-[#007DCC] focus-within:ring-2 focus-within:ring-[#007DCC]/20">
             <Search className="text-[#007DCC] dark:text-[#9ccaff] mr-2 sm:mr-3 w-5 h-5 shrink-0" />
             <input
               aria-label="Search opportunities, courses, and institutions in Mumbai"
               type="text"
               value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
+              onChange={(e) => {
+                setInputValue(e.target.value);
+                setIsSearchDropdownOpen(true);
+              }}
+              onFocus={() => setIsSearchDropdownOpen(true)}
               placeholder="Search colleges, courses, careers, classes..."
               className="w-full min-w-0 bg-transparent font-medium text-sm sm:text-base text-slate-900 dark:text-[#F4F7FB] placeholder:text-slate-400 dark:placeholder:text-[#A9B8CA]/60 focus:outline-none"
             />
@@ -349,7 +366,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
               </button>
             )}
             {/* Search Suggestions Dropdown Overlay */}
-            {inputValue.trim().length > 0 && (
+            {inputValue.trim().length > 0 && isSearchDropdownOpen && (
               <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#1a202b] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-2xl shadow-xl overflow-hidden z-40 text-left">
                 <div className="p-2">
                   <button
@@ -357,9 +374,10 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                     onClick={() => {
                       setSearchParams(prev => {
                         const next = new URLSearchParams(prev);
-                        next.set('q', inputValue.trim());
+                        next.set('query', inputValue.trim());
                         return next;
                       }, { replace: true });
+                      setIsSearchDropdownOpen(false);
                       setActiveCategory('colleges');
                       setSearchPhase('understanding');
                     }}
@@ -371,8 +389,14 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                   <button
                     type="button"
                     onClick={() => {
-                      setInputValue('');
+                      setSearchParams(prev => {
+                        const next = new URLSearchParams(prev);
+                        next.set('query', inputValue.trim());
+                        return next;
+                      }, { replace: true });
+                      setIsSearchDropdownOpen(false);
                       setActiveCategory('courses');
+                      setSearchPhase('understanding');
                     }}
                     className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3"
                   >
@@ -399,11 +423,10 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                   <button
                     key={tab.id}
                     onClick={() => setActiveCategory(tab.id as CategoryType)}
-                    className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap ${
-                      activeCategory === tab.id
+                    className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap ${activeCategory === tab.id
                         ? 'bg-[#007DCC] text-white shadow-xs'
                         : 'text-slate-600 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-[#F4F7FB] bg-white dark:bg-[#0D1828] hover:bg-slate-100 dark:hover:bg-[#161c27] border border-slate-300 dark:border-white/5'
-                    }`}
+                      }`}
                   >
                     {tab.label}
                   </button>
@@ -495,7 +518,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
             <ResultFilterDrawer
               isOpen={true}
               inline={true}
-              onClose={() => {}}
+              onClose={() => { }}
               category={
                 activeCategory === 'cutoffs'
                   ? 'cutoffs'
@@ -513,370 +536,368 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
           {/* Results Container */}
           <div ref={resultsContainerRef} className="flex-1 w-full min-w-0">
             {!showResults ? (
-            <div className="w-full py-12 sm:py-16 text-center max-w-xl mx-auto">
-              <div className="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-blue-900/20 text-[#007DCC] dark:text-[#86cfff] flex items-center justify-center mx-auto mb-4">
-                <SlidersHorizontal className="w-7 h-7" />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">
-                {activeCategory === 'colleges' ? 'Find Colleges in Mumbai'
-                  : activeCategory === 'courses' ? 'Find Courses in Mumbai'
-                  : activeCategory === 'careers' ? 'Find Careers in Mumbai'
-                  : activeCategory === 'classes' ? 'Find Coaching Classes in Mumbai'
-                  : activeCategory === 'cutoffs' ? 'Check Admission Cutoffs'
-                  : 'Search Mumbai Programs'}
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-[#71839A] mb-6 leading-relaxed">
-                {activeCategory === 'colleges' ? 'Select your preferred stream and Mumbai region to find matching colleges.'
-                  : activeCategory === 'courses' ? 'Choose your field of study and qualification level to discover courses.'
-                  : activeCategory === 'careers' ? 'Select your target industry to explore Mumbai career pathways.'
-                  : activeCategory === 'classes' ? 'Choose your subject and Mumbai region to find nearby coaching classes.'
-                  : activeCategory === 'cutoffs' ? 'Select your percentage and stream to see eligible colleges.'
-                  : 'Use the search bar above or pick a category shortcut on the Homepage.'}
-              </p>
-              {(activeCategory === 'colleges' || activeCategory === 'courses' || activeCategory === 'careers' || activeCategory === 'classes' || activeCategory === 'cutoffs') ? (
-                <button
-                  type="button"
-                  onClick={handleModifyFilters}
-                  className="px-5 py-2.5 min-h-[44px] rounded-xl bg-[#007DCC] text-white text-xs font-bold hover:bg-[#006cb0] transition-colors inline-flex items-center justify-center gap-2"
-                >
-                  <SlidersHorizontal className="w-4 h-4" />
-                  <span>Select Filters</span>
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => navigate('/')}
-                  className="px-5 py-2.5 rounded-xl bg-[#007DCC] text-white text-xs font-bold hover:bg-[#006cb0] transition-colors"
-                >
-                  Go to Homepage
-                </button>
-              )}
-            </div>
-          ) : searchPhase === 'understanding' ? (
-            <div className="py-12">
-              <PencilLoader size="medium" variant="spin" message={getLoaderMessage(activeCategory)} />
-            </div>
-          ) : searchPhase === 'skeleton' ? (
-            <SkeletonResultCards />
-          ) : (
-            <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
-              {filteredResults.length === 0 ? (
-                <div className="col-span-full w-full max-w-xl mx-auto p-6 sm:p-10 text-center rounded-2xl bg-white dark:bg-[#0D1828] text-slate-600 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 shadow-xs">
-                  <p className="text-base font-semibold text-slate-900 dark:text-[#F4F7FB] mb-1">
-                    No matching results found for your filters
-                  </p>
-                  <p className="text-xs sm:text-sm mb-4">
-                    Try adjusting your Mumbai region or selecting All Mumbai.
-                  </p>
-                  <button
-                    onClick={() => {
-                      setInputValue('Hinduja');
-                      setActiveCategory('all');
-                    }}
-                    className="px-4 py-2.5 min-h-[44px] rounded-xl bg-[#007DCC] text-white text-xs sm:text-sm font-semibold hover:bg-[#006cb0] transition-colors"
-                  >
-                    Search K.P.B. Hinduja College
-                  </button>
+              <div className="w-full py-12 sm:py-16 text-center max-w-xl mx-auto">
+                <div className="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-blue-900/20 text-[#007DCC] dark:text-[#86cfff] flex items-center justify-center mx-auto mb-4">
+                  <SlidersHorizontal className="w-7 h-7" />
                 </div>
-              ) : (
-                paginatedResults.map((item) => {
-                  const isCollege = item.category === 'colleges' || item.category === 'cutoffs';
-                  const isCutoff = item.category === 'cutoffs';
-                  const isCourse = item.category === 'courses';
-                  const isCareer = item.category === 'careers';
-                  const isClass = item.category === 'classes';
-
-                  const getStreams = (): string[] => {
-                    if (item.category === 'colleges' && item.subtitle) {
-                      const offeredPart = item.subtitle.split('•')[0].replace(/^Offered:\s*/i, '').trim();
-                      return offeredPart.split(',').map(s => s.trim()).filter(Boolean).slice(0, 4);
-                    }
-                    if (item.category === 'cutoffs' && item.meta) {
-                      return [item.meta[0], item.badgeSub ? `${item.badgeSub.split(' ')[0]} Cutoff` : ''].filter(Boolean);
-                    }
-                    if (item.category === 'careers' && item.meta) {
-                      return item.meta.slice(0, 3);
-                    }
-                    if (item.category === 'courses' && item.meta) {
-                      return item.meta.slice(0, 3);
-                    }
-                    if (item.category === 'classes' && item.meta) {
-                      return item.meta;
-                    }
-                    return [];
-                  };
-
-                  const streams = getStreams();
-
-                  if (isCollege || isCourse || isCareer || isClass) {
-                    const facts: { icon: any; value: string; label: string }[] = [];
-                    if (isCutoff) {
-                      // Do not push any facts. The cutoff is displayed directly as highlighted text below.
-                    } else if (isCareer) {
-                      if (item.meta && item.meta[0]) {
-                        facts.push({ icon: Award, value: item.meta[0], label: 'Level' });
-                      }
-                      if (item.meta && item.meta[1]) {
-                        facts.push({ icon: TrendingUp, value: item.meta[1], label: 'Sector' });
-                      }
-                    } else {
-                      item.meta.forEach(m => {
-                        if (isClass || isCollege) return; // Classes and Colleges don't use facts
-                        const lower = m.toLowerCase();
-                        if (lower.includes('autonomous') || lower.includes('university')) {
-                          facts.push({ icon: Building2, value: m.split('•')[0].trim(), label: 'Status' });
-                        } else if (lower.includes('naac') || lower.includes('grade')) {
-                          facts.push({ icon: Star, value: m.split('•').find(p => p.toLowerCase().includes('naac') || p.toLowerCase().includes('grade'))?.trim() || m, label: 'Rating' });
-                        } else if (lower.includes('student') || lower.includes('batch')) {
-                          facts.push({ icon: Users, value: m, label: 'Students' });
-                        } else if (lower.includes('year') || lower.includes('exp')) {
-                          facts.push({ icon: Award, value: m, label: 'Experience' });
-                        } else {
-                          facts.push({ icon: CheckCircle, value: m, label: isCollege ? 'Info' : isCourse ? 'Feature' : 'Info' });
-                        }
-                      });
-                    }
-
-                    // Decorative header icon (replaces the previous remote images, which returned 404)
-                    const HeaderIcon = isCutoff ? BarChart2 : isCollege ? Building2 : isCourse ? GraduationCap : isCareer ? TrendingUp : MonitorPlay;
-
-                    // Mirrors handleActionClick targets so cards without a destination don't look clickable
-                    const isClickable = !!(
-                      item.category === 'careers' ||
-                      (item.category === 'classes' && item.slug) ||
-                      item.collegeSlug ||
-                      item.collegeId ||
-                      item.category === 'colleges' ||
-                      item.category === 'cutoffs'
-                    );
-
-                    return (
-                      <article
-                        key={item.id}
-                        className={`result-card-anim group flex flex-col p-0 min-w-0 rounded-2xl bg-white dark:bg-[#0D1828] transition-all duration-200 shadow-sm border border-slate-200 dark:border-[#D3B5E8]/12 text-left relative ${isClickable ? 'cursor-pointer hover:bg-slate-50 dark:hover:bg-[#121f33] hover:shadow-md hover:border-[#007DCC]/50 dark:hover:border-[#007DCC]/50' : ''}`}
-                        data-category={item.category}
-                        onClick={isClickable ? () => handleActionClick(item) : undefined}
+                <h3 className="text-xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">
+                  {activeCategory === 'colleges' ? 'Find Colleges in Mumbai'
+                    : activeCategory === 'courses' ? 'Find Courses in Mumbai'
+                      : activeCategory === 'careers' ? 'Find Careers in Mumbai'
+                        : activeCategory === 'classes' ? 'Find Coaching Classes in Mumbai'
+                          : activeCategory === 'cutoffs' ? 'Check Admission Cutoffs'
+                            : 'Search Mumbai Programs'}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-500 dark:text-[#71839A] mb-6 leading-relaxed">
+                  {activeCategory === 'colleges' ? 'Select your preferred stream and Mumbai region to find matching colleges.'
+                    : activeCategory === 'courses' ? 'Choose your field of study and qualification level to discover courses.'
+                      : activeCategory === 'careers' ? 'Select your target industry to explore Mumbai career pathways.'
+                        : activeCategory === 'classes' ? 'Choose your subject and Mumbai region to find nearby coaching classes.'
+                          : activeCategory === 'cutoffs' ? 'Select your percentage and stream to see eligible colleges.'
+                            : 'Use the search bar above or pick a category shortcut on the Homepage.'}
+                </p>
+                {(activeCategory === 'colleges' || activeCategory === 'courses' || activeCategory === 'careers' || activeCategory === 'classes' || activeCategory === 'cutoffs') ? (
+                  <button
+                    type="button"
+                    onClick={handleModifyFilters}
+                    className="px-5 py-2.5 min-h-[44px] rounded-xl bg-[#007DCC] text-white text-xs font-bold hover:bg-[#006cb0] transition-colors inline-flex items-center justify-center gap-2"
+                  >
+                    <SlidersHorizontal className="w-4 h-4" />
+                    <span>Select Filters</span>
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => navigate('/')}
+                    className="px-5 py-2.5 rounded-xl bg-[#007DCC] text-white text-xs font-bold hover:bg-[#006cb0] transition-colors"
+                  >
+                    Go to Homepage
+                  </button>
+                )}
+              </div>
+            ) : searchPhase === 'understanding' ? (
+              <div className="py-12">
+                <PencilLoader size="medium" variant="spin" message={getLoaderMessage(activeCategory)} />
+              </div>
+            ) : searchPhase === 'skeleton' ? (
+              <SkeletonResultCards />
+            ) : (
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+                  {filteredResults.length === 0 ? (
+                    <div className="col-span-full w-full max-w-xl mx-auto p-6 sm:p-10 text-center rounded-2xl bg-white dark:bg-[#0D1828] text-slate-600 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 shadow-xs">
+                      <p className="text-base font-semibold text-slate-900 dark:text-[#F4F7FB] mb-1">
+                        No matching results found for your filters
+                      </p>
+                      <p className="text-xs sm:text-sm mb-4">
+                        Try adjusting your Mumbai region or selecting All Mumbai.
+                      </p>
+                      <button
+                        onClick={() => {
+                          setInputValue('Hinduja');
+                          setActiveCategory('all');
+                        }}
+                        className="px-4 py-2.5 min-h-[44px] rounded-xl bg-[#007DCC] text-white text-xs sm:text-sm font-semibold hover:bg-[#006cb0] transition-colors"
                       >
-                        {/* HEADER (gradient + category icon) */}
-                        <div className="relative w-full h-[90px] sm:h-[110px] rounded-t-[15px] bg-gradient-to-br from-[#091540] via-[#0B3366] to-[#007DCC] shrink-0 flex items-start justify-between gap-2 p-3 sm:p-4 overflow-hidden">
-                          <HeaderIcon
-                            aria-hidden="true"
-                            className="pointer-events-none absolute -right-2 -bottom-2 w-20 h-20 sm:w-28 sm:h-28 text-white/10"
-                          />
+                        Try Searching Other Colleges
+                      </button>
+                    </div>
+                  ) : (
+                    paginatedResults.map((item) => {
+                      const isCollege = item.category === 'colleges' || item.category === 'cutoffs';
+                      const isCutoff = item.category === 'cutoffs';
+                      const isCourse = item.category === 'courses';
+                      const isCareer = item.category === 'careers';
+                      const isClass = item.category === 'classes';
 
-                          {/* BADGE */}
-                          <span className="relative min-w-0 px-2 py-1 rounded bg-[#007DCC] border border-white/20 text-white text-[10px] font-bold uppercase tracking-wider leading-snug break-words shadow-sm">
-                            {item.badgeCategory || (isCutoff ? 'CUTOFF' : isCollege ? 'COLLEGE' : isCourse ? 'COURSE' : isCareer ? 'CAREER' : 'CLASS')}
-                          </span>
+                      const getStreams = (): string[] => {
+                        if (item.category === 'colleges' && item.subtitle) {
+                          const offeredPart = item.subtitle.split('•')[0].replace(/^Offered:\s*/i, '').trim();
+                          return offeredPart.split(',').map(s => s.trim()).filter(Boolean).slice(0, 4);
+                        }
+                        if (item.category === 'cutoffs' && item.meta) {
+                          return [item.meta[0], item.badgeSub ? `${item.badgeSub.split(' ')[0]} Cutoff` : ''].filter(Boolean);
+                        }
+                        if (item.category === 'careers' && item.meta) {
+                          return item.meta.slice(0, 3);
+                        }
+                        if (item.category === 'courses' && item.meta) {
+                          return item.meta.slice(0, 3);
+                        }
+                        if (item.category === 'classes' && item.meta) {
+                          return item.meta;
+                        }
+                        return [];
+                      };
 
-                          {/* SAVE BUTTON */}
-                          <button
-                            type="button"
-                            aria-label="Save"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              if (onSaveItem) onSaveItem(item);
-                            }}
-                            className="relative shrink-0 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 transition-colors border border-white/20"
+                      const streams = getStreams();
+
+                      if (isCollege || isCourse || isCareer || isClass) {
+                        const facts: { icon: any; value: string; label: string }[] = [];
+                        if (isCutoff) {
+                          // Do not push any facts. The cutoff is displayed directly as highlighted text below.
+                        } else if (isCareer) {
+                          if (item.meta && item.meta[0]) {
+                            facts.push({ icon: Award, value: item.meta[0], label: 'Level' });
+                          }
+                          if (item.meta && item.meta[1]) {
+                            facts.push({ icon: TrendingUp, value: item.meta[1], label: 'Sector' });
+                          }
+                        } else {
+                          item.meta.forEach(m => {
+                            if (isClass || isCollege) return; // Classes and Colleges don't use facts
+                            const lower = m.toLowerCase();
+                            if (lower.includes('autonomous') || lower.includes('university')) {
+                              facts.push({ icon: Building2, value: m.split('•')[0].trim(), label: 'Status' });
+                            } else if (lower.includes('naac') || lower.includes('grade')) {
+                              facts.push({ icon: Star, value: m.split('•').find(p => p.toLowerCase().includes('naac') || p.toLowerCase().includes('grade'))?.trim() || m, label: 'Rating' });
+                            } else if (lower.includes('student') || lower.includes('batch')) {
+                              facts.push({ icon: Users, value: m, label: 'Students' });
+                            } else if (lower.includes('year') || lower.includes('exp')) {
+                              facts.push({ icon: Award, value: m, label: 'Experience' });
+                            } else {
+                              facts.push({ icon: CheckCircle, value: m, label: isCollege ? 'Info' : isCourse ? 'Feature' : 'Info' });
+                            }
+                          });
+                        }
+
+                        // Decorative header icon (replaces the previous remote images, which returned 404)
+                        const HeaderIcon = isCutoff ? BarChart2 : isCollege ? Building2 : isCourse ? GraduationCap : isCareer ? TrendingUp : MonitorPlay;
+
+                        // Mirrors handleActionClick targets so cards without a destination don't look clickable
+                        const isClickable = !!(
+                          item.category === 'careers' ||
+                          (item.category === 'classes' && item.slug) ||
+                          item.collegeSlug ||
+                          item.collegeId ||
+                          item.category === 'colleges' ||
+                          item.category === 'cutoffs'
+                        );
+
+                        return (
+                          <article
+                            key={item.id}
+                            className={`result-card-anim group flex flex-col p-0 min-w-0 rounded-2xl bg-white dark:bg-[#0D1828] transition-all duration-200 shadow-sm border border-slate-200 dark:border-[#D3B5E8]/12 text-left relative ${isClickable ? 'cursor-pointer hover:bg-slate-50 dark:hover:bg-[#121f33] hover:shadow-md hover:border-[#007DCC]/50 dark:hover:border-[#007DCC]/50' : ''}`}
+                            data-category={item.category}
+                            onClick={isClickable ? () => handleActionClick(item) : undefined}
                           >
-                            <Bookmark className={`w-4 h-4 ${savedItemIds?.includes(item.id) ? 'fill-[#19A7E8] text-[#19A7E8]' : 'text-white'}`} />
-                          </button>
-                        </div>
+                            {/* HEADER (gradient + category icon) */}
+                            <div className="relative w-full h-[90px] sm:h-[110px] rounded-t-[15px] bg-gradient-to-br from-[#091540] via-[#0B3366] to-[#007DCC] shrink-0 flex items-start justify-between gap-2 p-3 sm:p-4 overflow-hidden">
+                              <HeaderIcon
+                                aria-hidden="true"
+                                className="pointer-events-none absolute -right-2 -bottom-2 w-20 h-20 sm:w-28 sm:h-28 text-white/10"
+                              />
 
-                        {/* CONTENT */}
-                        <div className="p-3 sm:p-4 flex flex-col flex-grow min-w-0">
+                              {/* BADGE */}
+                              <span className="relative min-w-0 px-2 py-1 rounded bg-[#007DCC] border border-white/20 text-white text-[10px] font-bold uppercase tracking-wider leading-snug break-words shadow-sm">
+                                {item.badgeCategory || (isCutoff ? 'CUTOFF' : isCollege ? 'COLLEGE' : isCourse ? 'COURSE' : isCareer ? 'CAREER' : 'CLASS')}
+                              </span>
 
-                          {/* TITLE & LOCATION */}
-                          <div className="mb-2 min-w-0 flex flex-col gap-1">
-                            <h2 className={`text-[13px] sm:text-[14px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug break-words ${isClickable ? 'group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors' : ''}`}>
+                              {/* SAVE BUTTON */}
+                              <button
+                                type="button"
+                                aria-label="Save"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  if (onSaveItem) onSaveItem(item);
+                                }}
+                                className="relative shrink-0 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 transition-colors border border-white/20"
+                              >
+                                <Bookmark className={`w-4 h-4 ${savedItemIds?.includes(item.id) ? 'fill-[#19A7E8] text-[#19A7E8]' : 'text-white'}`} />
+                              </button>
+                            </div>
+
+                            {/* CONTENT */}
+                            <div className="p-3 sm:p-4 flex flex-col flex-grow min-w-0">
+
+                              {/* TITLE & LOCATION */}
+                              <div className="mb-2 min-w-0 flex flex-col gap-1">
+                                <h2 className={`text-[13px] sm:text-[14px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug break-words ${isClickable ? 'group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors' : ''}`}>
+                                  {item.title}
+                                </h2>
+
+                                <div className="flex items-start gap-1 text-slate-500 dark:text-[#A9B8CA] min-w-0">
+                                  <MapPin className="w-3.5 h-3.5 shrink-0 mt-[2px] text-slate-400 dark:text-[#71839A]" />
+                                  <span className="min-w-0 text-xs leading-snug break-words font-medium">
+                                    {item.category === 'cutoffs'
+                                      ? (item.meta && item.meta[1] ? item.meta[1].replace('Region: ', '') + ', Mumbai' : item.badgeSub || 'Mumbai')
+                                      : item.badgeSub || 'Mumbai'}
+                                  </span>
+                                </div>
+
+                                {(isCutoff || (isCollege && item.subtitle?.includes('Cutoff:'))) && (
+                                  <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
+                                    <span className="text-sm font-extrabold text-[#007DCC] dark:text-[#86cfff] bg-[#007DCC]/10 dark:bg-[#86cfff]/10 px-2 py-0.5 rounded-md">
+                                      {isCutoff ? (item.badgeSub ? item.badgeSub.split(' ')[0] : 'Cutoff') : item.subtitle!.split('Cutoff:')[1].trim()}
+                                    </span>
+                                    <span className="text-[11px] font-semibold text-slate-600 dark:text-[#A9B8CA] uppercase tracking-wide">
+                                      FYJC Cutoff
+                                    </span>
+                                  </div>
+                                )}
+                              </div>
+
+                              {/* DESKTOP ONLY: TAGS & FACTS */}
+                              <div className="hidden sm:flex flex-col flex-grow min-w-0">
+                                {(!isCutoff && streams.length > 0) && (
+                                  <div className="flex flex-wrap gap-1.5 mb-3 min-w-0">
+                                    {streams.slice(0, 2).map((stream, idx) => (
+                                      <span key={idx} className="max-w-full px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#162133] border border-slate-200 dark:border-white/5 text-slate-600 dark:text-[#A9B8CA] text-[11px] leading-snug font-medium break-words">
+                                        {stream}
+                                      </span>
+                                    ))}
+                                  </div>
+                                )}
+
+                                {facts.length > 0 && (
+                                  <div className="mt-auto flex items-stretch bg-slate-50 dark:bg-[#121E30] rounded-xl p-2 border border-slate-200 dark:border-white/5 mb-3 min-w-0">
+                                    {facts.slice(0, 2).map((fact, idx) => {
+                                      const FactIcon = fact.icon;
+                                      return (
+                                        <div key={idx} className="flex-1 flex flex-col items-center justify-center text-center px-1 border-r border-slate-200 dark:border-white/5 last:border-0 min-w-0">
+                                          <FactIcon className="w-3.5 h-3.5 text-[#19A7E8] shrink-0 mb-1" />
+                                          <span className="w-full text-slate-800 dark:text-[#F4F7FB] font-semibold text-xs leading-snug break-words">{fact.value}</span>
+                                          <span className="w-full text-[10px] text-slate-500 dark:text-[#71839A] mt-0.5 leading-snug break-words">{fact.label}</span>
+                                        </div>
+                                      );
+                                    })}
+                                  </div>
+                                )}
+                                <div className={`${facts.length === 0 ? 'mt-auto' : ''}`} />
+                              </div>
+
+                              {/* MOBILE ONLY: CATEGORY SPECIFIC CONTENT */}
+                              <div className="flex sm:hidden flex-col flex-grow min-w-0 gap-1.5 mb-2 mt-auto text-[11px] text-slate-600 dark:text-[#A9B8CA] font-medium leading-snug">
+                                {(isCollege && !isCutoff) && (
+                                  <div><span className="text-slate-400 font-normal">Cutoff:</span> Check Details</div>
+                                )}
+
+                                {isCourse && (
+                                  <>
+                                    <div><span className="text-slate-400 font-normal">Stream:</span> {streams[0] || 'General'}</div>
+                                    <div>
+                                      <span className="text-slate-400 font-normal">Fees:</span> {
+                                        item.subtitle?.includes('₹')
+                                          ? item.subtitle.split('•').find((p: string) => p.includes('₹'))?.replace('Approx.', '').trim()
+                                          : 'View Details'
+                                      }
+                                    </div>
+                                  </>
+                                )}
+                                {isCareer && (
+                                  <>
+                                    <div><span className="text-slate-400 font-normal">Industry:</span> {streams[0] || 'General'}</div>
+                                    {item.meta?.[0] && <div><span className="text-slate-400 font-normal">Level:</span> {item.meta[0]}</div>}
+                                  </>
+                                )}
+                              </div>
+
+                            </div>
+                          </article>
+                        );
+                      }
+
+                      return (
+                        <article
+                          key={item.id}
+                          className="result-card-anim group flex flex-col justify-between p-3 sm:p-4 rounded-2xl bg-white dark:bg-[#0D1828] hover:bg-slate-50 dark:hover:bg-[#121f33] transition-all duration-200 shadow-sm hover:shadow-md border border-slate-200 dark:border-[#D3B5E8]/12 hover:border-[#007DCC]/50 dark:hover:border-[#D3B5E8]/30 text-left cursor-pointer min-w-0"
+                          data-category={item.category}
+                          onClick={() => handleActionClick(item)}
+                        >
+                          {/* Top: category type + locality */}
+                          <div className="mb-2 min-w-0">
+                            <div className="flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 mb-1.5 min-w-0">
+                              <span
+                                className={`text-[9px] font-bold uppercase tracking-widest ${item.tagColor === 'tertiary'
+                                    ? 'text-emerald-600 dark:text-[#51dcbc]'
+                                    : item.tagColor === 'secondary'
+                                      ? 'text-[#007DCC] dark:text-[#86cfff]'
+                                      : item.tagColor === 'lavender'
+                                        ? 'text-purple-500 dark:text-[#D3B5E8]'
+                                        : 'text-[#007DCC] dark:text-[#86cfff]'
+                                  }`}
+                              >
+                                {item.badgeCategory}
+                              </span>
+                              {item.badgeSub && (
+                                <span className="min-w-0 text-[9px] sm:text-[10px] text-slate-400 dark:text-[#71839A] break-words">
+                                  · {item.badgeSub}
+                                </span>
+                              )}
+                            </div>
+
+                            {/* Name */}
+                            <h2 className="text-xs sm:text-[13px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug tracking-tight group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors break-words">
                               {item.title}
                             </h2>
 
-                            <div className="flex items-start gap-1 text-slate-500 dark:text-[#A9B8CA] min-w-0">
-                              <MapPin className="w-3.5 h-3.5 shrink-0 mt-[2px] text-slate-400 dark:text-[#71839A]" />
-                              <span className="min-w-0 text-xs leading-snug break-words font-medium">
-                                {item.category === 'cutoffs'
-                                  ? (item.meta && item.meta[1] ? item.meta[1].replace('Region: ', '') + ', Mumbai' : item.badgeSub || 'Mumbai')
-                                  : item.badgeSub || 'Mumbai'}
-                              </span>
-                            </div>
-                            
-                            {isCutoff && (
-                              <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
-                                <span className="text-sm font-extrabold text-[#007DCC] dark:text-[#86cfff] bg-[#007DCC]/10 dark:bg-[#86cfff]/10 px-2 py-0.5 rounded-md">
-                                  {item.badgeSub ? item.badgeSub.split(' ')[0] : 'Cutoff'}
-                                </span>
-                                <span className="text-[11px] font-semibold text-slate-600 dark:text-[#A9B8CA] uppercase tracking-wide">
-                                  FYJC Cutoff
-                                </span>
-                              </div>
+                            {/* Description */}
+                            {(item.category === 'colleges' && streams.length > 0) ? (
+                              <p className="mt-1 text-[10px] sm:text-[11px] text-slate-500 dark:text-[#71839A] break-words">
+                                {streams.join(' · ')}
+                              </p>
+                            ) : item.subtitle && (
+                              <p className="mt-1 text-[10px] sm:text-[11px] text-slate-500 dark:text-[#71839A] break-words">
+                                {item.subtitle.replace(/^Specialization:\s*/i, '')}
+                              </p>
                             )}
                           </div>
-
-                          {/* DESKTOP ONLY: TAGS & FACTS */}
-                          <div className="hidden sm:flex flex-col flex-grow min-w-0">
-                            {(!isCutoff && streams.length > 0) && (
-                              <div className="flex flex-wrap gap-1.5 mb-3 min-w-0">
-                                {streams.slice(0, 2).map((stream, idx) => (
-                                  <span key={idx} className="max-w-full px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-[#162133] border border-slate-200 dark:border-white/5 text-slate-600 dark:text-[#A9B8CA] text-[11px] leading-snug font-medium break-words">
-                                    {stream}
-                                  </span>
-                                ))}
-                              </div>
-                            )}
-
-                            {facts.length > 0 && (
-                              <div className="mt-auto flex items-stretch bg-slate-50 dark:bg-[#121E30] rounded-xl p-2 border border-slate-200 dark:border-white/5 mb-3 min-w-0">
-                                {facts.slice(0, 2).map((fact, idx) => {
-                                  const FactIcon = fact.icon;
-                                  return (
-                                    <div key={idx} className="flex-1 flex flex-col items-center justify-center text-center px-1 border-r border-slate-200 dark:border-white/5 last:border-0 min-w-0">
-                                      <FactIcon className="w-3.5 h-3.5 text-[#19A7E8] shrink-0 mb-1" />
-                                      <span className="w-full text-slate-800 dark:text-[#F4F7FB] font-semibold text-xs leading-snug break-words">{fact.value}</span>
-                                      <span className="w-full text-[10px] text-slate-500 dark:text-[#71839A] mt-0.5 leading-snug break-words">{fact.label}</span>
-                                    </div>
-                                  );
-                                })}
-                              </div>
-                            )}
-                            <div className={`${facts.length === 0 ? 'mt-auto' : ''}`} />
-                          </div>
-
-                          {/* MOBILE ONLY: CATEGORY SPECIFIC CONTENT */}
-                          <div className="flex sm:hidden flex-col flex-grow min-w-0 gap-1.5 mb-2 mt-auto text-[11px] text-slate-600 dark:text-[#A9B8CA] font-medium leading-snug">
-                            {(isCollege && !isCutoff) && (
-                               <div><span className="text-slate-400 font-normal">Cutoff:</span> Check Details</div>
-                            )}
-
-                            {isCourse && (
-                               <>
-                                 <div><span className="text-slate-400 font-normal">Stream:</span> {streams[0] || 'General'}</div>
-                                 <div>
-                                   <span className="text-slate-400 font-normal">Fees:</span> {
-                                     item.subtitle?.includes('₹') 
-                                       ? item.subtitle.split('•').find((p: string) => p.includes('₹'))?.replace('Approx.', '').trim()
-                                       : 'View Details'
-                                   }
-                                 </div>
-                               </>
-                            )}
-                            {isCareer && (
-                               <>
-                                 <div><span className="text-slate-400 font-normal">Industry:</span> {streams[0] || 'General'}</div>
-                                 {item.meta?.[0] && <div><span className="text-slate-400 font-normal">Level:</span> {item.meta[0]}</div>}
-                               </>
-                            )}
-                          </div>
-
-                        </div>
-                      </article>
-                    );
-                  }
-
-                  return (
-                  <article
-                    key={item.id}
-                    className="result-card-anim group flex flex-col justify-between p-3 sm:p-4 rounded-2xl bg-white dark:bg-[#0D1828] hover:bg-slate-50 dark:hover:bg-[#121f33] transition-all duration-200 shadow-sm hover:shadow-md border border-slate-200 dark:border-[#D3B5E8]/12 hover:border-[#007DCC]/50 dark:hover:border-[#D3B5E8]/30 text-left cursor-pointer min-w-0"
-                    data-category={item.category}
-                    onClick={() => handleActionClick(item)}
-                  >
-                    {/* Top: category type + locality */}
-                    <div className="mb-2 min-w-0">
-                      <div className="flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 mb-1.5 min-w-0">
-                        <span
-                          className={`text-[9px] font-bold uppercase tracking-widest ${
-                            item.tagColor === 'tertiary'
-                              ? 'text-emerald-600 dark:text-[#51dcbc]'
-                              : item.tagColor === 'secondary'
-                              ? 'text-[#007DCC] dark:text-[#86cfff]'
-                              : item.tagColor === 'lavender'
-                              ? 'text-purple-500 dark:text-[#D3B5E8]'
-                              : 'text-[#007DCC] dark:text-[#86cfff]'
-                          }`}
-                        >
-                          {item.badgeCategory}
-                        </span>
-                        {item.badgeSub && (
-                          <span className="min-w-0 text-[9px] sm:text-[10px] text-slate-400 dark:text-[#71839A] break-words">
-                            · {item.badgeSub}
-                          </span>
-                        )}
-                      </div>
-
-                      {/* Name */}
-                      <h2 className="text-xs sm:text-[13px] font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug tracking-tight group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors break-words">
-                        {item.title}
-                      </h2>
-
-                      {/* Description */}
-                      {(item.category === 'colleges' && streams.length > 0) ? (
-                        <p className="mt-1 text-[10px] sm:text-[11px] text-slate-500 dark:text-[#71839A] break-words">
-                          {streams.join(' · ')}
-                        </p>
-                      ) : item.subtitle && (
-                        <p className="mt-1 text-[10px] sm:text-[11px] text-slate-500 dark:text-[#71839A] break-words">
-                          {item.subtitle.replace(/^Specialization:\s*/i, '')}
-                        </p>
-                      )}
-                    </div>
-                  </article>
-                  );
-                })
-              )}
-            </div>
-
-            {/* Pagination Controls */}
-            {totalPages > 1 && (
-              <div className="flex items-center justify-center gap-2 mt-12 mb-8">
-                <button
-                  onClick={() => handlePageChange(Math.max(1, safePage - 1))}
-                  disabled={safePage === 1}
-                  className="p-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-[#A9B8CA] hover:bg-slate-50 dark:hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-                >
-                  <ArrowLeft className="w-5 h-5" />
-                </button>
-                <div className="flex items-center gap-1.5 mx-2">
-                  {[...Array(totalPages)].map((_, i) => {
-                    const page = i + 1;
-                    // Simple windowing: show first, last, and +/- 1 around current
-                    if (
-                      page === 1 || 
-                      page === totalPages || 
-                      (page >= safePage - 1 && page <= safePage + 1)
-                    ) {
-                      return (
-                        <button
-                          key={page}
-                          onClick={() => handlePageChange(page)}
-                          className={`w-9 h-9 rounded-xl text-sm font-bold flex items-center justify-center transition-all ${
-                            safePage === page
-                              ? 'bg-[#007DCC] text-white shadow-sm'
-                              : 'bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-white/5'
-                          }`}
-                        >
-                          {page}
-                        </button>
+                        </article>
                       );
-                    }
-                    if (page === safePage - 2 || page === safePage + 2) {
-                      return <span key={page} className="text-slate-400 dark:text-slate-600 px-1">...</span>;
-                    }
-                    return null;
-                  })}
+                    })
+                  )}
                 </div>
-                <button
-                  onClick={() => handlePageChange(Math.min(totalPages, safePage + 1))}
-                  disabled={safePage === totalPages}
-                  className="p-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-[#A9B8CA] hover:bg-slate-50 dark:hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-                >
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-              </div>
+
+                {/* Pagination Controls */}
+                {totalPages > 1 && (
+                  <div className="flex items-center justify-center gap-2 mt-12 mb-8">
+                    <button
+                      onClick={() => handlePageChange(Math.max(1, safePage - 1))}
+                      disabled={safePage === 1}
+                      className="p-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-[#A9B8CA] hover:bg-slate-50 dark:hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                    >
+                      <ArrowLeft className="w-5 h-5" />
+                    </button>
+                    <div className="flex items-center gap-1.5 mx-2">
+                      {[...Array(totalPages)].map((_, i) => {
+                        const page = i + 1;
+                        // Simple windowing: show first, last, and +/- 1 around current
+                        if (
+                          page === 1 ||
+                          page === totalPages ||
+                          (page >= safePage - 1 && page <= safePage + 1)
+                        ) {
+                          return (
+                            <button
+                              key={page}
+                              onClick={() => handlePageChange(page)}
+                              className={`w-9 h-9 rounded-xl text-sm font-bold flex items-center justify-center transition-all ${safePage === page
+                                  ? 'bg-[#007DCC] text-white shadow-sm'
+                                  : 'bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-white/5'
+                                }`}
+                            >
+                              {page}
+                            </button>
+                          );
+                        }
+                        if (page === safePage - 2 || page === safePage + 2) {
+                          return <span key={page} className="text-slate-400 dark:text-slate-600 px-1">...</span>;
+                        }
+                        return null;
+                      })}
+                    </div>
+                    <button
+                      onClick={() => handlePageChange(Math.min(totalPages, safePage + 1))}
+                      disabled={safePage === totalPages}
+                      className="p-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-[#A9B8CA] hover:bg-slate-50 dark:hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                    >
+                      <ArrowRight className="w-5 h-5" />
+                    </button>
+                  </div>
+                )}
+              </>
             )}
-            </>
-          )}
-        </div>
+          </div>
         </div>
 
       </div>
