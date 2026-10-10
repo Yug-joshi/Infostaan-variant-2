@@ -47,7 +47,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 84.0,
+    "cutoff": 84,
     "choiceCode": "MU11607AFE"
   },
   {
@@ -127,7 +127,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 70.0,
+    "cutoff": 70,
     "choiceCode": "MU7358ANE"
   },
   {
@@ -137,7 +137,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 69.0,
+    "cutoff": 69,
     "choiceCode": "MU6344AGE"
   },
   {
@@ -197,7 +197,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 66.0,
+    "cutoff": 66,
     "choiceCode": "MU6213AGE"
   },
   {
@@ -257,7 +257,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 65.0,
+    "cutoff": 65,
     "choiceCode": "MU6854AGU"
   },
   {
@@ -287,7 +287,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 64.0,
+    "cutoff": 64,
     "choiceCode": "MU11609AGE"
   },
   {
@@ -297,7 +297,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 64.0,
+    "cutoff": 64,
     "choiceCode": "MU11747AFE"
   },
   {
@@ -307,7 +307,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 64.0,
+    "cutoff": 64,
     "choiceCode": "MU12315AFE"
   },
   {
@@ -327,7 +327,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 63.0,
+    "cutoff": 63,
     "choiceCode": "MU6751AGH"
   },
   {
@@ -337,7 +337,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 63.0,
+    "cutoff": 63,
     "choiceCode": "MU7283AFE"
   },
   {
@@ -367,7 +367,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 62.0,
+    "cutoff": 62,
     "choiceCode": "MU7188AFE"
   },
   {
@@ -427,7 +427,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6776AGE"
   },
   {
@@ -437,7 +437,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6809AGH"
   },
   {
@@ -447,7 +447,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU11569AFE"
   },
   {
@@ -467,7 +467,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 59.0,
+    "cutoff": 59,
     "choiceCode": "MU12148AFE"
   },
   {
@@ -507,7 +507,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 58.0,
+    "cutoff": 58,
     "choiceCode": "MU6529AFE"
   },
   {
@@ -527,7 +527,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 57.0,
+    "cutoff": 57,
     "choiceCode": "MU6730ANE"
   },
   {
@@ -597,7 +597,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 55.0,
+    "cutoff": 55,
     "choiceCode": "MU6665ANH"
   },
   {
@@ -607,7 +607,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 55.0,
+    "cutoff": 55,
     "choiceCode": "MU7480AGE"
   },
   {
@@ -617,7 +617,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 55.0,
+    "cutoff": 55,
     "choiceCode": "MU11458AGM"
   },
   {
@@ -767,7 +767,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 52.0,
+    "cutoff": 52,
     "choiceCode": "MU6317AFE"
   },
   {
@@ -777,7 +777,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 52.0,
+    "cutoff": 52,
     "choiceCode": "MU6659AFM"
   },
   {
@@ -937,7 +937,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 50.0,
+    "cutoff": 50,
     "choiceCode": "MU6179AGU"
   },
   {
@@ -1017,7 +1017,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU6524AGE"
   },
   {
@@ -1117,7 +1117,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 48.0,
+    "cutoff": 48,
     "choiceCode": "MU11592ANE"
   },
   {
@@ -1167,7 +1167,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 47.0,
+    "cutoff": 47,
     "choiceCode": "MU6427AGE"
   },
   {
@@ -1177,7 +1177,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 47.0,
+    "cutoff": 47,
     "choiceCode": "MU7105AGE"
   },
   {
@@ -1187,7 +1187,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 47.0,
+    "cutoff": 47,
     "choiceCode": "MU7135AFE"
   },
   {
@@ -1197,7 +1197,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 47.0,
+    "cutoff": 47,
     "choiceCode": "MU11460AFM"
   },
   {
@@ -1327,7 +1327,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU6618AFE"
   },
   {
@@ -1337,7 +1337,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU7077AFE"
   },
   {
@@ -1347,7 +1347,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU11426AFM"
   },
   {
@@ -1447,7 +1447,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 45.0,
+    "cutoff": 45,
     "choiceCode": "MU7125AGE"
   },
   {
@@ -1597,7 +1597,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU6204APM"
   },
   {
@@ -1607,7 +1607,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU7446AFE"
   },
   {
@@ -1617,7 +1617,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU11425AFM"
   },
   {
@@ -1627,7 +1627,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU11546AGE"
   },
   {
@@ -1637,7 +1637,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU11661APM"
   },
   {
@@ -1717,7 +1717,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU6181AFE"
   },
   {
@@ -1727,7 +1727,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU7284AFE"
   },
   {
@@ -1917,7 +1917,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU6599AGE"
   },
   {
@@ -1927,7 +1927,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU6857AFE"
   },
   {
@@ -1937,7 +1937,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU7118AFE"
   },
   {
@@ -1947,7 +1947,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU11525AFM"
   },
   {
@@ -2117,7 +2117,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 41.0,
+    "cutoff": 41,
     "choiceCode": "MU6953AFE"
   },
   {
@@ -2127,7 +2127,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 41.0,
+    "cutoff": 41,
     "choiceCode": "MU7353AGM"
   },
   {
@@ -2137,7 +2137,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 41.0,
+    "cutoff": 41,
     "choiceCode": "MU7542AGM"
   },
   {
@@ -2317,7 +2317,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6187AFE"
   },
   {
@@ -2327,7 +2327,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6260APH"
   },
   {
@@ -2337,7 +2337,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6297APM"
   },
   {
@@ -2347,7 +2347,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6307AFM"
   },
   {
@@ -2357,7 +2357,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6780AGE"
   },
   {
@@ -2367,7 +2367,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6851AFE"
   },
   {
@@ -2377,7 +2377,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU7441AFE"
   },
   {
@@ -2387,7 +2387,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU11538AFM"
   },
   {
@@ -2397,7 +2397,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU11652AFM"
   },
   {
@@ -2677,7 +2677,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6296AFE"
   },
   {
@@ -2687,7 +2687,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6533AFE"
   },
   {
@@ -2697,7 +2697,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6616ANM"
   },
   {
@@ -2707,7 +2707,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6687AGM"
   },
   {
@@ -2717,7 +2717,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6774AGE"
   },
   {
@@ -2727,7 +2727,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6832AGM"
   },
   {
@@ -2737,7 +2737,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU7337AFM"
   },
   {
@@ -2747,7 +2747,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU7451AGM"
   },
   {
@@ -2757,7 +2757,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU7499AFM"
   },
   {
@@ -2767,7 +2767,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU7531AGM"
   },
   {
@@ -3157,7 +3157,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU6377APM"
   },
   {
@@ -3167,7 +3167,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU6726AOE"
   },
   {
@@ -3177,7 +3177,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU7194AFE"
   },
   {
@@ -3187,7 +3187,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU7360AGM"
   },
   {
@@ -3197,7 +3197,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU7524APM"
   },
   {
@@ -3207,7 +3207,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU11520ANE"
   },
   {
@@ -3637,7 +3637,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU6170AGM"
   },
   {
@@ -3647,7 +3647,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU6527AGE"
   },
   {
@@ -3657,7 +3657,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU6587AGM"
   },
   {
@@ -3667,7 +3667,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU6603AFE"
   },
   {
@@ -3677,7 +3677,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU6819AGE"
   },
   {
@@ -3687,7 +3687,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU7003AFE"
   },
   {
@@ -3697,7 +3697,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU7323AGM"
   },
   {
@@ -3707,7 +3707,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU7471AFM"
   },
   {
@@ -3717,7 +3717,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU7478APM"
   },
   {
@@ -3727,7 +3727,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU7481AGM"
   },
   {
@@ -3737,7 +3737,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU7495AGM"
   },
   {
@@ -3747,7 +3747,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU7541AFM"
   },
   {
@@ -4387,7 +4387,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6170APM"
   },
   {
@@ -4397,7 +4397,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6196AFM"
   },
   {
@@ -4407,7 +4407,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6273AGM"
   },
   {
@@ -4417,7 +4417,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6308AGM"
   },
   {
@@ -4427,7 +4427,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6430AFM"
   },
   {
@@ -4437,7 +4437,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6458AGM"
   },
   {
@@ -4447,7 +4447,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6497APM"
   },
   {
@@ -4457,7 +4457,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6641ANM"
   },
   {
@@ -4467,7 +4467,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6753ANE"
   },
   {
@@ -4477,7 +4477,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6941AGM"
   },
   {
@@ -4487,7 +4487,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU7151AGE"
   },
   {
@@ -4497,7 +4497,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU7333AGM"
   },
   {
@@ -4507,7 +4507,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU7341AGM"
   },
   {
@@ -4517,7 +4517,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU7484APM"
   },
   {
@@ -4527,7 +4527,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU7513APM"
   },
   {
@@ -4537,7 +4537,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU11430APM"
   },
   {
@@ -4547,7 +4547,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU11472AGM"
   },
   {
@@ -4557,7 +4557,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU11572ANM"
   },
   {
@@ -5067,7 +5067,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6136APM"
   },
   {
@@ -5077,7 +5077,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6166AGM"
   },
   {
@@ -5087,7 +5087,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6196APM"
   },
   {
@@ -5097,7 +5097,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6400AFE"
   },
   {
@@ -5107,7 +5107,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6408AFE"
   },
   {
@@ -5117,7 +5117,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6676AFE"
   },
   {
@@ -5127,7 +5127,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6880AGE"
   },
   {
@@ -5137,7 +5137,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6934AGM"
   },
   {
@@ -5147,7 +5147,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6964AGE"
   },
   {
@@ -5157,7 +5157,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6969AGE"
   },
   {
@@ -5167,7 +5167,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU7070AGE"
   },
   {
@@ -5177,7 +5177,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU7325AGM"
   },
   {
@@ -5187,7 +5187,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU7447AGM"
   },
   {
@@ -5197,7 +5197,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU11483AFM"
   },
   {
@@ -5207,7 +5207,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Arts",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU11524AFM"
   },
   {
@@ -5237,7 +5237,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 91.0,
+    "cutoff": 91,
     "choiceCode": "MU6718CGE"
   },
   {
@@ -5357,7 +5357,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 86.0,
+    "cutoff": 86,
     "choiceCode": "MU7024CGE"
   },
   {
@@ -5407,7 +5407,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 84.0,
+    "cutoff": 84,
     "choiceCode": "MU11609CGE"
   },
   {
@@ -5457,7 +5457,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 83.0,
+    "cutoff": 83,
     "choiceCode": "MU11546CNE"
   },
   {
@@ -5517,7 +5517,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 82.0,
+    "cutoff": 82,
     "choiceCode": "MU7206CFE"
   },
   {
@@ -5567,7 +5567,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 81.0,
+    "cutoff": 81,
     "choiceCode": "MU6344CGE"
   },
   {
@@ -5577,7 +5577,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 81.0,
+    "cutoff": 81,
     "choiceCode": "MU7129CGE"
   },
   {
@@ -5587,7 +5587,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 80.0,
+    "cutoff": 80,
     "choiceCode": "MU6830CGE"
   },
   {
@@ -5597,7 +5597,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 80.0,
+    "cutoff": 80,
     "choiceCode": "MU7125CGE"
   },
   {
@@ -5637,7 +5637,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 79.0,
+    "cutoff": 79,
     "choiceCode": "MU6914CFE"
   },
   {
@@ -5647,7 +5647,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 79.0,
+    "cutoff": 79,
     "choiceCode": "MU7170CGE"
   },
   {
@@ -5697,7 +5697,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 78.0,
+    "cutoff": 78,
     "choiceCode": "MU6213CNE"
   },
   {
@@ -5777,7 +5777,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 77.0,
+    "cutoff": 77,
     "choiceCode": "MU7156CGE"
   },
   {
@@ -5787,7 +5787,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 77.0,
+    "cutoff": 77,
     "choiceCode": "MU7171CGE"
   },
   {
@@ -5917,7 +5917,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 73.0,
+    "cutoff": 73,
     "choiceCode": "MU7146CGE"
   },
   {
@@ -5927,7 +5927,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 73.0,
+    "cutoff": 73,
     "choiceCode": "MU12221CFE"
   },
   {
@@ -5967,7 +5967,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 72.0,
+    "cutoff": 72,
     "choiceCode": "MU6524CGE"
   },
   {
@@ -5977,7 +5977,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 72.0,
+    "cutoff": 72,
     "choiceCode": "MU7146CFE"
   },
   {
@@ -5987,7 +5987,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 72.0,
+    "cutoff": 72,
     "choiceCode": "MU11630CFE"
   },
   {
@@ -6047,7 +6047,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 71.0,
+    "cutoff": 71,
     "choiceCode": "MU6414CFE"
   },
   {
@@ -6057,7 +6057,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 71.0,
+    "cutoff": 71,
     "choiceCode": "MU6817CGE"
   },
   {
@@ -6067,7 +6067,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 71.0,
+    "cutoff": 71,
     "choiceCode": "MU6981CGE"
   },
   {
@@ -6077,7 +6077,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 71.0,
+    "cutoff": 71,
     "choiceCode": "MU11575CFE"
   },
   {
@@ -6157,7 +6157,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 70.0,
+    "cutoff": 70,
     "choiceCode": "MU7268CFE"
   },
   {
@@ -6327,7 +6327,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 67.0,
+    "cutoff": 67,
     "choiceCode": "MU6517CGE"
   },
   {
@@ -6457,7 +6457,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 66.0,
+    "cutoff": 66,
     "choiceCode": "MU6525CFE"
   },
   {
@@ -6547,7 +6547,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 65.0,
+    "cutoff": 65,
     "choiceCode": "MU7011CFE"
   },
   {
@@ -6557,7 +6557,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 65.0,
+    "cutoff": 65,
     "choiceCode": "MU7255CNE"
   },
   {
@@ -6567,7 +6567,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 65.0,
+    "cutoff": 65,
     "choiceCode": "MU7484CGE"
   },
   {
@@ -6637,7 +6637,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 64.0,
+    "cutoff": 64,
     "choiceCode": "MU11679CFE"
   },
   {
@@ -6737,7 +6737,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 63.0,
+    "cutoff": 63,
     "choiceCode": "MU7493CFE"
   },
   {
@@ -6877,7 +6877,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 62.0,
+    "cutoff": 62,
     "choiceCode": "MU6781CGE"
   },
   {
@@ -6987,7 +6987,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 61.0,
+    "cutoff": 61,
     "choiceCode": "MU6638CGE"
   },
   {
@@ -6997,7 +6997,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 61.0,
+    "cutoff": 61,
     "choiceCode": "MU6747CGE"
   },
   {
@@ -7007,7 +7007,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 61.0,
+    "cutoff": 61,
     "choiceCode": "MU6875CGE"
   },
   {
@@ -7017,7 +7017,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 61.0,
+    "cutoff": 61,
     "choiceCode": "MU6980CFE"
   },
   {
@@ -7027,7 +7027,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 61.0,
+    "cutoff": 61,
     "choiceCode": "MU7011CGE"
   },
   {
@@ -7147,7 +7147,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6313CGE"
   },
   {
@@ -7157,7 +7157,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6427CGE"
   },
   {
@@ -7167,7 +7167,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6499CFE"
   },
   {
@@ -7177,7 +7177,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6813CFE"
   },
   {
@@ -7187,7 +7187,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6900CGE"
   },
   {
@@ -7197,7 +7197,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6990CGE"
   },
   {
@@ -7207,7 +7207,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU11569CFE"
   },
   {
@@ -7217,7 +7217,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU11618CFE"
   },
   {
@@ -7277,7 +7277,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 59.0,
+    "cutoff": 59,
     "choiceCode": "MU6681CGE"
   },
   {
@@ -7287,7 +7287,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 59.0,
+    "cutoff": 59,
     "choiceCode": "MU6707CNE"
   },
   {
@@ -7297,7 +7297,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 59.0,
+    "cutoff": 59,
     "choiceCode": "MU7242CNE"
   },
   {
@@ -7307,7 +7307,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 59.0,
+    "cutoff": 59,
     "choiceCode": "MU7416CFE"
   },
   {
@@ -7427,7 +7427,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 58.0,
+    "cutoff": 58,
     "choiceCode": "MU6614CFE"
   },
   {
@@ -7437,7 +7437,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 58.0,
+    "cutoff": 58,
     "choiceCode": "MU7531CGM"
   },
   {
@@ -7447,7 +7447,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 58.0,
+    "cutoff": 58,
     "choiceCode": "MU12129CFE"
   },
   {
@@ -7587,7 +7587,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 57.0,
+    "cutoff": 57,
     "choiceCode": "MU6166CGE"
   },
   {
@@ -7597,7 +7597,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 57.0,
+    "cutoff": 57,
     "choiceCode": "MU7084CFE"
   },
   {
@@ -7747,7 +7747,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 56.0,
+    "cutoff": 56,
     "choiceCode": "MU6513CGE"
   },
   {
@@ -7757,7 +7757,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 56.0,
+    "cutoff": 56,
     "choiceCode": "MU11489CFE"
   },
   {
@@ -7907,7 +7907,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 55.0,
+    "cutoff": 55,
     "choiceCode": "MU6188CFE"
   },
   {
@@ -7917,7 +7917,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 55.0,
+    "cutoff": 55,
     "choiceCode": "MU6240CFE"
   },
   {
@@ -7927,7 +7927,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 55.0,
+    "cutoff": 55,
     "choiceCode": "MU7086CFE"
   },
   {
@@ -8017,7 +8017,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 54.0,
+    "cutoff": 54,
     "choiceCode": "MU6996CGE"
   },
   {
@@ -8027,7 +8027,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 54.0,
+    "cutoff": 54,
     "choiceCode": "MU7054CGE"
   },
   {
@@ -8167,7 +8167,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 53.0,
+    "cutoff": 53,
     "choiceCode": "MU7072CFE"
   },
   {
@@ -8177,7 +8177,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 53.0,
+    "cutoff": 53,
     "choiceCode": "MU7145CNE"
   },
   {
@@ -8187,7 +8187,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 53.0,
+    "cutoff": 53,
     "choiceCode": "MU7484CPE"
   },
   {
@@ -8197,7 +8197,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 53.0,
+    "cutoff": 53,
     "choiceCode": "MU11433CNE"
   },
   {
@@ -8207,7 +8207,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 53.0,
+    "cutoff": 53,
     "choiceCode": "MU11554CFE"
   },
   {
@@ -8397,7 +8397,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 52.0,
+    "cutoff": 52,
     "choiceCode": "MU6176CFE"
   },
   {
@@ -8407,7 +8407,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 52.0,
+    "cutoff": 52,
     "choiceCode": "MU6535CFE"
   },
   {
@@ -8417,7 +8417,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 52.0,
+    "cutoff": 52,
     "choiceCode": "MU6575CFE"
   },
   {
@@ -8427,7 +8427,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 52.0,
+    "cutoff": 52,
     "choiceCode": "MU7056CGE"
   },
   {
@@ -8587,7 +8587,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 51.0,
+    "cutoff": 51,
     "choiceCode": "MU6281CNE"
   },
   {
@@ -8597,7 +8597,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 51.0,
+    "cutoff": 51,
     "choiceCode": "MU6559CNE"
   },
   {
@@ -8817,7 +8817,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 50.0,
+    "cutoff": 50,
     "choiceCode": "MU6334CNE"
   },
   {
@@ -8827,7 +8827,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 50.0,
+    "cutoff": 50,
     "choiceCode": "MU6540CFE"
   },
   {
@@ -8837,7 +8837,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 50.0,
+    "cutoff": 50,
     "choiceCode": "MU6927CFE"
   },
   {
@@ -8847,7 +8847,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 50.0,
+    "cutoff": 50,
     "choiceCode": "MU7154COE"
   },
   {
@@ -8857,7 +8857,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 50.0,
+    "cutoff": 50,
     "choiceCode": "MU7389CGU"
   },
   {
@@ -9017,7 +9017,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU6338CFE"
   },
   {
@@ -9027,7 +9027,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU7002CFE"
   },
   {
@@ -9037,7 +9037,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU7132CNE"
   },
   {
@@ -9047,7 +9047,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU7289CFE"
   },
   {
@@ -9057,7 +9057,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU7468CFE"
   },
   {
@@ -9067,7 +9067,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU7509CPM"
   },
   {
@@ -9287,7 +9287,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 48.0,
+    "cutoff": 48,
     "choiceCode": "MU6771CFE"
   },
   {
@@ -9297,7 +9297,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 48.0,
+    "cutoff": 48,
     "choiceCode": "MU6856CFE"
   },
   {
@@ -9307,7 +9307,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 48.0,
+    "cutoff": 48,
     "choiceCode": "MU6930CFE"
   },
   {
@@ -9317,7 +9317,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 48.0,
+    "cutoff": 48,
     "choiceCode": "MU7480CNE"
   },
   {
@@ -9327,7 +9327,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 48.0,
+    "cutoff": 48,
     "choiceCode": "MU7527CGM"
   },
   {
@@ -9337,7 +9337,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 48.0,
+    "cutoff": 48,
     "choiceCode": "MU11648CFE"
   },
   {
@@ -9517,7 +9517,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 47.0,
+    "cutoff": 47,
     "choiceCode": "MU6572CNE"
   },
   {
@@ -9527,7 +9527,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 47.0,
+    "cutoff": 47,
     "choiceCode": "MU7247CFE"
   },
   {
@@ -9537,7 +9537,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 47.0,
+    "cutoff": 47,
     "choiceCode": "MU11472CGE"
   },
   {
@@ -9547,7 +9547,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 47.0,
+    "cutoff": 47,
     "choiceCode": "MU11490CFE"
   },
   {
@@ -9817,7 +9817,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU6864CFE"
   },
   {
@@ -9827,7 +9827,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU7449CFE"
   },
   {
@@ -9837,7 +9837,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU11570CFE"
   },
   {
@@ -9847,7 +9847,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU11604CFE"
   },
   {
@@ -9857,7 +9857,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU12146CFE"
   },
   {
@@ -10197,7 +10197,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 45.0,
+    "cutoff": 45,
     "choiceCode": "MU6306CFE"
   },
   {
@@ -10207,7 +10207,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 45.0,
+    "cutoff": 45,
     "choiceCode": "MU6827CNE"
   },
   {
@@ -10477,7 +10477,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU6327CPE"
   },
   {
@@ -10487,7 +10487,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU7014CFE"
   },
   {
@@ -10497,7 +10497,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU7371CPM"
   },
   {
@@ -10507,7 +10507,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU7496CGM"
   },
   {
@@ -10517,7 +10517,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU11560CFE"
   },
   {
@@ -10527,7 +10527,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU11584CFE"
   },
   {
@@ -10537,7 +10537,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU11914CFE"
   },
   {
@@ -10547,7 +10547,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU12200CFE"
   },
   {
@@ -10797,7 +10797,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU6269CFE"
   },
   {
@@ -10807,7 +10807,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU6324CNE"
   },
   {
@@ -10817,7 +10817,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU6672CPE"
   },
   {
@@ -10827,7 +10827,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU7127CNE"
   },
   {
@@ -10837,7 +10837,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU7341CFE"
   },
   {
@@ -10847,7 +10847,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU7476CFE"
   },
   {
@@ -10857,7 +10857,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU11557CPE"
   },
   {
@@ -10867,7 +10867,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU11564CFE"
   },
   {
@@ -10877,7 +10877,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU11626CFE"
   },
   {
@@ -11257,7 +11257,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU6627CGE"
   },
   {
@@ -11267,7 +11267,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU6673CFE"
   },
   {
@@ -11277,7 +11277,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU7112CFE"
   },
   {
@@ -11287,7 +11287,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU7336CFE"
   },
   {
@@ -11297,7 +11297,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU7348CFE"
   },
   {
@@ -11307,7 +11307,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU7366CFE"
   },
   {
@@ -11317,7 +11317,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU7469CFE"
   },
   {
@@ -11327,7 +11327,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU7471CFM"
   },
   {
@@ -11337,7 +11337,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU11435CFM"
   },
   {
@@ -11347,7 +11347,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU11601CNE"
   },
   {
@@ -11357,7 +11357,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU11611CFE"
   },
   {
@@ -11367,7 +11367,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU12010CFE"
   },
   {
@@ -11377,7 +11377,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU12568CFE"
   },
   {
@@ -11787,7 +11787,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 41.0,
+    "cutoff": 41,
     "choiceCode": "MU6317CFE"
   },
   {
@@ -11797,7 +11797,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 41.0,
+    "cutoff": 41,
     "choiceCode": "MU6336CFE"
   },
   {
@@ -11807,7 +11807,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 41.0,
+    "cutoff": 41,
     "choiceCode": "MU6769CFE"
   },
   {
@@ -11817,7 +11817,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 41.0,
+    "cutoff": 41,
     "choiceCode": "MU6988CFE"
   },
   {
@@ -11827,7 +11827,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 41.0,
+    "cutoff": 41,
     "choiceCode": "MU7399CPU"
   },
   {
@@ -11837,7 +11837,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 41.0,
+    "cutoff": 41,
     "choiceCode": "MU7473CFE"
   },
   {
@@ -11847,7 +11847,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 41.0,
+    "cutoff": 41,
     "choiceCode": "MU7474CNM"
   },
   {
@@ -11857,7 +11857,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 41.0,
+    "cutoff": 41,
     "choiceCode": "MU11425CPE"
   },
   {
@@ -11867,7 +11867,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 41.0,
+    "cutoff": 41,
     "choiceCode": "MU11605CFE"
   },
   {
@@ -12267,7 +12267,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6550CFE"
   },
   {
@@ -12277,7 +12277,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6571CFE"
   },
   {
@@ -12287,7 +12287,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6675CNE"
   },
   {
@@ -12297,7 +12297,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6820CPE"
   },
   {
@@ -12307,7 +12307,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6896CFE"
   },
   {
@@ -12317,7 +12317,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU7055CGE"
   },
   {
@@ -12327,7 +12327,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU7232CFE"
   },
   {
@@ -12337,7 +12337,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU7400CGM"
   },
   {
@@ -12347,7 +12347,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU7414CPM"
   },
   {
@@ -12357,7 +12357,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU7440CFE"
   },
   {
@@ -12367,7 +12367,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU11436CNE"
   },
   {
@@ -12377,7 +12377,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU11485CGM"
   },
   {
@@ -12387,7 +12387,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU11492CFE"
   },
   {
@@ -12397,7 +12397,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU11624CFE"
   },
   {
@@ -12407,7 +12407,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU11764CFE"
   },
   {
@@ -12957,7 +12957,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6377CPM"
   },
   {
@@ -12967,7 +12967,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6433CFE"
   },
   {
@@ -12977,7 +12977,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6479CFE"
   },
   {
@@ -12987,7 +12987,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6587CNE"
   },
   {
@@ -12997,7 +12997,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6676CFE"
   },
   {
@@ -13007,7 +13007,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6714CGE"
   },
   {
@@ -13017,7 +13017,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6785CGE"
   },
   {
@@ -13027,7 +13027,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6847CNE"
   },
   {
@@ -13037,7 +13037,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6989CFE"
   },
   {
@@ -13047,7 +13047,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU7128CNE"
   },
   {
@@ -13057,7 +13057,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU7323CGM"
   },
   {
@@ -13067,7 +13067,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU7463CFE"
   },
   {
@@ -13077,7 +13077,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU7486CPE"
   },
   {
@@ -13087,7 +13087,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU11440CFM"
   },
   {
@@ -13837,7 +13837,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU6177CPU"
   },
   {
@@ -13847,7 +13847,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU6231CFE"
   },
   {
@@ -13857,7 +13857,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU6250CFE"
   },
   {
@@ -13867,7 +13867,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU6458CGE"
   },
   {
@@ -13877,7 +13877,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU6508CNE"
   },
   {
@@ -13887,7 +13887,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU6531CNE"
   },
   {
@@ -13897,7 +13897,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU6641CNE"
   },
   {
@@ -13907,7 +13907,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU6659CFE"
   },
   {
@@ -13917,7 +13917,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU6707CGE"
   },
   {
@@ -13927,7 +13927,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU6784CGE"
   },
   {
@@ -13937,7 +13937,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU6857CFE"
   },
   {
@@ -13947,7 +13947,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU7046CGE"
   },
   {
@@ -13957,7 +13957,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU7293CFE"
   },
   {
@@ -13967,7 +13967,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU7312CFE"
   },
   {
@@ -13977,7 +13977,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU7325CGM"
   },
   {
@@ -13987,7 +13987,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU7355CGM"
   },
   {
@@ -13997,7 +13997,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU7543CNE"
   },
   {
@@ -14007,7 +14007,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU11494CNE"
   },
   {
@@ -14727,7 +14727,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU6169CNE"
   },
   {
@@ -14737,7 +14737,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU6395CNE"
   },
   {
@@ -14747,7 +14747,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU6408CFE"
   },
   {
@@ -14757,7 +14757,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU6463CNM"
   },
   {
@@ -14767,7 +14767,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU6518CFE"
   },
   {
@@ -14777,7 +14777,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU6541CNE"
   },
   {
@@ -14787,7 +14787,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU6544CFE"
   },
   {
@@ -14797,7 +14797,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU7000CGE"
   },
   {
@@ -14807,7 +14807,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU7036CNE"
   },
   {
@@ -14817,7 +14817,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU7049CFE"
   },
   {
@@ -14827,7 +14827,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU7208CFE"
   },
   {
@@ -14837,7 +14837,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU7238CFE"
   },
   {
@@ -14847,7 +14847,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU7280CFE"
   },
   {
@@ -14857,7 +14857,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU7513CGM"
   },
   {
@@ -14867,7 +14867,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU11467CGM"
   },
   {
@@ -14877,7 +14877,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU11520CNE"
   },
   {
@@ -14887,7 +14887,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU11745CFE"
   },
   {
@@ -15877,7 +15877,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6184CFM"
   },
   {
@@ -15887,7 +15887,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6296CFE"
   },
   {
@@ -15897,7 +15897,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6343CFE"
   },
   {
@@ -15907,7 +15907,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6592CFE"
   },
   {
@@ -15917,7 +15917,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6638CNE"
   },
   {
@@ -15927,7 +15927,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6702CGE"
   },
   {
@@ -15937,7 +15937,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6828CFE"
   },
   {
@@ -15947,7 +15947,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6999CFE"
   },
   {
@@ -15957,7 +15957,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU7008CFE"
   },
   {
@@ -15967,7 +15967,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU7134CNE"
   },
   {
@@ -15977,7 +15977,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU7144CGE"
   },
   {
@@ -15987,7 +15987,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU7210CGE"
   },
   {
@@ -15997,7 +15997,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU7282CFE"
   },
   {
@@ -16007,7 +16007,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU7478CGM"
   },
   {
@@ -16017,7 +16017,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU11603CFE"
   },
   {
@@ -16027,7 +16027,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU11992CNE"
   },
   {
@@ -16657,7 +16657,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6470CNM"
   },
   {
@@ -16667,7 +16667,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6617CGE"
   },
   {
@@ -16677,7 +16677,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6722CGE"
   },
   {
@@ -16687,7 +16687,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6786CGE"
   },
   {
@@ -16697,7 +16697,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6853CFE"
   },
   {
@@ -16707,7 +16707,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU6964CGE"
   },
   {
@@ -16717,7 +16717,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU7044CNE"
   },
   {
@@ -16727,7 +16727,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU7081CGE"
   },
   {
@@ -16737,7 +16737,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU7204CGE"
   },
   {
@@ -16747,7 +16747,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU7212CFE"
   },
   {
@@ -16757,7 +16757,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU7290CNE"
   },
   {
@@ -16767,7 +16767,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU11592CPE"
   },
   {
@@ -16807,7 +16807,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 31.0,
+    "cutoff": 31,
     "choiceCode": "MU7150CFE"
   },
   {
@@ -16837,7 +16837,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 29.0,
+    "cutoff": 29,
     "choiceCode": "MU6521CFE"
   },
   {
@@ -16847,7 +16847,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Commerce",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 27.0,
+    "cutoff": 27,
     "choiceCode": "MU6715CNE"
   },
   {
@@ -16907,7 +16907,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 92.0,
+    "cutoff": 92,
     "choiceCode": "MU7244SFE"
   },
   {
@@ -16957,7 +16957,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 88.0,
+    "cutoff": 88,
     "choiceCode": "MU6724SGE"
   },
   {
@@ -16967,7 +16967,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 87.0,
+    "cutoff": 87,
     "choiceCode": "MU11618SFE"
   },
   {
@@ -16997,7 +16997,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 86.0,
+    "cutoff": 86,
     "choiceCode": "MU11775SFE"
   },
   {
@@ -17037,7 +17037,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 85.0,
+    "cutoff": 85,
     "choiceCode": "MU6601SNE"
   },
   {
@@ -17117,7 +17117,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 84.0,
+    "cutoff": 84,
     "choiceCode": "MU6535SFE"
   },
   {
@@ -17127,7 +17127,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 84.0,
+    "cutoff": 84,
     "choiceCode": "MU6737SFE"
   },
   {
@@ -17247,7 +17247,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 83.0,
+    "cutoff": 83,
     "choiceCode": "MU6320SNE"
   },
   {
@@ -17257,7 +17257,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 83.0,
+    "cutoff": 83,
     "choiceCode": "MU6652SFE"
   },
   {
@@ -17267,7 +17267,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 83.0,
+    "cutoff": 83,
     "choiceCode": "MU6868SGE"
   },
   {
@@ -17357,7 +17357,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 81.0,
+    "cutoff": 81,
     "choiceCode": "MU12500SFE"
   },
   {
@@ -17447,7 +17447,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 79.0,
+    "cutoff": 79,
     "choiceCode": "MU6831SGE"
   },
   {
@@ -17457,7 +17457,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 79.0,
+    "cutoff": 79,
     "choiceCode": "MU11496SFE"
   },
   {
@@ -17607,7 +17607,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 78.0,
+    "cutoff": 78,
     "choiceCode": "MU6483SFE"
   },
   {
@@ -17617,7 +17617,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 78.0,
+    "cutoff": 78,
     "choiceCode": "MU6768SGE"
   },
   {
@@ -17737,7 +17737,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 77.0,
+    "cutoff": 77,
     "choiceCode": "MU6263SFE"
   },
   {
@@ -17747,7 +17747,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 77.0,
+    "cutoff": 77,
     "choiceCode": "MU11610SFE"
   },
   {
@@ -17757,7 +17757,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 77.0,
+    "cutoff": 77,
     "choiceCode": "MU11612SFE"
   },
   {
@@ -18007,7 +18007,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 74.0,
+    "cutoff": 74,
     "choiceCode": "MU6454SPE"
   },
   {
@@ -18017,7 +18017,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 74.0,
+    "cutoff": 74,
     "choiceCode": "MU6994SNE"
   },
   {
@@ -18027,7 +18027,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 74.0,
+    "cutoff": 74,
     "choiceCode": "MU7469SFE"
   },
   {
@@ -18117,7 +18117,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 73.0,
+    "cutoff": 73,
     "choiceCode": "MU6323SNE"
   },
   {
@@ -18127,7 +18127,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 73.0,
+    "cutoff": 73,
     "choiceCode": "MU6414SFE"
   },
   {
@@ -18137,7 +18137,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 73.0,
+    "cutoff": 73,
     "choiceCode": "MU6979SGE"
   },
   {
@@ -18147,7 +18147,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 73.0,
+    "cutoff": 73,
     "choiceCode": "MU7030SGE"
   },
   {
@@ -18247,7 +18247,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 72.0,
+    "cutoff": 72,
     "choiceCode": "MU6168SFU"
   },
   {
@@ -18257,7 +18257,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 72.0,
+    "cutoff": 72,
     "choiceCode": "MU6590SFE"
   },
   {
@@ -18267,7 +18267,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 72.0,
+    "cutoff": 72,
     "choiceCode": "MU7242SNE"
   },
   {
@@ -18277,7 +18277,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 72.0,
+    "cutoff": 72,
     "choiceCode": "MU7378SFE"
   },
   {
@@ -18287,7 +18287,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 72.0,
+    "cutoff": 72,
     "choiceCode": "MU11987SFE"
   },
   {
@@ -18397,7 +18397,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 71.0,
+    "cutoff": 71,
     "choiceCode": "MU7251SFE"
   },
   {
@@ -18407,7 +18407,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 71.0,
+    "cutoff": 71,
     "choiceCode": "MU11679SFE"
   },
   {
@@ -18587,7 +18587,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 70.0,
+    "cutoff": 70,
     "choiceCode": "MU6354SFE"
   },
   {
@@ -18597,7 +18597,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 70.0,
+    "cutoff": 70,
     "choiceCode": "MU6543SFE"
   },
   {
@@ -18607,7 +18607,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 70.0,
+    "cutoff": 70,
     "choiceCode": "MU6635SFE"
   },
   {
@@ -18617,7 +18617,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 70.0,
+    "cutoff": 70,
     "choiceCode": "MU6994SGE"
   },
   {
@@ -18627,7 +18627,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 70.0,
+    "cutoff": 70,
     "choiceCode": "MU7256SFE"
   },
   {
@@ -18637,7 +18637,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 70.0,
+    "cutoff": 70,
     "choiceCode": "MU7324SFE"
   },
   {
@@ -18647,7 +18647,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 70.0,
+    "cutoff": 70,
     "choiceCode": "MU7373SFE"
   },
   {
@@ -18717,7 +18717,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 69.0,
+    "cutoff": 69,
     "choiceCode": "MU7477SFE"
   },
   {
@@ -18787,7 +18787,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 68.0,
+    "cutoff": 68,
     "choiceCode": "MU6952SFE"
   },
   {
@@ -18917,7 +18917,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 67.0,
+    "cutoff": 67,
     "choiceCode": "MU6587SNE"
   },
   {
@@ -18927,7 +18927,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 67.0,
+    "cutoff": 67,
     "choiceCode": "MU6682SGE"
   },
   {
@@ -18937,7 +18937,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 67.0,
+    "cutoff": 67,
     "choiceCode": "MU6777SGE"
   },
   {
@@ -18947,7 +18947,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 67.0,
+    "cutoff": 67,
     "choiceCode": "MU7099SNE"
   },
   {
@@ -18957,7 +18957,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 67.0,
+    "cutoff": 67,
     "choiceCode": "MU7478SGE"
   },
   {
@@ -18967,7 +18967,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 67.0,
+    "cutoff": 67,
     "choiceCode": "MU7529SNE"
   },
   {
@@ -19037,7 +19037,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 66.0,
+    "cutoff": 66,
     "choiceCode": "MU11477SNE"
   },
   {
@@ -19127,7 +19127,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 65.0,
+    "cutoff": 65,
     "choiceCode": "MU6338SFE"
   },
   {
@@ -19137,7 +19137,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 65.0,
+    "cutoff": 65,
     "choiceCode": "MU6575SFE"
   },
   {
@@ -19147,7 +19147,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 65.0,
+    "cutoff": 65,
     "choiceCode": "MU6817SNE"
   },
   {
@@ -19157,7 +19157,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 65.0,
+    "cutoff": 65,
     "choiceCode": "MU6880SGE"
   },
   {
@@ -19167,7 +19167,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 65.0,
+    "cutoff": 65,
     "choiceCode": "MU11575SFE"
   },
   {
@@ -19287,7 +19287,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 64.0,
+    "cutoff": 64,
     "choiceCode": "MU7388SGE"
   },
   {
@@ -19347,7 +19347,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 63.0,
+    "cutoff": 63,
     "choiceCode": "MU11923SFE"
   },
   {
@@ -19487,7 +19487,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 62.0,
+    "cutoff": 62,
     "choiceCode": "MU6199SFE"
   },
   {
@@ -19497,7 +19497,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 62.0,
+    "cutoff": 62,
     "choiceCode": "MU6931SNE"
   },
   {
@@ -19507,7 +19507,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 62.0,
+    "cutoff": 62,
     "choiceCode": "MU6990SGE"
   },
   {
@@ -19677,7 +19677,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 61.0,
+    "cutoff": 61,
     "choiceCode": "MU7288SFE"
   },
   {
@@ -19897,7 +19897,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6216SFE"
   },
   {
@@ -19907,7 +19907,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6312SNE"
   },
   {
@@ -19917,7 +19917,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6327SPE"
   },
   {
@@ -19927,7 +19927,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6356SNE"
   },
   {
@@ -19937,7 +19937,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6555SFE"
   },
   {
@@ -19947,7 +19947,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6694SNE"
   },
   {
@@ -19957,7 +19957,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6843SNE"
   },
   {
@@ -19967,7 +19967,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU6957SFE"
   },
   {
@@ -19977,7 +19977,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU7042SGE"
   },
   {
@@ -19987,7 +19987,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU7241SGE"
   },
   {
@@ -19997,7 +19997,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU7290SNE"
   },
   {
@@ -20007,7 +20007,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU7486SPE"
   },
   {
@@ -20017,7 +20017,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU7523SNM"
   },
   {
@@ -20027,7 +20027,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU7546SNE"
   },
   {
@@ -20037,7 +20037,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU11560SFE"
   },
   {
@@ -20047,7 +20047,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU11599SNE"
   },
   {
@@ -20057,7 +20057,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 60.0,
+    "cutoff": 60,
     "choiceCode": "MU11638SFE"
   },
   {
@@ -20107,7 +20107,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 59.0,
+    "cutoff": 59,
     "choiceCode": "MU6180SFE"
   },
   {
@@ -20117,7 +20117,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 59.0,
+    "cutoff": 59,
     "choiceCode": "MU6264SFE"
   },
   {
@@ -20127,7 +20127,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 59.0,
+    "cutoff": 59,
     "choiceCode": "MU6365SPM"
   },
   {
@@ -20137,7 +20137,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 59.0,
+    "cutoff": 59,
     "choiceCode": "MU6499SFE"
   },
   {
@@ -20257,7 +20257,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 58.0,
+    "cutoff": 58,
     "choiceCode": "MU6530SFE"
   },
   {
@@ -20267,7 +20267,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 58.0,
+    "cutoff": 58,
     "choiceCode": "MU6813SFE"
   },
   {
@@ -20277,7 +20277,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 58.0,
+    "cutoff": 58,
     "choiceCode": "MU7128SNE"
   },
   {
@@ -20287,7 +20287,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 58.0,
+    "cutoff": 58,
     "choiceCode": "MU7231SFE"
   },
   {
@@ -20297,7 +20297,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 58.0,
+    "cutoff": 58,
     "choiceCode": "MU7369SFE"
   },
   {
@@ -20307,7 +20307,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 58.0,
+    "cutoff": 58,
     "choiceCode": "MU11667SFE"
   },
   {
@@ -20567,7 +20567,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 57.0,
+    "cutoff": 57,
     "choiceCode": "MU6214SFE"
   },
   {
@@ -20577,7 +20577,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 57.0,
+    "cutoff": 57,
     "choiceCode": "MU6320SFE"
   },
   {
@@ -20587,7 +20587,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 57.0,
+    "cutoff": 57,
     "choiceCode": "MU11657SFE"
   },
   {
@@ -20597,7 +20597,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 57.0,
+    "cutoff": 57,
     "choiceCode": "MU12315SFE"
   },
   {
@@ -20787,7 +20787,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 56.0,
+    "cutoff": 56,
     "choiceCode": "MU6211SFE"
   },
   {
@@ -20797,7 +20797,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 56.0,
+    "cutoff": 56,
     "choiceCode": "MU6421SGE"
   },
   {
@@ -20807,7 +20807,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 56.0,
+    "cutoff": 56,
     "choiceCode": "MU6551SFE"
   },
   {
@@ -20817,7 +20817,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 56.0,
+    "cutoff": 56,
     "choiceCode": "MU7374SFE"
   },
   {
@@ -20827,7 +20827,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 56.0,
+    "cutoff": 56,
     "choiceCode": "MU11554SFE"
   },
   {
@@ -21047,7 +21047,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 55.0,
+    "cutoff": 55,
     "choiceCode": "MU6282SNE"
   },
   {
@@ -21307,7 +21307,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 54.0,
+    "cutoff": 54,
     "choiceCode": "MU6661SFE"
   },
   {
@@ -21317,7 +21317,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 54.0,
+    "cutoff": 54,
     "choiceCode": "MU6929SFE"
   },
   {
@@ -21327,7 +21327,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 54.0,
+    "cutoff": 54,
     "choiceCode": "MU7273SFE"
   },
   {
@@ -21337,7 +21337,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 54.0,
+    "cutoff": 54,
     "choiceCode": "MU11436SNE"
   },
   {
@@ -21607,7 +21607,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 53.0,
+    "cutoff": 53,
     "choiceCode": "MU6488SFE"
   },
   {
@@ -21617,7 +21617,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 53.0,
+    "cutoff": 53,
     "choiceCode": "MU7328SGE"
   },
   {
@@ -21627,7 +21627,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 53.0,
+    "cutoff": 53,
     "choiceCode": "MU7387SFE"
   },
   {
@@ -21637,7 +21637,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 53.0,
+    "cutoff": 53,
     "choiceCode": "MU11740SFE"
   },
   {
@@ -21787,7 +21787,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 52.0,
+    "cutoff": 52,
     "choiceCode": "MU6243SFE"
   },
   {
@@ -21797,7 +21797,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 52.0,
+    "cutoff": 52,
     "choiceCode": "MU6299SFE"
   },
   {
@@ -21807,7 +21807,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 52.0,
+    "cutoff": 52,
     "choiceCode": "MU6398SFE"
   },
   {
@@ -21817,7 +21817,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 52.0,
+    "cutoff": 52,
     "choiceCode": "MU6453SFE"
   },
   {
@@ -21827,7 +21827,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 52.0,
+    "cutoff": 52,
     "choiceCode": "MU7549SFE"
   },
   {
@@ -22107,7 +22107,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 51.0,
+    "cutoff": 51,
     "choiceCode": "MU6252SFE"
   },
   {
@@ -22117,7 +22117,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 51.0,
+    "cutoff": 51,
     "choiceCode": "MU6993SNE"
   },
   {
@@ -22127,7 +22127,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 51.0,
+    "cutoff": 51,
     "choiceCode": "MU7147SFE"
   },
   {
@@ -22137,7 +22137,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 51.0,
+    "cutoff": 51,
     "choiceCode": "MU12496SFE"
   },
   {
@@ -22307,7 +22307,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 50.0,
+    "cutoff": 50,
     "choiceCode": "MU6886SFE"
   },
   {
@@ -22317,7 +22317,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 50.0,
+    "cutoff": 50,
     "choiceCode": "MU7078SNE"
   },
   {
@@ -22527,7 +22527,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU6407SNE"
   },
   {
@@ -22537,7 +22537,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU6435SFE"
   },
   {
@@ -22547,7 +22547,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU6482SPM"
   },
   {
@@ -22557,7 +22557,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU6500SFE"
   },
   {
@@ -22567,7 +22567,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU6659SFE"
   },
   {
@@ -22577,7 +22577,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU7015SFE"
   },
   {
@@ -22587,7 +22587,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU7413SFE"
   },
   {
@@ -22597,7 +22597,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 49.0,
+    "cutoff": 49,
     "choiceCode": "MU11607SFE"
   },
   {
@@ -22777,7 +22777,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 48.0,
+    "cutoff": 48,
     "choiceCode": "MU6315SFE"
   },
   {
@@ -22787,7 +22787,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 48.0,
+    "cutoff": 48,
     "choiceCode": "MU6429SFE"
   },
   {
@@ -22797,7 +22797,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 48.0,
+    "cutoff": 48,
     "choiceCode": "MU6474SFE"
   },
   {
@@ -22807,7 +22807,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 48.0,
+    "cutoff": 48,
     "choiceCode": "MU6592SFE"
   },
   {
@@ -22817,7 +22817,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 48.0,
+    "cutoff": 48,
     "choiceCode": "MU7330SFE"
   },
   {
@@ -22827,7 +22827,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 48.0,
+    "cutoff": 48,
     "choiceCode": "MU11644SFE"
   },
   {
@@ -23077,7 +23077,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 47.0,
+    "cutoff": 47,
     "choiceCode": "MU6317SFE"
   },
   {
@@ -23087,7 +23087,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 47.0,
+    "cutoff": 47,
     "choiceCode": "MU6611SFE"
   },
   {
@@ -23097,7 +23097,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 47.0,
+    "cutoff": 47,
     "choiceCode": "MU7168SFE"
   },
   {
@@ -23107,7 +23107,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 47.0,
+    "cutoff": 47,
     "choiceCode": "MU7269SGE"
   },
   {
@@ -23117,7 +23117,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 47.0,
+    "cutoff": 47,
     "choiceCode": "MU7361SFE"
   },
   {
@@ -23127,7 +23127,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 47.0,
+    "cutoff": 47,
     "choiceCode": "MU11591SFE"
   },
   {
@@ -23347,7 +23347,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU6303SFE"
   },
   {
@@ -23357,7 +23357,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU6548SFE"
   },
   {
@@ -23367,7 +23367,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU7053SGE"
   },
   {
@@ -23377,7 +23377,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU7209SNE"
   },
   {
@@ -23387,7 +23387,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU7289SFE"
   },
   {
@@ -23397,7 +23397,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU7291SFE"
   },
   {
@@ -23407,7 +23407,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU7397SFE"
   },
   {
@@ -23417,7 +23417,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU11521SFE"
   },
   {
@@ -23427,7 +23427,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 46.0,
+    "cutoff": 46,
     "choiceCode": "MU11525SFM"
   },
   {
@@ -23657,7 +23657,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 45.0,
+    "cutoff": 45,
     "choiceCode": "MU6250SFE"
   },
   {
@@ -23667,7 +23667,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 45.0,
+    "cutoff": 45,
     "choiceCode": "MU6538SFE"
   },
   {
@@ -23677,7 +23677,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 45.0,
+    "cutoff": 45,
     "choiceCode": "MU7041SFE"
   },
   {
@@ -23687,7 +23687,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 45.0,
+    "cutoff": 45,
     "choiceCode": "MU7498SFE"
   },
   {
@@ -23697,7 +23697,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 45.0,
+    "cutoff": 45,
     "choiceCode": "MU11444SGE"
   },
   {
@@ -23707,7 +23707,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 45.0,
+    "cutoff": 45,
     "choiceCode": "MU11499SFE"
   },
   {
@@ -23717,7 +23717,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 45.0,
+    "cutoff": 45,
     "choiceCode": "MU11641SFE"
   },
   {
@@ -23727,7 +23727,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 45.0,
+    "cutoff": 45,
     "choiceCode": "MU11821SFE"
   },
   {
@@ -23937,7 +23937,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU6152SFE"
   },
   {
@@ -23947,7 +23947,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU6272SGE"
   },
   {
@@ -23957,7 +23957,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU6616SNE"
   },
   {
@@ -23967,7 +23967,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU6667SNE"
   },
   {
@@ -23977,7 +23977,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU6684SFE"
   },
   {
@@ -23987,7 +23987,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 44.0,
+    "cutoff": 44,
     "choiceCode": "MU7476SFE"
   },
   {
@@ -24297,7 +24297,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU6165SFU"
   },
   {
@@ -24307,7 +24307,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU6166SPE"
   },
   {
@@ -24317,7 +24317,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU6607SFE"
   },
   {
@@ -24327,7 +24327,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU6713SFE"
   },
   {
@@ -24337,7 +24337,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU7478SFE"
   },
   {
@@ -24347,7 +24347,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU11592SNE"
   },
   {
@@ -24357,7 +24357,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU11678SFE"
   },
   {
@@ -24367,7 +24367,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 43.0,
+    "cutoff": 43,
     "choiceCode": "MU12239SFE"
   },
   {
@@ -24577,7 +24577,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU6178SPU"
   },
   {
@@ -24587,7 +24587,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU6358SFE"
   },
   {
@@ -24597,7 +24597,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU6505SFE"
   },
   {
@@ -24607,7 +24607,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU6671SGE"
   },
   {
@@ -24617,7 +24617,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU6745SGE"
   },
   {
@@ -24627,7 +24627,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 42.0,
+    "cutoff": 42,
     "choiceCode": "MU6926SFE"
   },
   {
@@ -24887,7 +24887,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 41.0,
+    "cutoff": 41,
     "choiceCode": "MU11663SFE"
   },
   {
@@ -25107,7 +25107,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6183SFE"
   },
   {
@@ -25117,7 +25117,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6256SFE"
   },
   {
@@ -25127,7 +25127,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6603SFE"
   },
   {
@@ -25137,7 +25137,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6777SNE"
   },
   {
@@ -25147,7 +25147,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6785SGE"
   },
   {
@@ -25157,7 +25157,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU6964SGE"
   },
   {
@@ -25167,7 +25167,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 40.0,
+    "cutoff": 40,
     "choiceCode": "MU7202SFE"
   },
   {
@@ -25337,7 +25337,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6179SGU"
   },
   {
@@ -25347,7 +25347,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6545SFE"
   },
   {
@@ -25357,7 +25357,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6762SGE"
   },
   {
@@ -25367,7 +25367,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6839SNE"
   },
   {
@@ -25377,7 +25377,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU6857SFE"
   },
   {
@@ -25387,7 +25387,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU7107SGE"
   },
   {
@@ -25397,7 +25397,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU11497SFE"
   },
   {
@@ -25407,7 +25407,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 39.0,
+    "cutoff": 39,
     "choiceCode": "MU12219SFE"
   },
   {
@@ -25577,7 +25577,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 38.0,
+    "cutoff": 38,
     "choiceCode": "MU11587SFE"
   },
   {
@@ -25717,7 +25717,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU6386SNE"
   },
   {
@@ -25727,7 +25727,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 37.0,
+    "cutoff": 37,
     "choiceCode": "MU6567SFE"
   },
   {
@@ -25807,7 +25807,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 36.0,
+    "cutoff": 36,
     "choiceCode": "MU6863SFE"
   },
   {
@@ -25837,7 +25837,7 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "stream": "Science",
     "category": "General",
     "year": "2025-26",
-    "cutoff": 35.0,
+    "cutoff": 35,
     "choiceCode": "MU11761SFE"
   },
   {
@@ -25869,5 +25869,14085 @@ export const FYJC_CUTOFFS: FyjcCutoff[] = [
     "year": "2025-26",
     "cutoff": 27.6,
     "choiceCode": "MU6223SFE"
+  },
+  {
+    "id": "fc_5000",
+    "collegeId": null,
+    "collegeName": "S.N.D.T.COLLEGE OF ARTS & SCB COLLEGE OF COMM. & SCI. FOR WOMEN",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 39.4,
+    "choiceCode": "MU6721AGE"
+  },
+  {
+    "id": "fc_5001",
+    "collegeId": null,
+    "collegeName": "S.N.D.T.COLLEGE OF ARTS & SCB COLLEGE OF COMM. & SCI. FOR WOMEN",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 47.4,
+    "choiceCode": "MU6721AGE"
+  },
+  {
+    "id": "fc_5002",
+    "collegeId": null,
+    "collegeName": "S.N.D.T.COLLEGE OF ARTS & SCB COLLEGE OF COMM. & SCI. FOR WOMEN",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 64.2,
+    "choiceCode": "MU6721AGE"
+  },
+  {
+    "id": "fc_5003",
+    "collegeId": null,
+    "collegeName": "S.N.D.T.COLLEGE OF ARTS & SCB COLLEGE OF COMM. & SCI. FOR WOMEN",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 56.6,
+    "choiceCode": "MU6721AGE"
+  },
+  {
+    "id": "fc_5004",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 38,
+    "choiceCode": "MU6723AGE"
+  },
+  {
+    "id": "fc_5005",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 36.6,
+    "choiceCode": "MU6723AGE"
+  },
+  {
+    "id": "fc_5006",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 35.8,
+    "choiceCode": "MU6723AGE"
+  },
+  {
+    "id": "fc_5007",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 66.6,
+    "choiceCode": "MU6726AOE"
+  },
+  {
+    "id": "fc_5008",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 61.2,
+    "choiceCode": "MU6726AOE"
+  },
+  {
+    "id": "fc_5009",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 42,
+    "choiceCode": "MU6726AOE"
+  },
+  {
+    "id": "fc_5010",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 61,
+    "choiceCode": "MU6726AOE"
+  },
+  {
+    "id": "fc_5011",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 54.2,
+    "choiceCode": "MU6745AGE"
+  },
+  {
+    "id": "fc_5012",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 43.6,
+    "choiceCode": "MU6745AGE"
+  },
+  {
+    "id": "fc_5013",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 45.4,
+    "choiceCode": "MU6745AGE"
+  },
+  {
+    "id": "fc_5014",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 51.8,
+    "choiceCode": "MU6745AGE"
+  },
+  {
+    "id": "fc_5015",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 61.8,
+    "choiceCode": "MU6767AGE"
+  },
+  {
+    "id": "fc_5016",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 55.4,
+    "choiceCode": "MU6767AGE"
+  },
+  {
+    "id": "fc_5017",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 54.6,
+    "choiceCode": "MU6767AGE"
+  },
+  {
+    "id": "fc_5018",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Arts",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 57,
+    "choiceCode": "MU6767AGE"
+  },
+  {
+    "id": "fc_5019",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 51.2,
+    "choiceCode": "MU6767AGE"
+  },
+  {
+    "id": "fc_5020",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 67.6,
+    "choiceCode": "MU6767AGE"
+  },
+  {
+    "id": "fc_5021",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 39,
+    "choiceCode": "MU6767AGE"
+  },
+  {
+    "id": "fc_5022",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 48.2,
+    "choiceCode": "MU6767AGE"
+  },
+  {
+    "id": "fc_5023",
+    "collegeId": null,
+    "collegeName": "D. G. RUPAREL COLLEGE OF ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 78.6,
+    "choiceCode": "MU6768AGE"
+  },
+  {
+    "id": "fc_5024",
+    "collegeId": null,
+    "collegeName": "D. G. RUPAREL COLLEGE OF ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 84.2,
+    "choiceCode": "MU6768AGE"
+  },
+  {
+    "id": "fc_5025",
+    "collegeId": null,
+    "collegeName": "D. G. RUPAREL COLLEGE OF ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 47.2,
+    "choiceCode": "MU6768AGE"
+  },
+  {
+    "id": "fc_5026",
+    "collegeId": null,
+    "collegeName": "D. G. RUPAREL COLLEGE OF ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 67,
+    "choiceCode": "MU6768AGE"
+  },
+  {
+    "id": "fc_5027",
+    "collegeId": null,
+    "collegeName": "D. G. RUPAREL COLLEGE OF ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 80.4,
+    "choiceCode": "MU6768AGE"
+  },
+  {
+    "id": "fc_5028",
+    "collegeId": null,
+    "collegeName": "D. G. RUPAREL COLLEGE OF ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 74.2,
+    "choiceCode": "MU6768AGE"
+  },
+  {
+    "id": "fc_5029",
+    "collegeId": null,
+    "collegeName": "D. G. RUPAREL COLLEGE OF ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 77.4,
+    "choiceCode": "MU6768AGE"
+  },
+  {
+    "id": "fc_5030",
+    "collegeId": null,
+    "collegeName": "D. G. RUPAREL COLLEGE OF ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 54,
+    "choiceCode": "MU6768AGE"
+  },
+  {
+    "id": "fc_5031",
+    "collegeId": null,
+    "collegeName": "D. G. RUPAREL COLLEGE OF ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 70.6,
+    "choiceCode": "MU6768AGE"
+  },
+  {
+    "id": "fc_5032",
+    "collegeId": null,
+    "collegeName": "D. G. RUPAREL COLLEGE OF ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 62.8,
+    "choiceCode": "MU6768AGE"
+  },
+  {
+    "id": "fc_5033",
+    "collegeId": null,
+    "collegeName": "D. G. RUPAREL COLLEGE OF ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 65.8,
+    "choiceCode": "MU6768AGE"
+  },
+  {
+    "id": "fc_5034",
+    "collegeId": null,
+    "collegeName": "D. G. RUPAREL COLLEGE OF ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 43.4,
+    "choiceCode": "MU6768AGE"
+  },
+  {
+    "id": "fc_5035",
+    "collegeId": null,
+    "collegeName": "D. G. RUPAREL COLLEGE OF ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 61.6,
+    "choiceCode": "MU6768AGE"
+  },
+  {
+    "id": "fc_5036",
+    "collegeId": null,
+    "collegeName": "D. G. RUPAREL COLLEGE OF ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 85.6,
+    "choiceCode": "MU6768AGE"
+  },
+  {
+    "id": "fc_5037",
+    "collegeId": null,
+    "collegeName": "R.M. BHATT HIGH SCHOOL AND JR. COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 52.6,
+    "choiceCode": "MU6784AGE"
+  },
+  {
+    "id": "fc_5038",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 63.8,
+    "choiceCode": "MU6832AGM"
+  },
+  {
+    "id": "fc_5039",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 72.2,
+    "choiceCode": "MU6832AGM"
+  },
+  {
+    "id": "fc_5040",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 74,
+    "choiceCode": "MU6832AGM"
+  },
+  {
+    "id": "fc_5041",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 45.6,
+    "choiceCode": "MU6832AGM"
+  },
+  {
+    "id": "fc_5042",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 52.6,
+    "choiceCode": "MU6832AGM"
+  },
+  {
+    "id": "fc_5043",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU6832AGM"
+  },
+  {
+    "id": "fc_5044",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 50.4,
+    "choiceCode": "MU6832AGM"
+  },
+  {
+    "id": "fc_5045",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 51.6,
+    "choiceCode": "MU6832AGM"
+  },
+  {
+    "id": "fc_5046",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 40,
+    "choiceCode": "MU6832AGM"
+  },
+  {
+    "id": "fc_5047",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 45,
+    "choiceCode": "MU6832AGM"
+  },
+  {
+    "id": "fc_5048",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 83,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5049",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 64.6,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5050",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5051",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 84.8,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5052",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 80.4,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5053",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 81.6,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5054",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 80.4,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5055",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 68,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5056",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 67,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5057",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 76.8,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5058",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 54.6,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5059",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 44.4,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5060",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 75.4,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5061",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 65.2,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5062",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 70.8,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5063",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 64,
+    "choiceCode": "MU6832AGE"
+  },
+  {
+    "id": "fc_5064",
+    "collegeId": null,
+    "collegeName": "JOYMAX ENGLISH HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 37,
+    "choiceCode": "MU6858AFE"
+  },
+  {
+    "id": "fc_5065",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 52,
+    "choiceCode": "MU6880AGE"
+  },
+  {
+    "id": "fc_5066",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 42,
+    "choiceCode": "MU6880AGE"
+  },
+  {
+    "id": "fc_5067",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 38.6,
+    "choiceCode": "MU6880AGE"
+  },
+  {
+    "id": "fc_5068",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 47.4,
+    "choiceCode": "MU6880AGE"
+  },
+  {
+    "id": "fc_5069",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 40.8,
+    "choiceCode": "MU6880AGE"
+  },
+  {
+    "id": "fc_5070",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 47.6,
+    "choiceCode": "MU6880AGE"
+  },
+  {
+    "id": "fc_5071",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 40.6,
+    "choiceCode": "MU6907ANM"
+  },
+  {
+    "id": "fc_5072",
+    "collegeId": null,
+    "collegeName": "SHRIMATI SITADEVI AND SHRI SAHIBRAM ENG MED HIGH SCHOOL AND  JR COLLEGE OF ARTS  SCI. COM. KURLA",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 36.8,
+    "choiceCode": "MU6949AFE"
+  },
+  {
+    "id": "fc_5073",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 35.8,
+    "choiceCode": "MU6964AGM"
+  },
+  {
+    "id": "fc_5074",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 36.6,
+    "choiceCode": "MU6964AGM"
+  },
+  {
+    "id": "fc_5075",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 38.8,
+    "choiceCode": "MU6964AGM"
+  },
+  {
+    "id": "fc_5076",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 38.6,
+    "choiceCode": "MU6964AGE"
+  },
+  {
+    "id": "fc_5077",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 45.8,
+    "choiceCode": "MU6964AGE"
+  },
+  {
+    "id": "fc_5078",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 36.4,
+    "choiceCode": "MU6964AGE"
+  },
+  {
+    "id": "fc_5079",
+    "collegeId": null,
+    "collegeName": "DON BOSCO HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 48.2,
+    "choiceCode": "MU6966AFE"
+  },
+  {
+    "id": "fc_5080",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU6969AGE"
+  },
+  {
+    "id": "fc_5081",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 62,
+    "choiceCode": "MU6969AGE"
+  },
+  {
+    "id": "fc_5082",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 51.2,
+    "choiceCode": "MU6969AGE"
+  },
+  {
+    "id": "fc_5083",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 61.8,
+    "choiceCode": "MU6969AGE"
+  },
+  {
+    "id": "fc_5084",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 42.4,
+    "choiceCode": "MU6969AGE"
+  },
+  {
+    "id": "fc_5085",
+    "collegeId": null,
+    "collegeName": "ASMITA GIRLS JR COLLEGE VIKAROLI (E)",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 42.4,
+    "choiceCode": "MU6978AGM"
+  },
+  {
+    "id": "fc_5086",
+    "collegeId": null,
+    "collegeName": "ASMITA GIRLS JR COLLEGE VIKAROLI (E)",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 49.4,
+    "choiceCode": "MU6978AGM"
+  },
+  {
+    "id": "fc_5087",
+    "collegeId": null,
+    "collegeName": "YASHWANT CHANDJI SAWANT VIDYAMANDIR & JR. COLLEGE, BHANDUP",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 43.6,
+    "choiceCode": "MU6997AGM"
+  },
+  {
+    "id": "fc_5088",
+    "collegeId": null,
+    "collegeName": "YASHWANT CHANDJI SAWANT VIDYAMANDIR & JR. COLLEGE, BHANDUP",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 37,
+    "choiceCode": "MU6997AGM"
+  },
+  {
+    "id": "fc_5089",
+    "collegeId": null,
+    "collegeName": "YASHWANT CHANDJI SAWANT VIDYAMANDIR & JR. COLLEGE, BHANDUP",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 42.2,
+    "choiceCode": "MU6997AGM"
+  },
+  {
+    "id": "fc_5090",
+    "collegeId": null,
+    "collegeName": "SOU. NALINI YASHWANTRAO DODE VIDYALAYA, MULUND (E)",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 41.4,
+    "choiceCode": "MU6998AFE"
+  },
+  {
+    "id": "fc_5091",
+    "collegeId": null,
+    "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 41.2,
+    "choiceCode": "MU6999APE"
+  },
+  {
+    "id": "fc_5092",
+    "collegeId": null,
+    "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 48.8,
+    "choiceCode": "MU6999APE"
+  },
+  {
+    "id": "fc_5093",
+    "collegeId": null,
+    "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 46,
+    "choiceCode": "MU6999APE"
+  },
+  {
+    "id": "fc_5094",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 73.8,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5095",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 49.4,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5096",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 51.8,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5097",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 66,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5098",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 52.8,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5099",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 84.6,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5100",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 76.6,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5101",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 81,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5102",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 72.8,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5103",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 56,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5104",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 65.2,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5105",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 61.2,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5106",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 44.6,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5107",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 62.2,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5108",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 45.4,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5109",
+    "collegeId": null,
+    "collegeName": "V. G. VAZE COLLEGE ARTS, SCI & COMM.",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 60.6,
+    "choiceCode": "MU7024AGE"
+  },
+  {
+    "id": "fc_5110",
+    "collegeId": null,
+    "collegeName": "KALA VIDYAMANDIR JR COLLEGE, ANDHERI EAST",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 45,
+    "choiceCode": "MU7071AGE"
+  },
+  {
+    "id": "fc_5111",
+    "collegeId": null,
+    "collegeName": "KALA VIDYAMANDIR JR COLLEGE, ANDHERI EAST",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 37.4,
+    "choiceCode": "MU7071AGE"
+  },
+  {
+    "id": "fc_5112",
+    "collegeId": null,
+    "collegeName": "KAMLADEVI JAIN HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 44.4,
+    "choiceCode": "MU7118AFE"
+  },
+  {
+    "id": "fc_5113",
+    "collegeId": null,
+    "collegeName": "KAMLADEVI JAIN HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 43.2,
+    "choiceCode": "MU7118AFE"
+  },
+  {
+    "id": "fc_5114",
+    "collegeId": null,
+    "collegeName": "KAMLADEVI JAIN HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 44.4,
+    "choiceCode": "MU7118AFE"
+  },
+  {
+    "id": "fc_5115",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 67,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5116",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 54.2,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5117",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 84,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5118",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 64,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5119",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 44,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5120",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5121",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 50.6,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5122",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 76,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5123",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 71.4,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5124",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55.2,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5125",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 38,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5126",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 63,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5127",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 39.2,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5128",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 40.8,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5129",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 66.8,
+    "choiceCode": "MU7125AGE"
+  },
+  {
+    "id": "fc_5130",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 54.4,
+    "choiceCode": "MU7129AGE"
+  },
+  {
+    "id": "fc_5131",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Arts",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 49.8,
+    "choiceCode": "MU7129AGE"
+  },
+  {
+    "id": "fc_5132",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 43.4,
+    "choiceCode": "MU7129AGE"
+  },
+  {
+    "id": "fc_5133",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 62,
+    "choiceCode": "MU7129AGE"
+  },
+  {
+    "id": "fc_5134",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 74.2,
+    "choiceCode": "MU7129AGE"
+  },
+  {
+    "id": "fc_5135",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Arts",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 63,
+    "choiceCode": "MU7129AGE"
+  },
+  {
+    "id": "fc_5136",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 36.8,
+    "choiceCode": "MU7129AGE"
+  },
+  {
+    "id": "fc_5137",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 48.2,
+    "choiceCode": "MU7129AGE"
+  },
+  {
+    "id": "fc_5138",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 51.2,
+    "choiceCode": "MU7129AGE"
+  },
+  {
+    "id": "fc_5139",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 43.4,
+    "choiceCode": "MU7129AGE"
+  },
+  {
+    "id": "fc_5140",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Arts",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 68.8,
+    "choiceCode": "MU7129AGE"
+  },
+  {
+    "id": "fc_5141",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 42.4,
+    "choiceCode": "MU7129AGE"
+  },
+  {
+    "id": "fc_5142",
+    "collegeId": null,
+    "collegeName": "L.J.N.J. MAHILA MAHAVIDYALAYA",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 42,
+    "choiceCode": "MU7144AGM"
+  },
+  {
+    "id": "fc_5143",
+    "collegeId": null,
+    "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 41,
+    "choiceCode": "MU7154AOE"
+  },
+  {
+    "id": "fc_5144",
+    "collegeId": null,
+    "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 40.6,
+    "choiceCode": "MU7154AOE"
+  },
+  {
+    "id": "fc_5145",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 66.6,
+    "choiceCode": "MU7156AGE"
+  },
+  {
+    "id": "fc_5146",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 52,
+    "choiceCode": "MU7156AGE"
+  },
+  {
+    "id": "fc_5147",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 45.8,
+    "choiceCode": "MU7156AGE"
+  },
+  {
+    "id": "fc_5148",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Arts",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 41.4,
+    "choiceCode": "MU7156AGE"
+  },
+  {
+    "id": "fc_5149",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 47,
+    "choiceCode": "MU7156AGE"
+  },
+  {
+    "id": "fc_5150",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 52.2,
+    "choiceCode": "MU7156AGE"
+  },
+  {
+    "id": "fc_5151",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 45.4,
+    "choiceCode": "MU7156AGE"
+  },
+  {
+    "id": "fc_5152",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Arts",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 50,
+    "choiceCode": "MU7156AGE"
+  },
+  {
+    "id": "fc_5153",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Arts",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 50.8,
+    "choiceCode": "MU7156AGE"
+  },
+  {
+    "id": "fc_5154",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 57.2,
+    "choiceCode": "MU7156AGE"
+  },
+  {
+    "id": "fc_5155",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 39.8,
+    "choiceCode": "MU7156AGE"
+  },
+  {
+    "id": "fc_5156",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 46.6,
+    "choiceCode": "MU7156AGE"
+  },
+  {
+    "id": "fc_5157",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 48.6,
+    "choiceCode": "MU7167AGE"
+  },
+  {
+    "id": "fc_5158",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 66.2,
+    "choiceCode": "MU7167AGE"
+  },
+  {
+    "id": "fc_5159",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 36.8,
+    "choiceCode": "MU7167AGE"
+  },
+  {
+    "id": "fc_5160",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 40.4,
+    "choiceCode": "MU7167AGE"
+  },
+  {
+    "id": "fc_5161",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 43,
+    "choiceCode": "MU7167AGE"
+  },
+  {
+    "id": "fc_5162",
+    "collegeId": null,
+    "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 36.2,
+    "choiceCode": "MU7233AGM"
+  },
+  {
+    "id": "fc_5163",
+    "collegeId": null,
+    "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 45.6,
+    "choiceCode": "MU7233AGM"
+  },
+  {
+    "id": "fc_5164",
+    "collegeId": null,
+    "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 47,
+    "choiceCode": "MU7233AGM"
+  },
+  {
+    "id": "fc_5165",
+    "collegeId": null,
+    "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 45.8,
+    "choiceCode": "MU7233AGM"
+  },
+  {
+    "id": "fc_5166",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 48.4,
+    "choiceCode": "MU7241AGE"
+  },
+  {
+    "id": "fc_5167",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 56.4,
+    "choiceCode": "MU7241AGE"
+  },
+  {
+    "id": "fc_5168",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 57.8,
+    "choiceCode": "MU7241AGE"
+  },
+  {
+    "id": "fc_5169",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 44.2,
+    "choiceCode": "MU7241AGE"
+  },
+  {
+    "id": "fc_5170",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 41.4,
+    "choiceCode": "MU7241AGE"
+  },
+  {
+    "id": "fc_5171",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Arts",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 44.8,
+    "choiceCode": "MU7241AGE"
+  },
+  {
+    "id": "fc_5172",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Arts",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 58.4,
+    "choiceCode": "MU7241AGE"
+  },
+  {
+    "id": "fc_5173",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Arts",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 64.2,
+    "choiceCode": "MU7241AGE"
+  },
+  {
+    "id": "fc_5174",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 65.2,
+    "choiceCode": "MU7241AGE"
+  },
+  {
+    "id": "fc_5175",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 49.2,
+    "choiceCode": "MU7281AGE"
+  },
+  {
+    "id": "fc_5176",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 49.2,
+    "choiceCode": "MU7281AGE"
+  },
+  {
+    "id": "fc_5177",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 51.8,
+    "choiceCode": "MU7281AGE"
+  },
+  {
+    "id": "fc_5178",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Arts",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 70.6,
+    "choiceCode": "MU7281AGE"
+  },
+  {
+    "id": "fc_5179",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 37.2,
+    "choiceCode": "MU7281AGE"
+  },
+  {
+    "id": "fc_5180",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Arts",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 45.4,
+    "choiceCode": "MU7281AGE"
+  },
+  {
+    "id": "fc_5181",
+    "collegeId": null,
+    "collegeName": "PODAR INTERNATIONAL SCHOOL, POWAI.",
+    "stream": "Arts",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 45.2,
+    "choiceCode": "MU6983AFE"
+  },
+  {
+    "id": "fc_5182",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Arts",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 46.2,
+    "choiceCode": "MU7289AFE"
+  },
+  {
+    "id": "fc_5183",
+    "collegeId": null,
+    "collegeName": "SHARADASHRAM VIDYAMANDIR SECONDARY SCHOOL AND JR. COLLEGE OF COMMERCE, DADAR 400 028",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 48.8,
+    "choiceCode": "MU6697CGE"
+  },
+  {
+    "id": "fc_5184",
+    "collegeId": null,
+    "collegeName": "SHARADASHRAM VIDYAMANDIR SECONDARY SCHOOL AND JR. COLLEGE OF COMMERCE, DADAR 400 028",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 50,
+    "choiceCode": "MU6697CGE"
+  },
+  {
+    "id": "fc_5185",
+    "collegeId": null,
+    "collegeName": "SHARADASHRAM VIDYAMANDIR SECONDARY SCHOOL AND JR. COLLEGE OF COMMERCE, DADAR 400 028",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 40.2,
+    "choiceCode": "MU6697CGE"
+  },
+  {
+    "id": "fc_5186",
+    "collegeId": null,
+    "collegeName": "SHARADASHRAM VIDYAMANDIR SECONDARY SCHOOL AND JR. COLLEGE OF COMMERCE, DADAR 400 028",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 42.6,
+    "choiceCode": "MU6697CGE"
+  },
+  {
+    "id": "fc_5187",
+    "collegeId": null,
+    "collegeName": "DADAR VIDYA MANDIR",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 48.2,
+    "choiceCode": "MU6706CGE"
+  },
+  {
+    "id": "fc_5188",
+    "collegeId": null,
+    "collegeName": "DADAR VIDYA MANDIR",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 46.6,
+    "choiceCode": "MU6706CGE"
+  },
+  {
+    "id": "fc_5189",
+    "collegeId": null,
+    "collegeName": "DADAR VIDYA MANDIR",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 41,
+    "choiceCode": "MU6706CGE"
+  },
+  {
+    "id": "fc_5190",
+    "collegeId": null,
+    "collegeName": "S.N.D.T.COLLEGE OF ARTS & SCB COLLEGE OF COMM. & SCI. FOR WOMEN",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 41.4,
+    "choiceCode": "MU6721CGE"
+  },
+  {
+    "id": "fc_5191",
+    "collegeId": null,
+    "collegeName": "S.N.D.T.COLLEGE OF ARTS & SCB COLLEGE OF COMM. & SCI. FOR WOMEN",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 54.4,
+    "choiceCode": "MU6721CGE"
+  },
+  {
+    "id": "fc_5192",
+    "collegeId": null,
+    "collegeName": "S.N.D.T.COLLEGE OF ARTS & SCB COLLEGE OF COMM. & SCI. FOR WOMEN",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 53.8,
+    "choiceCode": "MU6721CGE"
+  },
+  {
+    "id": "fc_5193",
+    "collegeId": null,
+    "collegeName": "S.N.D.T.COLLEGE OF ARTS & SCB COLLEGE OF COMM. & SCI. FOR WOMEN",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 49.6,
+    "choiceCode": "MU6721CGE"
+  },
+  {
+    "id": "fc_5194",
+    "collegeId": null,
+    "collegeName": "S.N.D.T.COLLEGE OF ARTS & SCB COLLEGE OF COMM. & SCI. FOR WOMEN",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 42,
+    "choiceCode": "MU6721CGE"
+  },
+  {
+    "id": "fc_5195",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF COMM. & ECO.",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 38.8,
+    "choiceCode": "MU6722CGE"
+  },
+  {
+    "id": "fc_5196",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF COMM. & ECO.",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 45,
+    "choiceCode": "MU6722CGE"
+  },
+  {
+    "id": "fc_5197",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF COMM. & ECO.",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 43.4,
+    "choiceCode": "MU6722CGE"
+  },
+  {
+    "id": "fc_5198",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF COMM. & ECO.",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 39.4,
+    "choiceCode": "MU6722CGE"
+  },
+  {
+    "id": "fc_5199",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF COMM. & ECO.",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 52.6,
+    "choiceCode": "MU6722CGE"
+  },
+  {
+    "id": "fc_5200",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF COMM. & ECO.",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 40.8,
+    "choiceCode": "MU6722CGE"
+  },
+  {
+    "id": "fc_5201",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF COMM. & ECO.",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 37.8,
+    "choiceCode": "MU6722CGE"
+  },
+  {
+    "id": "fc_5202",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 45.4,
+    "choiceCode": "MU6723CGE"
+  },
+  {
+    "id": "fc_5203",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 50,
+    "choiceCode": "MU6723CGE"
+  },
+  {
+    "id": "fc_5204",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 53.8,
+    "choiceCode": "MU6723CGE"
+  },
+  {
+    "id": "fc_5205",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 52.6,
+    "choiceCode": "MU6723CGE"
+  },
+  {
+    "id": "fc_5206",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 53.4,
+    "choiceCode": "MU6723CGE"
+  },
+  {
+    "id": "fc_5207",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 40.6,
+    "choiceCode": "MU6723CGE"
+  },
+  {
+    "id": "fc_5208",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 39.6,
+    "choiceCode": "MU6723CGE"
+  },
+  {
+    "id": "fc_5209",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 82.2,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5210",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 72.4,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5211",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 65.6,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5212",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 75.2,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5213",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 80.4,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5214",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 82.2,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5215",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 84.2,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5216",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 81.2,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5217",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 86.2,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5218",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 48,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5219",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 81.6,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5220",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 67.6,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5221",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 73.8,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5222",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 79.8,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5223",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 81.2,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5224",
+    "collegeId": null,
+    "collegeName": "SYDENHAM COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 59.2,
+    "choiceCode": "MU6725COE"
+  },
+  {
+    "id": "fc_5225",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 73.2,
+    "choiceCode": "MU6726COE"
+  },
+  {
+    "id": "fc_5226",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 44.2,
+    "choiceCode": "MU6726COE"
+  },
+  {
+    "id": "fc_5227",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 67.6,
+    "choiceCode": "MU6726COE"
+  },
+  {
+    "id": "fc_5228",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 63.4,
+    "choiceCode": "MU6726COE"
+  },
+  {
+    "id": "fc_5229",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 74.6,
+    "choiceCode": "MU6726COE"
+  },
+  {
+    "id": "fc_5230",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 43.8,
+    "choiceCode": "MU6726COE"
+  },
+  {
+    "id": "fc_5231",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 69.8,
+    "choiceCode": "MU6726COE"
+  },
+  {
+    "id": "fc_5232",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 39.6,
+    "choiceCode": "MU6726COE"
+  },
+  {
+    "id": "fc_5233",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 54,
+    "choiceCode": "MU6726COE"
+  },
+  {
+    "id": "fc_5234",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 57.6,
+    "choiceCode": "MU6726COE"
+  },
+  {
+    "id": "fc_5235",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU6726COE"
+  },
+  {
+    "id": "fc_5236",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 68.4,
+    "choiceCode": "MU6726COE"
+  },
+  {
+    "id": "fc_5237",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 53.2,
+    "choiceCode": "MU6726COE"
+  },
+  {
+    "id": "fc_5238",
+    "collegeId": null,
+    "collegeName": "BHAUSAHEB HIRAY VIDYALAYA",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 37.4,
+    "choiceCode": "MU6740CGE"
+  },
+  {
+    "id": "fc_5239",
+    "collegeId": null,
+    "collegeName": "BHAUSAHEB HIRAY VIDYALAYA",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 50,
+    "choiceCode": "MU6740CGE"
+  },
+  {
+    "id": "fc_5240",
+    "collegeId": null,
+    "collegeName": "BHAUSAHEB HIRAY VIDYALAYA",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 41.6,
+    "choiceCode": "MU6740CGE"
+  },
+  {
+    "id": "fc_5241",
+    "collegeId": null,
+    "collegeName": "BHAUSAHEB HIRAY VIDYALAYA",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 41.2,
+    "choiceCode": "MU6740CGE"
+  },
+  {
+    "id": "fc_5242",
+    "collegeId": null,
+    "collegeName": "BHAUSAHEB HIRAY VIDYALAYA",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 45.6,
+    "choiceCode": "MU6740CGE"
+  },
+  {
+    "id": "fc_5243",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 73.8,
+    "choiceCode": "MU6745CGE"
+  },
+  {
+    "id": "fc_5244",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 57,
+    "choiceCode": "MU6745CGE"
+  },
+  {
+    "id": "fc_5245",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 67.8,
+    "choiceCode": "MU6745CGE"
+  },
+  {
+    "id": "fc_5246",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 60.2,
+    "choiceCode": "MU6745CGE"
+  },
+  {
+    "id": "fc_5247",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 67.4,
+    "choiceCode": "MU6745CGE"
+  },
+  {
+    "id": "fc_5248",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 61,
+    "choiceCode": "MU6745CGE"
+  },
+  {
+    "id": "fc_5249",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 68,
+    "choiceCode": "MU6745CGE"
+  },
+  {
+    "id": "fc_5250",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 52.6,
+    "choiceCode": "MU6745CGE"
+  },
+  {
+    "id": "fc_5251",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 54.4,
+    "choiceCode": "MU6745CGE"
+  },
+  {
+    "id": "fc_5252",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 53.2,
+    "choiceCode": "MU6745CGE"
+  },
+  {
+    "id": "fc_5253",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 58.4,
+    "choiceCode": "MU6745CGE"
+  },
+  {
+    "id": "fc_5254",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 70.4,
+    "choiceCode": "MU6745CGE"
+  },
+  {
+    "id": "fc_5255",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 58.2,
+    "choiceCode": "MU6745CGE"
+  },
+  {
+    "id": "fc_5256",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 66.2,
+    "choiceCode": "MU6767CNE"
+  },
+  {
+    "id": "fc_5257",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 42.4,
+    "choiceCode": "MU6767CNE"
+  },
+  {
+    "id": "fc_5258",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 69.8,
+    "choiceCode": "MU6767CNE"
+  },
+  {
+    "id": "fc_5259",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 72.6,
+    "choiceCode": "MU6767CNE"
+  },
+  {
+    "id": "fc_5260",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 64.6,
+    "choiceCode": "MU6767CNE"
+  },
+  {
+    "id": "fc_5261",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 45.2,
+    "choiceCode": "MU6767CNE"
+  },
+  {
+    "id": "fc_5262",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 53.6,
+    "choiceCode": "MU6767CNE"
+  },
+  {
+    "id": "fc_5263",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 66.4,
+    "choiceCode": "MU6767CNE"
+  },
+  {
+    "id": "fc_5264",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 73.4,
+    "choiceCode": "MU6767CNE"
+  },
+  {
+    "id": "fc_5265",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 69.6,
+    "choiceCode": "MU6767CNE"
+  },
+  {
+    "id": "fc_5266",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 69,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5267",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 41.2,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5268",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 68.4,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5269",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 57.2,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5270",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 53,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5271",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 71.8,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5272",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 67,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5273",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 68.2,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5274",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 63,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5275",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 40,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5276",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 69.2,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5277",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 53.6,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5278",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 51.4,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5279",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 70.4,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5280",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 55.8,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5281",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 70.4,
+    "choiceCode": "MU6767CGE"
+  },
+  {
+    "id": "fc_5282",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 82.2,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5283",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 54.8,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5284",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5285",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 80,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5286",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 81.6,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5287",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 64,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5288",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 86.6,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5289",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 87.2,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5290",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 56,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5291",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 79.6,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5292",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 65.6,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5293",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 62.2,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5294",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 65,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5295",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 81,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5296",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 47.8,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5297",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 54.4,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5298",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 77.6,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5299",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 68.2,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5300",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 63,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5301",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 83.6,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5302",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 83,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5303",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 53.8,
+    "choiceCode": "MU6768CGE"
+  },
+  {
+    "id": "fc_5304",
+    "collegeId": null,
+    "collegeName": "K. M. S. DR. SHIRODKAR HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 41.4,
+    "choiceCode": "MU6783CGE"
+  },
+  {
+    "id": "fc_5305",
+    "collegeId": null,
+    "collegeName": "K. M. S. DR. SHIRODKAR HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 44.4,
+    "choiceCode": "MU6783CGE"
+  },
+  {
+    "id": "fc_5306",
+    "collegeId": null,
+    "collegeName": "K. M. S. DR. SHIRODKAR HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 43.8,
+    "choiceCode": "MU6783CGE"
+  },
+  {
+    "id": "fc_5307",
+    "collegeId": null,
+    "collegeName": "K. M. S. DR. SHIRODKAR HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 39.8,
+    "choiceCode": "MU6783CGE"
+  },
+  {
+    "id": "fc_5308",
+    "collegeId": null,
+    "collegeName": "K. M. S. DR. SHIRODKAR HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 35.4,
+    "choiceCode": "MU6783CGE"
+  },
+  {
+    "id": "fc_5309",
+    "collegeId": null,
+    "collegeName": "R.M.BHATT HIGH SCHOOL AND JUNIOR COLLEGE PAREL",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 56.4,
+    "choiceCode": "MU6784CGE"
+  },
+  {
+    "id": "fc_5310",
+    "collegeId": null,
+    "collegeName": "R.M.BHATT HIGH SCHOOL AND JUNIOR COLLEGE PAREL",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 52.2,
+    "choiceCode": "MU6784CGE"
+  },
+  {
+    "id": "fc_5311",
+    "collegeId": null,
+    "collegeName": "R.M.BHATT HIGH SCHOOL AND JUNIOR COLLEGE PAREL",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 49.6,
+    "choiceCode": "MU6784CGE"
+  },
+  {
+    "id": "fc_5312",
+    "collegeId": null,
+    "collegeName": "R.M.BHATT HIGH SCHOOL AND JUNIOR COLLEGE PAREL",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 42.2,
+    "choiceCode": "MU6784CGE"
+  },
+  {
+    "id": "fc_5313",
+    "collegeId": null,
+    "collegeName": "R.M.BHATT HIGH SCHOOL AND JUNIOR COLLEGE PAREL",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 40.2,
+    "choiceCode": "MU6784CGE"
+  },
+  {
+    "id": "fc_5314",
+    "collegeId": null,
+    "collegeName": "R.M.BHATT HIGH SCHOOL AND JUNIOR COLLEGE PAREL",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 53.8,
+    "choiceCode": "MU6784CGE"
+  },
+  {
+    "id": "fc_5315",
+    "collegeId": null,
+    "collegeName": "R.M.BHATT HIGH SCHOOL AND JUNIOR COLLEGE PAREL",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 54.2,
+    "choiceCode": "MU6784CGE"
+  },
+  {
+    "id": "fc_5316",
+    "collegeId": null,
+    "collegeName": "ABHYUDAYA EDUCATION SOCIETY'S HIGH SCHOOL (MARATHI) & JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 54.4,
+    "choiceCode": "MU6792CGE"
+  },
+  {
+    "id": "fc_5317",
+    "collegeId": null,
+    "collegeName": "ABHYUDAYA EDUCATION SOCIETY'S HIGH SCHOOL (MARATHI) & JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 60.8,
+    "choiceCode": "MU6792CGE"
+  },
+  {
+    "id": "fc_5318",
+    "collegeId": null,
+    "collegeName": "ABHYUDAYA EDUCATION SOCIETY'S HIGH SCHOOL (MARATHI) & JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 54.8,
+    "choiceCode": "MU6792CGE"
+  },
+  {
+    "id": "fc_5319",
+    "collegeId": null,
+    "collegeName": "ABHYUDAYA EDUCATION SOCIETY'S HIGH SCHOOL (MARATHI) & JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 56.2,
+    "choiceCode": "MU6792CGE"
+  },
+  {
+    "id": "fc_5320",
+    "collegeId": null,
+    "collegeName": "ABHYUDAYA EDUCATION SOCIETY'S HIGH SCHOOL (MARATHI) & JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 59.2,
+    "choiceCode": "MU6792CGE"
+  },
+  {
+    "id": "fc_5321",
+    "collegeId": null,
+    "collegeName": "ABHYUDAYA EDUCATION SOCIETY'S HIGH SCHOOL (MARATHI) & JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 48.2,
+    "choiceCode": "MU6792CGE"
+  },
+  {
+    "id": "fc_5322",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE EDUCATION SOCIETY JR. COLLEGE OF ARTS AND COMMERCE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 40.2,
+    "choiceCode": "MU6800CFE"
+  },
+  {
+    "id": "fc_5323",
+    "collegeId": null,
+    "collegeName": "MATUNGA LIONS PIONEER ENGLISH SCHOOL",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 57.2,
+    "choiceCode": "MU6812CFE"
+  },
+  {
+    "id": "fc_5324",
+    "collegeId": null,
+    "collegeName": "MATUNGA LIONS PIONEER ENGLISH SCHOOL",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 37,
+    "choiceCode": "MU6812CFE"
+  },
+  {
+    "id": "fc_5325",
+    "collegeId": null,
+    "collegeName": "MATUNGA LIONS PIONEER ENGLISH SCHOOL",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 56.8,
+    "choiceCode": "MU6812CFE"
+  },
+  {
+    "id": "fc_5326",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 85.8,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5327",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 69.2,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5328",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 61.2,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5329",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 81,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5330",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 75.6,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5331",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 83,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5332",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 87,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5333",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 86.8,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5334",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 74.2,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5335",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 82.6,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5336",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 65,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5337",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 61.2,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5338",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 74.4,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5339",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 70.8,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5340",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 81.4,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5341",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 46.4,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5342",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 40.2,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5343",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 80.8,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5344",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 57.2,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5345",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 66.8,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5346",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 82.8,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5347",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 83.6,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5348",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 52.4,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5349",
+    "collegeId": null,
+    "collegeName": "R.A.PODAR COLLEGE OF COMM. & ECONOMICS",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 51.8,
+    "choiceCode": "MU6833CGE"
+  },
+  {
+    "id": "fc_5350",
+    "collegeId": null,
+    "collegeName": "DR. AMBEDKAR COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 36.2,
+    "choiceCode": "MU6838CGE"
+  },
+  {
+    "id": "fc_5351",
+    "collegeId": null,
+    "collegeName": "DR. AMBEDKAR COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 36.4,
+    "choiceCode": "MU6838CGE"
+  },
+  {
+    "id": "fc_5352",
+    "collegeId": null,
+    "collegeName": "DR. AMBEDKAR COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 43.8,
+    "choiceCode": "MU6838CGE"
+  },
+  {
+    "id": "fc_5353",
+    "collegeId": null,
+    "collegeName": "DR. AMBEDKAR COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 35.8,
+    "choiceCode": "MU6838CGE"
+  },
+  {
+    "id": "fc_5354",
+    "collegeId": null,
+    "collegeName": "DR. AMBEDKAR COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 39.4,
+    "choiceCode": "MU6838CGE"
+  },
+  {
+    "id": "fc_5355",
+    "collegeId": null,
+    "collegeName": "DR. AMBEDKAR COLLEGE OF COMMERCE & ECONOMICS",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 40.6,
+    "choiceCode": "MU6838CGE"
+  },
+  {
+    "id": "fc_5356",
+    "collegeId": null,
+    "collegeName": "SWAMI RAMKRISHANA PARMHANS JR. COLLEGE GOVENDI (E)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 42.2,
+    "choiceCode": "MU6863CFE"
+  },
+  {
+    "id": "fc_5357",
+    "collegeId": null,
+    "collegeName": "SWAMI RAMKRISHANA PARMHANS JR. COLLEGE GOVENDI (E)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 35.8,
+    "choiceCode": "MU6863CFE"
+  },
+  {
+    "id": "fc_5358",
+    "collegeId": null,
+    "collegeName": "SWAMI RAMKRISHANA PARMHANS JR. COLLEGE GOVENDI (E)",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 50.6,
+    "choiceCode": "MU6863CFE"
+  },
+  {
+    "id": "fc_5359",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 59.2,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5360",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 55,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5361",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 55.2,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5362",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 51.2,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5363",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 49.8,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5364",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 48.8,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5365",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 40.2,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5366",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 54.4,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5367",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 57.4,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5368",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 56.4,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5369",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 37.2,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5370",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 39.4,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5371",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 45.6,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5372",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 65.2,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5373",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 39.4,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5374",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 45.2,
+    "choiceCode": "MU6880CGE"
+  },
+  {
+    "id": "fc_5375",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 68.4,
+    "choiceCode": "MU6892CFE"
+  },
+  {
+    "id": "fc_5376",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 47.4,
+    "choiceCode": "MU6892CFE"
+  },
+  {
+    "id": "fc_5377",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 72.2,
+    "choiceCode": "MU6892CFE"
+  },
+  {
+    "id": "fc_5378",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 62,
+    "choiceCode": "MU6892CFE"
+  },
+  {
+    "id": "fc_5379",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 59.2,
+    "choiceCode": "MU6892CFE"
+  },
+  {
+    "id": "fc_5380",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 64.2,
+    "choiceCode": "MU6892CFE"
+  },
+  {
+    "id": "fc_5381",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 43.6,
+    "choiceCode": "MU6892CFE"
+  },
+  {
+    "id": "fc_5382",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 43.4,
+    "choiceCode": "MU6892CFE"
+  },
+  {
+    "id": "fc_5383",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 71.2,
+    "choiceCode": "MU6892CFE"
+  },
+  {
+    "id": "fc_5384",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 57,
+    "choiceCode": "MU6892CFE"
+  },
+  {
+    "id": "fc_5385",
+    "collegeId": null,
+    "collegeName": "VANITA VIKAS KANISHTHA MAHAVIDYALAYA",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 38,
+    "choiceCode": "MU6899CNE"
+  },
+  {
+    "id": "fc_5386",
+    "collegeId": null,
+    "collegeName": "VANITA VIKAS KANISHTHA MAHAVIDYALAYA",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 49.4,
+    "choiceCode": "MU6899CNE"
+  },
+  {
+    "id": "fc_5387",
+    "collegeId": null,
+    "collegeName": "VANITA VIKAS KANISHTHA MAHAVIDYALAYA",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 54,
+    "choiceCode": "MU6899CNE"
+  },
+  {
+    "id": "fc_5388",
+    "collegeId": null,
+    "collegeName": "VANITA VIKAS KANISHTHA MAHAVIDYALAYA",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 47.8,
+    "choiceCode": "MU6899CNE"
+  },
+  {
+    "id": "fc_5389",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 50.2,
+    "choiceCode": "MU6900CNE"
+  },
+  {
+    "id": "fc_5390",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 52.8,
+    "choiceCode": "MU6900CNE"
+  },
+  {
+    "id": "fc_5391",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 52,
+    "choiceCode": "MU6900CNE"
+  },
+  {
+    "id": "fc_5392",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 38.2,
+    "choiceCode": "MU6900CNE"
+  },
+  {
+    "id": "fc_5393",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 58,
+    "choiceCode": "MU6900CNE"
+  },
+  {
+    "id": "fc_5394",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 57.4,
+    "choiceCode": "MU6900CNE"
+  },
+  {
+    "id": "fc_5395",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 46.8,
+    "choiceCode": "MU6900CNE"
+  },
+  {
+    "id": "fc_5396",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 64.6,
+    "choiceCode": "MU6900CGE"
+  },
+  {
+    "id": "fc_5397",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 57.2,
+    "choiceCode": "MU6900CGE"
+  },
+  {
+    "id": "fc_5398",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 63.4,
+    "choiceCode": "MU6900CGE"
+  },
+  {
+    "id": "fc_5399",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU6900CGE"
+  },
+  {
+    "id": "fc_5400",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 58.6,
+    "choiceCode": "MU6900CGE"
+  },
+  {
+    "id": "fc_5401",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 64.2,
+    "choiceCode": "MU6900CGE"
+  },
+  {
+    "id": "fc_5402",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 48.8,
+    "choiceCode": "MU6900CGE"
+  },
+  {
+    "id": "fc_5403",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 59,
+    "choiceCode": "MU6900CGE"
+  },
+  {
+    "id": "fc_5404",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 65.6,
+    "choiceCode": "MU6900CGE"
+  },
+  {
+    "id": "fc_5405",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 49.6,
+    "choiceCode": "MU6900CGE"
+  },
+  {
+    "id": "fc_5406",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 38.6,
+    "choiceCode": "MU6900CGE"
+  },
+  {
+    "id": "fc_5407",
+    "collegeId": null,
+    "collegeName": "G. S. P. MANDAL'S  MARATHI VIDYALAYA & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 49.2,
+    "choiceCode": "MU6901CGE"
+  },
+  {
+    "id": "fc_5408",
+    "collegeId": null,
+    "collegeName": "G. S. P. MANDAL'S  MARATHI VIDYALAYA & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 63,
+    "choiceCode": "MU6901CGE"
+  },
+  {
+    "id": "fc_5409",
+    "collegeId": null,
+    "collegeName": "G. S. P. MANDAL'S  MARATHI VIDYALAYA & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 48.2,
+    "choiceCode": "MU6901CGE"
+  },
+  {
+    "id": "fc_5410",
+    "collegeId": null,
+    "collegeName": "G. S. P. MANDAL'S  MARATHI VIDYALAYA & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 49.4,
+    "choiceCode": "MU6901CGE"
+  },
+  {
+    "id": "fc_5411",
+    "collegeId": null,
+    "collegeName": "G. S. P. MANDAL'S  MARATHI VIDYALAYA & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 47.8,
+    "choiceCode": "MU6901CGE"
+  },
+  {
+    "id": "fc_5412",
+    "collegeId": null,
+    "collegeName": "LITTLE FLOWER ENGLISH HIGH SCHOOL & JR COLLEGE, GHATKOPAR",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 40.8,
+    "choiceCode": "MU6905CFE"
+  },
+  {
+    "id": "fc_5413",
+    "collegeId": null,
+    "collegeName": "LITTLE FLOWER ENGLISH HIGH SCHOOL & JR COLLEGE, GHATKOPAR",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 43.4,
+    "choiceCode": "MU6905CFE"
+  },
+  {
+    "id": "fc_5414",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 36,
+    "choiceCode": "MU6907CFE"
+  },
+  {
+    "id": "fc_5415",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 47.2,
+    "choiceCode": "MU6907CFE"
+  },
+  {
+    "id": "fc_5416",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 51.8,
+    "choiceCode": "MU6907CFE"
+  },
+  {
+    "id": "fc_5417",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 43.6,
+    "choiceCode": "MU6907CFE"
+  },
+  {
+    "id": "fc_5418",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 61.6,
+    "choiceCode": "MU6907CFE"
+  },
+  {
+    "id": "fc_5419",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 36.8,
+    "choiceCode": "MU6907CNE"
+  },
+  {
+    "id": "fc_5420",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 40.8,
+    "choiceCode": "MU6907CNE"
+  },
+  {
+    "id": "fc_5421",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 49.4,
+    "choiceCode": "MU6907CNE"
+  },
+  {
+    "id": "fc_5422",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 52.8,
+    "choiceCode": "MU6907CGE"
+  },
+  {
+    "id": "fc_5423",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 41.4,
+    "choiceCode": "MU6907CGE"
+  },
+  {
+    "id": "fc_5424",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 49.6,
+    "choiceCode": "MU6907CGE"
+  },
+  {
+    "id": "fc_5425",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 40.2,
+    "choiceCode": "MU6907CGE"
+  },
+  {
+    "id": "fc_5426",
+    "collegeId": null,
+    "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 53.2,
+    "choiceCode": "MU6908CNE"
+  },
+  {
+    "id": "fc_5427",
+    "collegeId": null,
+    "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 46.4,
+    "choiceCode": "MU6908CNE"
+  },
+  {
+    "id": "fc_5428",
+    "collegeId": null,
+    "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 35,
+    "choiceCode": "MU6908CNE"
+  },
+  {
+    "id": "fc_5429",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 38,
+    "choiceCode": "MU6915CFE"
+  },
+  {
+    "id": "fc_5430",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 42,
+    "choiceCode": "MU6915CFE"
+  },
+  {
+    "id": "fc_5431",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 51.8,
+    "choiceCode": "MU6915CFE"
+  },
+  {
+    "id": "fc_5432",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 35.8,
+    "choiceCode": "MU6915CFE"
+  },
+  {
+    "id": "fc_5433",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 42,
+    "choiceCode": "MU6915CFE"
+  },
+  {
+    "id": "fc_5434",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 54,
+    "choiceCode": "MU6915CFE"
+  },
+  {
+    "id": "fc_5435",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 38.6,
+    "choiceCode": "MU6915CFE"
+  },
+  {
+    "id": "fc_5436",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 44.8,
+    "choiceCode": "MU6915CFE"
+  },
+  {
+    "id": "fc_5437",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 52.4,
+    "choiceCode": "MU6915CFE"
+  },
+  {
+    "id": "fc_5438",
+    "collegeId": null,
+    "collegeName": "K. M. S. P. MANDL'S S.I.H. BHATIA HIGH SCHOOL & JR. COLLEGE, KURLA (W).",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 43,
+    "choiceCode": "MU6934CGE"
+  },
+  {
+    "id": "fc_5439",
+    "collegeId": null,
+    "collegeName": "K. M. S. P. MANDL'S S.I.H. BHATIA HIGH SCHOOL & JR. COLLEGE, KURLA (W).",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 43.4,
+    "choiceCode": "MU6934CGE"
+  },
+  {
+    "id": "fc_5440",
+    "collegeId": null,
+    "collegeName": "K. M. S. P. MANDL'S S.I.H. BHATIA HIGH SCHOOL & JR. COLLEGE, KURLA (W).",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 55.4,
+    "choiceCode": "MU6934CGE"
+  },
+  {
+    "id": "fc_5441",
+    "collegeId": null,
+    "collegeName": "SHIVAJI JR COLLEGE OF COMMERCE, KAJUPADA, KURLA (W).",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 43.8,
+    "choiceCode": "MU6936CNE"
+  },
+  {
+    "id": "fc_5442",
+    "collegeId": null,
+    "collegeName": "SHIVAJI JR COLLEGE OF COMMERCE, KAJUPADA, KURLA (W).",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 53.6,
+    "choiceCode": "MU6936CNE"
+  },
+  {
+    "id": "fc_5443",
+    "collegeId": null,
+    "collegeName": "Sinhgad Junior College of Commerce",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 46.8,
+    "choiceCode": "MU6951CFE"
+  },
+  {
+    "id": "fc_5444",
+    "collegeId": null,
+    "collegeName": "Sinhgad Junior College of Commerce",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU6951CFE"
+  },
+  {
+    "id": "fc_5445",
+    "collegeId": null,
+    "collegeName": "Sinhgad Junior College of Commerce",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 39.4,
+    "choiceCode": "MU6951CFE"
+  },
+  {
+    "id": "fc_5446",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF COMMERCE, SURYA NAGAR, VIKHROLI (W).",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 43.8,
+    "choiceCode": "MU6960CNE"
+  },
+  {
+    "id": "fc_5447",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 42.2,
+    "choiceCode": "MU6964CGE"
+  },
+  {
+    "id": "fc_5448",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 37.2,
+    "choiceCode": "MU6964CGE"
+  },
+  {
+    "id": "fc_5449",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 45,
+    "choiceCode": "MU6964CGE"
+  },
+  {
+    "id": "fc_5450",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 36.6,
+    "choiceCode": "MU6964CGE"
+  },
+  {
+    "id": "fc_5451",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 44.8,
+    "choiceCode": "MU6964CGE"
+  },
+  {
+    "id": "fc_5452",
+    "collegeId": null,
+    "collegeName": "DON BOSCO HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 53.2,
+    "choiceCode": "MU6966CFE"
+  },
+  {
+    "id": "fc_5453",
+    "collegeId": null,
+    "collegeName": "DON BOSCO HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 39,
+    "choiceCode": "MU6966CFE"
+  },
+  {
+    "id": "fc_5454",
+    "collegeId": null,
+    "collegeName": "DON BOSCO HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 54.4,
+    "choiceCode": "MU6966CFE"
+  },
+  {
+    "id": "fc_5455",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 42.4,
+    "choiceCode": "MU6969CGE"
+  },
+  {
+    "id": "fc_5456",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 61.8,
+    "choiceCode": "MU6969CGE"
+  },
+  {
+    "id": "fc_5457",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 57,
+    "choiceCode": "MU6969CGE"
+  },
+  {
+    "id": "fc_5458",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 49.6,
+    "choiceCode": "MU6969CGE"
+  },
+  {
+    "id": "fc_5459",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 44.4,
+    "choiceCode": "MU6969CGE"
+  },
+  {
+    "id": "fc_5460",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 45.8,
+    "choiceCode": "MU6969CGE"
+  },
+  {
+    "id": "fc_5461",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 45,
+    "choiceCode": "MU6969CGE"
+  },
+  {
+    "id": "fc_5462",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 49.6,
+    "choiceCode": "MU6969CGE"
+  },
+  {
+    "id": "fc_5463",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 60.2,
+    "choiceCode": "MU6969CGE"
+  },
+  {
+    "id": "fc_5464",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 61.2,
+    "choiceCode": "MU6969CGE"
+  },
+  {
+    "id": "fc_5465",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 38.8,
+    "choiceCode": "MU6969CGE"
+  },
+  {
+    "id": "fc_5466",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 62.6,
+    "choiceCode": "MU6969CGE"
+  },
+  {
+    "id": "fc_5467",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU6969CGE"
+  },
+  {
+    "id": "fc_5468",
+    "collegeId": null,
+    "collegeName": "DR. BABASAHEB AMBEDKAR VIDYALAYA, VIKHROLI (E)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 38.2,
+    "choiceCode": "MU6970CFE"
+  },
+  {
+    "id": "fc_5469",
+    "collegeId": null,
+    "collegeName": "DR. BABASAHEB AMBEDKAR VIDYALAYA, VIKHROLI (E)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 57.2,
+    "choiceCode": "MU6970CFE"
+  },
+  {
+    "id": "fc_5470",
+    "collegeId": null,
+    "collegeName": "ASMITA GIRLS JR COLLEGE VIKAROLI (E)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 51.2,
+    "choiceCode": "MU6978CFE"
+  },
+  {
+    "id": "fc_5471",
+    "collegeId": null,
+    "collegeName": "ASMITA GIRLS JR COLLEGE VIKAROLI (E)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 53.8,
+    "choiceCode": "MU6978CFE"
+  },
+  {
+    "id": "fc_5472",
+    "collegeId": null,
+    "collegeName": "ASMITA GIRLS JR COLLEGE VIKAROLI (E)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 40.8,
+    "choiceCode": "MU6978CGE"
+  },
+  {
+    "id": "fc_5473",
+    "collegeId": null,
+    "collegeName": "ASMITA GIRLS JR COLLEGE VIKAROLI (E)",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 57.6,
+    "choiceCode": "MU6978CGE"
+  },
+  {
+    "id": "fc_5474",
+    "collegeId": null,
+    "collegeName": "ASMITA GIRLS JR COLLEGE VIKAROLI (E)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 41.4,
+    "choiceCode": "MU6978CGE"
+  },
+  {
+    "id": "fc_5475",
+    "collegeId": null,
+    "collegeName": "PODAR INTERNATIONAL SCHOOL, POWAI.",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 64.4,
+    "choiceCode": "MU6983CFE"
+  },
+  {
+    "id": "fc_5476",
+    "collegeId": null,
+    "collegeName": "PODAR INTERNATIONAL SCHOOL, POWAI.",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 63.2,
+    "choiceCode": "MU6983CFE"
+  },
+  {
+    "id": "fc_5477",
+    "collegeId": null,
+    "collegeName": "PODAR INTERNATIONAL SCHOOL, POWAI.",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55,
+    "choiceCode": "MU6983CFE"
+  },
+  {
+    "id": "fc_5478",
+    "collegeId": null,
+    "collegeName": "PODAR INTERNATIONAL SCHOOL, POWAI.",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 53.6,
+    "choiceCode": "MU6983CFE"
+  },
+  {
+    "id": "fc_5479",
+    "collegeId": null,
+    "collegeName": "KUMARI KASTURI VIDYALAYA & JR. COLLEGE, BHANDUP (W).",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 48.6,
+    "choiceCode": "MU6988CGE"
+  },
+  {
+    "id": "fc_5480",
+    "collegeId": null,
+    "collegeName": "YASHWANT CHANDJI SAWANT VIDYAMANDIR & JR. COLLEGE, BHANDUP",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 42.4,
+    "choiceCode": "MU6997CGE"
+  },
+  {
+    "id": "fc_5481",
+    "collegeId": null,
+    "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 42.4,
+    "choiceCode": "MU6999CPE"
+  },
+  {
+    "id": "fc_5482",
+    "collegeId": null,
+    "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 53.6,
+    "choiceCode": "MU6999CPE"
+  },
+  {
+    "id": "fc_5483",
+    "collegeId": null,
+    "collegeName": "NAVJEEVAN VIDYAMANDIR & JR. COLLEGE, BHANDUP WEST",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 49.8,
+    "choiceCode": "MU7000CGE"
+  },
+  {
+    "id": "fc_5484",
+    "collegeId": null,
+    "collegeName": "NAVJEEVAN VIDYAMANDIR & JR. COLLEGE, BHANDUP WEST",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 54.4,
+    "choiceCode": "MU7000CGE"
+  },
+  {
+    "id": "fc_5485",
+    "collegeId": null,
+    "collegeName": "NAVJEEVAN VIDYAMANDIR & JR. COLLEGE, BHANDUP WEST",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 43,
+    "choiceCode": "MU7000CGE"
+  },
+  {
+    "id": "fc_5486",
+    "collegeId": null,
+    "collegeName": "NAVJEEVAN VIDYAMANDIR & JR. COLLEGE, BHANDUP WEST",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 52.4,
+    "choiceCode": "MU7000CGE"
+  },
+  {
+    "id": "fc_5487",
+    "collegeId": null,
+    "collegeName": "NAVJEEVAN VIDYAMANDIR & JR. COLLEGE, BHANDUP WEST",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 50.2,
+    "choiceCode": "MU7000CGE"
+  },
+  {
+    "id": "fc_5488",
+    "collegeId": null,
+    "collegeName": "NAVJEEVAN VIDYAMANDIR & JR. COLLEGE, BHANDUP WEST",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 47.2,
+    "choiceCode": "MU7000CGE"
+  },
+  {
+    "id": "fc_5489",
+    "collegeId": null,
+    "collegeName": "PARAG ENGLISH SCHOOL & JR. COLLEGE, BHANDUP (W)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 49.4,
+    "choiceCode": "MU7001CFE"
+  },
+  {
+    "id": "fc_5490",
+    "collegeId": null,
+    "collegeName": "PARAG ENGLISH SCHOOL & JR. COLLEGE, BHANDUP (W)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 40,
+    "choiceCode": "MU7001CFE"
+  },
+  {
+    "id": "fc_5491",
+    "collegeId": null,
+    "collegeName": "JAI BHARAT HIGH SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 43.2,
+    "choiceCode": "MU7009CFE"
+  },
+  {
+    "id": "fc_5492",
+    "collegeId": null,
+    "collegeName": "JAI BHARAT HIGH SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 41.8,
+    "choiceCode": "MU7009CFE"
+  },
+  {
+    "id": "fc_5493",
+    "collegeId": null,
+    "collegeName": "JAI BHARAT HIGH SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55,
+    "choiceCode": "MU7009CFE"
+  },
+  {
+    "id": "fc_5494",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 51.6,
+    "choiceCode": "MU7012CFE"
+  },
+  {
+    "id": "fc_5495",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 38.4,
+    "choiceCode": "MU7012CFE"
+  },
+  {
+    "id": "fc_5496",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 48.4,
+    "choiceCode": "MU7012CFE"
+  },
+  {
+    "id": "fc_5497",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 48,
+    "choiceCode": "MU7012CFE"
+  },
+  {
+    "id": "fc_5498",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 65,
+    "choiceCode": "MU7012CFE"
+  },
+  {
+    "id": "fc_5499",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 50.2,
+    "choiceCode": "MU7012CFE"
+  },
+  {
+    "id": "fc_5500",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 52.8,
+    "choiceCode": "MU7012CFE"
+  },
+  {
+    "id": "fc_5501",
+    "collegeId": null,
+    "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 52.8,
+    "choiceCode": "MU7015CFE"
+  },
+  {
+    "id": "fc_5502",
+    "collegeId": null,
+    "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 69.2,
+    "choiceCode": "MU7015CFE"
+  },
+  {
+    "id": "fc_5503",
+    "collegeId": null,
+    "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 39.4,
+    "choiceCode": "MU7015CFE"
+  },
+  {
+    "id": "fc_5504",
+    "collegeId": null,
+    "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 46.8,
+    "choiceCode": "MU7015CFE"
+  },
+  {
+    "id": "fc_5505",
+    "collegeId": null,
+    "collegeName": "VIDYA PRABODHINI ENGLISH SCHOOL & JR. COLLEGE, MULUND EAST",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 39.2,
+    "choiceCode": "MU7016CFE"
+  },
+  {
+    "id": "fc_5506",
+    "collegeId": null,
+    "collegeName": "VIDYA PRABODHINI ENGLISH SCHOOL & JR. COLLEGE, MULUND EAST",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 57.6,
+    "choiceCode": "MU7016CFE"
+  },
+  {
+    "id": "fc_5507",
+    "collegeId": null,
+    "collegeName": "VIDYA PRABODHINI ENGLISH SCHOOL & JR. COLLEGE, MULUND EAST",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 49.6,
+    "choiceCode": "MU7016CFE"
+  },
+  {
+    "id": "fc_5508",
+    "collegeId": null,
+    "collegeName": "VIDYA PRABODHINI ENGLISH SCHOOL & JR. COLLEGE, MULUND EAST",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 43.8,
+    "choiceCode": "MU7016CFE"
+  },
+  {
+    "id": "fc_5509",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 54,
+    "choiceCode": "MU7018CFE"
+  },
+  {
+    "id": "fc_5510",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 67,
+    "choiceCode": "MU7018CFE"
+  },
+  {
+    "id": "fc_5511",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 65.2,
+    "choiceCode": "MU7018CFE"
+  },
+  {
+    "id": "fc_5512",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 40.2,
+    "choiceCode": "MU7018CFE"
+  },
+  {
+    "id": "fc_5513",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 53.8,
+    "choiceCode": "MU7018CFE"
+  },
+  {
+    "id": "fc_5514",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 48.4,
+    "choiceCode": "MU7018CPE"
+  },
+  {
+    "id": "fc_5515",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 50.4,
+    "choiceCode": "MU7018CPE"
+  },
+  {
+    "id": "fc_5516",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU7018CPE"
+  },
+  {
+    "id": "fc_5517",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 40.6,
+    "choiceCode": "MU7018CPE"
+  },
+  {
+    "id": "fc_5518",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 53.2,
+    "choiceCode": "MU7018CPE"
+  },
+  {
+    "id": "fc_5519",
+    "collegeId": null,
+    "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55,
+    "choiceCode": "MU7022CFE"
+  },
+  {
+    "id": "fc_5520",
+    "collegeId": null,
+    "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 69,
+    "choiceCode": "MU7022CFE"
+  },
+  {
+    "id": "fc_5521",
+    "collegeId": null,
+    "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 61.6,
+    "choiceCode": "MU7022CFE"
+  },
+  {
+    "id": "fc_5522",
+    "collegeId": null,
+    "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 53,
+    "choiceCode": "MU7022CFE"
+  },
+  {
+    "id": "fc_5523",
+    "collegeId": null,
+    "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 57.2,
+    "choiceCode": "MU7022CFE"
+  },
+  {
+    "id": "fc_5524",
+    "collegeId": null,
+    "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 71.4,
+    "choiceCode": "MU7022CFE"
+  },
+  {
+    "id": "fc_5525",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 82.8,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5526",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 65,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5527",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 73.6,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5528",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 81.8,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5529",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 53.4,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5530",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 63.8,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5531",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 85.8,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5532",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 86.2,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5533",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 67.2,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5534",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 66.2,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5535",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 67.8,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5536",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 64.4,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5537",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 75.8,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5538",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 76.2,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5539",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 85.6,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5540",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 79.2,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5541",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 50.4,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5542",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 68,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5543",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 78.6,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5544",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 71.6,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5545",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 62.6,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5546",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 82.2,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5547",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 82,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5548",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 50.2,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5549",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 65.8,
+    "choiceCode": "MU7024CGE"
+  },
+  {
+    "id": "fc_5550",
+    "collegeId": null,
+    "collegeName": "PARAG  VIDYALAYA  JR. COLLEGE BHANDUP W MUMBAI-78",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 37.4,
+    "choiceCode": "MU7025CNE"
+  },
+  {
+    "id": "fc_5551",
+    "collegeId": null,
+    "collegeName": "PARAG  VIDYALAYA  JR. COLLEGE BHANDUP W MUMBAI-78",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 51.2,
+    "choiceCode": "MU7025CNE"
+  },
+  {
+    "id": "fc_5552",
+    "collegeId": null,
+    "collegeName": "PARAG  VIDYALAYA  JR. COLLEGE BHANDUP W MUMBAI-78",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 55.2,
+    "choiceCode": "MU7025CNE"
+  },
+  {
+    "id": "fc_5553",
+    "collegeId": null,
+    "collegeName": "PARAG  VIDYALAYA  JR. COLLEGE BHANDUP W MUMBAI-78",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 55.8,
+    "choiceCode": "MU7025CNE"
+  },
+  {
+    "id": "fc_5554",
+    "collegeId": null,
+    "collegeName": "PARAG  VIDYALAYA  JR. COLLEGE BHANDUP W MUMBAI-78",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 53.8,
+    "choiceCode": "MU7025CNE"
+  },
+  {
+    "id": "fc_5555",
+    "collegeId": null,
+    "collegeName": "PARAG  VIDYALAYA  JR. COLLEGE BHANDUP W MUMBAI-78",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 43.4,
+    "choiceCode": "MU7025CNE"
+  },
+  {
+    "id": "fc_5556",
+    "collegeId": null,
+    "collegeName": "PARAG  VIDYALAYA  JR. COLLEGE BHANDUP W MUMBAI-78",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 51.6,
+    "choiceCode": "MU7025CNE"
+  },
+  {
+    "id": "fc_5557",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 80.4,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5558",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 52.4,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5559",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 55,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5560",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 87.2,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5561",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 47.4,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5562",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 56,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5563",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 83,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5564",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 82.4,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5565",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 65.4,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5566",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 88.2,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5567",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5568",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 67,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5569",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 78.4,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5570",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 44.4,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5571",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 36.6,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5572",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 79.6,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5573",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 39.6,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5574",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 65.2,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5575",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 80.2,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5576",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 79.8,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5577",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 70.8,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5578",
+    "collegeId": null,
+    "collegeName": "MULUND COLLEGE OF COMMERCE MULUND (W) MUMBAI -80",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 61.8,
+    "choiceCode": "MU7027CGE"
+  },
+  {
+    "id": "fc_5579",
+    "collegeId": null,
+    "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 50.8,
+    "choiceCode": "MU7041CFE"
+  },
+  {
+    "id": "fc_5580",
+    "collegeId": null,
+    "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 54.6,
+    "choiceCode": "MU7041CFE"
+  },
+  {
+    "id": "fc_5581",
+    "collegeId": null,
+    "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 46.4,
+    "choiceCode": "MU7041CFE"
+  },
+  {
+    "id": "fc_5582",
+    "collegeId": null,
+    "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 53,
+    "choiceCode": "MU7041CFE"
+  },
+  {
+    "id": "fc_5583",
+    "collegeId": null,
+    "collegeName": "ANUYOG VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 41.8,
+    "choiceCode": "MU7044CGE"
+  },
+  {
+    "id": "fc_5584",
+    "collegeId": null,
+    "collegeName": "ANUYOG VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 41,
+    "choiceCode": "MU7044CGE"
+  },
+  {
+    "id": "fc_5585",
+    "collegeId": null,
+    "collegeName": "ANUYOG VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 44.4,
+    "choiceCode": "MU7044CGE"
+  },
+  {
+    "id": "fc_5586",
+    "collegeId": null,
+    "collegeName": "KALA VIDYAMANDIR JR COLLEGE, ANDHERI EAST",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 49.6,
+    "choiceCode": "MU7071CGE"
+  },
+  {
+    "id": "fc_5587",
+    "collegeId": null,
+    "collegeName": "KALA VIDYAMANDIR JR COLLEGE, ANDHERI EAST",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 70.2,
+    "choiceCode": "MU7071CGE"
+  },
+  {
+    "id": "fc_5588",
+    "collegeId": null,
+    "collegeName": "KALA VIDYAMANDIR JR COLLEGE, ANDHERI EAST",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 47.6,
+    "choiceCode": "MU7071CGE"
+  },
+  {
+    "id": "fc_5589",
+    "collegeId": null,
+    "collegeName": "MAROL EDUCATION ACADEMY HIGH SCHOOL",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 48.8,
+    "choiceCode": "MU7073CFE"
+  },
+  {
+    "id": "fc_5590",
+    "collegeId": null,
+    "collegeName": "ARVIND GANDBHIR  HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 53.6,
+    "choiceCode": "MU7079CFE"
+  },
+  {
+    "id": "fc_5591",
+    "collegeId": null,
+    "collegeName": "ARVIND GANDBHIR  HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 59,
+    "choiceCode": "MU7079CFE"
+  },
+  {
+    "id": "fc_5592",
+    "collegeId": null,
+    "collegeName": "ARVIND GANDBHIR  HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 49.6,
+    "choiceCode": "MU7079CFE"
+  },
+  {
+    "id": "fc_5593",
+    "collegeId": null,
+    "collegeName": "ARVIND GANDBHIR  HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 53.2,
+    "choiceCode": "MU7079CFE"
+  },
+  {
+    "id": "fc_5594",
+    "collegeId": null,
+    "collegeName": "ARVIND GANDBHIR  HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 49.8,
+    "choiceCode": "MU7079CNE"
+  },
+  {
+    "id": "fc_5595",
+    "collegeId": null,
+    "collegeName": "ARVIND GANDBHIR  HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 51,
+    "choiceCode": "MU7079CNE"
+  },
+  {
+    "id": "fc_5596",
+    "collegeId": null,
+    "collegeName": "ARVIND GANDBHIR  HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55.2,
+    "choiceCode": "MU7079CNE"
+  },
+  {
+    "id": "fc_5597",
+    "collegeId": null,
+    "collegeName": "ARVIND GANDBHIR  HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 44.2,
+    "choiceCode": "MU7079CNE"
+  },
+  {
+    "id": "fc_5598",
+    "collegeId": null,
+    "collegeName": "ARVIND GANDBHIR  HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 52.8,
+    "choiceCode": "MU7079CNE"
+  },
+  {
+    "id": "fc_5599",
+    "collegeId": null,
+    "collegeName": "SHREE SAMARTH VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 63.8,
+    "choiceCode": "MU7080CGE"
+  },
+  {
+    "id": "fc_5600",
+    "collegeId": null,
+    "collegeName": "SHREE SAMARTH VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 47,
+    "choiceCode": "MU7080CGE"
+  },
+  {
+    "id": "fc_5601",
+    "collegeId": null,
+    "collegeName": "MURARRAO RANE HIGH SCHOOL & JR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 48.4,
+    "choiceCode": "MU7082CGE"
+  },
+  {
+    "id": "fc_5602",
+    "collegeId": null,
+    "collegeName": "MURARRAO RANE HIGH SCHOOL & JR COLLEGE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 44,
+    "choiceCode": "MU7082CGE"
+  },
+  {
+    "id": "fc_5603",
+    "collegeId": null,
+    "collegeName": "MURARRAO RANE HIGH SCHOOL & JR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 38,
+    "choiceCode": "MU7082CGE"
+  },
+  {
+    "id": "fc_5604",
+    "collegeId": null,
+    "collegeName": "MURARRAO RANE HIGH SCHOOL & JR COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 50.6,
+    "choiceCode": "MU7082CGE"
+  },
+  {
+    "id": "fc_5605",
+    "collegeId": null,
+    "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55.6,
+    "choiceCode": "MU7090CFE"
+  },
+  {
+    "id": "fc_5606",
+    "collegeId": null,
+    "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 43.8,
+    "choiceCode": "MU7090CFE"
+  },
+  {
+    "id": "fc_5607",
+    "collegeId": null,
+    "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 48.8,
+    "choiceCode": "MU7090CFE"
+  },
+  {
+    "id": "fc_5608",
+    "collegeId": null,
+    "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 71.6,
+    "choiceCode": "MU7090CGE"
+  },
+  {
+    "id": "fc_5609",
+    "collegeId": null,
+    "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 53,
+    "choiceCode": "MU7090CGE"
+  },
+  {
+    "id": "fc_5610",
+    "collegeId": null,
+    "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 47.8,
+    "choiceCode": "MU7090CGE"
+  },
+  {
+    "id": "fc_5611",
+    "collegeId": null,
+    "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 40.8,
+    "choiceCode": "MU7090CGE"
+  },
+  {
+    "id": "fc_5612",
+    "collegeId": null,
+    "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 51.2,
+    "choiceCode": "MU7090CGE"
+  },
+  {
+    "id": "fc_5613",
+    "collegeId": null,
+    "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 68.4,
+    "choiceCode": "MU7090CGE"
+  },
+  {
+    "id": "fc_5614",
+    "collegeId": null,
+    "collegeName": "VIDYANIDHI K.R. JR. COLLEGE OF COMMERCE ANDHERI WEST",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 35.6,
+    "choiceCode": "MU7092CGE"
+  },
+  {
+    "id": "fc_5615",
+    "collegeId": null,
+    "collegeName": "VIDYANIDHI K.R. JR. COLLEGE OF COMMERCE ANDHERI WEST",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU7092CGE"
+  },
+  {
+    "id": "fc_5616",
+    "collegeId": null,
+    "collegeName": "VIDYANIDHI K.R. JR. COLLEGE OF COMMERCE ANDHERI WEST",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 45.6,
+    "choiceCode": "MU7092CGE"
+  },
+  {
+    "id": "fc_5617",
+    "collegeId": null,
+    "collegeName": "VIDYANIDHI K.R. JR. COLLEGE OF COMMERCE ANDHERI WEST",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU7092CGE"
+  },
+  {
+    "id": "fc_5618",
+    "collegeId": null,
+    "collegeName": "VIDYANIDHI K.R. JR. COLLEGE OF COMMERCE ANDHERI WEST",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 44,
+    "choiceCode": "MU7092CGE"
+  },
+  {
+    "id": "fc_5619",
+    "collegeId": null,
+    "collegeName": "VIDYANIDHI K.R. JR. COLLEGE OF COMMERCE ANDHERI WEST",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 62,
+    "choiceCode": "MU7092CGE"
+  },
+  {
+    "id": "fc_5620",
+    "collegeId": null,
+    "collegeName": "VIDYANIDHI K.R. JR. COLLEGE OF COMMERCE ANDHERI WEST",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 56.2,
+    "choiceCode": "MU7092CGE"
+  },
+  {
+    "id": "fc_5621",
+    "collegeId": null,
+    "collegeName": "GYAN KENDRA SEC.  HIGH SCHOOL",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 58.4,
+    "choiceCode": "MU7097CNE"
+  },
+  {
+    "id": "fc_5622",
+    "collegeId": null,
+    "collegeName": "GYAN KENDRA SEC.  HIGH SCHOOL",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 49.2,
+    "choiceCode": "MU7097CNE"
+  },
+  {
+    "id": "fc_5623",
+    "collegeId": null,
+    "collegeName": "GYAN KENDRA SEC.  HIGH SCHOOL",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55,
+    "choiceCode": "MU7097CNE"
+  },
+  {
+    "id": "fc_5624",
+    "collegeId": null,
+    "collegeName": "GYAN KENDRA SEC.  HIGH SCHOOL",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 60.8,
+    "choiceCode": "MU7097CNE"
+  },
+  {
+    "id": "fc_5625",
+    "collegeId": null,
+    "collegeName": "KAMLADEVI JAIN HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 41,
+    "choiceCode": "MU7118CFE"
+  },
+  {
+    "id": "fc_5626",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 70.2,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5627",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 61.4,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5628",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 69.2,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5629",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 67,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5630",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 58.8,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5631",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 72,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5632",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5633",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 58.2,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5634",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 79.2,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5635",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 57.4,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5636",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 67.6,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5637",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 47.4,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5638",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 42.8,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5639",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 61.4,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5640",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 51,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5641",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 69,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5642",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 49.4,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5643",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 46,
+    "choiceCode": "MU7125CFE"
+  },
+  {
+    "id": "fc_5644",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 78.8,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5645",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 59,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5646",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 39.8,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5647",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 70.6,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5648",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 65,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5649",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 58.4,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5650",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 79.4,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5651",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 70.2,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5652",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 67.8,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5653",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 70.4,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5654",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 75.8,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5655",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 44.6,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5656",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 47.6,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5657",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 72,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5658",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 48,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5659",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 49,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5660",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 76.6,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5661",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 69,
+    "choiceCode": "MU7125CGE"
+  },
+  {
+    "id": "fc_5662",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 62.2,
+    "choiceCode": "MU7129CFE"
+  },
+  {
+    "id": "fc_5663",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 66.6,
+    "choiceCode": "MU7129CFE"
+  },
+  {
+    "id": "fc_5664",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 52.2,
+    "choiceCode": "MU7129CFE"
+  },
+  {
+    "id": "fc_5665",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 40,
+    "choiceCode": "MU7129CFE"
+  },
+  {
+    "id": "fc_5666",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 54.4,
+    "choiceCode": "MU7129CFE"
+  },
+  {
+    "id": "fc_5667",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 46,
+    "choiceCode": "MU7129CFE"
+  },
+  {
+    "id": "fc_5668",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 82.6,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5669",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 73.4,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5670",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 77,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5671",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 79.8,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5672",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 82,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5673",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 66.8,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5674",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 82.4,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5675",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 69.6,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5676",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 52,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5677",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 66,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5678",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 76,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5679",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 51.6,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5680",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 68,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5681",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 78.6,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5682",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 65.8,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5683",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 70.6,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5684",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 79.2,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5685",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 76.4,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5686",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 58.4,
+    "choiceCode": "MU7129CGE"
+  },
+  {
+    "id": "fc_5687",
+    "collegeId": null,
+    "collegeName": "SMT KAMALA MEHTA V.W.A. COLLEGE OF COM",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 58.8,
+    "choiceCode": "MU7131CFE"
+  },
+  {
+    "id": "fc_5688",
+    "collegeId": null,
+    "collegeName": "SMT KAMALA MEHTA V.W.A. COLLEGE OF COM",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 42,
+    "choiceCode": "MU7131CFE"
+  },
+  {
+    "id": "fc_5689",
+    "collegeId": null,
+    "collegeName": "L.J.N.J. MAHILA MAHAVIDYALAYA",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 40,
+    "choiceCode": "MU7144CGE"
+  },
+  {
+    "id": "fc_5690",
+    "collegeId": null,
+    "collegeName": "L.J.N.J. MAHILA MAHAVIDYALAYA",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 56,
+    "choiceCode": "MU7144CGE"
+  },
+  {
+    "id": "fc_5691",
+    "collegeId": null,
+    "collegeName": "L.J.N.J. MAHILA MAHAVIDYALAYA",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 54.8,
+    "choiceCode": "MU7144CGE"
+  },
+  {
+    "id": "fc_5692",
+    "collegeId": null,
+    "collegeName": "AAKASH JR COLLEGE OF SCI & COM",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 38.2,
+    "choiceCode": "MU7150CFE"
+  },
+  {
+    "id": "fc_5693",
+    "collegeId": null,
+    "collegeName": "AAKASH JR COLLEGE OF SCI & COM",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 39.4,
+    "choiceCode": "MU7150CFE"
+  },
+  {
+    "id": "fc_5694",
+    "collegeId": null,
+    "collegeName": "AAKASH JR COLLEGE OF SCI & COM",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 44.2,
+    "choiceCode": "MU7150CFE"
+  },
+  {
+    "id": "fc_5695",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 73.4,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5696",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 49,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5697",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 45.6,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5698",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 79.8,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5699",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 66.6,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5700",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 62.6,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5701",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 83.8,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5702",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 85.6,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5703",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 77.8,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5704",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 90.6,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5705",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 56.4,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5706",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 67.4,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5707",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 71.6,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5708",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 42.2,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5709",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 41,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5710",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 73.2,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5711",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 60.8,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5712",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 60.2,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5713",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 80.6,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5714",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 74.8,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5715",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 60.2,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5716",
+    "collegeId": null,
+    "collegeName": "M. L. DAHANUKAR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 88,
+    "choiceCode": "MU7152CGE"
+  },
+  {
+    "id": "fc_5717",
+    "collegeId": null,
+    "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 50,
+    "choiceCode": "MU7154COE"
+  },
+  {
+    "id": "fc_5718",
+    "collegeId": null,
+    "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 49.4,
+    "choiceCode": "MU7154COE"
+  },
+  {
+    "id": "fc_5719",
+    "collegeId": null,
+    "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 42.6,
+    "choiceCode": "MU7154COE"
+  },
+  {
+    "id": "fc_5720",
+    "collegeId": null,
+    "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU7154COE"
+  },
+  {
+    "id": "fc_5721",
+    "collegeId": null,
+    "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 41.4,
+    "choiceCode": "MU7154COE"
+  },
+  {
+    "id": "fc_5722",
+    "collegeId": null,
+    "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 63.8,
+    "choiceCode": "MU7154COE"
+  },
+  {
+    "id": "fc_5723",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 76.4,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5724",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 50.6,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5725",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 58.6,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5726",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 79.8,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5727",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 65.4,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5728",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 62.2,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5729",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 80,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5730",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 75,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5731",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 48.6,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5732",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 69.6,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5733",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 73,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5734",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 73,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5735",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 54.4,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5736",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 73.6,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5737",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 61.6,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5738",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 57.6,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5739",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 78,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5740",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 71.8,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5741",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 73.6,
+    "choiceCode": "MU7156CGE"
+  },
+  {
+    "id": "fc_5742",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 56,
+    "choiceCode": "MU7167CGE"
+  },
+  {
+    "id": "fc_5743",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 68.2,
+    "choiceCode": "MU7167CGE"
+  },
+  {
+    "id": "fc_5744",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 44.4,
+    "choiceCode": "MU7167CGE"
+  },
+  {
+    "id": "fc_5745",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 59,
+    "choiceCode": "MU7167CGE"
+  },
+  {
+    "id": "fc_5746",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 56.2,
+    "choiceCode": "MU7167CGE"
+  },
+  {
+    "id": "fc_5747",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 45.2,
+    "choiceCode": "MU7167CGE"
+  },
+  {
+    "id": "fc_5748",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 49.8,
+    "choiceCode": "MU7167CGE"
+  },
+  {
+    "id": "fc_5749",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 38.8,
+    "choiceCode": "MU7167CGE"
+  },
+  {
+    "id": "fc_5750",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 41,
+    "choiceCode": "MU7167CGE"
+  },
+  {
+    "id": "fc_5751",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 51.4,
+    "choiceCode": "MU7167CGE"
+  },
+  {
+    "id": "fc_5752",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 50.6,
+    "choiceCode": "MU7167CGE"
+  },
+  {
+    "id": "fc_5753",
+    "collegeId": null,
+    "collegeName": "CHETANA'S JUNIOR COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 36.6,
+    "choiceCode": "MU7167CGE"
+  },
+  {
+    "id": "fc_5754",
+    "collegeId": null,
+    "collegeName": "DYANSADHANA EDU. SOC.'S MADHYAMIK VIDYALAYA",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 44.2,
+    "choiceCode": "MU7192CFE"
+  },
+  {
+    "id": "fc_5755",
+    "collegeId": null,
+    "collegeName": "DYANSADHANA EDU. SOC.'S MADHYAMIK VIDYALAYA",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 43.6,
+    "choiceCode": "MU7192CFE"
+  },
+  {
+    "id": "fc_5756",
+    "collegeId": null,
+    "collegeName": "DYANSADHANA EDU. SOC.'S MADHYAMIK VIDYALAYA",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 41.6,
+    "choiceCode": "MU7192CFE"
+  },
+  {
+    "id": "fc_5757",
+    "collegeId": null,
+    "collegeName": "GURUKUL ENGLISH SCHOOL & JR. COLLEGE  MALAD EAST",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 54.2,
+    "choiceCode": "MU7221CFE"
+  },
+  {
+    "id": "fc_5758",
+    "collegeId": null,
+    "collegeName": "GURUKUL ENGLISH SCHOOL & JR. COLLEGE  MALAD EAST",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 45.8,
+    "choiceCode": "MU7221CFE"
+  },
+  {
+    "id": "fc_5759",
+    "collegeId": null,
+    "collegeName": "SAMATA VIDYAMANDIR JUNIOR COLLEGE OF COMMERCE & SCIENCE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 41.8,
+    "choiceCode": "MU7229CFE"
+  },
+  {
+    "id": "fc_5760",
+    "collegeId": null,
+    "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 46.2,
+    "choiceCode": "MU7233CNE"
+  },
+  {
+    "id": "fc_5761",
+    "collegeId": null,
+    "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 51.8,
+    "choiceCode": "MU7233CGE"
+  },
+  {
+    "id": "fc_5762",
+    "collegeId": null,
+    "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 45,
+    "choiceCode": "MU7233CGE"
+  },
+  {
+    "id": "fc_5763",
+    "collegeId": null,
+    "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 44.6,
+    "choiceCode": "MU7233CGE"
+  },
+  {
+    "id": "fc_5764",
+    "collegeId": null,
+    "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 60.4,
+    "choiceCode": "MU7233CGE"
+  },
+  {
+    "id": "fc_5765",
+    "collegeId": null,
+    "collegeName": "DNYANGANGA EDU. TRUST'S HIGH SCHOOL&JR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 50.4,
+    "choiceCode": "MU7234CGE"
+  },
+  {
+    "id": "fc_5766",
+    "collegeId": null,
+    "collegeName": "SHREE. MANGUBHAI DATTANI VIDYALAYA & YOJANA JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 62.8,
+    "choiceCode": "MU7236CGE"
+  },
+  {
+    "id": "fc_5767",
+    "collegeId": null,
+    "collegeName": "SHREE. MANGUBHAI DATTANI VIDYALAYA & YOJANA JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 50.2,
+    "choiceCode": "MU7236CGE"
+  },
+  {
+    "id": "fc_5768",
+    "collegeId": null,
+    "collegeName": "SHREE. MANGUBHAI DATTANI VIDYALAYA & YOJANA JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 44.6,
+    "choiceCode": "MU7236CGE"
+  },
+  {
+    "id": "fc_5769",
+    "collegeId": null,
+    "collegeName": "SHREE. MANGUBHAI DATTANI VIDYALAYA & YOJANA JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 66,
+    "choiceCode": "MU7236CGE"
+  },
+  {
+    "id": "fc_5770",
+    "collegeId": null,
+    "collegeName": "SHREE. MANGUBHAI DATTANI VIDYALAYA & YOJANA JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 48.2,
+    "choiceCode": "MU7236CGE"
+  },
+  {
+    "id": "fc_5771",
+    "collegeId": null,
+    "collegeName": "CHOGLE HIGH SCHOOL",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 44,
+    "choiceCode": "MU7238CFE"
+  },
+  {
+    "id": "fc_5772",
+    "collegeId": null,
+    "collegeName": "CHOGLE HIGH SCHOOL",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 55,
+    "choiceCode": "MU7238CFE"
+  },
+  {
+    "id": "fc_5773",
+    "collegeId": null,
+    "collegeName": "CHOGLE HIGH SCHOOL",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 50.2,
+    "choiceCode": "MU7238CFE"
+  },
+  {
+    "id": "fc_5774",
+    "collegeId": null,
+    "collegeName": "CHOGLE HIGH SCHOOL",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 50.2,
+    "choiceCode": "MU7238CFE"
+  },
+  {
+    "id": "fc_5775",
+    "collegeId": null,
+    "collegeName": "CHOGLE HIGH SCHOOL",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 47.6,
+    "choiceCode": "MU7238CFE"
+  },
+  {
+    "id": "fc_5776",
+    "collegeId": null,
+    "collegeName": "CHOGLE HIGH SCHOOL",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 51.6,
+    "choiceCode": "MU7238CFE"
+  },
+  {
+    "id": "fc_5777",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 72.4,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5778",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 71.8,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5779",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 79.2,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5780",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 72.8,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5781",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 77,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5782",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 78.8,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5783",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 79.4,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5784",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 69.2,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5785",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 66.2,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5786",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 57.6,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5787",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 72,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5788",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 62.4,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5789",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 66.2,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5790",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 69.6,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5791",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 74,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5792",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 69.8,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5793",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 53.6,
+    "choiceCode": "MU7241CGE"
+  },
+  {
+    "id": "fc_5794",
+    "collegeId": null,
+    "collegeName": "ANANDIBAI DAMODAR KALE VIDYALAYA & JR. COLLEGE OF COMMERCE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 52.2,
+    "choiceCode": "MU7262CFE"
+  },
+  {
+    "id": "fc_5795",
+    "collegeId": null,
+    "collegeName": "PRAGATI VIDYALAYA",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 53,
+    "choiceCode": "MU7264CGE"
+  },
+  {
+    "id": "fc_5796",
+    "collegeId": null,
+    "collegeName": "PRAGATI VIDYALAYA",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 40.8,
+    "choiceCode": "MU7264CGE"
+  },
+  {
+    "id": "fc_5797",
+    "collegeId": null,
+    "collegeName": "ST. ROCKS HIGH SCHOOL & JUNIOR COLLEGE OF COMMERCE &  SCIENCE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 51.4,
+    "choiceCode": "MU7265CFE"
+  },
+  {
+    "id": "fc_5798",
+    "collegeId": null,
+    "collegeName": "SAILEE DEGREE COLLEGE (SCIENCE & COMMERCE )AND M.J.JR. COLLEGE OF SCIENCE , GORAI ROAD",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 47.4,
+    "choiceCode": "MU7266CFE"
+  },
+  {
+    "id": "fc_5799",
+    "collegeId": null,
+    "collegeName": "SAILEE DEGREE COLLEGE (SCIENCE & COMMERCE )AND M.J.JR. COLLEGE OF SCIENCE , GORAI ROAD",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 64,
+    "choiceCode": "MU7266CFE"
+  },
+  {
+    "id": "fc_5800",
+    "collegeId": null,
+    "collegeName": "SAILEE DEGREE COLLEGE (SCIENCE & COMMERCE )AND M.J.JR. COLLEGE OF SCIENCE , GORAI ROAD",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU7266CFE"
+  },
+  {
+    "id": "fc_5801",
+    "collegeId": null,
+    "collegeName": "SAILEE DEGREE COLLEGE (SCIENCE & COMMERCE )AND M.J.JR. COLLEGE OF SCIENCE , GORAI ROAD",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 64.4,
+    "choiceCode": "MU7266CFE"
+  },
+  {
+    "id": "fc_5802",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 50.6,
+    "choiceCode": "MU7281CGE"
+  },
+  {
+    "id": "fc_5803",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 41.8,
+    "choiceCode": "MU7281CGE"
+  },
+  {
+    "id": "fc_5804",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 66.4,
+    "choiceCode": "MU7281CGE"
+  },
+  {
+    "id": "fc_5805",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 48.4,
+    "choiceCode": "MU7281CGE"
+  },
+  {
+    "id": "fc_5806",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 61,
+    "choiceCode": "MU7281CGE"
+  },
+  {
+    "id": "fc_5807",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 68.8,
+    "choiceCode": "MU7281CGE"
+  },
+  {
+    "id": "fc_5808",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 69,
+    "choiceCode": "MU7281CGE"
+  },
+  {
+    "id": "fc_5809",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 42,
+    "choiceCode": "MU7281CGE"
+  },
+  {
+    "id": "fc_5810",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Commerce",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 46.4,
+    "choiceCode": "MU7281CGE"
+  },
+  {
+    "id": "fc_5811",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 57.8,
+    "choiceCode": "MU7281CGE"
+  },
+  {
+    "id": "fc_5812",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Commerce",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 53.6,
+    "choiceCode": "MU7281CGE"
+  },
+  {
+    "id": "fc_5813",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 63,
+    "choiceCode": "MU7281CGE"
+  },
+  {
+    "id": "fc_5814",
+    "collegeId": null,
+    "collegeName": "SHRI. BHAUSAHEB VARTAK  ARTS COM & SCI. COLLEGE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 54.8,
+    "choiceCode": "MU7281CGE"
+  },
+  {
+    "id": "fc_5815",
+    "collegeId": null,
+    "collegeName": "NIRMAL JR. COLLEGE OF COMMERCE & SCIENCE KANDIVALI WEST",
+    "stream": "Commerce",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 44.8,
+    "choiceCode": "MU7282CFE"
+  },
+  {
+    "id": "fc_5816",
+    "collegeId": null,
+    "collegeName": "ST. ROCKS JR. COLLEGE OF COMMERCE & SCIENCE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 53.8,
+    "choiceCode": "MU7290CNE"
+  },
+  {
+    "id": "fc_5817",
+    "collegeId": null,
+    "collegeName": "ST. ROCKS JR. COLLEGE OF COMMERCE & SCIENCE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 59,
+    "choiceCode": "MU7290CNE"
+  },
+  {
+    "id": "fc_5818",
+    "collegeId": null,
+    "collegeName": "ST. ROCKS JR. COLLEGE OF COMMERCE & SCIENCE",
+    "stream": "Commerce",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 50.6,
+    "choiceCode": "MU7290CNE"
+  },
+  {
+    "id": "fc_5819",
+    "collegeId": null,
+    "collegeName": "ST. ROCKS JR. COLLEGE OF COMMERCE & SCIENCE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 50.2,
+    "choiceCode": "MU7290CNE"
+  },
+  {
+    "id": "fc_5820",
+    "collegeId": null,
+    "collegeName": "ST. ROCKS JR. COLLEGE OF COMMERCE & SCIENCE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 49,
+    "choiceCode": "MU7290CNE"
+  },
+  {
+    "id": "fc_5821",
+    "collegeId": null,
+    "collegeName": "AMARNATH HIGH SCHOOL  AND JR. COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 46,
+    "choiceCode": "MU6843CNE"
+  },
+  {
+    "id": "fc_5822",
+    "collegeId": null,
+    "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 39.6,
+    "choiceCode": "MU6999CFE"
+  },
+  {
+    "id": "fc_5823",
+    "collegeId": null,
+    "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 56.8,
+    "choiceCode": "MU6999CFE"
+  },
+  {
+    "id": "fc_5824",
+    "collegeId": null,
+    "collegeName": "AIRPORT HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 42.2,
+    "choiceCode": "MU7069CGE"
+  },
+  {
+    "id": "fc_5825",
+    "collegeId": null,
+    "collegeName": "AIRPORT HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 51.6,
+    "choiceCode": "MU7069CGE"
+  },
+  {
+    "id": "fc_5826",
+    "collegeId": null,
+    "collegeName": "AIRPORT HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 46.6,
+    "choiceCode": "MU7069CGE"
+  },
+  {
+    "id": "fc_5827",
+    "collegeId": null,
+    "collegeName": "AADITYA   ACADEMY",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 50,
+    "choiceCode": "MU7084CFE"
+  },
+  {
+    "id": "fc_5828",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 67.2,
+    "choiceCode": "MU7289CFE"
+  },
+  {
+    "id": "fc_5829",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 72.6,
+    "choiceCode": "MU7289CFE"
+  },
+  {
+    "id": "fc_5830",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Commerce",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 51.2,
+    "choiceCode": "MU7289CFE"
+  },
+  {
+    "id": "fc_5831",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Commerce",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 68.6,
+    "choiceCode": "MU7289CFE"
+  },
+  {
+    "id": "fc_5832",
+    "collegeId": null,
+    "collegeName": "SNEHALATA RANE  HIGH SCHOOL AND JR. COLLEGE, DADAR ,MUMBAI",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 81.2,
+    "choiceCode": "MU6707SFE"
+  },
+  {
+    "id": "fc_5833",
+    "collegeId": null,
+    "collegeName": "SNEHALATA RANE  HIGH SCHOOL AND JR. COLLEGE, DADAR ,MUMBAI",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 79,
+    "choiceCode": "MU6707SFE"
+  },
+  {
+    "id": "fc_5834",
+    "collegeId": null,
+    "collegeName": "SNEHALATA RANE  HIGH SCHOOL AND JR. COLLEGE, DADAR ,MUMBAI",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 56.4,
+    "choiceCode": "MU6707SFE"
+  },
+  {
+    "id": "fc_5835",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 58.2,
+    "choiceCode": "MU6723SGE"
+  },
+  {
+    "id": "fc_5836",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 51.8,
+    "choiceCode": "MU6723SGE"
+  },
+  {
+    "id": "fc_5837",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 40.8,
+    "choiceCode": "MU6723SGE"
+  },
+  {
+    "id": "fc_5838",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU6723SGE"
+  },
+  {
+    "id": "fc_5839",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 45.2,
+    "choiceCode": "MU6723SGE"
+  },
+  {
+    "id": "fc_5840",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 68,
+    "choiceCode": "MU6723SGE"
+  },
+  {
+    "id": "fc_5841",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 68.4,
+    "choiceCode": "MU6723SGE"
+  },
+  {
+    "id": "fc_5842",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 52.4,
+    "choiceCode": "MU6723SGE"
+  },
+  {
+    "id": "fc_5843",
+    "collegeId": null,
+    "collegeName": "SIDDHARTH COLLEGE OF ARTS,SCIENCE & COMM.",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 64.6,
+    "choiceCode": "MU6723SGE"
+  },
+  {
+    "id": "fc_5844",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 74.4,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5845",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 55.4,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5846",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 57.6,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5847",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 73.8,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5848",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 70.8,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5849",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5850",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 80.2,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5851",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 72.6,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5852",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 63.4,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5853",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 79.4,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5854",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 78.4,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5855",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 73.6,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5856",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 55.4,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5857",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 72.4,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5858",
+    "collegeId": null,
+    "collegeName": "ELPHINSTONE COLLEGE",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 79.2,
+    "choiceCode": "MU6726SOE"
+  },
+  {
+    "id": "fc_5859",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 69.6,
+    "choiceCode": "MU6745SGE"
+  },
+  {
+    "id": "fc_5860",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 60.4,
+    "choiceCode": "MU6745SGE"
+  },
+  {
+    "id": "fc_5861",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 69.4,
+    "choiceCode": "MU6745SGE"
+  },
+  {
+    "id": "fc_5862",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 63.8,
+    "choiceCode": "MU6745SGE"
+  },
+  {
+    "id": "fc_5863",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 77.6,
+    "choiceCode": "MU6745SGE"
+  },
+  {
+    "id": "fc_5864",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 65.4,
+    "choiceCode": "MU6745SGE"
+  },
+  {
+    "id": "fc_5865",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 67,
+    "choiceCode": "MU6745SGE"
+  },
+  {
+    "id": "fc_5866",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 72.8,
+    "choiceCode": "MU6745SGE"
+  },
+  {
+    "id": "fc_5867",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 72.4,
+    "choiceCode": "MU6745SGE"
+  },
+  {
+    "id": "fc_5868",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 63.2,
+    "choiceCode": "MU6745SGE"
+  },
+  {
+    "id": "fc_5869",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 50,
+    "choiceCode": "MU6745SGE"
+  },
+  {
+    "id": "fc_5870",
+    "collegeId": null,
+    "collegeName": "BHARATIYA VIDYA BHAVAN'S H. S. COLLEGE OF ARTS & SCIENCE (BHAVANS COLLEGE)",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 70.8,
+    "choiceCode": "MU6745SGE"
+  },
+  {
+    "id": "fc_5871",
+    "collegeId": null,
+    "collegeName": "BHAVANI SHANKAR RD.JR.COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU6766SFE"
+  },
+  {
+    "id": "fc_5872",
+    "collegeId": null,
+    "collegeName": "BHAVANI SHANKAR RD.JR.COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 81.4,
+    "choiceCode": "MU6766SFE"
+  },
+  {
+    "id": "fc_5873",
+    "collegeId": null,
+    "collegeName": "BHAVANI SHANKAR RD.JR.COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 62,
+    "choiceCode": "MU6766SFE"
+  },
+  {
+    "id": "fc_5874",
+    "collegeId": null,
+    "collegeName": "BHAVANI SHANKAR RD.JR.COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 70.4,
+    "choiceCode": "MU6766SFE"
+  },
+  {
+    "id": "fc_5875",
+    "collegeId": null,
+    "collegeName": "NAVNEET JUNIOR COLLEGE OF ARTS, SCIENCE & COMMERCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60.2,
+    "choiceCode": "MU6753SNE"
+  },
+  {
+    "id": "fc_5876",
+    "collegeId": null,
+    "collegeName": "NAVNEET JUNIOR COLLEGE OF ARTS, SCIENCE & COMMERCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 77.4,
+    "choiceCode": "MU6753SNE"
+  },
+  {
+    "id": "fc_5877",
+    "collegeId": null,
+    "collegeName": "NAVNEET JUNIOR COLLEGE OF ARTS, SCIENCE & COMMERCE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 74.8,
+    "choiceCode": "MU6753SNE"
+  },
+  {
+    "id": "fc_5878",
+    "collegeId": null,
+    "collegeName": "NAVNEET JUNIOR COLLEGE OF ARTS, SCIENCE & COMMERCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 66.4,
+    "choiceCode": "MU6753SNE"
+  },
+  {
+    "id": "fc_5879",
+    "collegeId": null,
+    "collegeName": "NAVNEET JUNIOR COLLEGE OF ARTS, SCIENCE & COMMERCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 53,
+    "choiceCode": "MU6753SNE"
+  },
+  {
+    "id": "fc_5880",
+    "collegeId": null,
+    "collegeName": "NAVNEET JUNIOR COLLEGE OF ARTS, SCIENCE & COMMERCE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 77.8,
+    "choiceCode": "MU6753SNE"
+  },
+  {
+    "id": "fc_5881",
+    "collegeId": null,
+    "collegeName": "NAVNEET JUNIOR COLLEGE OF ARTS, SCIENCE & COMMERCE",
+    "stream": "Science",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 81.2,
+    "choiceCode": "MU6753SNE"
+  },
+  {
+    "id": "fc_5882",
+    "collegeId": null,
+    "collegeName": "SHARADASHRAM VIDYAMANDIR TANTRIK VIDYALAYA & JUNIOR COLLEGE OF SCIENCE - VOCATIONAL & HSC - VOCATION",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55.6,
+    "choiceCode": "MU6762SGE"
+  },
+  {
+    "id": "fc_5883",
+    "collegeId": null,
+    "collegeName": "SHARADASHRAM VIDYAMANDIR TANTRIK VIDYALAYA & JUNIOR COLLEGE OF SCIENCE - VOCATIONAL & HSC - VOCATION",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 53.8,
+    "choiceCode": "MU6762SGE"
+  },
+  {
+    "id": "fc_5884",
+    "collegeId": null,
+    "collegeName": "SHARADASHRAM VIDYAMANDIR TANTRIK VIDYALAYA & JUNIOR COLLEGE OF SCIENCE - VOCATIONAL & HSC - VOCATION",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 61,
+    "choiceCode": "MU6762SGE"
+  },
+  {
+    "id": "fc_5885",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 72.6,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5886",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 55.2,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5887",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 66.2,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5888",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 65.2,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5889",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 60.4,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5890",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 67.4,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5891",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5892",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 62.8,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5893",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 69.8,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5894",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 67.2,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5895",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 65.2,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5896",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 62.2,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5897",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 50.8,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5898",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 64.4,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5899",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 62.4,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5900",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 56,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5901",
+    "collegeId": null,
+    "collegeName": "D. E. SOCIET'S  KIRTI M. DOONGURSEE COLLEGE OF ARTS, SCIENCE & COMMERCE (AUTONOMOUS)",
+    "stream": "Science",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 67.8,
+    "choiceCode": "MU6767SGE"
+  },
+  {
+    "id": "fc_5902",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 86.2,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5903",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 49.6,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5904",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 66.6,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5905",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 83.6,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5906",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 82,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5907",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 86.8,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5908",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 86,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5909",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 88.8,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5910",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 69.4,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5911",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 45.8,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5912",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 61.2,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5913",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 64.8,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5914",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 81.6,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5915",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 78.2,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5916",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 84.6,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5917",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 64,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5918",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 63.2,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5919",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 81,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5920",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 78.8,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5921",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 76.6,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5922",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 84,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5923",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 87,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5924",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 61.6,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5925",
+    "collegeId": null,
+    "collegeName": "D.G.RUPAREL COLLEGE OF ARTS,SCI & COMM.",
+    "stream": "Science",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 76.2,
+    "choiceCode": "MU6768SGE"
+  },
+  {
+    "id": "fc_5926",
+    "collegeId": null,
+    "collegeName": "PIONEER JUNIOR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 76.6,
+    "choiceCode": "MU6773SFE"
+  },
+  {
+    "id": "fc_5927",
+    "collegeId": null,
+    "collegeName": "PIONEER JUNIOR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 64.4,
+    "choiceCode": "MU6773SFE"
+  },
+  {
+    "id": "fc_5928",
+    "collegeId": null,
+    "collegeName": "PIONEER JUNIOR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 78,
+    "choiceCode": "MU6773SFE"
+  },
+  {
+    "id": "fc_5929",
+    "collegeId": null,
+    "collegeName": "PIONEER JUNIOR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 89.6,
+    "choiceCode": "MU6773SFE"
+  },
+  {
+    "id": "fc_5930",
+    "collegeId": null,
+    "collegeName": "PIONEER JUNIOR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 80,
+    "choiceCode": "MU6773SFE"
+  },
+  {
+    "id": "fc_5931",
+    "collegeId": null,
+    "collegeName": "PIONEER JUNIOR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 91.8,
+    "choiceCode": "MU6773SFE"
+  },
+  {
+    "id": "fc_5932",
+    "collegeId": null,
+    "collegeName": "PIONEER JUNIOR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 83.2,
+    "choiceCode": "MU6773SFE"
+  },
+  {
+    "id": "fc_5933",
+    "collegeId": null,
+    "collegeName": "PIONEER JUNIOR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 77.6,
+    "choiceCode": "MU6773SFE"
+  },
+  {
+    "id": "fc_5934",
+    "collegeId": null,
+    "collegeName": "PIONEER JUNIOR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 84,
+    "choiceCode": "MU6773SFE"
+  },
+  {
+    "id": "fc_5935",
+    "collegeId": null,
+    "collegeName": "PIONEER JUNIOR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 74.6,
+    "choiceCode": "MU6773SFE"
+  },
+  {
+    "id": "fc_5936",
+    "collegeId": null,
+    "collegeName": "PIONEER JUNIOR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 80,
+    "choiceCode": "MU6773SFE"
+  },
+  {
+    "id": "fc_5937",
+    "collegeId": null,
+    "collegeName": "PIONEER JUNIOR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 84,
+    "choiceCode": "MU6773SFE"
+  },
+  {
+    "id": "fc_5938",
+    "collegeId": null,
+    "collegeName": "PIONEER JUNIOR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 90.2,
+    "choiceCode": "MU6773SFE"
+  },
+  {
+    "id": "fc_5939",
+    "collegeId": null,
+    "collegeName": "K. M. S. DR. SHIRODKAR HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 53,
+    "choiceCode": "MU6783SGE"
+  },
+  {
+    "id": "fc_5940",
+    "collegeId": null,
+    "collegeName": "K. M. S. DR. SHIRODKAR HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 47,
+    "choiceCode": "MU6783SGE"
+  },
+  {
+    "id": "fc_5941",
+    "collegeId": null,
+    "collegeName": "K. M. S. DR. SHIRODKAR HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 64.8,
+    "choiceCode": "MU6783SGE"
+  },
+  {
+    "id": "fc_5942",
+    "collegeId": null,
+    "collegeName": "R.M.BHATT HIGH SCHOOL AND JUNIOR COLLEGE PAREL",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 66.6,
+    "choiceCode": "MU6784SGE"
+  },
+  {
+    "id": "fc_5943",
+    "collegeId": null,
+    "collegeName": "R.M.BHATT HIGH SCHOOL AND JUNIOR COLLEGE PAREL",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 56.6,
+    "choiceCode": "MU6784SGE"
+  },
+  {
+    "id": "fc_5944",
+    "collegeId": null,
+    "collegeName": "R.M.BHATT HIGH SCHOOL AND JUNIOR COLLEGE PAREL",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 51,
+    "choiceCode": "MU6784SGE"
+  },
+  {
+    "id": "fc_5945",
+    "collegeId": null,
+    "collegeName": "SOCIAL SERVICE LEAGUE HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60.4,
+    "choiceCode": "MU6785SGE"
+  },
+  {
+    "id": "fc_5946",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 75.4,
+    "choiceCode": "MU6797SNE"
+  },
+  {
+    "id": "fc_5947",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 74.8,
+    "choiceCode": "MU6797SNE"
+  },
+  {
+    "id": "fc_5948",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 60.8,
+    "choiceCode": "MU6797SNE"
+  },
+  {
+    "id": "fc_5949",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 89.4,
+    "choiceCode": "MU6797SNE"
+  },
+  {
+    "id": "fc_5950",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 80.6,
+    "choiceCode": "MU6797SNE"
+  },
+  {
+    "id": "fc_5951",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 48.4,
+    "choiceCode": "MU6797SNE"
+  },
+  {
+    "id": "fc_5952",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 86.4,
+    "choiceCode": "MU6797SNE"
+  },
+  {
+    "id": "fc_5953",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 65.6,
+    "choiceCode": "MU6797SNE"
+  },
+  {
+    "id": "fc_5954",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 77.4,
+    "choiceCode": "MU6797SNE"
+  },
+  {
+    "id": "fc_5955",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 71.4,
+    "choiceCode": "MU6797SGE"
+  },
+  {
+    "id": "fc_5956",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 82.2,
+    "choiceCode": "MU6797SGE"
+  },
+  {
+    "id": "fc_5957",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 60.4,
+    "choiceCode": "MU6797SGE"
+  },
+  {
+    "id": "fc_5958",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 43.6,
+    "choiceCode": "MU6797SGE"
+  },
+  {
+    "id": "fc_5959",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 45.4,
+    "choiceCode": "MU6797SGE"
+  },
+  {
+    "id": "fc_5960",
+    "collegeId": null,
+    "collegeName": "MAHATMA PHULE TECH. HIGH SCHOOL",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 85,
+    "choiceCode": "MU6797SGE"
+  },
+  {
+    "id": "fc_5961",
+    "collegeId": null,
+    "collegeName": "MATUNGA LIONS PIONEER ENGLISH SCHOOL",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU6812SFE"
+  },
+  {
+    "id": "fc_5962",
+    "collegeId": null,
+    "collegeName": "MATUNGA LIONS PIONEER ENGLISH SCHOOL",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 86.2,
+    "choiceCode": "MU6812SFE"
+  },
+  {
+    "id": "fc_5963",
+    "collegeId": null,
+    "collegeName": "MATUNGA LIONS PIONEER ENGLISH SCHOOL",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 72.4,
+    "choiceCode": "MU6812SFE"
+  },
+  {
+    "id": "fc_5964",
+    "collegeId": null,
+    "collegeName": "MATUNGA LIONS PIONEER ENGLISH SCHOOL",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 75.2,
+    "choiceCode": "MU6812SFE"
+  },
+  {
+    "id": "fc_5965",
+    "collegeId": null,
+    "collegeName": "MATUNGA LIONS PIONEER ENGLISH SCHOOL",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 79.4,
+    "choiceCode": "MU6812SFE"
+  },
+  {
+    "id": "fc_5966",
+    "collegeId": null,
+    "collegeName": "MATUNGA LIONS PIONEER ENGLISH SCHOOL",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 88,
+    "choiceCode": "MU6812SFE"
+  },
+  {
+    "id": "fc_5967",
+    "collegeId": null,
+    "collegeName": "MATUNGA LIONS PIONEER ENGLISH SCHOOL",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 66.2,
+    "choiceCode": "MU6812SFE"
+  },
+  {
+    "id": "fc_5968",
+    "collegeId": null,
+    "collegeName": "MATUNGA LIONS PIONEER ENGLISH SCHOOL",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 77.2,
+    "choiceCode": "MU6812SFE"
+  },
+  {
+    "id": "fc_5969",
+    "collegeId": null,
+    "collegeName": "ARYAN JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55.4,
+    "choiceCode": "MU6828SFE"
+  },
+  {
+    "id": "fc_5970",
+    "collegeId": null,
+    "collegeName": "ARYAN JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 61.6,
+    "choiceCode": "MU6828SFE"
+  },
+  {
+    "id": "fc_5971",
+    "collegeId": null,
+    "collegeName": "ARYAN JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 80.2,
+    "choiceCode": "MU6828SFE"
+  },
+  {
+    "id": "fc_5972",
+    "collegeId": null,
+    "collegeName": "ARYAN JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 83.2,
+    "choiceCode": "MU6828SFE"
+  },
+  {
+    "id": "fc_5973",
+    "collegeId": null,
+    "collegeName": "ARYAN JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 76.8,
+    "choiceCode": "MU6828SFE"
+  },
+  {
+    "id": "fc_5974",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 88.6,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5975",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 57.6,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5976",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 73,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5977",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 88,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5978",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 86,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5979",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 87.8,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5980",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 86.6,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5981",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 91.6,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5982",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 80.4,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5983",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 67,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5984",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 72.4,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5985",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 65.8,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5986",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 70.4,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5987",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 86.8,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5988",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 64.8,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5989",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 68.6,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5990",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 84.4,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5991",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 81.4,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5992",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 82.4,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5993",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 85,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5994",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 87.6,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5995",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 68.4,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5996",
+    "collegeId": null,
+    "collegeName": "RAMNIVAS RUIA JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 58.4,
+    "choiceCode": "MU6832SGE"
+  },
+  {
+    "id": "fc_5997",
+    "collegeId": null,
+    "collegeName": "MUMBAI JUNIOR COLLEGE OF ARTS, COM. & SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 71,
+    "choiceCode": "MU6839SNE"
+  },
+  {
+    "id": "fc_5998",
+    "collegeId": null,
+    "collegeName": "MUMBAI JUNIOR COLLEGE OF ARTS, COM. & SCIENCE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 54,
+    "choiceCode": "MU6839SNE"
+  },
+  {
+    "id": "fc_5999",
+    "collegeId": null,
+    "collegeName": "MUMBAI JUNIOR COLLEGE OF ARTS, COM. & SCIENCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 46.2,
+    "choiceCode": "MU6839SNE"
+  },
+  {
+    "id": "fc_6000",
+    "collegeId": null,
+    "collegeName": "MUMBAI JUNIOR COLLEGE OF ARTS, COM. & SCIENCE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 79.4,
+    "choiceCode": "MU6839SNE"
+  },
+  {
+    "id": "fc_6001",
+    "collegeId": null,
+    "collegeName": "MUMBAI JUNIOR COLLEGE OF ARTS, COM. & SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55,
+    "choiceCode": "MU6839SNE"
+  },
+  {
+    "id": "fc_6002",
+    "collegeId": null,
+    "collegeName": "MUMBAI JUNIOR COLLEGE OF ARTS, COM. & SCIENCE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 77.2,
+    "choiceCode": "MU6839SNE"
+  },
+  {
+    "id": "fc_6003",
+    "collegeId": null,
+    "collegeName": "MUMBAI JUNIOR COLLEGE OF ARTS, COM. & SCIENCE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 85,
+    "choiceCode": "MU6839SNE"
+  },
+  {
+    "id": "fc_6004",
+    "collegeId": null,
+    "collegeName": "MUMBAI JUNIOR COLLEGE OF ARTS, COM. & SCIENCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 72.2,
+    "choiceCode": "MU6839SNE"
+  },
+  {
+    "id": "fc_6005",
+    "collegeId": null,
+    "collegeName": "MUMBAI JUNIOR COLLEGE OF ARTS, COM. & SCIENCE",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 86.2,
+    "choiceCode": "MU6839SNE"
+  },
+  {
+    "id": "fc_6006",
+    "collegeId": null,
+    "collegeName": "SWAMI RAMKRISHANA PARMHANS JR. COLLEGE GOVENDI (E)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 51.6,
+    "choiceCode": "MU6863SFE"
+  },
+  {
+    "id": "fc_6007",
+    "collegeId": null,
+    "collegeName": "SWAMI RAMKRISHANA PARMHANS JR. COLLEGE GOVENDI (E)",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 58.2,
+    "choiceCode": "MU6863SFE"
+  },
+  {
+    "id": "fc_6008",
+    "collegeId": null,
+    "collegeName": "SWAMI RAMKRISHANA PARMHANS JR. COLLEGE GOVENDI (E)",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 50.4,
+    "choiceCode": "MU6863SFE"
+  },
+  {
+    "id": "fc_6009",
+    "collegeId": null,
+    "collegeName": "SWAMI RAMKRISHANA PARMHANS JR. COLLEGE GOVENDI (E)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 73.2,
+    "choiceCode": "MU6863SFE"
+  },
+  {
+    "id": "fc_6010",
+    "collegeId": null,
+    "collegeName": "SWAMI RAMKRISHANA PARMHANS JR. COLLEGE GOVENDI (E)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 53.4,
+    "choiceCode": "MU6863SFE"
+  },
+  {
+    "id": "fc_6011",
+    "collegeId": null,
+    "collegeName": "SWAMI RAMKRISHANA PARMHANS JR. COLLEGE GOVENDI (E)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 78,
+    "choiceCode": "MU6863SFE"
+  },
+  {
+    "id": "fc_6012",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 74.8,
+    "choiceCode": "MU6880SGE"
+  },
+  {
+    "id": "fc_6013",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 63.2,
+    "choiceCode": "MU6880SGE"
+  },
+  {
+    "id": "fc_6014",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 74.4,
+    "choiceCode": "MU6880SGE"
+  },
+  {
+    "id": "fc_6015",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 60.4,
+    "choiceCode": "MU6880SGE"
+  },
+  {
+    "id": "fc_6016",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 76.8,
+    "choiceCode": "MU6880SGE"
+  },
+  {
+    "id": "fc_6017",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 49,
+    "choiceCode": "MU6880SGE"
+  },
+  {
+    "id": "fc_6018",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 52.8,
+    "choiceCode": "MU6880SGE"
+  },
+  {
+    "id": "fc_6019",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 70,
+    "choiceCode": "MU6880SGE"
+  },
+  {
+    "id": "fc_6020",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 56.8,
+    "choiceCode": "MU6880SGE"
+  },
+  {
+    "id": "fc_6021",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 70.6,
+    "choiceCode": "MU6880SGE"
+  },
+  {
+    "id": "fc_6022",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 47.4,
+    "choiceCode": "MU6880SGE"
+  },
+  {
+    "id": "fc_6023",
+    "collegeId": null,
+    "collegeName": "N. G. ACHARYA & D. K. MARATHE COLLEGE OF ARTS, SCIENCE & COMMERC CHEMBUR MUMBAI 71",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 63,
+    "choiceCode": "MU6880SGE"
+  },
+  {
+    "id": "fc_6024",
+    "collegeId": null,
+    "collegeName": "GURUNANAK CHARITABLE TRUSTS LAKSHYA PREP HIGH SCHOOL & JUNIOR COLLEGE, CHEMBUR",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 65.4,
+    "choiceCode": "MU6886SFE"
+  },
+  {
+    "id": "fc_6025",
+    "collegeId": null,
+    "collegeName": "GURUNANAK CHARITABLE TRUSTS LAKSHYA PREP HIGH SCHOOL & JUNIOR COLLEGE, CHEMBUR",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55.2,
+    "choiceCode": "MU6886SFE"
+  },
+  {
+    "id": "fc_6026",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 72.6,
+    "choiceCode": "MU6892SPE"
+  },
+  {
+    "id": "fc_6027",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 74.6,
+    "choiceCode": "MU6892SPE"
+  },
+  {
+    "id": "fc_6028",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 79.8,
+    "choiceCode": "MU6892SPE"
+  },
+  {
+    "id": "fc_6029",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 69.4,
+    "choiceCode": "MU6892SPE"
+  },
+  {
+    "id": "fc_6030",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 78,
+    "choiceCode": "MU6892SPE"
+  },
+  {
+    "id": "fc_6031",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 65.2,
+    "choiceCode": "MU6892SPE"
+  },
+  {
+    "id": "fc_6032",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 68,
+    "choiceCode": "MU6892SPE"
+  },
+  {
+    "id": "fc_6033",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 55.8,
+    "choiceCode": "MU6892SPE"
+  },
+  {
+    "id": "fc_6034",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 80,
+    "choiceCode": "MU6892SPE"
+  },
+  {
+    "id": "fc_6035",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 79.2,
+    "choiceCode": "MU6892SGE"
+  },
+  {
+    "id": "fc_6036",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 57.8,
+    "choiceCode": "MU6892SGE"
+  },
+  {
+    "id": "fc_6037",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 70.4,
+    "choiceCode": "MU6892SGE"
+  },
+  {
+    "id": "fc_6038",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 74,
+    "choiceCode": "MU6892SGE"
+  },
+  {
+    "id": "fc_6039",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 68,
+    "choiceCode": "MU6892SGE"
+  },
+  {
+    "id": "fc_6040",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 63,
+    "choiceCode": "MU6892SGE"
+  },
+  {
+    "id": "fc_6041",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 73.6,
+    "choiceCode": "MU6892SGE"
+  },
+  {
+    "id": "fc_6042",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 65.8,
+    "choiceCode": "MU6892SGE"
+  },
+  {
+    "id": "fc_6043",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 50.2,
+    "choiceCode": "MU6892SGE"
+  },
+  {
+    "id": "fc_6044",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 78.8,
+    "choiceCode": "MU6892SGE"
+  },
+  {
+    "id": "fc_6045",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 84.2,
+    "choiceCode": "MU6892SGE"
+  },
+  {
+    "id": "fc_6046",
+    "collegeId": null,
+    "collegeName": "P.V.G'S  VIDYA BHAWAN HIGH SCHOOL NO. 1& JR.COLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 48,
+    "choiceCode": "MU6892SGE"
+  },
+  {
+    "id": "fc_6047",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 67,
+    "choiceCode": "MU6900SNE"
+  },
+  {
+    "id": "fc_6048",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 58.4,
+    "choiceCode": "MU6900SNE"
+  },
+  {
+    "id": "fc_6049",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 80.2,
+    "choiceCode": "MU6900SNE"
+  },
+  {
+    "id": "fc_6050",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 53.6,
+    "choiceCode": "MU6900SNE"
+  },
+  {
+    "id": "fc_6051",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60.8,
+    "choiceCode": "MU6900SNE"
+  },
+  {
+    "id": "fc_6052",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 79,
+    "choiceCode": "MU6900SNE"
+  },
+  {
+    "id": "fc_6053",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 82.8,
+    "choiceCode": "MU6900SNE"
+  },
+  {
+    "id": "fc_6054",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 78.2,
+    "choiceCode": "MU6900SNE"
+  },
+  {
+    "id": "fc_6055",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 69.6,
+    "choiceCode": "MU6900SGE"
+  },
+  {
+    "id": "fc_6056",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 84.6,
+    "choiceCode": "MU6900SGE"
+  },
+  {
+    "id": "fc_6057",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 78.6,
+    "choiceCode": "MU6900SGE"
+  },
+  {
+    "id": "fc_6058",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 86.4,
+    "choiceCode": "MU6900SGE"
+  },
+  {
+    "id": "fc_6059",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 57.4,
+    "choiceCode": "MU6900SGE"
+  },
+  {
+    "id": "fc_6060",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 82.2,
+    "choiceCode": "MU6900SGE"
+  },
+  {
+    "id": "fc_6061",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 68.6,
+    "choiceCode": "MU6900SGE"
+  },
+  {
+    "id": "fc_6062",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 69.6,
+    "choiceCode": "MU6900SGE"
+  },
+  {
+    "id": "fc_6063",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 77,
+    "choiceCode": "MU6900SGE"
+  },
+  {
+    "id": "fc_6064",
+    "collegeId": null,
+    "collegeName": "S. S. S. MULTIPURPOSE TECHNICAL HIGH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 45.4,
+    "choiceCode": "MU6900SGE"
+  },
+  {
+    "id": "fc_6065",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 71,
+    "choiceCode": "MU6907SFE"
+  },
+  {
+    "id": "fc_6066",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA & JR. COLLEGE OF ARTS & COMMERCE, PARKSITE VIKHROLI",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 51,
+    "choiceCode": "MU6907SFE"
+  },
+  {
+    "id": "fc_6067",
+    "collegeId": null,
+    "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 86.6,
+    "choiceCode": "MU6908SNE"
+  },
+  {
+    "id": "fc_6068",
+    "collegeId": null,
+    "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 78,
+    "choiceCode": "MU6908SNE"
+  },
+  {
+    "id": "fc_6069",
+    "collegeId": null,
+    "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 86.2,
+    "choiceCode": "MU6908SNE"
+  },
+  {
+    "id": "fc_6070",
+    "collegeId": null,
+    "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 72,
+    "choiceCode": "MU6908SNE"
+  },
+  {
+    "id": "fc_6071",
+    "collegeId": null,
+    "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 78.8,
+    "choiceCode": "MU6908SNE"
+  },
+  {
+    "id": "fc_6072",
+    "collegeId": null,
+    "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 81.2,
+    "choiceCode": "MU6908SNE"
+  },
+  {
+    "id": "fc_6073",
+    "collegeId": null,
+    "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 71.4,
+    "choiceCode": "MU6908SNE"
+  },
+  {
+    "id": "fc_6074",
+    "collegeId": null,
+    "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 87.4,
+    "choiceCode": "MU6908SNE"
+  },
+  {
+    "id": "fc_6075",
+    "collegeId": null,
+    "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 93.6,
+    "choiceCode": "MU6908SNE"
+  },
+  {
+    "id": "fc_6076",
+    "collegeId": null,
+    "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 61.2,
+    "choiceCode": "MU6908SNE"
+  },
+  {
+    "id": "fc_6077",
+    "collegeId": null,
+    "collegeName": "SARSWATI VIDYA NIKETAN JR COLLEGE OF COMMERCE AND SCIENCE",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 80.4,
+    "choiceCode": "MU6908SNE"
+  },
+  {
+    "id": "fc_6078",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 49,
+    "choiceCode": "MU6915SFE"
+  },
+  {
+    "id": "fc_6079",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 50.2,
+    "choiceCode": "MU6915SFE"
+  },
+  {
+    "id": "fc_6080",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 43.6,
+    "choiceCode": "MU6915SFE"
+  },
+  {
+    "id": "fc_6081",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 64,
+    "choiceCode": "MU6915SFE"
+  },
+  {
+    "id": "fc_6082",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 62,
+    "choiceCode": "MU6915SFE"
+  },
+  {
+    "id": "fc_6083",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 67.4,
+    "choiceCode": "MU6915SFE"
+  },
+  {
+    "id": "fc_6084",
+    "collegeId": null,
+    "collegeName": "VIDYA NIKETAN JR. COLLEGE OF COMMERCE AND SICENCE GHTKOPAR (E)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 61.6,
+    "choiceCode": "MU6915SFE"
+  },
+  {
+    "id": "fc_6085",
+    "collegeId": null,
+    "collegeName": "KCA ST. FRANCIS OF ASSISI INTERNATIONAL SCHOOL CHEMBUR",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 50.2,
+    "choiceCode": "MU6927SFE"
+  },
+  {
+    "id": "fc_6086",
+    "collegeId": null,
+    "collegeName": "K. M. S. P. MANDL'S S.I.H. BHATIA HIGH SCHOOL & JR. COLLEGE, KURLA (W).",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 72.8,
+    "choiceCode": "MU6934SFE"
+  },
+  {
+    "id": "fc_6087",
+    "collegeId": null,
+    "collegeName": "K. M. S. P. MANDL'S S.I.H. BHATIA HIGH SCHOOL & JR. COLLEGE, KURLA (W).",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 65.6,
+    "choiceCode": "MU6934SFE"
+  },
+  {
+    "id": "fc_6088",
+    "collegeId": null,
+    "collegeName": "SHRIMATI SITADEVI AND SHRI SAHIBRAM ENG MED HIGH SCHOOL AND  JR COLLEGE OF ARTS  SCI. COM. KURLA",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 70.4,
+    "choiceCode": "MU6949SFE"
+  },
+  {
+    "id": "fc_6089",
+    "collegeId": null,
+    "collegeName": "SHRIMATI SITADEVI AND SHRI SAHIBRAM ENG MED HIGH SCHOOL AND  JR COLLEGE OF ARTS  SCI. COM. KURLA",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 77.2,
+    "choiceCode": "MU6949SFE"
+  },
+  {
+    "id": "fc_6090",
+    "collegeId": null,
+    "collegeName": "SHRIMATI SITADEVI AND SHRI SAHIBRAM ENG MED HIGH SCHOOL AND  JR COLLEGE OF ARTS  SCI. COM. KURLA",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 75.8,
+    "choiceCode": "MU6949SFE"
+  },
+  {
+    "id": "fc_6091",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 73,
+    "choiceCode": "MU6964SGE"
+  },
+  {
+    "id": "fc_6092",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 63.6,
+    "choiceCode": "MU6964SGE"
+  },
+  {
+    "id": "fc_6093",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 80.2,
+    "choiceCode": "MU6964SGE"
+  },
+  {
+    "id": "fc_6094",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 45,
+    "choiceCode": "MU6964SGE"
+  },
+  {
+    "id": "fc_6095",
+    "collegeId": null,
+    "collegeName": "SANDESH VIDYALAYA TAGOR NAGAR, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 70,
+    "choiceCode": "MU6964SGE"
+  },
+  {
+    "id": "fc_6096",
+    "collegeId": null,
+    "collegeName": "DON BOSCO HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 72,
+    "choiceCode": "MU6966SFE"
+  },
+  {
+    "id": "fc_6097",
+    "collegeId": null,
+    "collegeName": "DON BOSCO HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 88.6,
+    "choiceCode": "MU6966SFE"
+  },
+  {
+    "id": "fc_6098",
+    "collegeId": null,
+    "collegeName": "DON BOSCO HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 69.2,
+    "choiceCode": "MU6966SFE"
+  },
+  {
+    "id": "fc_6099",
+    "collegeId": null,
+    "collegeName": "DON BOSCO HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 71.8,
+    "choiceCode": "MU6966SFE"
+  },
+  {
+    "id": "fc_6100",
+    "collegeId": null,
+    "collegeName": "DON BOSCO HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 86.8,
+    "choiceCode": "MU6966SFE"
+  },
+  {
+    "id": "fc_6101",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 68.6,
+    "choiceCode": "MU6969SGE"
+  },
+  {
+    "id": "fc_6102",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 74.4,
+    "choiceCode": "MU6969SGE"
+  },
+  {
+    "id": "fc_6103",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 57.4,
+    "choiceCode": "MU6969SGE"
+  },
+  {
+    "id": "fc_6104",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 44.6,
+    "choiceCode": "MU6969SGE"
+  },
+  {
+    "id": "fc_6105",
+    "collegeId": null,
+    "collegeName": "VIKAS HIGH SCHOOL & JR. COLLEGE, VIKHROLI (E).",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 46.6,
+    "choiceCode": "MU6969SGE"
+  },
+  {
+    "id": "fc_6106",
+    "collegeId": null,
+    "collegeName": "PODAR INTERNATIONAL SCHOOL, POWAI.",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 68.6,
+    "choiceCode": "MU6983SFE"
+  },
+  {
+    "id": "fc_6107",
+    "collegeId": null,
+    "collegeName": "PODAR INTERNATIONAL SCHOOL, POWAI.",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 53,
+    "choiceCode": "MU6983SFE"
+  },
+  {
+    "id": "fc_6108",
+    "collegeId": null,
+    "collegeName": "PODAR INTERNATIONAL SCHOOL, POWAI.",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 75.4,
+    "choiceCode": "MU6983SFE"
+  },
+  {
+    "id": "fc_6109",
+    "collegeId": null,
+    "collegeName": "PODAR INTERNATIONAL SCHOOL, POWAI.",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 72,
+    "choiceCode": "MU6983SFE"
+  },
+  {
+    "id": "fc_6110",
+    "collegeId": null,
+    "collegeName": "SOU. NALINI YASHWANTRAO DODE VIDYALAYA, MULUND (E)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 82,
+    "choiceCode": "MU6998SFE"
+  },
+  {
+    "id": "fc_6111",
+    "collegeId": null,
+    "collegeName": "SOU. NALINI YASHWANTRAO DODE VIDYALAYA, MULUND (E)",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 87.8,
+    "choiceCode": "MU6998SFE"
+  },
+  {
+    "id": "fc_6112",
+    "collegeId": null,
+    "collegeName": "SOU. NALINI YASHWANTRAO DODE VIDYALAYA, MULUND (E)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 73,
+    "choiceCode": "MU6998SFE"
+  },
+  {
+    "id": "fc_6113",
+    "collegeId": null,
+    "collegeName": "SOU. NALINI YASHWANTRAO DODE VIDYALAYA, MULUND (E)",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 76.4,
+    "choiceCode": "MU6998SFE"
+  },
+  {
+    "id": "fc_6114",
+    "collegeId": null,
+    "collegeName": "SOU. NALINI YASHWANTRAO DODE VIDYALAYA, MULUND (E)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 62,
+    "choiceCode": "MU6998SFE"
+  },
+  {
+    "id": "fc_6115",
+    "collegeId": null,
+    "collegeName": "SOU. NALINI YASHWANTRAO DODE VIDYALAYA, MULUND (E)",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 72.6,
+    "choiceCode": "MU6998SFE"
+  },
+  {
+    "id": "fc_6116",
+    "collegeId": null,
+    "collegeName": "SOU. NALINI YASHWANTRAO DODE VIDYALAYA, MULUND (E)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 79,
+    "choiceCode": "MU6998SFE"
+  },
+  {
+    "id": "fc_6117",
+    "collegeId": null,
+    "collegeName": "SOU. NALINI YASHWANTRAO DODE VIDYALAYA, MULUND (E)",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 89.6,
+    "choiceCode": "MU6998SFE"
+  },
+  {
+    "id": "fc_6118",
+    "collegeId": null,
+    "collegeName": "SOU. NALINI YASHWANTRAO DODE VIDYALAYA, MULUND (E)",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 88.4,
+    "choiceCode": "MU6998SFE"
+  },
+  {
+    "id": "fc_6119",
+    "collegeId": null,
+    "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 56,
+    "choiceCode": "MU6999SPE"
+  },
+  {
+    "id": "fc_6120",
+    "collegeId": null,
+    "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 76.2,
+    "choiceCode": "MU6999SPE"
+  },
+  {
+    "id": "fc_6121",
+    "collegeId": null,
+    "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 58.8,
+    "choiceCode": "MU6999SPE"
+  },
+  {
+    "id": "fc_6122",
+    "collegeId": null,
+    "collegeName": "SAHYADRI VIDYAMANDIR & JR. COLLEGE, BHANDUP (W)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 61,
+    "choiceCode": "MU6999SPE"
+  },
+  {
+    "id": "fc_6123",
+    "collegeId": null,
+    "collegeName": "NAVJEEVAN VIDYAMANDIR & JR. COLLEGE, BHANDUP WEST",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 53.6,
+    "choiceCode": "MU7000SGE"
+  },
+  {
+    "id": "fc_6124",
+    "collegeId": null,
+    "collegeName": "NAVJEEVAN VIDYAMANDIR & JR. COLLEGE, BHANDUP WEST",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 57,
+    "choiceCode": "MU7000SGE"
+  },
+  {
+    "id": "fc_6125",
+    "collegeId": null,
+    "collegeName": "NAVJEEVAN VIDYAMANDIR & JR. COLLEGE, BHANDUP WEST",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 65.4,
+    "choiceCode": "MU7000SGE"
+  },
+  {
+    "id": "fc_6126",
+    "collegeId": null,
+    "collegeName": "NAVJEEVAN VIDYAMANDIR & JR. COLLEGE, BHANDUP WEST",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 52,
+    "choiceCode": "MU7000SGE"
+  },
+  {
+    "id": "fc_6127",
+    "collegeId": null,
+    "collegeName": "NAVJEEVAN VIDYAMANDIR & JR. COLLEGE, BHANDUP WEST",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 50.4,
+    "choiceCode": "MU7000SGE"
+  },
+  {
+    "id": "fc_6128",
+    "collegeId": null,
+    "collegeName": "JAI BHARAT HIGH SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 66,
+    "choiceCode": "MU7009SFE"
+  },
+  {
+    "id": "fc_6129",
+    "collegeId": null,
+    "collegeName": "JAI BHARAT HIGH SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 77.2,
+    "choiceCode": "MU7009SFE"
+  },
+  {
+    "id": "fc_6130",
+    "collegeId": null,
+    "collegeName": "JAI BHARAT HIGH SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 84,
+    "choiceCode": "MU7009SFE"
+  },
+  {
+    "id": "fc_6131",
+    "collegeId": null,
+    "collegeName": "JAI BHARAT HIGH SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 78.2,
+    "choiceCode": "MU7009SFE"
+  },
+  {
+    "id": "fc_6132",
+    "collegeId": null,
+    "collegeName": "JAI BHARAT HIGH SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 61.4,
+    "choiceCode": "MU7009SFE"
+  },
+  {
+    "id": "fc_6133",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 53.6,
+    "choiceCode": "MU7012SFE"
+  },
+  {
+    "id": "fc_6134",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 74,
+    "choiceCode": "MU7012SFE"
+  },
+  {
+    "id": "fc_6135",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 70,
+    "choiceCode": "MU7012SFE"
+  },
+  {
+    "id": "fc_6136",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 67.4,
+    "choiceCode": "MU7012SFE"
+  },
+  {
+    "id": "fc_6137",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 69.2,
+    "choiceCode": "MU7012SFE"
+  },
+  {
+    "id": "fc_6138",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55.4,
+    "choiceCode": "MU7012SFE"
+  },
+  {
+    "id": "fc_6139",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 75,
+    "choiceCode": "MU7012SFE"
+  },
+  {
+    "id": "fc_6140",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 71.8,
+    "choiceCode": "MU7012SFE"
+  },
+  {
+    "id": "fc_6141",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 69,
+    "choiceCode": "MU7012SFE"
+  },
+  {
+    "id": "fc_6142",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 70.6,
+    "choiceCode": "MU7012SFE"
+  },
+  {
+    "id": "fc_6143",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 85.4,
+    "choiceCode": "MU7012SFE"
+  },
+  {
+    "id": "fc_6144",
+    "collegeId": null,
+    "collegeName": "MULUND VIDYAMANDIR & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 83.8,
+    "choiceCode": "MU7012SFE"
+  },
+  {
+    "id": "fc_6145",
+    "collegeId": null,
+    "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55.8,
+    "choiceCode": "MU7015SFE"
+  },
+  {
+    "id": "fc_6146",
+    "collegeId": null,
+    "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 85.6,
+    "choiceCode": "MU7015SFE"
+  },
+  {
+    "id": "fc_6147",
+    "collegeId": null,
+    "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 66,
+    "choiceCode": "MU7015SFE"
+  },
+  {
+    "id": "fc_6148",
+    "collegeId": null,
+    "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 57,
+    "choiceCode": "MU7015SFE"
+  },
+  {
+    "id": "fc_6149",
+    "collegeId": null,
+    "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 81.8,
+    "choiceCode": "MU7015SFE"
+  },
+  {
+    "id": "fc_6150",
+    "collegeId": null,
+    "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 43.4,
+    "choiceCode": "MU7015SFE"
+  },
+  {
+    "id": "fc_6151",
+    "collegeId": null,
+    "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 54.2,
+    "choiceCode": "MU7015SFE"
+  },
+  {
+    "id": "fc_6152",
+    "collegeId": null,
+    "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 80.6,
+    "choiceCode": "MU7015SFE"
+  },
+  {
+    "id": "fc_6153",
+    "collegeId": null,
+    "collegeName": "FRIENDS CO.OP. EDU. SOC. LTD. SEC. SCHOOL & JR. COLLEGE, MULUND (W)",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 87,
+    "choiceCode": "MU7015SFE"
+  },
+  {
+    "id": "fc_6154",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55,
+    "choiceCode": "MU7018SPE"
+  },
+  {
+    "id": "fc_6155",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 76.8,
+    "choiceCode": "MU7018SPE"
+  },
+  {
+    "id": "fc_6156",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 58,
+    "choiceCode": "MU7018SPE"
+  },
+  {
+    "id": "fc_6157",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 65.8,
+    "choiceCode": "MU7018SPE"
+  },
+  {
+    "id": "fc_6158",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 73.6,
+    "choiceCode": "MU7018SPE"
+  },
+  {
+    "id": "fc_6159",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 61.8,
+    "choiceCode": "MU7018SPE"
+  },
+  {
+    "id": "fc_6160",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 70.4,
+    "choiceCode": "MU7018SPE"
+  },
+  {
+    "id": "fc_6161",
+    "collegeId": null,
+    "collegeName": "WAMANRAO MURAJAN MADHYAMIK VIDYALAYA & JR. COLLEGE, MULUND (E)",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 73.2,
+    "choiceCode": "MU7018SPE"
+  },
+  {
+    "id": "fc_6162",
+    "collegeId": null,
+    "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 64.2,
+    "choiceCode": "MU7022SFE"
+  },
+  {
+    "id": "fc_6163",
+    "collegeId": null,
+    "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 81.2,
+    "choiceCode": "MU7022SFE"
+  },
+  {
+    "id": "fc_6164",
+    "collegeId": null,
+    "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 60.2,
+    "choiceCode": "MU7022SFE"
+  },
+  {
+    "id": "fc_6165",
+    "collegeId": null,
+    "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 66.6,
+    "choiceCode": "MU7022SFE"
+  },
+  {
+    "id": "fc_6166",
+    "collegeId": null,
+    "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 78.2,
+    "choiceCode": "MU7022SFE"
+  },
+  {
+    "id": "fc_6167",
+    "collegeId": null,
+    "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 62.2,
+    "choiceCode": "MU7022SFE"
+  },
+  {
+    "id": "fc_6168",
+    "collegeId": null,
+    "collegeName": "HOLY ANGELS' HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 69.6,
+    "choiceCode": "MU7022SFE"
+  },
+  {
+    "id": "fc_6169",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 86.2,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6170",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 79.4,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6171",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 78.6,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6172",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 80.8,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6173",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 87.4,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6174",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 80.2,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6175",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 88,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6176",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 81.2,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6177",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 65.8,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6178",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 76.4,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6179",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 75.4,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6180",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 80.6,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6181",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 55.8,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6182",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 71.4,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6183",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 84.4,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6184",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 67,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6185",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 68.8,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6186",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 80,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6187",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 78.8,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6188",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 76.4,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6189",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 85.4,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6190",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 78.8,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6191",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 67.8,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6192",
+    "collegeId": null,
+    "collegeName": "V G VAZE COLLEGE ARTS,SCI  & COMM.MULUND (E) MUMBAI-81",
+    "stream": "Science",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 73,
+    "choiceCode": "MU7024SGE"
+  },
+  {
+    "id": "fc_6193",
+    "collegeId": null,
+    "collegeName": "PARAG  VIDYALAYA  JR. COLLEGE BHANDUP W MUMBAI-78",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 65,
+    "choiceCode": "MU7025SNE"
+  },
+  {
+    "id": "fc_6194",
+    "collegeId": null,
+    "collegeName": "PARAG  VIDYALAYA  JR. COLLEGE BHANDUP W MUMBAI-78",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 61.6,
+    "choiceCode": "MU7025SNE"
+  },
+  {
+    "id": "fc_6195",
+    "collegeId": null,
+    "collegeName": "PARAG  VIDYALAYA  JR. COLLEGE BHANDUP W MUMBAI-78",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 61,
+    "choiceCode": "MU7025SNE"
+  },
+  {
+    "id": "fc_6196",
+    "collegeId": null,
+    "collegeName": "PARAG  VIDYALAYA  JR. COLLEGE BHANDUP W MUMBAI-78",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 54.8,
+    "choiceCode": "MU7025SNE"
+  },
+  {
+    "id": "fc_6197",
+    "collegeId": null,
+    "collegeName": "VIDYABHAVAN JR COLLEGE MULUND (W) MUMBAI-80",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 69,
+    "choiceCode": "MU7026SFE"
+  },
+  {
+    "id": "fc_6198",
+    "collegeId": null,
+    "collegeName": "VIDYABHAVAN JR COLLEGE MULUND (W) MUMBAI-80",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 61.8,
+    "choiceCode": "MU7026SFE"
+  },
+  {
+    "id": "fc_6199",
+    "collegeId": null,
+    "collegeName": "VIDYABHAVAN JR COLLEGE MULUND (W) MUMBAI-80",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 64.8,
+    "choiceCode": "MU7026SFE"
+  },
+  {
+    "id": "fc_6200",
+    "collegeId": null,
+    "collegeName": "VIDYABHAVAN JR COLLEGE MULUND (W) MUMBAI-80",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 80.6,
+    "choiceCode": "MU7026SFE"
+  },
+  {
+    "id": "fc_6201",
+    "collegeId": null,
+    "collegeName": "VIDYABHAVAN JR COLLEGE MULUND (W) MUMBAI-80",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 75.2,
+    "choiceCode": "MU7026SFE"
+  },
+  {
+    "id": "fc_6202",
+    "collegeId": null,
+    "collegeName": "MCGM'S RATANBAI WALBAI MUNCIPAL JR. SCIENCE COLLEGE MULUND (W), MUMBAI-80",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 70.2,
+    "choiceCode": "MU7029SFE"
+  },
+  {
+    "id": "fc_6203",
+    "collegeId": null,
+    "collegeName": "MCGM'S RATANBAI WALBAI MUNCIPAL JR. SCIENCE COLLEGE MULUND (W), MUMBAI-80",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 89.4,
+    "choiceCode": "MU7029SFE"
+  },
+  {
+    "id": "fc_6204",
+    "collegeId": null,
+    "collegeName": "MCGM'S RATANBAI WALBAI MUNCIPAL JR. SCIENCE COLLEGE MULUND (W), MUMBAI-80",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 81.6,
+    "choiceCode": "MU7029SFE"
+  },
+  {
+    "id": "fc_6205",
+    "collegeId": null,
+    "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 78.8,
+    "choiceCode": "MU7041SFE"
+  },
+  {
+    "id": "fc_6206",
+    "collegeId": null,
+    "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 50.4,
+    "choiceCode": "MU7041SFE"
+  },
+  {
+    "id": "fc_6207",
+    "collegeId": null,
+    "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 78.8,
+    "choiceCode": "MU7041SFE"
+  },
+  {
+    "id": "fc_6208",
+    "collegeId": null,
+    "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 84,
+    "choiceCode": "MU7041SFE"
+  },
+  {
+    "id": "fc_6209",
+    "collegeId": null,
+    "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 74,
+    "choiceCode": "MU7041SFE"
+  },
+  {
+    "id": "fc_6210",
+    "collegeId": null,
+    "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 69,
+    "choiceCode": "MU7041SFE"
+  },
+  {
+    "id": "fc_6211",
+    "collegeId": null,
+    "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 56.6,
+    "choiceCode": "MU7041SFE"
+  },
+  {
+    "id": "fc_6212",
+    "collegeId": null,
+    "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 73.2,
+    "choiceCode": "MU7041SFE"
+  },
+  {
+    "id": "fc_6213",
+    "collegeId": null,
+    "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 79.6,
+    "choiceCode": "MU7041SFE"
+  },
+  {
+    "id": "fc_6214",
+    "collegeId": null,
+    "collegeName": "IES JUNIOR COLLEGE , BANDRA (E)",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 58.8,
+    "choiceCode": "MU7041SFE"
+  },
+  {
+    "id": "fc_6215",
+    "collegeId": null,
+    "collegeName": "SIR VITTHALDAS THAKARSEY COLLEGE OF HOME SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 64,
+    "choiceCode": "MU7065SGE"
+  },
+  {
+    "id": "fc_6216",
+    "collegeId": null,
+    "collegeName": "SIR VITTHALDAS THAKARSEY COLLEGE OF HOME SCIENCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU7065SGE"
+  },
+  {
+    "id": "fc_6217",
+    "collegeId": null,
+    "collegeName": "MAROL EDUCATION ACADEMY HIGH SCHOOL",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60.4,
+    "choiceCode": "MU7073SFE"
+  },
+  {
+    "id": "fc_6218",
+    "collegeId": null,
+    "collegeName": "MAROL EDUCATION ACADEMY HIGH SCHOOL",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 65.8,
+    "choiceCode": "MU7073SFE"
+  },
+  {
+    "id": "fc_6219",
+    "collegeId": null,
+    "collegeName": "ARVIND GANDBHIR  HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU7079SNE"
+  },
+  {
+    "id": "fc_6220",
+    "collegeId": null,
+    "collegeName": "ARVIND GANDBHIR  HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 70.4,
+    "choiceCode": "MU7079SNE"
+  },
+  {
+    "id": "fc_6221",
+    "collegeId": null,
+    "collegeName": "ARVIND GANDBHIR  HIGH SCHOOL AND JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 50.6,
+    "choiceCode": "MU7079SNE"
+  },
+  {
+    "id": "fc_6222",
+    "collegeId": null,
+    "collegeName": "AADITYA   ACADEMY",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 38.2,
+    "choiceCode": "MU7084SFE"
+  },
+  {
+    "id": "fc_6223",
+    "collegeId": null,
+    "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 51.4,
+    "choiceCode": "MU7090SGE"
+  },
+  {
+    "id": "fc_6224",
+    "collegeId": null,
+    "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55,
+    "choiceCode": "MU7090SGE"
+  },
+  {
+    "id": "fc_6225",
+    "collegeId": null,
+    "collegeName": "VERSOVA WELFARE ASSOCIATION HIGH SCHOOL & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 65,
+    "choiceCode": "MU7090SGE"
+  },
+  {
+    "id": "fc_6226",
+    "collegeId": null,
+    "collegeName": "GYAN KENDRA SEC.  HIGH SCHOOL",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 58.2,
+    "choiceCode": "MU7097SFE"
+  },
+  {
+    "id": "fc_6227",
+    "collegeId": null,
+    "collegeName": "GYAN KENDRA SEC.  HIGH SCHOOL",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 71.2,
+    "choiceCode": "MU7097SFE"
+  },
+  {
+    "id": "fc_6228",
+    "collegeId": null,
+    "collegeName": "GYAN KENDRA SEC.  HIGH SCHOOL",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 43.4,
+    "choiceCode": "MU7097SFE"
+  },
+  {
+    "id": "fc_6229",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 79.6,
+    "choiceCode": "MU7125SFE"
+  },
+  {
+    "id": "fc_6230",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 62,
+    "choiceCode": "MU7125SFE"
+  },
+  {
+    "id": "fc_6231",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 78.4,
+    "choiceCode": "MU7125SFE"
+  },
+  {
+    "id": "fc_6232",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 70.8,
+    "choiceCode": "MU7125SFE"
+  },
+  {
+    "id": "fc_6233",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 81.4,
+    "choiceCode": "MU7125SFE"
+  },
+  {
+    "id": "fc_6234",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 88.8,
+    "choiceCode": "MU7125SFE"
+  },
+  {
+    "id": "fc_6235",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 75.6,
+    "choiceCode": "MU7125SFE"
+  },
+  {
+    "id": "fc_6236",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 75.2,
+    "choiceCode": "MU7125SFE"
+  },
+  {
+    "id": "fc_6237",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 65,
+    "choiceCode": "MU7125SFE"
+  },
+  {
+    "id": "fc_6238",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 72.4,
+    "choiceCode": "MU7125SFE"
+  },
+  {
+    "id": "fc_6239",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 64,
+    "choiceCode": "MU7125SFE"
+  },
+  {
+    "id": "fc_6240",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 80.2,
+    "choiceCode": "MU7125SFE"
+  },
+  {
+    "id": "fc_6241",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 84.8,
+    "choiceCode": "MU7125SFE"
+  },
+  {
+    "id": "fc_6242",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 61.2,
+    "choiceCode": "MU7125SFE"
+  },
+  {
+    "id": "fc_6243",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 79.4,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6244",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 65.8,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6245",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 68.8,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6246",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 76.2,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6247",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 77.4,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6248",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 61,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6249",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 75.8,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6250",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 68.8,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6251",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 76.4,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6252",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 76.2,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6253",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 51,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6254",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 75.2,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6255",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 68,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6256",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 86.8,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6257",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 66.6,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6258",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 56.4,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6259",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 79,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6260",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 70,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6261",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 68.2,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6262",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 71.6,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6263",
+    "collegeId": null,
+    "collegeName": "BHAVAN'S COLLEGE OF ARTS, COM & SCI.",
+    "stream": "Science",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 58,
+    "choiceCode": "MU7125SGE"
+  },
+  {
+    "id": "fc_6264",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 64.2,
+    "choiceCode": "MU7129SFE"
+  },
+  {
+    "id": "fc_6265",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 55.6,
+    "choiceCode": "MU7129SFE"
+  },
+  {
+    "id": "fc_6266",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 64.6,
+    "choiceCode": "MU7129SFE"
+  },
+  {
+    "id": "fc_6267",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 63.8,
+    "choiceCode": "MU7129SFE"
+  },
+  {
+    "id": "fc_6268",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 52.2,
+    "choiceCode": "MU7129SFE"
+  },
+  {
+    "id": "fc_6269",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU7129SFE"
+  },
+  {
+    "id": "fc_6270",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 68.8,
+    "choiceCode": "MU7129SFE"
+  },
+  {
+    "id": "fc_6271",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 72.6,
+    "choiceCode": "MU7129SFE"
+  },
+  {
+    "id": "fc_6272",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 53.2,
+    "choiceCode": "MU7129SFE"
+  },
+  {
+    "id": "fc_6273",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 63.8,
+    "choiceCode": "MU7129SFE"
+  },
+  {
+    "id": "fc_6274",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 77.6,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6275",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 63,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6276",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 72.4,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6277",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 78.2,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6278",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 65.6,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6279",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 66.6,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6280",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 76.6,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6281",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 64.8,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6282",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 81.4,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6283",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 87,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6284",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 73.4,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6285",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 52.6,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6286",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 51.8,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6287",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 74.4,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6288",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 57.6,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6289",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 74.4,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6290",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 69.4,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6291",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 67.6,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6292",
+    "collegeId": null,
+    "collegeName": "S. S. & L. S. PATKAR COLLEGE",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 71.6,
+    "choiceCode": "MU7129SGE"
+  },
+  {
+    "id": "fc_6293",
+    "collegeId": null,
+    "collegeName": "AAKASH JR COLLEGE OF SCI & COM",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU7150SFE"
+  },
+  {
+    "id": "fc_6294",
+    "collegeId": null,
+    "collegeName": "AAKASH JR COLLEGE OF SCI & COM",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 48.6,
+    "choiceCode": "MU7150SFE"
+  },
+  {
+    "id": "fc_6295",
+    "collegeId": null,
+    "collegeName": "AAKASH JR COLLEGE OF SCI & COM",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 64.8,
+    "choiceCode": "MU7150SFE"
+  },
+  {
+    "id": "fc_6296",
+    "collegeId": null,
+    "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 41.4,
+    "choiceCode": "MU7154SOE"
+  },
+  {
+    "id": "fc_6297",
+    "collegeId": null,
+    "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 75.4,
+    "choiceCode": "MU7154SOE"
+  },
+  {
+    "id": "fc_6298",
+    "collegeId": null,
+    "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 60.4,
+    "choiceCode": "MU7154SOE"
+  },
+  {
+    "id": "fc_6299",
+    "collegeId": null,
+    "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 49.8,
+    "choiceCode": "MU7154SOE"
+  },
+  {
+    "id": "fc_6300",
+    "collegeId": null,
+    "collegeName": "ISMAIL YUSUF COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 48.6,
+    "choiceCode": "MU7154SOE"
+  },
+  {
+    "id": "fc_6301",
+    "collegeId": null,
+    "collegeName": "DIXIT ROAD JR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 67.6,
+    "choiceCode": "MU7155SFE"
+  },
+  {
+    "id": "fc_6302",
+    "collegeId": null,
+    "collegeName": "DIXIT ROAD JR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 64.8,
+    "choiceCode": "MU7155SFE"
+  },
+  {
+    "id": "fc_6303",
+    "collegeId": null,
+    "collegeName": "DIXIT ROAD JR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 67,
+    "choiceCode": "MU7155SFE"
+  },
+  {
+    "id": "fc_6304",
+    "collegeId": null,
+    "collegeName": "DIXIT ROAD JR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 50.6,
+    "choiceCode": "MU7155SFE"
+  },
+  {
+    "id": "fc_6305",
+    "collegeId": null,
+    "collegeName": "DIXIT ROAD JR COLLEGE OF SCIENCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 63.4,
+    "choiceCode": "MU7155SFE"
+  },
+  {
+    "id": "fc_6306",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 77.6,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6307",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 74.2,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6308",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 77.2,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6309",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 75.4,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6310",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 68.4,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6311",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 65.4,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6312",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 78,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6313",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 80.6,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6314",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 72.8,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6315",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 63,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6316",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 58,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6317",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 50.2,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6318",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 63.8,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6319",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 52.6,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6320",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 73,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6321",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 75.6,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6322",
+    "collegeId": null,
+    "collegeName": "SATHAYE COLLEGE OF ARTS, COM & SCI",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 65.4,
+    "choiceCode": "MU7156SGE"
+  },
+  {
+    "id": "fc_6323",
+    "collegeId": null,
+    "collegeName": "NARAYANA JUNIOR COLLEGE ANDHERI",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 59,
+    "choiceCode": "MU7164SFE"
+  },
+  {
+    "id": "fc_6324",
+    "collegeId": null,
+    "collegeName": "NARAYANA JUNIOR COLLEGE ANDHERI",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 58.2,
+    "choiceCode": "MU7164SFE"
+  },
+  {
+    "id": "fc_6325",
+    "collegeId": null,
+    "collegeName": "NARAYANA JUNIOR COLLEGE ANDHERI",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 89.8,
+    "choiceCode": "MU7164SFE"
+  },
+  {
+    "id": "fc_6326",
+    "collegeId": null,
+    "collegeName": "NARAYANA JUNIOR COLLEGE ANDHERI",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 72,
+    "choiceCode": "MU7164SFE"
+  },
+  {
+    "id": "fc_6327",
+    "collegeId": null,
+    "collegeName": "NARAYANA JUNIOR COLLEGE ANDHERI",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 84.2,
+    "choiceCode": "MU7164SFE"
+  },
+  {
+    "id": "fc_6328",
+    "collegeId": null,
+    "collegeName": "NARAYANA JUNIOR COLLEGE ANDHERI",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 61.4,
+    "choiceCode": "MU7164SFE"
+  },
+  {
+    "id": "fc_6329",
+    "collegeId": null,
+    "collegeName": "NARAYANA JUNIOR COLLEGE ANDHERI",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 58.2,
+    "choiceCode": "MU7164SFE"
+  },
+  {
+    "id": "fc_6330",
+    "collegeId": null,
+    "collegeName": "NARAYANA JUNIOR COLLEGE ANDHERI",
+    "stream": "Science",
+    "category": "EWS",
+    "year": "2025-26",
+    "cutoff": 61.6,
+    "choiceCode": "MU7164SFE"
+  },
+  {
+    "id": "fc_6331",
+    "collegeId": null,
+    "collegeName": "GURUKUL ENGLISH SCHOOL & JR. COLLEGE  MALAD EAST",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 78.4,
+    "choiceCode": "MU7221SFE"
+  },
+  {
+    "id": "fc_6332",
+    "collegeId": null,
+    "collegeName": "GURUKUL ENGLISH SCHOOL & JR. COLLEGE  MALAD EAST",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 77.2,
+    "choiceCode": "MU7221SFE"
+  },
+  {
+    "id": "fc_6333",
+    "collegeId": null,
+    "collegeName": "GURUKUL ENGLISH SCHOOL & JR. COLLEGE  MALAD EAST",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 57.6,
+    "choiceCode": "MU7221SFE"
+  },
+  {
+    "id": "fc_6334",
+    "collegeId": null,
+    "collegeName": "GURUKUL ENGLISH SCHOOL & JR. COLLEGE  MALAD EAST",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 61.6,
+    "choiceCode": "MU7221SFE"
+  },
+  {
+    "id": "fc_6335",
+    "collegeId": null,
+    "collegeName": "M.L.R.T. GALA PIONEER ENGLISH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 73,
+    "choiceCode": "MU7231SFE"
+  },
+  {
+    "id": "fc_6336",
+    "collegeId": null,
+    "collegeName": "M.L.R.T. GALA PIONEER ENGLISH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 70.4,
+    "choiceCode": "MU7231SFE"
+  },
+  {
+    "id": "fc_6337",
+    "collegeId": null,
+    "collegeName": "M.L.R.T. GALA PIONEER ENGLISH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 80,
+    "choiceCode": "MU7231SFE"
+  },
+  {
+    "id": "fc_6338",
+    "collegeId": null,
+    "collegeName": "M.L.R.T. GALA PIONEER ENGLISH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 63.4,
+    "choiceCode": "MU7231SFE"
+  },
+  {
+    "id": "fc_6339",
+    "collegeId": null,
+    "collegeName": "M.L.R.T. GALA PIONEER ENGLISH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 66.4,
+    "choiceCode": "MU7231SFE"
+  },
+  {
+    "id": "fc_6340",
+    "collegeId": null,
+    "collegeName": "M.L.R.T. GALA PIONEER ENGLISH SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 69,
+    "choiceCode": "MU7231SFE"
+  },
+  {
+    "id": "fc_6341",
+    "collegeId": null,
+    "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60.8,
+    "choiceCode": "MU7233SGE"
+  },
+  {
+    "id": "fc_6342",
+    "collegeId": null,
+    "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 76,
+    "choiceCode": "MU7233SGE"
+  },
+  {
+    "id": "fc_6343",
+    "collegeId": null,
+    "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 70.8,
+    "choiceCode": "MU7233SGE"
+  },
+  {
+    "id": "fc_6344",
+    "collegeId": null,
+    "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU7233SGE"
+  },
+  {
+    "id": "fc_6345",
+    "collegeId": null,
+    "collegeName": "ANUDATTA VIDYALAYA & JUNIOR COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 55.8,
+    "choiceCode": "MU7233SGE"
+  },
+  {
+    "id": "fc_6346",
+    "collegeId": null,
+    "collegeName": "SHREE. MANGUBHAI DATTANI VIDYALAYA & YOJANA JR. COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 71.6,
+    "choiceCode": "MU7236SGE"
+  },
+  {
+    "id": "fc_6347",
+    "collegeId": null,
+    "collegeName": "SHREE. MANGUBHAI DATTANI VIDYALAYA & YOJANA JR. COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 43.6,
+    "choiceCode": "MU7236SGE"
+  },
+  {
+    "id": "fc_6348",
+    "collegeId": null,
+    "collegeName": "SHREE. MANGUBHAI DATTANI VIDYALAYA & YOJANA JR. COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 55,
+    "choiceCode": "MU7236SGE"
+  },
+  {
+    "id": "fc_6349",
+    "collegeId": null,
+    "collegeName": "SHREE. MANGUBHAI DATTANI VIDYALAYA & YOJANA JR. COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 47,
+    "choiceCode": "MU7236SGE"
+  },
+  {
+    "id": "fc_6350",
+    "collegeId": null,
+    "collegeName": "SHREE. MANGUBHAI DATTANI VIDYALAYA & YOJANA JR. COLLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 68,
+    "choiceCode": "MU7236SGE"
+  },
+  {
+    "id": "fc_6351",
+    "collegeId": null,
+    "collegeName": "SHREE. MANGUBHAI DATTANI VIDYALAYA & YOJANA JR. COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 66.4,
+    "choiceCode": "MU7236SGE"
+  },
+  {
+    "id": "fc_6352",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 79.6,
+    "choiceCode": "MU7241SGE"
+  },
+  {
+    "id": "fc_6353",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 83.2,
+    "choiceCode": "MU7241SGE"
+  },
+  {
+    "id": "fc_6354",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 68.4,
+    "choiceCode": "MU7241SGE"
+  },
+  {
+    "id": "fc_6355",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 72.2,
+    "choiceCode": "MU7241SGE"
+  },
+  {
+    "id": "fc_6356",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 77.6,
+    "choiceCode": "MU7241SGE"
+  },
+  {
+    "id": "fc_6357",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 73.2,
+    "choiceCode": "MU7241SGE"
+  },
+  {
+    "id": "fc_6358",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 68,
+    "choiceCode": "MU7241SGE"
+  },
+  {
+    "id": "fc_6359",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 66,
+    "choiceCode": "MU7241SGE"
+  },
+  {
+    "id": "fc_6360",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 82.4,
+    "choiceCode": "MU7241SGE"
+  },
+  {
+    "id": "fc_6361",
+    "collegeId": null,
+    "collegeName": "SHAILENDRA EDU. SOCIETY'S SECONDARY SCHOOL & JR. COLLEGE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 72.4,
+    "choiceCode": "MU7241SGE"
+  },
+  {
+    "id": "fc_6362",
+    "collegeId": null,
+    "collegeName": "ANANDIBAI DAMODAR KALE VIDYALAYA & JR. COLLEGE OF COMMERCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 66.2,
+    "choiceCode": "MU7262SFE"
+  },
+  {
+    "id": "fc_6363",
+    "collegeId": null,
+    "collegeName": "ANANDIBAI DAMODAR KALE VIDYALAYA & JR. COLLEGE OF COMMERCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 59,
+    "choiceCode": "MU7262SFE"
+  },
+  {
+    "id": "fc_6364",
+    "collegeId": null,
+    "collegeName": "ANANDIBAI DAMODAR KALE VIDYALAYA & JR. COLLEGE OF COMMERCE",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 83,
+    "choiceCode": "MU7262SFE"
+  },
+  {
+    "id": "fc_6365",
+    "collegeId": null,
+    "collegeName": "SAILEE DEGREE COLLEGE (SCIENCE & COMMERCE )AND M.J.JR. COLLEGE OF SCIENCE , GORAI ROAD",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 75,
+    "choiceCode": "MU7266SFE"
+  },
+  {
+    "id": "fc_6366",
+    "collegeId": null,
+    "collegeName": "SAILEE DEGREE COLLEGE (SCIENCE & COMMERCE )AND M.J.JR. COLLEGE OF SCIENCE , GORAI ROAD",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 82.2,
+    "choiceCode": "MU7266SFE"
+  },
+  {
+    "id": "fc_6367",
+    "collegeId": null,
+    "collegeName": "GOKHALE HIGH SCHOOL AND JUNIOR COLLEGE, BORIVALI WEST",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 75.6,
+    "choiceCode": "MU7269SGE"
+  },
+  {
+    "id": "fc_6368",
+    "collegeId": null,
+    "collegeName": "GOKHALE HIGH SCHOOL AND JUNIOR COLLEGE, BORIVALI WEST",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 70.6,
+    "choiceCode": "MU7269SGE"
+  },
+  {
+    "id": "fc_6369",
+    "collegeId": null,
+    "collegeName": "GOKHALE HIGH SCHOOL AND JUNIOR COLLEGE, BORIVALI WEST",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 61.4,
+    "choiceCode": "MU7269SGE"
+  },
+  {
+    "id": "fc_6370",
+    "collegeId": null,
+    "collegeName": "GOKHALE HIGH SCHOOL AND JUNIOR COLLEGE, BORIVALI WEST",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 78.6,
+    "choiceCode": "MU7269SGE"
+  },
+  {
+    "id": "fc_6371",
+    "collegeId": null,
+    "collegeName": "GOKHALE HIGH SCHOOL AND JUNIOR COLLEGE, BORIVALI WEST",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 87.2,
+    "choiceCode": "MU7269SGE"
+  },
+  {
+    "id": "fc_6372",
+    "collegeId": null,
+    "collegeName": "GOKHALE HIGH SCHOOL AND JUNIOR COLLEGE, BORIVALI WEST",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 73,
+    "choiceCode": "MU7269SGE"
+  },
+  {
+    "id": "fc_6373",
+    "collegeId": null,
+    "collegeName": "GOKHALE HIGH SCHOOL AND JUNIOR COLLEGE, BORIVALI WEST",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 67.6,
+    "choiceCode": "MU7269SGE"
+  },
+  {
+    "id": "fc_6374",
+    "collegeId": null,
+    "collegeName": "GOKHALE HIGH SCHOOL AND JUNIOR COLLEGE, BORIVALI WEST",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60.8,
+    "choiceCode": "MU7269SGE"
+  },
+  {
+    "id": "fc_6375",
+    "collegeId": null,
+    "collegeName": "GOKHALE HIGH SCHOOL AND JUNIOR COLLEGE, BORIVALI WEST",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 63.4,
+    "choiceCode": "MU7269SGE"
+  },
+  {
+    "id": "fc_6376",
+    "collegeId": null,
+    "collegeName": "GOKHALE HIGH SCHOOL AND JUNIOR COLLEGE, BORIVALI WEST",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 63.4,
+    "choiceCode": "MU7269SGE"
+  },
+  {
+    "id": "fc_6377",
+    "collegeId": null,
+    "collegeName": "GOKHALE HIGH SCHOOL AND JUNIOR COLLEGE, BORIVALI WEST",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 56.2,
+    "choiceCode": "MU7269SGE"
+  },
+  {
+    "id": "fc_6378",
+    "collegeId": null,
+    "collegeName": "GOKHALE HIGH SCHOOL AND JUNIOR COLLEGE, BORIVALI WEST",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 66.2,
+    "choiceCode": "MU7269SGE"
+  },
+  {
+    "id": "fc_6379",
+    "collegeId": null,
+    "collegeName": "GOKHALE HIGH SCHOOL AND JUNIOR COLLEGE, BORIVALI WEST",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 68,
+    "choiceCode": "MU7269SGE"
+  },
+  {
+    "id": "fc_6380",
+    "collegeId": null,
+    "collegeName": "NALANDA JR COLLEGE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60.6,
+    "choiceCode": "MU7279SFE"
+  },
+  {
+    "id": "fc_6381",
+    "collegeId": null,
+    "collegeName": "NALANDA JR COLLEGE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 63.2,
+    "choiceCode": "MU7279SFE"
+  },
+  {
+    "id": "fc_6382",
+    "collegeId": null,
+    "collegeName": "NIRMAL JR. COLLEGE OF COMMERCE & SCIENCE KANDIVALI WEST",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 56.4,
+    "choiceCode": "MU7282SFE"
+  },
+  {
+    "id": "fc_6383",
+    "collegeId": null,
+    "collegeName": "NIRMAL JR. COLLEGE OF COMMERCE & SCIENCE KANDIVALI WEST",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60,
+    "choiceCode": "MU7282SFE"
+  },
+  {
+    "id": "fc_6384",
+    "collegeId": null,
+    "collegeName": "NIRMAL JR. COLLEGE OF COMMERCE & SCIENCE KANDIVALI WEST",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 57.6,
+    "choiceCode": "MU7282SFE"
+  },
+  {
+    "id": "fc_6385",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 57.2,
+    "choiceCode": "MU7289SFE"
+  },
+  {
+    "id": "fc_6386",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 85.4,
+    "choiceCode": "MU7289SFE"
+  },
+  {
+    "id": "fc_6387",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 64,
+    "choiceCode": "MU7289SFE"
+  },
+  {
+    "id": "fc_6388",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 53.6,
+    "choiceCode": "MU7289SFE"
+  },
+  {
+    "id": "fc_6389",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 63.6,
+    "choiceCode": "MU7289SFE"
+  },
+  {
+    "id": "fc_6390",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 44.8,
+    "choiceCode": "MU7289SFE"
+  },
+  {
+    "id": "fc_6391",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Science",
+    "category": "ST",
+    "year": "2025-26",
+    "cutoff": 64,
+    "choiceCode": "MU7289SFE"
+  },
+  {
+    "id": "fc_6392",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Science",
+    "category": "VJA",
+    "year": "2025-26",
+    "cutoff": 82.6,
+    "choiceCode": "MU7289SFE"
+  },
+  {
+    "id": "fc_6393",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 85.6,
+    "choiceCode": "MU7289SFE"
+  },
+  {
+    "id": "fc_6394",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 56.6,
+    "choiceCode": "MU7289SFE"
+  },
+  {
+    "id": "fc_6395",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Science",
+    "category": "SBC",
+    "year": "2025-26",
+    "cutoff": 75.6,
+    "choiceCode": "MU7289SFE"
+  },
+  {
+    "id": "fc_6396",
+    "collegeId": null,
+    "collegeName": "XAVIER JUNIOR COLLEGE OF ARTS, COMMERCE & KAMLABEN PRAHLADBHAI PATEL JUNIOR COLLEGE OF SCIENCE, C S TECHNICAL COLLEGE BORIWALI WEST",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 82.4,
+    "choiceCode": "MU7289SFE"
+  },
+  {
+    "id": "fc_6397",
+    "collegeId": null,
+    "collegeName": "ST. ROCKS JR. COLLEGE OF COMMERCE & SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 77.6,
+    "choiceCode": "MU7290SNE"
+  },
+  {
+    "id": "fc_6398",
+    "collegeId": null,
+    "collegeName": "ST. ROCKS JR. COLLEGE OF COMMERCE & SCIENCE",
+    "stream": "Science",
+    "category": "NTB",
+    "year": "2025-26",
+    "cutoff": 83,
+    "choiceCode": "MU7290SNE"
+  },
+  {
+    "id": "fc_6399",
+    "collegeId": null,
+    "collegeName": "ST. ROCKS JR. COLLEGE OF COMMERCE & SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 53,
+    "choiceCode": "MU7290SNE"
+  },
+  {
+    "id": "fc_6400",
+    "collegeId": null,
+    "collegeName": "ST. ROCKS JR. COLLEGE OF COMMERCE & SCIENCE",
+    "stream": "Science",
+    "category": "NTD",
+    "year": "2025-26",
+    "cutoff": 85.4,
+    "choiceCode": "MU7290SNE"
+  },
+  {
+    "id": "fc_6401",
+    "collegeId": null,
+    "collegeName": "ST. ROCKS JR. COLLEGE OF COMMERCE & SCIENCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 68,
+    "choiceCode": "MU7290SNE"
+  },
+  {
+    "id": "fc_6402",
+    "collegeId": null,
+    "collegeName": "ST. ROCKS JR. COLLEGE OF COMMERCE & SCIENCE",
+    "stream": "Science",
+    "category": "SEBC",
+    "year": "2025-26",
+    "cutoff": 82.8,
+    "choiceCode": "MU7290SNE"
+  },
+  {
+    "id": "fc_6403",
+    "collegeId": null,
+    "collegeName": "JAI BHAVANI VIDYALAYA & JR. COLLEGE, KANDIVALI (WEST)",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 79.2,
+    "choiceCode": "MU7296SFE"
+  },
+  {
+    "id": "fc_6404",
+    "collegeId": null,
+    "collegeName": "ASMITA GIRLS JUNIOR COLLEGE ARTS COMMERCE SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 60.2,
+    "choiceCode": "MU11863SPE"
+  },
+  {
+    "id": "fc_6405",
+    "collegeId": null,
+    "collegeName": "ASMITA GIRLS JUNIOR COLLEGE ARTS COMMERCE SCIENCE",
+    "stream": "Science",
+    "category": "NTC",
+    "year": "2025-26",
+    "cutoff": 57.4,
+    "choiceCode": "MU11863SPE"
+  },
+  {
+    "id": "fc_6406",
+    "collegeId": null,
+    "collegeName": "ASMITA GIRLS JUNIOR COLLEGE ARTS COMMERCE SCIENCE",
+    "stream": "Science",
+    "category": "OBC",
+    "year": "2025-26",
+    "cutoff": 64.8,
+    "choiceCode": "MU11863SPE"
+  },
+  {
+    "id": "fc_6407",
+    "collegeId": null,
+    "collegeName": "ASMITA GIRLS JUNIOR COLLEGE ARTS COMMERCE SCIENCE",
+    "stream": "Science",
+    "category": "SC",
+    "year": "2025-26",
+    "cutoff": 57,
+    "choiceCode": "MU11863SPE"
   }
 ];

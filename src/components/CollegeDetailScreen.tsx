@@ -339,7 +339,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
                   {activeCutoffRecord ? (
                     <div className="flex items-baseline gap-3 flex-wrap">
                       <span className="text-4xl sm:text-6xl font-black text-[#007DCC] dark:text-[#51dcbc] tracking-tight leading-none">
-                        {activeCutoffRecord.cutoff}%
+                        {activeCutoffRecord.cutoff.toFixed(2)}%
                       </span>
                       <span className="text-xs sm:text-sm font-semibold text-slate-500 dark:text-[#A9B8CA]">
                         ({Math.round((activeCutoffRecord.cutoff / 100) * 500)} / 500)
@@ -379,7 +379,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
                           {item.category}
                         </span>
                         <span className="block text-lg sm:text-xl font-black text-slate-900 dark:text-[#F4F7FB] mt-0.5">
-                          {item.cutoff}%
+                          {item.cutoff.toFixed(2)}%
                         </span>
                       </button>
                     ))}

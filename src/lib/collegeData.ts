@@ -101,7 +101,10 @@ export function getAllColleges(): SearchResultItem[] {
   }
 
   // 1. Existing curated colleges from mock data
-  const curatedColleges = ALL_SEARCH_RESULTS.filter((item) => item.category === 'colleges');
+  const curatedColleges = ALL_SEARCH_RESULTS.filter((item) => item.category === 'colleges').map(item => ({
+    ...item,
+    meta: item.meta ? [...item.meta] : []
+  }));
   const seenSlugs = new Set<string>();
   const seenNormalizedNames = new Set<string>();
 
@@ -124,8 +127,25 @@ export function getAllColleges(): SearchResultItem[] {
   }
   cachedCollegeMap = cutoffGroups;
 
+  // 2.5 Inject streams from FYJC cutoffs into curated colleges' meta arrays
+  curatedColleges.forEach(col => {
+    const slug = col.collegeSlug || col.collegeId;
+    if (slug) {
+      const cutoffs = cachedCollegeMap.get(slug);
+      if (cutoffs) {
+        const streams = Array.from(new Set(cutoffs.map(c => c.stream)));
+        streams.forEach(stream => {
+          if (!col.meta!.some(m => m.toLowerCase().includes(stream.toLowerCase()))) {
+            col.meta!.push(stream);
+          }
+        });
+      }
+    }
+  });
+
   // 3. Transform non-duplicate cutoff colleges into SearchResultItem
   const cutoffColleges: SearchResultItem[] = [];
+  const slugAliases = new Map<string, FyjcCutoff[]>();
 
   for (const [key, group] of cutoffGroups.entries()) {
     const bestName = getBestCollegeName(group);
@@ -135,9 +155,9 @@ export function getAllColleges(): SearchResultItem[] {
       ? bestName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
       : key;
 
-    // Index by slug as well if distinct
+    // Index by slug as well if distinct (store temporarily to avoid mutating the iterating map)
     if (slug !== key && !cachedCollegeMap.has(slug)) {
-      cachedCollegeMap.set(slug, group);
+      slugAliases.set(slug, group);
     }
 
     // Skip if already in curated list
@@ -179,6 +199,11 @@ export function getAllColleges(): SearchResultItem[] {
       collegeId: slug,
       collegeSlug: slug,
     });
+  }
+
+  // Merge the generated slug aliases into the cache now that iteration is done
+  for (const [slug, group] of slugAliases.entries()) {
+    cachedCollegeMap.set(slug, group);
   }
 
   // Combine curated colleges first, followed by all cutoff colleges
