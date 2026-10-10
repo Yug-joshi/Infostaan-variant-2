@@ -311,7 +311,7 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
         });
       } else {
         searchParams.forEach((value, key) => {
-          if (value) initial[key] = value;
+          if (value && key !== 'percentage') initial[key] = value;
         });
       }
       setDraftFilters(initial);
@@ -416,6 +416,7 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
       // Sync draftFilters to searchParams without altering filtering logic
       const next = new URLSearchParams();
       Object.entries(draftFilters).forEach(([key, val]) => {
+        if (key === 'percentage') return; // Do not preserve hidden percentage param
         if (val && !val.startsWith('All') && key !== 'all') {
           next.set(key, val);
         }
