@@ -29,28 +29,35 @@ export function formatCollegeTitle(name: string): string {
     .replace(/^(.)/, (c) => c.toUpperCase());
 }
 
-const CURATED_COLLEGE_CODES: Record<string, string[]> = {
+export const CURATED_COLLEGE_CODES: Record<string, string[]> = {
   'mithibai': ['MU7133'],
   'hinduja': ['MU6746'],
   'podar': ['MU6833'],
   'jai-hind': ['MU6727'],
   'xaviers': ['MU6724'],
-  'sies-college': ['MU6831'],
+  'sies-college': ['MU6831', 'MU6830'],
   'bhavans-college': ['MU7125'],
   'dahanukar-college': ['MU7152'],
-  'somaiya-college': ['MU6917'],
+  'somaiya-college': ['MU6917', 'MU6916', 'MU6891'],
+  'somaiya': ['MU6917', 'MU6916', 'MU6891'],
   'sophia-college': ['MU6750'],
   'wilson-college': ['MU6743'],
   'ruparel-college': ['MU6768'],
+  'ruparel': ['MU6768'],
   'rizvi-college': ['MU7061'],
   'vaze-college': ['MU7024'],
-  'hr-college': ['MU6728'],
-  'nm-college': ['MU7134'],
+  'hr-college': ['MU6719', 'MU6728'],
+  'nm-college': ['MU7123', 'MU7134'],
+  'md-college': ['MU6798'],
+  'kc-college': ['MU6718'],
+  'ruia': ['MU6832'],
 };
 
 const codeToCurated = new Map<string, string>();
 Object.entries(CURATED_COLLEGE_CODES).forEach(([id, codes]) => {
-  codes.forEach((c) => codeToCurated.set(c, id));
+  // Normalize alias target to canonical id used in mockData
+  const canonicalId = id === 'ruparel' ? 'ruparel-college' : id === 'somaiya' ? 'somaiya-college' : id;
+  codes.forEach((c) => codeToCurated.set(c, canonicalId));
 });
 
 /**
@@ -58,12 +65,24 @@ Object.entries(CURATED_COLLEGE_CODES).forEach(([id, codes]) => {
  * produces strictly ONE card regardless of how many streams it offers.
  */
 export function getCollegeGroupingKey(c: FyjcCutoff): string {
-  if (c.collegeId) return c.collegeId.toLowerCase();
+  // 1. Check choice code prefix against curated colleges
   const m = c.choiceCode ? c.choiceCode.match(/^(MU\d+)[A-Z]/i) : null;
   if (m) {
     const code = m[1].toUpperCase();
     if (codeToCurated.has(code)) return codeToCurated.get(code)!;
-    return code;
+  }
+
+  // 2. Normalize existing collegeId field
+  if (c.collegeId) {
+    const raw = c.collegeId.toLowerCase();
+    if (raw === 'ruparel') return 'ruparel-college';
+    if (raw === 'somaiya') return 'somaiya-college';
+    return raw;
+  }
+
+  // 3. Fallback to choice code or cleaned name
+  if (m) {
+    return m[1].toUpperCase();
   }
   return c.collegeName.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
@@ -88,7 +107,29 @@ export function getCollegeCutoffGroup(slug: string): FyjcCutoff[] | undefined {
   if (!cachedCollegeMap) {
     getAllColleges(); // Populates cachedCollegeMap
   }
-  return cachedCollegeMap?.get(slug);
+  if (!slug) return undefined;
+  const s = slug.toLowerCase();
+
+  // 1. Direct key match in cache
+  if (cachedCollegeMap?.has(s)) return cachedCollegeMap.get(s);
+
+  // 2. Suffix alias matching (e.g. ruparel <-> ruparel-college)
+  const unhyphen = s.replace(/-college$/, '');
+  if (cachedCollegeMap?.has(unhyphen)) return cachedCollegeMap.get(unhyphen);
+  const withCollege = `${s}-college`;
+  if (cachedCollegeMap?.has(withCollege)) return cachedCollegeMap.get(withCollege);
+
+  // 3. Curated code lookup fallback
+  const codes = CURATED_COLLEGE_CODES[s] || CURATED_COLLEGE_CODES[unhyphen];
+  if (codes) {
+    const matches = FYJC_CUTOFFS.filter(c => {
+      const prefix = c.choiceCode?.match(/^(MU\d+)/i)?.[1]?.toUpperCase();
+      return prefix && codes.includes(prefix);
+    });
+    if (matches.length > 0) return matches;
+  }
+
+  return undefined;
 }
 
 /**
@@ -160,10 +201,13 @@ export function getAllColleges(): SearchResultItem[] {
       slugAliases.set(slug, group);
     }
 
-    // Skip if already in curated list
+    // Skip if already added
     if (seenSlugs.has(key.toLowerCase()) || seenSlugs.has(slug) || seenNormalizedNames.has(normName)) {
       continue;
     }
+    seenSlugs.add(key.toLowerCase());
+    seenSlugs.add(slug);
+    seenNormalizedNames.add(normName);
 
     const streams = Array.from(new Set(group.map((c) => c.stream)));
     const cutoffs = group.map((c) => c.cutoff).filter((n) => typeof n === 'number' && !isNaN(n));
@@ -183,13 +227,13 @@ export function getAllColleges(): SearchResultItem[] {
       slug: slug,
       category: 'colleges',
       badgeCategory: streams.length > 1 ? 'Junior College' : `${streams[0]} Jr. College`,
-      badgeSub: `${region}, Mumbai`,
+      badgeSub: region !== 'All Mumbai' ? `${region}, Mumbai` : 'Mumbai Region',
       title: title,
       subtitle: `Offered: ${streamText}${cutoffSummary ? ` • Cutoff: ${cutoffSummary}` : ''}`,
       meta: [
         streamText,
         cutoffSummary ? `FYJC Cutoff: ${cutoffSummary}` : 'FYJC Affiliated',
-        `Region: ${region}`,
+        ...(region !== 'All Mumbai' ? [`Region: ${region}`] : []),
       ],
       whyRelevant: cutoffSummary
         ? `Official FYJC cutoff threshold: ${cutoffSummary} (${group[0]?.year || '2025-26'})`

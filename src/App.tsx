@@ -28,7 +28,29 @@ export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
   const [selectedCollegeId, setSelectedCollegeId] = useState<string>('mithibai');
-  const [savedItems, setSavedItems] = useState<ShortlistItem[]>(INITIAL_SAVED_ITEMS);
+  const [savedItems, setSavedItems] = useState<ShortlistItem[]>(() => {
+    if (typeof window !== 'undefined') {
+      try {
+        const saved = localStorage.getItem('infostaan_saved_items');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed)) return parsed;
+        }
+      } catch (e) {
+        console.error('Failed to parse saved items from localStorage', e);
+      }
+    }
+    return INITIAL_SAVED_ITEMS;
+  });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('infostaan_saved_items', JSON.stringify(savedItems));
+    } catch (e) {
+      console.error('Failed to save items to localStorage', e);
+    }
+  }, [savedItems]);
+
   const allSavedItemIds = useMemo(() => savedItems.flatMap((i) => [i.id, i.collegeId || '']).filter(Boolean), [savedItems]);
   const [isCompareOpen, setIsCompareOpen] = useState<boolean>(false);
   const [compareColleges, setCompareColleges] = useState<{ col1: string; col2: string }>({
@@ -428,10 +450,11 @@ export default function App() {
             />
           } />
 
-          {/* Legacy route fallbacks */}
+          {/* Legacy and unsupported route fallbacks */}
           <Route path="/guidance" element={<Navigate to="/help-me-decide" replace />} />
           <Route path="/connect" element={<Navigate to="/dashboard" replace />} />
           <Route path="/explore" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
 

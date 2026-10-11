@@ -102,7 +102,7 @@ const CATEGORY_CONFIGS: Record<DrawerCategoryType, CategoryMeta> = {
     quickFilterParam: 'level',
     quickFilterOptions: [
       { label: 'All Levels', value: 'All Levels' },
-      { label: 'Undergraduate', value: 'Undergraduate Degree (B.Com/BMS/BAF)' },
+      { label: 'Undergraduate', value: 'Undergraduate Degree' },
       { label: 'Professional', value: 'Professional Qualification (CA/CS/CMA)' },
       { label: 'Diploma', value: 'Diploma & Certifications' },
     ],
@@ -125,7 +125,7 @@ const CATEGORY_CONFIGS: Record<DrawerCategoryType, CategoryMeta> = {
         desc: 'Degree type or professional certification',
         options: [
           'All Levels',
-          'Undergraduate Degree (B.Com/BMS/BAF)',
+          'Undergraduate Degree',
           'Professional Qualification (CA/CS/CMA)',
           'Diploma & Certifications',
         ],
@@ -307,7 +307,7 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
       const initial: Record<string, string> = {};
       if (activeFilters) {
         Object.entries(activeFilters).forEach(([k, v]) => {
-          if (v) initial[k] = v;
+          if (v) initial[k] = String(v);
         });
       } else {
         searchParams.forEach((value, key) => {
@@ -376,6 +376,10 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
         delete next[fieldId];
       } else {
         next[fieldId] = value;
+        // Incompatible filter safeguard: Data Science & IT does not have CA/CS/CMA professional qualifications
+        if (fieldId === 'stream' && value === 'Data Science & IT' && next.level?.includes('Professional')) {
+          delete next.level;
+        }
       }
       return next;
     });
@@ -417,8 +421,9 @@ export const ResultFilterDrawer: React.FC<ResultFilterDrawerProps> = ({
       const next = new URLSearchParams();
       Object.entries(draftFilters).forEach(([key, val]) => {
         if (key === 'percentage') return; // Do not preserve hidden percentage param
-        if (val && !val.startsWith('All') && key !== 'all') {
-          next.set(key, val);
+        const strVal = String(val ?? '');
+        if (strVal && !strVal.startsWith('All') && key !== 'all') {
+          next.set(key, strVal);
         }
       });
       setSearchParams(next, { replace: true });

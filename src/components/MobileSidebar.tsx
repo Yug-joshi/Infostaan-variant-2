@@ -246,21 +246,6 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                   </span>
                 )}
               </button>
-
-              <button
-                type="button"
-                onClick={() => navigateAndClose('/')}
-                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/'
-                  ? 'bg-[#007DCC] text-white shadow-xs'
-                  : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
-                  }`}
-              >
-                <div className="flex items-center gap-3">
-                  <Home className="w-4 h-4 shrink-0" />
-                  <span>Home</span>
-                </div>
-                <ArrowRight className="w-4 h-4 opacity-50" />
-              </button>
             </div>
           </div>
 

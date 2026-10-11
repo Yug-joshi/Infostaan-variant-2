@@ -4,6 +4,8 @@ import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
 import { PercentageScale } from './PercentageScale';
 import { getCategoryAccent } from '../lib/categoryAccents';
 import { useTheme } from '../context/ThemeContext';
+import { getCollegeRegion } from '../lib/categoryFilters';
+import { getCollegeGroupingKey } from '../lib/collegeData';
 
 interface CutoffModalProps {
   isOpen: boolean;
@@ -110,66 +112,6 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
     }
   };
 
-  // Region mapper for cutoff records
-  const getCollegeRegion = (collegeName: string): string => {
-    const name = collegeName.toUpperCase();
-    if (
-      name.includes("XAVIER") ||
-      name.includes("H.R.") ||
-      name.includes("JAI HIND") ||
-      name.includes("HINDUJA") ||
-      name.includes("FORT") ||
-      name.includes("CHURCHGATE") ||
-      name.includes("CHARNI ROAD") ||
-      name.includes("MARINE") ||
-      name.includes("SYDENHAM") ||
-      name.includes("ELPHINSTONE") ||
-      name.includes("WILSON")
-    ) {
-      return 'South Mumbai';
-    }
-    if (
-      name.includes("MITHIBAI") ||
-      name.includes("N.M.") ||
-      name.includes("NARSEE") ||
-      name.includes("SVKM") ||
-      name.includes("ANDHERI") ||
-      name.includes("PARLE") ||
-      name.includes("MALAD") ||
-      name.includes("BORIVALI") ||
-      name.includes("BANDRA") ||
-      name.includes("KANDIVALI") ||
-      name.includes("GOREGAON") ||
-      name.includes("SANTACRUZ") ||
-      name.includes("BHAVAN")
-    ) {
-      return 'Western Suburbs';
-    }
-    if (
-      name.includes("PODAR") ||
-      name.includes("MATUNGA") ||
-      name.includes("DADAR") ||
-      name.includes("SIES") ||
-      name.includes("RUPAREL") ||
-      name.includes("KHALSA") ||
-      name.includes("VIDYALANKAR")
-    ) {
-      return 'Central Suburbs';
-    }
-    if (
-      name.includes("GHATKOPAR") ||
-      name.includes("MULUND") ||
-      name.includes("BHANDUP") ||
-      name.includes("VIKHROLI") ||
-      name.includes("SOMAIYA")
-    ) {
-      return 'Eastern Suburbs';
-    }
-    if (name.includes("CHEMBUR") || name.includes("VASHI") || name.includes("BELAPUR")) {
-      return 'Harbour / Central-East';
-    }
-    return 'All Mumbai';
-  };
 
   // Filter colleges based on APPLIED filters
   const filteredColleges = useMemo(() => {
@@ -577,7 +519,7 @@ export const CutoffModal: React.FC<CutoffModalProps> = ({
               ) : (
                 <div className="flex flex-col gap-3.5">
                   {displayedColleges.map((c, idx) => {
-                    const slug = c.collegeId || 'mithibai';
+                    const slug = c.collegeId || getCollegeGroupingKey(c);
                     const region = getCollegeRegion(c.collegeName);
 
                     return (

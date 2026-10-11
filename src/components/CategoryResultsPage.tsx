@@ -21,7 +21,7 @@ import {
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { SearchResultItem } from '../types';
 import { searchInfostaan } from '../lib/searchEngine';
-import { matchItemRegion, applyStreamFilter, filterClasses, parseMultiValue } from '../lib/categoryFilters';
+import { matchItemRegion, applyStreamFilter, applyLevelFilter, filterClasses, parseMultiValue } from '../lib/categoryFilters';
 import { FilterCategoryType } from './CategoryFilterModal';
 import { getCategoryAccent } from '../lib/categoryAccents';
 import { ResultFilterDrawer } from './ResultFilterDrawer';
@@ -140,7 +140,13 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
   const activeChips: FilterChip[] = useMemo(() => {
     const chips: FilterChip[] = [];
     const add = (label: string | null, param: string) => {
-      if (label && !label.startsWith('All')) chips.push({ label, param });
+      if (label && !label.startsWith('All') && label !== 'All Levels' && label !== 'All Fields') {
+        let displayLabel = label;
+        if (param === 'level' && label.startsWith('Undergraduate Degree')) {
+          displayLabel = 'Undergraduate Degree';
+        }
+        chips.push({ label: displayLabel, param });
+      }
     };
     add(streamParam, 'stream');
     add(fieldParam, 'field');
@@ -214,17 +220,14 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
       const streamFilter =
         streamParam || fieldParam || interestParam || industryParam || specializationParam;
       raw = applyStreamFilter(raw, streamFilter);
+      raw = applyLevelFilter(raw, levelParam);
     }
 
     let finalResults = raw;
 
     // -- Sorting logic --
     if (sortParam) {
-      if (sortParam === 'distance_asc' && (category === 'classes' || category === 'colleges')) {
-        finalResults.sort((a, b) => (a.badgeSub?.length || 0) - (b.badgeSub?.length || 0));
-      } else if (sortParam === 'distance_desc' && (category === 'classes' || category === 'colleges')) {
-        finalResults.sort((a, b) => (b.badgeSub?.length || 0) - (a.badgeSub?.length || 0));
-      } else if (sortParam === 'cutoff_desc' && category === 'colleges') {
+      if (sortParam === 'cutoff_desc' && category === 'colleges') {
         const getCutoffNum = (item: SearchResultItem): number => {
           const m = item.subtitle?.match(/(\d+(\.\d+)?)\s*%/);
           return m ? parseFloat(m[1]) : 0;
@@ -235,7 +238,15 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
           const m = item.subtitle?.match(/(\d+(\.\d+)?)\s*%/);
           return m ? parseFloat(m[1]) : 0;
         };
-        finalResults.sort((a, b) => getCutoffNum(a) - getCutoffNum(b) || a.title.localeCompare(b.title));
+        finalResults.sort((a, b) => {
+          const aNum = getCutoffNum(a);
+          const bNum = getCutoffNum(b);
+          if (aNum === 0 && bNum > 0) return 1;
+          if (bNum === 0 && aNum > 0) return -1;
+          return aNum - bNum || a.title.localeCompare(b.title);
+        });
+      } else if (sortParam === 'name_asc') {
+        finalResults.sort((a, b) => a.title.localeCompare(b.title));
       }
     }
 
@@ -381,17 +392,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                     onChange={(e) => {
                       const val = e.target.value;
                       const next = new URLSearchParams(searchParams);
-                      if (val.includes('distance')) {
-                        const loc = window.prompt("Enter your current Mumbai location (e.g., Borivali) to calculate distance:");
-                        if (loc) {
-                          next.set('sort', val);
-                          next.set('userLoc', loc);
-                          setSearchParams(next, { replace: true });
-                        } else {
-                          // Reset if cancelled
-                          e.target.value = sortParam || 'default';
-                        }
-                      } else if (val === 'default') {
+                      if (val === 'default') {
                         next.delete('sort');
                         next.delete('userLoc');
                         setSearchParams(next, { replace: true });
@@ -408,12 +409,7 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                         <option value="cutoff_asc">Percentage: Low to High</option>
                       </>
                     )}
-                    {(category === 'classes' || category === 'colleges') && (
-                      <>
-                        <option value="distance_asc">Distance: Low to High</option>
-                        <option value="distance_desc">Distance: High to Low</option>
-                      </>
-                    )}
+                    <option value="name_asc">Alphabetical: A to Z</option>
                   </select>
                 )}
                 <button
@@ -505,7 +501,11 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                   No matching results found
                 </p>
                 <p className="text-xs text-slate-500 dark:text-[#71839A] mb-5">
-                  Try adjusting your filters or selecting a broader region.
+                  {category === 'courses'
+                    ? 'No courses found matching the selected field of study and qualification level. Try selecting All Levels or adjusting your filters.'
+                    : category === 'careers'
+                      ? 'No career pathways found matching your filters. Try selecting All Industries or Milestones.'
+                      : 'Try adjusting your filters or selecting a broader region.'}
                 </p>
                 <div className="flex flex-wrap items-center justify-center gap-3">
                   <button

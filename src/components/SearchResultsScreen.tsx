@@ -7,7 +7,7 @@ import { PencilLoader } from './PencilLoader';
 import { SkeletonResultCards } from './SkeletonResultCards';
 import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
 import { FilterCategoryType } from './CategoryFilterModal';
-import { getCollegeRegion, matchItemRegion, applyStreamFilter, parseMultiValue } from '../lib/categoryFilters';
+import { getCollegeRegion, matchItemRegion, applyStreamFilter, applyLevelFilter, parseMultiValue } from '../lib/categoryFilters';
 import { formatCollegeTitle, getCollegeGroupingKey } from '../lib/collegeData';
 import { ResultFilterDrawer, DrawerCategoryType } from './ResultFilterDrawer';
 
@@ -262,15 +262,26 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 
     const streamFilter = streamParam || fieldParam || interestParam || industryParam || specializationParam;
     raw = applyStreamFilter(raw, streamFilter);
+    const effectiveLevel = levelParam || educationLevelParam;
+    raw = applyLevelFilter(raw, effectiveLevel);
 
     if (sortParam) {
-      if (sortParam === 'distance_asc' && (activeCategory === 'classes' || activeCategory === 'colleges' || activeCategory === 'all')) {
-        raw.sort((a, b) => (a.badgeSub?.length || 0) - (b.badgeSub?.length || 0));
-      } else if (sortParam === 'distance_desc' && (activeCategory === 'classes' || activeCategory === 'colleges' || activeCategory === 'all')) {
-        raw.sort((a, b) => (b.badgeSub?.length || 0) - (a.badgeSub?.length || 0));
-      } else if (sortParam === 'cutoff_desc' && (activeCategory === 'colleges' || activeCategory === 'all')) {
-        raw.sort((a, b) => b.title.localeCompare(a.title));
-      } else if (sortParam === 'cutoff_asc' && (activeCategory === 'colleges' || activeCategory === 'all')) {
+      const getCutoffNum = (item: SearchResultItem): number => {
+        const m = (item.subtitle || item.whyRelevant || item.badgeSub || '').match(/(\d+(\.\d+)?)\s*%/);
+        return m ? parseFloat(m[1]) : 0;
+      };
+
+      if (sortParam === 'cutoff_desc') {
+        raw.sort((a, b) => getCutoffNum(b) - getCutoffNum(a) || a.title.localeCompare(b.title));
+      } else if (sortParam === 'cutoff_asc') {
+        raw.sort((a, b) => {
+          const aNum = getCutoffNum(a);
+          const bNum = getCutoffNum(b);
+          if (aNum === 0 && bNum > 0) return 1;
+          if (bNum === 0 && aNum > 0) return -1;
+          return aNum - bNum || a.title.localeCompare(b.title);
+        });
+      } else if (sortParam === 'name_asc') {
         raw.sort((a, b) => a.title.localeCompare(b.title));
       }
     }
@@ -442,16 +453,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                     onChange={(e) => {
                       const val = e.target.value;
                       const next = new URLSearchParams(searchParams);
-                      if (val.includes('distance')) {
-                        const loc = window.prompt("Enter your current Mumbai location (e.g., Borivali) to calculate distance:");
-                        if (loc) {
-                          next.set('sort', val);
-                          next.set('userLoc', loc);
-                          setSearchParams(next, { replace: true });
-                        } else {
-                          e.target.value = sortParam || 'default';
-                        }
-                      } else if (val === 'default') {
+                      if (val === 'default') {
                         next.delete('sort');
                         next.delete('userLoc');
                         setSearchParams(next, { replace: true });
@@ -468,12 +470,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         <option value="cutoff_asc">Percentage: Low to High</option>
                       </>
                     )}
-                    {(activeCategory === 'classes' || activeCategory === 'colleges' || activeCategory === 'all') && (
-                      <>
-                        <option value="distance_asc">Distance: Low to High</option>
-                        <option value="distance_desc">Distance: High to Low</option>
-                      </>
-                    )}
+                    <option value="name_asc">Alphabetical: A to Z</option>
                   </select>
                 )}
                 <button

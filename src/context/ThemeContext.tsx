@@ -29,8 +29,8 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     } else {
       root.classList.remove('dark');
       root.setAttribute('data-theme', 'light');
-      document.body.style.backgroundColor = '#F8FAFC';
-      document.body.style.color = '#0F172A';
+      document.body.style.backgroundColor = '#FAF9F6';
+      document.body.style.color = '#111827';
     }
     localStorage.setItem('infostaan_theme', theme);
   }, [theme]);

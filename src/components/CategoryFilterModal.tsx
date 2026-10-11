@@ -56,7 +56,7 @@ const CATEGORY_CONFIGS = {
         id: 'level',
         title: 'Qualification Level',
         desc: 'Select degree type or professional certification.',
-        options: ['All Levels', 'Undergraduate Degree (B.Com/BMS/BAF)', 'Professional Qualification (CA/CS/CMA)', 'Diploma & Certifications'],
+        options: ['All Levels', 'Undergraduate Degree', 'Professional Qualification (CA/CS/CMA)', 'Diploma & Certifications'],
       },
       {
         id: 'duration',
@@ -160,10 +160,17 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
       return;
     }
 
-    setSelectedValues((prev) => ({
-      ...prev,
-      [currentStep.id]: value,
-    }));
+    setSelectedValues((prev) => {
+      const next = {
+        ...prev,
+        [currentStep.id]: value,
+      };
+      // Prevent retaining incompatible qualification level when switching to Data Science & IT
+      if (currentStep.id === 'stream' && value === 'Data Science & IT' && next.level?.includes('Professional')) {
+        delete next.level;
+      }
+      return next;
+    });
   };
 
   const handleNext = () => {

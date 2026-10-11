@@ -180,11 +180,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (query.trim()) {
-      onSearch(query.trim());
-    } else {
-      onSearch('finance');
-    }
+    onSearch(query.trim());
   };
 
   return (
@@ -245,7 +241,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
         {/* Main Headline */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB] mb-6 leading-tight">
-          What are you looking for?
+          What are you <span className="marker-highlight">looking for</span>?
         </h1>
 
         {/* Search */}

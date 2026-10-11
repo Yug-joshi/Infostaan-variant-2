@@ -41,3 +41,21 @@
     transform: translateX(100%);
   }
 }
+
+.marker-highlight {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.marker-highlight::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  bottom: 4px;
+  height: 38%;
+  background: #FFD026;
+  opacity: 0.75;
+  border-radius: 3px;
+  z-index: -1;
+}

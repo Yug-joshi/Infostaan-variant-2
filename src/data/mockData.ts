@@ -554,12 +554,21 @@ export const getCollegeDetails = (id: string): CollegeDetail => {
     };
   }
 
-  // 2. Check in FYJC_CUTOFFS (from Excel uploads)
+  // 2. Check in FYJC_CUTOFFS
   const normId = id.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-  const matchingFyjc = FYJC_CUTOFFS.filter(c =>
-    (c.collegeId && c.collegeId.toLowerCase() === id.toLowerCase()) ||
-    c.collegeName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === normId
-  );
+  const unhyphenId = normId.replace(/-college$/, '');
+  const matchingFyjc = FYJC_CUTOFFS.filter(c => {
+    if (c.collegeId) {
+      const cid = c.collegeId.toLowerCase();
+      if (cid === id.toLowerCase() || cid === normId || cid === unhyphenId || `${cid}-college` === normId) {
+        return true;
+      }
+    }
+    const cSlug = c.collegeName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    if (cSlug === normId || cSlug === unhyphenId) return true;
+    if (c.choiceCode && c.choiceCode.toLowerCase().includes(normId)) return true;
+    return false;
+  });
 
   if (matchingFyjc.length > 0) {
     const primary = matchingFyjc[0];
@@ -713,6 +722,9 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Autonomous & MU Curriculums'],
     tagColor: 'secondary',
     actionLabel: 'View course details',
+    discipline: ['Commerce & Accounting', 'Finance & Markets'],
+    qualificationLevel: 'Undergraduate Degree',
+    courseFamily: 'BAF',
   },
   /* {
     id: 'res-5',
@@ -730,7 +742,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     id: 'res-6',
     category: 'colleges',
     badgeCategory: 'COLLEGE',
-    badgeSub: 'Vile Parle West, Mumbai',
+    badgeSub: 'Vile Parle West, Western Suburbs',
     title: 'NMIMS — Anil Surendra Modi School of Commerce',
     subtitle: 'Offered: BBA, B.Com (Hons), B.Sc Finance • Approx. ₹3,20,000/yr',
     whyRelevant: 'High-octane corporate finance training, Bloomberg terminal labs, and Tier-1 consulting placements.',
@@ -762,6 +774,9 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Specializations in Finance, Marketing & HR'],
     tagColor: 'secondary',
     actionLabel: 'View course details',
+    discipline: ['Management & Leadership'],
+    qualificationLevel: 'Undergraduate Degree',
+    courseFamily: 'BMS',
   },
   {
     id: 'res-9',
@@ -773,6 +788,9 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Industry-aligned curriculum'],
     tagColor: 'secondary',
     actionLabel: 'View course details',
+    discipline: ['Finance & Markets'],
+    qualificationLevel: 'Undergraduate Degree',
+    courseFamily: 'BFM',
   },
   {
     id: 'res-10',
@@ -826,7 +844,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     id: 'res-14',
     category: 'colleges',
     badgeCategory: 'COLLEGE',
-    badgeSub: 'Matunga Central, Mumbai',
+    badgeSub: 'Matunga Central, Central Suburbs',
     title: 'R.A. Podar College of Commerce & Economics',
     subtitle: 'Offered: B.Com, BMS, BAF, BFM, BAS (Actuarial) • Approx. ₹18,000–₹38,000/yr',
     whyRelevant: 'Elite commerce institution for Central and Harbour commuters with premier CA and actuarial track records.',
@@ -839,7 +857,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     id: 'res-15',
     category: 'colleges',
     badgeCategory: 'COLLEGE',
-    badgeSub: 'Churchgate, Marine Drive',
+    badgeSub: 'Churchgate, South Mumbai',
     title: 'Jai Hind College (Autonomous)',
     subtitle: 'Offered: BMS, BAF, BFM, BAMMC, B.Sc Data Science • Approx. ₹35,000–₹65,000/yr',
     whyRelevant: 'Prestigious South Mumbai institution renowned for corporate placements, data science, and business management.',
@@ -852,7 +870,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     id: 'res-16',
     category: 'colleges',
     badgeCategory: 'COLLEGE',
-    badgeSub: 'Vile Parle West, Mumbai',
+    badgeSub: 'Vile Parle West, Western Suburbs',
     title: 'Narsee Monjee College of Commerce & Economics',
     subtitle: 'Offered: B.Com, BAF, BFM, BMS, B.Sc IT • Approx. ₹30,000–₹52,000/yr',
     whyRelevant: 'SVKM flagship commerce institution with the highest academic board cutoffs and premier Big 4 recruitments.',
@@ -1008,7 +1026,7 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     id: 'res-col-12',
     category: 'colleges',
     badgeCategory: 'COLLEGE',
-    badgeSub: 'Mulund East, Central Suburbs',
+    badgeSub: 'Mulund East, Eastern Suburbs',
     title: 'V.G. Vaze College of Arts, Science & Commerce',
     subtitle: 'Offered: B.Com, BAF, BMS, B.Sc IT • Approx. ₹18,000–₹40,000/yr',
     whyRelevant: 'Top-ranked autonomous college in Mulund East serving Bhandup, Mulund and Thane commuters.',
@@ -1027,6 +1045,9 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Available at Hinduja, Mithibai & Podar'],
     tagColor: 'secondary',
     actionLabel: 'View course details',
+    discipline: ['Finance & Markets', 'Commerce & Accounting'],
+    qualificationLevel: 'Undergraduate Degree',
+    courseFamily: 'BBI',
   },
   {
     id: 'res-18',
@@ -1038,6 +1059,9 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Top rated at Jai Hind, Mithibai & St. Xavier’s'],
     tagColor: 'secondary',
     actionLabel: 'View course details',
+    discipline: ['Media & Communication', 'Arts'],
+    qualificationLevel: 'Undergraduate Degree',
+    courseFamily: 'BAMMC',
   },
   {
     id: 'res-19',
@@ -1049,6 +1073,9 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Offered at Jai Hind College & Mumbai Tech Hubs'],
     tagColor: 'secondary',
     actionLabel: 'View course details',
+    discipline: ['Data Science & IT'],
+    qualificationLevel: 'Undergraduate Degree',
+    courseFamily: 'B.Sc Data Science',
   },
   {
     id: 'res-20',
@@ -1060,6 +1087,9 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     meta: ['Available at Hinduja, Mithibai & NM College'],
     tagColor: 'secondary',
     actionLabel: 'View course details',
+    discipline: ['Data Science & IT'],
+    qualificationLevel: 'Undergraduate Degree',
+    courseFamily: 'B.Sc IT',
   },
   /* {
     id: 'res-21',

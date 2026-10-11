@@ -17,6 +17,9 @@ export interface SearchResultItem {
   collegeSlug?: string;
   sourceFile?: string;
   slug?: string;
+  discipline?: string[];
+  qualificationLevel?: string;
+  courseFamily?: string;
 }
 
 export interface CollegeDetail {
