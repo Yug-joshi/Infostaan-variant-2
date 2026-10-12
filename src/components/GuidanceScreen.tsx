@@ -19,6 +19,7 @@ import {
   MapPin,
 } from 'lucide-react';
 import { PencilLoader } from './PencilLoader';
+import { MascotArt } from './MascotArt';
 import gsap from 'gsap';
 
 interface GuidanceScreenProps {
@@ -201,9 +202,14 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
           {/* STEP 1: Academic Stage */}
           {currentStep === 1 && (
             <div className="w-full mb-8">
-              <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
-                What is your current academic stage?
-              </h1>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight max-w-2xl">
+                  What is your current academic stage?
+                </h1>
+                <div className="w-28 sm:w-32 shrink-0">
+                  <MascotArt variant="thinking" className="w-full" alt="InfoBuddy mascot asking a quick course-planning question" />
+                </div>
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                 {[
                   {
@@ -481,14 +487,19 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
           {/* STEP 5: RECOMMENDATION RESULTS */}
           {!isCalculating && currentStep === 5 && (
             <div className="w-full text-left animate-fade-in">
-              <div className="mb-8">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-[#51dcbc] text-xs font-bold uppercase tracking-wider mb-2">
-                  <CheckCircle2 className="w-4 h-4" />
-                  <span>Personalized Recommendation Ready</span>
-                </span>
-                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight">
-                  Recommended Colleges For You
-                </h1>
+              <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+                <div>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-[#51dcbc] text-xs font-bold uppercase tracking-wider mb-2">
+                    <CheckCircle2 className="w-4 h-4" />
+                    <span>Personalized Recommendation Ready</span>
+                  </span>
+                  <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight">
+                    Recommended Colleges For You
+                  </h1>
+                </div>
+                <div className="w-24 sm:w-28 shrink-0 self-center sm:self-end">
+                  <MascotArt variant="idea" className="w-full" alt="InfoBuddy mascot sharing a recommendation idea" />
+                </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">

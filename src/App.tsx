@@ -23,6 +23,7 @@ import { PencilLoader } from './components/PencilLoader';
 import { Check } from 'lucide-react';
 import logoImg from './assets/logo.png';
 import gsap from 'gsap';
+import { MascotArt } from './components/MascotArt';
 import ClassDetailScreen from './components/ClassDetailScreen';
 export default function App() {
   const navigate = useNavigate();
@@ -63,7 +64,7 @@ export default function App() {
   const [isCategoryFilterOpen, setIsCategoryFilterOpen] = useState<boolean>(false);
   const [activeCategoryFilter, setActiveCategoryFilter] = useState<FilterCategoryType>('colleges');
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState<boolean>(false);
-  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [toastState, setToastState] = useState<{ message: string; kind: 'success' | 'info' } | null>(null);
   const [isBooting, setIsBooting] = useState<boolean>(true);
 
   const handleOpenCategoryFilter = (cat: FilterCategoryType) => {
@@ -141,10 +142,10 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  const showToast = (message: string) => {
-    setToastMessage(message);
+  const showToast = (message: string, kind: 'success' | 'info' = 'info') => {
+    setToastState({ message, kind });
     setTimeout(() => {
-      setToastMessage(null);
+      setToastState(null);
     }, 2800);
   };
 
@@ -224,7 +225,7 @@ export default function App() {
         collegeId: id,
       };
       setSavedItems([newItem, ...savedItems]);
-      showToast('Saved to shortlist!');
+      showToast('Saved to shortlist!', 'success');
     }
   };
 
@@ -258,7 +259,7 @@ export default function App() {
         collegeId: itemCollegeId,
       };
       setSavedItems([newItem, ...savedItems]);
-      showToast('Saved to shortlist!');
+      showToast('Saved to shortlist!', 'success');
     }
   };
 
@@ -315,10 +316,15 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-[#070D18] text-slate-900 dark:text-[#F4F7FB] flex flex-col font-sans transition-colors duration-200 selection:bg-[#007DCC]/30 selection:text-[#007DCC]">
       {/* Toast Notification */}
-      {toastMessage && (
-        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-[#1a202b] border border-slate-700 dark:border-[#007DCC]/40 text-sm text-white dark:text-[#F4F7FB] shadow-xl flex items-center gap-2 animate-in fade-in slide-in-from-bottom-2 duration-200">
-          <Check className="w-4 h-4 text-emerald-400 dark:text-[#51dcbc]" />
-          <span>{toastMessage}</span>
+      {toastState && (
+        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-[#1a202b] border border-slate-700 dark:border-[#007DCC]/40 text-sm text-white dark:text-[#F4F7FB] shadow-xl flex items-center gap-3 animate-in fade-in slide-in-from-bottom-2 duration-200">
+          {toastState.kind === 'success' && (
+            <div className="w-10 h-10 shrink-0 rounded-full bg-white/5 ring-1 ring-white/10 flex items-center justify-center">
+              <MascotArt variant="success" className="w-8 h-8" alt="InfoBuddy cheering after a successful action" />
+            </div>
+          )}
+          {toastState.kind === 'success' && <Check className="w-4 h-4 text-emerald-400 dark:text-[#51dcbc] hidden" />}
+          <span>{toastState.message}</span>
         </div>
       )}
 
@@ -484,7 +490,7 @@ export default function App() {
         isOpen={isSignInOpen}
         onClose={() => setIsSignInOpen(false)}
         onSave={(name, loc, stream) => {
-          showToast(`Preferences updated for ${name} (${loc})`);
+          showToast(`Preferences updated for ${name} (${loc})`, 'success');
         }}
       />
 

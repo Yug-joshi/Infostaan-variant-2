@@ -23,6 +23,7 @@ import gradCapImg from '../assets/images/grad_cap.png';
 import gsap from 'gsap';
 import { ScrollStorySection } from './ScrollStorySection';
 import { ConnectCarousel } from './ConnectCarousel';
+import { MascotArt } from './MascotArt';
 
 import { FilterCategoryType } from './CategoryFilterModal';
 import { getCategoryAccent } from '../lib/categoryAccents';
@@ -230,87 +231,98 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       </div>
 
       {/* Central Content (Spacious & Clean) */}
-      <div ref={containerRef} className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center">
-        
-        {/* Eyebrow */}
-        <div className="inline-flex items-center gap-2 mb-6 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-[#A9B8CA]">
-          <span className="w-8 h-[1px] bg-slate-300 dark:bg-[#007DCC]/40" />
-          MUMBAI'S STUDENT DISCOVERY PLATFORM
-          <span className="w-8 h-[1px] bg-slate-300 dark:bg-[#007DCC]/40" />
-        </div>
-
-        {/* Main Headline */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB] mb-6 leading-tight">
-          What are you <span className="marker-highlight">looking for</span>?
-        </h1>
-
-        {/* Search */}
-        <div className="w-full max-w-3xl mb-8 relative z-[60]">
-          <form onSubmit={handleSubmit} className="relative w-full group">
-            <div className="flex items-center bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-full shadow-xl dark:shadow-2xl transition-all duration-300 focus-within:border-[#007DCC] focus-within:ring-4 focus-within:ring-[#007DCC]/10 focus-within:shadow-[#007DCC]/10 px-3 py-2 sm:px-4">
-              <Search className="text-[#007DCC] w-6 h-6 ml-3 shrink-0" />
-              <input
-                id="main-query-input"
-                type="text"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search colleges, courses, careers, classes..."
-                className="w-full bg-transparent border-none text-slate-900 dark:text-[#F4F7FB] font-medium text-sm sm:text-base px-4 py-3 sm:py-4 focus:outline-none focus:ring-0 placeholder:text-slate-400 dark:placeholder-[#71839A]"
-                autoComplete="off"
-              />
-              <button
-                type="submit"
-                className="bg-[#007DCC] hover:bg-[#006cb0] text-white font-bold px-6 sm:px-8 py-3 rounded-full transition-all duration-200 shadow-md transform active:scale-95"
-              >
-                Search
-              </button>
+      <div ref={containerRef} className="relative z-10 w-full max-w-5xl mx-auto">
+        <div className="flex flex-col items-center lg:flex-row lg:items-center lg:justify-center gap-4 lg:gap-8">
+          <div className="w-full max-w-3xl text-center lg:text-left">
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 mb-6 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-[#A9B8CA]">
+              <span className="w-8 h-[1px] bg-slate-300 dark:bg-[#007DCC]/40" />
+              MUMBAI'S STUDENT DISCOVERY PLATFORM
+              <span className="w-8 h-[1px] bg-slate-300 dark:bg-[#007DCC]/40" />
             </div>
-            
-            {/* Search Dropdown */}
-            {query.trim().length > 0 && (
-              <div className="absolute top-full left-0 right-0 mt-3 bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-[#D3B5E8]/20 rounded-2xl shadow-xl dark:shadow-2xl overflow-hidden z-50 text-left">
-                <div className="p-2">
+
+            {/* Main Headline */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB] mb-6 leading-tight">
+              What are you <span className="marker-highlight">looking for</span>?
+            </h1>
+
+            {/* Search */}
+            <div className="w-full max-w-3xl mb-8 relative z-[60]">
+              <form onSubmit={handleSubmit} className="relative w-full group">
+                <div className="flex items-center bg-white dark:bg-[#0D1828] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-full shadow-xl dark:shadow-2xl transition-all duration-300 focus-within:border-[#007DCC] focus-within:ring-4 focus-within:ring-[#007DCC]/10 focus-within:shadow-[#007DCC]/10 px-3 py-2 sm:px-4">
+                  <Search className="text-[#007DCC] w-6 h-6 ml-3 shrink-0" />
+                  <input
+                    id="main-query-input"
+                    type="text"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    placeholder="Search colleges, courses, careers, classes..."
+                    className="w-full bg-transparent border-none text-slate-900 dark:text-[#F4F7FB] font-medium text-sm sm:text-base px-4 py-3 sm:py-4 focus:outline-none focus:ring-0 placeholder:text-slate-400 dark:placeholder-[#71839A]"
+                    autoComplete="off"
+                  />
                   <button
-                    type="button"
-                    onClick={() => onSearch(query, 'colleges')}
-                    className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
+                    type="submit"
+                    className="bg-[#007DCC] hover:bg-[#006cb0] text-white font-bold px-6 sm:px-8 py-3 rounded-full transition-all duration-200 shadow-md transform active:scale-95"
                   >
-                    <Building2 className="w-5 h-5 text-[#007DCC] dark:text-[#A9B8CA]" />
-                    <span className="text-slate-900 dark:text-[#F4F7FB]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Colleges</span></span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => onSearch(query, 'courses')}
-                    className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
-                  >
-                    <GraduationCap className="w-5 h-5 text-[#007DCC] dark:text-[#A9B8CA]" />
-                    <span className="text-slate-900 dark:text-[#F4F7FB]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Courses</span></span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => onSearch(query, 'careers')}
-                    className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
-                  >
-                    <TrendingUp className="w-5 h-5 text-[#007DCC] dark:text-[#A9B8CA]" />
-                    <span className="text-slate-900 dark:text-[#F4F7FB]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Careers</span></span>
+                    Search
                   </button>
                 </div>
-              </div>
-            )}
-          </form>
 
-          {/* Contextual Suggestions */}
-          <div className="h-6 mt-4">
-            {query.trim().length === 0 && (
-              <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-2 text-xs sm:text-sm text-slate-500 dark:text-[#71839A]">
-                <button type="button" onClick={() => onSearch('B.Com colleges in Mumbai')} className="hover:text-[#007DCC] dark:hover:text-[#19A7E8] transition-colors">B.Com colleges</button>
-                <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-[#71839A]/40" />
-                <button type="button" onClick={() => onSearch('CA courses')} className="hover:text-[#007DCC] dark:hover:text-[#19A7E8] transition-colors">CA courses</button>
-                <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-[#71839A]/40" />
-                <button type="button" onClick={() => onSearch('Design careers')} className="hover:text-[#007DCC] dark:hover:text-[#19A7E8] transition-colors">Design careers</button>
+                {/* Search Dropdown */}
+                {query.trim().length > 0 && (
+                  <div className="absolute top-full left-0 right-0 mt-3 bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-[#D3B5E8]/20 rounded-2xl shadow-xl dark:shadow-2xl overflow-hidden z-50 text-left">
+                    <div className="p-2">
+                      <button
+                        type="button"
+                        onClick={() => onSearch(query, 'colleges')}
+                        className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
+                      >
+                        <Building2 className="w-5 h-5 text-[#007DCC] dark:text-[#A9B8CA]" />
+                        <span className="text-slate-900 dark:text-[#F4F7FB]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Colleges</span></span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => onSearch(query, 'courses')}
+                        className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
+                      >
+                        <GraduationCap className="w-5 h-5 text-[#007DCC] dark:text-[#A9B8CA]" />
+                        <span className="text-slate-900 dark:text-[#F4F7FB]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Courses</span></span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => onSearch(query, 'careers')}
+                        className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
+                      >
+                        <TrendingUp className="w-5 h-5 text-[#007DCC] dark:text-[#A9B8CA]" />
+                        <span className="text-slate-900 dark:text-[#F4F7FB]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Careers</span></span>
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </form>
+
+              {/* Contextual Suggestions */}
+              <div className="h-6 mt-4">
+                {query.trim().length === 0 && (
+                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 px-2 text-xs sm:text-sm text-slate-500 dark:text-[#71839A]">
+                    <button type="button" onClick={() => onSearch('B.Com colleges in Mumbai')} className="hover:text-[#007DCC] dark:hover:text-[#19A7E8] transition-colors">B.Com colleges</button>
+                    <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-[#71839A]/40" />
+                    <button type="button" onClick={() => onSearch('CA courses')} className="hover:text-[#007DCC] dark:hover:text-[#19A7E8] transition-colors">CA courses</button>
+                    <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-[#71839A]/40" />
+                    <button type="button" onClick={() => onSearch('Design careers')} className="hover:text-[#007DCC] dark:hover:text-[#19A7E8] transition-colors">Design careers</button>
+                  </div>
+                )}
               </div>
-            )}
+            </div>
           </div>
+
+          <div className="hidden lg:flex w-[220px] shrink-0 items-center justify-center">
+            <MascotArt variant="welcome" className="w-full max-w-[210px]" alt="InfoBuddy mascot welcoming students to the platform" />
+          </div>
+        </div>
+
+        <div className="lg:hidden mt-4 flex justify-center">
+          <MascotArt variant="welcome" className="w-full max-w-[180px]" alt="InfoBuddy mascot welcoming students to the platform" />
         </div>
 
         {/* Discovery Shortcuts (Opens category filter popups first) */}

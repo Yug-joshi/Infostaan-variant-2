@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { CareerGoal, RoadmapStep } from '../types';
 import { CAREER_ROADMAPS } from '../data/mockData';
+import { MascotArt } from './MascotArt';
 import gsap from 'gsap';
 
 interface CareerRoadmapProps {
@@ -109,17 +110,22 @@ export const CareerRoadmap: React.FC<CareerRoadmapProps> = ({
       <div className="mb-8 rounded-2xl bg-gradient-to-r from-[#0D1828] via-[#101F33] to-[#0A1424] dark:from-[#0D1828] dark:via-[#101F33] dark:to-[#0A1424] p-6 sm:p-8 border border-white/10 relative overflow-hidden shadow-xl">
         <div className="absolute -right-12 -bottom-12 w-64 h-64 bg-[#007DCC]/15 rounded-full blur-3xl pointer-events-none" />
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#007DCC]/20 border border-[#007DCC]/40 text-[#86cfff] text-xs font-bold uppercase tracking-wider mb-3">
-              <Compass className="w-3.5 h-3.5 text-[#007DCC]" />
-              <span>Interactive Mumbai Career Pathways</span>
+          <div className="flex items-start gap-4">
+            <div className="hidden sm:flex w-20 h-20 shrink-0">
+              <MascotArt variant="studying" className="w-full" alt="InfoBuddy mascot learning through a study roadmap" />
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-              Degree & Internship Career Roadmap
-            </h2>
-            <p className="text-sm sm:text-base text-gray-300 max-w-2xl mt-1.5 leading-relaxed">
-              Select a professional career target to see an end-to-end blueprint: from Class 12 prerequisites, recommended Mumbai colleges (Hinduja, Podar, Jai Hind, Mithibai, HR), to entry salaries.
-            </p>
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#007DCC]/20 border border-[#007DCC]/40 text-[#86cfff] text-xs font-bold uppercase tracking-wider mb-3">
+                <Compass className="w-3.5 h-3.5 text-[#007DCC]" />
+                <span>Interactive Mumbai Career Pathways</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                Degree & Internship Career Roadmap
+              </h2>
+              <p className="text-sm sm:text-base text-gray-300 max-w-2xl mt-1.5 leading-relaxed">
+                Select a professional career target to see an end-to-end blueprint: from Class 12 prerequisites, recommended Mumbai colleges (Hinduja, Podar, Jai Hind, Mithibai, HR), to entry salaries.
+              </p>
+            </div>
           </div>
 
           <div className="flex items-center gap-3">

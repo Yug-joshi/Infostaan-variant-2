@@ -5,6 +5,7 @@ import { CategoryType, SearchResultItem } from '../types';
 import { searchInfostaan } from '../lib/searchEngine';
 import { PencilLoader } from './PencilLoader';
 import { SkeletonResultCards } from './SkeletonResultCards';
+import { MascotArt } from './MascotArt';
 import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
 import { FilterCategoryType } from './CategoryFilterModal';
 import { getCollegeRegion, matchItemRegion, applyStreamFilter, applyLevelFilter, parseMultiValue } from '../lib/categoryFilters';
@@ -583,11 +584,14 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
                   {filteredResults.length === 0 ? (
                     <div className="col-span-full w-full max-w-xl mx-auto p-6 sm:p-10 text-center rounded-2xl bg-white dark:bg-[#0D1828] text-slate-600 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 shadow-xs">
+                      <div className="mx-auto mb-5 w-28 sm:w-32">
+                        <MascotArt variant="thinking" className="w-full" alt="InfoBuddy mascot helping a student retry a search" />
+                      </div>
                       <p className="text-base font-semibold text-slate-900 dark:text-[#F4F7FB] mb-1">
                         No matching results found for your filters
                       </p>
-                      <p className="text-xs sm:text-sm mb-4">
-                        Try adjusting your Mumbai region or selecting All Mumbai.
+                      <p className="text-xs sm:text-sm mb-5 leading-relaxed">
+                        Try resetting a filter, switching to All Mumbai, or searching for a broader course or college name.
                       </p>
                       <button
                         onClick={() => {
@@ -596,7 +600,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         }}
                         className="px-4 py-2.5 min-h-[44px] rounded-xl bg-[#007DCC] text-white text-xs sm:text-sm font-semibold hover:bg-[#006cb0] transition-colors"
                       >
-                        Try Searching Other Colleges
+                        Adjust search or filters
                       </button>
                     </div>
                   ) : (
