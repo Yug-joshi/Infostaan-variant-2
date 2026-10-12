@@ -50,3 +50,16 @@ jobs:
           server-dir: /public_html/
           dangerous-clean-slate: false
 
+      - name: Upload dist contents to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGERFTPHOST }}
+          username: ${{ secrets.HOSTINGERFTPUSERNAME }}
+          password: ${{ secrets.HOSTINGERFTPPASSWORD }}
+          port: ${{ secrets.HOSTINGERFTPPORT }}
+          protocol: ftp
+          local-dir: dist/
+          server-dir: /public_html/
+          dangerous-clean-slate: false
+          security: loose
+          timeout: 60000
