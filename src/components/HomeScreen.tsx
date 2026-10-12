@@ -8,7 +8,6 @@ import {
   ArrowRight,
   Compass,
   BookOpen,
-  Laptop,
   PenTool,
   FileText,
   Briefcase,
@@ -17,7 +16,6 @@ import {
   BarChart2
 } from 'lucide-react';
 import { ScreenType } from '../types';
-import laptopImg from '../assets/images/laptop.png';
 import booksImg from '../assets/images/books.png';
 import gradCapImg from '../assets/images/grad_cap.png';
 import gsap from 'gsap';
@@ -199,10 +197,10 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
         className="pointer-events-none absolute top-0 left-0 right-0 h-[100vh] z-0 hidden lg:block overflow-hidden"
         aria-hidden="true"
       >
-        {/* Top Left: Laptop */}
-        <div className="parallax-layer absolute top-[15%] left-[2%] xl:left-[5%] w-40 h-40 md:w-56 md:h-56" data-depth="0.6">
+        {/* Top Left: Mascot replaces the laptop illustration */}
+        <div className="parallax-layer absolute top-[12%] left-[2%] xl:left-[4%] w-32 h-32 md:w-44 md:h-44" data-depth="0.6">
           <div className="float-layer w-full h-full pointer-events-auto cursor-default">
-            <img src={laptopImg} alt="" className="w-full h-full object-contain opacity-80 dark:opacity-60 -rotate-12" />
+            <MascotArt variant="welcome" className="w-full h-full object-contain opacity-80 dark:opacity-80" alt="InfoBuddy mascot greeting students on the homepage" />
           </div>
         </div>
         
@@ -232,8 +230,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
       {/* Central Content (Spacious & Clean) */}
       <div ref={containerRef} className="relative z-10 w-full max-w-5xl mx-auto">
-        <div className="flex flex-col items-center lg:flex-row lg:items-center lg:justify-center gap-4 lg:gap-8">
-          <div className="w-full max-w-3xl text-center lg:text-left">
+        <div className="flex flex-col items-center justify-center gap-4">
+          <div className="w-full max-w-3xl text-center">
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 mb-6 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-[#A9B8CA]">
               <span className="w-8 h-[1px] bg-slate-300 dark:bg-[#007DCC]/40" />
@@ -316,9 +314,6 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             </div>
           </div>
 
-          <div className="hidden lg:flex w-[220px] shrink-0 items-center justify-center">
-            <MascotArt variant="welcome" className="w-full max-w-[210px]" alt="InfoBuddy mascot welcoming students to the platform" />
-          </div>
         </div>
 
         <div className="lg:hidden mt-4 flex justify-center">
@@ -366,7 +361,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
 
         {/* Help Me Decide Button (Directly below shortcut options under search bar) */}
-        <div className="relative z-50 mb-8">
+        <div className="relative z-50 mb-10 flex justify-center">
           <button
             onClick={() => onNavigate('guidance')}
             className="px-8 py-3.5 rounded-full bg-[#007DCC]/90 hover:bg-[#007DCC] text-white font-semibold transition-all shadow-md hover:shadow-lg flex items-center gap-2 group backdrop-blur-sm border border-white/10 cursor-pointer"
@@ -374,38 +369,6 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             <span>Help Me Decide</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
-        </div>
-
-        {/* Extra homepage support panel - kept below the CTA so the search bar and button stay fixed */}
-        <div className="relative z-50 w-full max-w-4xl mx-auto mb-8">
-          <div className="rounded-[28px] border border-slate-200 dark:border-white/10 bg-white/85 dark:bg-[#0D1828]/90 backdrop-blur-sm shadow-md overflow-hidden">
-            <div className="grid md:grid-cols-[1.2fr_0.8fr] items-center gap-4 p-4 sm:p-5">
-              <div className="space-y-3">
-                <div className="inline-flex items-center gap-2 rounded-full bg-[#007DCC]/10 px-2.5 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] text-[#007DCC] dark:text-[#86cfff]">
-                  <Lightbulb className="w-3.5 h-3.5" />
-                  Student-first guidance
-                </div>
-                <h2 className="text-lg sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug">
-                  Compare options faster, with less guesswork.
-                </h2>
-                <div className="flex flex-wrap gap-2 text-xs sm:text-sm text-slate-600 dark:text-[#A9B8CA]">
-                  <span className="rounded-full border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-[#101F33] px-2.5 py-1">Mumbai colleges</span>
-                  <span className="rounded-full border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-[#101F33] px-2.5 py-1">Career matches</span>
-                  <span className="rounded-full border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-[#101F33] px-2.5 py-1">Course filters</span>
-                </div>
-              </div>
-
-              <div className="flex justify-center md:justify-end">
-                <div className="w-28 sm:w-36">
-                  <MascotArt
-                    variant="welcome"
-                    className="w-full"
-                    alt="InfoBuddy mascot supporting students on the homepage"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
