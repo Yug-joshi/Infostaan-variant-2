@@ -8,7 +8,7 @@ import { SkeletonResultCards } from './SkeletonResultCards';
 import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
 import { FilterCategoryType } from './CategoryFilterModal';
 import { getCollegeRegion, matchItemRegion, applyStreamFilter, parseMultiValue } from '../lib/categoryFilters';
-import { formatCollegeTitle, getCollegeGroupingKey } from '../lib/collegeData';
+import { formatCollegeTitle, getCollegeGroupingKey, getCollegeCutoffGroup } from '../lib/collegeData';
 import { ResultFilterDrawer, DrawerCategoryType } from './ResultFilterDrawer';
 
 interface SearchResultsScreenProps {
@@ -660,6 +660,9 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                             }
                           });
                         }
+                        
+                        const collegeCutoffGroup = isCollege ? getCollegeCutoffGroup(item.collegeId || item.id) : null;
+                        const highestCutoff = collegeCutoffGroup && collegeCutoffGroup.length > 0 ? Math.max(...collegeCutoffGroup.map(c => c.cutoff)) : null;
 
                         // Decorative header icon (replaces the previous remote images, which returned 404)
                         const HeaderIcon = isCutoff ? BarChart2 : isCollege ? Building2 : isCourse ? GraduationCap : isCareer ? TrendingUp : MonitorPlay;
@@ -725,10 +728,10 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                                   </span>
                                 </div>
 
-                                {(isCutoff || (isCollege && item.subtitle?.includes('Cutoff:'))) && (
+                                {(isCutoff || (isCollege && highestCutoff !== null) || (isCollege && item.subtitle?.includes('Cutoff:'))) && (
                                   <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
                                     <span className="text-sm font-extrabold text-[#007DCC] dark:text-[#86cfff] bg-[#007DCC]/10 dark:bg-[#86cfff]/10 px-2 py-0.5 rounded-md">
-                                      {isCutoff ? (item.badgeSub ? item.badgeSub.split(' ')[0] : 'Cutoff') : item.subtitle!.split('Cutoff:')[1].trim()}
+                                      {isCutoff ? (item.badgeSub ? item.badgeSub.split(' ')[0] : 'Cutoff') : highestCutoff !== null ? `${highestCutoff}%` : item.subtitle!.split('Cutoff:')[1]?.trim()}
                                     </span>
                                     <span className="text-[11px] font-semibold text-slate-600 dark:text-[#A9B8CA] uppercase tracking-wide">
                                       FYJC Cutoff
