@@ -366,7 +366,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
 
         {/* Help Me Decide Button (Directly below shortcut options under search bar) */}
-        <div className="relative z-50 mb-10">
+        <div className="relative z-50 mb-8">
           <button
             onClick={() => onNavigate('guidance')}
             className="px-8 py-3.5 rounded-full bg-[#007DCC]/90 hover:bg-[#007DCC] text-white font-semibold transition-all shadow-md hover:shadow-lg flex items-center gap-2 group backdrop-blur-sm border border-white/10 cursor-pointer"
@@ -374,6 +374,38 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             <span>Help Me Decide</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
+        </div>
+
+        {/* Extra homepage support panel - kept below the CTA so the search bar and button stay fixed */}
+        <div className="relative z-50 w-full max-w-4xl mx-auto mb-8">
+          <div className="rounded-[28px] border border-slate-200 dark:border-white/10 bg-white/85 dark:bg-[#0D1828]/90 backdrop-blur-sm shadow-md overflow-hidden">
+            <div className="grid md:grid-cols-[1.2fr_0.8fr] items-center gap-4 p-4 sm:p-5">
+              <div className="space-y-3">
+                <div className="inline-flex items-center gap-2 rounded-full bg-[#007DCC]/10 px-2.5 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] text-[#007DCC] dark:text-[#86cfff]">
+                  <Lightbulb className="w-3.5 h-3.5" />
+                  Student-first guidance
+                </div>
+                <h2 className="text-lg sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] leading-snug">
+                  Compare options faster, with less guesswork.
+                </h2>
+                <div className="flex flex-wrap gap-2 text-xs sm:text-sm text-slate-600 dark:text-[#A9B8CA]">
+                  <span className="rounded-full border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-[#101F33] px-2.5 py-1">Mumbai colleges</span>
+                  <span className="rounded-full border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-[#101F33] px-2.5 py-1">Career matches</span>
+                  <span className="rounded-full border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-[#101F33] px-2.5 py-1">Course filters</span>
+                </div>
+              </div>
+
+              <div className="flex justify-center md:justify-end">
+                <div className="w-28 sm:w-36">
+                  <MascotArt
+                    variant="welcome"
+                    className="w-full"
+                    alt="InfoBuddy mascot supporting students on the homepage"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
