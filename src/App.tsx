@@ -434,6 +434,9 @@ export default function App() {
             <GuidanceScreen
               onNavigate={(path) => navigate(path)}
               onSelectCollege={handleSelectCollege}
+              savedCollegeIds={savedItems.map((i) => i.collegeId).filter(Boolean) as string[]}
+              onToggleSave={handleToggleSaveCollege}
+              onOpenCompare={handleOpenCompare}
             />
           } />
 

@@ -122,12 +122,42 @@ export const stripRailwayCorridors = (text: string): string => {
   return text.replace(/\b(Western|Central|Harbour)\s+(Line|Corridor|Railway)\b/gi, ' ');
 };
 
+const CANONICAL_REGION_ALIASES: Record<string, CanonicalRegion> = {
+  'central': 'Central Suburbs',
+  'central suburbs': 'Central Suburbs',
+  'central-suburbs': 'Central Suburbs',
+  'central mumbai': 'Central Suburbs',
+  'central-mumbai': 'Central Suburbs',
+  'central line': 'Central Suburbs',
+  'south': 'South Mumbai',
+  'south mumbai': 'South Mumbai',
+  'south-mumbai': 'South Mumbai',
+  'south mumbai core hubs': 'South Mumbai',
+  'western': 'Western Suburbs',
+  'western suburbs': 'Western Suburbs',
+  'western-suburbs': 'Western Suburbs',
+  'western line': 'Western Suburbs',
+  'eastern': 'Eastern Suburbs',
+  'eastern suburbs': 'Eastern Suburbs',
+  'eastern-suburbs': 'Eastern Suburbs',
+  'harbour': 'Harbour / Central-East',
+  'harbour line': 'Harbour / Central-East',
+  'harbour-line': 'Harbour / Central-East',
+  'harbour / central-east': 'Harbour / Central-East',
+  'central-east': 'Harbour / Central-East',
+};
+
 /**
  * Resolves the canonical Mumbai region for any text or address.
  * Uses exact whole-word matching and verified locality definitions.
  */
 export const resolveCanonicalRegion = (rawText: string | null | undefined): CanonicalRegion | null => {
   if (!rawText) return null;
+  const rawLower = rawText.trim().toLowerCase();
+  if (CANONICAL_REGION_ALIASES[rawLower]) {
+    return CANONICAL_REGION_ALIASES[rawLower];
+  }
+
   const cleaned = stripRailwayCorridors(rawText);
 
   // 1. Direct explicit region match
@@ -138,8 +168,20 @@ export const resolveCanonicalRegion = (rawText: string | null | undefined): Cano
     }
   }
 
-  // Handle "Harbour Line" as alias for "Harbour / Central-East"
-  if (/\bHarbour(?:\s+Line)?\b/i.test(cleaned)) {
+  // Handle common regional phrases
+  if (/\bCentral\s+(?:Suburbs|Mumbai)\b/i.test(cleaned)) {
+    return 'Central Suburbs';
+  }
+  if (/\bSouth\s+Mumbai\b/i.test(cleaned)) {
+    return 'South Mumbai';
+  }
+  if (/\bWestern\s+(?:Suburbs|Mumbai)\b/i.test(cleaned)) {
+    return 'Western Suburbs';
+  }
+  if (/\bEastern\s+(?:Suburbs|Mumbai)\b/i.test(cleaned)) {
+    return 'Eastern Suburbs';
+  }
+  if (/\bHarbour(?:\s+Line|\s*\/\s*Central-East)?\b/i.test(cleaned)) {
     return 'Harbour / Central-East';
   }
 
@@ -247,7 +289,8 @@ export const matchItemRegion = (
     return false;
   }
 
-  const normalizedTarget = targetRegion === 'Harbour Line' ? 'Harbour / Central-East' : targetRegion;
+  const canonicalTarget = resolveCanonicalRegion(targetRegion);
+  const normalizedTarget = canonicalTarget || (targetRegion === 'Harbour Line' ? 'Harbour / Central-East' : targetRegion);
   return itemRegion === normalizedTarget;
 };
 
