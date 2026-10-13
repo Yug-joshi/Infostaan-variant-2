@@ -380,8 +380,8 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
                       type="button"
                       onClick={() => setSelectedStream(str)}
                       className={`flex-1 py-3 px-4 rounded-xl font-bold text-sm transition-all duration-150 text-center cursor-pointer border ${isActive
-                        ? 'bg-[#007DCC] border-[#007DCC] text-white shadow-md'
-                        : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#C5D3E3] hover:bg-slate-50 dark:hover:bg-white/5'
+                        ? 'bg-slate-950 border-slate-950 text-white shadow-md'
+                        : 'bg-white dark:bg-[#111A28] border-slate-200 dark:border-white/10 text-slate-700 dark:text-[#C5D3E3] hover:bg-slate-50 dark:hover:bg-white/5'
                         }`}
                     >
                       {str}
@@ -490,7 +490,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
                         type="button"
                         onClick={() => setSelectedStream(str)}
                         className={`flex-1 min-w-[100px] sm:min-w-[130px] py-2.5 px-4 rounded-xl font-bold text-xs sm:text-sm transition-all duration-150 text-center cursor-pointer ${isActive
-                          ? 'bg-[#007DCC] text-white shadow-md active:scale-98'
+                          ? 'bg-slate-950 text-white shadow-md active:scale-98'
                           : 'bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-[#C5D3E3] border border-slate-200/80 dark:border-white/10 hover:bg-slate-200/80 dark:hover:bg-white/10'
                           }`}
                       >

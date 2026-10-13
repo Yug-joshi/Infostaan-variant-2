@@ -1,3 +1,4 @@
+
 import re
 
 with open('src/data/fyjcCutoffs.ts', 'r', encoding='utf-8') as f:

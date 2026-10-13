@@ -314,10 +314,10 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#070D18] text-slate-900 dark:text-[#F4F7FB] flex flex-col font-sans transition-colors duration-200 selection:bg-[#007DCC]/30 selection:text-[#007DCC]">
+    <div className="min-h-screen bg-white dark:bg-[#0B111E] text-slate-900 dark:text-[#F8FAFC] flex flex-col font-sans transition-colors duration-200 selection:bg-amber-300/40 selection:text-slate-900">
       {/* Toast Notification */}
       {toastState && (
-        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-[#1a202b] border border-slate-700 dark:border-[#007DCC]/40 text-sm text-white dark:text-[#F4F7FB] shadow-xl flex items-center gap-3 animate-in fade-in slide-in-from-bottom-2 duration-200">
+        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-[#141E2E] border border-slate-700 dark:border-amber-400/40 text-sm text-white dark:text-[#F8FAFC] shadow-xl flex items-center gap-3 animate-in fade-in slide-in-from-bottom-2 duration-200">
           {toastState.kind === 'success' && (
             <div className="w-10 h-10 shrink-0 rounded-full bg-white/5 ring-1 ring-white/10 flex items-center justify-center">
               <MascotArt variant="success" className="w-8 h-8" alt="InfoBuddy cheering after a successful action" />

@@ -48,12 +48,12 @@ export const CompareModal: React.FC<CompareModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 dark:bg-black/75 backdrop-blur-sm">
       <div
         ref={modalCardRef}
-        className="relative w-full max-w-4xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-[#D3B5E8]/20 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200"
+        className="relative w-full max-w-4xl bg-white dark:bg-[#0B111E] border border-slate-200 dark:border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] text-slate-900 dark:text-[#F8FAFC] transition-colors duration-200"
       >
         {/* Modal Header */}
-        <div className="p-5 sm:p-6 border-b border-slate-200 dark:border-[#D3B5E8]/15 flex items-center justify-between bg-slate-50 dark:bg-[#161c27]">
+        <div className="p-5 sm:p-6 border-b border-slate-200 dark:border-white/10 flex items-center justify-between bg-slate-50 dark:bg-[#111A28]">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-[#242a36] text-[#007DCC] dark:text-[#9ccaff] flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 flex items-center justify-center">
               <Scale className="w-5 h-5" />
             </div>
             <div>
@@ -184,22 +184,22 @@ export const CompareModal: React.FC<CompareModalProps> = ({
             </div>
 
             {/* Key Recruiters */}
-            <div className="p-4 rounded-xl bg-slate-50 dark:bg-[#161c27] border border-slate-200 dark:border-[#D3B5E8]/10">
-              <span className="text-xs font-bold text-[#007DCC] dark:text-[#86cfff] uppercase tracking-wider flex items-center gap-1.5 mb-3">
+            <div className="p-4 rounded-xl bg-slate-50 dark:bg-[#111A28] border border-slate-200 dark:border-white/10">
+              <span className="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5 mb-3">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-[#51dcbc]" />
                 Marquee Placements & Big 4 Recruiters
               </span>
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-wrap gap-1.5">
                   {data1.topRecruiters.map((r, i) => (
-                    <span key={i} className="px-2 py-0.5 rounded text-xs bg-blue-100 text-blue-800 dark:bg-[#242a36] dark:text-[#9ccaff]">
+                    <span key={i} className="px-2 py-0.5 rounded text-xs bg-amber-50 text-amber-900 border border-amber-200/60 dark:bg-amber-900/20 dark:text-amber-300 dark:border-amber-700/30">
                       {r}
                     </span>
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-1.5">
                   {data2.topRecruiters.map((r, i) => (
-                    <span key={i} className="px-2 py-0.5 rounded text-xs bg-blue-100 text-blue-800 dark:bg-[#242a36] dark:text-[#9ccaff]">
+                    <span key={i} className="px-2 py-0.5 rounded text-xs bg-amber-50 text-amber-900 border border-amber-200/60 dark:bg-amber-900/20 dark:text-amber-300 dark:border-amber-700/30">
                       {r}
                     </span>
                   ))}
@@ -210,13 +210,13 @@ export const CompareModal: React.FC<CompareModalProps> = ({
         </div>
 
         {/* Modal Footer */}
-        <div className="p-4 sm:p-5 border-t border-slate-200 dark:border-[#D3B5E8]/15 bg-slate-50 dark:bg-[#161c27] flex items-center justify-between">
+        <div className="p-4 sm:p-5 border-t border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-[#111A28] flex items-center justify-between">
           <p className="text-xs text-slate-500 dark:text-[#8a919c] hidden sm:block">
             Data verified from Mumbai University & college academic calendars.
           </p>
           <button
             onClick={onClose}
-            className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-sm font-semibold transition-colors"
+            className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-slate-950 hover:bg-black text-white text-sm font-semibold transition-colors"
           >
             Close Comparison
           </button>

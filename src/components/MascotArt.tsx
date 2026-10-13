@@ -41,7 +41,7 @@ export const MascotArt: React.FC<MascotArtProps> = ({
   if (!assetMap[variant] || hasError) {
     return (
       <div
-        className={`flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#EAF7FF] to-[#DDF2FF] text-[#007DCC] dark:from-[#0D1828] dark:to-[#101F33] dark:text-[#86cfff] ${className}`}
+        className={`flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#FEF3C7] to-[#FDE68A] text-amber-700 dark:from-[#1E293B] dark:to-[#0F172A] dark:text-amber-400 ${className}`}
         aria-hidden="true"
         role="img"
       >

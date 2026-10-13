@@ -87,10 +87,10 @@ export const ScrollStorySection: React.FC = () => {
     return () => ctx.revert();
   }, []);
 
-  const glassClasses = "bg-white/40 dark:bg-[#070D18]/40 backdrop-blur-xl border border-white/60 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,125,204,0.05)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-3xl p-8 lg:p-12";
+  const glassClasses = "bg-white/40 dark:bg-[#0B111E]/40 backdrop-blur-xl border border-white/60 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] rounded-3xl p-8 lg:p-12";
 
   return (
-    <section ref={containerRef} className="relative w-full text-slate-900 dark:text-[#F4F7FB]">
+    <section ref={containerRef} className="relative w-full text-slate-900 dark:text-[#F8FAFC]">
       
       {/* ----------------- DESKTOP PINNED VIEW ----------------- */}
       <div className="hidden md:flex w-full h-screen items-center justify-center relative">
@@ -108,7 +108,7 @@ export const ScrollStorySection: React.FC = () => {
             
             {/* Phase 1 Text */}
             <div ref={text1Ref} className={`absolute inset-0 flex flex-col justify-center ${glassClasses}`}>
-              <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mb-6 text-[#007DCC]">
+              <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-2xl flex items-center justify-center mb-6 text-amber-600 dark:text-amber-400">
                 <BookOpen className="w-6 h-6" />
               </div>
               <h2 className="text-3xl lg:text-4xl font-extrabold mb-4 tracking-tight">
@@ -171,7 +171,7 @@ export const ScrollStorySection: React.FC = () => {
         {/* Mobile Phase 1 */}
         <div className={`mobile-story-block relative ${glassClasses} flex flex-col items-center text-center p-6`}>
           <img src={booksImg} alt="School" className="w-48 h-48 object-contain mb-6 drop-shadow-xl" />
-          <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mb-4 text-[#007DCC]">
+          <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center mb-4 text-amber-600 dark:text-amber-400">
             <BookOpen className="w-5 h-5" />
           </div>
           <h2 className="text-2xl font-extrabold mb-3">School & Junior College</h2>
@@ -212,7 +212,7 @@ export const ScrollStorySection: React.FC = () => {
 
 // Helper for checkmarks
 const CheckIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-[#007DCC] dark:text-[#19A7E8]">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-amber-500 dark:text-amber-400">
     <polyline points="20 6 9 17 4 12"></polyline>
   </svg>
 );

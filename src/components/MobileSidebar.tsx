@@ -145,10 +145,10 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
       {/* Side Bar Drawer */}
       <div
         ref={sidebarRef}
-        className="relative w-[85%] max-w-sm h-full bg-white dark:bg-[#0D1828] border-r border-slate-200 dark:border-[#D3B5E8]/15 shadow-2xl flex flex-col z-10 text-slate-900 dark:text-[#F4F7FB] transition-colors duration-150"
+        className="relative w-[85%] max-w-sm h-full bg-white dark:bg-[#0B111E] border-r border-slate-200 dark:border-white/10 shadow-2xl flex flex-col z-10 text-slate-900 dark:text-[#F8FAFC] transition-colors duration-150"
       >
         {/* Header */}
-        <div className="p-4 sm:p-5 border-b border-slate-200 dark:border-[#D3B5E8]/15 flex items-center justify-between">
+        <div className="p-4 sm:p-5 border-b border-slate-200 dark:border-white/10 flex items-center justify-between">
           <button
             type="button"
             id="mobile-sidebar-logo-btn"
@@ -185,7 +185,7 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                 type="button"
                 onClick={() => navigateAndClose('/')}
                 className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/'
-                  ? 'bg-[#007DCC] text-white shadow-xs'
+                  ? 'bg-slate-950 dark:bg-amber-500 text-white dark:text-slate-950 shadow-xs'
                   : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
                   }`}
               >
@@ -200,7 +200,7 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                 type="button"
                 onClick={() => navigateAndClose('/help-me-decide')}
                 className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/help-me-decide'
-                  ? 'bg-[#007DCC] text-white shadow-xs'
+                  ? 'bg-slate-950 dark:bg-amber-500 text-white dark:text-slate-950 shadow-xs'
                   : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
                   }`}
               >
@@ -208,7 +208,7 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                   <Sparkles className="w-4 h-4 shrink-0 text-amber-500 dark:text-amber-400" />
                   <span>Career Roadmap & Guide</span>
                 </div>
-                <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300">
+                <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-300">
                   New
                 </span>
               </button>
@@ -217,7 +217,7 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                 type="button"
                 onClick={() => navigateAndClose('/dashboard')}
                 className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/dashboard'
-                  ? 'bg-[#007DCC] text-white shadow-xs'
+                  ? 'bg-slate-950 dark:bg-amber-500 text-white dark:text-slate-950 shadow-xs'
                   : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
                   }`}
               >
@@ -232,7 +232,7 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                 type="button"
                 onClick={() => navigateAndClose('/saved')}
                 className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/saved'
-                  ? 'bg-[#007DCC] text-white shadow-xs'
+                  ? 'bg-slate-950 dark:bg-amber-500 text-white dark:text-slate-950 shadow-xs'
                   : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
                   }`}
               >
@@ -241,7 +241,7 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                   <span>Shortlist & Comparison</span>
                 </div>
                 {savedCount > 0 && (
-                  <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-900/50 text-[#007DCC] dark:text-[#86cfff]">
+                  <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-400">
                     {savedCount}
                   </span>
                 )}
@@ -277,9 +277,9 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                     key={c.id}
                     type="button"
                     onClick={handleClick}
-                    className="sidebar-anim-item p-2.5 rounded-xl bg-slate-50 dark:bg-[#161c27] border border-slate-200/80 dark:border-white/5 hover:border-[#007DCC] dark:hover:border-[#007DCC] flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-[#A9B8CA] hover:text-[#007DCC] dark:hover:text-white transition-all text-left"
+                    className="sidebar-anim-item p-2.5 rounded-xl bg-slate-50 dark:bg-[#161c27] border border-slate-200/80 dark:border-white/5 hover:border-amber-400 dark:hover:border-amber-400 flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-[#A9B8CA] hover:text-amber-600 dark:hover:text-white transition-all text-left"
                   >
-                    <IconComponent className="w-3.5 h-3.5 text-[#007DCC] dark:text-[#86cfff]" />
+                    <IconComponent className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
                     <span>{c.label}</span>
                   </button>
                 );
@@ -327,14 +327,14 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                   className="sidebar-anim-item w-full flex items-center justify-between p-2.5 rounded-xl bg-slate-50 dark:bg-[#161c27] border border-slate-200/60 dark:border-white/5 hover:bg-slate-100 dark:hover:bg-[#1f2838] transition-colors text-left group"
                 >
                   <div>
-                    <p className="text-xs font-semibold text-slate-900 dark:text-[#F4F7FB] group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors">
+                    <p className="text-xs font-semibold text-slate-900 dark:text-[#F8FAFC] group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
                       {col.name}
                     </p>
                     <p className="text-[11px] text-slate-500 dark:text-[#A9B8CA]">
                       {col.area}
                     </p>
                   </div>
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:translate-x-0.5 group-hover:text-[#007DCC] transition-all" />
+                  <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:translate-x-0.5 group-hover:text-amber-600 transition-all" />
                 </button>
               ))}
             </div>
@@ -342,7 +342,7 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
         </div>
 
         {/* Footer / Controls */}
-        <div className="p-4 border-t border-slate-200 dark:border-[#D3B5E8]/15 bg-slate-50/70 dark:bg-[#101926] flex items-center justify-between gap-3">
+        <div className="p-4 border-t border-slate-200 dark:border-white/10 bg-slate-50/70 dark:bg-[#0B111E] flex items-center justify-between gap-3">
           {/* Theme Toggle */}
           <button
             type="button"
@@ -369,7 +369,7 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
               onOpenSignIn();
               handleClose();
             }}
-            className="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-semibold shadow-xs transition-colors"
+            className="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-slate-950 hover:bg-black text-white text-xs font-semibold shadow-xs transition-colors"
           >
             <User className="w-4 h-4" />
             <span>Preferences</span>

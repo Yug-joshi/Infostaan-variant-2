@@ -24,12 +24,12 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     if (theme === 'dark') {
       root.classList.add('dark');
       root.setAttribute('data-theme', 'dark');
-      document.body.style.backgroundColor = '#070D18';
-      document.body.style.color = '#F4F7FB';
+      document.body.style.backgroundColor = '#0B111E';
+      document.body.style.color = '#F8FAFC';
     } else {
       root.classList.remove('dark');
       root.setAttribute('data-theme', 'light');
-      document.body.style.backgroundColor = '#FAF9F6';
+      document.body.style.backgroundColor = '#FFFFFF';
       document.body.style.color = '#111827';
     }
     localStorage.setItem('infostaan_theme', theme);
