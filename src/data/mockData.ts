@@ -485,6 +485,73 @@ export const XAVIERS_COLLEGE_DETAILS: CollegeDetail = {
   compareTargetName: 'Jai Hind or H.R. College',
 };
 
+export const VES_COLLEGE_DETAILS: CollegeDetail = {
+  id: 'ves-college',
+  badge: 'Autonomous • NAAC A Grade • Chembur Landmark',
+  name: "Vivekanand Education Society's College of Arts, Science & Commerce (Autonomous)",
+  subName: 'VESASC Autonomous Degree College & Junior College',
+  location: 'Sindhi Society, Chembur, Mumbai 400071',
+  transitDetail: '500m from Chembur Railway Station (Harbour Line)',
+  commuteTime: '5-minute walk from Chembur platform',
+  commuteHeading: '5-minute direct walk from Chembur Railway Station',
+  commuteDescription:
+    'Located in Sindhi Society, Chembur with direct connectivity via Harbour Line to CST, Kurla, Vashi, and Panvel, plus seamless monorail access.',
+  commuteBadge: 'Harbour Line Direct • 5-min Walk',
+  image:
+    'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80',
+  whyFit: [
+    {
+      icon: 'domain_verification',
+      title: 'Autonomous status with industry-oriented curriculum.',
+      description:
+        'UGC and University of Mumbai autonomous curriculum offering specialized tracks in BAF, BMS, B.Sc Data Science, and B.Sc IT.',
+      iconColor: 'tertiary',
+    },
+    {
+      icon: 'directions_walk',
+      title: 'Walkable from Chembur railway station.',
+      description: 'Convenient 5-minute walk from station, serving students across Harbour Line and Central Mumbai.',
+      iconColor: 'secondary',
+    },
+    {
+      icon: 'groups',
+      title: 'Top corporate recruiters and morning shift flexibility.',
+      description:
+        'Direct hiring from Deloitte, KPMG, ICICI Bank, TCS, and Wipro, with morning shifts enabling professional certification studies.',
+      iconColor: 'primary',
+    },
+  ],
+  keyFacts: [
+    {
+      label: 'Programs Offered',
+      value: 'B.Com, BMS, BAF, BFM, BBI, B.Sc IT, B.Sc Data Science, BAMMC',
+      description: 'Wide variety of autonomous commerce, finance, and technology degrees.',
+    },
+    {
+      label: 'Annual Fee Range',
+      value: '₹24,000 – ₹50,000 / yr',
+      description: 'Aided standard B.Com is highly subsidized; self-financed professional streams are competitively priced.',
+    },
+    {
+      label: 'Academic Affiliation',
+      value: 'Autonomous • NAAC A Grade',
+      description: 'Empowered autonomous college affiliated with University of Mumbai.',
+    },
+    {
+      label: 'Daily Schedule & Timings',
+      value: 'Early Morning (7:00 AM – 10:45 AM)',
+      description: 'Structured to support CA articleship and internship opportunities.',
+    },
+  ],
+  isRightForYou: {
+    strongFit:
+      'You live along the Harbour Line or Central East corridor and desire top-tier autonomous academics with strong corporate placement ties.',
+    keepInMind:
+      'Admission cutoffs for commerce and management streams range between 76% and 86%.',
+  },
+  compareTargetName: 'SIES Nerul or Somaiya',
+};
+
 export const COLLEGE_DETAILS_MAP: Record<string, CollegeDetail> = {
   mithibai: MITHIBAI_DETAILS,
   'hr-college': HR_COLLEGE_DETAILS,
@@ -493,6 +560,7 @@ export const COLLEGE_DETAILS_MAP: Record<string, CollegeDetail> = {
   'jai-hind': JAI_HIND_COLLEGE_DETAILS,
   'nm-college': NM_COLLEGE_DETAILS,
   xaviers: XAVIERS_COLLEGE_DETAILS,
+  'ves-college': VES_COLLEGE_DETAILS,
 };
 
 export const getCollegeDetails = (id: string): CollegeDetail => {
@@ -508,7 +576,10 @@ export const getCollegeDetails = (id: string): CollegeDetail => {
     'st-xaviers-college-fort': 'xaviers',
     'h-r-college-of-commerce-economics': 'hr-college',
     'jai-hind-college-churchgate': 'jai-hind',
-    'mithibai-college': 'mithibai'
+    'mithibai-college': 'mithibai',
+    'swami-vivekanand-high-school-jr-college-chembur': 'ves-college',
+    'ves-college-chembur': 'ves-college',
+    'vivekanand-education-society': 'ves-college',
   };
 
   const aliasId = aliasMap[id] || aliasMap[id.replace(/-mumbai$/, '')];
@@ -1034,6 +1105,84 @@ export const ALL_SEARCH_RESULTS: SearchResultItem[] = [
     tagColor: 'tertiary',
     actionLabel: 'View college details',
     collegeId: 'vaze-college',
+  },
+  {
+    id: 'res-col-13',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Sindhi Society, Chembur, Harbour / Central-East',
+    title: "Vivekanand Education Society's College of Arts, Science & Commerce (Autonomous)",
+    subtitle: 'Offered: B.Com, BMS, BAF, BFM, BBI, B.Sc IT, B.Sc Data Science • Approx. ₹24,000–₹50,000/yr',
+    whyRelevant: 'Premier autonomous institution on Harbour Line with top corporate placements and morning shifts.',
+    meta: ['Autonomous • NAAC A Grade', 'Chembur, Harbour / Central-East, Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'ves-college',
+  },
+  {
+    id: 'res-col-14',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Sector 5, Nerul, Navi Mumbai, Harbour / Central-East',
+    title: 'SIES College of Arts, Science & Commerce (Nerul)',
+    subtitle: 'Offered: B.Com, BMS, BAF, BFM, BBI, B.Sc IT, B.Sc CS • Approx. ₹22,000–₹48,000/yr',
+    whyRelevant: 'Prestigious SIES campus in Nerul with renowned finance and technology programs.',
+    meta: ['Autonomous • SIES Campus', 'Nerul, Navi Mumbai, Harbour / Central-East'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'sies-nerul',
+  },
+  {
+    id: 'res-col-15',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Sector 15-A, Vashi, Navi Mumbai, Harbour / Central-East',
+    title: 'Karmaveer Bhaurao Patil College (Autonomous), Vashi',
+    subtitle: 'Offered: B.Com, BMS, BAF, BFM, BBI, B.Sc IT, B.Sc Data Science • Approx. ₹20,000–₹45,000/yr',
+    whyRelevant: 'Autonomous NAAC A+ landmark in Vashi with strong corporate BFSI linkages.',
+    meta: ['Autonomous • NAAC A+', 'Vashi, Navi Mumbai, Harbour / Central-East'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'kbp-vashi',
+  },
+  {
+    id: 'res-col-16',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Sector 16, New Panvel, Harbour / Central-East',
+    title: 'Pillai College of Arts, Commerce & Science (Autonomous)',
+    subtitle: 'Offered: B.Com, BMS, BAF, BFM, B.Sc IT, B.Sc Data Science, BAMMC • Approx. ₹26,000–₹52,000/yr',
+    whyRelevant: 'Autonomous NAAC A Grade institution known for Alegria cultural festival and analytics programs.',
+    meta: ['Autonomous • NAAC A Grade', 'New Panvel, Harbour / Central-East'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'pillai-college',
+  },
+  {
+    id: 'res-col-17',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Vidyasagar, Chembur, Harbour / Central-East',
+    title: 'Chembur Karnataka College of Arts, Science & Commerce',
+    subtitle: 'Offered: B.Com, BMS, BAF, B.Sc • Approx. ₹18,000–₹38,000/yr',
+    whyRelevant: 'Longstanding Chembur institution with dedicated commerce and science departments.',
+    meta: ['Affiliated to MU', 'Chembur, Harbour / Central-East, Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'chembur-karnataka',
+  },
+  {
+    id: 'res-col-18',
+    category: 'colleges',
+    badgeCategory: 'COLLEGE',
+    badgeSub: 'Ghatkopar West, Eastern Suburbs',
+    title: 'Ramniranjan Jhunjhunwala College of Arts, Science & Commerce (Autonomous)',
+    subtitle: 'Offered: B.Com, BMS, BAF, BBI, B.Sc IT, B.Sc Data Science • Approx. ₹20,000–₹46,000/yr',
+    whyRelevant: 'Autonomous NAAC A Grade institution opposite Ghatkopar railway and metro station.',
+    meta: ['Autonomous • NAAC A Grade', 'Ghatkopar West, Eastern Suburbs, Mumbai'],
+    tagColor: 'tertiary',
+    actionLabel: 'View college details',
+    collegeId: 'rj-college',
   },
   {
     id: 'res-17',

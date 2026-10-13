@@ -51,6 +51,12 @@ export const CURATED_COLLEGE_CODES: Record<string, string[]> = {
   'md-college': ['MU6798'],
   'kc-college': ['MU6718'],
   'ruia': ['MU6832'],
+  'ves-college': ['MU6834', 'MU6835'],
+  'sies-nerul': ['MU7012'],
+  'kbp-vashi': ['MU0128'],
+  'pillai-college': ['MU0185'],
+  'chembur-karnataka': ['MU0237'],
+  'rj-college': ['MU6915'],
 };
 
 const codeToCurated = new Map<string, string>();

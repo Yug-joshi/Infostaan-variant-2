@@ -647,16 +647,29 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
                     <div>
-                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Selected</span>
-                      <span className="font-semibold text-[#007DCC]">{selectedLocation}</span>
-                    </div>
-                    <div>
                       <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Region</span>
-                      <span className="font-semibold">{diagnostics.normalizedRegion}</span>
+                      <span className="font-semibold text-[#007DCC] truncate block" title={diagnostics.normalizedRegion}>
+                        {diagnostics.normalizedRegion}
+                      </span>
                     </div>
                     <div>
                       <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Initial Candidates</span>
                       <span className="font-semibold">{diagnostics.initialCandidateCount}</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Resolved Identities</span>
+                      <span className="font-semibold">{diagnostics.candidatesWithResolvedIdentities}</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Verified Locations</span>
+                      <span className="font-semibold">
+                        {diagnostics.candidatesWithVerifiedLocations}
+                        {diagnostics.candidatesWithUnresolvedLocations > 0 && (
+                          <span className="text-slate-400 font-normal text-[10px] ml-1">
+                            ({diagnostics.candidatesWithUnresolvedLocations} unres)
+                          </span>
+                        )}
+                      </span>
                     </div>
                     <div>
                       <span className="text-[10px] text-slate-500 uppercase tracking-wider block">After Location</span>
@@ -667,11 +680,7 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
                       <span className="font-semibold">{diagnostics.remainingAfterAcademicFilter}</span>
                     </div>
                     <div>
-                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Deduplicated</span>
-                      <span className="font-semibold">{diagnostics.countAfterDeduplication}</span>
-                    </div>
-                    <div>
-                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Eligible Scored</span>
+                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Unique Eligible</span>
                       <span className="font-semibold">{diagnostics.totalEligibleScored}</span>
                     </div>
                     <div>

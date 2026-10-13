@@ -67,8 +67,9 @@ export const LOCALITY_ZONES = [
     zone: 'Harbour / Central-East',
     localities: [
       'Chembur', 'Govandi', 'Mankhurd', 'Trombay', 'Deonar', 'Mahul', 'Vashi', 'Sanpada',
-      'Juinagar', 'Nerul', 'Seawoods', 'Belapur', 'Kharghar', 'Panvel', 'Navi Mumbai',
-      'Airoli', 'Ghansoli', 'Koparkhairane'
+      'Juinagar', 'Nerul', 'Seawoods', 'Belapur', 'CBD Belapur', 'Kharghar', 'Panvel', 'New Panvel',
+      'Kamothe', 'Kalamboli', 'Ulwe', 'Dronagiri', 'Uran', 'Turbhe', 'Navi Mumbai',
+      'Airoli', 'Ghansoli', 'Koparkhairane', 'Rabale', 'Mahape'
     ],
   },
 ];
@@ -144,7 +145,13 @@ const CANONICAL_REGION_ALIASES: Record<string, CanonicalRegion> = {
   'harbour line': 'Harbour / Central-East',
   'harbour-line': 'Harbour / Central-East',
   'harbour / central-east': 'Harbour / Central-East',
+  'harbour / central east': 'Harbour / Central-East',
   'central-east': 'Harbour / Central-East',
+  'central east': 'Harbour / Central-East',
+  'harbour-central-east': 'Harbour / Central-East',
+  'harbour central east': 'Harbour / Central-East',
+  'navi mumbai': 'Harbour / Central-East',
+  'navi-mumbai': 'Harbour / Central-East',
 };
 
 /**
@@ -201,9 +208,20 @@ export const resolveCanonicalRegion = (rawText: string | null | undefined): Cano
  * Inspects verified badge, meta, subtitle, and title in order of reliability.
  */
 export const resolveItemCanonicalRegion = (
-  item: SearchResultItem | { title: string; badgeSub?: string; meta?: string[]; subtitle?: string; location?: string; area?: string },
+  item:
+    | SearchResultItem
+    | {
+        title: string;
+        badgeSub?: string;
+        meta?: string[];
+        subtitle?: string;
+        location?: string;
+        area?: string;
+        locality?: string;
+        address?: string;
+      },
 ): CanonicalRegion | null => {
-  // 1. Check badgeSub (e.g., 'Churchgate, South Mumbai', 'Vile Parle West, Western Suburbs')
+  // 1. Check badgeSub (e.g., 'Churchgate, South Mumbai', 'Vile Parle West, Western Suburbs', 'Harbour / Central-East, Mumbai')
   if (item.badgeSub) {
     const reg = resolveCanonicalRegion(item.badgeSub);
     if (reg) return reg;
@@ -223,7 +241,15 @@ export const resolveItemCanonicalRegion = (
     }
   }
 
-  // 3. Check any explicit location / area field
+  // 3. Check explicit locality / address / location / area fields
+  if ('locality' in item && typeof item.locality === 'string' && item.locality) {
+    const reg = resolveCanonicalRegion(item.locality);
+    if (reg) return reg;
+  }
+  if ('address' in item && typeof item.address === 'string' && item.address) {
+    const reg = resolveCanonicalRegion(item.address);
+    if (reg) return reg;
+  }
   if ('location' in item && typeof item.location === 'string' && item.location) {
     const reg = resolveCanonicalRegion(item.location);
     if (reg) return reg;

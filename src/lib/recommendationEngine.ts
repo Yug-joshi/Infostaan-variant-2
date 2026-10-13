@@ -31,6 +31,9 @@ export interface RecommendationDiagnostics {
   normalizedRegion: string;
   initialCandidateCount: number;
   totalCandidatesBeforeFilter: number; // backward compatibility
+  candidatesWithResolvedIdentities: number;
+  candidatesWithVerifiedLocations: number;
+  candidatesWithUnresolvedLocations: number;
   remainingAfterLocationFilter: number;
   remainingAfterAcademicFilter: number;
   countAfterDeduplication: number;
@@ -60,7 +63,7 @@ interface CollegeRecommendationProfile {
   descriptions: Record<string, string>; // Priority-specific descriptions
 }
 
-const COLLEGE_PROFILES: CollegeRecommendationProfile[] = [
+export const COLLEGE_PROFILES: CollegeRecommendationProfile[] = [
   // ── Central Suburbs ────────────────────────────────────────────────────────
   {
     id: 'podar',
@@ -530,6 +533,231 @@ const COLLEGE_PROFILES: CollegeRecommendationProfile[] = [
         'Top-ranked autonomous college in Mulund East serving Bhandup, Mulund and Thane commuters with exceptional academic and fest track records.',
     },
   },
+  {
+    id: 'rj-college',
+    name: 'Ramniranjan Jhunjhunwala College (Autonomous)',
+    canonicalRegion: 'Eastern Suburbs',
+    locationDisplay: 'Ghatkopar West, Eastern Suburbs • 2 min from station',
+    streams: ['Commerce', 'Arts', 'Science'],
+    courses: ['B.Com', 'BMS', 'BAF', 'BBI', 'B.Sc IT', 'B.Sc Data Science', 'BA', 'B.Sc'],
+    morningShift: true,
+    topPlacements: true,
+    autonomousBrand: true,
+    festCulture: true,
+    hasFyjc: true,
+    badges: {
+      'ca-flexibility': 'Ghatkopar Morning Commerce Shift',
+      'brand': 'Autonomous NAAC A Grade Institution',
+      'placements': 'Eastern Suburbs Corporate Placement Cell',
+      default: 'Ghatkopar Autonomous Landmark',
+    },
+    descriptions: {
+      'ca-flexibility':
+        'Early morning lecture shifts situated directly opposite Ghatkopar railway and Metro 1 station, allowing smooth commute for CA articleship.',
+      default:
+        'Premier autonomous multi-faculty institution in Ghatkopar West with NAAC A Grade and active corporate placement partnerships.',
+    },
+  },
+  {
+    id: 'vikas-college',
+    name: 'Vikas College of Arts, Science & Commerce',
+    canonicalRegion: 'Eastern Suburbs',
+    locationDisplay: 'Kannamwar Nagar, Vikhroli East, Eastern Suburbs • 6 min from station',
+    streams: ['Commerce', 'Science', 'Arts'],
+    courses: ['B.Com', 'BMS', 'BAF', 'B.Sc IT'],
+    morningShift: true,
+    topPlacements: false,
+    autonomousBrand: false,
+    festCulture: true,
+    hasFyjc: true,
+    badges: {
+      default: 'Vikhroli East Academic Center',
+    },
+    descriptions: {
+      default:
+        'Established suburban college in Vikhroli East serving Eastern Line students with dedicated commerce and science departments.',
+    },
+  },
+
+  // ── Harbour / Central-East ─────────────────────────────────────────────────
+  {
+    id: 'ves-college',
+    name: "Vivekanand Education Society's College of Arts, Science & Commerce (Autonomous)",
+    canonicalRegion: 'Harbour / Central-East',
+    locationDisplay: 'Sindhi Society, Chembur, Harbour / Central-East • 5 min from station',
+    streams: ['Commerce', 'Arts', 'Science'],
+    courses: ['B.Com', 'BMS', 'BAF', 'BFM', 'BBI', 'B.Sc IT', 'B.Sc Data Science', 'BAMMC'],
+    morningShift: true,
+    topPlacements: true,
+    autonomousBrand: true,
+    festCulture: true,
+    hasFyjc: true,
+    badges: {
+      'ca-flexibility': 'Chembur CA & Finance Morning Shift',
+      'placements': 'Harbour Line Corporate Placement Hub',
+      'brand': 'Autonomous NAAC A Grade Chembur Landmark',
+      'fest': 'Home of Talentia & Illusion Cultural Fests',
+      default: 'Harbour Line Premier Autonomous Campus',
+    },
+    descriptions: {
+      'ca-flexibility':
+        'Early morning lecture schedule (7:00 AM) in Chembur enables students to commute swiftly to Big 4 and financial consulting firms in BKC and South Mumbai.',
+      'placements':
+        'Direct campus recruitment from Deloitte, KPMG, ICICI Bank, TCS, and L&T. Proven placement benchmark across Harbour Line commerce programs.',
+      'brand':
+        'Autonomous NAAC A Grade institution renowned for modern syllabus, rigorous internal evaluations, and strong alumni network.',
+      'fest':
+        'Celebrated cultural life host to Talentia and Illusion youth festivals with dynamic music, drama, and sports societies.',
+      default:
+        'Chembur’s flagship autonomous institution offering comprehensive B.Com, BMS, BAF, and Data Science degrees 5 mins from Chembur station.',
+    },
+  },
+  {
+    id: 'sies-nerul',
+    name: 'SIES College of Arts, Science & Commerce (Nerul)',
+    canonicalRegion: 'Harbour / Central-East',
+    locationDisplay: 'Sector 5, Nerul, Navi Mumbai, Harbour / Central-East • 6 min from station',
+    streams: ['Commerce', 'Arts', 'Science'],
+    courses: ['B.Com', 'BMS', 'BAF', 'BFM', 'BBI', 'B.Sc IT', 'B.Sc Computer Science'],
+    morningShift: true,
+    topPlacements: true,
+    autonomousBrand: true,
+    festCulture: true,
+    hasFyjc: true,
+    badges: {
+      'ca-flexibility': 'Nerul CA & Professional Shift Sync',
+      'placements': 'Premier Navi Mumbai Corporate Recruitment',
+      'brand': 'SIES Autonomous Educational Heritage',
+      'fest': 'Home of Frames Film & Media Festival',
+      default: 'Nerul Premier Commerce & IT Campus',
+    },
+    descriptions: {
+      'ca-flexibility':
+        'Structured morning lectures allow smooth connectivity via Harbour and Trans-Harbour lines for articleship and finance internships.',
+      'placements':
+        'Top-tier placement cell with active recruitment from leading BFSI and IT multinationals across Mumbai and Navi Mumbai tech parks.',
+      'brand':
+        'Prestigious South Indian Education Society institution known for ethical leadership, academic discipline, and modern infrastructure.',
+      'fest':
+        'Host of Frames, one of India’s largest student film festivals, cultivating national-level media, arts, and creative talents.',
+      default:
+        'Leading academic landmark in Nerul, Navi Mumbai with comprehensive degree and junior college programs in commerce and science.',
+    },
+  },
+  {
+    id: 'kbp-vashi',
+    name: 'Karmaveer Bhaurao Patil College (Autonomous), Vashi',
+    canonicalRegion: 'Harbour / Central-East',
+    locationDisplay: 'Sector 15-A, Vashi, Navi Mumbai, Harbour / Central-East • 8 min from station',
+    streams: ['Commerce', 'Arts', 'Science'],
+    courses: ['B.Com', 'BMS', 'BAF', 'BFM', 'BBI', 'B.Sc IT', 'B.Sc Data Science', 'B.Sc'],
+    morningShift: true,
+    topPlacements: true,
+    autonomousBrand: true,
+    festCulture: false,
+    hasFyjc: true,
+    badges: {
+      'placements': 'Vashi Commercial Corridor Placement Cell',
+      'brand': 'Autonomous NAAC A+ Vashi Landmark',
+      'ca-flexibility': 'Vashi Morning Lecture Timetable',
+      default: 'Premier Vashi Autonomous Institution',
+    },
+    descriptions: {
+      'brand':
+        'Rayat Shikshan Sanstha’s flagship autonomous campus in Navi Mumbai with NAAC A+ accreditation (CGPA 3.53) and extensive research laboratories.',
+      'placements':
+        'Strong corporate ties with Vashi and Belapur commercial hubs, facilitating regular campus drives for finance and IT graduates.',
+      default:
+        'Premier autonomous college in Vashi Sector 15-A offering multidisciplinary degree tracks with strong academic rigor.',
+    },
+  },
+  {
+    id: 'pillai-college',
+    name: 'Pillai College of Arts, Commerce & Science (Autonomous)',
+    canonicalRegion: 'Harbour / Central-East',
+    locationDisplay: 'Sector 16, New Panvel, Harbour / Central-East • 10 min from station',
+    streams: ['Commerce', 'Arts', 'Science'],
+    courses: ['B.Com', 'BMS', 'BAF', 'BFM', 'B.Sc IT', 'B.Sc Data Science', 'BAMMC'],
+    morningShift: false,
+    topPlacements: true,
+    autonomousBrand: true,
+    festCulture: true,
+    hasFyjc: true,
+    badges: {
+      'fest': 'Home of Alegria — Festival of Joy',
+      'brand': 'Autonomous NAAC A Grade Panvel Landmark',
+      'placements': 'Navi Mumbai & Panvel Placement Hub',
+      default: 'Autonomous Panvel Multidisciplinary Campus',
+    },
+    descriptions: {
+      'fest':
+        'Home to Alegria, Mumbai Metropolitan Region’s premier mega youth festival featuring global artists and unmatched student leadership opportunities.',
+      'brand':
+        'Autonomous campus with cutting-edge media studios, FinTech analytics labs, and industry-sponsored certification tracks.',
+      default:
+        'Sprawling modern campus in New Panvel serving students across the Harbour corridor with autonomous degree choices.',
+    },
+  },
+  {
+    id: 'chembur-karnataka',
+    name: 'Chembur Karnataka College of Arts, Science & Commerce',
+    canonicalRegion: 'Harbour / Central-East',
+    locationDisplay: 'Vidyasagar, Chembur, Harbour / Central-East • 6 min from station',
+    streams: ['Commerce', 'Arts', 'Science'],
+    courses: ['B.Com', 'BMS', 'BAF', 'B.Sc'],
+    morningShift: true,
+    topPlacements: false,
+    autonomousBrand: false,
+    festCulture: true,
+    hasFyjc: true,
+    badges: {
+      default: 'Chembur Central-East Commerce & Science Hub',
+    },
+    descriptions: {
+      default:
+        'Longstanding Chembur institution with dedicated commerce and science departments, convenient to Harbour line commuters.',
+    },
+  },
+  {
+    id: 'western-sanpada',
+    name: 'Western College of Commerce & Business Management',
+    canonicalRegion: 'Harbour / Central-East',
+    locationDisplay: 'Sector 9, Sanpada, Navi Mumbai, Harbour / Central-East • 5 min from station',
+    streams: ['Commerce'],
+    courses: ['B.Com', 'BMS', 'BAF', 'B.Sc IT'],
+    morningShift: true,
+    topPlacements: true,
+    autonomousBrand: false,
+    festCulture: false,
+    hasFyjc: true,
+    badges: {
+      default: 'Sanpada Navi Mumbai Commerce Center',
+    },
+    descriptions: {
+      default:
+        'Conveniently located 5 mins from Sanpada station on the Harbour Line, offering career-oriented undergraduate commerce and IT programs.',
+    },
+  },
+  {
+    id: 'sterling-nerul',
+    name: 'Sterling College of Arts, Commerce & Science',
+    canonicalRegion: 'Harbour / Central-East',
+    locationDisplay: 'Sector 19, Nerul, Navi Mumbai, Harbour / Central-East • 7 min from station',
+    streams: ['Commerce', 'Science'],
+    courses: ['B.Com', 'BMS', 'BAF', 'B.Sc IT'],
+    morningShift: true,
+    topPlacements: false,
+    autonomousBrand: false,
+    festCulture: true,
+    hasFyjc: true,
+    badges: {
+      default: 'Nerul Seawoods Corridor College',
+    },
+    descriptions: {
+      default:
+        'Accessible college in Nerul close to Seawoods Grand Central, serving students across the Harbour corridor.',
+    },
+  },
 ];
 
 /**
@@ -582,27 +810,54 @@ export function generateRecommendations(
 export function getRecommendationDiagnostics(
   query: RecommendationQuery
 ): RecommendationDiagnostics {
-  // Step A: Collect user answers
+  // Step 1: Collect user answers & Step 2: Normalize location preference
   const { stage, interests = [], location, priority = 'ca-flexibility', limit } = query;
-
-  // Step B: Normalize location preference
   const normalizedRegion = normalizeLocationPreference(location);
 
-  // Step C: Retrieve candidate colleges from verified master profiles with strict deduplication
+  // Step 3: Load real candidate colleges and resolve identities & verified locations
+  const rawCandidates = COLLEGE_PROFILES;
+  const initialCandidateCount = rawCandidates.length;
+
+  let candidatesWithResolvedIdentities = 0;
+  let candidatesWithVerifiedLocations = 0;
+  let candidatesWithUnresolvedLocations = 0;
   const uniqueCandidateMap = new Map<string, CollegeRecommendationProfile>();
-  for (const profile of COLLEGE_PROFILES) {
+
+  for (const profile of rawCandidates) {
+    if (profile.id && profile.name) {
+      candidatesWithResolvedIdentities++;
+    }
+    const isVerifiedLoc =
+      Boolean(profile.canonicalRegion) &&
+      ['South Mumbai', 'Western Suburbs', 'Central Suburbs', 'Eastern Suburbs', 'Harbour / Central-East'].includes(
+        profile.canonicalRegion
+      );
+
+    if (isVerifiedLoc) {
+      candidatesWithVerifiedLocations++;
+    } else {
+      candidatesWithUnresolvedLocations++;
+    }
+
     if (!uniqueCandidateMap.has(profile.id)) {
       uniqueCandidateMap.set(profile.id, profile);
     }
   }
-  const initialCandidates = Array.from(uniqueCandidateMap.values());
-  const initialCandidateCount = initialCandidates.length;
-  const totalCandidatesBeforeFilter = initialCandidateCount;
 
-  // Step D: Apply location eligibility constraint (HARD FILTER)
+  const initialCandidates = Array.from(uniqueCandidateMap.values());
+  const totalCandidatesBeforeFilter = initialCandidates.length;
+
+  // Step 4: Apply location eligibility constraint (HARD FILTER)
   // If a region is specified, colleges MUST belong strictly to that canonical region.
   const locationEligible = initialCandidates.filter((col) => {
-    if (normalizedRegion === 'All Mumbai') return true;
+    if (normalizedRegion === 'All Mumbai') {
+      return (
+        col.canonicalRegion &&
+        ['South Mumbai', 'Western Suburbs', 'Central Suburbs', 'Eastern Suburbs', 'Harbour / Central-East'].includes(
+          col.canonicalRegion
+        )
+      );
+    }
     return col.canonicalRegion === normalizedRegion;
   });
 
@@ -616,6 +871,9 @@ export function getRecommendationDiagnostics(
       normalizedRegion,
       initialCandidateCount,
       totalCandidatesBeforeFilter,
+      candidatesWithResolvedIdentities,
+      candidatesWithVerifiedLocations,
+      candidatesWithUnresolvedLocations,
       remainingAfterLocationFilter: 0,
       remainingAfterAcademicFilter: 0,
       countAfterDeduplication: 0,
@@ -749,6 +1007,9 @@ export function getRecommendationDiagnostics(
     normalizedRegion,
     initialCandidateCount,
     totalCandidatesBeforeFilter,
+    candidatesWithResolvedIdentities,
+    candidatesWithVerifiedLocations,
+    candidatesWithUnresolvedLocations,
     remainingAfterLocationFilter,
     remainingAfterAcademicFilter,
     countAfterDeduplication,
