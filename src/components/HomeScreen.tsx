@@ -21,6 +21,7 @@ import gradCapImg from '../assets/images/grad_cap.png';
 import gsap from 'gsap';
 import { ScrollStorySection } from './ScrollStorySection';
 import { ConnectCarousel } from './ConnectCarousel';
+import { InstagramReelCarousel } from './InstagramReelCarousel';
 import { MascotArt } from './MascotArt';
 
 import { FilterCategoryType } from './CategoryFilterModal';
@@ -246,20 +247,20 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             {/* Search */}
             <div className="w-full max-w-3xl mb-8 relative z-[60]">
               <form onSubmit={handleSubmit} className="relative w-full group">
-                <div className="flex items-center bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 rounded-full shadow-lg shadow-black/5 dark:shadow-2xl transition-all duration-300 focus-within:border-slate-400 dark:focus-within:border-amber-400/40 focus-within:ring-4 focus-within:ring-slate-900/5 dark:focus-within:ring-amber-400/10 px-3 py-2 sm:px-4">
-                  <Search className="text-slate-400 dark:text-slate-300 w-6 h-6 ml-3 shrink-0" />
+                <div className="flex items-center bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 rounded-full shadow-lg shadow-black/5 dark:shadow-2xl transition-all duration-300 focus-within:border-slate-400 dark:focus-within:border-amber-400/40 focus-within:ring-4 focus-within:ring-slate-900/5 dark:focus-within:ring-amber-400/10 px-3 py-1.5 sm:px-4 sm:py-2">
+                  <Search className="text-slate-400 dark:text-slate-300 w-5 h-5 sm:w-6 sm:h-6 ml-1.5 sm:ml-3 shrink-0" />
                   <input
                     id="main-query-input"
                     type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Search colleges, courses, careers, classes..."
-                    className="w-full bg-transparent border-none text-slate-900 dark:text-[#F8FAFC] font-medium text-sm sm:text-base px-4 py-3 sm:py-4 focus:outline-none focus:ring-0 placeholder:text-slate-400 dark:placeholder-[#71839A]"
+                    className="w-full bg-transparent border-none text-slate-900 dark:text-[#F8FAFC] font-medium text-xs sm:text-base px-2 sm:px-4 py-2 sm:py-3 focus:outline-none focus:ring-0 placeholder:text-slate-400 dark:placeholder-[#71839A] min-w-0"
                     autoComplete="off"
                   />
                   <button
                     type="submit"
-                    className="bg-slate-950 hover:bg-black text-white font-bold px-6 sm:px-8 py-3 rounded-full transition-all duration-200 shadow-sm transform active:scale-95"
+                    className="bg-slate-950 hover:bg-black text-white font-bold px-5 sm:px-8 py-2.5 sm:py-3 rounded-full transition-all duration-200 shadow-sm transform active:scale-95 text-xs sm:text-sm shrink-0"
                   >
                     Search
                   </button>
@@ -299,9 +300,9 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               </form>
 
               {/* Contextual Suggestions */}
-              <div className="h-6 mt-4">
+              <div className="min-h-6 mt-4">
                 {query.trim().length === 0 && (
-                  <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-2 text-xs sm:text-sm text-slate-500 dark:text-[#71839A]">
+                  <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 px-2 text-xs sm:text-sm text-slate-500 dark:text-[#71839A]">
                     <button type="button" onClick={() => onSearch('B.Com colleges in Mumbai')} className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">B.Com colleges</button>
                     <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-[#71839A]/40" />
                     <button type="button" onClick={() => onSearch('CA courses')} className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">CA courses</button>
@@ -315,19 +316,88 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
         </div>
 
-        <div className="lg:hidden mt-4 flex justify-center">
-          <MascotArt variant="welcome" className="w-full max-w-[180px]" alt="InfoBuddy mascot welcoming students to the platform" />
+        {/* Mobile Discovery Shortcuts (Row 1: Colleges, Courses, Careers | Row 2: Classes, Cutoffs side by side) */}
+        <div className="sm:hidden flex flex-col items-center justify-center gap-3 w-full mb-6 relative z-50">
+          <div className="flex items-center justify-center gap-3 w-full">
+            {([
+              { name: 'Colleges', cat: 'colleges' as const, icon: Building2, action: () => onOpenCategoryFilter('colleges') },
+              { name: 'Courses', cat: 'courses' as const, icon: GraduationCap, action: () => onOpenCategoryFilter('courses') },
+              { name: 'Careers', cat: 'careers' as const, icon: TrendingUp, action: () => onOpenCategoryFilter('careers') },
+            ]).map((item) => {
+              const IconComp = item.icon;
+              const accent = getCategoryAccent(item.cat);
+              return (
+                <button
+                  key={item.name}
+                  type="button"
+                  onClick={item.action}
+                  style={{
+                    background: accent.bgLight,
+                    borderColor: accent.borderLight,
+                  }}
+                  className="flex flex-col items-center justify-center gap-1.5 w-[84px] py-3.5 rounded-2xl border transition-all duration-200 active:scale-95 shadow-sm hover:shadow-md cursor-pointer group shrink-0"
+                >
+                  <span
+                    className="flex items-center justify-center w-9 h-9 rounded-xl transition-transform duration-200 group-hover:scale-110"
+                    style={{ background: accent.bgDark }}
+                  >
+                    <IconComp className="w-[18px] h-[18px]" style={{ color: accent.color }} />
+                  </span>
+                  <span
+                    className="text-[11px] font-semibold leading-tight text-center"
+                    style={{ color: accent.chipText }}
+                  >
+                    {item.name}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+          <div className="flex items-center justify-center gap-3 w-full">
+            {([
+              { name: 'Classes', cat: 'classes' as const, icon: MonitorPlay, action: onOpenClasses },
+              { name: 'Cutoffs', cat: 'cutoffs' as const, icon: BarChart2, action: onOpenCutoff },
+            ]).map((item) => {
+              const IconComp = item.icon;
+              const accent = getCategoryAccent(item.cat);
+              return (
+                <button
+                  key={item.name}
+                  type="button"
+                  onClick={item.action}
+                  style={{
+                    background: accent.bgLight,
+                    borderColor: accent.borderLight,
+                  }}
+                  className="flex flex-col items-center justify-center gap-1.5 w-[84px] py-3.5 rounded-2xl border transition-all duration-200 active:scale-95 shadow-sm hover:shadow-md cursor-pointer group shrink-0"
+                >
+                  <span
+                    className="flex items-center justify-center w-9 h-9 rounded-xl transition-transform duration-200 group-hover:scale-110"
+                    style={{ background: accent.bgDark }}
+                  >
+                    <IconComp className="w-[18px] h-[18px]" style={{ color: accent.color }} />
+                  </span>
+                  <span
+                    className="text-[11px] font-semibold leading-tight text-center"
+                    style={{ color: accent.chipText }}
+                  >
+                    {item.name}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
         </div>
 
-        {/* Discovery Shortcuts (Centered and balanced) */}
-        <div className="w-full max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-6 relative z-50">
+        {/* Desktop Discovery Shortcuts (Preserved single-row layout) */}
+        <div className="hidden sm:flex w-full max-w-4xl mx-auto flex-wrap items-center justify-center gap-3 sm:gap-4 mb-6 relative z-50">
           {([
-            { name: 'Colleges', cat: 'colleges', icon: Building2, action: () => onOpenCategoryFilter('colleges') },
-            { name: 'Courses', cat: 'courses', icon: GraduationCap, action: () => onOpenCategoryFilter('courses') },
-            { name: 'Careers', cat: 'careers', icon: TrendingUp, action: () => onOpenCategoryFilter('careers') },
-            { name: 'Classes', cat: 'classes', icon: MonitorPlay, action: onOpenClasses },
-            { name: 'Cutoffs', cat: 'cutoffs', icon: BarChart2, action: onOpenCutoff },
-          ] as const).map((item) => {
+            { name: 'Colleges', cat: 'colleges' as const, icon: Building2, action: () => onOpenCategoryFilter('colleges') },
+            { name: 'Courses', cat: 'courses' as const, icon: GraduationCap, action: () => onOpenCategoryFilter('courses') },
+            { name: 'Careers', cat: 'careers' as const, icon: TrendingUp, action: () => onOpenCategoryFilter('careers') },
+            { name: 'Classes', cat: 'classes' as const, icon: MonitorPlay, action: onOpenClasses },
+            { name: 'Cutoffs', cat: 'cutoffs' as const, icon: BarChart2, action: onOpenCutoff },
+          ]).map((item) => {
             const IconComp = item.icon;
             const accent = getCategoryAccent(item.cat);
             return (
@@ -339,7 +409,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                   background: accent.bgLight,
                   borderColor: accent.borderLight,
                 }}
-                className="flex flex-col items-center justify-center gap-1.5 w-[72px] sm:w-20 py-3.5 sm:py-4 rounded-2xl border transition-all duration-200 active:scale-95 shadow-sm hover:shadow-md cursor-pointer group"
+                className="flex flex-col items-center justify-center gap-1.5 w-20 py-4 rounded-2xl border transition-all duration-200 active:scale-95 shadow-sm hover:shadow-md cursor-pointer group shrink-0"
               >
                 <span
                   className="flex items-center justify-center w-9 h-9 rounded-xl transition-transform duration-200 group-hover:scale-110"
@@ -348,7 +418,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                   <IconComp className="w-[18px] h-[18px]" style={{ color: accent.color }} />
                 </span>
                 <span
-                  className="text-[11px] sm:text-xs font-semibold leading-tight text-center"
+                  className="text-xs font-semibold leading-tight text-center"
                   style={{ color: accent.chipText }}
                 >
                   {item.name}
@@ -358,9 +428,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           })}
         </div>
 
-
         {/* Help Me Decide Button (Directly below shortcut options under search bar) */}
-        <div className="relative z-50 mb-10 flex justify-center">
+        <div className="relative z-50 mb-6 flex justify-center">
           <button
             onClick={() => onNavigate('guidance')}
             className="px-8 py-3.5 rounded-full bg-slate-950 hover:bg-black text-white font-semibold transition-all shadow-md hover:shadow-lg flex items-center gap-2 group backdrop-blur-sm border border-white/10 cursor-pointer"
@@ -369,11 +438,25 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
+
+        {/* Mobile Mascot: Positioned below Help Me Decide */}
+        <div className="lg:hidden mt-2 mb-8 flex justify-center">
+          <MascotArt
+            variant="welcome"
+            className="w-full max-w-[170px] sm:max-w-[190px] h-auto object-contain drop-shadow-sm"
+            alt="InfoBuddy mascot welcoming students to the platform"
+          />
+        </div>
       </div>
 
       {/* Infostaan Connect Carousel */}
       <div className="w-full my-6">
         <ConnectCarousel onNavigate={onNavigate} />
+      </div>
+
+      {/* Instagram Reel Carousel */}
+      <div className="w-full my-6">
+        <InstagramReelCarousel />
       </div>
 
       <div className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center">

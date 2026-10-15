@@ -237,41 +237,42 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
 
               {rawFyjc.length > 0 ? (
                 <div className="flex gap-8 z-10 items-center mt-2">
-                  <div className="flex-1 max-w-xs">
+                  <div className="flex-1 max-w-xs flex flex-col justify-center">
                     {activeCutoffRecord ? (
-                      <div className="flex flex-col">
-                        <div className="flex items-baseline gap-3">
-                          <span className="text-[5rem] font-black text-[#007DCC] dark:text-[#51dcbc] tracking-tight leading-none">
-                            {activeCutoffRecord.cutoff.toFixed(2)}%
-                          </span>
-                          <span className="text-sm font-semibold text-slate-500 dark:text-[#A9B8CA]">
-                            ({Math.round((activeCutoffRecord.cutoff / 100) * 500)} / 500)
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-2 mt-4">
-                          <span className="text-sm font-semibold text-slate-600 dark:text-[#A9B8CA]">{selectedStream} •</span>
-                          <select
-                            value={selectedCategory}
-                            onChange={(e) => setSelectedCategory(e.target.value)}
-                            className="appearance-none bg-transparent text-sm font-bold text-[#007DCC] dark:text-[#86cfff] outline-none cursor-pointer pr-4 relative z-10"
-                            style={{ backgroundImage: 'url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22%23007DCC%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right center', backgroundSize: '10px' }}
-                          >
-                            {availableCategories.map((cat) => (
-                              <option key={`desktop-cat-${cat}`} value={cat} className="text-slate-900">
-                                {cat} Category
-                              </option>
-                            ))}
-                          </select>
-                        </div>
+                      <div className="flex items-baseline gap-3">
+                        <span className="text-[5rem] font-black text-[#007DCC] dark:text-[#51dcbc] tracking-tight leading-none">
+                          {activeCutoffRecord.cutoff.toFixed(2)}%
+                        </span>
+                        <span className="text-sm font-semibold text-slate-500 dark:text-[#A9B8CA]">
+                          ({Math.round((activeCutoffRecord.cutoff / 100) * 500)} / 500)
+                        </span>
                       </div>
                     ) : (
-                      <div className="py-3">
-                        <span className="text-2xl font-bold text-slate-400">Not Available</span>
-                        <p className="text-xs text-slate-500 mt-1">
+                      <div className="py-2">
+                        <span className="text-3xl font-extrabold text-slate-400 dark:text-slate-500 tracking-tight">
+                          Not Available
+                        </span>
+                        <p className="text-xs text-slate-500 dark:text-[#71839A] mt-1">
                           No {selectedCategory} record for {selectedStream} stream.
                         </p>
                       </div>
                     )}
+
+                    <div className="flex items-center gap-2 mt-4">
+                      <span className="text-sm font-semibold text-slate-600 dark:text-[#A9B8CA]">{selectedStream} •</span>
+                      <select
+                        value={selectedCategory}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                        className="appearance-none bg-transparent text-sm font-bold text-[#007DCC] dark:text-[#86cfff] outline-none cursor-pointer pr-4 relative z-10"
+                        style={{ backgroundImage: 'url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22%23007DCC%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right center', backgroundSize: '10px' }}
+                      >
+                        {availableCategories.map((cat) => (
+                          <option key={`desktop-cat-${cat}`} value={cat} className="text-slate-900 dark:text-slate-100 bg-white dark:bg-[#0D1828]">
+                            {cat} Category
+                          </option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
 
                   <div className="flex-[1.5] flex flex-col justify-center border-l border-blue-200/60 dark:border-blue-800/40 pl-8">
@@ -521,7 +522,7 @@ export const CollegeDetailScreen: React.FC<CollegeDetailScreenProps> = ({
                           className="appearance-none pr-8 pl-3 py-1.5 rounded-xl font-bold text-xs sm:text-sm bg-white dark:bg-[#162232] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-[#F4F7FB] outline-none focus:border-[#007DCC] cursor-pointer shadow-2xs"
                         >
                           {availableCategories.map((cat) => (
-                            <option key={cat} value={cat}>
+                            <option key={cat} value={cat} className="text-slate-900 dark:text-slate-100 bg-white dark:bg-[#0D1828]">
                               {cat} Category
                             </option>
                           ))}
