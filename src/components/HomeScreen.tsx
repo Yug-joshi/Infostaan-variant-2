@@ -241,7 +241,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
             {/* Main Headline */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB] mb-6 leading-tight">
-              What are you <span className="marker-highlight">looking for</span>?
+              What are you <span className="marker-highlight font-playwrite-au-nsw text-white dark:text-yellow-400">looking for?</span>
             </h1>
 
             {/* Search */}
@@ -406,10 +406,10 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 type="button"
                 onClick={item.action}
                 style={{
-                  background: accent.bgLight,
+                  background: `color-mix(in srgb, ${accent.bgLight} 92%, transparent)`,
                   borderColor: accent.borderLight,
                 }}
-                className="flex flex-col items-center justify-center gap-1.5 w-20 py-4 rounded-2xl border transition-all duration-200 active:scale-95 shadow-sm hover:shadow-md cursor-pointer group shrink-0"
+                className="flex flex-col items-center justify-center gap-1.5 w-20 py-4 rounded-2xl border border-white/50 backdrop-blur-md ring-1 ring-inset ring-white/40 transition-all duration-200 active:scale-95 shadow-sm hover:shadow-md cursor-pointer group shrink-0"
               >
                 <span
                   className="flex items-center justify-center w-9 h-9 rounded-xl transition-transform duration-200 group-hover:scale-110"

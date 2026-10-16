@@ -9,7 +9,6 @@ import {
   Sun,
   Moon,
   User,
-  MapPin,
   ArrowRight,
   GraduationCap,
   TrendingUp,
@@ -179,9 +178,6 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
         <div ref={navItemsRef} className="flex-1 overflow-y-auto px-4 py-5 space-y-6">
           {/* Main Navigation */}
           <div>
-            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-[#8a919c] px-3 mb-2 block">
-              Navigation
-            </span>
             <div className="space-y-1">
               <button
                 type="button"
@@ -195,7 +191,6 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                   <Compass className="w-4 h-4 shrink-0" />
                   <span>Home</span>
                 </div>
-                <ArrowRight className="w-4 h-4 opacity-50" />
               </button>
 
               <button
@@ -210,9 +205,6 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                   <Sparkles className="w-4 h-4 shrink-0 text-amber-500 dark:text-amber-400" />
                   <span>Career Roadmap & Guide</span>
                 </div>
-                <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-300">
-                  New
-                </span>
               </button>
 
               <button
@@ -227,7 +219,6 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                   <FileText className="w-4 h-4 shrink-0 text-amber-500 dark:text-amber-400" />
                   <span>PDF Resources</span>
                 </div>
-                <ArrowRight className="w-4 h-4 opacity-50" />
               </button>
 
               <button
@@ -298,9 +289,6 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
 
           {/* Quick Categories */}
           <div>
-            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-[#8a919c] px-3 mb-2 block">
-              Quick Filter By Type
-            </span>
             <div className="grid grid-cols-2 gap-2">
               {[
                 { label: 'Colleges', id: 'colleges', icon: School },
@@ -333,59 +321,7 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
               })}
             </div>
           </div>
-
-          {/* Top Mumbai Colleges Shortcuts */}
-          <div>
-            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-[#8a919c] px-3 mb-2 block">
-              Top Mumbai Institutions
-            </span>
-            <div className="space-y-1.5">
-              {[
-                {
-                  id: 'hinduja',
-                  name: 'K.P.B. Hinduja College',
-                  area: 'Charni Road • CA Schedule',
-                },
-                {
-                  id: 'mithibai',
-                  name: 'Mithibai College',
-                  area: 'Vile Parle • Autonomous',
-                },
-                {
-                  id: 'podar',
-                  name: 'R.A. Podar College',
-                  area: 'Matunga • Central Line',
-                },
-                {
-                  id: 'hr-college',
-                  name: 'H.R. College',
-                  area: 'Churchgate • Finance',
-                },
-                {
-                  id: 'jai-hind',
-                  name: 'Jai Hind College',
-                  area: 'Marine Drive • Placements',
-                },
-              ].map((col) => (
-                <button
-                  key={col.id}
-                  type="button"
-                  onClick={() => selectCollegeAndClose(col.id)}
-                  className="sidebar-anim-item w-full flex items-center justify-between p-2.5 rounded-xl bg-slate-50 dark:bg-[#161c27] border border-slate-200/60 dark:border-white/5 hover:bg-slate-100 dark:hover:bg-[#1f2838] transition-colors text-left group"
-                >
-                  <div>
-                    <p className="text-xs font-semibold text-slate-900 dark:text-[#F8FAFC] group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
-                      {col.name}
-                    </p>
-                    <p className="text-[11px] text-slate-500 dark:text-[#A9B8CA]">
-                      {col.area}
-                    </p>
-                  </div>
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:translate-x-0.5 group-hover:text-amber-600 transition-all" />
-                </button>
-              ))}
-            </div>
-          </div>
+          
         </div>
 
         {/* Footer / Controls */}

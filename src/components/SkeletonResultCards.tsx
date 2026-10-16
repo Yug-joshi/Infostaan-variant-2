@@ -7,7 +7,7 @@ export const SkeletonResultCards: React.FC = () => {
       {[1, 2, 3].map((key) => (
         <article
           key={key}
-          className="relative p-5 sm:p-6 bg-white dark:bg-[#161c27] rounded-xl border border-slate-200 dark:border-[#D3B5E8]/10 shadow-xs animate-pulse overflow-hidden"
+          className="relative w-[calc(100%-2rem)] mx-auto sm:w-full sm:mx-0 p-5 sm:p-6 bg-white dark:bg-[#161c27] rounded-xl border border-slate-200 dark:border-[#D3B5E8]/10 shadow-xs animate-pulse overflow-hidden"
         >
           {/* Subtle scanning gradient effect */}
           <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 dark:via-white/5 to-transparent animate-[shimmer_1.5s_infinite]"></div>

@@ -581,7 +581,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
               <SkeletonResultCards />
             ) : (
               <>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 px-4 sm:px-0">
                   {filteredResults.length === 0 ? (
                     <div className="col-span-full w-full max-w-xl mx-auto p-6 sm:p-10 text-center rounded-2xl bg-white dark:bg-[#0D1828] text-slate-600 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 shadow-xs">
                       <div className="mx-auto mb-5 w-28 sm:w-32">
