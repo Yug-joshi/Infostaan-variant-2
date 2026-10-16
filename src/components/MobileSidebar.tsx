@@ -14,6 +14,8 @@ import {
   GraduationCap,
   TrendingUp,
   Home,
+  FileText,
+  ShoppingCart,
 } from 'lucide-react';
 import { ScreenType } from '../types';
 import { useTheme } from '../context/ThemeContext';
@@ -215,15 +217,15 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
 
               <button
                 type="button"
-                onClick={() => navigateAndClose('/dashboard')}
-                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/dashboard'
+                onClick={() => navigateAndClose('/pdf-resources')}
+                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath.startsWith('/pdf-resources')
                   ? 'bg-slate-950 dark:bg-amber-500 text-white dark:text-slate-950 shadow-xs'
                   : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
                   }`}
               >
                 <div className="flex items-center gap-3">
-                  <TrendingUp className="w-4 h-4 shrink-0" />
-                  <span>Infostaan Connect</span>
+                  <FileText className="w-4 h-4 shrink-0 text-amber-500 dark:text-amber-400" />
+                  <span>PDF Resources</span>
                 </div>
                 <ArrowRight className="w-4 h-4 opacity-50" />
               </button>
@@ -245,6 +247,51 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                     {savedCount}
                   </span>
                 )}
+              </button>
+
+              <button
+                type="button"
+                onClick={() => navigateAndClose('/cart')}
+                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/cart'
+                  ? 'bg-slate-950 dark:bg-amber-500 text-white dark:text-slate-950 shadow-xs'
+                  : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
+                  }`}
+              >
+                <div className="flex items-center gap-3">
+                  <ShoppingCart className="w-4 h-4 shrink-0" />
+                  <span>Cart & Checkout</span>
+                </div>
+                <ArrowRight className="w-4 h-4 opacity-50" />
+              </button>
+
+              <button
+                type="button"
+                onClick={() => navigateAndClose('/my-purchases')}
+                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/my-purchases'
+                  ? 'bg-slate-950 dark:bg-amber-500 text-white dark:text-slate-950 shadow-xs'
+                  : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
+                  }`}
+              >
+                <div className="flex items-center gap-3">
+                  <FileText className="w-4 h-4 shrink-0 opacity-70" />
+                  <span>My Purchases</span>
+                </div>
+                <ArrowRight className="w-4 h-4 opacity-50" />
+              </button>
+
+              <button
+                type="button"
+                onClick={() => navigateAndClose('/dashboard')}
+                className={`sidebar-anim-item w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all text-left ${currentPath === '/dashboard'
+                  ? 'bg-slate-950 dark:bg-amber-500 text-white dark:text-slate-950 shadow-xs'
+                  : 'text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-100 dark:hover:bg-[#161c27] hover:text-slate-900 dark:hover:text-white'
+                  }`}
+              >
+                <div className="flex items-center gap-3">
+                  <TrendingUp className="w-4 h-4 shrink-0" />
+                  <span>Infostaan Connect</span>
+                </div>
+                <ArrowRight className="w-4 h-4 opacity-50" />
               </button>
             </div>
           </div>

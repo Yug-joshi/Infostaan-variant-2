@@ -1,6 +1,7 @@
 import React from 'react';
-import { User, Bookmark, Search, Menu, Users, Sun, Moon } from 'lucide-react';
+import { User, Bookmark, Search, Menu, Users, Sun, Moon, ShoppingCart } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import { useCart } from '../context/CartContext';
 import logoImg from '../assets/logo.png';
 
 import { Link, useLocation } from 'react-router-dom';
@@ -17,6 +18,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenMobileSidebar,
 }) => {
   const { theme, toggleTheme } = useTheme();
+  const { cartCount } = useCart();
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -75,6 +77,16 @@ export const Navbar: React.FC<NavbarProps> = ({
             Guidance
           </Link>
           <Link
+            to="/pdf-resources"
+            className={`transition-colors hover:text-slate-900 dark:hover:text-[#F4F7FB] ${
+              currentPath.startsWith('/pdf-resources')
+                ? 'text-slate-950 dark:text-white font-bold'
+                : ''
+            }`}
+          >
+            PDF Resources
+          </Link>
+          <Link
             to="/saved"
             className={`transition-colors hover:text-slate-900 dark:hover:text-[#F4F7FB] flex items-center gap-1.5 ${
               currentPath === '/saved'
@@ -104,9 +116,21 @@ export const Navbar: React.FC<NavbarProps> = ({
           </Link>
         </nav>
 
-        {/* Right Actions: Sign In */}
-        <div className="flex-1 flex items-center justify-end gap-3 sm:gap-5">
-
+        {/* Right Actions: Cart, Theme, Sign In */}
+        <div className="flex-1 flex items-center justify-end gap-2.5 sm:gap-4">
+          {/* Cart Button */}
+          <Link
+            to="/cart"
+            aria-label="Shopping Cart"
+            className="p-2 text-slate-600 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors relative rounded-xl hover:bg-slate-100 dark:hover:bg-white/5 focus:outline-none"
+          >
+            <ShoppingCart className="w-5 h-5" />
+            {cartCount > 0 && (
+              <span className="absolute 0 top-1 right-1 w-4 h-4 rounded-full bg-amber-500 text-slate-950 text-[10px] font-extrabold flex items-center justify-center">
+                {cartCount}
+              </span>
+            )}
+          </Link>
 
           {/* Theme Toggle Button */}
           <button
@@ -120,8 +144,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               <Sun className="w-5 h-5" />
             )}
           </button>
-
-
 
           <button
             onClick={onOpenSignIn}

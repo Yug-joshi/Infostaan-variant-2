@@ -25,6 +25,12 @@ import logoImg from './assets/logo.png';
 import gsap from 'gsap';
 import { MascotArt } from './components/MascotArt';
 import ClassDetailScreen from './components/ClassDetailScreen';
+import { PDFResource } from './types';
+import { PdfListingScreen } from './components/pdf/PdfListingScreen';
+import { PdfDetailScreen } from './components/pdf/PdfDetailScreen';
+import { CartScreen } from './components/cart/CartScreen';
+import { CheckoutScreen } from './components/checkout/CheckoutScreen';
+import { MyPurchasesScreen } from './components/purchases/MyPurchasesScreen';
 export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -263,6 +269,35 @@ export default function App() {
     }
   };
 
+  const isPdfSaved = (pdfId: string) => {
+    return savedItems.some((i) => i.id === `pdf-${pdfId}` || i.pdfId === pdfId);
+  };
+
+  const handleToggleSavePdf = (pdf: PDFResource) => {
+    if (isPdfSaved(pdf.id)) {
+      setSavedItems(savedItems.filter((i) => i.id !== `pdf-${pdf.id}` && i.pdfId !== pdf.id));
+      showToast('Removed publication from shortlist');
+    } else {
+      const newItem: ShortlistItem = {
+        id: `pdf-${pdf.id}`,
+        category: 'pdf',
+        title: pdf.title,
+        regionBadge: pdf.category,
+        badgeType: 'PDF RESOURCE',
+        locationInfo: `₹${pdf.price} • ${pdf.pages} Pages • ${pdf.edition}`,
+        timeSavedText: 'Saved just now',
+        lineText: pdf.category,
+        iconType: 'file_text',
+        canCompare: false,
+        pdfId: pdf.id,
+        pdfSlug: pdf.slug,
+        price: pdf.price,
+      };
+      setSavedItems([newItem, ...savedItems]);
+      showToast('Saved to shortlist!', 'success');
+    }
+  };
+
   const handleRemoveSavedItem = (id: string) => {
     setSavedItems(savedItems.filter((item) => item.id !== id));
     showToast('Item removed from shortlist');
@@ -420,6 +455,44 @@ export default function App() {
             />
           } />
 
+          <Route path="/pdf-resources" element={
+            <PdfListingScreen
+              onNavigate={(path) => navigate(path)}
+              onSavePdf={handleToggleSavePdf}
+              isSaved={isPdfSaved}
+              onToast={showToast}
+            />
+          } />
+
+          <Route path="/pdf-resources/:slug" element={
+            <PdfDetailScreen
+              onNavigate={(path) => navigate(path)}
+              onSavePdf={handleToggleSavePdf}
+              isSaved={isPdfSaved}
+              onToast={showToast}
+            />
+          } />
+
+          <Route path="/cart" element={
+            <CartScreen
+              onNavigate={(path) => navigate(path)}
+              onToast={showToast}
+            />
+          } />
+
+          <Route path="/checkout" element={
+            <CheckoutScreen
+              onNavigate={(path) => navigate(path)}
+              onToast={showToast}
+            />
+          } />
+
+          <Route path="/my-purchases" element={
+            <MyPurchasesScreen
+              onNavigate={(path) => navigate(path)}
+            />
+          } />
+
           <Route path="/saved" element={
             <ShortlistScreen
               savedItems={savedItems}
@@ -427,6 +500,7 @@ export default function App() {
               onOpenCompare={handleOpenCompare}
               onSelectCollege={handleSelectCollege}
               onNavigate={(path) => navigate(path)}
+              onToast={showToast}
             />
           } />
 
@@ -460,6 +534,8 @@ export default function App() {
           } />
 
           {/* Legacy and unsupported route fallbacks */}
+          <Route path="/pdfs" element={<Navigate to="/pdf-resources" replace />} />
+          <Route path="/purchases" element={<Navigate to="/my-purchases" replace />} />
           <Route path="/guidance" element={<Navigate to="/help-me-decide" replace />} />
           <Route path="/connect" element={<Navigate to="/dashboard" replace />} />
           <Route path="/explore" element={<Navigate to="/" replace />} />

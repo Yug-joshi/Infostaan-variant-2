@@ -10,8 +10,12 @@ import {
   Train,
   Sparkles,
   Columns2,
+  FileText,
+  ShoppingCart,
 } from 'lucide-react';
 import { ShortlistItem, ScreenType } from '../types';
+import { useCart } from '../context/CartContext';
+import { INITIAL_PDF_RESOURCES } from '../data/pdfResources';
 import gsap from 'gsap';
 
 interface ShortlistScreenProps {
@@ -20,6 +24,7 @@ interface ShortlistScreenProps {
   onOpenCompare: (primaryId?: string) => void;
   onSelectCollege: (collegeId: string) => void;
   onNavigate: (path: string) => void;
+  onToast?: (msg: string, kind?: 'success' | 'info') => void;
 }
 
 export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
@@ -28,12 +33,15 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
   onOpenCompare,
   onSelectCollege,
   onNavigate,
+  onToast,
 }) => {
-  const [filter, setFilter] = useState<'all' | 'college'>('all');
+  const [filter, setFilter] = useState<'all' | 'college' | 'pdf'>('all');
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const listContainerRef = useRef<HTMLDivElement>(null);
+  const { addToCart } = useCart();
 
   const collegeCount = savedItems.filter((i) => i.category === 'college').length;
+  const pdfCount = savedItems.filter((i) => i.category === 'pdf').length;
 
   const filteredItems = useMemo(() => {
     if (filter === 'all') return savedItems;
@@ -141,6 +149,20 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
               {collegeCount}
             </span>
           </button>
+          <button
+            type="button"
+            onClick={() => setFilter('pdf')}
+            className={`filter-tab px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-2 ${
+              filter === 'pdf'
+                ? 'bg-[#007DCC] text-white shadow-xs'
+                : 'bg-white dark:bg-[#1a202b] text-slate-600 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-[#F4F7FB] border border-slate-200 dark:border-transparent'
+            }`}
+          >
+            <span>PDFs</span>
+            <span className={`px-1.5 py-0.2 rounded-full text-xs font-normal ${filter === 'pdf' ? 'bg-blue-600 text-white' : 'bg-slate-100 dark:bg-[#2f3541] text-slate-600 dark:text-[#A9B8CA]'}`}>
+              {pdfCount}
+            </span>
+          </button>
         </div>
 
         {/* Shortlist Items Container */}
@@ -151,10 +173,10 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
                 <p className="text-lg font-semibold text-slate-900 dark:text-[#F4F7FB] mb-6">No items saved in this view</p>
                 <button
                   type="button"
-                  onClick={() => onNavigate('/')}
+                  onClick={() => onNavigate(filter === 'pdf' ? '/pdf-resources' : '/')}
                   className="px-5 py-2.5 rounded-lg bg-[#007DCC] text-white text-sm font-medium hover:bg-[#006cb0] transition-colors inline-flex items-center gap-2"
                 >
-                  <span>Explore Mumbai Opportunities</span>
+                  <span>{filter === 'pdf' ? 'Explore PDF Resources' : 'Explore Mumbai Opportunities'}</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
@@ -172,7 +194,9 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
                       {/* Left: Metadata & Titles */}
                       <div className="flex items-start gap-3 sm:gap-4">
                         <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 dark:bg-[#242a36] flex items-center justify-center shrink-0 text-[#007DCC] dark:text-[#9ccaff] group-hover:scale-105 transition-transform">
-                          {item.iconType === 'school' ? (
+                          {item.category === 'pdf' || item.iconType === 'file_text' ? (
+                            <FileText className="w-5 h-5 sm:w-6 sm:h-6" />
+                          ) : item.iconType === 'school' ? (
                             <School className="w-5 h-5 sm:w-6 sm:h-6" />
                           ) : (
                             <Building2 className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -183,10 +207,14 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
                           <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
                             <h2
                               onClick={() => {
-                                if (item.collegeId) onSelectCollege(item.collegeId);
+                                if (item.category === 'pdf') {
+                                  onNavigate(`/pdf-resources/${item.pdfSlug || item.pdfId || ''}`);
+                                } else if (item.collegeId) {
+                                  onSelectCollege(item.collegeId);
+                                }
                               }}
                               className={`text-[15px] sm:text-xl font-bold text-slate-900 dark:text-[#F4F7FB] group-hover:text-[#007DCC] dark:group-hover:text-[#9ccaff] transition-colors ${
-                                item.collegeId ? 'cursor-pointer' : ''
+                                item.collegeId || item.category === 'pdf' ? 'cursor-pointer' : ''
                               }`}
                             >
                               {item.title}
@@ -217,6 +245,40 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
 
                       {/* Contextual Actions */}
                       <div className="flex flex-wrap items-center gap-2 sm:gap-3 lg:self-center pl-13 sm:pl-16 lg:pl-0">
+                        {item.category === 'pdf' && (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const foundPdf = INITIAL_PDF_RESOURCES.find(
+                                (p) => p.id === item.pdfId || p.slug === item.pdfSlug
+                              ) || {
+                                id: item.pdfId || item.id,
+                                slug: item.pdfSlug || item.id,
+                                title: item.title,
+                                description: item.locationInfo,
+                                category: item.regionBadge || 'General',
+                                price: item.price || 149,
+                                coverImage:
+                                  'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=800',
+                                pages: 60,
+                                edition: '2025 Edition',
+                                fileFormat: 'PDF',
+                                fileSize: '6 MB',
+                                language: 'English',
+                                topicsCovered: [],
+                                lastUpdated: '2025-06-01',
+                              };
+                              addToCart(foundPdf);
+                              onRemoveItem(item.id);
+                              if (onToast) onToast(`Moved "${item.title}" to cart`, 'success');
+                            }}
+                            className="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-amber-500 hover:bg-amber-600 text-slate-950 flex items-center gap-1.5 shadow-xs transition-colors active:scale-95"
+                          >
+                            <ShoppingCart className="w-4 h-4" />
+                            <span>Move to Cart</span>
+                          </button>
+                        )}
+
                         {item.canCompare && (
                           <button
                             type="button"
@@ -241,7 +303,9 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
                         <button
                           type="button"
                           onClick={() => {
-                            if (item.collegeId) {
+                            if (item.category === 'pdf') {
+                              onNavigate(`/pdf-resources/${item.pdfSlug || item.pdfId || ''}`);
+                            } else if (item.collegeId) {
                               onSelectCollege(item.collegeId);
                             } else {
                               onNavigate('search');
@@ -249,7 +313,13 @@ export const ShortlistScreen: React.FC<ShortlistScreenProps> = ({
                           }}
                           className="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold text-[#007DCC] dark:text-[#9ccaff] hover:text-[#005a94] dark:hover:text-[#d0e4ff] hover:bg-blue-50 dark:hover:bg-[#2f3541] transition-colors flex items-center gap-1.5 group/link"
                         >
-                          <span>{item.category === 'college' ? 'View details' : 'View opportunity'}</span>
+                          <span>
+                            {item.category === 'pdf'
+                              ? 'View publication'
+                              : item.category === 'college'
+                              ? 'View details'
+                              : 'View opportunity'}
+                          </span>
                           <ArrowRight className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform" />
                         </button>
                       </div>
