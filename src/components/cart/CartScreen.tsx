@@ -26,7 +26,7 @@ export const CartScreen: React.FC<CartScreenProps> = ({ onNavigate, onToast }) =
             Your Cart is Empty
           </h1>
           <p className="text-xs sm:text-sm text-slate-500 dark:text-[#A9B8CA] max-w-sm mx-auto">
-            Explore our curated collection of Mumbai admission guides, cutoffs, and roadmaps.
+            Explore our curated collection of subject revision notes, formulas, and chapter summaries.
           </p>
           <button
             type="button"

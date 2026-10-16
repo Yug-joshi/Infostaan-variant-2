@@ -103,7 +103,7 @@ export const PdfListingScreen: React.FC<PdfListingScreenProps> = ({
               PDF Resources
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-[#A9B8CA] mt-0.5">
-              Curated Mumbai admission roadmaps, cutoff handbooks, and course directories.
+              Subject revision notes, formula sheets, and chapter summaries for Mumbai students.
             </p>
           </div>
 
@@ -122,7 +122,7 @@ export const PdfListingScreen: React.FC<PdfListingScreenProps> = ({
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search PDF guides, topics, cutoffs..."
+                placeholder="Search study notes, chapters, formulas..."
                 className="w-full pl-10 pr-9 py-2 rounded-xl bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500/40"
               />
               {searchQuery && (

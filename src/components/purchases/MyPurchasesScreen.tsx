@@ -20,7 +20,7 @@ export const MyPurchasesScreen: React.FC<MyPurchasesScreenProps> = ({ onNavigate
               My Purchases
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-[#A9B8CA] mt-0.5">
-              Your registered PDF publications and reference manuals.
+              Your registered PDF study notes and revision manuals.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ export const MyPurchasesScreen: React.FC<MyPurchasesScreenProps> = ({ onNavigate
               No purchases registered yet
             </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400 max-w-xs mx-auto">
-              Find admission analysis, cutoff handbooks, and guides under PDF Resources.
+              Find chapter summaries, formula sheets, and revision notes under PDF Resources.
             </p>
             <button
               type="button"
