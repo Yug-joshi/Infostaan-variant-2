@@ -88,7 +88,7 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
               <div
                 key={`${m.id}-${idx}`}
                 onClick={() => onNavigate(`/mentor/${m.id}`)}
-                className="w-[calc((100vw-3.2rem)/3)] md:w-[calc((100vw-5rem)/3)] lg:w-[calc((100%-4rem)/5)] xl:w-52 shrink-0 flex flex-col justify-between p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 hover:border-amber-400/50 transition-all duration-200 shadow-sm hover:shadow-md text-left cursor-pointer group"
+                className="w-[min(78vw,280px)] sm:w-[min(42vw,280px)] md:w-[calc((100vw-5rem)/3)] lg:w-[calc((100%-4rem)/5)] xl:w-52 shrink-0 flex flex-col justify-between p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 hover:border-amber-400/50 transition-all duration-200 shadow-sm hover:shadow-md text-left cursor-pointer group"
               >
                 <div>
                   {/* Top: 1:1 Avatar + Name & Role */}
@@ -104,11 +104,11 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
                       )}
                     </div>
 
-                    <div className="truncate">
-                      <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-[#F8FAFC] truncate group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-[#F8FAFC] line-clamp-2 break-words leading-tight group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
                         {m.name}
                       </h3>
-                      <p className="text-[11px] font-semibold text-amber-600 dark:text-amber-400 truncate mt-0.5">
+                      <p className="text-[11px] font-semibold text-amber-600 dark:text-amber-400 line-clamp-2 break-words leading-tight mt-0.5">
                         {m.role}
                       </p>
                     </div>
@@ -116,7 +116,7 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
 
                   {/* Specialty Badge */}
                   <div className="mb-2.5">
-                    <span className="inline-block px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-[#A9B8CA] text-[10px] font-semibold truncate">
+                    <span className="block max-w-full px-2.5 py-1 rounded-md bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-[#A9B8CA] text-[10px] font-semibold line-clamp-2 break-words leading-snug">
                       {m.area}
                     </span>
                   </div>

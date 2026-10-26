@@ -11,6 +11,9 @@ import { FilterCategoryType } from './CategoryFilterModal';
 import { getCollegeRegion, matchItemRegion, applyStreamFilter, applyLevelFilter, parseMultiValue } from '../lib/categoryFilters';
 import { formatCollegeTitle, getCollegeGroupingKey } from '../lib/collegeData';
 import { ResultFilterDrawer, DrawerCategoryType } from './ResultFilterDrawer';
+import { PDFResource } from '../types';
+import { fetchPDFResources, INITIAL_PDF_RESOURCES } from '../data/pdfResources';
+import { useTheme } from '../context/ThemeContext';
 
 interface SearchResultsScreenProps {
   defaultCategory?: CategoryType;
@@ -21,6 +24,7 @@ interface SearchResultsScreenProps {
   onOpenCutoff?: () => void;
   onOpenCategoryFilter?: (cat: FilterCategoryType) => void;
   onOpenClasses?: () => void;
+  onOpenSignIn?: () => void;
 }
 
 
@@ -34,12 +38,25 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   onOpenCutoff,
   onOpenCategoryFilter,
   onOpenClasses,
+  onOpenSignIn,
 }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
+  const { toggleTheme } = useTheme();
 
   const query = searchParams.get('query') || '';
   const activeCategory = (searchParams.get('category') as CategoryType) || defaultCategory || 'all';
+  const [pdfResources, setPdfResources] = useState<PDFResource[]>(INITIAL_PDF_RESOURCES);
+
+  useEffect(() => {
+    let isActive = true;
+    fetchPDFResources().then((resources) => {
+      if (isActive) setPdfResources(resources);
+    });
+    return () => {
+      isActive = false;
+    };
+  }, []);
 
   const [inputValue, setInputValue] = useState(query);
 
@@ -57,6 +74,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 
   // Default state is always to show results
   const showResults = true;
+  const hasCategoryFilters = activeCategory !== 'pdfs' && activeCategory !== 'connect';
 
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
@@ -112,9 +130,15 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   const setActiveCategory = (newCategory: CategoryType) => {
     if (newCategory === 'all') {
       navigate('/search');
+<<<<<<< HEAD
     } else if (newCategory === 'pdf') {
       const params = new URLSearchParams(searchParams);
       params.set('category', 'pdf');
+=======
+    } else if (newCategory === 'pdfs' || newCategory === 'connect') {
+      const params = new URLSearchParams(searchParams);
+      params.set('category', newCategory);
+>>>>>>> 40b9b86fac5dd2c944a16a9246d560ff8a5f32c4
       navigate(`/search?${params.toString()}`);
     } else {
       const params = new URLSearchParams(searchParams);
@@ -141,14 +165,24 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
         return { badge: 'Mumbai Coaching Classes', title: 'Coaching Classes in Mumbai' };
       case 'cutoffs':
         return { badge: 'Mumbai Cutoff Explorer', title: 'Admission Cutoffs in Mumbai' };
+<<<<<<< HEAD
       case 'pdf':
         return { badge: 'Mumbai Study Resources', title: 'Educational PDF Resources' };
+=======
+      case 'pdfs':
+        return { badge: 'Paid Study Resources', title: 'Paid PDFs' };
+      case 'connect':
+        return { badge: 'Infostaan Connect', title: 'Connect with Professionals' };
+>>>>>>> 40b9b86fac5dd2c944a16a9246d560ff8a5f32c4
       default:
         return { badge: 'Mumbai Student Catalog', title: 'Search Mumbai Programs & Resources' };
     }
   };
 
   const headerInfo = getPageHeaderInfo();
+  const searchSuggestions = inputValue.trim()
+    ? searchInfostaan(inputValue.trim(), 'all', pdfResources).slice(0, 6)
+    : [];
 
   const containerRef = useRef<HTMLDivElement>(null);
   const resultsContainerRef = useRef<HTMLDivElement>(null);
@@ -160,7 +194,12 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
       case 'careers': return 'Exploring Mumbai career paths...';
       case 'classes': return 'Finding relevant classes in Mumbai...';
       case 'cutoffs': return 'Finding relevant admission cutoffs...';
+<<<<<<< HEAD
       case 'pdf': return 'Finding relevant study resources & PDFs...';
+=======
+      case 'pdfs': return 'Finding relevant study resources...';
+      case 'connect': return 'Finding relevant professionals...';
+>>>>>>> 40b9b86fac5dd2c944a16a9246d560ff8a5f32c4
       default: return "Finding what's relevant in Mumbai...";
     }
   };
@@ -262,7 +301,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
       });
     }
 
-    let raw = searchInfostaan(query, activeCategory);
+    let raw = searchInfostaan(query, activeCategory, pdfResources);
 
     if (regionParam && regionParam !== 'All Mumbai') {
       raw = raw.filter(item => matchItemRegion(item, regionParam));
@@ -295,7 +334,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
     }
 
     return raw;
-  }, [query, activeCategory, regionParam, streamParam, fieldParam, interestParam, industryParam, specializationParam, percentageParam, rangeParam, educationLevelParam, sortParam]);
+  }, [query, activeCategory, pdfResources, regionParam, streamParam, fieldParam, interestParam, industryParam, specializationParam, percentageParam, rangeParam, educationLevelParam, sortParam]);
 
   const [searchPhase, setSearchPhase] = useState<'idle' | 'understanding' | 'skeleton' | 'done'>('done');
 
@@ -325,7 +364,17 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   const handleActionClick = (item: SearchResultItem) => {
     const qs = streamParam && streamParam !== 'All Streams' ? `?stream=${streamParam}` : '';
 
-    if (item.category === 'careers') {
+    if (item.action === 'toggle-theme') {
+      toggleTheme();
+    } else if (item.action === 'open-profile') {
+      onOpenSignIn?.();
+    } else if (item.href) {
+      navigate(item.href);
+    } else if (item.category === 'pdfs' && item.slug) {
+      navigate(`/pdf-resources/${item.slug}`);
+    } else if (item.category === 'connect') {
+      navigate(`/mentor/${item.id}`);
+    } else if (item.category === 'careers') {
       navigate('/career-roadmap');
     } else if (item.category === 'classes' && (item.slug || item.id)) {
       navigate(`/class/${item.slug || item.id}`);
@@ -362,32 +411,35 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
           </div>
 
           {/* Input Bar with layered suggestions */}
-          <div ref={searchContainerRef} className="relative z-30 flex items-center w-full md:w-1/2 min-w-0 bg-white dark:bg-[#0D1828] rounded-2xl px-3 sm:px-4 py-3 shadow-xs transition-all border border-slate-300 dark:border-[#D3B5E8]/15 focus-within:border-[#007DCC] focus-within:ring-2 focus-within:ring-[#007DCC]/20">
-            <Search className="text-[#007DCC] dark:text-[#9ccaff] mr-2 sm:mr-3 w-5 h-5 shrink-0" />
-            <input
-              aria-label="Search opportunities, courses, and institutions in Mumbai"
-              type="text"
-              value={inputValue}
-              onChange={(e) => {
-                setInputValue(e.target.value);
-                setIsSearchDropdownOpen(true);
-              }}
-              onFocus={() => setIsSearchDropdownOpen(true)}
-              placeholder="Search colleges, courses, careers, classes..."
-              className="w-full min-w-0 bg-transparent font-medium text-sm sm:text-base text-slate-900 dark:text-[#F4F7FB] placeholder:text-slate-400 dark:placeholder:text-[#A9B8CA]/60 focus:outline-none"
-            />
-            {inputValue && (
-              <button
-                type="button"
-                onClick={() => setInputValue('')}
-                title="Clear search"
-                className="flex items-center justify-center shrink-0 w-8 h-8 text-slate-400 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-[#F4F7FB] rounded-full transition-colors"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            )}
-            {/* Search Suggestions Dropdown Overlay */}
+          <div ref={searchContainerRef} className="relative z-30 w-full md:w-1/2 min-w-0">
+            <div className="flex items-center w-full min-w-0 bg-white dark:bg-[#0D1828] rounded-2xl px-3 sm:px-4 py-3 shadow-xs transition-all border border-slate-300 dark:border-[#D3B5E8]/15 focus-within:border-[#007DCC] focus-within:ring-2 focus-within:ring-[#007DCC]/20">
+              <Search className="text-[#007DCC] dark:text-[#9ccaff] mr-2 sm:mr-3 w-5 h-5 shrink-0" />
+              <input
+                aria-label="Search opportunities, courses, and institutions in Mumbai"
+                type="text"
+                value={inputValue}
+                onChange={(e) => {
+                  setInputValue(e.target.value);
+                  setIsSearchDropdownOpen(true);
+                }}
+                onFocus={() => setIsSearchDropdownOpen(true)}
+                placeholder="Search colleges, courses, people, PDFs, and more..."
+                className="w-full min-w-0 bg-transparent font-medium text-sm sm:text-base text-slate-900 dark:text-[#F4F7FB] placeholder:text-slate-400 dark:placeholder:text-[#A9B8CA]/60 focus:outline-none"
+              />
+              {inputValue && (
+                <button
+                  type="button"
+                  onClick={() => setInputValue('')}
+                  title="Clear search"
+                  className="flex items-center justify-center shrink-0 w-8 h-8 text-slate-400 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-[#F4F7FB] rounded-full transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
+            </div>
+            {/* Search Suggestions */}
             {inputValue.trim().length > 0 && isSearchDropdownOpen && (
+<<<<<<< HEAD
               <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#1a202b] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-2xl shadow-xl overflow-hidden z-40 text-left">
                 <div className="p-2 space-y-0.5">
                   <button
@@ -509,6 +561,39 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                     <FileText className="w-4 h-4 text-slate-400" />
                     <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in PDF Resources</span></span>
                   </button>
+=======
+              <div className="relative mt-2 w-full bg-white dark:bg-[#1a202b] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-2xl shadow-xl overflow-hidden text-left">
+                <div className="max-h-[min(60vh,420px)] overflow-y-auto p-2">
+                  {searchSuggestions.length > 0 ? searchSuggestions.map((item) => (
+                    <button
+                      key={`${item.category}-${item.id}`}
+                      type="button"
+                      onClick={() => {
+                        setIsSearchDropdownOpen(false);
+                        if (item.action || item.href || item.category === 'pdfs' || item.category === 'connect' || item.category === 'careers') {
+                          handleActionClick(item);
+                          return;
+                        }
+                        setSearchParams(prev => {
+                          const next = new URLSearchParams(prev);
+                          next.set('query', inputValue.trim());
+                          return next;
+                        }, { replace: true });
+                        setActiveCategory(item.category as CategoryType);
+                        setSearchPhase('understanding');
+                      }}
+                      className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-start gap-3"
+                    >
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-sm font-semibold text-slate-800 dark:text-[#F4F7FB]">{item.title}</span>
+                        <span className={`mt-0.5 text-xs text-slate-500 dark:text-[#A9B8CA] line-clamp-2 ${item.category === 'colleges' ? 'hidden sm:block' : 'block'}`}>{item.subtitle || item.badgeCategory}</span>
+                      </span>
+                      <span className="shrink-0 text-[10px] font-bold uppercase tracking-wide text-slate-400">{item.badgeCategory}</span>
+                    </button>
+                  )) : (
+                    <div className="px-4 py-3 text-sm text-slate-500 dark:text-[#A9B8CA]">No matching results yet</div>
+                  )}
+>>>>>>> 40b9b86fac5dd2c944a16a9246d560ff8a5f32c4
                 </div>
               </div>
             )}
@@ -525,7 +610,12 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                   { id: 'careers', label: 'Careers' },
                   { id: 'classes', label: 'Classes' },
                   { id: 'cutoffs', label: 'Cutoffs' },
+<<<<<<< HEAD
                   { id: 'pdf', label: 'PDF Resources' },
+=======
+                  { id: 'pdfs', label: 'Paid PDFs' },
+                  { id: 'connect', label: 'Connect' },
+>>>>>>> 40b9b86fac5dd2c944a16a9246d560ff8a5f32c4
                 ].map((tab) => (
                   <button
                     key={tab.id}
@@ -569,14 +659,14 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                     <option value="name_asc">Alphabetical: A to Z</option>
                   </select>
                 )}
-                <button
+                {hasCategoryFilters && <button
                   type="button"
                   onClick={handleModifyFilters}
                   className="lg:hidden inline-flex items-center justify-center gap-2 px-4 py-2.5 min-h-[44px] rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-[#161c27] transition-all whitespace-nowrap shrink-0"
                 >
                   <SlidersHorizontal className="w-4 h-4" />
                   Modify Filters
-                </button>
+                </button>}
               </div>
             )}
           </div>
@@ -607,7 +697,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
         {/* Main Layout: Sidebar + Results */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start relative w-full">
           {/* Desktop Sidebar Filter (Permanent) */}
-          <aside className="hidden lg:block w-[300px] shrink-0 sticky top-28 z-20 h-[calc(100vh-8rem)]">
+          {hasCategoryFilters && <aside className="hidden lg:block w-[300px] shrink-0 sticky top-28 z-20 h-[calc(100vh-8rem)]">
             <ResultFilterDrawer
               isOpen={true}
               inline={true}
@@ -624,7 +714,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         : 'colleges'
               }
             />
-          </aside>
+          </aside>}
 
           {/* Results Container */}
           <div ref={resultsContainerRef} className="flex-1 w-full min-w-0">
