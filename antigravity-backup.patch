@@ -1,0 +1,939 @@
+diff --git a/src/App.tsx b/src/App.tsx
+index 87704a2..63e9645 100644
+--- a/src/App.tsx
++++ b/src/App.tsx
+@@ -330,12 +330,7 @@ export default function App() {
+           }}
+         />
+         <div
+-          className="absolute z-10 text-center px-4 animate-in fade-in duration-150"
+-          style={{
+-            top: '75%',
+-            left: '49%',
+-            transform: 'translate(-50%, -50%)',
+-          }}
++          className="absolute z-10 text-center px-4 animate-in fade-in duration-150 top-[68%] sm:top-[75%] left-1/2 sm:left-[49%] -translate-x-1/2 -translate-y-1/2 w-full max-w-sm sm:max-w-none"
+         >
+           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB]">
+             Infostaan<span className="text-[#007DCC]">.</span>
+@@ -376,7 +371,7 @@ export default function App() {
+           <Route path="/" element={
+             <HomeScreen
+               onSearch={handleSearch}
+-              onNavigate={(path) => navigate(path)}
++              onNavigate={(path) => navigate(path.startsWith('/') ? path : `/${path}`)}
+               onSelectCollege={handleSelectCollege}
+               onOpenCutoff={() => setIsCutoffOpen(true)}
+               onOpenClasses={() => setIsClassesOpen(true)}
+diff --git a/src/components/HomeScreen.tsx b/src/components/HomeScreen.tsx
+index bf863e2..386a906 100644
+--- a/src/components/HomeScreen.tsx
++++ b/src/components/HomeScreen.tsx
+@@ -269,31 +269,63 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
+                 {/* Search Dropdown */}
+                 {query.trim().length > 0 && (
+                   <div className="absolute top-full left-0 right-0 mt-3 bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 rounded-2xl shadow-xl dark:shadow-2xl overflow-hidden z-50 text-left">
+-                    <div className="p-2">
++                    <div className="p-2 space-y-0.5">
++                      <button
++                        type="button"
++                        onClick={() => onSearch(query, 'all')}
++                        className="w-full text-left px-4 py-3 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3 font-semibold text-slate-900 dark:text-[#F8FAFC] border-b border-slate-100 dark:border-white/5"
++                      >
++                        <Search className="w-4 h-4 text-amber-500 dark:text-amber-400" />
++                        <span>Search "{query}" in <span className="text-amber-600 dark:text-amber-400 font-bold">All Categories</span></span>
++                      </button>
+                       <button
+                         type="button"
+                         onClick={() => onSearch(query, 'colleges')}
+-                        className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
++                        className="w-full text-left px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
+                       >
+-                        <Building2 className="w-5 h-5 text-amber-500 dark:text-amber-400" />
++                        <Building2 className="w-4 h-4 text-amber-500 dark:text-amber-400" />
+                         <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Colleges</span></span>
+                       </button>
+                       <button
+                         type="button"
+                         onClick={() => onSearch(query, 'courses')}
+-                        className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
++                        className="w-full text-left px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
+                       >
+-                        <GraduationCap className="w-5 h-5 text-amber-500 dark:text-amber-400" />
++                        <GraduationCap className="w-4 h-4 text-amber-500 dark:text-amber-400" />
+                         <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Courses</span></span>
+                       </button>
+                       <button
+                         type="button"
+                         onClick={() => onSearch(query, 'careers')}
+-                        className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
++                        className="w-full text-left px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
+                       >
+-                        <TrendingUp className="w-5 h-5 text-amber-500 dark:text-amber-400" />
++                        <TrendingUp className="w-4 h-4 text-amber-500 dark:text-amber-400" />
+                         <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Careers</span></span>
+                       </button>
++                      <button
++                        type="button"
++                        onClick={() => onSearch(query, 'classes')}
++                        className="w-full text-left px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
++                      >
++                        <MonitorPlay className="w-4 h-4 text-amber-500 dark:text-amber-400" />
++                        <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Coaching Classes</span></span>
++                      </button>
++                      <button
++                        type="button"
++                        onClick={() => onSearch(query, 'cutoffs')}
++                        className="w-full text-left px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
++                      >
++                        <BarChart2 className="w-4 h-4 text-amber-500 dark:text-amber-400" />
++                        <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Admission Cutoffs</span></span>
++                      </button>
++                      <button
++                        type="button"
++                        onClick={() => onSearch(query, 'pdf')}
++                        className="w-full text-left px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
++                      >
++                        <FileText className="w-4 h-4 text-amber-500 dark:text-amber-400" />
++                        <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in PDF Resources</span></span>
++                      </button>
+                     </div>
+                   </div>
+                 )}
+@@ -476,11 +508,30 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
+             </div>
+             
+             <div 
+-              onClick={() => onNavigate('guidance')}
+-              className="p-5 rounded-2xl bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 hover:border-amber-400/50 cursor-pointer group transition-colors shadow-sm hover:shadow-md"
++              onClick={() => onNavigate('/pdf-resources')}
++              className="p-5 rounded-2xl bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 hover:border-amber-400/50 cursor-pointer group transition-colors shadow-sm hover:shadow-md flex flex-col justify-between"
+             >
+-              <h4 className="text-slate-900 dark:text-[#F8FAFC] font-semibold group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors mb-1">Career Roadmaps</h4>
+-              <p className="text-xs text-slate-500 dark:text-[#71839A]">Explore step-by-step career pathways tailored for Mumbai students</p>
++              <div>
++                <div className="flex items-center justify-between mb-2">
++                  <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 text-[10px] font-bold uppercase tracking-wider">
++                    <FileText className="w-3 h-3" />
++                    <span>Curated Resources</span>
++                  </span>
++                </div>
++                <h4 className="text-slate-900 dark:text-[#F8FAFC] font-semibold group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors mb-1">
++                  Premium Study Resources
++                </h4>
++                <p className="text-xs text-slate-500 dark:text-[#71839A] leading-relaxed">
++                  Access valuable study materials, notes, and educational PDFs to support your academic journey.
++                </p>
++              </div>
++              <div className="mt-4 pt-3 border-t border-slate-100 dark:border-white/5 flex items-center justify-between">
++                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-600 dark:text-amber-400 group-hover:text-amber-700 dark:group-hover:text-amber-300 transition-colors">
++                  <span>Explore Premium PDFs</span>
++                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
++                </span>
++                <span className="text-[10px] font-medium text-slate-400 dark:text-[#71839A]">Verified Guides</span>
++              </div>
+             </div>
+           </div>
+         </div>
+diff --git a/src/components/InstagramReelCarousel.tsx b/src/components/InstagramReelCarousel.tsx
+index 4084233..2e22141 100644
+--- a/src/components/InstagramReelCarousel.tsx
++++ b/src/components/InstagramReelCarousel.tsx
+@@ -9,8 +9,10 @@ import {
+   RotateCcw,
+   Sparkles,
+   Eye,
++  Youtube,
++  ExternalLink,
+ } from 'lucide-react';
+-import { INSTAGRAM_REELS, ReelItem } from '../data/instagramReels';
++import { INSTAGRAM_REELS, ReelItem, OFFICIAL_YOUTUBE_URL } from '../data/instagramReels';
+ 
+ export const InstagramReelCarousel: React.FC = () => {
+   const [activeIndex, setActiveIndex] = useState(0);
+@@ -53,9 +55,10 @@ export const InstagramReelCarousel: React.FC = () => {
+   useEffect(() => {
+     // Pause and reset all non-active videos
+     Object.entries(videoRefs.current).forEach(([id, vid]) => {
+-      if (vid && id !== activeReel.id) {
+-        vid.pause();
+-        vid.currentTime = 0;
++      const videoEl = vid as HTMLVideoElement | null;
++      if (videoEl && id !== activeReel.id) {
++        videoEl.pause();
++        videoEl.currentTime = 0;
+       }
+     });
+ 
+@@ -163,18 +166,14 @@ export const InstagramReelCarousel: React.FC = () => {
+     >
+       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         {/* Section Header */}
+-        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
++        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-10">
+           {/* Eyebrow Pill */}
+-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-[11px] font-extrabold uppercase tracking-widest mb-3">
++          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-[11px] font-extrabold uppercase tracking-widest mb-2">
+             <Sparkles className="w-3.5 h-3.5" />
+             <span>STUDENT REELS & GUIDES</span>
+           </div>
+ 
+-          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F8FAFC]">
+-            Watch What Students Say
+-          </h2>
+-
+-          <p className="text-xs sm:text-base text-slate-600 dark:text-[#A9B8CA] mt-2 leading-relaxed">
++          <p className="text-xs sm:text-base text-slate-600 dark:text-[#A9B8CA] leading-relaxed">
+             Real advice, FYJC realities, and Mumbai college guidance in 60 seconds.
+           </p>
+         </div>
+@@ -420,6 +419,21 @@ export const InstagramReelCarousel: React.FC = () => {
+             />
+           ))}
+         </div>
++
++        {/* Official YouTube Channel CTA */}
++        <div className="flex justify-center mt-6 sm:mt-7">
++          <a
++            href={OFFICIAL_YOUTUBE_URL}
++            target="_blank"
++            rel="noopener noreferrer"
++            className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full bg-red-600/10 hover:bg-red-600/15 dark:bg-red-500/10 dark:hover:bg-red-500/20 text-red-600 dark:text-red-400 border border-red-500/20 text-xs sm:text-sm font-bold transition-all duration-200 hover:scale-[1.02] active:scale-95 shadow-xs group"
++            aria-label="Visit our official YouTube channel (opens in new tab)"
++          >
++            <Youtube className="w-4 h-4 text-red-600 dark:text-red-400 group-hover:scale-110 transition-transform" />
++            <span>Watch on YouTube</span>
++            <ExternalLink className="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 transition-transform" />
++          </a>
++        </div>
+       </div>
+     </section>
+   );
+diff --git a/src/components/SearchResultsScreen.tsx b/src/components/SearchResultsScreen.tsx
+index acec3a8..859a343 100644
+--- a/src/components/SearchResultsScreen.tsx
++++ b/src/components/SearchResultsScreen.tsx
+@@ -1,5 +1,5 @@
+ import React, { useState, useMemo, useEffect, useRef } from 'react';
+-import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Compass, SlidersHorizontal, BarChart2, Bookmark, Users, Star, Award, CheckCircle, Info, TrendingUp, MonitorPlay } from 'lucide-react';
++import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Compass, SlidersHorizontal, BarChart2, Bookmark, Users, Star, Award, CheckCircle, Info, TrendingUp, MonitorPlay, FileText } from 'lucide-react';
+ import { useSearchParams, useNavigate } from 'react-router-dom';
+ import { CategoryType, SearchResultItem } from '../types';
+ import { searchInfostaan } from '../lib/searchEngine';
+@@ -112,6 +112,10 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
+   const setActiveCategory = (newCategory: CategoryType) => {
+     if (newCategory === 'all') {
+       navigate('/search');
++    } else if (newCategory === 'pdf') {
++      const params = new URLSearchParams(searchParams);
++      params.set('category', 'pdf');
++      navigate(`/search?${params.toString()}`);
+     } else {
+       const params = new URLSearchParams(searchParams);
+       params.delete('category');
+@@ -137,8 +141,10 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
+         return { badge: 'Mumbai Coaching Classes', title: 'Coaching Classes in Mumbai' };
+       case 'cutoffs':
+         return { badge: 'Mumbai Cutoff Explorer', title: 'Admission Cutoffs in Mumbai' };
++      case 'pdf':
++        return { badge: 'Mumbai Study Resources', title: 'Educational PDF Resources' };
+       default:
+-        return { badge: 'Mumbai Student Catalog', title: 'Search Mumbai Programs' };
++        return { badge: 'Mumbai Student Catalog', title: 'Search Mumbai Programs & Resources' };
+     }
+   };
+ 
+@@ -154,6 +160,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
+       case 'careers': return 'Exploring Mumbai career paths...';
+       case 'classes': return 'Finding relevant classes in Mumbai...';
+       case 'cutoffs': return 'Finding relevant admission cutoffs...';
++      case 'pdf': return 'Finding relevant study resources & PDFs...';
+       default: return "Finding what's relevant in Mumbai...";
+     }
+   };
+@@ -320,8 +327,10 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
+ 
+     if (item.category === 'careers') {
+       navigate('/career-roadmap');
+-    } else if (item.category === 'classes' && item.slug) {
+-      navigate(`/class/${item.slug}`);
++    } else if (item.category === 'classes' && (item.slug || item.id)) {
++      navigate(`/class/${item.slug || item.id}`);
++    } else if (item.category === 'pdf') {
++      navigate(`/pdf-resources/${item.slug || item.id}`);
+     } else if (item.collegeSlug) {
+       onSelectCollege(item.collegeSlug + qs);
+     } else if (item.collegeId) {
+@@ -380,7 +389,24 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
+             {/* Search Suggestions Dropdown Overlay */}
+             {inputValue.trim().length > 0 && isSearchDropdownOpen && (
+               <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#1a202b] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-2xl shadow-xl overflow-hidden z-40 text-left">
+-                <div className="p-2">
++                <div className="p-2 space-y-0.5">
++                  <button
++                    type="button"
++                    onClick={() => {
++                      setSearchParams(prev => {
++                        const next = new URLSearchParams(prev);
++                        next.set('query', inputValue.trim());
++                        return next;
++                      }, { replace: true });
++                      setIsSearchDropdownOpen(false);
++                      setActiveCategory('all');
++                      setSearchPhase('understanding');
++                    }}
++                    className="w-full text-left px-4 py-2.5 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 border-b border-slate-100 dark:border-white/5"
++                  >
++                    <Search className="w-4 h-4 text-[#007DCC] dark:text-[#9ccaff]" />
++                    <span className="text-slate-900 dark:text-[#F4F7FB] font-semibold text-xs sm:text-sm">Search "{inputValue}" in <span className="text-[#007DCC] dark:text-[#86cfff]">All Categories</span></span>
++                  </button>
+                   <button
+                     type="button"
+                     onClick={() => {
+@@ -393,7 +419,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
+                       setActiveCategory('colleges');
+                       setSearchPhase('understanding');
+                     }}
+-                    className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3"
++                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
+                   >
+                     <Building2 className="w-4 h-4 text-slate-400" />
+                     <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Colleges</span></span>
+@@ -410,11 +436,79 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
+                       setActiveCategory('courses');
+                       setSearchPhase('understanding');
+                     }}
+-                    className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3"
++                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
+                   >
+                     <GraduationCap className="w-4 h-4 text-slate-400" />
+                     <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Courses</span></span>
+                   </button>
++                  <button
++                    type="button"
++                    onClick={() => {
++                      setSearchParams(prev => {
++                        const next = new URLSearchParams(prev);
++                        next.set('query', inputValue.trim());
++                        return next;
++                      }, { replace: true });
++                      setIsSearchDropdownOpen(false);
++                      setActiveCategory('careers');
++                      setSearchPhase('understanding');
++                    }}
++                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
++                  >
++                    <TrendingUp className="w-4 h-4 text-slate-400" />
++                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Careers</span></span>
++                  </button>
++                  <button
++                    type="button"
++                    onClick={() => {
++                      setSearchParams(prev => {
++                        const next = new URLSearchParams(prev);
++                        next.set('query', inputValue.trim());
++                        return next;
++                      }, { replace: true });
++                      setIsSearchDropdownOpen(false);
++                      setActiveCategory('classes');
++                      setSearchPhase('understanding');
++                    }}
++                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
++                  >
++                    <MonitorPlay className="w-4 h-4 text-slate-400" />
++                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Classes</span></span>
++                  </button>
++                  <button
++                    type="button"
++                    onClick={() => {
++                      setSearchParams(prev => {
++                        const next = new URLSearchParams(prev);
++                        next.set('query', inputValue.trim());
++                        return next;
++                      }, { replace: true });
++                      setIsSearchDropdownOpen(false);
++                      setActiveCategory('cutoffs');
++                      setSearchPhase('understanding');
++                    }}
++                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
++                  >
++                    <BarChart2 className="w-4 h-4 text-slate-400" />
++                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Cutoffs</span></span>
++                  </button>
++                  <button
++                    type="button"
++                    onClick={() => {
++                      setSearchParams(prev => {
++                        const next = new URLSearchParams(prev);
++                        next.set('query', inputValue.trim());
++                        return next;
++                      }, { replace: true });
++                      setIsSearchDropdownOpen(false);
++                      setActiveCategory('pdf');
++                      setSearchPhase('understanding');
++                    }}
++                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
++                  >
++                    <FileText className="w-4 h-4 text-slate-400" />
++                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in PDF Resources</span></span>
++                  </button>
+                 </div>
+               </div>
+             )}
+@@ -431,6 +525,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
+                   { id: 'careers', label: 'Careers' },
+                   { id: 'classes', label: 'Classes' },
+                   { id: 'cutoffs', label: 'Cutoffs' },
++                  { id: 'pdf', label: 'PDF Resources' },
+                 ].map((tab) => (
+                   <button
+                     key={tab.id}
+@@ -610,6 +705,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
+                       const isCourse = item.category === 'courses';
+                       const isCareer = item.category === 'careers';
+                       const isClass = item.category === 'classes';
++                      const isPdf = item.category === 'pdf';
+ 
+                       const getStreams = (): string[] => {
+                         if (item.category === 'colleges' && item.subtitle) {
+@@ -628,12 +724,15 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
+                         if (item.category === 'classes' && item.meta) {
+                           return item.meta;
+                         }
++                        if (item.category === 'pdf' && item.meta) {
++                          return item.meta.slice(0, 3);
++                        }
+                         return [];
+                       };
+ 
+                       const streams = getStreams();
+ 
+-                      if (isCollege || isCourse || isCareer || isClass) {
++                      if (isCollege || isCourse || isCareer || isClass || isPdf) {
+                         const facts: { icon: any; value: string; label: string }[] = [];
+                         if (isCutoff) {
+                           // Do not push any facts. The cutoff is displayed directly as highlighted text below.
+@@ -644,6 +743,13 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
+                           if (item.meta && item.meta[1]) {
+                             facts.push({ icon: TrendingUp, value: item.meta[1], label: 'Sector' });
+                           }
++                        } else if (isPdf) {
++                          if (item.meta && item.meta[0]) {
++                            facts.push({ icon: FileText, value: item.meta[0], label: 'Category' });
++                          }
++                          if (item.meta && item.meta[1]) {
++                            facts.push({ icon: Award, value: item.meta[1], label: 'Format' });
++                          }
+                         } else {
+                           item.meta.forEach(m => {
+                             if (isClass || isCollege) return; // Classes and Colleges don't use facts
+@@ -662,13 +768,14 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
+                           });
+                         }
+ 
+-                        // Decorative header icon (replaces the previous remote images, which returned 404)
+-                        const HeaderIcon = isCutoff ? BarChart2 : isCollege ? Building2 : isCourse ? GraduationCap : isCareer ? TrendingUp : MonitorPlay;
++                        // Decorative header icon
++                        const HeaderIcon = isCutoff ? BarChart2 : isCollege ? Building2 : isCourse ? GraduationCap : isCareer ? TrendingUp : isPdf ? FileText : MonitorPlay;
+ 
+                         // Mirrors handleActionClick targets so cards without a destination don't look clickable
+                         const isClickable = !!(
+                           item.category === 'careers' ||
+-                          (item.category === 'classes' && item.slug) ||
++                          item.category === 'pdf' ||
++                          (item.category === 'classes' && (item.slug || item.id)) ||
+                           item.collegeSlug ||
+                           item.collegeId ||
+                           item.category === 'colleges' ||
+@@ -691,7 +798,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
+ 
+                               {/* BADGE */}
+                               <span className="relative min-w-0 px-2 py-1 rounded bg-[#007DCC] border border-white/20 text-white text-[10px] font-bold uppercase tracking-wider leading-snug break-words shadow-sm">
+-                                {item.badgeCategory || (isCutoff ? 'CUTOFF' : isCollege ? 'COLLEGE' : isCourse ? 'COURSE' : isCareer ? 'CAREER' : 'CLASS')}
++                                {item.badgeCategory || (isCutoff ? 'CUTOFF' : isCollege ? 'COLLEGE' : isCourse ? 'COURSE' : isCareer ? 'CAREER' : isPdf ? 'PDF RESOURCE' : 'CLASS')}
+                               </span>
+ 
+                               {/* SAVE BUTTON */}
+diff --git a/src/data/instagramReels.ts b/src/data/instagramReels.ts
+index 5dec56b..120b4f2 100644
+--- a/src/data/instagramReels.ts
++++ b/src/data/instagramReels.ts
+@@ -12,6 +12,12 @@ export interface ReelItem {
+   };
+ }
+ 
++// Official YouTube channel URL configuration
++// Configurable via VITE_YOUTUBE_CHANNEL_URL environment variable or default channel placeholder
++export const OFFICIAL_YOUTUBE_URL: string =
++  (typeof import.meta !== 'undefined' && (import.meta as any).env?.VITE_YOUTUBE_CHANNEL_URL) ||
++  'https://www.youtube.com/@infostaan';
++
+ export const INSTAGRAM_REELS: ReelItem[] = [
+   {
+     id: 'fyjc-reality-check',
+diff --git a/src/lib/searchEngine.ts b/src/lib/searchEngine.ts
+index 355841d..ff77546 100644
+--- a/src/lib/searchEngine.ts
++++ b/src/lib/searchEngine.ts
+@@ -2,129 +2,346 @@ import { SearchResultItem, CategoryType } from '../types';
+ import { ALL_SEARCH_RESULTS } from '../data/mockData';
+ import { CLASSES, ClassData } from '../data/classes';
+ import { CUTOFFS, CutoffMetadata } from '../data/cutoffs';
+-import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
+-import { getAllColleges } from './collegeData';
++import { FYJC_CUTOFFS, FyjcCutoff } from '../data/fyjcCutoffs';
++import { INITIAL_PDF_RESOURCES } from '../data/pdfResources';
++import { getAllColleges, formatCollegeTitle, getCollegeGroupingKey } from './collegeData';
+ 
+-export function searchInfostaan(query: string, category: CategoryType): SearchResultItem[] {
+-  const q = query.toLowerCase().trim();
+-  
+-  let results: SearchResultItem[] = [];
++/**
++ * Computes relevance score for ranking exact matches above weaker description/metadata matches.
++ */
++function computeScore(
++  title: string,
++  secondaryTexts: (string | undefined | null)[],
++  q: string,
++  tokens: string[]
++): number {
++  if (!q) return 0;
++  const titleLower = title.toLowerCase().trim();
++  let score = 0;
+ 
+-  // 1. Colleges: use the complete unified list (curated + all uploaded FYJC cutoffs excel data)
+-  if (category === 'all' || category === 'colleges') {
++  // 1. Exact title match
++  if (titleLower === q) {
++    score += 1000;
++  } else if (titleLower.startsWith(q)) {
++    score += 600;
++  } else if (titleLower.includes(q)) {
++    score += 400;
++  } else if (tokens.length > 0 && tokens.every((t) => titleLower.includes(t))) {
++    score += 250;
++  } else {
++    const titleTokenMatches = tokens.filter((t) => titleLower.includes(t)).length;
++    if (titleTokenMatches > 0) {
++      score += titleTokenMatches * 50;
++    }
++  }
++
++  // 2. Secondary text matching (subtitles, location, streams, specializations, metadata)
++  const secondaryCombined = secondaryTexts.filter(Boolean).join(' ').toLowerCase();
++  if (secondaryCombined.includes(q)) {
++    score += 100;
++  } else {
++    const secondaryTokenMatches = tokens.filter((t) => secondaryCombined.includes(t)).length;
++    if (secondaryTokenMatches > 0) {
++      score += secondaryTokenMatches * 20;
++    }
++  }
++
++  return score;
++}
++
++export function searchInfostaan(query: string, category: CategoryType | string): SearchResultItem[] {
++  const normalizedCategory = category || 'all';
++  const q = query.toLowerCase().trim().replace(/\s+/g, ' ');
++  const tokens = q ? q.split(' ').filter(Boolean) : [];
++
++  let results: { item: SearchResultItem; score: number }[] = [];
++
++  // Helper to match text against query
++  const matchesQuery = (texts: (string | undefined | null)[]): boolean => {
++    if (!q) return true;
++    const combined = texts.filter(Boolean).join(' ').toLowerCase();
++    // Match either full query or all individual space-delimited tokens
++    return combined.includes(q) || (tokens.length > 1 && tokens.every((t) => combined.includes(t)));
++  };
++
++  // 1. Colleges: unified list of all institutions in Mumbai
++  if (normalizedCategory === 'all' || normalizedCategory === 'colleges') {
+     const allColleges = getAllColleges();
+-    const collegeResults = allColleges.filter(item => {
++    const collegeMatches = allColleges.filter((item) => {
+       if (!q) return true;
+-      return (
+-        item.title.toLowerCase().includes(q) ||
+-        item.subtitle?.toLowerCase().includes(q) ||
+-        item.badgeCategory.toLowerCase().includes(q) ||
+-        item.badgeSub?.toLowerCase().includes(q) ||
+-        item.meta?.some(m => m.toLowerCase().includes(q))
++      return matchesQuery([
++        item.title,
++        item.subtitle,
++        item.badgeCategory,
++        item.badgeSub,
++        item.collegeId,
++        item.collegeSlug,
++        ...(item.meta || []),
++      ]);
++    });
++
++    collegeMatches.forEach((item) => {
++      const score = computeScore(
++        item.title,
++        [item.subtitle, item.badgeSub, item.badgeCategory, ...(item.meta || [])],
++        q,
++        tokens
+       );
++      results.push({ item, score });
+     });
+-    results = [...results, ...collegeResults];
+   }
+ 
+-  // 2. Courses and Careers from curated mock data
+-  if (category === 'all' || category === 'courses' || category === 'careers') {
+-    const otherResults = ALL_SEARCH_RESULTS.filter(item => {
+-      if (item.category === 'colleges') return false; // Already handled above
+-      if (category !== 'all' && item.category !== category) return false;
++  // 2. Courses and Careers from curated catalog
++  if (normalizedCategory === 'all' || normalizedCategory === 'courses' || normalizedCategory === 'careers') {
++    const curatedMatches = ALL_SEARCH_RESULTS.filter((item) => {
++      if (item.category === 'colleges') return false; // Handled via getAllColleges
++      if (normalizedCategory !== 'all' && item.category !== normalizedCategory) return false;
+       if (!q) return true;
+-      return (
+-        item.title.toLowerCase().includes(q) ||
+-        item.subtitle?.toLowerCase().includes(q) ||
+-        item.badgeCategory.toLowerCase().includes(q)
++      return matchesQuery([
++        item.title,
++        item.subtitle,
++        item.badgeCategory,
++        item.badgeSub,
++        item.whyRelevant,
++        item.courseFamily,
++        item.qualificationLevel,
++        ...(item.meta || []),
++        ...(item.discipline || []),
++      ]);
++    });
++
++    curatedMatches.forEach((item) => {
++      const score = computeScore(
++        item.title,
++        [
++          item.subtitle,
++          item.badgeSub,
++          item.badgeCategory,
++          item.whyRelevant,
++          item.courseFamily,
++          item.qualificationLevel,
++          ...(item.meta || []),
++          ...(item.discipline || []),
++        ],
++        q,
++        tokens
+       );
++      results.push({ item, score });
+     });
+-    results = [...results, ...otherResults];
+   }
+ 
+-  // 2. Classes
+-  if (category === 'all' || category === 'classes') {
+-    const classResults: SearchResultItem[] = CLASSES.filter(cls => {
++  // 3. Coaching Classes & Institutes
++  if (normalizedCategory === 'all' || normalizedCategory === 'classes') {
++    const classFilter = (cls: ClassData) => {
+       if (!q) return true;
+-      return (
+-        cls.name.toLowerCase().includes(q) ||
+-        cls.area?.toLowerCase().includes(q) ||
+-        cls.region?.toLowerCase().includes(q) ||
+-        cls.streams?.toLowerCase().includes(q) ||
+-        cls.specializations?.toLowerCase().includes(q)
++      return matchesQuery([
++        cls.name,
++        cls.area,
++        cls.region,
++        cls.streams,
++        cls.specializations,
++        cls.address,
++      ]);
++    };
++
++    // When a query is present or in category-specific view, do not impose arbitrary slice limits.
++    // In empty 'all' mode, take a representative selection to avoid overwhelming initial memory.
++    const rawClassMatches = CLASSES.filter(classFilter);
++    const classesToInclude = (!q && normalizedCategory === 'all')
++      ? rawClassMatches.slice(0, 30)
++      : rawClassMatches;
++
++    classesToInclude.forEach((cls) => {
++      const item: SearchResultItem = {
++        id: cls.id,
++        slug: cls.slug || cls.id,
++        category: 'classes',
++        badgeCategory: 'Coaching Class',
++        badgeSub: cls.area || cls.region || 'Mumbai',
++        title: cls.name,
++        subtitle: cls.specializations ? `Specialization: ${cls.specializations}` : (cls.streams ? `Streams: ${cls.streams}` : 'Coaching & Classes'),
++        meta: [cls.streams, cls.area, cls.region].filter(Boolean) as string[],
++        whyRelevant: q ? `Matches your search for "${query}"` : 'Recommended coaching class in Mumbai',
++        tagColor: 'lavender',
++        actionLabel: 'View Class Details',
++      };
++
++      const score = computeScore(
++        cls.name,
++        [cls.specializations, cls.streams, cls.area, cls.region, cls.address],
++        q,
++        tokens
+       );
+-    }).slice(0, 15).map(cls => ({
+-      id: cls.id,
+-      category: 'classes',
+-      badgeCategory: 'Coaching Class',
+-      badgeSub: cls.area || cls.region || 'Mumbai',
+-      title: cls.name,
+-      subtitle: cls.specializations ? `Specialization: ${cls.specializations}` : 'Coaching & Classes',
+-      meta: cls.streams ? [cls.streams] : [],
+-      whyRelevant: q ? `Matches your search for "${query}"` : 'Recommended coaching class in Mumbai',
+-      tagColor: 'lavender',
+-      actionLabel: 'View Details',
+-    }));
+-    results = [...results, ...classResults];
++      results.push({ item, score });
++    });
+   }
+ 
+-  // 3. Cutoffs
+-  if (category === 'all' || category === 'cutoffs') {
+-    const cutoffResults: SearchResultItem[] = CUTOFFS.filter(cutoff => {
++  // 4. Admission Cutoffs & Cutoff PDFs
++  if (normalizedCategory === 'all' || normalizedCategory === 'cutoffs') {
++    // A. Official PDF cutoff documents
++    const cutoffMatches = CUTOFFS.filter((cutoff) => {
+       if (!q) return true;
+-      return (
+-        cutoff.documentTitle.toLowerCase().includes(q) ||
+-        cutoff.collegeName?.toLowerCase().includes(q) ||
+-        cutoff.stream?.toLowerCase().includes(q)
++      return matchesQuery([
++        cutoff.documentTitle,
++        cutoff.collegeName,
++        cutoff.stream,
++        cutoff.description,
++        cutoff.academicYear,
++      ]);
++    });
++
++    cutoffMatches.forEach((cutoff) => {
++      const item: SearchResultItem = {
++        id: cutoff.id,
++        category: 'cutoffs',
++        badgeCategory: `${cutoff.stream || 'Admission'} Cutoff Document`,
++        badgeSub: cutoff.academicYear || '2025-26',
++        title: cutoff.documentTitle,
++        subtitle: cutoff.collegeName ? `${cutoff.collegeName} • ${cutoff.description || 'Official Document'}` : cutoff.description,
++        meta: [cutoff.stream || 'General', 'Official PDF Document'],
++        whyRelevant: q ? `Matches your search for "${query}"` : 'Official admission data document',
++        tagColor: 'tertiary',
++        actionLabel: 'View Cutoff Document',
++        collegeId: cutoff.collegeId,
++        sourceFile: cutoff.sourceFile,
++        slug: cutoff.slug,
++      };
++
++      const score = computeScore(
++        cutoff.documentTitle,
++        [cutoff.collegeName, cutoff.stream, cutoff.description],
++        q,
++        tokens
+       );
+-    }).map(cutoff => ({
+-      id: cutoff.id,
+-      category: 'cutoffs',
+-      badgeCategory: 'Cutoff / Admission Information',
+-      badgeSub: cutoff.academicYear || '2025-26',
+-      title: cutoff.documentTitle,
+-      subtitle: cutoff.collegeName,
+-      meta: [cutoff.stream || 'General', 'Official PDF'],
+-      whyRelevant: q ? `Matches your search for "${query}"` : 'Official admission data',
+-      tagColor: 'tertiary',
+-      actionLabel: 'View Cutoff PDF',
+-      collegeId: cutoff.collegeId,
+-      sourceFile: cutoff.sourceFile
+-    }));
+-
+-    const fyjcResults: SearchResultItem[] = FYJC_CUTOFFS.filter(c => {
+-      if (!q) return true;
+-      return c.collegeName.toLowerCase().includes(q) || c.stream.toLowerCase().includes(q);
+-    }).slice(0, 30).map(c => ({
+-      id: c.id,
+-      category: 'cutoffs',
+-      badgeCategory: `${c.stream} Cutoff`,
+-      badgeSub: `${c.cutoff}% (${c.year})`,
+-      title: c.collegeName,
+-      subtitle: `FYJC Cutoff: ${c.cutoff}% • Choice Code: ${c.choiceCode} • Category: ${c.category || 'General'}`,
+-      meta: [c.stream, `Category: ${c.category}`, `Code: ${c.choiceCode}`],
+-      whyRelevant: `Official FYJC cutoff threshold: ${c.cutoff}%`,
+-      tagColor: 'tertiary',
+-      actionLabel: 'View Details',
+-      collegeId: c.collegeId || c.collegeName.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+-    }));
+-
+-    if (category === 'cutoffs') {
+-      results = [...results, ...cutoffResults, ...fyjcResults];
+-    } else {
+-      results = [...results, ...cutoffResults];
++      results.push({ item, score: score + 10 }); // Cutoff documents matching query rank cleanly
++    });
++
++    // B. FYJC Cutoffs (grouped deduplicated cutoff entries)
++    if (q || normalizedCategory === 'cutoffs') {
++      const fyjcMatches = FYJC_CUTOFFS.filter((c) => {
++        if (!q) return true;
++        return matchesQuery([
++          c.collegeName,
++          c.stream,
++          c.category,
++          c.choiceCode,
++        ]);
++      });
++
++      // In universal 'all' search, group by collegeGroupingKey so a college search
++      // produces clean, distinct cutoff insights rather than hundreds of duplicate cards
++      if (normalizedCategory === 'all' && q) {
++        const grouped = new Map<string, FyjcCutoff[]>();
++        for (const c of fyjcMatches) {
++          const key = getCollegeGroupingKey(c);
++          if (!grouped.has(key)) grouped.set(key, []);
++          grouped.get(key)!.push(c);
++        }
++
++        grouped.forEach((group) => {
++          const primary = group[0];
++          const bestName = formatCollegeTitle(primary.collegeName);
++          const streams = Array.from(new Set(group.map((g) => g.stream))).join(', ');
++          const minCut = Math.min(...group.map((g) => g.cutoff));
++          const maxCut = Math.max(...group.map((g) => g.cutoff));
++          const slug = primary.collegeId || bestName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
++
++          const item: SearchResultItem = {
++            id: `cutoff-${primary.id}`,
++            category: 'cutoffs',
++            badgeCategory: group.length > 1 ? 'Multiple FYJC Cutoffs' : `${primary.stream} Cutoff`,
++            badgeSub: minCut === maxCut ? `${maxCut}% (${primary.year})` : `${minCut}%–${maxCut}% (${primary.year})`,
++            title: `${bestName} — Cutoff Data`,
++            subtitle: group.length > 1
++              ? `${group.length} Streams: ${streams} • Threshold Range: ${minCut}%–${maxCut}%`
++              : `FYJC Cutoff: ${primary.cutoff}% • Choice Code: ${primary.choiceCode}`,
++            meta: [streams, `Top: ${maxCut}%`, `Year: ${primary.year}`],
++            whyRelevant: `Official FYJC cutoff threshold for ${bestName}`,
++            tagColor: 'tertiary',
++            actionLabel: 'View College Details',
++            collegeId: primary.collegeId || slug,
++            collegeSlug: primary.collegeId || slug,
++          };
++
++          const score = computeScore(bestName, [streams, primary.choiceCode, primary.stream], q, tokens);
++          results.push({ item, score });
++        });
++      } else if (normalizedCategory === 'cutoffs') {
++        fyjcMatches.forEach((c) => {
++          const bestName = formatCollegeTitle(c.collegeName);
++          const slug = c.collegeId || bestName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
++          const item: SearchResultItem = {
++            id: c.id,
++            category: 'cutoffs',
++            badgeCategory: `${c.stream} Cutoff`,
++            badgeSub: `${c.cutoff}% (${c.year})`,
++            title: bestName,
++            subtitle: `FYJC Cutoff: ${c.cutoff}% • Choice Code: ${c.choiceCode} • Stream: ${c.stream} (${c.category || 'General'})`,
++            meta: [c.stream, `Cutoff: ${c.cutoff}%`, `Code: ${c.choiceCode}`],
++            whyRelevant: `Official FYJC cutoff threshold: ${c.cutoff}%`,
++            tagColor: 'tertiary',
++            actionLabel: 'View Details',
++            collegeId: c.collegeId || slug,
++            collegeSlug: c.collegeId || slug,
++          };
++
++          const score = computeScore(bestName, [c.stream, c.choiceCode, c.category], q, tokens);
++          results.push({ item, score });
++        });
++      }
+     }
+   }
+ 
+-  // Simple sorting: put cutoffs and classes near the top if they strongly match
++  // 5. Available Educational PDF Resources
++  if (normalizedCategory === 'all' || normalizedCategory === 'pdf' || normalizedCategory === 'pdf-resources') {
++    const pdfMatches = INITIAL_PDF_RESOURCES.filter((pdf) => {
++      if (!q) return true;
++      return matchesQuery([
++        pdf.title,
++        pdf.subtitle,
++        pdf.description,
++        pdf.category,
++        pdf.edition,
++        pdf.language,
++        ...(pdf.topicsCovered || []),
++      ]);
++    });
++
++    pdfMatches.forEach((pdf) => {
++      const item: SearchResultItem = {
++        id: pdf.id,
++        category: 'pdf',
++        badgeCategory: 'PDF Resource',
++        badgeSub: `${pdf.category} • ₹${pdf.price}`,
++        title: pdf.title,
++        subtitle: pdf.subtitle || pdf.description,
++        meta: [pdf.category, `${pdf.pages} Pages`, pdf.edition, `₹${pdf.price}`],
++        whyRelevant: q ? `Matches your search for "${query}"` : 'Official Infostaan Study Resource',
++        tagColor: 'primary',
++        actionLabel: 'View PDF Details',
++        slug: pdf.slug,
++      };
++
++      const score = computeScore(
++        pdf.title,
++        [pdf.subtitle, pdf.description, pdf.category, ...(pdf.topicsCovered || [])],
++        q,
++        tokens
++      );
++      results.push({ item, score });
++    });
++  }
++
++  // Ranking: If a query is provided, sort by match score descending.
++  // Break ties with exact title length or alphabetical order.
+   if (q) {
+     results.sort((a, b) => {
+-      const aTitleMatch = a.title.toLowerCase().includes(q);
+-      const bTitleMatch = b.title.toLowerCase().includes(q);
+-      if (aTitleMatch && !bTitleMatch) return -1;
+-      if (!aTitleMatch && bTitleMatch) return 1;
+-      return 0;
++      if (b.score !== a.score) {
++        return b.score - a.score;
++      }
++      return a.item.title.localeCompare(b.item.title);
+     });
+   }
+ 
+-  return results;
++  return results.map((r) => r.item);
+ }
+diff --git a/src/types.ts b/src/types.ts
+index 00013bc..fc2bfb4 100644
+--- a/src/types.ts
++++ b/src/types.ts
+@@ -1,10 +1,10 @@
+ export type ScreenType = 'home' | 'search' | 'college-detail' | 'saved' | 'guidance' | 'connect';
+ 
+-export type CategoryType = 'all' | 'colleges' | 'courses' | 'careers' /* | 'internships' */ | 'classes' | 'cutoffs';
++export type CategoryType = 'all' | 'colleges' | 'courses' | 'careers' | 'classes' | 'cutoffs' | 'pdf';
+ 
+ export interface SearchResultItem {
+   id: string;
+-  category: 'colleges' | 'courses' | 'careers' /* | 'internships' */ | 'classes' | 'cutoffs';
++  category: 'colleges' | 'courses' | 'careers' | 'classes' | 'cutoffs' | 'pdf';
+   badgeCategory: string;
+   badgeSub: string;
+   title: string;

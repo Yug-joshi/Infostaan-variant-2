@@ -12,6 +12,12 @@ export interface ReelItem {
   };
 }
 
+// Official YouTube channel URL configuration
+// Configurable via VITE_YOUTUBE_CHANNEL_URL environment variable or default channel placeholder
+export const OFFICIAL_YOUTUBE_URL: string =
+  (typeof import.meta !== 'undefined' && (import.meta as any).env?.VITE_YOUTUBE_CHANNEL_URL) ||
+  'https://www.youtube.com/@infostaan';
+
 export const INSTAGRAM_REELS: ReelItem[] = [
   {
     id: 'fyjc-reality-check',

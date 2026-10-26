@@ -1,10 +1,10 @@
 export type ScreenType = 'home' | 'search' | 'college-detail' | 'saved' | 'guidance' | 'connect';
 
-export type CategoryType = 'all' | 'colleges' | 'courses' | 'careers' /* | 'internships' */ | 'classes' | 'cutoffs';
+export type CategoryType = 'all' | 'colleges' | 'courses' | 'careers' | 'classes' | 'cutoffs' | 'pdf';
 
 export interface SearchResultItem {
   id: string;
-  category: 'colleges' | 'courses' | 'careers' /* | 'internships' */ | 'classes' | 'cutoffs';
+  category: 'colleges' | 'courses' | 'careers' | 'classes' | 'cutoffs' | 'pdf';
   badgeCategory: string;
   badgeSub: string;
   title: string;

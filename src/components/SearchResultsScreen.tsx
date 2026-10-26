@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Compass, SlidersHorizontal, BarChart2, Bookmark, Users, Star, Award, CheckCircle, Info, TrendingUp, MonitorPlay } from 'lucide-react';
+import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Compass, SlidersHorizontal, BarChart2, Bookmark, Users, Star, Award, CheckCircle, Info, TrendingUp, MonitorPlay, FileText } from 'lucide-react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { CategoryType, SearchResultItem } from '../types';
 import { searchInfostaan } from '../lib/searchEngine';
@@ -112,6 +112,10 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   const setActiveCategory = (newCategory: CategoryType) => {
     if (newCategory === 'all') {
       navigate('/search');
+    } else if (newCategory === 'pdf') {
+      const params = new URLSearchParams(searchParams);
+      params.set('category', 'pdf');
+      navigate(`/search?${params.toString()}`);
     } else {
       const params = new URLSearchParams(searchParams);
       params.delete('category');
@@ -137,8 +141,10 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
         return { badge: 'Mumbai Coaching Classes', title: 'Coaching Classes in Mumbai' };
       case 'cutoffs':
         return { badge: 'Mumbai Cutoff Explorer', title: 'Admission Cutoffs in Mumbai' };
+      case 'pdf':
+        return { badge: 'Mumbai Study Resources', title: 'Educational PDF Resources' };
       default:
-        return { badge: 'Mumbai Student Catalog', title: 'Search Mumbai Programs' };
+        return { badge: 'Mumbai Student Catalog', title: 'Search Mumbai Programs & Resources' };
     }
   };
 
@@ -154,6 +160,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
       case 'careers': return 'Exploring Mumbai career paths...';
       case 'classes': return 'Finding relevant classes in Mumbai...';
       case 'cutoffs': return 'Finding relevant admission cutoffs...';
+      case 'pdf': return 'Finding relevant study resources & PDFs...';
       default: return "Finding what's relevant in Mumbai...";
     }
   };
@@ -320,8 +327,10 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 
     if (item.category === 'careers') {
       navigate('/career-roadmap');
-    } else if (item.category === 'classes' && item.slug) {
-      navigate(`/class/${item.slug}`);
+    } else if (item.category === 'classes' && (item.slug || item.id)) {
+      navigate(`/class/${item.slug || item.id}`);
+    } else if (item.category === 'pdf') {
+      navigate(`/pdf-resources/${item.slug || item.id}`);
     } else if (item.collegeSlug) {
       onSelectCollege(item.collegeSlug + qs);
     } else if (item.collegeId) {
@@ -380,7 +389,24 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
             {/* Search Suggestions Dropdown Overlay */}
             {inputValue.trim().length > 0 && isSearchDropdownOpen && (
               <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#1a202b] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-2xl shadow-xl overflow-hidden z-40 text-left">
-                <div className="p-2">
+                <div className="p-2 space-y-0.5">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSearchParams(prev => {
+                        const next = new URLSearchParams(prev);
+                        next.set('query', inputValue.trim());
+                        return next;
+                      }, { replace: true });
+                      setIsSearchDropdownOpen(false);
+                      setActiveCategory('all');
+                      setSearchPhase('understanding');
+                    }}
+                    className="w-full text-left px-4 py-2.5 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 border-b border-slate-100 dark:border-white/5"
+                  >
+                    <Search className="w-4 h-4 text-[#007DCC] dark:text-[#9ccaff]" />
+                    <span className="text-slate-900 dark:text-[#F4F7FB] font-semibold text-xs sm:text-sm">Search "{inputValue}" in <span className="text-[#007DCC] dark:text-[#86cfff]">All Categories</span></span>
+                  </button>
                   <button
                     type="button"
                     onClick={() => {
@@ -393,7 +419,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                       setActiveCategory('colleges');
                       setSearchPhase('understanding');
                     }}
-                    className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3"
+                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
                   >
                     <Building2 className="w-4 h-4 text-slate-400" />
                     <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Colleges</span></span>
@@ -410,10 +436,78 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                       setActiveCategory('courses');
                       setSearchPhase('understanding');
                     }}
-                    className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3"
+                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
                   >
                     <GraduationCap className="w-4 h-4 text-slate-400" />
                     <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Courses</span></span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSearchParams(prev => {
+                        const next = new URLSearchParams(prev);
+                        next.set('query', inputValue.trim());
+                        return next;
+                      }, { replace: true });
+                      setIsSearchDropdownOpen(false);
+                      setActiveCategory('careers');
+                      setSearchPhase('understanding');
+                    }}
+                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
+                  >
+                    <TrendingUp className="w-4 h-4 text-slate-400" />
+                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Careers</span></span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSearchParams(prev => {
+                        const next = new URLSearchParams(prev);
+                        next.set('query', inputValue.trim());
+                        return next;
+                      }, { replace: true });
+                      setIsSearchDropdownOpen(false);
+                      setActiveCategory('classes');
+                      setSearchPhase('understanding');
+                    }}
+                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
+                  >
+                    <MonitorPlay className="w-4 h-4 text-slate-400" />
+                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Classes</span></span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSearchParams(prev => {
+                        const next = new URLSearchParams(prev);
+                        next.set('query', inputValue.trim());
+                        return next;
+                      }, { replace: true });
+                      setIsSearchDropdownOpen(false);
+                      setActiveCategory('cutoffs');
+                      setSearchPhase('understanding');
+                    }}
+                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
+                  >
+                    <BarChart2 className="w-4 h-4 text-slate-400" />
+                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Cutoffs</span></span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSearchParams(prev => {
+                        const next = new URLSearchParams(prev);
+                        next.set('query', inputValue.trim());
+                        return next;
+                      }, { replace: true });
+                      setIsSearchDropdownOpen(false);
+                      setActiveCategory('pdf');
+                      setSearchPhase('understanding');
+                    }}
+                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
+                  >
+                    <FileText className="w-4 h-4 text-slate-400" />
+                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in PDF Resources</span></span>
                   </button>
                 </div>
               </div>
@@ -431,6 +525,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                   { id: 'careers', label: 'Careers' },
                   { id: 'classes', label: 'Classes' },
                   { id: 'cutoffs', label: 'Cutoffs' },
+                  { id: 'pdf', label: 'PDF Resources' },
                 ].map((tab) => (
                   <button
                     key={tab.id}
@@ -610,6 +705,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                       const isCourse = item.category === 'courses';
                       const isCareer = item.category === 'careers';
                       const isClass = item.category === 'classes';
+                      const isPdf = item.category === 'pdf';
 
                       const getStreams = (): string[] => {
                         if (item.category === 'colleges' && item.subtitle) {
@@ -628,12 +724,15 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         if (item.category === 'classes' && item.meta) {
                           return item.meta;
                         }
+                        if (item.category === 'pdf' && item.meta) {
+                          return item.meta.slice(0, 3);
+                        }
                         return [];
                       };
 
                       const streams = getStreams();
 
-                      if (isCollege || isCourse || isCareer || isClass) {
+                      if (isCollege || isCourse || isCareer || isClass || isPdf) {
                         const facts: { icon: any; value: string; label: string }[] = [];
                         if (isCutoff) {
                           // Do not push any facts. The cutoff is displayed directly as highlighted text below.
@@ -643,6 +742,13 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                           }
                           if (item.meta && item.meta[1]) {
                             facts.push({ icon: TrendingUp, value: item.meta[1], label: 'Sector' });
+                          }
+                        } else if (isPdf) {
+                          if (item.meta && item.meta[0]) {
+                            facts.push({ icon: FileText, value: item.meta[0], label: 'Category' });
+                          }
+                          if (item.meta && item.meta[1]) {
+                            facts.push({ icon: Award, value: item.meta[1], label: 'Format' });
                           }
                         } else {
                           item.meta.forEach(m => {
@@ -662,13 +768,14 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                           });
                         }
 
-                        // Decorative header icon (replaces the previous remote images, which returned 404)
-                        const HeaderIcon = isCutoff ? BarChart2 : isCollege ? Building2 : isCourse ? GraduationCap : isCareer ? TrendingUp : MonitorPlay;
+                        // Decorative header icon
+                        const HeaderIcon = isCutoff ? BarChart2 : isCollege ? Building2 : isCourse ? GraduationCap : isCareer ? TrendingUp : isPdf ? FileText : MonitorPlay;
 
                         // Mirrors handleActionClick targets so cards without a destination don't look clickable
                         const isClickable = !!(
                           item.category === 'careers' ||
-                          (item.category === 'classes' && item.slug) ||
+                          item.category === 'pdf' ||
+                          (item.category === 'classes' && (item.slug || item.id)) ||
                           item.collegeSlug ||
                           item.collegeId ||
                           item.category === 'colleges' ||
@@ -691,7 +798,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 
                               {/* BADGE */}
                               <span className="relative min-w-0 px-2 py-1 rounded bg-[#007DCC] border border-white/20 text-white text-[10px] font-bold uppercase tracking-wider leading-snug break-words shadow-sm">
-                                {item.badgeCategory || (isCutoff ? 'CUTOFF' : isCollege ? 'COLLEGE' : isCourse ? 'COURSE' : isCareer ? 'CAREER' : 'CLASS')}
+                                {item.badgeCategory || (isCutoff ? 'CUTOFF' : isCollege ? 'COLLEGE' : isCourse ? 'COURSE' : isCareer ? 'CAREER' : isPdf ? 'PDF RESOURCE' : 'CLASS')}
                               </span>
 
                               {/* SAVE BUTTON */}

@@ -9,8 +9,10 @@ import {
   RotateCcw,
   Sparkles,
   Eye,
+  Youtube,
+  ExternalLink,
 } from 'lucide-react';
-import { INSTAGRAM_REELS, ReelItem } from '../data/instagramReels';
+import { INSTAGRAM_REELS, ReelItem, OFFICIAL_YOUTUBE_URL } from '../data/instagramReels';
 
 export const InstagramReelCarousel: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -53,9 +55,10 @@ export const InstagramReelCarousel: React.FC = () => {
   useEffect(() => {
     // Pause and reset all non-active videos
     Object.entries(videoRefs.current).forEach(([id, vid]) => {
-      if (vid && id !== activeReel.id) {
-        vid.pause();
-        vid.currentTime = 0;
+      const videoEl = vid as HTMLVideoElement | null;
+      if (videoEl && id !== activeReel.id) {
+        videoEl.pause();
+        videoEl.currentTime = 0;
       }
     });
 
@@ -163,18 +166,14 @@ export const InstagramReelCarousel: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-10">
           {/* Eyebrow Pill */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-[11px] font-extrabold uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-[11px] font-extrabold uppercase tracking-widest mb-2">
             <Sparkles className="w-3.5 h-3.5" />
             <span>STUDENT REELS & GUIDES</span>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F8FAFC]">
-            Watch What Students Say
-          </h2>
-
-          <p className="text-xs sm:text-base text-slate-600 dark:text-[#A9B8CA] mt-2 leading-relaxed">
+          <p className="text-xs sm:text-base text-slate-600 dark:text-[#A9B8CA] leading-relaxed">
             Real advice, FYJC realities, and Mumbai college guidance in 60 seconds.
           </p>
         </div>
@@ -419,6 +418,21 @@ export const InstagramReelCarousel: React.FC = () => {
               }`}
             />
           ))}
+        </div>
+
+        {/* Official YouTube Channel CTA */}
+        <div className="flex justify-center mt-6 sm:mt-7">
+          <a
+            href={OFFICIAL_YOUTUBE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full bg-red-600/10 hover:bg-red-600/15 dark:bg-red-500/10 dark:hover:bg-red-500/20 text-red-600 dark:text-red-400 border border-red-500/20 text-xs sm:text-sm font-bold transition-all duration-200 hover:scale-[1.02] active:scale-95 shadow-xs group"
+            aria-label="Visit our official YouTube channel (opens in new tab)"
+          >
+            <Youtube className="w-4 h-4 text-red-600 dark:text-red-400 group-hover:scale-110 transition-transform" />
+            <span>Watch on YouTube</span>
+            <ExternalLink className="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 transition-transform" />
+          </a>
         </div>
       </div>
     </section>
