@@ -330,12 +330,7 @@ export default function App() {
           }}
         />
         <div
-          className="absolute z-10 text-center px-4 animate-in fade-in duration-150"
-          style={{
-            top: '75%',
-            left: '49%',
-            transform: 'translate(-50%, -50%)',
-          }}
+          className="absolute z-10 top-[68%] sm:top-[75%] left-[49%] -translate-x-1/2 -translate-y-1/2 text-center px-4 animate-in fade-in duration-150"
         >
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB]">
             Infostaan<span className="text-[#007DCC]">.</span>
@@ -381,6 +376,7 @@ export default function App() {
               onOpenCutoff={() => setIsCutoffOpen(true)}
               onOpenClasses={() => setIsClassesOpen(true)}
               onOpenCategoryFilter={handleOpenCategoryFilter}
+              onOpenSignIn={() => setIsSignInOpen(true)}
             />
           } />
           <Route path="/class/:slug" element={<ClassDetailScreen />} />
@@ -392,6 +388,7 @@ export default function App() {
               savedItemIds={allSavedItemIds}
               onOpenCutoff={() => setIsCutoffOpen(true)}
               onSaveItem={handleToggleSaveItem}
+              onOpenSignIn={() => setIsSignInOpen(true)}
             />
           } />
 
@@ -443,6 +440,7 @@ export default function App() {
               savedItemIds={allSavedItemIds}
               onOpenCutoff={() => setIsCutoffOpen(true)}
               onSaveItem={handleToggleSaveItem}
+              onOpenSignIn={() => setIsSignInOpen(true)}
             />
           } />
 

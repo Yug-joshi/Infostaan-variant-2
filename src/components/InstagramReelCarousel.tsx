@@ -170,10 +170,6 @@ export const InstagramReelCarousel: React.FC = () => {
             <span>STUDENT REELS & GUIDES</span>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F8FAFC]">
-            Watch What Students Say
-          </h2>
-
           <p className="text-xs sm:text-base text-slate-600 dark:text-[#A9B8CA] mt-2 leading-relaxed">
             Real advice, FYJC realities, and Mumbai college guidance in 60 seconds.
           </p>

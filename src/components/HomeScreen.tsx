@@ -15,7 +15,7 @@ import {
   Lightbulb,
   BarChart2
 } from 'lucide-react';
-import { ScreenType } from '../types';
+import { ScreenType, SearchResultItem, PDFResource } from '../types';
 import booksImg from '../assets/images/books.png';
 import gradCapImg from '../assets/images/grad_cap.png';
 import gsap from 'gsap';
@@ -26,6 +26,9 @@ import { MascotArt } from './MascotArt';
 
 import { FilterCategoryType } from './CategoryFilterModal';
 import { getCategoryAccent } from '../lib/categoryAccents';
+import { searchInfostaan } from '../lib/searchEngine';
+import { fetchPDFResources, INITIAL_PDF_RESOURCES } from '../data/pdfResources';
+import { useTheme } from '../context/ThemeContext';
 
 interface HomeScreenProps {
   onSearch: (query: string, category?: string) => void;
@@ -34,6 +37,7 @@ interface HomeScreenProps {
   onOpenCutoff: () => void;
   onOpenClasses: () => void;
   onOpenCategoryFilter: (category: FilterCategoryType) => void;
+  onOpenSignIn: () => void;
 }
 
 export const HomeScreen: React.FC<HomeScreenProps> = ({
@@ -43,10 +47,45 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   onOpenCutoff,
   onOpenClasses,
   onOpenCategoryFilter,
+  onOpenSignIn,
 }) => {
   const [query, setQuery] = useState('');
+  const [pdfResources, setPdfResources] = useState<PDFResource[]>(INITIAL_PDF_RESOURCES);
+  const { toggleTheme } = useTheme();
   const containerRef = useRef<HTMLDivElement>(null);
   const decorationsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let isActive = true;
+    fetchPDFResources().then((resources) => {
+      if (isActive) setPdfResources(resources);
+    });
+    return () => {
+      isActive = false;
+    };
+  }, []);
+
+  const searchSuggestions = query.trim()
+    ? searchInfostaan(query.trim(), 'all', pdfResources).slice(0, 6)
+    : [];
+
+  const handleSuggestionClick = (item: SearchResultItem) => {
+    if (item.action === 'toggle-theme') {
+      toggleTheme();
+    } else if (item.action === 'open-profile') {
+      onOpenSignIn();
+    } else if (item.href) {
+      onNavigate(item.href);
+    } else if (item.category === 'pdfs' && item.slug) {
+      onNavigate(`/pdf-resources/${item.slug}`);
+    } else if (item.category === 'connect') {
+      onNavigate(`/mentor/${item.id}`);
+    } else if (item.category === 'classes' && item.slug) {
+      onNavigate(`/class/${item.slug}`);
+    } else {
+      onSearch(query.trim());
+    }
+  };
 
   // Subtle GSAP entrance animation and background interactions
   useEffect(() => {
@@ -230,7 +269,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
       {/* Central Content (Spacious & Clean) */}
       <div ref={containerRef} className="relative z-10 w-full max-w-5xl mx-auto">
-        <div className="flex flex-col items-center justify-center gap-4">
+        <div className="relative z-20 flex flex-col items-center justify-center gap-4">
           <div className="w-full max-w-3xl text-center">
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 mb-6 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-[#A9B8CA]">
@@ -241,11 +280,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
             {/* Main Headline */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB] mb-6 leading-tight">
-              What are you <span className="marker-highlight font-playwrite-au-nsw text-white dark:text-yellow-400">looking for?</span>
+              What are you <span className="marker-highlight text-white dark:text-yellow-400">looking for?</span>
             </h1>
 
             {/* Search */}
-            <div className="w-full max-w-3xl mb-8 relative z-[60]">
+            <div className="w-full max-w-3xl mb-8 relative z-[100]">
               <form onSubmit={handleSubmit} className="relative w-full group">
                 <div className="flex items-center bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 rounded-full shadow-lg shadow-black/5 dark:shadow-2xl transition-all duration-300 focus-within:border-slate-400 dark:focus-within:border-amber-400/40 focus-within:ring-4 focus-within:ring-slate-900/5 dark:focus-within:ring-amber-400/10 px-3 py-1.5 sm:px-4 sm:py-2">
                   <Search className="text-slate-400 dark:text-slate-300 w-5 h-5 sm:w-6 sm:h-6 ml-1.5 sm:ml-3 shrink-0" />
@@ -254,7 +293,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                     type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search colleges, courses, careers, classes..."
+                    placeholder="Search colleges, courses, people, PDFs, and more..."
                     className="w-full bg-transparent border-none text-slate-900 dark:text-[#F8FAFC] font-medium text-xs sm:text-base px-2 sm:px-4 py-2 sm:py-3 focus:outline-none focus:ring-0 placeholder:text-slate-400 dark:placeholder-[#71839A] min-w-0"
                     autoComplete="off"
                   />
@@ -268,31 +307,30 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
                 {/* Search Dropdown */}
                 {query.trim().length > 0 && (
-                  <div className="absolute top-full left-0 right-0 mt-3 bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 rounded-2xl shadow-xl dark:shadow-2xl overflow-hidden z-50 text-left">
-                    <div className="p-2">
+                  <div className="relative mt-3 w-full bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 rounded-2xl shadow-xl dark:shadow-2xl overflow-hidden text-left">
+                    <div className="max-h-[min(60vh,420px)] overflow-y-auto p-2">
+                      {searchSuggestions.length > 0 ? searchSuggestions.map((item) => (
+                        <button
+                          key={`${item.category}-${item.id}`}
+                          type="button"
+                          onClick={() => handleSuggestionClick(item)}
+                          className="w-full text-left px-4 py-3 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-start gap-3"
+                        >
+                          <span className="min-w-0 flex-1">
+                            <span className="block text-sm font-semibold text-slate-900 dark:text-[#F8FAFC]">{item.title}</span>
+                            <span className={`mt-0.5 text-xs text-slate-500 dark:text-[#71839A] line-clamp-2 ${item.category === 'colleges' ? 'hidden sm:block' : 'block'}`}>{item.subtitle || item.badgeCategory}</span>
+                          </span>
+                          <span className="shrink-0 text-[10px] font-bold uppercase tracking-wide text-slate-400 dark:text-[#71839A]">{item.badgeCategory}</span>
+                        </button>
+                      )) : (
+                        <div className="px-4 py-3 text-sm text-slate-500 dark:text-[#71839A]">No matching results yet</div>
+                      )}
                       <button
                         type="button"
-                        onClick={() => onSearch(query, 'colleges')}
-                        className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
+                        onClick={() => onSearch(query.trim())}
+                        className="w-full mt-1 px-4 py-3 text-left text-sm font-semibold text-amber-700 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-white/5 rounded-xl transition-colors"
                       >
-                        <Building2 className="w-5 h-5 text-amber-500 dark:text-amber-400" />
-                        <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Colleges</span></span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => onSearch(query, 'courses')}
-                        className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
-                      >
-                        <GraduationCap className="w-5 h-5 text-amber-500 dark:text-amber-400" />
-                        <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Courses</span></span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => onSearch(query, 'careers')}
-                        className="w-full text-left px-4 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3"
-                      >
-                        <TrendingUp className="w-5 h-5 text-amber-500 dark:text-amber-400" />
-                        <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Careers</span></span>
+                        See all results for “{query.trim()}”
                       </button>
                     </div>
                   </div>
@@ -317,12 +355,12 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
         </div>
 
         {/* Mobile Discovery Shortcuts (Row 1: Colleges, Courses, Careers | Row 2: Classes, Cutoffs side by side) */}
-        <div className="sm:hidden flex flex-col items-center justify-center gap-3 w-full mb-6 relative z-50">
+        <div className="sm:hidden flex flex-col items-center justify-center gap-3 w-full mb-6 relative z-10">
           <div className="flex items-center justify-center gap-3 w-full">
             {([
               { name: 'Colleges', cat: 'colleges' as const, icon: Building2, action: () => onOpenCategoryFilter('colleges') },
               { name: 'Courses', cat: 'courses' as const, icon: GraduationCap, action: () => onOpenCategoryFilter('courses') },
-              { name: 'Careers', cat: 'careers' as const, icon: TrendingUp, action: () => onOpenCategoryFilter('careers') },
+              { name: 'Paid PDFs', cat: 'careers' as const, icon: FileText, action: () => onNavigate('/pdf-resources') },
             ]).map((item) => {
               const IconComp = item.icon;
               const accent = getCategoryAccent(item.cat);
@@ -390,11 +428,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
         </div>
 
         {/* Desktop Discovery Shortcuts (Preserved single-row layout) */}
-        <div className="hidden sm:flex w-full max-w-4xl mx-auto flex-wrap items-center justify-center gap-3 sm:gap-4 mb-6 relative z-50">
+        <div className="hidden sm:flex w-full max-w-4xl mx-auto flex-wrap items-center justify-center gap-3 sm:gap-4 mb-6 relative z-10">
           {([
             { name: 'Colleges', cat: 'colleges' as const, icon: Building2, action: () => onOpenCategoryFilter('colleges') },
             { name: 'Courses', cat: 'courses' as const, icon: GraduationCap, action: () => onOpenCategoryFilter('courses') },
-            { name: 'Careers', cat: 'careers' as const, icon: TrendingUp, action: () => onOpenCategoryFilter('careers') },
+            { name: 'Paid PDFs', cat: 'careers' as const, icon: FileText, action: () => onNavigate('/pdf-resources') },
             { name: 'Classes', cat: 'classes' as const, icon: MonitorPlay, action: onOpenClasses },
             { name: 'Cutoffs', cat: 'cutoffs' as const, icon: BarChart2, action: onOpenCutoff },
           ]).map((item) => {

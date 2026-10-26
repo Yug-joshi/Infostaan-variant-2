@@ -42,6 +42,14 @@ export const Footer: React.FC = () => {
           >
             Guidance & Roadmap
           </Link>
+          <a
+            href="https://youtube.com/@infostaan_?si=sJTlvkNbLKxSmrFU"
+            target="_blank"
+            rel="noreferrer"
+            className="text-slate-600 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-[#F4F7FB] transition-colors"
+          >
+            YouTube
+          </a>
         </div>
       </div>
     </footer>

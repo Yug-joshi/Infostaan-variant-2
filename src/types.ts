@@ -1,10 +1,10 @@
 export type ScreenType = 'home' | 'search' | 'college-detail' | 'saved' | 'guidance' | 'connect';
 
-export type CategoryType = 'all' | 'colleges' | 'courses' | 'careers' /* | 'internships' */ | 'classes' | 'cutoffs';
+export type CategoryType = 'all' | 'colleges' | 'courses' | 'careers' /* | 'internships' */ | 'classes' | 'cutoffs' | 'pdfs' | 'connect';
 
 export interface SearchResultItem {
   id: string;
-  category: 'colleges' | 'courses' | 'careers' /* | 'internships' */ | 'classes' | 'cutoffs';
+  category: 'colleges' | 'courses' | 'careers' /* | 'internships' */ | 'classes' | 'cutoffs' | 'pdfs' | 'connect' | 'pages';
   badgeCategory: string;
   badgeSub: string;
   title: string;
@@ -17,6 +17,9 @@ export interface SearchResultItem {
   collegeSlug?: string;
   sourceFile?: string;
   slug?: string;
+  href?: string;
+  action?: 'toggle-theme' | 'open-profile';
+  searchTerms?: string[];
   discipline?: string[];
   qualificationLevel?: string;
   courseFamily?: string;
