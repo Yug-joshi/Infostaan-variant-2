@@ -37,58 +37,20 @@ def main():
     except Exception as e:
         print(f"Could not list initial directory: {e}")
 
-    # Determine target document root:
-    # We want to find where the live website's index.html lives.
-    target_dir = initial_pwd
+    # Determine targets:
+    # If index.html is in root_files, root '.' is the primary web root for the domain.
+    # To be 100% sure regardless of whether Hostinger serves from '.' or 'public_html',
+    # we upload to '.' AND to 'public_html' if it exists.
+    targets = ['.']
+    if 'public_html' in root_files:
+        targets.append('public_html')
 
-    # Check common Hostinger folder structures:
-    # Structure A: initial_pwd has 'domains' folder (e.g. domains/infostaan.com/public_html)
-    # Structure B: initial_pwd has 'public_html' folder
-    # Structure C: initial_pwd IS the public_html folder already (index.html is right there in root_files)
-    
-    if 'domains' in root_files:
-        print("Found 'domains' directory. Checking inside domains/...")
-        try:
-            domains_list = ftp.nlst('domains')
-            print(f"Inside domains: {domains_list}")
-            for d in domains_list:
-                if 'infostaan' in d.lower():
-                    cand = f"{d}/public_html" if not d.endswith('/public_html') else d
-                    print(f"Found infostaan domain folder: {cand}")
-                    target_dir = cand
-                    break
-        except Exception as e:
-            print(f"Error checking domains: {e}")
-
-    elif 'public_html' in root_files:
-        # Check if index.html is already in the root, or if it is inside public_html
-        if 'index.html' in root_files and 'public_html' in root_files:
-            # Check what's inside public_html
-            try:
-                pub_files = ftp.nlst('public_html')
-                print(f"Inside public_html: {pub_files}")
-                # If public_html has another public_html, it was our nested upload!
-                # If public_html has assets or index.html, target public_html
-                target_dir = 'public_html'
-            except Exception:
-                target_dir = 'public_html'
-        else:
-            target_dir = 'public_html'
-    else:
-        print("Neither 'domains' nor 'public_html' found as subfolder. Uploading directly to current working directory.")
-        target_dir = '.'
-
-    print(f"\n===> Selected target upload directory: '{target_dir}'")
-    ftp.cwd(target_dir)
-    print(f"Current working directory is now: {ftp.pwd()}")
-    print("Directory listing before upload:", ftp.nlst())
+    print(f"\n===> Deployment targets: {targets}")
 
     # Recursive upload helper
-    total_files = 0
-    total_bytes = 0
-
     def upload_dir(local_path: Path, remote_prefix=""):
-        nonlocal total_files, total_bytes
+        count = 0
+        total_size = 0
         for item in sorted(local_path.iterdir()):
             if item.is_file():
                 filename = item.name
@@ -96,8 +58,8 @@ def main():
                 size = item.stat().st_size
                 with open(item, 'rb') as f:
                     ftp.storbinary(f"STOR {filename}", f)
-                total_files += 1
-                total_bytes += size
+                count += 1
+                total_size += size
                 print(f"  [+] Uploaded {rel_remote} ({size:,} bytes)")
             elif item.is_dir():
                 dirname = item.name
@@ -106,22 +68,32 @@ def main():
                     ftp.mkd(dirname)
                     print(f"  [DIR] Created remote directory: {rel_remote}")
                 except ftplib.error_perm:
-                    # Directory likely already exists
                     pass
                 ftp.cwd(dirname)
-                upload_dir(item, rel_remote)
+                c, s = upload_dir(item, rel_remote)
+                count += c
+                total_size += s
                 ftp.cwd("..")
+        return count, total_size
 
-    print(f"\nStarting upload of {dist_dir} contents...")
-    upload_dir(dist_dir)
-    print(f"\nUpload complete! Successfully transferred {total_files} files ({total_bytes:,} bytes).")
+    for target in targets:
+        print(f"\n==========================================")
+        print(f"Deploying build to target: '{target}'")
+        print(f"==========================================")
+        ftp.cwd(initial_pwd)
+        if target != '.':
+            try:
+                ftp.cwd(target)
+            except Exception as e:
+                print(f"Could not enter {target}: {e}")
+                continue
+        print(f"Current directory: {ftp.pwd()}")
+        files_uploaded, bytes_uploaded = upload_dir(dist_dir)
+        print(f"Finished uploading to '{target}': {files_uploaded} files ({bytes_uploaded:,} bytes).")
 
-    print("\nVerifying uploaded files in target directory:")
-    final_listing = ftp.nlst()
-    print("Files in target directory:", final_listing)
-
+    ftp.cwd(initial_pwd)
     ftp.quit()
-    print("FTP Connection closed cleanly.")
+    print("\nFTP deployment successfully completed for all targets!")
 
 if __name__ == '__main__':
     main()
