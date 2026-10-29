@@ -59,4 +59,4 @@ jobs:
           git checkout -B deploy-log-branch
           git add deploy.log
           git commit -m "Hostinger deploy log" || true
-          git push -f origin deploy-log-branch || true
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" deploy-log-branch || true
