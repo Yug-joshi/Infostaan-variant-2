@@ -1,4 +1,3 @@
-
 name: Build and Deploy Infostaan
 
 on:
@@ -28,6 +27,11 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Install dependencies
         run: npm ci
 
@@ -37,34 +41,10 @@ jobs:
       - name: Verify build output
         run: test -f dist/index.html
 
-      
-      - name: Inspect FTP Server Structure
-        run: |
-          echo "=== FTP Root Directory Listing ==="
-          curl -s --list-only -u "${{ secrets.HOSTINGERFTPUSERNAME }}:${{ secrets.HOSTINGERFTPPASSWORD }}" "ftp://${{ secrets.HOSTINGERFTPHOST }}:${{ secrets.HOSTINGERFTPPORT }}/" || true
-          echo "=== FTP public_html Directory Listing ==="
-          curl -s --list-only -u "${{ secrets.HOSTINGERFTPUSERNAME }}:${{ secrets.HOSTINGERFTPPASSWORD }}" "ftp://${{ secrets.HOSTINGERFTPHOST }}:${{ secrets.HOSTINGERFTPPORT }}/public_html/" || true
-          echo "## FTP Diagnostics" >> $GITHUB_STEP_SUMMARY
-          echo "### FTP Root listing:" >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-          curl -s --list-only -u "${{ secrets.HOSTINGERFTPUSERNAME }}:${{ secrets.HOSTINGERFTPPASSWORD }}" "ftp://${{ secrets.HOSTINGERFTPHOST }}:${{ secrets.HOSTINGERFTPPORT }}/" >> $GITHUB_STEP_SUMMARY 2>&1 || true
-          echo '```' >> $GITHUB_STEP_SUMMARY
-          echo "### FTP public_html listing:" >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-          curl -s --list-only -u "${{ secrets.HOSTINGERFTPUSERNAME }}:${{ secrets.HOSTINGERFTPPASSWORD }}" "ftp://${{ secrets.HOSTINGERFTPHOST }}:${{ secrets.HOSTINGERFTPPORT }}/public_html/" >> $GITHUB_STEP_SUMMARY 2>&1 || true
-          echo '```' >> $GITHUB_STEP_SUMMARY
-
-      - name: Upload dist contents to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.HOSTINGERFTPHOST }}
-          username: ${{ secrets.HOSTINGERFTPUSERNAME }}
-          password: ${{ secrets.HOSTINGERFTPPASSWORD }}
-          port: ${{ secrets.HOSTINGERFTPPORT }}
-          protocol: ftp
-          local-dir: ./dist/
-          server-dir: ./
-          dangerous-clean-slate: false
-          security: loose
-          log-level: verbose
-          timeout: 60000
+      - name: Deploy to Hostinger FTP
+        env:
+          HOSTINGERFTPHOST: ${{ secrets.HOSTINGERFTPHOST }}
+          HOSTINGERFTPUSERNAME: ${{ secrets.HOSTINGERFTPUSERNAME }}
+          HOSTINGERFTPPASSWORD: ${{ secrets.HOSTINGERFTPPASSWORD }}
+          HOSTINGERFTPPORT: ${{ secrets.HOSTINGERFTPPORT }}
+        run: python scripts/deploy_hostinger.py
