@@ -92,7 +92,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   // Subtle GSAP entrance animation and background interactions
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
+
     const ctx = gsap.context(() => {
       if (containerRef.current) {
         gsap.fromTo(
@@ -107,7 +107,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           }
         );
       }
-      
+
       if (decorationsRef.current) {
         const parallaxLayers = decorationsRef.current.querySelectorAll('.parallax-layer');
         const floatLayers = decorationsRef.current.querySelectorAll('.float-layer');
@@ -117,7 +117,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           const dur = 4 + (i * 1.5);
           const dist = 10 + (i * 5);
           const rot = 2 + i;
-          
+
           gsap.to(layer, {
             y: `+=${dist}`,
             rotation: `+=${rot}`,
@@ -149,17 +149,17 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
           parallaxLayers.forEach((layer, index) => {
             const depth = parseFloat(layer.getAttribute('data-depth') || '0.1');
-            
+
             // Proximity calculation
             const rect = layer.getBoundingClientRect();
             const centerX = rect.left + rect.width / 2;
             const centerY = rect.top + rect.height / 2;
             const dist = Math.hypot(mouseX - centerX, mouseY - centerY);
-            
+
             let repelX = 0;
             let repelY = 0;
             if (dist < 250) {
-              const force = (250 - dist) / 250; 
+              const force = (250 - dist) / 250;
               const angle = Math.atan2(centerY - mouseY, centerX - mouseX);
               repelX = Math.cos(angle) * force * 15; // Small 15px reaction
               repelY = Math.sin(angle) * force * 15;
@@ -168,7 +168,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             // Scroll parallax: swap places circularly on scroll
             let scrollX = 0;
             let scrollYOffset = 0;
-            
+
             if (index === 0) { // Bottom Left (Books) -> moves Up
               scrollX = scrollY * 0.1;
               scrollYOffset = -scrollY * 0.9;
@@ -202,10 +202,10 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
         window.addEventListener('mousemove', handleMouseMove);
         window.addEventListener('scroll', handleScroll, { passive: true });
-        
+
         // Initialize once
         updateParallax();
-        
+
         return () => {
           window.removeEventListener('mousemove', handleMouseMove);
           window.removeEventListener('scroll', handleScroll);
@@ -223,7 +223,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
   return (
     <main className="relative w-full flex-1 pt-24 sm:pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0B111E] text-slate-900 dark:text-[#F8FAFC] transition-colors duration-200">
-      
+
       {/* Absolute Background Rule - Clean subtle background */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-amber-100/30 dark:bg-amber-400/5 blur-[100px] dark:blur-[120px]" />
@@ -231,8 +231,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       </div>
 
       {/* Desktop-only static mascot & floating decorations */}
-      <div 
-        ref={decorationsRef} 
+      <div
+        ref={decorationsRef}
         className="pointer-events-none absolute top-0 left-0 right-0 h-[100vh] z-0 hidden lg:block overflow-hidden"
         aria-hidden="true"
       >
@@ -240,7 +240,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
         <div className="absolute top-[8%] lg:top-[10%] left-[2%] xl:left-[4%] w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-80 xl:h-80 pointer-events-auto cursor-default transition-all duration-300">
           <MascotArt variant="welcome" className="w-full h-full object-contain opacity-100 dark:opacity-95 drop-shadow-sm" alt="InfoBuddy mascot greeting students on the homepage" />
         </div>
-        
+
         {/* Bottom Left: Books (Hidden for now - do not delete) */}
         {/*
         <div className="parallax-layer absolute top-[60%] left-[3%] xl:left-[6%] w-36 h-36 md:w-48 md:h-48" data-depth="0.9">
@@ -249,7 +249,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           </div>
         </div>
         */}
-        
+
         {/* Middle/Bottom Right: Grad Cap (Hidden for now - do not delete) */}
         {/*
         <div className="parallax-layer absolute top-[40%] right-[2%] xl:right-[5%] w-40 h-40 md:w-56 md:h-56" data-depth="-0.5">
@@ -261,7 +261,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       </div>
 
       {/* Mobile-only minimal marks */}
-      <div 
+      <div
         className="pointer-events-none absolute top-0 left-0 right-0 h-[100vh] z-0 block lg:hidden"
         aria-hidden="true"
       >
@@ -282,7 +282,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
             {/* Main Headline */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB] mb-6 leading-tight">
-              What are you <span className="marker-highlight text-white dark:text-yellow-400">looking for?</span>
+              What are you <span className="marker-highlight text-black dark:text-yellow-400">looking for?</span>
             </h1>
 
             {/* Search */}
@@ -510,15 +510,15 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             <span className="text-xs text-slate-500 dark:text-[#71839A] uppercase tracking-wider font-bold">Discover Mumbai</span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div 
+            <div
               onClick={() => onOpenCategoryFilter('colleges')}
               className="p-5 rounded-2xl bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 hover:border-amber-400/50 cursor-pointer group transition-colors shadow-sm hover:shadow-md"
             >
               <h4 className="text-slate-900 dark:text-[#F8FAFC] font-semibold group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors mb-1">Top Mumbai Colleges</h4>
               <p className="text-xs text-slate-500 dark:text-[#71839A]">Filter commerce, arts, science & autonomous Mumbai colleges</p>
             </div>
-            
-            <div 
+
+            <div
               onClick={() => onNavigate('/pdf-resources')}
               className="p-5 rounded-2xl bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 hover:border-amber-400/50 cursor-pointer group transition-colors shadow-sm hover:shadow-md flex flex-col justify-between"
             >
