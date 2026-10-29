@@ -1,0 +1,307 @@
+import { PDFResource, PurchasedPdfItem } from '../types';
+
+export const PDF_CATEGORIES = [
+  'All',
+  'Commerce Notes',
+  'Science Notes',
+  'Arts Notes',
+] as const;
+
+export const INITIAL_PDF_RESOURCES: PDFResource[] = [
+  {
+    id: 'pdf-fyjc-bk-notes',
+    slug: 'fyjc-book-keeping-accountancy-revision-notes',
+    title: 'FYJC Book Keeping & Accountancy (BK) Complete Revision Notes',
+    subtitle: 'Chapter-wise journal entries, ledger postings, final accounts adjustments, and solved board balance sheets.',
+    description: 'Comprehensive revision notes for 11th Commerce Book Keeping & Accountancy (Maharashtra State Board). Covers double-entry system, trial balance rectification, depreciation methods, bills of exchange, and final accounts with step-by-step model adjustments.',
+    category: 'Commerce Notes',
+    price: 149,
+    originalPrice: 299,
+    coverImage: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800',
+    pages: 74,
+    edition: '2025-26 Edition',
+    fileFormat: 'PDF',
+    fileSize: '6.8 MB',
+    language: 'English',
+    previewPages: [
+      'Chapter 1-3 Summary: Fundamental Accounting Concepts & Conventions',
+      'Master Adjustment Sheet: Closing stock, bad debts, outstanding expenses',
+      'Depreciation Methods: Straight Line Method vs Written Down Value',
+      'Step-by-Step Final Accounts Problem Solving Framework'
+    ],
+    topicsCovered: [
+      'Double Entry Book Keeping & Accounting Concepts',
+      'Journalizing & Ledger Posting Standard Rules',
+      'Bank Reconciliation Statement (BRS) Formulas',
+      'Final Accounts Adjustments & Balance Sheet Formats'
+    ],
+    lastUpdated: '2025-06-15',
+    rating: 4.9,
+    reviewsCount: 164,
+  },
+  {
+    id: 'pdf-fyjc-ocm-notes',
+    slug: 'fyjc-ocm-key-points-distinction-notes',
+    title: 'FYJC Organization of Commerce & Management (OCM) Key Points & Distinction Notes',
+    subtitle: 'High-score summary notes, textbook distinction tables, and 5-mark answer frameworks.',
+    description: 'Condensed chapter-by-chapter revision notes for 11th Commerce OCM. Includes comprehensive distinction tables, business services, emerging modes of business, and social responsibility answer templates designed for maximum board exam scores.',
+    category: 'Commerce Notes',
+    price: 129,
+    originalPrice: 249,
+    coverImage: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800',
+    pages: 58,
+    edition: '2025 Edition',
+    fileFormat: 'PDF',
+    fileSize: '5.4 MB',
+    language: 'English',
+    previewPages: [
+      'Comparative Chart: Sole Proprietorship vs Partnership vs Joint Stock Company',
+      'Types of Banks & Functions of Commercial Banks Quick Summary',
+      'Principles of Management Application Notes',
+      'Expected Long Answer Questions & Point-Wise Frameworks'
+    ],
+    topicsCovered: [
+      'Forms of Business Organizations Comparison Notes',
+      'Banking, Insurance & Warehousing Services Summaries',
+      'E-Commerce, BPO & Outsourcing Conceptual Breakdowns',
+      'Social Responsibility & Business Ethics Key Points'
+    ],
+    lastUpdated: '2025-05-20',
+    rating: 4.8,
+    reviewsCount: 112,
+  },
+  {
+    id: 'pdf-fyjc-economics-notes',
+    slug: 'fyjc-economics-master-revision-notes',
+    title: 'FYJC Economics Chapter-wise Master Revision Notes & Diagrams',
+    subtitle: 'Micro & macro fundamentals, demand analysis, national income, and economic reform flowcharts.',
+    description: 'Exam-ready study notes for Maharashtra State Board 11th Economics. Features clear economic diagrams, schedules, distinction points, and simplified explanations of inflation, money market, and economic reforms.',
+    category: 'Commerce Notes',
+    price: 139,
+    originalPrice: 269,
+    coverImage: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800',
+    pages: 64,
+    edition: '2025 Edition',
+    fileFormat: 'PDF',
+    fileSize: '6.1 MB',
+    language: 'English',
+    previewPages: [
+      'Diagrammatic Guide: Law of Diminishing Marginal Utility',
+      'Formulas & Solved Illustrations for Quartiles and Deciles',
+      'Comparison Table: Internal Debt vs External Debt, Direct vs Indirect Taxes',
+      'Quick Recap Notes on 1991 Liberalization, Privatization & Globalization'
+    ],
+    topicsCovered: [
+      'Basic Concepts in Economics & Utility Analysis Notes',
+      'Partition Values & Measures of Dispersion Formulae',
+      'Economic Policy Reforms Since 1991 (LPG) Overview',
+      'Rural Development & Poverty in India Exam Pointers'
+    ],
+    lastUpdated: '2025-04-10',
+    rating: 4.8,
+    reviewsCount: 95,
+  },
+  {
+    id: 'pdf-class-11-physics-notes',
+    slug: 'class-11-physics-formula-derivations-notes',
+    title: 'Class 11 Science Physics: Formula Sheet & Derivations Revision Notes',
+    subtitle: 'Core derivations, SI units, dimensional analysis, and chapter-wise formula quick-sheets.',
+    description: 'High-yield revision notes covering all Class 11 Physics chapters for Maharashtra Board and entrance foundations (MHT-CET / JEE). Includes stepwise derivations, key definitions, vector formulas, and laws of motion shortcuts.',
+    category: 'Science Notes',
+    price: 169,
+    originalPrice: 329,
+    coverImage: 'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?auto=format&fit=crop&q=80&w=800',
+    pages: 82,
+    edition: '2025 Edition',
+    fileFormat: 'PDF',
+    fileSize: '7.9 MB',
+    language: 'English',
+    previewPages: [
+      'Master Formula Table: Kinematics, Projectile Motion & Circular Motion',
+      'Derivation of Work-Energy Theorem & Conservation of Energy',
+      'Gravitational Potential & Escape Velocity Step-by-Step Proofs',
+      'Essential Constant Values, Dimensions and SI Unit Reference Sheet'
+    ],
+    topicsCovered: [
+      'Units, Measurements & Dimensional Analysis Key Tables',
+      'Scalar & Vector Mathematics and Kinematic Equations',
+      'Newton\'s Laws of Motion & Friction Stepwise Derivations',
+      'Gravitation & Mechanical Properties of Solids Cheat Sheet'
+    ],
+    lastUpdated: '2025-05-12',
+    rating: 4.9,
+    reviewsCount: 138,
+  },
+  {
+    id: 'pdf-class-11-chemistry-notes',
+    slug: 'class-11-chemistry-reactions-organic-notes',
+    title: 'Class 11 Science Chemistry: Reactions, Equations & Organic Concept Notes',
+    subtitle: 'Periodic trends, chemical bonding diagrams, stoichiometry formulas, and basic organic mechanisms.',
+    description: 'Concise and structured chemistry revision notes for Class 11. Covers atomic structure, periodic table properties, hybridization, thermodynamics formulas, redox equations balancing, and IUPAC nomenclature rules for basic organic chemistry.',
+    category: 'Science Notes',
+    price: 159,
+    originalPrice: 299,
+    coverImage: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800',
+    pages: 76,
+    edition: '2025 Edition',
+    fileFormat: 'PDF',
+    fileSize: '7.4 MB',
+    language: 'English',
+    previewPages: [
+      'Periodic Trends Quick Map: Atomic Radii, Ionization Enthalpy & Electronegativity',
+      'VSEPR Theory & Molecular Geometry Illustrated Summary',
+      'Redox Balancing via Oxidation Number & Ion-Electron Methods',
+      'IUPAC Rules with 50 Common Functional Group Examples'
+    ],
+    topicsCovered: [
+      'Modern Periodic Table & Electronic Configuration Notes',
+      'Chemical Bonding, Lewis Structures & Hybridization Charts',
+      'Chemical Thermodynamics & Enthalpy Calculation Formulas',
+      'Basic Principles of Organic Chemistry & IUPAC Nomenclature'
+    ],
+    lastUpdated: '2025-06-01',
+    rating: 4.8,
+    reviewsCount: 119,
+  },
+  {
+    id: 'pdf-fyjc-sp-notes',
+    slug: 'fyjc-secretarial-practice-sp-revision-notes',
+    title: 'FYJC Secretarial Practice (SP) Board Exam Revision Notes & Formats',
+    subtitle: 'Letter drafting templates, company secretary procedures, and joint stock company legal steps.',
+    description: 'Specially organized revision guide for FYJC Secretarial Practice students. Features verbatim letter drafts for directors, shareholders, and registrar, plus point-by-point summaries of company formation stages and incorporation procedures.',
+    category: 'Commerce Notes',
+    price: 119,
+    originalPrice: 229,
+    coverImage: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=800',
+    pages: 52,
+    edition: '2025 Edition',
+    fileFormat: 'PDF',
+    fileSize: '4.9 MB',
+    language: 'English',
+    previewPages: [
+      'Comparison Table: Memorandum of Association (MOA) vs Articles of Association (AOA)',
+      'Steps in Promotion, Incorporation & Capital Subscription of a Company',
+      'Model Letter: Notice and Agenda of First Board Meeting',
+      'Model Letter: Allotment Letter & Regret Letter Formats'
+    ],
+    topicsCovered: [
+      'Secretary Roles, Duties & Statutory Qualifications',
+      'Promotion & Incorporation of Joint Stock Company Stages',
+      'Documents of a Company: MOA, AOA & Prospectus Notes',
+      'Standard Business & Secretarial Correspondence Letter Formats'
+    ],
+    lastUpdated: '2025-05-18',
+    rating: 4.7,
+    reviewsCount: 82,
+  },
+  {
+    id: 'pdf-fyjc-maths-notes',
+    slug: 'fyjc-mathematics-statistics-formula-notes',
+    title: 'FYJC Mathematics & Statistics: Theorems, Formulas & Solved Step Notes',
+    subtitle: 'Complete formula book, trigonometric identities, complex numbers, and commercial statistics shortcuts.',
+    description: 'Designed for both Science and Commerce streams. Includes all essential trigonometric compound angle identities, complex number theorems, permutations & combinations formulas, and bivariate frequency table calculation steps.',
+    category: 'Science Notes',
+    price: 149,
+    originalPrice: 289,
+    coverImage: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=800',
+    pages: 68,
+    edition: '2025 Edition',
+    fileFormat: 'PDF',
+    fileSize: '6.7 MB',
+    language: 'English',
+    previewPages: [
+      'Compound Angles & Multiple Angles Trigonometric Formula Sheet',
+      'Complex Numbers Polar & Exponential Form Conversion Notes',
+      'Derivation and Solved Examples on Binomial Theorem Expansion',
+      'Shortcuts for Standard Deviation and Variance Calculations'
+    ],
+    topicsCovered: [
+      'Trigonometric Identities & Transformation Formulas Sheet',
+      'Complex Numbers, De Moivre\'s Theorem & Quadratic Equations',
+      'Permutations, Combinations & Binomial Theorem Step Notes',
+      'Measures of Dispersion, Skewness & Commercial Statistics'
+    ],
+    lastUpdated: '2025-05-25',
+    rating: 4.9,
+    reviewsCount: 105,
+  },
+  {
+    id: 'pdf-fyjc-arts-notes',
+    slug: 'fyjc-arts-psychology-sociology-revision-notes',
+    title: 'FYJC Arts: Psychology & Sociology Conceptual Revision Notes',
+    subtitle: 'Key psychological theories, human development milestones, and social structure exam summaries.',
+    description: 'Structured chapter summaries for 11th Arts students. Breaks down cognitive development theories, memory and learning paradigms, social institutions, family structures, and culture concepts for Maharashtra State Board examination preparation.',
+    category: 'Arts Notes',
+    price: 129,
+    originalPrice: 249,
+    coverImage: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800',
+    pages: 60,
+    edition: '2025 Edition',
+    fileFormat: 'PDF',
+    fileSize: '5.6 MB',
+    language: 'English',
+    previewPages: [
+      'Flowchart: Information Processing Model of Memory (Sensory, Short & Long Term)',
+      'Stages of Human Development: Infancy to Adolescence Overview',
+      'Comparative Notes: Primary Social Groups vs Secondary Social Groups',
+      'Model Answers on Social Stratification and Caste Systems in India'
+    ],
+    topicsCovered: [
+      'Introduction to Psychology as a Science & Research Methods',
+      'Cognitive Processes: Attention, Perception & Memory Notes',
+      'Basic Concepts in Sociology: Society, Community & Associations',
+      'Social Institutions: Family, Marriage & Kinship in India'
+    ],
+    lastUpdated: '2025-04-28',
+    rating: 4.7,
+    reviewsCount: 68,
+  },
+];
+
+export const INITIAL_PURCHASES: PurchasedPdfItem[] = [
+  {
+    id: 'purch-001',
+    pdfId: 'pdf-fyjc-bk-notes',
+    slug: 'fyjc-book-keeping-accountancy-revision-notes',
+    title: 'FYJC Book Keeping & Accountancy (BK) Complete Revision Notes',
+    category: 'Commerce Notes',
+    coverImage: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800',
+    pages: 74,
+    edition: '2025-26 Edition',
+    pricePaid: 149,
+    orderNumber: 'IFS-ORD-2025-8831',
+    purchasedAt: '2025-06-18T14:22:00Z',
+    status: 'confirmed',
+  },
+];
+
+export async function fetchPDFResources(): Promise<PDFResource[]> {
+  try {
+    const res = await fetch('/api/pdfs');
+    if (res.ok) {
+      const data = await res.json();
+      if (data && Array.isArray(data.pdfs) && data.pdfs.length > 0) {
+        return data.pdfs;
+      }
+    }
+  } catch {
+    // Backend API is optional or running offline; fallback cleanly to curated dataset
+  }
+  return INITIAL_PDF_RESOURCES;
+}
+
+export async function fetchPDFBySlug(slug: string): Promise<PDFResource | null> {
+  try {
+    const res = await fetch(`/api/pdfs/${encodeURIComponent(slug)}`);
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.pdf) {
+        return data.pdf;
+      }
+    }
+  } catch {
+    // Fallback cleanly
+  }
+  const found = INITIAL_PDF_RESOURCES.find((p) => p.slug === slug || p.id === slug);
+  return found || null;
+}

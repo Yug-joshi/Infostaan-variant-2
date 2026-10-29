@@ -41,13 +41,13 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10 text-left">
           <div className="max-w-2xl">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-200/60 dark:border-blue-700/40 text-[#007DCC] dark:text-[#86cfff] text-[11px] font-extrabold uppercase tracking-widest mb-2.5">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-900/20 border border-amber-200/60 dark:border-amber-700/40 text-amber-700 dark:text-amber-400 text-[11px] font-extrabold uppercase tracking-widest mb-2.5">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>INFOSTAAN CONNECT</span>
             </div>
             
             {/* Main Heading */}
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB]">
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F8FAFC]">
               Personal Guidance
             </h2>
 
@@ -62,7 +62,7 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
             <button
               type="button"
               onClick={() => onNavigate('/dashboard')}
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#007DCC] dark:text-[#86cfff] hover:text-[#005a9c] transition-colors group"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-slate-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400 transition-colors group"
             >
               <span>View all mentors</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -88,7 +88,7 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
               <div
                 key={`${m.id}-${idx}`}
                 onClick={() => onNavigate(`/mentor/${m.id}`)}
-                className="w-[calc((100vw-3.2rem)/3)] md:w-[calc((100vw-5rem)/3)] lg:w-[calc((100%-4rem)/5)] xl:w-52 shrink-0 flex flex-col justify-between p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 hover:border-[#007DCC] transition-all duration-200 shadow-sm hover:shadow-md text-left cursor-pointer group"
+                className="w-[min(78vw,280px)] sm:w-[min(42vw,280px)] md:w-[calc((100vw-5rem)/3)] lg:w-[calc((100%-4rem)/5)] xl:w-52 shrink-0 flex flex-col justify-between p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 hover:border-amber-400/50 transition-all duration-200 shadow-sm hover:shadow-md text-left cursor-pointer group"
               >
                 <div>
                   {/* Top: 1:1 Avatar + Name & Role */}
@@ -97,18 +97,18 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
                       <img
                         src={m.avatar}
                         alt={m.name}
-                        className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover ring-2 ring-blue-50 dark:ring-white/10 group-hover:ring-[#007DCC]/40 transition-all"
+                        className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover ring-2 ring-slate-100 dark:ring-white/10 group-hover:ring-amber-400/40 transition-all"
                       />
                       {m.online && (
-                        <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-[#0D1828]" />
+                        <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-[#111A28]" />
                       )}
                     </div>
 
-                    <div className="truncate">
-                      <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-[#F4F7FB] truncate group-hover:text-[#007DCC] transition-colors">
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-[#F8FAFC] line-clamp-2 break-words leading-tight group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
                         {m.name}
                       </h3>
-                      <p className="text-[11px] font-semibold text-[#007DCC] dark:text-[#86cfff] truncate mt-0.5">
+                      <p className="text-[11px] font-semibold text-amber-600 dark:text-amber-400 line-clamp-2 break-words leading-tight mt-0.5">
                         {m.role}
                       </p>
                     </div>
@@ -116,7 +116,7 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
 
                   {/* Specialty Badge */}
                   <div className="mb-2.5">
-                    <span className="inline-block px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-[#A9B8CA] text-[10px] font-semibold truncate">
+                    <span className="block max-w-full px-2.5 py-1 rounded-md bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-[#A9B8CA] text-[10px] font-semibold line-clamp-2 break-words leading-snug">
                       {m.area}
                     </span>
                   </div>
@@ -134,7 +134,7 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
                     e.stopPropagation();
                     onNavigate(`/mentor/${m.id}`);
                   }}
-                  className="w-full py-2 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-1.5 active:scale-95"
+                  className="w-full py-2 rounded-xl bg-slate-950 hover:bg-black text-white text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-1.5 active:scale-95"
                 >
                   <span>Connect</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

@@ -21,29 +21,72 @@ export const MUMBAI_LOCALITIES: string[] = [
   'Dahisar', 'Mira Road', 'Bhayandar', 'Naigaon', 'Vasai Road', 'Nalasopara', 'Virar'
 ];
 
+export const CANONICAL_REGIONS = [
+  'South Mumbai',
+  'Western Suburbs',
+  'Central Suburbs',
+  'Eastern Suburbs',
+  'Harbour / Central-East',
+] as const;
+
+export type CanonicalRegion = typeof CANONICAL_REGIONS[number];
+
 export const LOCALITY_ZONES = [
   {
     zone: 'Western Suburbs',
-    localities: ['Virar', 'Nalasopara', 'Vasai Road', 'Naigaon', 'Bhayandar', 'Mira Road', 'Dahisar', 'Borivali', 'Kandivali', 'Malad', 'Goregaon', 'Jogeshwari', 'Andheri', 'Vile Parle', 'Santacruz', 'Bandra'],
+    localities: [
+      'Virar', 'Nalasopara', 'Vasai Road', 'Vasai', 'Naigaon', 'Bhayandar', 'Mira Road',
+      'Dahisar', 'Borivali', 'Kandivali', 'Malad', 'Goregaon', 'Jogeshwari', 'Andheri',
+      'Vile Parle', 'Santacruz', 'Bandra', 'Khar', 'Juhu', 'Versova', 'Oshiwara', 'Lokhandwala'
+    ],
   },
   {
     zone: 'South Mumbai',
-    localities: ['Churchgate', 'Colaba', 'Fort', 'Marine Lines', 'Charni Road', 'Grant Road', 'Mumbai Central', 'Mahalaxmi', 'Lower Parel', 'Worli', 'Elphinstone Road', 'Prabhadevi', 'Parel'],
+    localities: [
+      'Churchgate', 'Colaba', 'Fort', 'Marine Lines', 'Marine Drive', 'Nariman Point', 'Cuffe Parade',
+      'Charni Road', 'Grant Road', 'Mumbai Central', 'Mahalaxmi', 'Lower Parel', 'Worli',
+      'Elphinstone Road', 'Elphinstone', 'Prabhadevi', 'Parel', 'Currey Road', 'Byculla',
+      'Mazgaon', 'Girgaon', 'Chowpatty', 'Walkeshwar', 'Malabar Hill', 'Pedder Road',
+      'Cumballa Hill', 'Breach Candy', 'Dhobi Talao', 'Kalbadevi', 'Tardeo', 'Sewri'
+    ],
   },
   {
     zone: 'Central Suburbs',
-    localities: ['Dadar', 'Matunga', 'Sion', 'Kurla', 'Ghatkopar', 'Vikhroli', 'Bhandup', 'Mulund', 'Powai', 'Tilak Nagar', 'Vidyavihar', 'Kanjurmarg'],
+    localities: [
+      'Dadar', 'Matunga', 'Wadala', 'Sion', 'Kurla', 'Vidyavihar', 'Tilak Nagar',
+      'Chunabhatti', 'GTB Nagar', 'Antop Hill'
+    ],
   },
   {
-    zone: 'Harbour Line',
-    localities: ['Chembur'],
+    zone: 'Eastern Suburbs',
+    localities: [
+      'Ghatkopar', 'Vikhroli', 'Kanjurmarg', 'Bhandup', 'Nahur', 'Mulund', 'Powai', 'Chandivali'
+    ],
+  },
+  {
+    zone: 'Harbour / Central-East',
+    localities: [
+      'Chembur', 'Govandi', 'Mankhurd', 'Trombay', 'Deonar', 'Mahul', 'Vashi', 'Sanpada',
+      'Juinagar', 'Nerul', 'Seawoods', 'Belapur', 'CBD Belapur', 'Kharghar', 'Panvel', 'New Panvel',
+      'Kamothe', 'Kalamboli', 'Ulwe', 'Dronagiri', 'Uran', 'Turbhe', 'Navi Mumbai',
+      'Airoli', 'Ghansoli', 'Koparkhairane', 'Rabale', 'Mahape'
+    ],
   },
 ];
+
+/** Locality to canonical region dictionary with exact boundary lookup */
+const LOCALITY_TO_REGION_MAP: Record<string, CanonicalRegion> = {};
+LOCALITY_ZONES.forEach(({ zone, localities }) => {
+  localities.forEach((loc) => {
+    LOCALITY_TO_REGION_MAP[loc.toLowerCase()] = zone as CanonicalRegion;
+  });
+});
 
 export const isLocality = (value: string | null | undefined): boolean => {
   if (!value) return false;
   const valLower = value.trim().toLowerCase();
-  return MUMBAI_LOCALITIES.some((loc) => loc.toLowerCase() === valLower);
+  return MUMBAI_LOCALITIES.some((loc) => loc.toLowerCase() === valLower) ||
+    Boolean(LOCALITY_TO_REGION_MAP[valLower]);
 };
 
 /** Whole-word, case-insensitive locality match (avoids "Sion" matching "Mansion"). */
@@ -73,118 +116,428 @@ export const parseMultiValue = (value: string | null | undefined): string[] =>
 // ─────────────────────────────────────────────────────────────────────────────
 
 /**
- * Heuristically maps a Mumbai college name to its regional zone.
- * Used for college and cutoff region filtering.
+ * Strips transit and railway line corridors (e.g. "Western Line", "Central Railway")
+ * so transport terms are never confused with geographic regional boundaries.
  */
-export const getCollegeRegion = (collegeName: string): string => {
-  const name = collegeName.toUpperCase();
-  if (
-    name.includes('XAVIER') || name.includes('H.R.') || name.includes('JAI HIND') ||
-    name.includes('HINDUJA') || name.includes('FORT') || name.includes('CHURCHGATE') ||
-    name.includes('CHARNI ROAD') || name.includes('MARINE') || name.includes('SYDENHAM') ||
-    name.includes('ELPHINSTONE') || name.includes('WILSON') || name.includes('SOPHIA')
-  ) return 'South Mumbai';
-  if (
-    name.includes('MITHIBAI') || name.includes('N.M.') || name.includes('NARSEE') ||
-    name.includes('SVKM') || name.includes('ANDHERI') || name.includes('PARLE') ||
-    name.includes('MALAD') || name.includes('BORIVALI') || name.includes('BANDRA') ||
-    name.includes('KANDIVALI') || name.includes('GOREGAON') || name.includes('SANTACRUZ') ||
-    name.includes('BHAVAN') || name.includes('RIZVI') || name.includes('DAHANUKAR') ||
-    name.includes('KHANDWALA') || name.includes('SHROFF') || name.includes('VIVEK')
-  ) return 'Western Suburbs';
-  if (
-    name.includes('PODAR') || name.includes('MATUNGA') || name.includes('DADAR') ||
-    name.includes('SIES') || name.includes('RUPAREL') || name.includes('KHALSA') ||
-    name.includes('VIDYALANKAR') || name.includes('SOMAIYA') || name.includes('VAZE') ||
-    name.includes('KRISHNA MENON')
-  ) return 'Central Suburbs';
-  if (
-    name.includes('GHATKOPAR') || name.includes('MULUND') || name.includes('BHANDUP') ||
-    name.includes('VIKHROLI')
-  ) return 'Eastern Suburbs';
-  if (name.includes('CHEMBUR') || name.includes('VASHI') || name.includes('BELAPUR')) {
+export const stripRailwayCorridors = (text: string): string => {
+  return text.replace(/\b(Western|Central|Harbour)\s+(Line|Corridor|Railway)\b/gi, ' ');
+};
+
+const CANONICAL_REGION_ALIASES: Record<string, CanonicalRegion> = {
+  'central': 'Central Suburbs',
+  'central suburbs': 'Central Suburbs',
+  'central-suburbs': 'Central Suburbs',
+  'central mumbai': 'Central Suburbs',
+  'central-mumbai': 'Central Suburbs',
+  'central line': 'Central Suburbs',
+  'south': 'South Mumbai',
+  'south mumbai': 'South Mumbai',
+  'south-mumbai': 'South Mumbai',
+  'south mumbai core hubs': 'South Mumbai',
+  'western': 'Western Suburbs',
+  'western suburbs': 'Western Suburbs',
+  'western-suburbs': 'Western Suburbs',
+  'western line': 'Western Suburbs',
+  'eastern': 'Eastern Suburbs',
+  'eastern suburbs': 'Eastern Suburbs',
+  'eastern-suburbs': 'Eastern Suburbs',
+  'harbour': 'Harbour / Central-East',
+  'harbour line': 'Harbour / Central-East',
+  'harbour-line': 'Harbour / Central-East',
+  'harbour / central-east': 'Harbour / Central-East',
+  'harbour / central east': 'Harbour / Central-East',
+  'central-east': 'Harbour / Central-East',
+  'central east': 'Harbour / Central-East',
+  'harbour-central-east': 'Harbour / Central-East',
+  'harbour central east': 'Harbour / Central-East',
+  'navi mumbai': 'Harbour / Central-East',
+  'navi-mumbai': 'Harbour / Central-East',
+};
+
+/**
+ * Resolves the canonical Mumbai region for any text or address.
+ * Uses exact whole-word matching and verified locality definitions.
+ */
+export const resolveCanonicalRegion = (rawText: string | null | undefined): CanonicalRegion | null => {
+  if (!rawText) return null;
+  const rawLower = rawText.trim().toLowerCase();
+  if (CANONICAL_REGION_ALIASES[rawLower]) {
+    return CANONICAL_REGION_ALIASES[rawLower];
+  }
+
+  const cleaned = stripRailwayCorridors(rawText);
+
+  // 1. Direct explicit region match
+  for (const region of CANONICAL_REGIONS) {
+    const escaped = region.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
+    if (new RegExp(`\\b${escaped}\\b`, 'i').test(cleaned)) {
+      return region;
+    }
+  }
+
+  // Handle common regional phrases
+  if (/\bCentral\s+(?:Suburbs|Mumbai)\b/i.test(cleaned)) {
+    return 'Central Suburbs';
+  }
+  if (/\bSouth\s+Mumbai\b/i.test(cleaned)) {
+    return 'South Mumbai';
+  }
+  if (/\bWestern\s+(?:Suburbs|Mumbai)\b/i.test(cleaned)) {
+    return 'Western Suburbs';
+  }
+  if (/\bEastern\s+(?:Suburbs|Mumbai)\b/i.test(cleaned)) {
+    return 'Eastern Suburbs';
+  }
+  if (/\bHarbour(?:\s+Line|\s*\/\s*Central-East)?\b/i.test(cleaned)) {
     return 'Harbour / Central-East';
   }
-  return 'All Mumbai';
+
+  // 2. Verified locality match (longest matches first)
+  const sortedLocalities = Object.keys(LOCALITY_TO_REGION_MAP).sort((a, b) => b.length - a.length);
+  for (const loc of sortedLocalities) {
+    if (textHasLocality(cleaned, loc)) {
+      return LOCALITY_TO_REGION_MAP[loc];
+    }
+  }
+
+  return null;
+};
+
+/**
+ * Resolves the canonical region for a SearchResultItem.
+ * Inspects verified badge, meta, subtitle, and title in order of reliability.
+ */
+export const resolveItemCanonicalRegion = (
+  item:
+    | SearchResultItem
+    | {
+        title: string;
+        badgeSub?: string;
+        meta?: string[];
+        subtitle?: string;
+        location?: string;
+        area?: string;
+        locality?: string;
+        address?: string;
+      },
+): CanonicalRegion | null => {
+  // 1. Check badgeSub (e.g., 'Churchgate, South Mumbai', 'Vile Parle West, Western Suburbs', 'Harbour / Central-East, Mumbai')
+  if (item.badgeSub) {
+    const reg = resolveCanonicalRegion(item.badgeSub);
+    if (reg) return reg;
+  }
+
+  // 2. Check meta array for 'Region: ...' tags
+  if (item.meta && Array.isArray(item.meta)) {
+    for (const m of item.meta) {
+      if (/^Region:\s*/i.test(m)) {
+        const reg = resolveCanonicalRegion(m.replace(/^Region:\s*/i, ''));
+        if (reg) return reg;
+      }
+    }
+    for (const m of item.meta) {
+      const reg = resolveCanonicalRegion(m);
+      if (reg) return reg;
+    }
+  }
+
+  // 3. Check explicit locality / address / location / area fields
+  if ('locality' in item && typeof item.locality === 'string' && item.locality) {
+    const reg = resolveCanonicalRegion(item.locality);
+    if (reg) return reg;
+  }
+  if ('address' in item && typeof item.address === 'string' && item.address) {
+    const reg = resolveCanonicalRegion(item.address);
+    if (reg) return reg;
+  }
+  if ('location' in item && typeof item.location === 'string' && item.location) {
+    const reg = resolveCanonicalRegion(item.location);
+    if (reg) return reg;
+  }
+  if ('area' in item && typeof item.area === 'string' && item.area) {
+    const reg = resolveCanonicalRegion(item.area);
+    if (reg) return reg;
+  }
+
+  // 4. Check subtitle
+  if (item.subtitle) {
+    const reg = resolveCanonicalRegion(item.subtitle);
+    if (reg) return reg;
+  }
+
+  // 5. Check title (with strict whole-word locality matches only)
+  if (item.title) {
+    const reg = resolveCanonicalRegion(item.title);
+    if (reg) return reg;
+  }
+
+  return null;
+};
+
+/**
+ * Canonical location classification utility for colleges.
+ * Returns one of the 5 canonical zones, or 'All Mumbai' if unresolved.
+ */
+export const getCollegeRegion = (collegeNameOrAddress: string): string => {
+  const reg = resolveCanonicalRegion(collegeNameOrAddress);
+  return reg || 'All Mumbai';
 };
 
 /**
  * Tests whether a SearchResultItem matches the user's selected Mumbai region.
- * Accepts a broad zone, a locality, or a comma-separated list of either (OR).
+ * Accepts a canonical zone, a locality, or a comma-separated list of either (OR).
+ * Unresolved colleges are never falsely assigned to restrictive zones.
  */
 export const matchItemRegion = (
-  item: SearchResultItem | { title: string; badgeSub?: string; meta?: string[]; subtitle?: string },
+  item: SearchResultItem | { title: string; badgeSub?: string; meta?: string[]; subtitle?: string; location?: string; area?: string },
   targetRegion: string | null | undefined,
 ): boolean => {
   if (!targetRegion || targetRegion === 'All Mumbai') return true;
   const targets = parseMultiValue(targetRegion);
   if (targets.length > 1) return targets.some((t) => matchItemRegion(item, t));
+
   const text = [
     item.title,
     item.badgeSub || '',
     ...(item.meta || []),
     item.subtitle || '',
-  ].join(' ').toUpperCase();
+  ].join(' ');
 
-  if (isLocality(targetRegion)) return textHasLocality(text, targetRegion);
+  // If filtering by a specific locality (e.g. 'Andheri', 'Churchgate')
+  if (isLocality(targetRegion)) {
+    return textHasLocality(text, targetRegion);
+  }
 
-  if (targetRegion === 'South Mumbai') {
+  // If filtering by a canonical zone (e.g. 'South Mumbai', 'Western Suburbs')
+  const itemRegion = resolveItemCanonicalRegion(item);
+  if (!itemRegion) {
+    // Unresolved college: excluded from restrictive region filters
+    return false;
+  }
+
+  const canonicalTarget = resolveCanonicalRegion(targetRegion);
+  const normalizedTarget = canonicalTarget || (targetRegion === 'Harbour Line' ? 'Harbour / Central-East' : targetRegion);
+  return itemRegion === normalizedTarget;
+};
+
+/**
+ * Matches a course item against a selected field of study / stream filter.
+ * Uses structured discipline data first, with reliable domain fallback.
+ * Excludes unrelated courses and avoids false positives from college names.
+ */
+export const matchCourseDiscipline = (
+  item: SearchResultItem,
+  streamFilter: string | null | undefined,
+): boolean => {
+  if (!streamFilter || streamFilter.startsWith('All') || streamFilter === 'All Fields') return true;
+
+  const target = streamFilter.trim();
+
+  // 1. Authoritative structured discipline field
+  if (item.discipline && item.discipline.length > 0) {
+    if (item.discipline.includes(target)) return true;
+    if (item.discipline.some((d) => d.toLowerCase() === target.toLowerCase())) return true;
+
+    if (target === 'Data Science & IT') {
+      return item.discipline.some((d) => /data science|it|information technology|analytics|computing/i.test(d));
+    }
+    if (target === 'Commerce & Accounting') {
+      return item.discipline.some((d) => /commerce|accounting|accountancy/i.test(d));
+    }
+    if (target === 'Management & Leadership') {
+      return item.discipline.some((d) => /management|leadership|bms/i.test(d));
+    }
+    if (target === 'Finance & Markets') {
+      return item.discipline.some((d) => /finance|markets|banking|insurance/i.test(d));
+    }
+    return false;
+  }
+
+  // 2. Structured fallback matching on title and relevant domain description (never on meta college names)
+  const title = (item.title || '').trim();
+  const why = (item.whyRelevant || '').trim();
+
+  if (target === 'Data Science & IT') {
     return (
-      text.includes('SOUTH MUMBAI') || text.includes('CHURCHGATE') ||
-      text.includes('CHARNI') || text.includes('FORT') ||
-      text.includes('MARINE') || text.includes('SOUTH') ||
-      text.includes('PAREL') || text.includes('WORLI') ||
-      text.includes('COLABA') || text.includes('GRANT ROAD')
+      /\b(data\s+science|data\s+analytics|b\.?sc\s+data|b\.?sc\s+it|information\s+technology|computing|software)\b/i.test(title) ||
+      /\bIT\b/.test(title) ||
+      /\b(machine\s+learning|data\s+architecture|cybersecurity)\b/i.test(why)
     );
   }
-  if (targetRegion === 'Western Suburbs') {
+
+  if (target === 'Commerce & Accounting') {
     return (
-      text.includes('WESTERN') || text.includes('VILE PARLE') ||
-      text.includes('ANDHERI') || text.includes('BORIVALI') ||
-      text.includes('BANDRA') || text.includes('MALAD') ||
-      text.includes('KANDIVALI') || text.includes('GOREGAON') ||
-      text.includes('SANTACRUZ') || text.includes('SUBURBS')
+      /\b(accounting|accountancy|commerce|baf|b\.?com|bcom)\b/i.test(title) ||
+      /\b(financial\s+auditing|taxation)\b/i.test(why)
     );
   }
-  if (targetRegion === 'Central Suburbs') {
+
+  if (target === 'Management & Leadership') {
     return (
-      text.includes('CENTRAL') || text.includes('MATUNGA') ||
-      text.includes('DADAR') || text.includes('KURLA') ||
-      text.includes('SION') || text.includes('VIDYAVIHAR')
+      /\b(management|bms|bba|leadership)\b/i.test(title) ||
+      /\b(strategic\s+management|corporate\s+marketing)\b/i.test(why)
     );
   }
-  if (targetRegion === 'Eastern Suburbs') {
+
+  if (target === 'Finance & Markets') {
     return (
-      text.includes('EASTERN') || text.includes('GHATKOPAR') ||
-      text.includes('MULUND') || text.includes('BHANDUP') ||
-      text.includes('VIKHROLI') || text.includes('POWAI')
+      /\b(financial\s+markets|bfm|banking|insurance|finance|bbi)\b/i.test(title) ||
+      /\b(capital\s+markets|derivatives|bfsi|retail\s+banking)\b/i.test(why)
     );
   }
-  if (targetRegion === 'Harbour / Central-East' || targetRegion === 'Harbour Line') {
-    return text.includes('CHEMBUR') || text.includes('HARBOUR') || text.includes('BELAPUR');
+
+  // Generic token boundary match
+  const tokens = target.toLowerCase().split(/[\s&,/()]+/).filter((t) => t.length > 2);
+  return tokens.some((t) => new RegExp(`\\b${t}\\b`, 'i').test(title));
+};
+
+/**
+ * Matches an item against a qualification level filter (e.g. Undergraduate, Professional, Diploma).
+ * Normalizes legacy composite labels such as "Undergraduate Degree (B.Com/BMS/BAF)".
+ */
+export const matchItemLevel = (
+  item: SearchResultItem,
+  levelFilter: string | null | undefined,
+): boolean => {
+  if (!levelFilter || levelFilter.startsWith('All') || levelFilter === 'All Levels') return true;
+
+  const norm = levelFilter.toLowerCase().trim();
+
+  // 1. Authoritative structured qualificationLevel field
+  if (item.qualificationLevel) {
+    const itemLevel = item.qualificationLevel.toLowerCase();
+    if (norm.includes('undergraduate') && itemLevel.includes('undergraduate')) return true;
+    if (norm.includes('professional') && itemLevel.includes('professional')) return true;
+    if (norm.includes('diploma') && itemLevel.includes('diploma')) return true;
+    if (norm.includes('certification') && itemLevel.includes('certification')) return true;
   }
-  return true;
+
+  // 2. Undergraduate Degree (supports "Undergraduate Degree", "Undergraduate Degree (B.Com/BMS/BAF)", "Undergraduate")
+  if (norm.includes('undergraduate')) {
+    const badge = (item.badgeSub || '').toLowerCase();
+    const title = (item.title || '').toLowerCase();
+    return (
+      badge.includes('undergraduate') ||
+      /\bbachelor\b/i.test(title) ||
+      /\bb\.(?:sc|com|a|af|fm|bi|ms)\b/i.test(title) ||
+      /3-year/i.test(badge)
+    );
+  }
+
+  // 3. Professional Qualification (CA / CS / CMA)
+  if (norm.includes('professional') || norm.includes('ca/cs/cma')) {
+    const badge = (item.badgeSub || '').toLowerCase();
+    const title = (item.title || '').toLowerCase();
+    return (
+      badge.includes('professional') ||
+      /\b(ca|cs|cma|cfa|acca)\b/i.test(title)
+    );
+  }
+
+  // 4. Diploma & Certifications
+  if (norm.includes('diploma') || norm.includes('certif')) {
+    if (item.qualificationLevel) {
+      const itemLevel = item.qualificationLevel.toLowerCase();
+      if (itemLevel.includes('diploma') || itemLevel.includes('certif')) return true;
+    }
+    const badge = (item.badgeSub || '').toLowerCase();
+    const title = (item.title || '').toLowerCase();
+    return (
+      badge.includes('diploma') ||
+      badge.includes('certif') ||
+      /\b(diploma|certification|certificate)\b/i.test(title)
+    );
+  }
+
+  return false;
+};
+
+/**
+ * Filters a result list by qualification level using AND logic.
+ */
+export const applyLevelFilter = (
+  items: SearchResultItem[],
+  levelFilter: string | null | undefined,
+): SearchResultItem[] => {
+  if (!levelFilter || levelFilter.startsWith('All') || levelFilter === 'All Levels') return items;
+  return items.filter((item) => matchItemLevel(item, levelFilter));
 };
 
 /**
  * Applies a stream / field / interest / industry keyword filter to a result list.
- * Matches any of the keywords against the item's combined text.
+ * Dispatches domain-specific matching for courses, colleges, and careers
+ * to prevent false positives from short tokens and unrelated college names.
  */
 export const applyStreamFilter = (
   items: SearchResultItem[],
   streamFilter: string | null | undefined,
 ): SearchResultItem[] => {
-  if (!streamFilter || streamFilter.startsWith('All')) return items;
-  // Parentheses are separators too, so "Management (BMS)" yields "bms" (not "(bms)").
-  const keywords = streamFilter.toLowerCase().split(/[\s&,/()]+/).filter(Boolean);
+  if (!streamFilter || streamFilter.startsWith('All') || streamFilter === 'All Streams' || streamFilter === 'All Fields') {
+    return items;
+  }
+
   return items.filter((item) => {
-    const text = [
-      item.title,
-      item.badgeCategory,
-      item.badgeSub || '',
-      ...(item.meta || []),
-      item.subtitle || '',
-    ].join(' ').toLowerCase();
+    // 1. Courses: use strict discipline / taxonomy matching
+    if (item.category === 'courses') {
+      return matchCourseDiscipline(item, streamFilter);
+    }
+
+    // 2. Colleges: match offered programs and stream names using word boundaries
+    if (item.category === 'colleges') {
+      const offeredText = (item.subtitle || '').toLowerCase();
+      const collegeTitle = (item.title || '').toLowerCase();
+
+      if (streamFilter === 'Commerce') {
+        return /\b(b\.?com|commerce|baf|bbi|bfm)\b/i.test(offeredText) || /\bcommerce\b/i.test(collegeTitle);
+      }
+      if (streamFilter === 'Arts') {
+        return /\b(b\.?a|arts|bammc|bmm)\b/i.test(offeredText) || /\barts\b/i.test(collegeTitle);
+      }
+      if (streamFilter === 'Science') {
+        return /\b(b\.?sc|science)\b/i.test(offeredText) || /\bscience\b/i.test(collegeTitle);
+      }
+      if (streamFilter === 'Management (BMS)' || streamFilter === 'Management') {
+        return /\b(bms|management|bba)\b/i.test(offeredText);
+      }
+      if (streamFilter === 'Finance & Accounting (BAF)' || streamFilter === 'Finance') {
+        return /\b(baf|finance|accounting|bfm)\b/i.test(offeredText);
+      }
+      if (streamFilter === 'Data Science & IT') {
+        return /\b(b\.?sc\s*it|data\s*science|analytics)\b/i.test(offeredText) || /\bIT\b/.test(item.subtitle || '');
+      }
+
+      // General college keyword boundary match (avoiding stop words and 2-letter false matches)
+      const stopWords = new Set(['and', 'the', 'for', 'with', 'all']);
+      const kwList = streamFilter.toLowerCase().split(/[\s&,/()]+/).filter((k) => k.length >= 3 && !stopWords.has(k));
+      return kwList.some((kw) =>
+        new RegExp(`\\b${kw}\\b`, 'i').test(offeredText) ||
+        new RegExp(`\\b${kw}\\b`, 'i').test(collegeTitle)
+      );
+    }
+
+    // 3. Careers: match domain pathways
+    if (item.category === 'careers') {
+      const text = [item.title, item.badgeSub || '', ...(item.meta || [])].join(' ').toLowerCase();
+      if (streamFilter === 'Investment & Equity Research') {
+        return /investment|equity|analyst/i.test(text);
+      }
+      if (streamFilter === 'Corporate Banking & CA') {
+        return /banking|audit|ca|finance/i.test(text);
+      }
+      if (streamFilter === 'Brand Management & Advertising') {
+        return /brand|advertising|marketing/i.test(text);
+      }
+      if (streamFilter === 'Technology & Analytics') {
+        return /tech|analytics|data/i.test(text);
+      }
+
+      const kwList = streamFilter.toLowerCase().split(/[\s&,/()]+/).filter((k) => k.length >= 3);
+      return kwList.some((kw) => new RegExp(`\\b${kw}\\b`, 'i').test(text));
+    }
+
+    // 4. Classes / Cutoffs / Other
+    const text = [item.title, item.badgeCategory, item.badgeSub || '', ...(item.meta || []), item.subtitle || ''].join(' ').toLowerCase();
+    const keywords = streamFilter.toLowerCase().split(/[\s&,/()]+/).filter((k) => k.length >= 3);
     return keywords.some((kw) => text.includes(kw));
   });
 };
@@ -316,7 +669,11 @@ export const filterClasses = (params: ClassFilterParams): ClassData[] => {
   return CLASSES.filter((cls) => {
     const matchesSearch =
       !q ||
-      cls.name.toLowerCase().includes(q);
+      cls.name.toLowerCase().includes(q) ||
+      cls.area?.toLowerCase().includes(q) ||
+      cls.address?.toLowerCase().includes(q) ||
+      cls.specializations?.toLowerCase().includes(q) ||
+      cls.streams?.toLowerCase().includes(q);
 
     // Interest / stream filter
     const matchesInterest =

@@ -56,7 +56,7 @@ const CATEGORY_CONFIGS = {
         id: 'level',
         title: 'Qualification Level',
         desc: 'Select degree type or professional certification.',
-        options: ['All Levels', 'Undergraduate Degree (B.Com/BMS/BAF)', 'Professional Qualification (CA/CS/CMA)', 'Diploma & Certifications'],
+        options: ['All Levels', 'Undergraduate Degree', 'Professional Qualification (CA/CS/CMA)', 'Diploma & Certifications'],
       },
       {
         id: 'duration',
@@ -117,6 +117,16 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
     }
   }, [isOpen, category]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   const currentStep = config.steps[stepIndex] || config.steps[0];
@@ -160,10 +170,17 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
       return;
     }
 
-    setSelectedValues((prev) => ({
-      ...prev,
-      [currentStep.id]: value,
-    }));
+    setSelectedValues((prev) => {
+      const next = {
+        ...prev,
+        [currentStep.id]: value,
+      };
+      // Prevent retaining incompatible qualification level when switching to Data Science & IT
+      if (currentStep.id === 'stream' && value === 'Data Science & IT' && next.level?.includes('Professional')) {
+        delete next.level;
+      }
+      return next;
+    });
   };
 
   const handleNext = () => {
@@ -184,7 +201,7 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6">
+    <div className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-3 pt-24 sm:p-6">
       {/* Backdrop */}
       <div
         className="absolute inset-0 backdrop-blur-md transition-opacity"
@@ -194,9 +211,9 @@ export const CategoryFilterModal: React.FC<CategoryFilterModalProps> = ({
 
       {/* Modal Container — glass shell */}
       <div
-        className="relative w-full max-w-2xl border shadow-2xl rounded-3xl flex flex-col overflow-hidden text-slate-900 dark:text-[#F4F7FB] backdrop-blur-xl transition-colors duration-200"
+        className="relative w-full max-w-2xl max-h-[70vh] sm:max-h-[90vh] border shadow-2xl rounded-t-3xl rounded-b-2xl sm:rounded-3xl flex flex-col overflow-hidden text-slate-900 dark:text-[#F4F7FB] backdrop-blur-xl transition-colors duration-200"
         style={{
-          background: isDark ? 'rgba(13, 24, 40, 0.96)' : 'rgba(255, 255, 255, 0.94)',
+          background: isDark ? 'rgba(13, 24, 40, 0.82)' : 'rgba(255, 255, 255, 0.78)',
           borderColor: isDark ? accent.borderDark : accent.borderLight,
           boxShadow: isDark
             ? `0 25px 60px rgba(0,0,0,0.65), 0 0 0 1px ${accent.borderDark}`

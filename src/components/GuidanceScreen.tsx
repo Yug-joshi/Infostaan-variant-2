@@ -17,18 +17,31 @@ import {
   Award,
   Clock,
   MapPin,
+  Bookmark,
+  Scale,
 } from 'lucide-react';
 import { PencilLoader } from './PencilLoader';
+import { MascotArt } from './MascotArt';
 import gsap from 'gsap';
+import {
+  generateRecommendations,
+  getRecommendationDiagnostics,
+} from '../lib/recommendationEngine';
 
 interface GuidanceScreenProps {
   onNavigate: (path: string) => void;
   onSelectCollege: (collegeId: string) => void;
+  savedCollegeIds?: string[];
+  onToggleSave?: (collegeId: string) => void;
+  onOpenCompare?: (primaryCollegeId: string) => void;
 }
 
 export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
   onNavigate,
   onSelectCollege,
+  savedCollegeIds = [],
+  onToggleSave,
+  onOpenCompare,
 }) => {
   // Help Me Decide wizard step: starts strictly at 1
   const [currentStep, setCurrentStep] = useState<number>(1);
@@ -41,11 +54,14 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
     'commerce-finance',
   ]);
 
-  // Step 3: Commute line
-  const [commuteLine, setCommuteLine] = useState<string>('western');
+  // Step 3: Preferred Location (Canonical Mumbai Region)
+  const [selectedLocation, setSelectedLocation] = useState<string>('central');
 
   // Step 4: Priorities
   const [priority, setPriority] = useState<string>('ca-flexibility');
+
+  // Display limit for pagination / load more (null means show all eligible colleges)
+  const [visibleLimit, setVisibleLimit] = useState<number | null>(null);
 
   const [isCalculating, setIsCalculating] = useState(false);
 
@@ -81,7 +97,7 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
     } else {
       setIsCalculating(true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      // Simulate real recommendation generation
+      // Simulate recommendation generation
       setTimeout(() => {
         setIsCalculating(false);
         setCurrentStep(5);
@@ -97,75 +113,34 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
     }
   };
 
-  const progressPercent = Math.min(100, Math.round((currentStep / 4) * 100));
-
-  // Determine top matched colleges dynamically based on choices
-  const getMatchedColleges = () => {
-    const list = [];
-
-    if (priority === 'ca-flexibility' || commuteLine === 'south-mumbai') {
-      list.push({
-        id: 'hinduja',
-        matchRate: '98%',
-        badge: 'Premier CA Articleship Schedule',
-        name: 'K.P.B. Hinduja College of Commerce',
-        location: 'Charni Road, South Mumbai • 2 min from station',
-        desc: 'Lectures wrap up at 10:15 AM sharp, allowing students to travel to Churchgate and Nariman Point Big 4 audit offices for articleship. Highest CA rankholder network in South Mumbai.',
-        actionText: 'Explore Hinduja College',
-      });
-      list.push({
-        id: 'hr-college',
-        matchRate: '96%',
-        badge: 'Churchgate Finance Corridor',
-        name: 'H.R. College of Commerce & Economics',
-        location: 'Churchgate, South Mumbai • 3 min from station',
-        desc: 'Direct proximity to Nariman Point financial district. World-class alumni network across Morgan Stanley, KPMG, and EY.',
-        actionText: 'Explore H.R. College',
-      });
-    } else if (commuteLine === 'central') {
-      list.push({
-        id: 'podar',
-        matchRate: '97%',
-        badge: 'Central Line Academic Benchmark',
-        name: 'R.A. Podar College of Commerce & Economics',
-        location: 'Matunga Central, Mumbai • 5 min from station',
-        desc: 'Central Mumbai’s gold-standard commerce campus. Strict academic rigor with top-tier B.Com, BMS, and BAF student placements.',
-        actionText: 'Explore Podar College',
-      });
-      list.push({
-        id: 'hinduja',
-        matchRate: '92%',
-        badge: 'Direct Marine Lines/Charni Road Access',
-        name: 'K.P.B. Hinduja College of Commerce',
-        location: 'Charni Road, South Mumbai • 2 min from station',
-        desc: 'Ideal for central line commuters willing to travel via Dadar to South Mumbai for premier CA articleship flexibility.',
-        actionText: 'Explore Hinduja College',
-      });
-    } else {
-      list.push({
-        id: 'mithibai',
-        matchRate: '96%',
-        badge: 'Best for Western Suburbs & Fests',
-        name: 'Mithibai College of Arts & Commerce',
-        location: 'Vile Parle West, Western Suburbs • 5 min from station',
-        desc: 'Morning shifts allow CA articleship prep and corporate internships in BKC. High Big 4 recruitment and premier SVKM campus facilities.',
-        actionText: 'Explore Mithibai College',
-      });
-      list.push({
-        id: 'hinduja',
-        matchRate: '94%',
-        badge: 'South Mumbai Heritage',
-        name: 'K.P.B. Hinduja College of Commerce',
-        location: 'Charni Road, South Mumbai • 2 min from station',
-        desc: 'Renowned faculty and legacy CA coaching synchronization, with fast direct transit down the Western line.',
-        actionText: 'Explore Hinduja College',
-      });
-    }
-
-    return list;
+  const handleRestart = () => {
+    setCurrentStep(1);
+    setStage('class12-commerce');
+    setSelectedInterests(['commerce-finance']);
+    setSelectedLocation('central');
+    setPriority('ca-flexibility');
+    setVisibleLimit(null);
   };
 
-  const matchedColleges = getMatchedColleges();
+  const progressPercent = Math.min(100, Math.round((currentStep / 4) * 100));
+
+  // Step A - G recommendation engine invocation strictly applying location constraint
+  const diagnostics = getRecommendationDiagnostics({
+    stage,
+    interests: selectedInterests,
+    location: selectedLocation,
+    priority,
+  });
+
+  const allEligibleColleges = diagnostics.finalRecommendations;
+  const matchedColleges =
+    visibleLimit !== null && visibleLimit > 0
+      ? allEligibleColleges.slice(0, visibleLimit)
+      : allEligibleColleges;
+
+  const totalEligibleCount = allEligibleColleges.length;
+  const renderedCount = matchedColleges.length;
+  const hiddenByLimit = Math.max(0, totalEligibleCount - renderedCount);
 
   return (
     <main className="w-full pt-20 sm:pt-24 pb-20 bg-slate-100 dark:bg-[#070D18] min-h-screen text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200">
@@ -183,7 +158,7 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
                     : currentStep === 2
                     ? 'YOUR AREA OF INTEREST'
                     : currentStep === 3
-                    ? 'COMMUTE & LOCATION'
+                    ? 'COLLEGE LOCATION'
                     : 'KEY PRIORITIES'}
                 </span>
                 <span>{progressPercent}% Complete</span>
@@ -201,9 +176,14 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
           {/* STEP 1: Academic Stage */}
           {currentStep === 1 && (
             <div className="w-full mb-8">
-              <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
-                What is your current academic stage?
-              </h1>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight max-w-2xl">
+                  What is your current academic stage?
+                </h1>
+                <div className="w-28 sm:w-32 shrink-0">
+                  <MascotArt variant="thinking" className="w-full" alt="InfoBuddy mascot asking a quick course-planning question" />
+                </div>
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                 {[
                   {
@@ -374,36 +354,54 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
             </div>
           )}
 
-          {/* STEP 3: Commute & Location */}
+          {/* STEP 3: Geographic Location Filter */}
           {currentStep === 3 && (
             <div className="w-full mb-8">
-              <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-8">
-                What is your preferred Mumbai commute line?
+              <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight mb-2">
+                Where would you prefer your college to be located?
               </h1>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-[#A9B8CA] mb-8">
+                Select your preferred geographic region in Mumbai. College recommendations will strictly match your chosen location.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
                 {[
                   {
-                    id: 'western',
-                    title: 'Western Railway Line',
-                    desc: 'Churchgate, Marine Lines, Charni Road, Dadar, Vile Parle, Borivali',
-                  },
-                  {
                     id: 'central',
-                    title: 'Central Railway Line',
-                    desc: 'CSMT, Dadar, Matunga, Kurla, Ghatkopar, Thane',
+                    title: 'Central Suburbs / Central Mumbai',
+                    desc: 'Matunga, Sion, Dadar, Kurla, Ghatkopar, Vidyavihar',
                   },
                   {
                     id: 'south-mumbai',
-                    title: 'South Mumbai Core Hubs',
-                    desc: 'Direct walkability to Churchgate, Marine Drive & Fort audit firms',
+                    title: 'South Mumbai',
+                    desc: 'Churchgate, Marine Lines, Charni Road, Fort, Parel',
+                  },
+                  {
+                    id: 'western',
+                    title: 'Western Suburbs',
+                    desc: 'Vile Parle, Andheri, Bandra, Malad, Kandivali, Borivali',
+                  },
+                  {
+                    id: 'eastern',
+                    title: 'Eastern Suburbs',
+                    desc: 'Mulund, Bhandup, Kanjurmarg, Thane corridor',
+                  },
+                  {
+                    id: 'harbour',
+                    title: 'Harbour / Central-East',
+                    desc: 'Chembur, Wadala, Navi Mumbai hubs',
+                  },
+                  {
+                    id: 'all-mumbai',
+                    title: 'All Mumbai',
+                    desc: 'Show premier colleges across all Mumbai regions and corridors',
                   },
                 ].map((item) => (
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setCommuteLine(item.id)}
+                    onClick={() => setSelectedLocation(item.id)}
                     className={`p-5 rounded-2xl border text-left transition-all ${
-                      commuteLine === item.id
+                      selectedLocation === item.id
                         ? 'bg-blue-50 dark:bg-[#161c27] border-[#007DCC] ring-1 ring-[#007DCC]'
                         : 'bg-white dark:bg-[#0D1828] border-slate-200 dark:border-[#D3B5E8]/10 hover:border-[#007DCC]/40'
                     }`}
@@ -481,62 +479,231 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
           {/* STEP 5: RECOMMENDATION RESULTS */}
           {!isCalculating && currentStep === 5 && (
             <div className="w-full text-left animate-fade-in">
-              <div className="mb-8">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-[#51dcbc] text-xs font-bold uppercase tracking-wider mb-2">
-                  <CheckCircle2 className="w-4 h-4" />
-                  <span>Personalized Recommendation Ready</span>
-                </span>
-                <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight">
-                  Recommended Colleges For You
-                </h1>
+              <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+                <div>
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-[#51dcbc] text-xs font-bold uppercase tracking-wider">
+                      <CheckCircle2 className="w-4 h-4" />
+                      <span>Personalized Recommendation Ready</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#007DCC]/10 text-[#007DCC] dark:text-[#86cfff] text-xs font-bold">
+                      {totalEligibleCount} Eligible {totalEligibleCount === 1 ? 'College' : 'Colleges'} Found
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-200/70 dark:bg-white/10 text-slate-600 dark:text-[#A9B8CA] text-xs font-medium">
+                      Region: {diagnostics.normalizedRegion}
+                    </span>
+                  </div>
+                  <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-[#F4F7FB] tracking-tight">
+                    Recommended Colleges For You
+                  </h1>
+                  <p className="text-xs sm:text-sm text-slate-500 dark:text-[#A9B8CA] mt-1">
+                    Showing {renderedCount === totalEligibleCount ? `all ${totalEligibleCount}` : `${renderedCount} of ${totalEligibleCount}`} verified colleges ranked by academic alignment, shift timings, and your decision priorities.
+                  </p>
+                </div>
+                <div className="w-24 sm:w-28 shrink-0 self-center sm:self-end">
+                  <MascotArt variant="idea" className="w-full" alt="InfoBuddy mascot sharing a recommendation idea" />
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                {matchedColleges.map((col) => (
-                  <div
-                    key={col.id}
-                    className="p-6 rounded-3xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 shadow-md flex flex-col justify-between"
-                  >
-                    <div>
-                      <div className="flex items-center justify-between gap-2 mb-3">
-                        <span className="px-3 py-1 rounded-full bg-[#007DCC]/10 text-[#007DCC] dark:text-[#86cfff] text-xs font-bold">
-                          {col.matchRate} Match
-                        </span>
-                        <span className="text-xs font-semibold text-slate-500 dark:text-[#A9B8CA]">
-                          {col.badge}
-                        </span>
-                      </div>
-                      <h2 className="text-xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">
-                        {col.name}
-                      </h2>
-                      <p className="text-xs font-medium text-slate-500 dark:text-[#71839A] mb-4">
-                        {col.location}
-                      </p>
-                      <p className="text-sm text-slate-600 dark:text-[#A9B8CA] leading-relaxed mb-6">
-                        {col.desc}
-                      </p>
-                    </div>
-
+              {matchedColleges.length === 0 ? (
+                <div className="p-8 sm:p-12 rounded-3xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 shadow-md text-center max-w-xl mx-auto mb-10">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-amber-50 dark:bg-amber-900/20 text-amber-500 flex items-center justify-center">
+                    <MapPin className="w-8 h-8" />
+                  </div>
+                  <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">
+                    No Matching Colleges in this Region
+                  </h2>
+                  <p className="text-sm text-slate-600 dark:text-[#A9B8CA] mb-6">
+                    We could not find verified colleges in <strong>{diagnostics.normalizedRegion}</strong> matching your exact criteria. You can broaden your preference to explore colleges across all Mumbai regions.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-3 justify-center">
                     <button
-                      onClick={() => onSelectCollege(col.id)}
-                      className="w-full py-3 bg-[#007DCC] hover:bg-[#006cb0] text-white font-bold text-sm rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+                      type="button"
+                      onClick={() => {
+                        setSelectedLocation('all-mumbai');
+                      }}
+                      className="px-5 py-2.5 rounded-xl bg-[#007DCC] text-white font-bold text-sm hover:bg-[#006cb0] transition-all"
                     >
-                      <span>{col.actionText}</span>
-                      <ArrowRight className="w-4 h-4" />
+                      Explore All Mumbai
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setCurrentStep(3);
+                      }}
+                      className="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-white/20 text-slate-700 dark:text-[#F4F7FB] font-semibold text-sm hover:bg-slate-100 dark:hover:bg-white/10 transition-all"
+                    >
+                      Change Location
                     </button>
                   </div>
-                ))}
-              </div>
+                </div>
+              ) : (
+                <>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    {matchedColleges.map((col) => (
+                      <div
+                        key={col.id}
+                        className="p-6 rounded-3xl bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-white/10 shadow-md flex flex-col justify-between hover:border-[#007DCC]/40 transition-all"
+                      >
+                        <div>
+                          <div className="flex items-center justify-between gap-2 mb-3">
+                            <span className="px-3 py-1 rounded-full bg-[#007DCC]/10 text-[#007DCC] dark:text-[#86cfff] text-xs font-bold">
+                              {col.matchRate}
+                            </span>
+                            <span className="text-xs font-semibold text-slate-500 dark:text-[#A9B8CA]">
+                              {col.badge}
+                            </span>
+                          </div>
+                          <h2 className="text-xl font-bold text-slate-900 dark:text-[#F4F7FB] mb-2">
+                            {col.name}
+                          </h2>
+                          <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-500 dark:text-[#71839A] mb-4">
+                            <MapPin className="w-3.5 h-3.5 text-[#007DCC] shrink-0" />
+                            <span>{col.location}</span>
+                          </div>
+                          <p className="text-sm text-slate-600 dark:text-[#A9B8CA] leading-relaxed mb-6">
+                            {col.desc}
+                          </p>
+                        </div>
+
+                        <div className="flex items-center gap-2 pt-2">
+                          <button
+                            type="button"
+                            onClick={() => onSelectCollege(col.id)}
+                            className="flex-1 py-3 bg-[#007DCC] hover:bg-[#006cb0] text-white font-bold text-sm rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+                          >
+                            <span>{col.actionText}</span>
+                            <ArrowRight className="w-4 h-4" />
+                          </button>
+                          {onToggleSave && (
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                onToggleSave(col.id);
+                              }}
+                              className={`p-3 rounded-xl border transition-all ${
+                                savedCollegeIds?.includes(col.id)
+                                  ? 'bg-amber-500 text-white border-amber-500'
+                                  : 'bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-[#A9B8CA] border-slate-200 dark:border-white/10 hover:text-amber-500 hover:border-amber-400'
+                              }`}
+                              title={savedCollegeIds?.includes(col.id) ? 'Saved to shortlist' : 'Save to shortlist'}
+                              aria-label="Save to shortlist"
+                            >
+                              <Bookmark className={`w-4 h-4 ${savedCollegeIds?.includes(col.id) ? 'fill-white' : ''}`} />
+                            </button>
+                          )}
+                          {onOpenCompare && (
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                onOpenCompare(col.id);
+                              }}
+                              className="p-3 rounded-xl border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-[#A9B8CA] border-slate-200 dark:border-white/10 hover:text-[#007DCC] hover:border-[#007DCC]/40 transition-all"
+                              title="Compare college"
+                              aria-label="Compare college"
+                            >
+                              <Scale className="w-4 h-4" />
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Load more / Pagination if limit was applied */}
+                  {hiddenByLimit > 0 && (
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10">
+                      <button
+                        type="button"
+                        onClick={() => setVisibleLimit((prev) => (prev ? prev + 6 : 12))}
+                        className="px-6 py-3 rounded-xl bg-[#007DCC] text-white font-bold text-sm hover:bg-[#006cb0] transition-all shadow-sm"
+                      >
+                        Load More Colleges ({hiddenByLimit} remaining)
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setVisibleLimit(null)}
+                        className="px-6 py-3 rounded-xl border border-slate-300 dark:border-white/20 text-slate-700 dark:text-[#F4F7FB] font-semibold text-sm hover:bg-slate-100 dark:hover:bg-white/10 transition-all"
+                      >
+                        Show All {totalEligibleCount} Colleges
+                      </button>
+                    </div>
+                  )}
+                </>
+              )}
+
+              {/* Dev Diagnostics (Only rendered in development environment for verification) */}
+              {import.meta.env.DEV && (
+                <div className="mb-6 p-5 rounded-2xl bg-slate-200/50 dark:bg-white/5 border border-slate-300/40 dark:border-white/10 text-xs text-slate-600 dark:text-[#A9B8CA]">
+                  <div className="flex items-center justify-between mb-3">
+                    <p className="font-bold text-slate-800 dark:text-[#F4F7FB] text-sm">
+                      Recommendation Pipeline Diagnostics
+                    </p>
+                    <span className="px-2.5 py-0.5 rounded-full bg-[#007DCC]/15 text-[#007DCC] font-bold text-[11px]">
+                      {renderedCount} / {totalEligibleCount} Visible
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
+                    <div>
+                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Region</span>
+                      <span className="font-semibold text-[#007DCC] truncate block" title={diagnostics.normalizedRegion}>
+                        {diagnostics.normalizedRegion}
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Initial Candidates</span>
+                      <span className="font-semibold">{diagnostics.initialCandidateCount}</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Resolved Identities</span>
+                      <span className="font-semibold">{diagnostics.candidatesWithResolvedIdentities}</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Verified Locations</span>
+                      <span className="font-semibold">
+                        {diagnostics.candidatesWithVerifiedLocations}
+                        {diagnostics.candidatesWithUnresolvedLocations > 0 && (
+                          <span className="text-slate-400 font-normal text-[10px] ml-1">
+                            ({diagnostics.candidatesWithUnresolvedLocations} unres)
+                          </span>
+                        )}
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">After Location</span>
+                      <span className="font-semibold">{diagnostics.remainingAfterLocationFilter}</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">After Academic</span>
+                      <span className="font-semibold">{diagnostics.remainingAfterAcademicFilter}</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Unique Eligible</span>
+                      <span className="font-semibold">{diagnostics.totalEligibleScored}</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Rendered / Hidden</span>
+                      <span className="font-semibold text-emerald-600 dark:text-emerald-400">
+                        {renderedCount} / {hiddenByLimit}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )}
 
               <div className="flex items-center justify-between pt-6 border-t border-slate-200 dark:border-white/10">
                 <button
-                  onClick={() => setCurrentStep(1)}
+                  type="button"
+                  onClick={handleRestart}
                   className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-200 dark:bg-white/10 text-slate-700 dark:text-[#F4F7FB] font-bold text-sm hover:bg-slate-300 dark:hover:bg-white/20 transition-all"
                 >
                   <RotateCcw className="w-4 h-4" />
                   <span>Restart Wizard</span>
                 </button>
                 <button
+                  type="button"
                   onClick={() => onNavigate('/')}
                   className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#007DCC] text-white font-bold text-sm hover:bg-[#006cb0] transition-all"
                 >

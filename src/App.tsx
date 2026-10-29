@@ -23,12 +23,41 @@ import { PencilLoader } from './components/PencilLoader';
 import { Check } from 'lucide-react';
 import logoImg from './assets/logo.png';
 import gsap from 'gsap';
+import { MascotArt } from './components/MascotArt';
 import ClassDetailScreen from './components/ClassDetailScreen';
+import { PDFResource } from './types';
+import { PdfListingScreen } from './components/pdf/PdfListingScreen';
+import { PdfDetailScreen } from './components/pdf/PdfDetailScreen';
+import { CartScreen } from './components/cart/CartScreen';
+import { CheckoutScreen } from './components/checkout/CheckoutScreen';
+import { MyPurchasesScreen } from './components/purchases/MyPurchasesScreen';
 export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
   const [selectedCollegeId, setSelectedCollegeId] = useState<string>('mithibai');
-  const [savedItems, setSavedItems] = useState<ShortlistItem[]>(INITIAL_SAVED_ITEMS);
+  const [savedItems, setSavedItems] = useState<ShortlistItem[]>(() => {
+    if (typeof window !== 'undefined') {
+      try {
+        const saved = localStorage.getItem('infostaan_saved_items');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed)) return parsed;
+        }
+      } catch (e) {
+        console.error('Failed to parse saved items from localStorage', e);
+      }
+    }
+    return INITIAL_SAVED_ITEMS;
+  });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('infostaan_saved_items', JSON.stringify(savedItems));
+    } catch (e) {
+      console.error('Failed to save items to localStorage', e);
+    }
+  }, [savedItems]);
+
   const allSavedItemIds = useMemo(() => savedItems.flatMap((i) => [i.id, i.collegeId || '']).filter(Boolean), [savedItems]);
   const [isCompareOpen, setIsCompareOpen] = useState<boolean>(false);
   const [compareColleges, setCompareColleges] = useState<{ col1: string; col2: string }>({
@@ -41,7 +70,7 @@ export default function App() {
   const [isCategoryFilterOpen, setIsCategoryFilterOpen] = useState<boolean>(false);
   const [activeCategoryFilter, setActiveCategoryFilter] = useState<FilterCategoryType>('colleges');
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState<boolean>(false);
-  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [toastState, setToastState] = useState<{ message: string; kind: 'success' | 'info' } | null>(null);
   const [isBooting, setIsBooting] = useState<boolean>(true);
 
   const handleOpenCategoryFilter = (cat: FilterCategoryType) => {
@@ -119,10 +148,10 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  const showToast = (message: string) => {
-    setToastMessage(message);
+  const showToast = (message: string, kind: 'success' | 'info' = 'info') => {
+    setToastState({ message, kind });
     setTimeout(() => {
-      setToastMessage(null);
+      setToastState(null);
     }, 2800);
   };
 
@@ -202,7 +231,7 @@ export default function App() {
         collegeId: id,
       };
       setSavedItems([newItem, ...savedItems]);
-      showToast('Saved to shortlist!');
+      showToast('Saved to shortlist!', 'success');
     }
   };
 
@@ -236,7 +265,36 @@ export default function App() {
         collegeId: itemCollegeId,
       };
       setSavedItems([newItem, ...savedItems]);
-      showToast('Saved to shortlist!');
+      showToast('Saved to shortlist!', 'success');
+    }
+  };
+
+  const isPdfSaved = (pdfId: string) => {
+    return savedItems.some((i) => i.id === `pdf-${pdfId}` || i.pdfId === pdfId);
+  };
+
+  const handleToggleSavePdf = (pdf: PDFResource) => {
+    if (isPdfSaved(pdf.id)) {
+      setSavedItems(savedItems.filter((i) => i.id !== `pdf-${pdf.id}` && i.pdfId !== pdf.id));
+      showToast('Removed publication from shortlist');
+    } else {
+      const newItem: ShortlistItem = {
+        id: `pdf-${pdf.id}`,
+        category: 'pdf',
+        title: pdf.title,
+        regionBadge: pdf.category,
+        badgeType: 'PDF RESOURCE',
+        locationInfo: `₹${pdf.price} • ${pdf.pages} Pages • ${pdf.edition}`,
+        timeSavedText: 'Saved just now',
+        lineText: pdf.category,
+        iconType: 'file_text',
+        canCompare: false,
+        pdfId: pdf.id,
+        pdfSlug: pdf.slug,
+        price: pdf.price,
+      };
+      setSavedItems([newItem, ...savedItems]);
+      showToast('Saved to shortlist!', 'success');
     }
   };
 
@@ -272,12 +330,7 @@ export default function App() {
           }}
         />
         <div
-          className="absolute z-10 text-center px-4 animate-in fade-in duration-150"
-          style={{
-            top: '75%',
-            left: '49%',
-            transform: 'translate(-50%, -50%)',
-          }}
+          className="absolute z-10 text-center px-4 animate-in fade-in duration-150 top-[68%] sm:top-[75%] left-1/2 sm:left-[49%] -translate-x-1/2 -translate-y-1/2 w-full max-w-sm sm:max-w-none"
         >
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB]">
             Infostaan<span className="text-[#007DCC]">.</span>
@@ -291,12 +344,17 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#070D18] text-slate-900 dark:text-[#F4F7FB] flex flex-col font-sans transition-colors duration-200 selection:bg-[#007DCC]/30 selection:text-[#007DCC]">
+    <div className="min-h-screen bg-white dark:bg-[#0B111E] text-slate-900 dark:text-[#F8FAFC] flex flex-col font-sans transition-colors duration-200 selection:bg-amber-300/40 selection:text-slate-900">
       {/* Toast Notification */}
-      {toastMessage && (
-        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-[#1a202b] border border-slate-700 dark:border-[#007DCC]/40 text-sm text-white dark:text-[#F4F7FB] shadow-xl flex items-center gap-2 animate-in fade-in slide-in-from-bottom-2 duration-200">
-          <Check className="w-4 h-4 text-emerald-400 dark:text-[#51dcbc]" />
-          <span>{toastMessage}</span>
+      {toastState && (
+        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-[#141E2E] border border-slate-700 dark:border-amber-400/40 text-sm text-white dark:text-[#F8FAFC] shadow-xl flex items-center gap-3 animate-in fade-in slide-in-from-bottom-2 duration-200">
+          {toastState.kind === 'success' && (
+            <div className="w-10 h-10 shrink-0 rounded-full bg-white/5 ring-1 ring-white/10 flex items-center justify-center">
+              <MascotArt variant="success" className="w-8 h-8" alt="InfoBuddy cheering after a successful action" />
+            </div>
+          )}
+          {toastState.kind === 'success' && <Check className="w-4 h-4 text-emerald-400 dark:text-[#51dcbc] hidden" />}
+          <span>{toastState.message}</span>
         </div>
       )}
 
@@ -313,11 +371,12 @@ export default function App() {
           <Route path="/" element={
             <HomeScreen
               onSearch={handleSearch}
-              onNavigate={(path) => navigate(path)}
+              onNavigate={(path) => navigate(path.startsWith('/') ? path : `/${path}`)}
               onSelectCollege={handleSelectCollege}
               onOpenCutoff={() => setIsCutoffOpen(true)}
               onOpenClasses={() => setIsClassesOpen(true)}
               onOpenCategoryFilter={handleOpenCategoryFilter}
+              onOpenSignIn={() => setIsSignInOpen(true)}
             />
           } />
           <Route path="/class/:slug" element={<ClassDetailScreen />} />
@@ -329,6 +388,7 @@ export default function App() {
               savedItemIds={allSavedItemIds}
               onOpenCutoff={() => setIsCutoffOpen(true)}
               onSaveItem={handleToggleSaveItem}
+              onOpenSignIn={() => setIsSignInOpen(true)}
             />
           } />
 
@@ -380,6 +440,7 @@ export default function App() {
               savedItemIds={allSavedItemIds}
               onOpenCutoff={() => setIsCutoffOpen(true)}
               onSaveItem={handleToggleSaveItem}
+              onOpenSignIn={() => setIsSignInOpen(true)}
             />
           } />
 
@@ -392,6 +453,44 @@ export default function App() {
             />
           } />
 
+          <Route path="/pdf-resources" element={
+            <PdfListingScreen
+              onNavigate={(path) => navigate(path)}
+              onSavePdf={handleToggleSavePdf}
+              isSaved={isPdfSaved}
+              onToast={showToast}
+            />
+          } />
+
+          <Route path="/pdf-resources/:slug" element={
+            <PdfDetailScreen
+              onNavigate={(path) => navigate(path)}
+              onSavePdf={handleToggleSavePdf}
+              isSaved={isPdfSaved}
+              onToast={showToast}
+            />
+          } />
+
+          <Route path="/cart" element={
+            <CartScreen
+              onNavigate={(path) => navigate(path)}
+              onToast={showToast}
+            />
+          } />
+
+          <Route path="/checkout" element={
+            <CheckoutScreen
+              onNavigate={(path) => navigate(path)}
+              onToast={showToast}
+            />
+          } />
+
+          <Route path="/my-purchases" element={
+            <MyPurchasesScreen
+              onNavigate={(path) => navigate(path)}
+            />
+          } />
+
           <Route path="/saved" element={
             <ShortlistScreen
               savedItems={savedItems}
@@ -399,6 +498,7 @@ export default function App() {
               onOpenCompare={handleOpenCompare}
               onSelectCollege={handleSelectCollege}
               onNavigate={(path) => navigate(path)}
+              onToast={showToast}
             />
           } />
 
@@ -406,6 +506,9 @@ export default function App() {
             <GuidanceScreen
               onNavigate={(path) => navigate(path)}
               onSelectCollege={handleSelectCollege}
+              savedCollegeIds={savedItems.map((i) => i.collegeId).filter(Boolean) as string[]}
+              onToggleSave={handleToggleSaveCollege}
+              onOpenCompare={handleOpenCompare}
             />
           } />
 
@@ -428,10 +531,13 @@ export default function App() {
             />
           } />
 
-          {/* Legacy route fallbacks */}
+          {/* Legacy and unsupported route fallbacks */}
+          <Route path="/pdfs" element={<Navigate to="/pdf-resources" replace />} />
+          <Route path="/purchases" element={<Navigate to="/my-purchases" replace />} />
           <Route path="/guidance" element={<Navigate to="/help-me-decide" replace />} />
           <Route path="/connect" element={<Navigate to="/dashboard" replace />} />
           <Route path="/explore" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
 
@@ -461,7 +567,7 @@ export default function App() {
         isOpen={isSignInOpen}
         onClose={() => setIsSignInOpen(false)}
         onSave={(name, loc, stream) => {
-          showToast(`Preferences updated for ${name} (${loc})`);
+          showToast(`Preferences updated for ${name} (${loc})`, 'success');
         }}
       />
 

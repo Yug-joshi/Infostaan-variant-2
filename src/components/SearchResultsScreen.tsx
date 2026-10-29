@@ -1,15 +1,19 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Compass, SlidersHorizontal, BarChart2, Bookmark, Users, Star, Award, CheckCircle, Info, TrendingUp, MonitorPlay } from 'lucide-react';
+import { Search, X, ArrowRight, ArrowLeft, Building2, MapPin, GraduationCap, Compass, SlidersHorizontal, BarChart2, Bookmark, Users, Star, Award, CheckCircle, Info, TrendingUp, MonitorPlay, FileText } from 'lucide-react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { CategoryType, SearchResultItem } from '../types';
 import { searchInfostaan } from '../lib/searchEngine';
 import { PencilLoader } from './PencilLoader';
 import { SkeletonResultCards } from './SkeletonResultCards';
+import { MascotArt } from './MascotArt';
 import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
 import { FilterCategoryType } from './CategoryFilterModal';
-import { getCollegeRegion, matchItemRegion, applyStreamFilter, parseMultiValue } from '../lib/categoryFilters';
+import { getCollegeRegion, matchItemRegion, applyStreamFilter, applyLevelFilter, parseMultiValue } from '../lib/categoryFilters';
 import { formatCollegeTitle, getCollegeGroupingKey, getCollegeCutoffGroup } from '../lib/collegeData';
 import { ResultFilterDrawer, DrawerCategoryType } from './ResultFilterDrawer';
+import { PDFResource } from '../types';
+import { fetchPDFResources, INITIAL_PDF_RESOURCES } from '../data/pdfResources';
+import { useTheme } from '../context/ThemeContext';
 
 interface SearchResultsScreenProps {
   defaultCategory?: CategoryType;
@@ -20,6 +24,7 @@ interface SearchResultsScreenProps {
   onOpenCutoff?: () => void;
   onOpenCategoryFilter?: (cat: FilterCategoryType) => void;
   onOpenClasses?: () => void;
+  onOpenSignIn?: () => void;
 }
 
 
@@ -33,12 +38,25 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   onOpenCutoff,
   onOpenCategoryFilter,
   onOpenClasses,
+  onOpenSignIn,
 }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
+  const { toggleTheme } = useTheme();
 
   const query = searchParams.get('query') || '';
   const activeCategory = (searchParams.get('category') as CategoryType) || defaultCategory || 'all';
+  const [pdfResources, setPdfResources] = useState<PDFResource[]>(INITIAL_PDF_RESOURCES);
+
+  useEffect(() => {
+    let isActive = true;
+    fetchPDFResources().then((resources) => {
+      if (isActive) setPdfResources(resources);
+    });
+    return () => {
+      isActive = false;
+    };
+  }, []);
 
   const [inputValue, setInputValue] = useState(query);
 
@@ -56,6 +74,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 
   // Default state is always to show results
   const showResults = true;
+  const hasCategoryFilters = activeCategory !== 'pdfs' && activeCategory !== 'connect';
 
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
@@ -111,6 +130,10 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   const setActiveCategory = (newCategory: CategoryType) => {
     if (newCategory === 'all') {
       navigate('/search');
+    } else if (newCategory === 'pdf' || newCategory === 'pdfs' || newCategory === 'connect') {
+      const params = new URLSearchParams(searchParams);
+      params.set('category', newCategory);
+      navigate(`/search?${params.toString()}`);
     } else {
       const params = new URLSearchParams(searchParams);
       params.delete('category');
@@ -136,12 +159,20 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
         return { badge: 'Mumbai Coaching Classes', title: 'Coaching Classes in Mumbai' };
       case 'cutoffs':
         return { badge: 'Mumbai Cutoff Explorer', title: 'Admission Cutoffs in Mumbai' };
+      case 'pdf':
+      case 'pdfs':
+        return { badge: 'Mumbai Study Resources', title: 'Educational PDF Resources' };
+      case 'connect':
+        return { badge: 'Infostaan Connect', title: 'Connect with Professionals' };
       default:
-        return { badge: 'Mumbai Student Catalog', title: 'Search Mumbai Programs' };
+        return { badge: 'Mumbai Student Catalog', title: 'Search Mumbai Programs & Resources' };
     }
   };
 
   const headerInfo = getPageHeaderInfo();
+  const searchSuggestions = inputValue.trim()
+    ? searchInfostaan(inputValue.trim(), 'all', pdfResources).slice(0, 6)
+    : [];
 
   const containerRef = useRef<HTMLDivElement>(null);
   const resultsContainerRef = useRef<HTMLDivElement>(null);
@@ -153,6 +184,9 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
       case 'careers': return 'Exploring Mumbai career paths...';
       case 'classes': return 'Finding relevant classes in Mumbai...';
       case 'cutoffs': return 'Finding relevant admission cutoffs...';
+      case 'pdf':
+      case 'pdfs': return 'Finding relevant study resources & PDFs...';
+      case 'connect': return 'Finding relevant professionals...';
       default: return "Finding what's relevant in Mumbai...";
     }
   };
@@ -254,7 +288,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
       });
     }
 
-    let raw = searchInfostaan(query, activeCategory);
+    let raw = searchInfostaan(query, activeCategory, pdfResources);
 
     if (regionParam && regionParam !== 'All Mumbai') {
       raw = raw.filter(item => matchItemRegion(item, regionParam));
@@ -262,21 +296,32 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 
     const streamFilter = streamParam || fieldParam || interestParam || industryParam || specializationParam;
     raw = applyStreamFilter(raw, streamFilter);
+    const effectiveLevel = levelParam || educationLevelParam;
+    raw = applyLevelFilter(raw, effectiveLevel);
 
     if (sortParam) {
-      if (sortParam === 'distance_asc' && (activeCategory === 'classes' || activeCategory === 'colleges' || activeCategory === 'all')) {
-        raw.sort((a, b) => (a.badgeSub?.length || 0) - (b.badgeSub?.length || 0));
-      } else if (sortParam === 'distance_desc' && (activeCategory === 'classes' || activeCategory === 'colleges' || activeCategory === 'all')) {
-        raw.sort((a, b) => (b.badgeSub?.length || 0) - (a.badgeSub?.length || 0));
-      } else if (sortParam === 'cutoff_desc' && (activeCategory === 'colleges' || activeCategory === 'all')) {
-        raw.sort((a, b) => b.title.localeCompare(a.title));
-      } else if (sortParam === 'cutoff_asc' && (activeCategory === 'colleges' || activeCategory === 'all')) {
+      const getCutoffNum = (item: SearchResultItem): number => {
+        const m = (item.subtitle || item.whyRelevant || item.badgeSub || '').match(/(\d+(\.\d+)?)\s*%/);
+        return m ? parseFloat(m[1]) : 0;
+      };
+
+      if (sortParam === 'cutoff_desc') {
+        raw.sort((a, b) => getCutoffNum(b) - getCutoffNum(a) || a.title.localeCompare(b.title));
+      } else if (sortParam === 'cutoff_asc') {
+        raw.sort((a, b) => {
+          const aNum = getCutoffNum(a);
+          const bNum = getCutoffNum(b);
+          if (aNum === 0 && bNum > 0) return 1;
+          if (bNum === 0 && aNum > 0) return -1;
+          return aNum - bNum || a.title.localeCompare(b.title);
+        });
+      } else if (sortParam === 'name_asc') {
         raw.sort((a, b) => a.title.localeCompare(b.title));
       }
     }
 
     return raw;
-  }, [query, activeCategory, regionParam, streamParam, fieldParam, interestParam, industryParam, specializationParam, percentageParam, rangeParam, educationLevelParam, sortParam]);
+  }, [query, activeCategory, pdfResources, regionParam, streamParam, fieldParam, interestParam, industryParam, specializationParam, percentageParam, rangeParam, educationLevelParam, sortParam]);
 
   const [searchPhase, setSearchPhase] = useState<'idle' | 'understanding' | 'skeleton' | 'done'>('done');
 
@@ -306,10 +351,22 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   const handleActionClick = (item: SearchResultItem) => {
     const qs = streamParam && streamParam !== 'All Streams' ? `?stream=${streamParam}` : '';
 
-    if (item.category === 'careers') {
+    if (item.action === 'toggle-theme') {
+      toggleTheme();
+    } else if (item.action === 'open-profile') {
+      onOpenSignIn?.();
+    } else if (item.href) {
+      navigate(item.href);
+    } else if (item.category === 'pdfs' && item.slug) {
+      navigate(`/pdf-resources/${item.slug}`);
+    } else if (item.category === 'connect') {
+      navigate(`/mentor/${item.id}`);
+    } else if (item.category === 'careers') {
       navigate('/career-roadmap');
-    } else if (item.category === 'classes' && item.slug) {
-      navigate(`/class/${item.slug}`);
+    } else if (item.category === 'classes' && (item.slug || item.id)) {
+      navigate(`/class/${item.slug || item.id}`);
+    } else if (item.category === 'pdf') {
+      navigate(`/pdf-resources/${item.slug || item.id}`);
     } else if (item.collegeSlug) {
       onSelectCollege(item.collegeSlug + qs);
     } else if (item.collegeId) {
@@ -341,34 +398,67 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
           </div>
 
           {/* Input Bar with layered suggestions */}
-          <div ref={searchContainerRef} className="relative z-30 flex items-center w-full md:w-1/2 min-w-0 bg-white dark:bg-[#0D1828] rounded-2xl px-3 sm:px-4 py-3 shadow-xs transition-all border border-slate-300 dark:border-[#D3B5E8]/15 focus-within:border-[#007DCC] focus-within:ring-2 focus-within:ring-[#007DCC]/20">
-            <Search className="text-[#007DCC] dark:text-[#9ccaff] mr-2 sm:mr-3 w-5 h-5 shrink-0" />
-            <input
-              aria-label="Search opportunities, courses, and institutions in Mumbai"
-              type="text"
-              value={inputValue}
-              onChange={(e) => {
-                setInputValue(e.target.value);
-                setIsSearchDropdownOpen(true);
-              }}
-              onFocus={() => setIsSearchDropdownOpen(true)}
-              placeholder="Search colleges, courses, careers, classes..."
-              className="w-full min-w-0 bg-transparent font-medium text-sm sm:text-base text-slate-900 dark:text-[#F4F7FB] placeholder:text-slate-400 dark:placeholder:text-[#A9B8CA]/60 focus:outline-none"
-            />
-            {inputValue && (
-              <button
-                type="button"
-                onClick={() => setInputValue('')}
-                title="Clear search"
-                className="flex items-center justify-center shrink-0 w-8 h-8 text-slate-400 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-[#F4F7FB] rounded-full transition-colors"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            )}
-            {/* Search Suggestions Dropdown Overlay */}
+          <div ref={searchContainerRef} className="relative z-30 w-full md:w-1/2 min-w-0">
+            <div className="flex items-center w-full min-w-0 bg-white dark:bg-[#0D1828] rounded-2xl px-3 sm:px-4 py-3 shadow-xs transition-all border border-slate-300 dark:border-[#D3B5E8]/15 focus-within:border-[#007DCC] focus-within:ring-2 focus-within:ring-[#007DCC]/20">
+              <Search className="text-[#007DCC] dark:text-[#9ccaff] mr-2 sm:mr-3 w-5 h-5 shrink-0" />
+              <input
+                aria-label="Search opportunities, courses, and institutions in Mumbai"
+                type="text"
+                value={inputValue}
+                onChange={(e) => {
+                  setInputValue(e.target.value);
+                  setIsSearchDropdownOpen(true);
+                }}
+                onFocus={() => setIsSearchDropdownOpen(true)}
+                placeholder="Search colleges, courses, people, PDFs, and more..."
+                className="w-full min-w-0 bg-transparent font-medium text-sm sm:text-base text-slate-900 dark:text-[#F4F7FB] placeholder:text-slate-400 dark:placeholder:text-[#A9B8CA]/60 focus:outline-none"
+              />
+              {inputValue && (
+                <button
+                  type="button"
+                  onClick={() => setInputValue('')}
+                  title="Clear search"
+                  className="flex items-center justify-center shrink-0 w-8 h-8 text-slate-400 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-[#F4F7FB] rounded-full transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
+            </div>
+            {/* Search Suggestions */}
             {inputValue.trim().length > 0 && isSearchDropdownOpen && (
               <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#1a202b] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-2xl shadow-xl overflow-hidden z-40 text-left">
-                <div className="p-2">
+                <div className="max-h-[min(60vh,420px)] overflow-y-auto p-2">
+                  {searchSuggestions.length > 0 ? (
+                    searchSuggestions.map((item) => (
+                      <button
+                        key={`${item.category}-${item.id}`}
+                        type="button"
+                        onClick={() => {
+                          setIsSearchDropdownOpen(false);
+                          if (item.action || item.href || item.category === 'pdf' || item.category === 'pdfs' || item.category === 'connect' || item.category === 'careers') {
+                            handleActionClick(item);
+                            return;
+                          }
+                          setSearchParams(prev => {
+                            const next = new URLSearchParams(prev);
+                            next.set('query', inputValue.trim());
+                            return next;
+                          }, { replace: true });
+                          setActiveCategory(item.category as CategoryType);
+                          setSearchPhase('understanding');
+                        }}
+                        className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-start gap-3"
+                      >
+                        <span className="min-w-0 flex-1">
+                          <span className="block text-sm font-semibold text-slate-800 dark:text-[#F4F7FB]">{item.title}</span>
+                          <span className={`mt-0.5 text-xs text-slate-500 dark:text-[#A9B8CA] line-clamp-2 ${item.category === 'colleges' ? 'hidden sm:block' : 'block'}`}>{item.subtitle || item.badgeCategory}</span>
+                        </span>
+                        <span className="shrink-0 text-[10px] font-bold uppercase tracking-wide text-slate-400">{item.badgeCategory}</span>
+                      </button>
+                    ))
+                  ) : (
+                    <div className="px-4 py-3 text-sm text-slate-500 dark:text-[#A9B8CA]">No matching results yet</div>
+                  )}
                   <button
                     type="button"
                     onClick={() => {
@@ -378,30 +468,13 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         return next;
                       }, { replace: true });
                       setIsSearchDropdownOpen(false);
-                      setActiveCategory('colleges');
+                      setActiveCategory('all');
                       setSearchPhase('understanding');
                     }}
-                    className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3"
+                    className="w-full text-left px-4 py-2.5 mt-1 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center justify-between text-xs sm:text-sm font-semibold text-[#007DCC] dark:text-[#86cfff] border-t border-slate-100 dark:border-white/5"
                   >
-                    <Building2 className="w-4 h-4 text-slate-400" />
-                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Colleges</span></span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSearchParams(prev => {
-                        const next = new URLSearchParams(prev);
-                        next.set('query', inputValue.trim());
-                        return next;
-                      }, { replace: true });
-                      setIsSearchDropdownOpen(false);
-                      setActiveCategory('courses');
-                      setSearchPhase('understanding');
-                    }}
-                    className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3"
-                  >
-                    <GraduationCap className="w-4 h-4 text-slate-400" />
-                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Courses</span></span>
+                    <span>Search "{inputValue.trim()}" in All Categories</span>
+                    <Search className="w-4 h-4" />
                   </button>
                 </div>
               </div>
@@ -419,6 +492,8 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                   { id: 'careers', label: 'Careers' },
                   { id: 'classes', label: 'Classes' },
                   { id: 'cutoffs', label: 'Cutoffs' },
+                  { id: 'pdf', label: 'PDF Resources' },
+                  { id: 'connect', label: 'Connect' },
                 ].map((tab) => (
                   <button
                     key={tab.id}
@@ -442,16 +517,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                     onChange={(e) => {
                       const val = e.target.value;
                       const next = new URLSearchParams(searchParams);
-                      if (val.includes('distance')) {
-                        const loc = window.prompt("Enter your current Mumbai location (e.g., Borivali) to calculate distance:");
-                        if (loc) {
-                          next.set('sort', val);
-                          next.set('userLoc', loc);
-                          setSearchParams(next, { replace: true });
-                        } else {
-                          e.target.value = sortParam || 'default';
-                        }
-                      } else if (val === 'default') {
+                      if (val === 'default') {
                         next.delete('sort');
                         next.delete('userLoc');
                         setSearchParams(next, { replace: true });
@@ -468,22 +534,17 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         <option value="cutoff_asc">Percentage: Low to High</option>
                       </>
                     )}
-                    {(activeCategory === 'classes' || activeCategory === 'colleges' || activeCategory === 'all') && (
-                      <>
-                        <option value="distance_asc">Distance: Low to High</option>
-                        <option value="distance_desc">Distance: High to Low</option>
-                      </>
-                    )}
+                    <option value="name_asc">Alphabetical: A to Z</option>
                   </select>
                 )}
-                <button
+                {hasCategoryFilters && <button
                   type="button"
                   onClick={handleModifyFilters}
                   className="lg:hidden inline-flex items-center justify-center gap-2 px-4 py-2.5 min-h-[44px] rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#0D1828] text-slate-700 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-[#161c27] transition-all whitespace-nowrap shrink-0"
                 >
                   <SlidersHorizontal className="w-4 h-4" />
                   Modify Filters
-                </button>
+                </button>}
               </div>
             )}
           </div>
@@ -514,7 +575,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
         {/* Main Layout: Sidebar + Results */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start relative w-full">
           {/* Desktop Sidebar Filter (Permanent) */}
-          <aside className="hidden lg:block w-[300px] shrink-0 sticky top-28 z-20 h-[calc(100vh-8rem)]">
+          {hasCategoryFilters && <aside className="hidden lg:block w-[300px] shrink-0 sticky top-28 z-20 h-[calc(100vh-8rem)]">
             <ResultFilterDrawer
               isOpen={true}
               inline={true}
@@ -531,7 +592,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         : 'colleges'
               }
             />
-          </aside>
+          </aside>}
 
           {/* Results Container */}
           <div ref={resultsContainerRef} className="flex-1 w-full min-w-0">
@@ -583,14 +644,17 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
               <SkeletonResultCards />
             ) : (
               <>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 px-4 sm:px-0">
                   {filteredResults.length === 0 ? (
                     <div className="col-span-full w-full max-w-xl mx-auto p-6 sm:p-10 text-center rounded-2xl bg-white dark:bg-[#0D1828] text-slate-600 dark:text-[#A9B8CA] border border-slate-300 dark:border-white/10 shadow-xs">
+                      <div className="mx-auto mb-5 w-28 sm:w-32">
+                        <MascotArt variant="thinking" className="w-full" alt="InfoBuddy mascot helping a student retry a search" />
+                      </div>
                       <p className="text-base font-semibold text-slate-900 dark:text-[#F4F7FB] mb-1">
                         No matching results found for your filters
                       </p>
-                      <p className="text-xs sm:text-sm mb-4">
-                        Try adjusting your Mumbai region or selecting All Mumbai.
+                      <p className="text-xs sm:text-sm mb-5 leading-relaxed">
+                        Try resetting a filter, switching to All Mumbai, or searching for a broader course or college name.
                       </p>
                       <button
                         onClick={() => {
@@ -599,7 +663,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         }}
                         className="px-4 py-2.5 min-h-[44px] rounded-xl bg-[#007DCC] text-white text-xs sm:text-sm font-semibold hover:bg-[#006cb0] transition-colors"
                       >
-                        Try Searching Other Colleges
+                        Adjust search or filters
                       </button>
                     </div>
                   ) : (
@@ -609,6 +673,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                       const isCourse = item.category === 'courses';
                       const isCareer = item.category === 'careers';
                       const isClass = item.category === 'classes';
+                      const isPdf = item.category === 'pdf';
 
                       const getStreams = (): string[] => {
                         if (item.category === 'colleges' && item.subtitle) {
@@ -627,12 +692,15 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         if (item.category === 'classes' && item.meta) {
                           return item.meta;
                         }
+                        if (item.category === 'pdf' && item.meta) {
+                          return item.meta.slice(0, 3);
+                        }
                         return [];
                       };
 
                       const streams = getStreams();
 
-                      if (isCollege || isCourse || isCareer || isClass) {
+                      if (isCollege || isCourse || isCareer || isClass || isPdf) {
                         const facts: { icon: any; value: string; label: string }[] = [];
                         if (isCutoff) {
                           // Do not push any facts. The cutoff is displayed directly as highlighted text below.
@@ -642,6 +710,13 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                           }
                           if (item.meta && item.meta[1]) {
                             facts.push({ icon: TrendingUp, value: item.meta[1], label: 'Sector' });
+                          }
+                        } else if (isPdf) {
+                          if (item.meta && item.meta[0]) {
+                            facts.push({ icon: FileText, value: item.meta[0], label: 'Category' });
+                          }
+                          if (item.meta && item.meta[1]) {
+                            facts.push({ icon: Award, value: item.meta[1], label: 'Format' });
                           }
                         } else {
                           item.meta.forEach(m => {
@@ -664,13 +739,14 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                         const collegeCutoffGroup = isCollege ? getCollegeCutoffGroup(item.collegeId || item.id) : null;
                         const highestCutoff = collegeCutoffGroup && collegeCutoffGroup.length > 0 ? Math.max(...collegeCutoffGroup.map(c => c.cutoff)) : null;
 
-                        // Decorative header icon (replaces the previous remote images, which returned 404)
-                        const HeaderIcon = isCutoff ? BarChart2 : isCollege ? Building2 : isCourse ? GraduationCap : isCareer ? TrendingUp : MonitorPlay;
+                        // Decorative header icon
+                        const HeaderIcon = isCutoff ? BarChart2 : isCollege ? Building2 : isCourse ? GraduationCap : isCareer ? TrendingUp : isPdf ? FileText : MonitorPlay;
 
                         // Mirrors handleActionClick targets so cards without a destination don't look clickable
                         const isClickable = !!(
                           item.category === 'careers' ||
-                          (item.category === 'classes' && item.slug) ||
+                          item.category === 'pdf' ||
+                          (item.category === 'classes' && (item.slug || item.id)) ||
                           item.collegeSlug ||
                           item.collegeId ||
                           item.category === 'colleges' ||
@@ -693,7 +769,7 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
 
                               {/* BADGE */}
                               <span className="relative min-w-0 px-2 py-1 rounded bg-[#007DCC] border border-white/20 text-white text-[10px] font-bold uppercase tracking-wider leading-snug break-words shadow-sm">
-                                {item.badgeCategory || (isCutoff ? 'CUTOFF' : isCollege ? 'COLLEGE' : isCourse ? 'COURSE' : isCareer ? 'CAREER' : 'CLASS')}
+                                {item.badgeCategory || (isCutoff ? 'CUTOFF' : isCollege ? 'COLLEGE' : isCourse ? 'COURSE' : isCareer ? 'CAREER' : isPdf ? 'PDF RESOURCE' : 'CLASS')}
                               </span>
 
                               {/* SAVE BUTTON */}

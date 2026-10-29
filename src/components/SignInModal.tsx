@@ -33,15 +33,15 @@ export const SignInModal: React.FC<PreferencesModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 dark:bg-black/75 backdrop-blur-sm animate-in fade-in duration-150">
-      <div className="relative w-full max-w-md bg-white dark:bg-[#0D1828] border border-slate-200 dark:border-[#D3B5E8]/20 rounded-2xl shadow-2xl overflow-hidden text-slate-900 dark:text-[#F4F7FB] transition-colors duration-200">
+      <div className="relative w-full max-w-md bg-white dark:bg-[#0B111E] border border-slate-200 dark:border-white/10 rounded-2xl shadow-2xl overflow-hidden text-slate-900 dark:text-[#F8FAFC] transition-colors duration-200">
         {/* Header */}
-        <div className="p-6 border-b border-slate-200 dark:border-[#D3B5E8]/15 flex items-center justify-between bg-slate-50 dark:bg-[#161c27]">
+        <div className="p-6 border-b border-slate-200 dark:border-white/10 flex items-center justify-between bg-slate-50 dark:bg-[#111A28]">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-[#007DCC] text-white flex items-center justify-center">
+            <div className="w-9 h-9 rounded-xl bg-slate-950 text-white flex items-center justify-center">
               <User className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-base font-bold text-slate-900 dark:text-[#F4F7FB]">
+              <h2 className="text-base font-bold text-slate-900 dark:text-[#F8FAFC]">
                 Student Profile & Preferences
               </h2>
               <p className="text-xs text-slate-500 dark:text-[#A9B8CA]">Personalize Mumbai recommendations</p>
@@ -49,7 +49,7 @@ export const SignInModal: React.FC<PreferencesModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 text-slate-400 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-[#F4F7FB] rounded-lg hover:bg-slate-100 dark:hover:bg-[#242a36] transition-colors"
+            className="p-1.5 text-slate-400 hover:text-slate-900 dark:text-[#A9B8CA] dark:hover:text-[#F8FAFC] rounded-lg hover:bg-slate-100 dark:hover:bg-[#242a36] transition-colors"
           >
             <X className="w-4 h-4" />
           </button>
@@ -66,7 +66,7 @@ export const SignInModal: React.FC<PreferencesModalProps> = ({
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="e.g. Aryan Sharma"
-              className="w-full bg-slate-50 dark:bg-[#1a202b] border border-slate-200 dark:border-[#D3B5E8]/15 rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-[#F4F7FB] focus:outline-none focus:border-[#007DCC]"
+              className="w-full bg-slate-50 dark:bg-[#141E2E] border border-slate-200 dark:border-white/10 rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-[#F8FAFC] focus:outline-none focus:border-amber-500"
             />
           </div>
 
@@ -77,7 +77,7 @@ export const SignInModal: React.FC<PreferencesModalProps> = ({
             <select
               value={commuteBase}
               onChange={(e) => setCommuteBase(e.target.value)}
-              className="w-full bg-slate-50 dark:bg-[#1a202b] border border-slate-200 dark:border-[#D3B5E8]/15 rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-[#F4F7FB] focus:outline-none focus:border-[#007DCC]"
+              className="w-full bg-slate-50 dark:bg-[#141E2E] border border-slate-200 dark:border-white/10 rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-[#F8FAFC] focus:outline-none focus:border-amber-500"
             >
               <option value="Borivali / Western Line">Borivali / Western Line (Suburban)</option>
               <option value="Andheri / Western & Metro">Andheri / Western & Metro</option>
@@ -95,7 +95,7 @@ export const SignInModal: React.FC<PreferencesModalProps> = ({
             <select
               value={stream}
               onChange={(e) => setStream(e.target.value)}
-              className="w-full bg-slate-50 dark:bg-[#1a202b] border border-slate-200 dark:border-[#D3B5E8]/15 rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-[#F4F7FB] focus:outline-none focus:border-[#007DCC]"
+              className="w-full bg-slate-50 dark:bg-[#141E2E] border border-slate-200 dark:border-white/10 rounded-xl px-4 py-2.5 text-sm text-slate-900 dark:text-[#F8FAFC] focus:outline-none focus:border-amber-500"
             >
               <option value="Commerce & CA / Finance">Commerce & CA / Finance (B.Com, BAF, BFM)</option>
               <option value="Management & Business">Management & Business (BMS, BBA)</option>
@@ -107,7 +107,7 @@ export const SignInModal: React.FC<PreferencesModalProps> = ({
           <div className="pt-2">
             <button
               type="submit"
-              className="w-full py-3 rounded-xl bg-[#007DCC] hover:bg-[#006cb0] text-white text-sm font-semibold transition-all shadow-md flex items-center justify-center gap-2"
+              className="w-full py-3 rounded-xl bg-slate-950 hover:bg-black text-white text-sm font-semibold transition-all shadow-md flex items-center justify-center gap-2"
             >
               {saved ? (
                 <>

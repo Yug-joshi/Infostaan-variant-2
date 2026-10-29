@@ -1,10 +1,10 @@
 export type ScreenType = 'home' | 'search' | 'college-detail' | 'saved' | 'guidance' | 'connect';
 
-export type CategoryType = 'all' | 'colleges' | 'courses' | 'careers' /* | 'internships' */ | 'classes' | 'cutoffs';
+export type CategoryType = 'all' | 'colleges' | 'courses' | 'careers' | 'classes' | 'cutoffs' | 'pdf' | 'pdfs' | 'connect';
 
 export interface SearchResultItem {
   id: string;
-  category: 'colleges' | 'courses' | 'careers' /* | 'internships' */ | 'classes' | 'cutoffs';
+  category: 'colleges' | 'courses' | 'careers' | 'classes' | 'cutoffs' | 'pdf' | 'pdfs' | 'connect' | 'pages';
   badgeCategory: string;
   badgeSub: string;
   title: string;
@@ -17,6 +17,12 @@ export interface SearchResultItem {
   collegeSlug?: string;
   sourceFile?: string;
   slug?: string;
+  href?: string;
+  action?: 'toggle-theme' | 'open-profile';
+  searchTerms?: string[];
+  discipline?: string[];
+  qualificationLevel?: string;
+  courseFamily?: string;
 }
 
 export interface CollegeDetail {
@@ -51,17 +57,64 @@ export interface CollegeDetail {
 
 export interface ShortlistItem {
   id: string;
-  category: 'college' | 'course' | 'class' | 'career';
+  category: 'college' | 'course' | 'class' | 'career' | 'pdf';
   title: string;
   regionBadge: string;
   badgeType: string;
   locationInfo: string;
   timeSavedText: string;
   lineText?: string;
-  iconType: 'school' | 'account_balance' | 'trending_up' | 'library_books' | 'work';
+  iconType: 'school' | 'account_balance' | 'trending_up' | 'library_books' | 'work' | 'file_text';
   canCompare?: boolean;
   collegeId?: string;
+  pdfId?: string;
+  pdfSlug?: string;
+  price?: number;
 }
+
+export interface PDFResource {
+  id: string;
+  slug: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  category: string;
+  price: number;
+  originalPrice?: number;
+  coverImage: string;
+  pages: number;
+  edition: string;
+  fileFormat: string;
+  fileSize: string;
+  language: string;
+  previewPages?: string[];
+  topicsCovered: string[];
+  lastUpdated: string;
+  rating?: number;
+  reviewsCount?: number;
+}
+
+export interface CartItem {
+  pdf: PDFResource;
+  quantity: number;
+  addedAt: string;
+}
+
+export interface PurchasedPdfItem {
+  id: string;
+  pdfId: string;
+  slug: string;
+  title: string;
+  category: string;
+  coverImage: string;
+  pages: number;
+  edition: string;
+  pricePaid: number;
+  orderNumber: string;
+  purchasedAt: string;
+  status: 'confirmed' | 'pending';
+}
+
 
 export interface ComparisonProfile {
   name: string;

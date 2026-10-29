@@ -1,6 +1,7 @@
 import React from 'react';
-import { User, Bookmark, Search, Menu, Users, Sun, Moon } from 'lucide-react';
+import { User, Bookmark, Search, Menu, Users, Sun, Moon, ShoppingCart } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import { useCart } from '../context/CartContext';
 import logoImg from '../assets/logo.png';
 
 import { Link, useLocation } from 'react-router-dom';
@@ -17,11 +18,12 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenMobileSidebar,
 }) => {
   const { theme, toggleTheme } = useTheme();
+  const { cartCount } = useCart();
   const location = useLocation();
   const currentPath = location.pathname;
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full z-[100] bg-white/60 dark:bg-[#070D18]/60 backdrop-blur-xl border-b border-slate-200/50 dark:border-white/5 transition-colors duration-200">
+    <header className="fixed top-0 left-0 right-0 w-full z-[100] bg-white/80 dark:bg-[#0B111E]/80 backdrop-blur-xl border-b border-slate-200/80 dark:border-white/10 transition-colors duration-200">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
         {/* Left: Brand Identity & Mobile Hamburger Button */}
         <div className="flex-1 flex items-center justify-start gap-3">
@@ -30,7 +32,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             type="button"
             onClick={onOpenMobileSidebar}
             aria-label="Open navigation sidebar"
-            className="md:hidden p-2 rounded-xl text-slate-700 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#007DCC]/40"
+            className="md:hidden p-2 rounded-xl text-slate-700 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-900/10 dark:focus:ring-amber-400/30"
           >
             <Menu className="w-6 h-6" />
           </button>
@@ -47,7 +49,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="h-8 w-auto object-contain pointer-events-none transition-transform duration-200 group-hover:scale-105"
             />
             <span className="text-xl font-extrabold tracking-tight text-slate-900 dark:text-[#F4F7FB] hidden sm:block">
-              Infostaan<span className="text-[#007DCC]">.</span>
+              Infostaan<span className="text-[#F59E0B]">.</span>
             </span>
           </Link>
         </div>
@@ -58,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             to="/"
             className={`transition-colors hover:text-slate-900 dark:hover:text-[#F4F7FB] ${
               currentPath === '/'
-                ? 'text-[#007DCC] dark:text-[#19A7E8] font-semibold'
+                ? 'text-slate-950 dark:text-white font-bold'
                 : ''
             }`}
           >
@@ -68,23 +70,33 @@ export const Navbar: React.FC<NavbarProps> = ({
             to="/help-me-decide"
             className={`transition-colors hover:text-slate-900 dark:hover:text-[#F4F7FB] ${
               currentPath === '/help-me-decide'
-                ? 'text-[#007DCC] dark:text-[#19A7E8] font-semibold'
+                ? 'text-slate-950 dark:text-white font-bold'
                 : ''
             }`}
           >
             Guidance
           </Link>
           <Link
+            to="/pdf-resources"
+            className={`transition-colors hover:text-slate-900 dark:hover:text-[#F4F7FB] ${
+              currentPath.startsWith('/pdf-resources')
+                ? 'text-slate-950 dark:text-white font-bold'
+                : ''
+            }`}
+          >
+            PDF Resources
+          </Link>
+          <Link
             to="/saved"
             className={`transition-colors hover:text-slate-900 dark:hover:text-[#F4F7FB] flex items-center gap-1.5 ${
               currentPath === '/saved'
-                ? 'text-[#007DCC] dark:text-[#19A7E8] font-semibold'
+                ? 'text-slate-950 dark:text-white font-bold'
                 : ''
             }`}
           >
             <span>Saved</span>
             {savedCount > 0 && (
-              <span className="px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-[#007DCC] text-white">
+              <span className="px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-900 dark:bg-amber-500 text-white dark:text-slate-950">
                 {savedCount}
               </span>
             )}
@@ -93,7 +105,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             to="/dashboard"
             className={`transition-colors hover:text-slate-900 dark:hover:text-[#F4F7FB] flex items-center gap-1.5 ${
               currentPath === '/dashboard'
-                ? 'text-[#007DCC] dark:text-[#19A7E8] font-semibold'
+                ? 'text-slate-950 dark:text-white font-bold'
                 : ''
             }`}
           >
@@ -104,14 +116,26 @@ export const Navbar: React.FC<NavbarProps> = ({
           </Link>
         </nav>
 
-        {/* Right Actions: Sign In */}
-        <div className="flex-1 flex items-center justify-end gap-3 sm:gap-5">
-
+        {/* Right Actions: Cart, Theme, Sign In */}
+        <div className="flex-1 flex items-center justify-end gap-2.5 sm:gap-4">
+          {/* Cart Button */}
+          <Link
+            to="/cart"
+            aria-label="Shopping Cart"
+            className="p-2 text-slate-600 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors relative rounded-xl hover:bg-slate-100 dark:hover:bg-white/5 focus:outline-none"
+          >
+            <ShoppingCart className="w-5 h-5" />
+            {cartCount > 0 && (
+              <span className="absolute 0 top-1 right-1 w-4 h-4 rounded-full bg-amber-500 text-slate-950 text-[10px] font-extrabold flex items-center justify-center">
+                {cartCount}
+              </span>
+            )}
+          </Link>
 
           {/* Theme Toggle Button */}
           <button
             onClick={toggleTheme}
-            className="p-2 text-slate-600 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors focus:outline-none focus:ring-2 focus:ring-[#007DCC]/40 rounded-xl"
+            className="p-2 text-slate-600 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-900/10 dark:focus:ring-amber-400/30 rounded-xl"
             aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
           >
             {theme === 'light' ? (
@@ -121,11 +145,9 @@ export const Navbar: React.FC<NavbarProps> = ({
             )}
           </button>
 
-
-
           <button
             onClick={onOpenSignIn}
-            className="px-5 py-2.5 rounded-full bg-[#007DCC] hover:bg-[#19A7E8] transition-colors text-white text-sm font-bold shadow-md shadow-[#007DCC]/20 hidden sm:block"
+            className="px-6 py-2.5 rounded-full bg-slate-950 hover:bg-black transition-colors text-white text-sm font-bold shadow-sm hidden sm:block"
           >
             Sign In
           </button>
@@ -133,7 +155,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Mobile Sign In / Profile */}
           <button
             onClick={onOpenSignIn}
-            className="w-9 h-9 rounded-full bg-[#007DCC] flex items-center justify-center text-white sm:hidden"
+            className="w-9 h-9 rounded-full bg-slate-950 hover:bg-black flex items-center justify-center text-white sm:hidden"
             aria-label="Sign In"
           >
             <User className="w-4 h-4" />
