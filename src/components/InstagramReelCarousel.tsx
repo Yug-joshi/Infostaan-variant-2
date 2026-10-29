@@ -173,11 +173,7 @@ export const InstagramReelCarousel: React.FC = () => {
             <span>STUDENT REELS & GUIDES</span>
           </div>
 
-<<<<<<< HEAD
           <p className="text-xs sm:text-base text-slate-600 dark:text-[#A9B8CA] leading-relaxed">
-=======
-          <p className="text-xs sm:text-base text-slate-600 dark:text-[#A9B8CA] mt-2 leading-relaxed">
->>>>>>> 40b9b86fac5dd2c944a16a9246d560ff8a5f32c4
             Real advice, FYJC realities, and Mumbai college guidance in 60 seconds.
           </p>
         </div>

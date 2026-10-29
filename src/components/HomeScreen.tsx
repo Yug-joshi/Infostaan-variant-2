@@ -76,12 +76,14 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       onOpenSignIn();
     } else if (item.href) {
       onNavigate(item.href);
-    } else if (item.category === 'pdfs' && item.slug) {
+    } else if ((item.category === 'pdf' || item.category === 'pdfs') && item.slug) {
       onNavigate(`/pdf-resources/${item.slug}`);
     } else if (item.category === 'connect') {
       onNavigate(`/mentor/${item.id}`);
     } else if (item.category === 'classes' && item.slug) {
       onNavigate(`/class/${item.slug}`);
+    } else if (item.category === 'colleges' && (item.collegeSlug || item.collegeId)) {
+      onSelectCollege(item.collegeSlug || item.collegeId || '');
     } else {
       onSearch(query.trim());
     }
@@ -307,90 +309,33 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
                 {/* Search Dropdown */}
                 {query.trim().length > 0 && (
-<<<<<<< HEAD
                   <div className="absolute top-full left-0 right-0 mt-3 bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 rounded-2xl shadow-xl dark:shadow-2xl overflow-hidden z-50 text-left">
-                    <div className="p-2 space-y-0.5">
-                      <button
-                        type="button"
-                        onClick={() => onSearch(query, 'all')}
-                        className="w-full text-left px-4 py-3 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3 font-semibold text-slate-900 dark:text-[#F8FAFC] border-b border-slate-100 dark:border-white/5"
-                      >
-                        <Search className="w-4 h-4 text-amber-500 dark:text-amber-400" />
-                        <span>Search "{query}" in <span className="text-amber-600 dark:text-amber-400 font-bold">All Categories</span></span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => onSearch(query, 'colleges')}
-                        className="w-full text-left px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
-                      >
-                        <Building2 className="w-4 h-4 text-amber-500 dark:text-amber-400" />
-                        <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Colleges</span></span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => onSearch(query, 'courses')}
-                        className="w-full text-left px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
-                      >
-                        <GraduationCap className="w-4 h-4 text-amber-500 dark:text-amber-400" />
-                        <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Courses</span></span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => onSearch(query, 'careers')}
-                        className="w-full text-left px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
-                      >
-                        <TrendingUp className="w-4 h-4 text-amber-500 dark:text-amber-400" />
-                        <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Careers</span></span>
-=======
-                  <div className="relative mt-3 w-full bg-white dark:bg-[#111A28] border border-slate-200 dark:border-white/10 rounded-2xl shadow-xl dark:shadow-2xl overflow-hidden text-left">
                     <div className="max-h-[min(60vh,420px)] overflow-y-auto p-2">
-                      {searchSuggestions.length > 0 ? searchSuggestions.map((item) => (
-                        <button
-                          key={`${item.category}-${item.id}`}
-                          type="button"
-                          onClick={() => handleSuggestionClick(item)}
-                          className="w-full text-left px-4 py-3 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-start gap-3"
-                        >
-                          <span className="min-w-0 flex-1">
-                            <span className="block text-sm font-semibold text-slate-900 dark:text-[#F8FAFC]">{item.title}</span>
-                            <span className={`mt-0.5 text-xs text-slate-500 dark:text-[#71839A] line-clamp-2 ${item.category === 'colleges' ? 'hidden sm:block' : 'block'}`}>{item.subtitle || item.badgeCategory}</span>
-                          </span>
-                          <span className="shrink-0 text-[10px] font-bold uppercase tracking-wide text-slate-400 dark:text-[#71839A]">{item.badgeCategory}</span>
-                        </button>
-                      )) : (
+                      {searchSuggestions.length > 0 ? (
+                        searchSuggestions.map((item) => (
+                          <button
+                            key={`${item.category}-${item.id}`}
+                            type="button"
+                            onClick={() => handleSuggestionClick(item)}
+                            className="w-full text-left px-4 py-3 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-start gap-3"
+                          >
+                            <span className="min-w-0 flex-1">
+                              <span className="block text-sm font-semibold text-slate-900 dark:text-[#F8FAFC]">{item.title}</span>
+                              <span className={`mt-0.5 text-xs text-slate-500 dark:text-[#71839A] line-clamp-2 ${item.category === 'colleges' ? 'hidden sm:block' : 'block'}`}>{item.subtitle || item.badgeCategory}</span>
+                            </span>
+                            <span className="shrink-0 text-[10px] font-bold uppercase tracking-wide text-slate-400 dark:text-[#71839A]">{item.badgeCategory}</span>
+                          </button>
+                        ))
+                      ) : (
                         <div className="px-4 py-3 text-sm text-slate-500 dark:text-[#71839A]">No matching results yet</div>
                       )}
                       <button
                         type="button"
                         onClick={() => onSearch(query.trim())}
-                        className="w-full mt-1 px-4 py-3 text-left text-sm font-semibold text-amber-700 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-white/5 rounded-xl transition-colors"
+                        className="w-full mt-1 px-4 py-3 text-left text-sm font-semibold text-amber-700 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-white/5 rounded-xl transition-colors flex items-center justify-between"
                       >
-                        See all results for “{query.trim()}”
->>>>>>> 40b9b86fac5dd2c944a16a9246d560ff8a5f32c4
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => onSearch(query, 'classes')}
-                        className="w-full text-left px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
-                      >
-                        <MonitorPlay className="w-4 h-4 text-amber-500 dark:text-amber-400" />
-                        <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Coaching Classes</span></span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => onSearch(query, 'cutoffs')}
-                        className="w-full text-left px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
-                      >
-                        <BarChart2 className="w-4 h-4 text-amber-500 dark:text-amber-400" />
-                        <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in Admission Cutoffs</span></span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => onSearch(query, 'pdf')}
-                        className="w-full text-left px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-[#161c27] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
-                      >
-                        <FileText className="w-4 h-4 text-amber-500 dark:text-amber-400" />
-                        <span className="text-slate-900 dark:text-[#F8FAFC]">{query} <span className="text-slate-500 dark:text-[#71839A]">in PDF Resources</span></span>
+                        <span>See all results for “{query.trim()}”</span>
+                        <ArrowRight className="w-4 h-4" />
                       </button>
                     </div>
                   </div>

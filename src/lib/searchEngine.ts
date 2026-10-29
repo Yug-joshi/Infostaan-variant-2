@@ -2,30 +2,12 @@ import { SearchResultItem, CategoryType, PDFResource } from '../types';
 import { ALL_SEARCH_RESULTS } from '../data/mockData';
 import { CLASSES, ClassData } from '../data/classes';
 import { CUTOFFS, CutoffMetadata } from '../data/cutoffs';
-<<<<<<< HEAD
 import { FYJC_CUTOFFS, FyjcCutoff } from '../data/fyjcCutoffs';
 import { INITIAL_PDF_RESOURCES } from '../data/pdfResources';
+import { MENTORS_DATA } from '../data/mentorsData';
 import { getAllColleges, formatCollegeTitle, getCollegeGroupingKey } from './collegeData';
 
-/**
- * Computes relevance score for ranking exact matches above weaker description/metadata matches.
- */
-function computeScore(
-  title: string,
-  secondaryTexts: (string | undefined | null)[],
-  q: string,
-  tokens: string[]
-): number {
-  if (!q) return 0;
-  const titleLower = title.toLowerCase().trim();
-  let score = 0;
-=======
-import { FYJC_CUTOFFS } from '../data/fyjcCutoffs';
-import { INITIAL_PDF_RESOURCES } from '../data/pdfResources';
-import { MENTORS_DATA } from '../data/mentorsData';
-import { getAllColleges } from './collegeData';
-
-const SITE_PAGES: SearchResultItem[] = [
+export const SITE_PAGES: SearchResultItem[] = [
   { id: 'page-colleges', category: 'pages', badgeCategory: 'Site Section', badgeSub: 'Explore', title: 'Colleges', subtitle: 'Browse Mumbai colleges and programs', meta: [], whyRelevant: 'Explore colleges', tagColor: 'primary', actionLabel: 'Browse Colleges', href: '/colleges', searchTerms: ['college', 'institution', 'admission'] },
   { id: 'page-courses', category: 'pages', badgeCategory: 'Site Section', badgeSub: 'Explore', title: 'Courses', subtitle: 'Browse degrees and courses', meta: [], whyRelevant: 'Explore courses', tagColor: 'primary', actionLabel: 'Browse Courses', href: '/courses', searchTerms: ['course', 'degree', 'program'] },
   { id: 'page-careers', category: 'pages', badgeCategory: 'Site Section', badgeSub: 'Explore', title: 'Careers', subtitle: 'Explore career pathways and roadmaps', meta: [], whyRelevant: 'Explore careers', tagColor: 'primary', actionLabel: 'Browse Careers', href: '/careers', searchTerms: ['career', 'job', 'roadmap', 'work'] },
@@ -40,15 +22,18 @@ const SITE_PAGES: SearchResultItem[] = [
   { id: 'page-appearance-settings', category: 'pages', badgeCategory: 'Settings', badgeSub: 'Appearance', title: 'Appearance Settings', subtitle: 'Switch between light and dark theme', meta: [], whyRelevant: 'Change the website appearance', tagColor: 'secondary', actionLabel: 'Toggle Theme', searchTerms: ['settings', 'setting', 'appearance', 'theme', 'dark mode', 'light mode'], action: 'toggle-theme' },
 ];
 
-export function searchInfostaan(
-  query: string,
-  category: CategoryType,
-  pdfResources: PDFResource[] = INITIAL_PDF_RESOURCES,
-): SearchResultItem[] {
-  const q = query.toLowerCase().trim();
-  
-  let results: SearchResultItem[] = [];
->>>>>>> 40b9b86fac5dd2c944a16a9246d560ff8a5f32c4
+/**
+ * Computes relevance score for ranking exact matches above weaker description/metadata matches.
+ */
+function computeScore(
+  title: string,
+  secondaryTexts: (string | undefined | null)[],
+  q: string,
+  tokens: string[]
+): number {
+  if (!q) return 0;
+  const titleLower = title.toLowerCase().trim();
+  let score = 0;
 
   // 1. Exact title match
   if (titleLower === q) {
@@ -66,7 +51,6 @@ export function searchInfostaan(
     }
   }
 
-<<<<<<< HEAD
   // 2. Secondary text matching (subtitles, location, streams, specializations, metadata)
   const secondaryCombined = secondaryTexts.filter(Boolean).join(' ').toLowerCase();
   if (secondaryCombined.includes(q)) {
@@ -81,7 +65,11 @@ export function searchInfostaan(
   return score;
 }
 
-export function searchInfostaan(query: string, category: CategoryType | string): SearchResultItem[] {
+export function searchInfostaan(
+  query: string,
+  category: CategoryType | string,
+  pdfResources: PDFResource[] = INITIAL_PDF_RESOURCES
+): SearchResultItem[] {
   const normalizedCategory = category || 'all';
   const q = query.toLowerCase().trim().replace(/\s+/g, ' ');
   const tokens = q ? q.split(' ').filter(Boolean) : [];
@@ -120,68 +108,6 @@ export function searchInfostaan(query: string, category: CategoryType | string):
         tokens
       );
       results.push({ item, score });
-=======
-  // 4. Paid PDFs
-  if (category === 'all' || category === 'pdfs') {
-    const pdfResults: SearchResultItem[] = pdfResources.filter(pdf => {
-      if (!q) return true;
-      return [pdf.title, pdf.subtitle, pdf.description, pdf.category, pdf.edition, ...pdf.topicsCovered]
-        .filter(Boolean)
-        .some(value => value!.toLowerCase().includes(q));
-    }).map(pdf => ({
-      id: pdf.id,
-      category: 'pdfs',
-      badgeCategory: 'Paid PDF',
-      badgeSub: pdf.category,
-      title: pdf.title,
-      subtitle: `₹${pdf.price} • ${pdf.pages} pages • ${pdf.edition}`,
-      meta: [pdf.category, `${pdf.pages} pages`, `₹${pdf.price}`],
-      whyRelevant: q ? `Matches your search for "${query}"` : 'Available study resource',
-      tagColor: 'secondary',
-      actionLabel: 'View PDF',
-      slug: pdf.slug,
-    }));
-    results = [...results, ...pdfResults];
-  }
-
-  // 5. Infostaan Connect mentors
-  if (category === 'all' || category === 'connect') {
-    const connectResults: SearchResultItem[] = MENTORS_DATA.filter(mentor => {
-      if (!q) return true;
-      return [mentor.name, mentor.role, mentor.area, mentor.company, mentor.desc, mentor.about, ...mentor.highlights]
-        .some(value => value.toLowerCase().includes(q));
-    }).map(mentor => ({
-      id: mentor.id,
-      category: 'connect',
-      badgeCategory: 'Infostaan Connect',
-      badgeSub: mentor.area,
-      title: mentor.name,
-      subtitle: `${mentor.role} • ${mentor.company}`,
-      meta: [mentor.experience, `₹${mentor.price} per session`],
-      whyRelevant: mentor.desc,
-      tagColor: 'secondary',
-      actionLabel: 'View Profile',
-    }));
-    results = [...results, ...connectResults];
-  }
-
-  if (category === 'all' && q) {
-    results = [...results, ...SITE_PAGES.filter(page =>
-      [page.title, page.subtitle, page.badgeCategory, page.badgeSub, ...(page.searchTerms || [])]
-        .filter(Boolean)
-        .some(value => value!.toLowerCase().includes(q))
-    )];
-  }
-
-  // Simple sorting: put cutoffs and classes near the top if they strongly match
-  if (q) {
-    results.sort((a, b) => {
-      const aTitleMatch = a.title.toLowerCase().includes(q);
-      const bTitleMatch = b.title.toLowerCase().includes(q);
-      if (aTitleMatch && !bTitleMatch) return -1;
-      if (!aTitleMatch && bTitleMatch) return 1;
-      return 0;
->>>>>>> 40b9b86fac5dd2c944a16a9246d560ff8a5f32c4
     });
   }
 
@@ -387,8 +313,14 @@ export function searchInfostaan(query: string, category: CategoryType | string):
   }
 
   // 5. Available Educational PDF Resources
-  if (normalizedCategory === 'all' || normalizedCategory === 'pdf' || normalizedCategory === 'pdf-resources') {
-    const pdfMatches = INITIAL_PDF_RESOURCES.filter((pdf) => {
+  if (
+    normalizedCategory === 'all' ||
+    normalizedCategory === 'pdf' ||
+    normalizedCategory === 'pdfs' ||
+    normalizedCategory === 'pdf-resources'
+  ) {
+    const pdfList = pdfResources || INITIAL_PDF_RESOURCES;
+    const pdfMatches = pdfList.filter((pdf) => {
       if (!q) return true;
       return matchesQuery([
         pdf.title,
@@ -423,6 +355,68 @@ export function searchInfostaan(query: string, category: CategoryType | string):
         tokens
       );
       results.push({ item, score });
+    });
+  }
+
+  // 6. Infostaan Connect mentors
+  if (normalizedCategory === 'all' || normalizedCategory === 'connect') {
+    const connectMatches = MENTORS_DATA.filter((mentor) => {
+      if (!q) return true;
+      return matchesQuery([
+        mentor.name,
+        mentor.role,
+        mentor.area,
+        mentor.company,
+        mentor.desc,
+        mentor.about,
+        ...(mentor.highlights || []),
+      ]);
+    });
+
+    connectMatches.forEach((mentor) => {
+      const item: SearchResultItem = {
+        id: mentor.id,
+        category: 'connect',
+        badgeCategory: 'Infostaan Connect',
+        badgeSub: mentor.area,
+        title: mentor.name,
+        subtitle: `${mentor.role} • ${mentor.company}`,
+        meta: [mentor.experience, `₹${mentor.price} per session`],
+        whyRelevant: mentor.desc,
+        tagColor: 'secondary',
+        actionLabel: 'View Profile',
+      };
+
+      const score = computeScore(
+        mentor.name,
+        [mentor.role, mentor.company, mentor.area, mentor.desc],
+        q,
+        tokens
+      );
+      results.push({ item, score });
+    });
+  }
+
+  // 7. Site Pages
+  if (normalizedCategory === 'all' && q) {
+    const pageMatches = SITE_PAGES.filter((page) =>
+      matchesQuery([
+        page.title,
+        page.subtitle,
+        page.badgeCategory,
+        page.badgeSub,
+        ...(page.searchTerms || []),
+      ])
+    );
+
+    pageMatches.forEach((page) => {
+      const score = computeScore(
+        page.title,
+        [page.subtitle, page.badgeSub, ...(page.searchTerms || [])],
+        q,
+        tokens
+      );
+      results.push({ item: page, score: score > 0 ? score - 50 : 0 });
     });
   }
 

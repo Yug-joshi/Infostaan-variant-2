@@ -130,15 +130,9 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
   const setActiveCategory = (newCategory: CategoryType) => {
     if (newCategory === 'all') {
       navigate('/search');
-<<<<<<< HEAD
-    } else if (newCategory === 'pdf') {
-      const params = new URLSearchParams(searchParams);
-      params.set('category', 'pdf');
-=======
-    } else if (newCategory === 'pdfs' || newCategory === 'connect') {
+    } else if (newCategory === 'pdf' || newCategory === 'pdfs' || newCategory === 'connect') {
       const params = new URLSearchParams(searchParams);
       params.set('category', newCategory);
->>>>>>> 40b9b86fac5dd2c944a16a9246d560ff8a5f32c4
       navigate(`/search?${params.toString()}`);
     } else {
       const params = new URLSearchParams(searchParams);
@@ -165,15 +159,11 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
         return { badge: 'Mumbai Coaching Classes', title: 'Coaching Classes in Mumbai' };
       case 'cutoffs':
         return { badge: 'Mumbai Cutoff Explorer', title: 'Admission Cutoffs in Mumbai' };
-<<<<<<< HEAD
       case 'pdf':
-        return { badge: 'Mumbai Study Resources', title: 'Educational PDF Resources' };
-=======
       case 'pdfs':
-        return { badge: 'Paid Study Resources', title: 'Paid PDFs' };
+        return { badge: 'Mumbai Study Resources', title: 'Educational PDF Resources' };
       case 'connect':
         return { badge: 'Infostaan Connect', title: 'Connect with Professionals' };
->>>>>>> 40b9b86fac5dd2c944a16a9246d560ff8a5f32c4
       default:
         return { badge: 'Mumbai Student Catalog', title: 'Search Mumbai Programs & Resources' };
     }
@@ -194,12 +184,9 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
       case 'careers': return 'Exploring Mumbai career paths...';
       case 'classes': return 'Finding relevant classes in Mumbai...';
       case 'cutoffs': return 'Finding relevant admission cutoffs...';
-<<<<<<< HEAD
-      case 'pdf': return 'Finding relevant study resources & PDFs...';
-=======
-      case 'pdfs': return 'Finding relevant study resources...';
+      case 'pdf':
+      case 'pdfs': return 'Finding relevant study resources & PDFs...';
       case 'connect': return 'Finding relevant professionals...';
->>>>>>> 40b9b86fac5dd2c944a16a9246d560ff8a5f32c4
       default: return "Finding what's relevant in Mumbai...";
     }
   };
@@ -439,9 +426,39 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
             </div>
             {/* Search Suggestions */}
             {inputValue.trim().length > 0 && isSearchDropdownOpen && (
-<<<<<<< HEAD
               <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#1a202b] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-2xl shadow-xl overflow-hidden z-40 text-left">
-                <div className="p-2 space-y-0.5">
+                <div className="max-h-[min(60vh,420px)] overflow-y-auto p-2">
+                  {searchSuggestions.length > 0 ? (
+                    searchSuggestions.map((item) => (
+                      <button
+                        key={`${item.category}-${item.id}`}
+                        type="button"
+                        onClick={() => {
+                          setIsSearchDropdownOpen(false);
+                          if (item.action || item.href || item.category === 'pdf' || item.category === 'pdfs' || item.category === 'connect' || item.category === 'careers') {
+                            handleActionClick(item);
+                            return;
+                          }
+                          setSearchParams(prev => {
+                            const next = new URLSearchParams(prev);
+                            next.set('query', inputValue.trim());
+                            return next;
+                          }, { replace: true });
+                          setActiveCategory(item.category as CategoryType);
+                          setSearchPhase('understanding');
+                        }}
+                        className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-start gap-3"
+                      >
+                        <span className="min-w-0 flex-1">
+                          <span className="block text-sm font-semibold text-slate-800 dark:text-[#F4F7FB]">{item.title}</span>
+                          <span className={`mt-0.5 text-xs text-slate-500 dark:text-[#A9B8CA] line-clamp-2 ${item.category === 'colleges' ? 'hidden sm:block' : 'block'}`}>{item.subtitle || item.badgeCategory}</span>
+                        </span>
+                        <span className="shrink-0 text-[10px] font-bold uppercase tracking-wide text-slate-400">{item.badgeCategory}</span>
+                      </button>
+                    ))
+                  ) : (
+                    <div className="px-4 py-3 text-sm text-slate-500 dark:text-[#A9B8CA]">No matching results yet</div>
+                  )}
                   <button
                     type="button"
                     onClick={() => {
@@ -454,146 +471,11 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                       setActiveCategory('all');
                       setSearchPhase('understanding');
                     }}
-                    className="w-full text-left px-4 py-2.5 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 border-b border-slate-100 dark:border-white/5"
+                    className="w-full text-left px-4 py-2.5 mt-1 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center justify-between text-xs sm:text-sm font-semibold text-[#007DCC] dark:text-[#86cfff] border-t border-slate-100 dark:border-white/5"
                   >
-                    <Search className="w-4 h-4 text-[#007DCC] dark:text-[#9ccaff]" />
-                    <span className="text-slate-900 dark:text-[#F4F7FB] font-semibold text-xs sm:text-sm">Search "{inputValue}" in <span className="text-[#007DCC] dark:text-[#86cfff]">All Categories</span></span>
+                    <span>Search "{inputValue.trim()}" in All Categories</span>
+                    <Search className="w-4 h-4" />
                   </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSearchParams(prev => {
-                        const next = new URLSearchParams(prev);
-                        next.set('query', inputValue.trim());
-                        return next;
-                      }, { replace: true });
-                      setIsSearchDropdownOpen(false);
-                      setActiveCategory('colleges');
-                      setSearchPhase('understanding');
-                    }}
-                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
-                  >
-                    <Building2 className="w-4 h-4 text-slate-400" />
-                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Colleges</span></span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSearchParams(prev => {
-                        const next = new URLSearchParams(prev);
-                        next.set('query', inputValue.trim());
-                        return next;
-                      }, { replace: true });
-                      setIsSearchDropdownOpen(false);
-                      setActiveCategory('courses');
-                      setSearchPhase('understanding');
-                    }}
-                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
-                  >
-                    <GraduationCap className="w-4 h-4 text-slate-400" />
-                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Courses</span></span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSearchParams(prev => {
-                        const next = new URLSearchParams(prev);
-                        next.set('query', inputValue.trim());
-                        return next;
-                      }, { replace: true });
-                      setIsSearchDropdownOpen(false);
-                      setActiveCategory('careers');
-                      setSearchPhase('understanding');
-                    }}
-                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
-                  >
-                    <TrendingUp className="w-4 h-4 text-slate-400" />
-                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Careers</span></span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSearchParams(prev => {
-                        const next = new URLSearchParams(prev);
-                        next.set('query', inputValue.trim());
-                        return next;
-                      }, { replace: true });
-                      setIsSearchDropdownOpen(false);
-                      setActiveCategory('classes');
-                      setSearchPhase('understanding');
-                    }}
-                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
-                  >
-                    <MonitorPlay className="w-4 h-4 text-slate-400" />
-                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Classes</span></span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSearchParams(prev => {
-                        const next = new URLSearchParams(prev);
-                        next.set('query', inputValue.trim());
-                        return next;
-                      }, { replace: true });
-                      setIsSearchDropdownOpen(false);
-                      setActiveCategory('cutoffs');
-                      setSearchPhase('understanding');
-                    }}
-                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
-                  >
-                    <BarChart2 className="w-4 h-4 text-slate-400" />
-                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in Cutoffs</span></span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSearchParams(prev => {
-                        const next = new URLSearchParams(prev);
-                        next.set('query', inputValue.trim());
-                        return next;
-                      }, { replace: true });
-                      setIsSearchDropdownOpen(false);
-                      setActiveCategory('pdf');
-                      setSearchPhase('understanding');
-                    }}
-                    className="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-center gap-3 text-xs sm:text-sm"
-                  >
-                    <FileText className="w-4 h-4 text-slate-400" />
-                    <span className="text-slate-700 dark:text-[#A9B8CA]">{inputValue} <span className="text-slate-400">in PDF Resources</span></span>
-                  </button>
-=======
-              <div className="relative mt-2 w-full bg-white dark:bg-[#1a202b] border border-slate-300 dark:border-[#D3B5E8]/20 rounded-2xl shadow-xl overflow-hidden text-left">
-                <div className="max-h-[min(60vh,420px)] overflow-y-auto p-2">
-                  {searchSuggestions.length > 0 ? searchSuggestions.map((item) => (
-                    <button
-                      key={`${item.category}-${item.id}`}
-                      type="button"
-                      onClick={() => {
-                        setIsSearchDropdownOpen(false);
-                        if (item.action || item.href || item.category === 'pdfs' || item.category === 'connect' || item.category === 'careers') {
-                          handleActionClick(item);
-                          return;
-                        }
-                        setSearchParams(prev => {
-                          const next = new URLSearchParams(prev);
-                          next.set('query', inputValue.trim());
-                          return next;
-                        }, { replace: true });
-                        setActiveCategory(item.category as CategoryType);
-                        setSearchPhase('understanding');
-                      }}
-                      className="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#242a36] rounded-xl transition-colors flex items-start gap-3"
-                    >
-                      <span className="min-w-0 flex-1">
-                        <span className="block text-sm font-semibold text-slate-800 dark:text-[#F4F7FB]">{item.title}</span>
-                        <span className={`mt-0.5 text-xs text-slate-500 dark:text-[#A9B8CA] line-clamp-2 ${item.category === 'colleges' ? 'hidden sm:block' : 'block'}`}>{item.subtitle || item.badgeCategory}</span>
-                      </span>
-                      <span className="shrink-0 text-[10px] font-bold uppercase tracking-wide text-slate-400">{item.badgeCategory}</span>
-                    </button>
-                  )) : (
-                    <div className="px-4 py-3 text-sm text-slate-500 dark:text-[#A9B8CA]">No matching results yet</div>
-                  )}
->>>>>>> 40b9b86fac5dd2c944a16a9246d560ff8a5f32c4
                 </div>
               </div>
             )}
@@ -610,12 +492,8 @@ export const SearchResultsScreen: React.FC<SearchResultsScreenProps> = ({
                   { id: 'careers', label: 'Careers' },
                   { id: 'classes', label: 'Classes' },
                   { id: 'cutoffs', label: 'Cutoffs' },
-<<<<<<< HEAD
                   { id: 'pdf', label: 'PDF Resources' },
-=======
-                  { id: 'pdfs', label: 'Paid PDFs' },
                   { id: 'connect', label: 'Connect' },
->>>>>>> 40b9b86fac5dd2c944a16a9246d560ff8a5f32c4
                 ].map((tab) => (
                   <button
                     key={tab.id}
