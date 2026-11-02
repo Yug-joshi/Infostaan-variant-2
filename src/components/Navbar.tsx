@@ -24,9 +24,9 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header className="fixed top-0 left-0 right-0 w-full z-[100] bg-white/80 dark:bg-[#0B111E]/80 backdrop-blur-xl border-b border-slate-200/80 dark:border-white/10 transition-colors duration-200">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <div className="w-full max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3 sm:gap-5">
         {/* Left: Brand Identity & Mobile Hamburger Button */}
-        <div className="flex-1 flex items-center justify-start gap-3">
+        <div className="flex items-center justify-start gap-3 shrink-0 min-w-[150px]">
           {/* Mobile Sidebar Hamburger Trigger */}
           <button
             type="button"
@@ -55,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         {/* Desktop Navigation Tabs (Hidden on mobile) */}
-        <nav className="hidden md:flex items-center gap-2 lg:gap-6 text-sm font-medium text-slate-600 dark:text-[#A9B8CA]">
+        <nav className="hidden md:flex flex-1 items-center justify-center gap-2 lg:gap-6 text-sm font-medium text-slate-600 dark:text-[#A9B8CA] min-w-0 px-2">
           <Link
             to="/"
             className={`transition-colors hover:text-slate-900 dark:hover:text-[#F4F7FB] ${
@@ -117,7 +117,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </nav>
 
         {/* Right Actions: Cart, Theme, Sign In */}
-        <div className="flex-1 flex items-center justify-end gap-2.5 sm:gap-4">
+        <div className="flex items-center justify-end gap-2.5 sm:gap-4 shrink-0 min-w-[160px]">
           {/* Cart Button */}
           <Link
             to="/cart"
