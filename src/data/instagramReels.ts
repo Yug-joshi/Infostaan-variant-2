@@ -23,7 +23,7 @@ export const INSTAGRAM_REELS: ReelItem[] = [
     id: 'fyjc-reality-check',
     title: 'FYJC Reality Check: FYJC is not just a waiting room',
     tag: 'FYJC Admissions',
-    coverImage: '/reels/reel_DecGRhYTXih.jpg',
+    coverImage: '/reels/reel1_thumb.jpg',
     videoUrl: '/reels/reel_DecGRhYTXih.mp4',
     durationText: '0:52',
     views: '18.2K',
