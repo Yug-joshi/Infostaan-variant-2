@@ -8,7 +8,6 @@ import {
   VolumeX,
   RotateCcw,
   Sparkles,
-  Eye,
   Youtube,
   ExternalLink,
 } from 'lucide-react';
@@ -289,20 +288,14 @@ export const InstagramReelCarousel: React.FC = () => {
                     {/* Gradient Vignette Overlays for Text Legibility */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/40 pointer-events-none" />
 
-                    {/* Top Bar: Author & Duration */}
-                    <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between text-white z-10 pointer-events-none">
+                    {/* Top Bar: Author */}
+                    <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-start text-white z-10 pointer-events-none">
                       <div className="flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
                         <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
                         <span className="text-[11px] font-bold tracking-tight">
                           {reel.author.name}
                         </span>
                       </div>
-
-                      {reel.durationText && (
-                        <span className="text-[10px] font-semibold bg-black/40 backdrop-blur-md px-2 py-0.5 rounded-full border border-white/10">
-                          {reel.durationText}
-                        </span>
-                      )}
                     </div>
 
                     {/* Center Play/Pause Flash Overlay */}
@@ -324,30 +317,10 @@ export const InstagramReelCarousel: React.FC = () => {
                       </div>
                     )}
 
-                    {/* Bottom Content Area */}
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white z-10 flex flex-col gap-2.5">
-                      {/* Tag & Views */}
-                      <div className="flex items-center gap-2 text-[10px] text-amber-300 font-bold uppercase tracking-wider">
-                        <span>{reel.tag}</span>
-                        {reel.views && (
-                          <>
-                            <span className="w-1 h-1 rounded-full bg-white/40" />
-                            <span className="flex items-center gap-1 text-slate-300 normal-case font-medium">
-                              <Eye className="w-3 h-3" />
-                              {reel.views}
-                            </span>
-                          </>
-                        )}
-                      </div>
-
-                      {/* Reel Title / Caption */}
-                      <p className="text-xs sm:text-sm font-bold line-clamp-2 leading-snug drop-shadow-sm text-left">
-                        {reel.title}
-                      </p>
-
-                      {/* Native Player Controls Bar (No external links) */}
+                    {/* Bottom Controls */}
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white z-10">
                       {isActive && (
-                        <div className="pt-1 flex items-center justify-between gap-2">
+                        <div className="flex items-center justify-between gap-2">
                           <button
                             type="button"
                             onClick={(e) => {
