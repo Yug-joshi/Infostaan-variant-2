@@ -1,8 +1,10 @@
+import 'dotenv/config';
 import express, { Request, Response, NextFunction } from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import adminRoutes from './routes/adminRoutes.js';
 import publicRoutes from './routes/publicRoutes.js';
+import paymentRoutes from './routes/paymentRoutes.js';
 import { serveCoverImageHandler } from './controllers/publicPdfController.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -47,6 +49,9 @@ app.use('/api/pdfs', publicRoutes);
 
 // Protected Admin PDF upload and management endpoints
 app.use('/api/admin/pdfs', adminRoutes);
+
+// Razorpay order creation, verification, and time-limited PDF downloads
+app.use('/api/payments', paymentRoutes);
 
 // 404 handler for undefined API routes
 app.use('/api/*', (_req: Request, res: Response) => {
