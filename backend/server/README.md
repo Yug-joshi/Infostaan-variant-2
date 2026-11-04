@@ -1,14 +1,6 @@
 # Backend Deployment
 
-## Render
-
-Deploy this repository as a Render Blueprint using the root [`render.yaml`](../../render.yaml). It configures the backend root directory, `npm install` build command, `npm start` start command, `/api/health` health check, and a persistent disk mounted at `/data`. Render disks require a paid service plan.
-
-Add backend secrets in the Render service's Environment settings; never put them in the Blueprint or frontend variables. Set `RAZORPAY_KEY_ID` and `RAZORPAY_KEY_SECRET` for payments, `ADMIN_API_KEY` for admin operations, and the Google Sheets variables documented below to enable course inquiries.
-
-## Railway
-
-For Railway, set the service root directory to `backend` and the start command to `npm start`. Keep backend secrets in Railway Variables.
+Deploy this service to Railway with the service root directory set to `backend` and the start command set to `npm start`. Keep backend secrets in Railway Variables.
 
 Attach a persistent volume mounted at `/data`, then set `PDF_STORAGE_DIR=/data/storage` and `PDF_CATALOG_PATH=/data/pdfs.json`. The catalog is initialized from the bundled `server/data/pdfs.json` on first startup. These paths preserve uploaded PDFs, covers, and catalog edits across redeploys.
 
