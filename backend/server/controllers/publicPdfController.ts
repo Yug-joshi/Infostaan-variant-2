@@ -3,10 +3,10 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { PDFRepository } from '../data/pdfRepository.js';
+import { COVERS_DIR } from '../storage/paths.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const COVERS_DIR = path.resolve(__dirname, '../storage/covers');
 
 export const getPublicPdfsHandler = (req: Request, res: Response): void => {
   const { category, search, sort } = req.query;

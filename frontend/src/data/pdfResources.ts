@@ -1,4 +1,5 @@
 import { PDFResource, PurchasedPdfItem } from '../types';
+import { apiUrl } from '../lib/api';
 
 export const PDF_CATEGORIES = [
   'All',
@@ -277,7 +278,7 @@ export const INITIAL_PURCHASES: PurchasedPdfItem[] = [
 
 export async function fetchPDFResources(): Promise<PDFResource[]> {
   try {
-    const res = await fetch('/api/pdfs');
+    const res = await fetch(apiUrl('/api/pdfs'));
     if (res.ok) {
       const data = await res.json();
       if (data && Array.isArray(data.pdfs) && data.pdfs.length > 0) {
@@ -292,7 +293,7 @@ export async function fetchPDFResources(): Promise<PDFResource[]> {
 
 export async function fetchPDFBySlug(slug: string): Promise<PDFResource | null> {
   try {
-    const res = await fetch(`/api/pdfs/${encodeURIComponent(slug)}`);
+    const res = await fetch(apiUrl(`/api/pdfs/${encodeURIComponent(slug)}`));
     if (res.ok) {
       const data = await res.json();
       if (data && data.pdf) {

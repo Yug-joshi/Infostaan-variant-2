@@ -47,7 +47,7 @@ def generate_audit_report():
     print(f"  Total Inspected Pages for Mumbai Division: {mumbai_pages}")
 
     # 2. Cutoff Dataset Audit (FYJC_CUTOFFS)
-    with open('src/data/fyjcCutoffs.ts', 'r', encoding='utf-8') as f:
+    with open('frontend/src/data/fyjcCutoffs.ts', 'r', encoding='utf-8') as f:
         ts_content = f.read()
 
     pattern = re.compile(

@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: infostaan-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PDF_STORAGE_DIR
+        value: /data/storage
+      - key: PDF_CATALOG_PATH
+        value: /data/pdfs.json
+    disk:
+      name: infostaan-backend-data
+      mountPath: /data
+      sizeGB: 1

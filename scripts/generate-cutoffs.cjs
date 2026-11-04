@@ -9,7 +9,7 @@ const files = [
 ];
 
 const V2_DIR = 'd:/Projects/Infostaan/V2';
-const OUTPUT_FILE = 'd:/Projects/Infostaan/V2/Infostaan-variant-2/src/data/fyjcCutoffs.ts';
+const OUTPUT_FILE = path.join(__dirname, '../frontend/src/data/fyjcCutoffs.ts');
 
 const categories = [
   { raw: 'SC', pct: 'SC %', label: 'SC' },

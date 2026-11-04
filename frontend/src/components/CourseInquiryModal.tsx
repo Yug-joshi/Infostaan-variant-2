@@ -1,6 +1,7 @@
 import React, { FormEvent, useState } from 'react';
 import { CheckCircle2, X } from 'lucide-react';
 import { ProfessionalCourseBrochure } from '../data/professionalCourseBrochures';
+import { apiUrl } from '../lib/api';
 
 interface CourseInquiryModalProps {
   course: ProfessionalCourseBrochure;
@@ -8,8 +9,6 @@ interface CourseInquiryModalProps {
 }
 
 type SubmissionState = 'idle' | 'submitting' | 'success' | 'error';
-
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '');
 
 export const CourseInquiryModal: React.FC<CourseInquiryModalProps> = ({ course, onClose }) => {
   const [submissionState, setSubmissionState] = useState<SubmissionState>('idle');
@@ -22,7 +21,7 @@ export const CourseInquiryModal: React.FC<CourseInquiryModalProps> = ({ course, 
 
     const formData = new FormData(event.currentTarget);
     try {
-      const response = await fetch(`${API_BASE_URL}/api/inquiries/courses`, {
+      const response = await fetch(apiUrl('/api/inquiries/courses'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowLeft, Lock, ShoppingCart, ShieldCheck, Download } from 'lucide-react';
 import QRCode from 'qrcode';
+import { apiUrl } from '../../lib/api';
 import { useCart } from '../../context/CartContext';
 
 interface RazorpayCheckoutResult {
@@ -120,7 +121,7 @@ export const CheckoutScreen: React.FC<CheckoutScreenProps> = ({ onNavigate, onTo
 
   useEffect(() => {
     let active = true;
-    fetch('/api/payments/config')
+    fetch(apiUrl('/api/payments/config'))
       .then(async (response) => {
         const data = await response.json() as PaymentConfigResponse & { message?: string };
         if (!response.ok) throw new Error(data.message || 'Could not load payment settings.');
@@ -152,7 +153,7 @@ export const CheckoutScreen: React.FC<CheckoutScreenProps> = ({ onNavigate, onTo
     let active = true;
     const checkStatus = async () => {
       try {
-        const response = await fetch(`/api/payments/integration-test/qr/${encodeURIComponent(testQr.qrId)}/status`);
+        const response = await fetch(apiUrl(`/api/payments/integration-test/qr/${encodeURIComponent(testQr.qrId)}/status`));
         const result = await response.json() as { paid?: boolean; message?: string };
         if (!response.ok) throw new Error(result.message || 'Could not check QR payment status.');
         if (active && result.paid) {
@@ -184,7 +185,7 @@ export const CheckoutScreen: React.FC<CheckoutScreenProps> = ({ onNavigate, onTo
     setPaymentError(null);
     try {
       await loadRazorpay();
-      const order = await postJson<PaymentOrderResponse>('/api/payments/orders', {
+      const order = await postJson<PaymentOrderResponse>(apiUrl('/api/payments/orders'), {
         pdfIds: cartItems.map((item) => item.pdf.id),
       });
 
@@ -207,7 +208,7 @@ export const CheckoutScreen: React.FC<CheckoutScreenProps> = ({ onNavigate, onTo
         handler: async (result) => {
           try {
             const verification = await postJson<{ verified: boolean; downloads: DownloadItem[] }>(
-              '/api/payments/verify',
+              apiUrl('/api/payments/verify'),
               {
                 orderId: result.razorpay_order_id,
                 paymentId: result.razorpay_payment_id,
@@ -250,7 +251,7 @@ export const CheckoutScreen: React.FC<CheckoutScreenProps> = ({ onNavigate, onTo
     setPaymentError(null);
     try {
       await loadRazorpay();
-      const order = await postJson<PaymentOrderResponse>('/api/payments/integration-test/orders', {});
+      const order = await postJson<PaymentOrderResponse>(apiUrl('/api/payments/integration-test/orders'), {});
       const Razorpay = window.Razorpay;
       if (!Razorpay) throw new Error('Razorpay Checkout did not initialize.');
       const checkout = new Razorpay({
@@ -272,7 +273,7 @@ export const CheckoutScreen: React.FC<CheckoutScreenProps> = ({ onNavigate, onTo
               verified: boolean;
               testPayment?: boolean;
               message?: string;
-            }>('/api/payments/verify', {
+            }>(apiUrl('/api/payments/verify'), {
               orderId: result.razorpay_order_id,
               paymentId: result.razorpay_payment_id,
               signature: result.razorpay_signature,
@@ -308,7 +309,7 @@ export const CheckoutScreen: React.FC<CheckoutScreenProps> = ({ onNavigate, onTo
     setPaymentError(null);
     setIntegrationTestPaid(false);
     try {
-      const qr = await postJson<IntegrationTestQrResponse>('/api/payments/integration-test/qr', {});
+      const qr = await postJson<IntegrationTestQrResponse>(apiUrl('/api/payments/integration-test/qr'), {});
       const qrImage = await QRCode.toDataURL(qr.imageUrl, { width: 280, margin: 2 });
       setTestQr(qr);
       setTestQrImage(qrImage);

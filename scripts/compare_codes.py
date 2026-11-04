@@ -1,6 +1,6 @@
 import pypdf, re, json
 
-with open('src/data/fyjcCutoffs.ts', 'r', encoding='utf-8') as f:
+with open('frontend/src/data/fyjcCutoffs.ts', 'r', encoding='utf-8') as f:
     text = f.read()
 
 pattern = re.compile(r'"choiceCode":\s*"([^"]+)"')

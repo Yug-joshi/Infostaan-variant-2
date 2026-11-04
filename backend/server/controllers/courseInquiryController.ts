@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { PROFESSIONAL_COURSE_BROCHURES } from '../../src/data/professionalCourseBrochures.js';
+import { PROFESSIONAL_COURSE_BROCHURES } from '../data/courseCatalog.js';
 import { appendGoogleSheetRow, GoogleSheetsConfigurationError } from '../services/googleSheets.js';
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

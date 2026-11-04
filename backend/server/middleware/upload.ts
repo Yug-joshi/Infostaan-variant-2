@@ -4,12 +4,11 @@ import fs from 'fs';
 import crypto from 'crypto';
 import { Request } from 'express';
 import { fileURLToPath } from 'url';
+import { COVERS_DIR, PRIVATE_PDF_DIR } from '../storage/paths.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const PRIVATE_PDF_DIR = path.resolve(__dirname, '../storage/private_pdfs');
-const COVERS_DIR = path.resolve(__dirname, '../storage/covers');
 
 // Ensure storage directories exist with restricted access
 [PRIVATE_PDF_DIR, COVERS_DIR].forEach((dir) => {

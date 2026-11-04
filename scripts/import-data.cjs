@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const xlsx = require('xlsx');
 
-const DATA_DIR = path.join(__dirname, '../src/data');
+const DATA_DIR = path.join(__dirname, '../frontend/src/data');
 const PUBLIC_PDF_DIR = path.join(__dirname, '../public/pdfs');
 const V2_DIR = 'd:/Projects/Infostaan/V2';
 

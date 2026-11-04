@@ -148,7 +148,7 @@ def resolve_item_region(item):
                 
     return None
 
-with open('src/data/mockData.ts', 'r', encoding='utf-8') as f:
+with open('frontend/src/data/mockData.ts', 'r', encoding='utf-8') as f:
     text = f.read()
 
 college_blocks = re.findall(r'\{\s*id:\s*\'([^\']+)\',\s*category:\s*\'colleges\'(.*?)\n  \},', text, re.DOTALL)

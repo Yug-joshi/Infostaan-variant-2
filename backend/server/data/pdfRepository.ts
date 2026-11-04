@@ -5,7 +5,8 @@ import { PDFMetadata, PublicPDFMetadata } from '../types.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const DATA_FILE_PATH = path.resolve(__dirname, 'pdfs.json');
+const DEFAULT_DATA_FILE_PATH = path.resolve(__dirname, 'pdfs.json');
+const DATA_FILE_PATH = process.env.PDF_CATALOG_PATH || DEFAULT_DATA_FILE_PATH;
 
 export class PDFRepository {
   private static ensureDataFile(): void {
@@ -14,7 +15,11 @@ export class PDFRepository {
       fs.mkdirSync(dir, { recursive: true });
     }
     if (!fs.existsSync(DATA_FILE_PATH)) {
-      fs.writeFileSync(DATA_FILE_PATH, JSON.stringify([], null, 2), 'utf-8');
+      if (DATA_FILE_PATH !== DEFAULT_DATA_FILE_PATH && fs.existsSync(DEFAULT_DATA_FILE_PATH)) {
+        fs.copyFileSync(DEFAULT_DATA_FILE_PATH, DATA_FILE_PATH);
+      } else {
+        fs.writeFileSync(DATA_FILE_PATH, JSON.stringify([], null, 2), 'utf-8');
+      }
     }
   }
 

@@ -5,6 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { PDFRepository } from '../data/pdfRepository.js';
 import { PDFMetadata } from '../types.js';
+import { PRIVATE_PDF_DIR } from '../storage/paths.js';
 import {
   createDownloadToken,
   createRazorpayOrder,
@@ -20,7 +21,6 @@ import {
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const PRIVATE_PDF_DIR = path.resolve(__dirname, '../storage/private_pdfs');
 const DOWNLOAD_TOKEN_TTL_SECONDS = 900;
 const INTEGRATION_TEST_PRICE_PAISE = 100;
 const INTEGRATION_TEST_QR_TTL_SECONDS = 20 * 60;
