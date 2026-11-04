@@ -230,36 +230,6 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
         <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-yellow-100/25 dark:bg-yellow-400/5 blur-[120px] dark:blur-[150px]" />
       </div>
 
-      {/* Desktop-only static mascot & floating decorations */}
-      <div
-        ref={decorationsRef}
-        className="pointer-events-none absolute top-0 left-0 right-0 h-[100vh] z-0 hidden lg:block overflow-hidden"
-        aria-hidden="true"
-      >
-        {/* Top Left: Mascot (Stationary, larger prominent size) */}
-        <div className="absolute top-[8%] lg:top-[10%] left-[2%] xl:left-[4%] w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-80 xl:h-80 pointer-events-auto cursor-default transition-all duration-300">
-          <MascotArt variant="welcome" className="w-full h-full object-contain opacity-100 dark:opacity-95 drop-shadow-sm" alt="InfoBuddy mascot greeting students on the homepage" />
-        </div>
-
-        {/* Bottom Left: Books (Hidden for now - do not delete) */}
-        {/*
-        <div className="parallax-layer absolute top-[60%] left-[3%] xl:left-[6%] w-36 h-36 md:w-48 md:h-48" data-depth="0.9">
-          <div className="float-layer w-full h-full pointer-events-auto cursor-default">
-            <img src={booksImg} alt="" className="w-full h-full object-contain opacity-80 dark:opacity-60 rotate-12" />
-          </div>
-        </div>
-        */}
-
-        {/* Middle/Bottom Right: Grad Cap (Hidden for now - do not delete) */}
-        {/*
-        <div className="parallax-layer absolute top-[40%] right-[2%] xl:right-[5%] w-40 h-40 md:w-56 md:h-56" data-depth="-0.5">
-          <div className="float-layer w-full h-full pointer-events-auto cursor-default">
-            <img src={gradCapImg} alt="" className="w-full h-full object-contain opacity-80 dark:opacity-60 rotate-6" />
-          </div>
-        </div>
-        */}
-      </div>
-
       {/* Mobile-only minimal marks */}
       <div
         className="pointer-events-none absolute top-0 left-0 right-0 h-[100vh] z-0 block lg:hidden"
