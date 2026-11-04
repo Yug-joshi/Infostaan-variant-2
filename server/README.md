@@ -33,3 +33,19 @@ The checkout page creates the order and opens Razorpay Checkout. After checkout 
 ```
 
 The API verifies the signature and confirms the captured payment with Razorpay before returning download URLs. Each URL is valid for 15 minutes. No order or purchase history is stored; the download token is self-contained and signed using the Razorpay secret.
+
+## Professional course inquiries
+
+The Courses page shows short cards for the seven collaboration courses. Students can request more information through the site form; the original brochure PDFs are stored outside the public web directory and are not linked for direct download.
+
+`POST /api/inquiries/courses` validates the student details and appends the inquiry to Google Sheets. The server sets the course ID/name, `Infostaan website` referral source, and collaboration campaign itself, so those attribution values cannot be supplied or changed by the browser. The form collects name, email, phone, current class/qualification, selected course, and consent to share contact details with the course partner. Automatic student/partner emails are not configured in this version.
+
+Configure these server environment variables:
+
+- `GOOGLE_SHEETS_SPREADSHEET_ID`: the ID from the Google Sheet URL.
+- `GOOGLE_SHEETS_RANGE`: append range, default `Inquiries!A:I`.
+- `GOOGLE_SERVICE_ACCOUNT_EMAIL` and `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY`: credentials for a Google Cloud service account with the Sheets API enabled.
+
+Share the destination spreadsheet with the service-account email as an **Editor** so the backend can append rows. The course partner can separately be given **Viewer** access. Create a tab named `Inquiries` and add these headers in row 1, in order: `Timestamp`, `Name`, `Email`, `Phone`, `Current class/qualification`, `Course ID`, `Course`, `Referral source`, `Campaign`. Keep the private key only in the backend host’s secret/environment settings.
+
+If the frontend and backend are hosted on different domains, set the frontend build variable `VITE_API_BASE_URL` to the backend origin (for example, `https://api.example.com`). Leave it blank for local development with the Vite `/api` proxy. Configure the backend environment on Render/Railway; frontend `VITE_` variables are public and must never contain service-account credentials.

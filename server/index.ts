@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import adminRoutes from './routes/adminRoutes.js';
 import publicRoutes from './routes/publicRoutes.js';
 import paymentRoutes from './routes/paymentRoutes.js';
+import inquiryRoutes from './routes/inquiryRoutes.js';
 import { serveCoverImageHandler } from './controllers/publicPdfController.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -52,6 +53,9 @@ app.use('/api/admin/pdfs', adminRoutes);
 
 // Razorpay order creation, verification, and time-limited PDF downloads
 app.use('/api/payments', paymentRoutes);
+
+// Public course inquiries are validated and appended to the configured Google Sheet.
+app.use('/api/inquiries', inquiryRoutes);
 
 // 404 handler for undefined API routes
 app.use('/api/*', (_req: Request, res: Response) => {

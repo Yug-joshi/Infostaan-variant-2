@@ -16,7 +16,7 @@ import {
   Award,
   CheckCircle,
   Info,
-  Search
+  Search,
 } from 'lucide-react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { SearchResultItem } from '../types';
@@ -25,6 +25,9 @@ import { matchItemRegion, applyStreamFilter, applyLevelFilter, filterClasses, pa
 import { FilterCategoryType } from './CategoryFilterModal';
 import { getCategoryAccent } from '../lib/categoryAccents';
 import { ResultFilterDrawer } from './ResultFilterDrawer';
+import { CourseInquiryModal } from './CourseInquiryModal';
+import { CoursePreviewModal } from './CoursePreviewModal';
+import { PROFESSIONAL_COURSE_BROCHURES, ProfessionalCourseBrochure } from '../data/professionalCourseBrochures';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
@@ -109,6 +112,8 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
   const navigate = useNavigate();
   const containerRef = useRef<HTMLDivElement>(null);
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
+  const [selectedProfessionalCourse, setSelectedProfessionalCourse] = useState<ProfessionalCourseBrochure | null>(null);
+  const [previewProfessionalCourse, setPreviewProfessionalCourse] = useState<ProfessionalCourseBrochure | null>(null);
 
   const config = PAGE_CONFIG[category];
   const IconComp = config.icon;
@@ -491,6 +496,53 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
 
           {/* Results Container */}
           <div className="flex-1 w-full min-w-0">
+            {category === 'courses' && (
+              <section className="mb-8">
+                <div className="mb-5">
+                  <h2 className="text-xl font-extrabold text-slate-900 dark:text-[#F4F7FB] sm:text-2xl">
+                    Professional Courses
+                  </h2>
+                </div>
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                  {PROFESSIONAL_COURSE_BROCHURES.map((course) => (
+                    <article
+                      key={course.id}
+                      className="flex min-w-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-white/10 dark:bg-[#0D1828]"
+                    >
+                      <div className="flex h-24 items-center justify-center border-b border-slate-200 bg-white px-4 dark:border-white/10">
+                        <img
+                          src="/Courses-Colab/Pinkal%20x%20Fpa.png"
+                          alt="FPA Edutech in collaboration with Pinkal’s Commerce Classes"
+                          className="h-full w-full object-contain"
+                        />
+                      </div>
+                      <div className="flex flex-1 flex-col p-4">
+                        <h3 className="mb-4 break-words text-sm font-bold text-slate-900 dark:text-[#F4F7FB]">
+                          {course.title}
+                        </h3>
+                        <div className="mt-auto grid grid-cols-1 gap-2">
+                          <button
+                            type="button"
+                            onClick={() => setPreviewProfessionalCourse(course)}
+                            className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-[#007DCC]/40 px-4 py-2.5 text-xs font-bold text-[#007DCC] transition hover:bg-[#007DCC]/5 dark:text-[#86cfff]"
+                          >
+                            Preview course
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setSelectedProfessionalCourse(course)}
+                            className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl bg-[#007DCC] px-4 py-2.5 text-xs font-bold text-white transition hover:bg-[#006BB0]"
+                          >
+                            Request details
+                            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            )}
             {results.length === 0 ? (
               /* No matching results after filtering */
               <div className="w-full py-12 sm:py-16 text-center max-w-md mx-auto">
@@ -812,6 +864,19 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
           </div>
         </div>
       </div>
+
+      {selectedProfessionalCourse && (
+        <CourseInquiryModal
+          course={selectedProfessionalCourse}
+          onClose={() => setSelectedProfessionalCourse(null)}
+        />
+      )}
+      {previewProfessionalCourse && (
+        <CoursePreviewModal
+          course={previewProfessionalCourse}
+          onClose={() => setPreviewProfessionalCourse(null)}
+        />
+      )}
 
       {/* Result Page Filter Drawer Shell */}
       <ResultFilterDrawer
