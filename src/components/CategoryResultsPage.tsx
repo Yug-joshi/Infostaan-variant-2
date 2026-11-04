@@ -509,11 +509,11 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                       key={course.id}
                       className="flex min-w-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-white/10 dark:bg-[#0D1828]"
                     >
-                      <div className="flex h-36 items-center justify-center overflow-hidden border-b border-slate-200 bg-white dark:border-white/10">
+                      <div className="flex w-full justify-center border-b border-slate-200 bg-white px-3 py-3 dark:border-white/10">
                         <img
-                          src="/Courses-Colab/Pinkal%20x%20Fpa.png"
+                          src="/Courses-Colab/Pinkal-x-FPA-banner.png"
                           alt="FPA Edutech in collaboration with Pinkal’s Commerce Classes"
-                          className="h-full w-full object-cover"
+                          className="block h-auto w-full rounded-xl"
                         />
                       </div>
                       <div className="flex flex-1 flex-col p-4">
