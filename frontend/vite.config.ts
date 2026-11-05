@@ -5,7 +5,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    envDir: '..',
+    // Load frontend/.env (including the public Render API URL) for local and manual builds.
+    envDir: __dirname,
     plugins: [react(), tailwindcss()],
     build: {
       outDir: '../dist',
