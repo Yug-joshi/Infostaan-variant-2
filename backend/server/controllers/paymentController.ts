@@ -56,7 +56,8 @@ export const getPaymentConfigHandler = (_req: Request, res: Response): void => {
     const fixedPdfPricePaise = getFixedPdfPricePaise();
     res.json({
       fixedPdfPrice: fixedPdfPricePaise === null ? null : fixedPdfPricePaise / 100,
-      integrationTestEnabled: process.env.RAZORPAY_ENABLE_TEST_PAYMENT === 'true',
+      // TEMP: Always show the standalone ₹1 payment until PDFs are uploaded and verified.
+      integrationTestEnabled: true,
       integrationTestPrice: INTEGRATION_TEST_PRICE_PAISE / 100,
       currency: 'INR',
     });
@@ -70,7 +71,8 @@ export const getPaymentConfigHandler = (_req: Request, res: Response): void => {
 };
 
 function isIntegrationTestEnabled(): boolean {
-  return process.env.RAZORPAY_ENABLE_TEST_PAYMENT === 'true';
+  // TEMP: Keep the no-PDF ₹1 test flow available regardless of Render env configuration.
+  return true;
 }
 
 function requireIntegrationTestEnabled(res: Response): boolean {
