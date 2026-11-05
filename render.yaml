@@ -13,6 +13,8 @@ services:
         value: /data/storage
       - key: PDF_CATALOG_PATH
         value: /data/pdfs.json
+      - key: RAZORPAY_ENABLE_TEST_PAYMENT
+        value: "true"
     disk:
       name: infostaan-backend-data
       mountPath: /data
