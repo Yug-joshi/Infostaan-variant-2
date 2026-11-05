@@ -112,6 +112,15 @@ export const PdfListingScreen: React.FC<PdfListingScreenProps> = ({
           </div>
         </div>
 
+        <div
+          role="status"
+          className="flex items-center gap-3 rounded-xl border border-amber-300/70 dark:border-amber-500/30 bg-amber-50 dark:bg-amber-500/10 px-4 py-3 text-sm text-amber-900 dark:text-amber-200"
+        >
+          <span className="shrink-0 rounded-md bg-amber-200/70 dark:bg-amber-400/20 px-2 py-1 text-[10px] font-extrabold uppercase tracking-wide text-amber-800 dark:text-amber-200">
+            Coming soon
+          </span>
+        </div>
+
         {/* Filter and Search Bar Controls */}
         <div className="space-y-3">
           <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3">
