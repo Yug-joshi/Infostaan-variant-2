@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { ScreenType, ShortlistItem } from './types';
 import { INITIAL_SAVED_ITEMS } from './data/mockData';
@@ -19,6 +19,7 @@ import { CutoffModal } from './components/CutoffModal';
 import { ClassesModal } from './components/ClassesModal';
 import { CategoryFilterModal, FilterCategoryType } from './components/CategoryFilterModal';
 import { MobileSidebar } from './components/MobileSidebar';
+import { TimetableSidebar } from './components/TimetableSidebar';
 import { PencilLoader } from './components/PencilLoader';
 import { Check } from 'lucide-react';
 import logoImg from './assets/logo.png';
@@ -31,6 +32,9 @@ import { PdfDetailScreen } from './components/pdf/PdfDetailScreen';
 import { CartScreen } from './components/cart/CartScreen';
 import { CheckoutScreen } from './components/checkout/CheckoutScreen';
 import { MyPurchasesScreen } from './components/purchases/MyPurchasesScreen';
+
+const TIMETABLE_DISMISSED_KEY = 'infostaan_timetable_notice_dismissed_v2';
+
 export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -70,6 +74,14 @@ export default function App() {
   const [isCategoryFilterOpen, setIsCategoryFilterOpen] = useState<boolean>(false);
   const [activeCategoryFilter, setActiveCategoryFilter] = useState<FilterCategoryType>('colleges');
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState<boolean>(false);
+  const [timetableView, setTimetableView] = useState<'popup' | 'sidebar' | null>(() => {
+    try {
+      return localStorage.getItem(TIMETABLE_DISMISSED_KEY) === 'true' ? null : 'popup';
+    } catch (error) {
+      console.error('Failed to read timetable notice state from localStorage', error);
+      return 'popup';
+    }
+  });
   const [toastState, setToastState] = useState<{ message: string; kind: 'success' | 'info' } | null>(null);
   const [isBooting, setIsBooting] = useState<boolean>(true);
 
@@ -77,6 +89,15 @@ export default function App() {
     setActiveCategoryFilter(cat);
     setIsCategoryFilterOpen(true);
   };
+
+  const handleCloseTimetableSidebar = useCallback(() => {
+    setTimetableView(null);
+    try {
+      localStorage.setItem(TIMETABLE_DISMISSED_KEY, 'true');
+    } catch (error) {
+      console.error('Failed to save timetable notice state to localStorage', error);
+    }
+  }, []);
 
   const handleApplyCategoryFilters = (cat: FilterCategoryType, filters: Record<string, string>) => {
     setIsCategoryFilterOpen(false);
@@ -363,6 +384,7 @@ export default function App() {
         savedCount={savedItems.length}
         onOpenSignIn={() => setIsSignInOpen(true)}
         onOpenMobileSidebar={() => setIsMobileSidebarOpen(true)}
+        onOpenTimetableSidebar={() => setTimetableView('sidebar')}
       />
 
       {/* Screen Views */}
@@ -552,6 +574,12 @@ export default function App() {
         onOpenCategoryFilter={handleOpenCategoryFilter}
         onOpenClasses={() => setIsClassesOpen(true)}
         onOpenCutoff={() => setIsCutoffOpen(true)}
+      />
+
+      <TimetableSidebar
+        isOpen={timetableView !== null}
+        presentation={timetableView ?? 'sidebar'}
+        onClose={handleCloseTimetableSidebar}
       />
 
       {/* Side-by-Side Comparison Modal */}

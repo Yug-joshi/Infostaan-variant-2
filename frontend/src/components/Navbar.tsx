@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Bookmark, Search, Menu, Users, Sun, Moon, ShoppingCart } from 'lucide-react';
+import { User, Menu, Sun, Moon, ShoppingCart, Bell } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { useCart } from '../context/CartContext';
 import logoImg from '../assets/logo.png';
@@ -10,12 +10,14 @@ interface NavbarProps {
   savedCount: number;
   onOpenSignIn: () => void;
   onOpenMobileSidebar?: () => void;
+  onOpenTimetableSidebar: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   savedCount,
   onOpenSignIn,
   onOpenMobileSidebar,
+  onOpenTimetableSidebar,
 }) => {
   const { theme, toggleTheme } = useTheme();
   const { cartCount } = useCart();
@@ -116,8 +118,18 @@ export const Navbar: React.FC<NavbarProps> = ({
           </Link>
         </nav>
 
-        {/* Right Actions: Cart, Theme, Sign In */}
+        {/* Right Actions: Timetable Notifications, Cart, Theme, Sign In */}
         <div className="flex items-center justify-end gap-2.5 sm:gap-4 shrink-0 min-w-[160px]">
+          <button
+            type="button"
+            onClick={onOpenTimetableSidebar}
+            aria-label="Open exam timetable notifications"
+            title="Exam timetables"
+            className="p-2 text-slate-600 dark:text-[#A9B8CA] hover:text-slate-900 dark:hover:text-[#F4F7FB] transition-colors relative rounded-xl hover:bg-slate-100 dark:hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-slate-900/10 dark:focus:ring-amber-400/30"
+          >
+            <Bell className="w-5 h-5" />
+          </button>
+
           {/* Cart Button */}
           <Link
             to="/cart"
