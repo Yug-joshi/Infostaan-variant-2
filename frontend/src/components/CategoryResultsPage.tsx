@@ -25,7 +25,6 @@ import { matchItemRegion, applyStreamFilter, applyLevelFilter, filterClasses, pa
 import { FilterCategoryType } from './CategoryFilterModal';
 import { getCategoryAccent } from '../lib/categoryAccents';
 import { ResultFilterDrawer } from './ResultFilterDrawer';
-import { CourseInquiryModal } from './CourseInquiryModal';
 import { CoursePreviewModal } from './CoursePreviewModal';
 import { PROFESSIONAL_COURSE_BROCHURES, ProfessionalCourseBrochure } from '../data/professionalCourseBrochures';
 
@@ -112,7 +111,6 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
   const navigate = useNavigate();
   const containerRef = useRef<HTMLDivElement>(null);
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
-  const [selectedProfessionalCourse, setSelectedProfessionalCourse] = useState<ProfessionalCourseBrochure | null>(null);
   const [previewProfessionalCourse, setPreviewProfessionalCourse] = useState<ProfessionalCourseBrochure | null>(null);
 
   const config = PAGE_CONFIG[category];
@@ -528,14 +526,15 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
                           >
                             Preview course
                           </button>
-                          <button
-                            type="button"
-                            onClick={() => setSelectedProfessionalCourse(course)}
+                          <a
+                            href="https://forms.gle/A5v6z6VdDzKNjZxK8"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl bg-[#007DCC] px-4 py-2.5 text-xs font-bold text-white transition hover:bg-[#006BB0]"
                           >
                             Request details
                             <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                          </button>
+                          </a>
                         </div>
                       </div>
                     </article>
@@ -865,12 +864,6 @@ export const CategoryResultsPage: React.FC<CategoryResultsPageProps> = ({
         </div>
       </div>
 
-      {selectedProfessionalCourse && (
-        <CourseInquiryModal
-          course={selectedProfessionalCourse}
-          onClose={() => setSelectedProfessionalCourse(null)}
-        />
-      )}
       {previewProfessionalCourse && (
         <CoursePreviewModal
           course={previewProfessionalCourse}
