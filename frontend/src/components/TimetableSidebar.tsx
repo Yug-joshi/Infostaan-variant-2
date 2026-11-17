@@ -12,15 +12,24 @@ const timetables = [
   { label: 'HSC Science', image: hscScienceTimetable },
 ] as const;
 
+export type TimetableLabel = (typeof timetables)[number]['label'];
+
 interface TimetableSidebarProps {
   isOpen: boolean;
   presentation: 'popup' | 'sidebar';
+  initialTimetable: TimetableLabel;
   onClose: () => void;
 }
 
-export const TimetableSidebar: React.FC<TimetableSidebarProps> = ({ isOpen, presentation, onClose }) => {
+export const TimetableSidebar: React.FC<TimetableSidebarProps> = ({ isOpen, presentation, initialTimetable, onClose }) => {
   const [selectedTimetable, setSelectedTimetable] = useState<(typeof timetables)[number]>(timetables[0]);
   const isPopup = presentation === 'popup';
+
+  useEffect(() => {
+    if (isOpen) {
+      setSelectedTimetable(timetables.find((timetable) => timetable.label === initialTimetable) ?? timetables[0]);
+    }
+  }, [initialTimetable, isOpen]);
 
   useEffect(() => {
     if (!isOpen) return;

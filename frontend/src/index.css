@@ -42,6 +42,23 @@
   }
 }
 
+@keyframes latest-updates-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.latest-updates-track {
+  animation: latest-updates-marquee 24s linear infinite;
+}
+
+.latest-updates-paused {
+  animation-play-state: paused;
+}
+
 .marker-highlight {
   position: relative;
   display: inline-block;

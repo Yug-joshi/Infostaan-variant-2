@@ -23,6 +23,8 @@ import { ScrollStorySection } from './ScrollStorySection';
 import { ConnectCarousel } from './ConnectCarousel';
 import { InstagramReelCarousel } from './InstagramReelCarousel';
 import { MascotArt } from './MascotArt';
+import { LatestUpdatesCarousel } from './LatestUpdatesCarousel';
+import type { TimetableLabel } from './TimetableSidebar';
 
 import { FilterCategoryType } from './CategoryFilterModal';
 import { getCategoryAccent } from '../lib/categoryAccents';
@@ -38,6 +40,7 @@ interface HomeScreenProps {
   onOpenClasses: () => void;
   onOpenCategoryFilter: (category: FilterCategoryType) => void;
   onOpenSignIn: () => void;
+  onOpenTimetable: (label: TimetableLabel) => void;
 }
 
 export const HomeScreen: React.FC<HomeScreenProps> = ({
@@ -48,6 +51,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   onOpenClasses,
   onOpenCategoryFilter,
   onOpenSignIn,
+  onOpenTimetable,
 }) => {
   const [query, setQuery] = useState('');
   const [pdfResources, setPdfResources] = useState<PDFResource[]>(INITIAL_PDF_RESOURCES);
@@ -461,6 +465,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           />
         </div>
       </div>
+
+      <LatestUpdatesCarousel onOpenTimetable={onOpenTimetable} />
 
       {/* Infostaan Connect Carousel */}
       <div className="w-full my-6">

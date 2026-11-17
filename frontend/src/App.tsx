@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { ScreenType, ShortlistItem } from './types';
-import { INITIAL_SAVED_ITEMS } from './data/mockData';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HomeScreen } from './components/HomeScreen';
@@ -20,6 +19,7 @@ import { ClassesModal } from './components/ClassesModal';
 import { CategoryFilterModal, FilterCategoryType } from './components/CategoryFilterModal';
 import { MobileSidebar } from './components/MobileSidebar';
 import { TimetableSidebar } from './components/TimetableSidebar';
+import type { TimetableLabel } from './components/TimetableSidebar';
 import { PencilLoader } from './components/PencilLoader';
 import { Check } from 'lucide-react';
 import logoImg from './assets/logo.png';
@@ -42,23 +42,23 @@ export default function App() {
   const [savedItems, setSavedItems] = useState<ShortlistItem[]>(() => {
     if (typeof window !== 'undefined') {
       try {
-        const saved = localStorage.getItem('infostaan_saved_items');
+        const saved = sessionStorage.getItem('infostaan_saved_items');
         if (saved) {
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed)) return parsed;
         }
       } catch (e) {
-        console.error('Failed to parse saved items from localStorage', e);
+        console.error('Failed to parse saved items from sessionStorage', e);
       }
     }
-    return INITIAL_SAVED_ITEMS;
+    return [];
   });
 
   useEffect(() => {
     try {
-      localStorage.setItem('infostaan_saved_items', JSON.stringify(savedItems));
+      sessionStorage.setItem('infostaan_saved_items', JSON.stringify(savedItems));
     } catch (e) {
-      console.error('Failed to save items to localStorage', e);
+      console.error('Failed to save items to sessionStorage', e);
     }
   }, [savedItems]);
 
@@ -82,6 +82,7 @@ export default function App() {
       return 'popup';
     }
   });
+  const [selectedTimetable, setSelectedTimetable] = useState<TimetableLabel>('SSC');
   const [toastState, setToastState] = useState<{ message: string; kind: 'success' | 'info' } | null>(null);
   const [isBooting, setIsBooting] = useState<boolean>(true);
 
@@ -384,7 +385,10 @@ export default function App() {
         savedCount={savedItems.length}
         onOpenSignIn={() => setIsSignInOpen(true)}
         onOpenMobileSidebar={() => setIsMobileSidebarOpen(true)}
-        onOpenTimetableSidebar={() => setTimetableView('sidebar')}
+        onOpenTimetableSidebar={() => {
+          setSelectedTimetable('SSC');
+          setTimetableView('sidebar');
+        }}
       />
 
       {/* Screen Views */}
@@ -399,6 +403,10 @@ export default function App() {
               onOpenClasses={() => setIsClassesOpen(true)}
               onOpenCategoryFilter={handleOpenCategoryFilter}
               onOpenSignIn={() => setIsSignInOpen(true)}
+              onOpenTimetable={(label) => {
+                setSelectedTimetable(label);
+                setTimetableView('sidebar');
+              }}
             />
           } />
           <Route path="/class/:slug" element={<ClassDetailScreen />} />
@@ -579,6 +587,7 @@ export default function App() {
       <TimetableSidebar
         isOpen={timetableView !== null}
         presentation={timetableView ?? 'sidebar'}
+        initialTimetable={selectedTimetable}
         onClose={handleCloseTimetableSidebar}
       />
 

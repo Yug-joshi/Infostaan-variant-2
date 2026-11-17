@@ -1,34 +1,5 @@
-import { CareerGoal, CollegeDetail, ComparisonProfile, SearchResultItem, ShortlistItem } from '../types';
+import { CareerGoal, CollegeDetail, ComparisonProfile, SearchResultItem } from '../types';
 import { FYJC_CUTOFFS } from './fyjcCutoffs';
-
-export const INITIAL_SAVED_ITEMS: ShortlistItem[] = [
-  {
-    id: 'res-3',
-    category: 'college',
-    title: 'Mithibai College of Arts & Commerce',
-    regionBadge: 'Western Suburbs',
-    badgeType: 'COLLEGE',
-    locationInfo: 'Offered: B.Com, BMS, BAF, BFM • Approx. ₹32,000–₹55,000/yr',
-    timeSavedText: 'Saved 2 days ago',
-    lineText: 'Western Line',
-    iconType: 'school',
-    canCompare: true,
-    collegeId: 'mithibai',
-  },
-  {
-    id: 'res-2',
-    category: 'college',
-    title: 'H.R. College of Commerce & Economics',
-    regionBadge: 'South Mumbai',
-    badgeType: 'COLLEGE',
-    locationInfo: 'Offered: B.Com, BAF, BMS • Approx. ₹28,000–₹48,000/yr',
-    timeSavedText: 'Saved yesterday',
-    lineText: 'South Mumbai',
-    iconType: 'school',
-    canCompare: true,
-    collegeId: 'hr-college',
-  },
-];
 
 export const MITHIBAI_DETAILS: CollegeDetail = {
   id: 'mithibai',
