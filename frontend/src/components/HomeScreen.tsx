@@ -226,7 +226,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   };
 
   return (
-    <main className="relative w-full flex-1 pt-24 sm:pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0B111E] text-slate-900 dark:text-[#F8FAFC] transition-colors duration-200">
+    <main className="relative w-full flex-1 pt-20 pb-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0B111E] text-slate-900 dark:text-[#F8FAFC] transition-colors duration-200">
+      <LatestUpdatesCarousel onOpenTimetable={onOpenTimetable} />
 
       {/* Absolute Background Rule - Clean subtle background */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
@@ -465,8 +466,6 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           />
         </div>
       </div>
-
-      <LatestUpdatesCarousel onOpenTimetable={onOpenTimetable} />
 
       {/* Infostaan Connect Carousel */}
       <div className="w-full my-6">

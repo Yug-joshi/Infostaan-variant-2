@@ -1,6 +1,7 @@
 import os
 import sys
 import ftplib
+import time
 from pathlib import Path
 
 def get_env(key, default=None):
@@ -9,6 +10,26 @@ def get_env(key, default=None):
         print(f"Error: Missing required environment variable {key}", file=sys.stderr)
         sys.exit(1)
     return val
+
+def connect_ftp(host, port, attempts=3, timeout=60):
+    for attempt in range(1, attempts + 1):
+        ftp = ftplib.FTP()
+        try:
+            ftp.connect(host, port, timeout=timeout)
+            return ftp
+        except (OSError, EOFError) as e:
+            if attempt == attempts:
+                raise ConnectionError(
+                    f"Could not connect to FTP server {host}:{port} "
+                    f"after {attempts} attempts: {e}"
+                ) from e
+            delay = 5 * attempt
+            print(
+                f"FTP connection attempt {attempt}/{attempts} failed: {e}. "
+                f"Retrying in {delay} seconds...",
+                file=sys.stderr,
+            )
+            time.sleep(delay)
 
 def main():
     host = get_env('HOSTINGERFTPHOST')
@@ -22,8 +43,7 @@ def main():
         sys.exit(1)
 
     print(f"Connecting to FTP {host}:{port} as {user}...")
-    ftp = ftplib.FTP()
-    ftp.connect(host, port, timeout=60)
+    ftp = connect_ftp(host, port)
     ftp.login(user, passwd)
     print("FTP Login successful!")
 
