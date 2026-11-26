@@ -97,11 +97,8 @@ export const ConnectCarousel: React.FC<ConnectCarouselProps> = ({ onNavigate }) 
                       <img
                         src={m.avatar}
                         alt={m.name}
-                        className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover ring-2 ring-slate-100 dark:ring-white/10 group-hover:ring-amber-400/40 transition-all"
+                        className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover transition-all"
                       />
-                      {m.online && (
-                        <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-[#111A28]" />
-                      )}
                     </div>
 
                     <div className="min-w-0 flex-1">

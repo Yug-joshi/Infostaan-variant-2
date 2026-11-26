@@ -19,6 +19,16 @@ interface MentorDetailScreenProps {
   onNavigate: (path: string) => void;
 }
 
+const getSlotParts = (slot: string) => {
+  const match = slot.match(/^(Weekdays|Weekends)\s+(\d{1,2}:\d{2}\s*[AP]M)\s+-\s+(.+)$/);
+
+  if (!match) {
+    return { schedule: slot, timing: null, duration: null };
+  }
+
+  return { schedule: match[1], timing: match[2], duration: match[3] };
+};
+
 export const MentorDetailScreen: React.FC<MentorDetailScreenProps> = ({ onNavigate }) => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
@@ -29,6 +39,7 @@ export const MentorDetailScreen: React.FC<MentorDetailScreenProps> = ({ onNaviga
   const [selectedSlot, setSelectedSlot] = useState<string>(mentor.availableSlots[0]);
   const [isBooked, setIsBooked] = useState(false);
   const [showToast, setShowToast] = useState(false);
+  const selectedDuration = selectedSlot.match(/(\d+)\s*min/i)?.[1] ?? '30';
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -87,13 +98,8 @@ export const MentorDetailScreen: React.FC<MentorDetailScreenProps> = ({ onNaviga
                 <img
                   src={mentor.avatar}
                   alt={mentor.name}
-                  className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover ring-4 ring-[#007DCC]/20"
+                  className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover"
                 />
-                {mentor.online && (
-                  <span className="absolute -bottom-1 -right-1 px-2 py-0.5 rounded-full bg-emerald-500 text-white text-[9px] font-bold tracking-wider uppercase ring-2 ring-white dark:ring-[#0D1828]">
-                    Online
-                  </span>
-                )}
               </div>
 
               <div className="space-y-2">
@@ -161,7 +167,7 @@ export const MentorDetailScreen: React.FC<MentorDetailScreenProps> = ({ onNaviga
                     ₹{mentor.price}
                   </span>
                   <span className="text-xs font-semibold text-slate-500">
-                    / 30 min 1:1 session
+                    / {selectedDuration} min 1:1 session
                   </span>
                 </div>
               </div>
@@ -185,7 +191,23 @@ export const MentorDetailScreen: React.FC<MentorDetailScreenProps> = ({ onNaviga
                           : 'bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-[#A9B8CA] hover:bg-slate-200 dark:hover:bg-white/10'
                       }`}
                     >
-                      {slot}
+                      {(() => {
+                        const { schedule, timing, duration } = getSlotParts(slot);
+                        return timing ? (
+                          <span className="flex flex-col gap-0.5">
+                            <span className="text-[10px] opacity-75">{schedule}</span>
+                            <span className={`text-xs font-extrabold ${
+                              selectedSlot === slot
+                                ? 'text-amber-100'
+                                : 'text-amber-600 dark:text-amber-300'
+                            }`}>
+                              {timing} - {duration}
+                            </span>
+                          </span>
+                        ) : (
+                          slot
+                        );
+                      })()}
                     </button>
                   ))}
                 </div>

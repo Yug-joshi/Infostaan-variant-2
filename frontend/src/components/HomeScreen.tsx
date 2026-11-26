@@ -229,21 +229,6 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
     <main className="relative w-full flex-1 pt-20 pb-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0B111E] text-slate-900 dark:text-[#F8FAFC] transition-colors duration-200">
       <LatestUpdatesCarousel onOpenTimetable={onOpenTimetable} />
 
-      {/* Absolute Background Rule - Clean subtle background */}
-      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-amber-100/30 dark:bg-amber-400/5 blur-[100px] dark:blur-[120px]" />
-        <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-yellow-100/25 dark:bg-yellow-400/5 blur-[120px] dark:blur-[150px]" />
-      </div>
-
-      {/* Mobile-only minimal marks */}
-      <div
-        className="pointer-events-none absolute top-0 left-0 right-0 h-[100vh] z-0 block lg:hidden"
-        aria-hidden="true"
-      >
-        <div className="absolute top-[10%] right-[5%] w-2 h-2 rounded-full bg-amber-400/30" />
-        <div className="absolute bottom-[20%] left-[5%] w-3 h-3 rounded-full bg-amber-300/20" />
-      </div>
-
       {/* Central Content (Spacious & Clean) */}
       <div ref={containerRef} className="relative z-10 w-full max-w-5xl mx-auto">
         <div className="relative z-20 flex flex-col items-center justify-center gap-4">

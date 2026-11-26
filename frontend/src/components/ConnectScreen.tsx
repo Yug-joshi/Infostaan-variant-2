@@ -61,11 +61,8 @@ export const ConnectScreen: React.FC<ConnectScreenProps> = ({ onNavigate }) => {
                     <img
                       src={mentor.avatar}
                       alt={mentor.name}
-                      className="w-14 h-14 rounded-2xl object-cover ring-2 ring-blue-50 dark:ring-white/10 group-hover:ring-[#007DCC]/40 transition-all"
+                      className="w-14 h-14 rounded-2xl object-cover"
                     />
-                    {mentor.online && (
-                      <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-[#0D1828]" />
-                    )}
                   </div>
                   <div className="truncate">
                     <h3 className="font-extrabold text-base sm:text-lg text-slate-900 dark:text-[#F4F7FB] leading-tight group-hover:text-[#007DCC] transition-colors truncate">
